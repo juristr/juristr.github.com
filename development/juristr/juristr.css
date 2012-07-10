@@ -1,6 +1,34 @@
-body{font-family:Lucida Sans,Lucida Grande,Arial,sans-serif;margin:0;line-height:22px;width:960px;margin:0 auto;}
-h1{padding:30px 0 10px;margin-top:0;line-height:30px;}
-ul{padding:0 0 0 15px;}
-a{color:#ae3d26;text-decoration:none;}
-a:hover{text-decoration:underline;}
-hr{border:none;border-top:1px dotted #000;}
+body {
+	margin-top: 15px;
+}
+
+#sidebar .gravatar{
+	padding-left:11px;
+}
+
+#sidebar .name {
+	padding-top:12px;
+}
+
+#sidebar .name #juri {
+	padding-left: 1px;
+	font-size: 46px;
+	letter-spacing: 5px;
+	color: #666;
+}
+
+#sidebar #strumpflohner {
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: black;
+}
+
+#sidebar .nav {
+	margin-top: 30px;
+}
+
+footer {
+	text-align:center;
+	color:#999;
+}

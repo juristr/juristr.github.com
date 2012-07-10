@@ -1,4 +1,5 @@
-steal( './juristr.css',       
-       'juristr/plugin',
-	   'steal/coffee')
-.then( './juristr.coffee' );
+steal( 
+	'./resources/bootstrap/css/bootstrap.css',
+	'./resources/bootstrap/css/bootstrap-responsive.css',
+	'./juristr.css',
+	'steal/coffee');
