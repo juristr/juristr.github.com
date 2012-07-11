@@ -9,6 +9,7 @@ body {
 .publishDate {
 	color: #777;
 	float:right;
+	padding-right:5px;
 }
 
 .container-fluid {
