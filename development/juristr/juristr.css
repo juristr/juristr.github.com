@@ -2,6 +2,15 @@ body {
 	margin-top: 15px;
 }
 
+.feedentry {
+	border-bottom: 1px solid #EEE;
+}
+
+.publishDate {
+	color: #777;
+	float:right;
+}
+
 .container-fluid {
 	padding-left:0;
 }
@@ -12,6 +21,7 @@ body {
 
 #sidebar .name {
 	padding-top:12px;
+	padding-left:7px;
 }
 
 #sidebar .name #juri {

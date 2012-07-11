@@ -3,7 +3,8 @@ steal(
 	'./resources/bootstrap/css/bootstrap-responsive.css',
 	'./juristr.css',
 	'juristr/dashboard',
-function(){
+	'./resources/js/moment.min.js')
+.then(function(){
 	
 	$(".js-content").juristr_dashboard();
 	
