@@ -1,9 +1,13 @@
 steal(
 	'jquery/controller',
 	'jquery/controller/view',
-	'jquery/view/ejs',
-	//'http://www.google.com/jsapi?key=ABQIAAAA008FGL6WDtMr2ELm_3UvGhSu_QHJjx6K-mHsaX6miC9BZB4tYxRD_H_s-3GdFd2CNPIYTND4JibNVg',
-function(){
+	'jquery/view/ejs')
+.then(
+	'./views/blognews.ejs',
+	'./views/feedlist.ejs',
+	'./views/feedentry.ejs')
+.then(function(){
+	
 	$.Controller('Juristr.Blognews',{
 
 		init: function(){

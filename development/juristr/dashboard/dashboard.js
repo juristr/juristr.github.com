@@ -2,8 +2,10 @@ steal(
 	'jquery/controller',
 	'jquery/controller/view',
 	'jquery/view/ejs',
-	'juristr/blognews',
-function(){
+	'juristr/blognews')
+.then(
+	'./views/dashboard.ejs')
+.then(function(){
 
 	$.Controller('Juristr.Dashboard',{
 

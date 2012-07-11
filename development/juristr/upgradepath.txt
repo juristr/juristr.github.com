@@ -1,0 +1,11 @@
+General:
+	- Structure of the app (not necessarily required)
+
+Steal:
+	- Change how classes/controllers are being initialized
+	- No more .css, .controllers,...
+	- Controllers fetch their dependencies by themselves, not the main.js
+
+
+scripts/build.js
+	- needed to change the location where to build to...
