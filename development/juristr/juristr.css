@@ -2,6 +2,10 @@ body {
 	margin-top: 15px;
 }
 
+.container-fluid {
+	padding-left:0;
+}
+
 #sidebar .gravatar{
 	padding-left:11px;
 }
