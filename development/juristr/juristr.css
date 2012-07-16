@@ -20,24 +20,6 @@ body {
 	padding-left:11px;
 }
 
-#sidebar .name {
-	padding-top:12px;
-	padding-left:7px;
-}
-
-#sidebar .name #juri {
-	padding-left: 1px;
-	font-size: 46px;
-	letter-spacing: 5px;
-	color: #666;
-}
-
-#sidebar #strumpflohner {
-	font-size: 12px;
-	font-weight: bold;
-	letter-spacing: 1px;
-	color: black;
-}
 
 #sidebar .nav {
 	margin-top: 30px;
