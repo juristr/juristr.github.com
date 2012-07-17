@@ -6,6 +6,15 @@ body {
 	border-bottom: 1px solid #EEE;
 }
 
+blockquote{
+	background-color: #F6F6F6;
+	border-left: 4px solid #CCC;
+	color: #222;
+	margin: 20px 0 20px 20px;
+	padding: 10px 10px 10px 10px;
+	font-style: normal;
+}
+
 .publishDate {
 	color: #777;
 	float:right;
