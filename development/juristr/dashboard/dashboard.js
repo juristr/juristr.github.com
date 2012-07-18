@@ -2,7 +2,8 @@ steal(
 	'jquery/controller',
 	'jquery/controller/view',
 	'jquery/view/ejs',
-	'juristr/blognews')
+	'juristr/blognews',
+	'juristr/tweets')
 .then(
 	'./views/dashboard.ejs')
 .then(function(){
@@ -13,6 +14,7 @@ steal(
 			this.element.html(this.view("dashboard"));
 
 			$(".js-blognews").juristr_blognews();
+			$(".js-tweets").juristr_tweets();
 		}
 
 	});
