@@ -38,7 +38,7 @@ steal(
 			$('.js-content').juristr_dashboard();
 		},
 
-		'pages/about route' : function(){
+		'pages/:pagename route' : function(data){
 			var $jsContent = $('.js-content'),
 				controller = $jsContent.controller();
 
@@ -46,7 +46,7 @@ steal(
 				controller = new Juristr.Pages($jsContent);
 			}
 
-			controller.about();
+			controller[data.pagename]();
 		}
 	});
 

@@ -21,6 +21,10 @@ steal(
 			this.element.html(this._renderMarkdown(this.view('about_md')));
 		},
 
+		links: function(){
+			this.element.html(this._renderMarkdown(this.view('links_md')));	
+		},
+
 		//privates
 		_renderMarkdown: function(markdownViewContent){
 			return this._mdConverter.makeHtml(markdownViewContent);
