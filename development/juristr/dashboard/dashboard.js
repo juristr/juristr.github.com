@@ -3,7 +3,8 @@ steal(
 	'jquery/controller/view',
 	'jquery/view/ejs',
 	'juristr/blognews',
-	'juristr/tweets')
+	'juristr/tweets',
+	'juristr/stackexchange')
 .then(
 	'./views/dashboard.ejs')
 .then(function(){
@@ -15,6 +16,7 @@ steal(
 
 			$(".js-blognews").juristr_blognews();
 			$(".js-tweets").juristr_tweets();
+			$(".js-stackoverflow").juristr_stackexchange();
 		}
 
 	});
