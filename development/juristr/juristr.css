@@ -6,14 +6,19 @@ body {
 	border-bottom: 1px solid #EEE;
 }
 
-.pagecontent {
+.pages-content {
 	font-size:14px;
 }
 
-.pagecontent img{
+.pages-content img{
 	padding: 3px;
 	border: 1px solid #EEE;
 	max-width: 100%;
+}
+
+.pages-content p {
+	line-height:1.7;
+	padding-bottom:5px;
 }
 
 h1, h2, h3 {

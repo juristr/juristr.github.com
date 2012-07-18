@@ -28,10 +28,10 @@ steal(
 
 		//privates
 		_renderMarkdown: function(markdownViewContent){
-			return "<section class='span6'>" + this._mdConverter.makeHtml(markdownViewContent); + "</section>";
+			return "<section class='span8 pages-content'>" + this._mdConverter.makeHtml(markdownViewContent); + "</section>";
 		},
 
-		_renderMailTo: function printEmail() {
+		_renderMailTo: function() {
 			/* Original idea taken from Mihai Parparita, http://persistent.info */
             var a = [106, 117, 114, 105, 46, 115, 116, 114, 117, 109, 112, 102, 108, 111,
                     104, 110, 101, 114, 64, 106, 115, 45, 100, 101, 118, 101, 108, 111, 112, 109, 101,

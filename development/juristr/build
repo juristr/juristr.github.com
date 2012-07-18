@@ -1,0 +1,15 @@
+cd ..
+sh js juristr/scripts/build.js
+cd juristr
+
+cp -f production.html ../../index.html
+
+cp -rf ../steal/steal.production.js ../../
+
+rm -rf ../../juristr
+mkdir -p ../../juristr/pages/views
+cp -rf ./pages/views/* ../../juristr/pages/views
+
+rm -rf ../../resources
+mkdir ../../resources
+cp -rf resources/imgs ../../resources/imgs
