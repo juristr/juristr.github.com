@@ -1,4 +1,5 @@
 <p class="feedentry">
 	<!--<span class="publishDate"><%= moment(this.last_activity_date).fromNow() %></span>-->
+	<span class="so-scores mini-counts <%= (this.is_accepted) ? 'answered-accepted' : ''%>"><%= this.score %></span>
 	<a href="http://stackoverflow.com/questions/<%= this.question_id %>/#<%= this.answer_id %>"><%= this.questionTitle %></a>
 </p>
