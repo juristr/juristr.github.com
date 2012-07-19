@@ -40,6 +40,17 @@ steal(
 			$('.js-content').juristr_dashboard();
 		},
 
+		'about route': function(){
+			var $jsContent = $('.js-content'),
+				controller = $jsContent.controller();
+
+			if(controller === undefined || controller.Class.shortName.toLowerCase() !== 'pages'){
+				controller = new Juristr.Pages($jsContent);
+			}
+
+			controller.about();
+		},
+
 		'pages/:pagename route' : function(data){
 			var $jsContent = $('.js-content'),
 				controller = $jsContent.controller();
@@ -48,7 +59,8 @@ steal(
 				controller = new Juristr.Pages($jsContent);
 			}
 
-			controller[data.pagename]();
+			//controller[data.pagename]();
+			controller.renderPage(data.pagename);
 		}
 	});
 

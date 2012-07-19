@@ -17,13 +17,13 @@ steal(
 		},
 
 		//publics
+		renderPage: function(pageName){
+			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));	
+		},
+
 		about: function(){
 			this.element.html(this._renderMarkdown(this.view('about_md')));
 			$(".js-emailfield").prop("href", this._renderMailTo());
-		},
-
-		links: function(){
-			this.element.html(this._renderMarkdown(this.view('links_md')));	
 		},
 
 		//privates
