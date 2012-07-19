@@ -2,6 +2,18 @@ body {
 	margin-top: 15px;
 }
 
+.last-changed {
+	margin-bottom: 17px;
+	font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
+	padding-left: 0px;
+	font-size: 17px;
+	color: #777;
+	float: right;
+	padding-right: 5px;
+}
+
+/* Stackoverflow */
+
 .so-scores {
 	float:right;
 	padding-right:5px;
@@ -22,6 +34,8 @@ body {
 	background: #75845C;
 	color: #E1E818;
 }
+
+/* end stackoverflow */
 
 .feedentry {
 	border-bottom: 1px solid #EEE;
