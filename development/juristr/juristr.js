@@ -53,6 +53,8 @@ steal(
 	});
 
 	new Juristr.Routing(document.body);	
-
 	$(".gravatar").corner("5px");
+
+	$("#screenloading").hide();
+	$("#container").fadeIn();
 });
