@@ -1,10 +1,12 @@
 steal(
+	'jquery',
 	'jquery/controller',
 	'jquery/controller/route',
 	'./resources/bootstrap/css/bootstrap.css',
 	'./resources/bootstrap/css/bootstrap-responsive.css',
 	'./juristr.css',
-	'./resources/js/moment.js')
+	'./resources/js/moment.js',
+	'./resources/jquery.corners.js')
 .then(
 	'juristr/dashboard',
 	'juristr/pages')
@@ -50,9 +52,7 @@ steal(
 		}
 	});
 
-	new Juristr.Routing(document.body);
+	new Juristr.Routing(document.body);	
 
-
-	//$(".js-content").juristr_dashboard();
-	
+	$(".gravatar").corner("5px");
 });

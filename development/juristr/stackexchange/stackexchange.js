@@ -3,6 +3,9 @@ steal(
 	'jquery/controller/view',
 	'jquery/view/ejs')
 .then(
+	'./views/stackoverflow.ejs',
+	'./views/feedentry.ejs',
+	'./views/feedlist.ejs'
 	)
 .then(function(){
 	
