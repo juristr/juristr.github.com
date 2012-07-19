@@ -7,7 +7,6 @@ cd juristr
 rem app
 cp -f production.html ..\..\index.html
 
-
 rem all other stuff
 cp -rf ..\steal\steal.production.js ..\..\
 
