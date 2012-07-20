@@ -47,8 +47,17 @@ Now, adding content is probably one of the most important points. I **love** the
 
 Looks strange? Yep, but it's valid HTML5 code. Anyway, **[Markdown](http://daringfireball.net/projects/markdown/) to the rescue!!.**
 
-Markdown is so great when writing articles. It's a bit like using LaTek. You just concentrate on the syntax. The formatting itself will be done later on, automatically.
+Markdown is so great when writing articles. It's a bit like using LaTek. You just concentrate on the syntax. The formatting itself will be done later on, automatically. Even this same page here has been written entirely in Markdown. It actually is just [this file](https://github.com/juristr/juristr.github.com/blob/master/juristr/pages/views/thissite_md.ejs) dynamically loaded and transformed at runtime into HTML. For that purpose I used [PageDown](http://code.google.com/p/pagedown/), the open source markdown JavaScript converter provided by the [StackOverflow](http://stackoverflow.com) guys.
+
+So adding new content is basically nothing else than placing a markdown file in a certain directory on the server or editing an existing one. **Nice.**
 
 ## JavaScriptMVC - Let it do the heavy lifting
+To the more interesting, _dynamic_ part of this site. Obviously I needed some degree of dynamic behavior as just serving plain static HTML files is boring. Since I rarely create new stuff (in my free time) without searching for opportunities to learn something new, also this time I decided to take the latest version of JavaScriptMVC and give it a try. I have to say that we currently (20.07.2012) already use version 3.1 of the framework. But since quite some stuff changed I decided to try those out in order to then know how to upgrade our existing apps.
+
+So this page here is basically nothing else than a JavaScriptMVC app that dynamically loads pages written in Markdown syntax or integrates data from public API's like from Twitter, Google or StackOverflow.
+
+### Why JavaScriptMVC and not...Backbone?
+Without going into too much detail, JavaScriptMVC is a framework that's based on jQuery and makes it easy for JavaScript newcomers to enter the world of creating rich JavaScript web clients. That's mainly because JavaScriptMVC bundles a lot of stuff already like testing frameworks, minifiers, linters, dependency management, view templating etc...That's also one of the reasons we've chosen it to be used at work. I tried [Backbone](http://backbonejs.org/) and [Spine](http://spinejs.com/) and I really liked how they worked. But for our ASP.net WebForms developers it would have been probably more confusing to use.
 
 ## Deploy and hosting
+...
