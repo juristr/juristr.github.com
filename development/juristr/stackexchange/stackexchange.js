@@ -11,19 +11,29 @@ steal(
 	
 	$.Controller('Juristr.Stackexchange',{
 
-		init: function(){
-			this.element.html(this.view("stackoverflow"));
-			this._loadFeedData();
+		init: function(element, options){
+			var title = "";
+
+			if(options.showLatest === true){
+				title = "Top StackOverflow Answers";
+				this._loadFeedData("http://api.stackexchange.com/2.0/users/50109/answers?order=desc&sort=votes&site=stackoverflow&pageSize=5&callback=?");
+			}else{
+				title = "Latest StackOverflow Answers";
+				this._loadFeedData("http://api.stackexchange.com/2.0/users/50109/answers?site=stackoverflow&pagesize=5&callback=?");
+			}
+
+			this.element.html(this.view("stackoverflow", { title: title }));
 			/* 
-				Answers: http://api.stackexchange.com/2.0/users/50109/answers?site=stackoverflow
+				Latest Answers: http://api.stackexchange.com/2.0/users/50109/answers?site=stackoverflow&pagesize=5&callback=?
+				Top Answers: http://api.stackexchange.com/2.0/users/50109/answers?order=desc&sort=votes&site=stackoverflow
 				Questions: http://api.stackexchange.com/2.0/questions/11518816;11518470?order=desc&sort=activity&site=stackoverflow
 			*/
 		},
 
 		//privates
-		_loadFeedData: function(){
+		_loadFeedData: function(url){
 			$.ajax({
-				url: "http://api.stackexchange.com/2.0/users/50109/answers?site=stackoverflow&pagesize=5&callback=?",
+				url: url,
 				type: "GET",
 				dataType: "JSON",
 				success: this.proxy(function(result){

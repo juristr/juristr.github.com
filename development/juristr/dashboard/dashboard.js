@@ -16,7 +16,8 @@ steal(
 
 			$(".js-blognews").juristr_blognews();
 			$(".js-tweets").juristr_tweets();
-			$(".js-stackoverflow").juristr_stackexchange();
+			$(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
+			$(".js-stackoverflow-latest").juristr_stackexchange();
 		}
 
 	});
