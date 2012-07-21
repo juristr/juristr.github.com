@@ -1,6 +1,4 @@
-# <section class="last-changed">July 17, 2012</section> Creating This Site 
-
-_Draft: This article is currently being developed_
+# <section class="last-changed">July 21, 2012</section> Creating This Site 
 
 I was annoyed by my old site. It was one of my first trials in using
 HTML5 and Modernizr. I wanted to have something more fresh, modern, dynamic...
@@ -26,16 +24,7 @@ Admittedly, Bootstrap doesn't give you exaclty the design of this page here, i.e
 
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 
-Therefore, credits to Zach for his great design. As he mentioned:
-
-> Here's the deal. This is my blog, and there's certainly a distinctive look and feel 
-> associated with it. I'd appreciate it if you changed your own fork. If you'll 
-> notice, there's no license attached to this project, so technically I maintain 
-> the rights associated with this project.
->
-> So be cool, change things up, find your own voice. It'll work better for you in the long run, too.
-
-I hope it's fine this way. I took the his idea of the font and on how to layout the sidebar and main content. Bootstrap did the rest for me.
+Therefore, credits to Zach for his great design. I hope it's fine this way. I took the his idea of the font and on how to layout the sidebar and main content. Bootstrap did the rest for me.
 
 ## Adding Content
 Now, adding content is probably one of the most important points. I **love** the flexibility and power pure HTML gives you, but sincerely, I **hate** to write HTML for structuring articles like this one. All the closing tags actually feel a little like noise when writing. Although, did you know in HTML5 you don't necessarily have to write the closing tags in some cases?? I.e.:
@@ -60,7 +49,7 @@ So this page here is basically nothing else than a JavaScriptMVC app that dynami
 Without going into too much detail, JavaScriptMVC is a framework that's based on jQuery and makes it easy for JavaScript newcomers to enter the world of creating rich JavaScript web clients. That's mainly because JavaScriptMVC bundles a lot of stuff already like testing frameworks, minifiers, linters, dependency management, view templating etc...That's also one of the reasons we've chosen it to be used at work. I tried [Backbone](http://backbonejs.org/) and [Spine](http://spinejs.com/) and I really liked how they worked. But for our ASP.net WebForms developers it would have been probably more confusing to use.
 
 ## Deploy and hosting
-**GitHub!**. Since I first started with [Git](http://blog.js-development.com/2010/11/juri-goes-git-first-steps.html), I just love that system. And GitHub is just amazing, and it got even better when I discovered you can create your custom [GitHub Pages](http://pages.github.com/). And did you know, when you create a repo named `<username>.github.com`, GitHub automatically creates a [user/organization page](https://help.github.com/articles/user-organization-and-project-pages) for you right there.
+**GitHub!**. Since I first started with [Git](http://blog.js-development.com/2010/11/juri-goes-git-first-steps.html), I just love that system. And GitHub is just amazing, and it got even better when I discovered you can create your custom [GitHub Pages](http://pages.github.com/). And did you know, when you create a repo named `<username>.github.com`, GitHub automatically creates a [user/organization page](https://help.github.com/articles/user-organization-and-project-pages) for you right there. For then mapping it to your _custom domain_ you simply have to push a `CNAME` file on the root level of your repo containing the domain url, and obviously to set the according CNAME entry on your domain provider settings. Everything is perfectly described [here](https://help.github.com/articles/setting-up-a-custom-domain-with-pages). You could even host a [simple blog](https://help.github.com/articles/using-jekyll-with-pages).
 
+So this is really nice as you have version control and deployment basically in one, a simple git push and your changes are online.
 
-https://help.github.com/articles/using-jekyll-with-pages
