@@ -7,6 +7,9 @@ steal(
 	//'./resources/markdown/Markdown.Sanitizer.js',
 	'./resources/markdown/Markdown.Converter.js'
 	)
+.then(
+	'./views/pageslist.ejs'
+	)
 .then(function(){
 	
 	$.Controller('Juristr.Pages', {
@@ -22,25 +25,16 @@ steal(
 		},
 
 		pagesList: function(){
-			var data = {
-				items: [
-					{
-						title: "Links",
-						date: "21/07/2012",
-						link: "#!pages/links"
-					}
-				]
-			};
-			// $.ajax({
-			// 	url: "./pages/pages.json",
-			// 	type: "GET",
-			// 	success: this.proxy(function(data){
+			$.ajax({
+				url: "//pages/pages.json",
+				type: "GET",
+				success: this.proxy(function(data){
 					this.element.html(this.view("pageslist", data));
-			// 	}),
-			// 	error: function(e){
-			// 		alert("error");
-			// 	}
-			// });
+				}),
+				error: function(e){
+					alert("error");
+				}
+			});
 		},
 
 		about: function(){
