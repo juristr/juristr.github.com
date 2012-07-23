@@ -21,6 +21,28 @@ steal(
 			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));	
 		},
 
+		pagesList: function(){
+			var data = {
+				items: [
+					{
+						title: "Links",
+						date: "21/07/2012",
+						link: "#!pages/links"
+					}
+				]
+			};
+			// $.ajax({
+			// 	url: "./pages/pages.json",
+			// 	type: "GET",
+			// 	success: this.proxy(function(data){
+					this.element.html(this.view("pageslist", data));
+			// 	}),
+			// 	error: function(e){
+			// 		alert("error");
+			// 	}
+			// });
+		},
+
 		about: function(){
 			this.element.html(this._renderMarkdown(this.view('about_md')));
 			$(".js-emailfield").prop("href", this._renderMailTo());

@@ -1,0 +1,10 @@
+<section class='span8'>
+	<h1>Pages</h1>
+	
+	<% for(var i=0; i<this.items.length; i++){ %>
+		<p class="feedentry">
+			<span class="publishDate"><%= moment(this.items[i].publishedDate).fromNow() %></span>
+			<a href="<%= this.items[i].link %>"><%= this.items[i].title %></a>
+		</p>
+	<% } %>
+</section>

@@ -1,0 +1,10 @@
+{
+	menuitems: [
+		{
+			title: "Links",
+			description: "desc",
+			publishedDate: "21/07/2012",
+			link: "#!pages/links"
+		}
+	]
+}
