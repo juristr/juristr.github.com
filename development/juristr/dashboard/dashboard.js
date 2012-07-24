@@ -4,7 +4,8 @@ steal(
 	'jquery/view/ejs',
 	'juristr/blognews',
 	'juristr/tweets',
-	'juristr/stackexchange')
+	'juristr/stackexchange',
+	'juristr/github')
 .then(
 	'./views/dashboard.ejs')
 .then(function(){
@@ -18,6 +19,7 @@ steal(
 			$(".js-tweets").juristr_tweets();
 			$(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
 			$(".js-stackoverflow-latest").juristr_stackexchange();
+			$(".js-github-latest").juristr_github();
 		}
 
 	});
