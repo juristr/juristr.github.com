@@ -20,18 +20,18 @@ steal(
 			this.element.html(this.view("githubprojects"));
 
 			//https://api.github.com/users/juristr/repos?per_page=5
-			// $.ajax({
-			// 	url: url,
-			// 	type: "GET",
-			// 	dataType: "JSON",
-			// 	success: this.proxy(function(result){
-			// 		$(".js-feed-content", this.element).html(
-			// 			this.view("feedlist", result.responseData.feed.entries));
-			// 	}),
-			// 	error: function(e){
-			// 		console.log("Oops, an error occured");
-			// 	}
-			// });
+			$.ajax({
+				url: "https://api.github.com/users/juristr/repos?per_page=15&callback=?",
+				type: "GET",
+				dataType: "JSON",
+				success: this.proxy(function(result){
+					$(".js-githubproj-content", this.element).html(
+						this.view("githubprojectlist", result.data));
+				}),
+				error: function(e){
+					console.log("Oops, an error occured");
+				}
+			});
 		},
 
 		loadFeedData: function(){
