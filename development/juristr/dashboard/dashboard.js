@@ -19,7 +19,7 @@ steal(
 			$(".js-tweets").juristr_tweets();
 			$(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
 			$(".js-stackoverflow-latest").juristr_stackexchange();
-			$(".js-github-latest").juristr_github();
+			new Juristr.Github($(".js-github-latest")).loadFeedData();
 		}
 
 	});

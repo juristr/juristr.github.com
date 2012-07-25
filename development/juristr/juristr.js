@@ -63,6 +63,18 @@ steal(
 			controller.pagesList();
 		},
 
+		'pages/projects route': function(){
+			var $jsContent = $('.js-content'),
+				controller = $jsContent.controller();
+
+			if(controller === undefined || controller.Class.shortName.toLowerCase() !== 'pages'){
+				controller = new Juristr.Pages($jsContent);
+			}
+
+			//controller[data.pagename]();
+			controller.projects();
+		},
+
 		'pages/:pagename route' : function(data){
 			var $jsContent = $('.js-content'),
 				controller = $jsContent.controller();

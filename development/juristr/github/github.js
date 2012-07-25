@@ -12,13 +12,31 @@ steal(
 	$.Controller('Juristr.Github',{
 
 		init: function(element, options){
-			this.element.html(this.view("github"));
-
-			this._loadFeedData("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&output=json&q=https://github.com/juristr.atom&callback=?");
+			//this._loadFeedData("http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&output=json&q=https://github.com/juristr.atom&callback=?");
 		},
 
-		//privates
-		_loadFeedData: function(url){
+		//publics
+		displayMyProjects: function(){
+			this.element.html(this.view("githubprojects"));
+
+			//https://api.github.com/users/juristr/repos?per_page=5
+			// $.ajax({
+			// 	url: url,
+			// 	type: "GET",
+			// 	dataType: "JSON",
+			// 	success: this.proxy(function(result){
+			// 		$(".js-feed-content", this.element).html(
+			// 			this.view("feedlist", result.responseData.feed.entries));
+			// 	}),
+			// 	error: function(e){
+			// 		console.log("Oops, an error occured");
+			// 	}
+			// });
+		},
+
+		loadFeedData: function(){
+			var url = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&output=json&q=https://github.com/juristr.atom&callback=?";
+			this.element.html(this.view("github"));
 			$.ajax({
 				url: url,
 				type: "GET",

@@ -42,6 +42,12 @@ steal(
 			$(".js-emailfield").prop("href", this._renderMailTo());
 		},
 
+		projects: function(){
+			this.element.html(this._renderMarkdown(this.view('projects_md')));
+			//$(".js-github-projects").html("github stuff here...");
+			new Juristr.Github($(".js-github-projects")).displayMyProjects();
+		},
+
 		//privates
 		_renderMarkdown: function(markdownViewContent){
 			return "<section class='span8 pages-content'>" + this._mdConverter.makeHtml(markdownViewContent); + "</section>";
