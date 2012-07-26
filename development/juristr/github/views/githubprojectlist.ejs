@@ -2,7 +2,7 @@
 <div class="row-fluid">
 	<div class="span12">
 		<span class="badge badge-success" rel="tooltip" title="Number of forks"><%= this[i].forks %></span>
-		<strong><a href="<%= this[i].url %>"><%= this[i].name %></a></strong><em><%= (this[i].description !== null) ? " - " + this[i].description : "" %></em>
+		<strong><a href="<%= this[i].html_url %>"><%= this[i].name %></a></strong><em><%= (this[i].description !== null) ? " - " + this[i].description : "" %></em>
 	</div>
 	<% if(this[i].language !== null) { %>
 	<div class="span12">
