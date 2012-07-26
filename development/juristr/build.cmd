@@ -14,3 +14,7 @@ rm -rf ..\..\resources
 mkdir ..\..\resources
 cp -rf resources\imgs ..\..\resources\imgs
 cp -rf pages\views\projects_md.ejs ..\..\juristr\pages\views\
+
+REM bootstrap resources
+mkdir ..\..\juristr\resources\bootstrap\img
+cp -rf resources\bootstrap\img\* ..\..\juristr\resources\bootstrap\img
