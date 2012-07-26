@@ -99,6 +99,10 @@ blockquote p {
 	font-size:14px;
 }
 
+.date {
+	color: #777;
+}
+
 .publishDate {
 	color: #777;
 	float:right;

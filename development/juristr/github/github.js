@@ -1,11 +1,14 @@
 steal(
 	'jquery/controller',
 	'jquery/controller/view',
-	'jquery/view/ejs')
+	'jquery/view/ejs',
+	'//juristr/resources/bootstrap/js/bootstrap.js')
 .then(
 	 './views/github.ejs',
 	 './views/feedentry.ejs',
-	 './views/feedlist.ejs'
+	 './views/feedlist.ejs',
+	 './views/githubprojectlist.ejs',
+	 './views/githubprojects.ejs'
 	)
 .then(function(){
 	
@@ -25,8 +28,10 @@ steal(
 				type: "GET",
 				dataType: "JSON",
 				success: this.proxy(function(result){
-					$(".js-githubproj-content", this.element).html(
+					var $githubprojContainer = $(".js-githubproj-content", this.element);
+					$githubprojContainer.html(
 						this.view("githubprojectlist", result.data));
+					$("*[rel=tooltip]", $githubprojContainer).tooltip()
 				}),
 				error: function(e){
 					console.log("Oops, an error occured");

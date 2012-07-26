@@ -13,3 +13,4 @@ cp -rf ..\steal\steal.production.js ..\..\
 rm -rf ..\..\resources
 mkdir ..\..\resources
 cp -rf resources\imgs ..\..\resources\imgs
+cp -rf pages\views\projects_md.ejs ..\..\juristr\pages\views\
