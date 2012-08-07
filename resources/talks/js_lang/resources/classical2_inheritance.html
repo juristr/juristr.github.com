@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/presentation.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jsconsole.js"></script>
+  </head>
+  <body>
+    <div style="text-align:center;top:40px;left:45%;position:absolute">
+      <p style="font-size:20pt;padding-bottom:15px;color:gray">Use the source, Luke</p>
+      <img src="imgs/yoda.png" />
+    </div>
+    <div id="terminal">
+
+    </div>
+
+    <script>
+      /* Simple JavaScript Inheritance
+       * By John Resig http://ejohn.org/
+       * MIT Licensed.
+       */
+      // Inspired by base2 and Prototype
+      (function(){
+        var initializing = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
+        // The base Class implementation (does nothing)
+        this.Class = function(){};
+        
+        // Create a new Class that inherits from this class
+        Class.extend = function(prop) {
+          var _super = this.prototype;
+          
+          // Instantiate a base class (but only create the instance,
+          // don't run the init constructor)
+          initializing = true;
+          var prototype = new this();
+          initializing = false;
+          
+          // Copy the properties over onto the new prototype
+          for (var name in prop) {
+            // Check if we're overwriting an existing function
+            prototype[name] = typeof prop[name] == "function" && 
+              typeof _super[name] == "function" && fnTest.test(prop[name]) ?
+              (function(name, fn){
+                return function() {
+                  var tmp = this._super;
+                  
+                  // Add a new ._super() method that is the same method
+                  // but on the super-class
+                  this._super = _super[name];
+                  
+                  // The method only need to be bound temporarily, so we
+                  // remove it when we're done executing
+                  var ret = fn.apply(this, arguments);        
+                  this._super = tmp;
+                  
+                  return ret;
+                };
+              })(name, prop[name]) :
+              prop[name];
+          }
+          
+          // The dummy class constructor
+          function Class() {
+            // All construction is actually done in the init method
+            if ( !initializing && this.init )
+              this.init.apply(this, arguments);
+          }
+          
+          // Populate our constructed prototype object
+          Class.prototype = prototype;
+          
+          // Enforce the constructor to be what we expect
+          Class.prototype.constructor = Class;
+
+          // And make this class extendable
+          Class.extend = arguments.callee;
+          
+          return Class;
+        };
+      })();      
+
+    </script>
+
+
+    <script type="text/javascript">
+      var Animal = Class.extend({
+        init: function(name){
+          this.name = name;
+        },
+
+        makeSound: function(){
+          console.log(this.name + ": " + (this.sound || "(bo)"));
+        },
+
+        doEat: function(){
+          console.log("Eat what?");
+        }
+      });
+
+      var Mammal = Animal.extend({
+        init: function(name){
+          this._super(name);
+        },
+        warmBlooded: function(){
+          console.log("Sure! " + this.name + " is warm blooded!");
+        },
+        doEat: function(){
+          console.log("Mammals such as " + this.name + " like to eat meat!");
+        }
+      });
+
+      var Bird = Animal.extend({
+        init: function(name){
+          this._super(name);
+          this.sound = "cip cip cip";
+        },
+        canFly: function(){
+          console.log("I think so");
+        },
+        doEat: function(){
+          console.log("Birds eat mostly grains.");
+        }
+      });
+      
+      var Cat = Mammal.extend({
+        init: function(name){
+          this._super(name);
+          this.sound = "miao";
+        },
+        doEat: function(){
+          console.log(this.name + " likes milk!");
+        }
+      });
+
+      var Dog = Mammal.extend({
+        init: function(name){
+          this._super(name);
+          this.sound = "wuff";
+        }
+      });
+
+      var Parrot = Bird.extend({
+        init: function(name){
+          this._super(name);
+          this.sound = "Hellooo";
+        }
+      })
+    </script>
+
+    <script type="text/javascript">
+      var dog = new Dog("Bello");
+      dog.makeSound();
+      dog.warmBlooded();
+
+      var cat = new Cat("Mietze");
+      cat.makeSound();
+
+      var bird = new Bird("Hansi");
+      bird.makeSound();
+
+      var parrot = new Parrot("Parrot");
+      parrot.makeSound();
+
+      //----
+
+      bird.doEat();
+      cat.doEat();
+      dog.doEat();
+    </script>
+  </body>
+</html>
