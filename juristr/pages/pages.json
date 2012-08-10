@@ -5,6 +5,12 @@
 			"description": "A collection of useful links",
 			"publishedDate": "07/21/2012",
 			"link": "#!pages/links"
+		},
+		{
+			"title": "Do you know JavaScript?",
+			"description": "A nice list of checks to test whether you really know JavaScript",
+			"publishedDate": "07/21/2012",
+			"link": "#!pages/uknowjavascript"
 		}
 	]
 }
