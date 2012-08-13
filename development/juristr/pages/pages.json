@@ -1,9 +1,14 @@
 {
 	"items": [
 		{
-			"title": "Links",
-			"publishedDate": "07/21/2012",
-			"link": "#!pages/links"
+			"title": "Pages",
+			"items": [
+				{
+					"title": "Links",
+					"publishedDate": "07/21/2012",
+					"link": "#!pages/links"
+				}
+			]
 		}
 	]
 }

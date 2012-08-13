@@ -21,7 +21,8 @@ steal(
 			$.route.bind('change', function(ev, attr, how, newVal, oldVal){
 				var registeredControllers = $('.js-content').controllers();
 				for(var i=0; i<registeredControllers.length; i++){
-					if(oldVal){
+					var cName = registeredControllers[i].Class.shortName.toLowerCase();
+					if(oldVal !== newVal && newVal.indexOf(cName) === -1 && oldVal === cName){
 						registeredControllers[i].destroy();
 					}
 				}
@@ -60,7 +61,7 @@ steal(
 			}
 
 			//controller[data.pagename]();
-			controller.pagesList();
+			controller.renderPagesList();
 		},
 
 		'pages/projects route': function(){

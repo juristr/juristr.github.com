@@ -1,16 +1,32 @@
 {
 	"items": [
 		{
-			"title": "Links",
-			"description": "A collection of useful links",
-			"publishedDate": "07/21/2012",
-			"link": "#!pages/links"
+			"title": "Pages",
+			"items": [
+				{
+					"title": "Links",
+					"description": "A collection of useful links",
+					"publishedDate": "07/21/2012",
+					"link": "#!pages/links"
+				},
+				{
+					"title": "Do you know JavaScript?",
+					"description": "A nice list of checks to test whether you really know JavaScript",
+					"publishedDate": "07/21/2012",
+					"link": "#!pages/uknowjavascript"
+				}
+			]
 		},
 		{
-			"title": "Do you know JavaScript?",
-			"description": "A nice list of checks to test whether you really know JavaScript",
-			"publishedDate": "07/21/2012",
-			"link": "#!pages/uknowjavascript"
+			"title": "Tutorials",
+			"items": [
+				{
+					"title": "Setting up Apache",
+					"description": "Quick guide on how to setup Apache2 webserver on OSX and Windows",
+					"publishedDate": "08/13/2012",
+					"link": "#!pages/setup_apache"
+				}
+			]
 		}
 	]
 }

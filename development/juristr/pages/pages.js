@@ -24,9 +24,10 @@ steal(
 			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));	
 		},
 
-		pagesList: function(){
+		renderPagesList: function(){
 			$.ajax({
 				url: "/juristr/pages/pages.json",
+				dataType: "json",
 				type: "GET",
 				success: this.proxy(function(data){
 					this.element.html(this.view("pageslist", data));

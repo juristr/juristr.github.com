@@ -1,10 +1,13 @@
 <section class='span8'>
-	<h1>Pages</h1>
-	
 	<% for(var i=0; i<this.items.length; i++){ %>
-		<p class="feedentry">
-			<span class="publishDate"><%= moment(this.items[i].publishedDate).fromNow() %></span>
-			<a href="<%= this.items[i].link %>"><%= this.items[i].title %></a>&nbsp;<%= (this.items[i].description && this.items[i].description !== "") ? " - " + this.items[i].description : "" %>
-		</p>
+
+		<h1><%= this.items[i].title %></h1>
+
+		<% for(var j=0; j<this.items[i].items.length; j++) { %>
+			<p class="feedentry">
+				<span class="publishDate"><%= moment(this.items[i].items[j].publishedDate).fromNow() %></span>
+				<a href="<%= this.items[i].items[j].link %>"><%= this.items[i].items[j].title %></a>&nbsp;<%= (this.items[i].items[j].description && this.items[i].items[j].description !== "") ? " - " + this.items[i].items[j].description : "" %>
+			</p>
+		<% } %>
 	<% } %>
 </section>
