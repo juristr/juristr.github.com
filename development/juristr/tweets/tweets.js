@@ -25,12 +25,18 @@ steal(
 				dataType: "JSON",
 				success: this.proxy(function(result){
 					$(".js-feed-content", this.element).html(
-						this.view("tweetlist", result));
+						this._urlify(this.view("tweetlist", result)));
+
 				}),
 				error: function(e){
 					console.log("Oops, an error occured");
 				}
 			});
+		},
+
+		_urlify: function(text){
+		    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+		    return text.replace(exp,"<a href='$1'>$1</a>"); 
 		}
 
 	});
