@@ -299,5 +299,104 @@ which is extremely more expressive than the JavaScript alternative
 	  }
 	}
 
-## Ranges
+## Arrays
+
+Arrays can be defined like
+
+	locations = ["New York", "Los Angeles", "Washington"]
+
+or by using a _newline_ char instead of a comma:
+
+	locations = [
+		"New York"
+		"Los Angeles"
+		"Washington"
+	]
+
+### Looping over...
+...the elements is as easy as
+
+	locations.forEach(location, index) ->
+		alert "Location #{location}"
+
+which is nothing else than using the standard JavaScript `forEach`
+
+	locations.forEach(function(location, index){
+		alert "Location " + location;
+	});
+
+Alternatively
+
+	for location in locations
+		alert "Location #{location}"
+
+which should not be confounded with the JavaScript `for in` loop for iterating over Object literals and which **should not** be used for array iterations. Instead the above CoffeeScript `for ... in` loop will be translated into this
+
+	for (var i = 0, len = locations.length; i < len; i++) {
+		alert locations[i];
+	}
+
+Finally, an even more compact version is this one
+
+	alert "Location #{location}" for location in locations
+
+
+### Ranges
+Ranges can be defined like
+
+	range = [1..4]
+
+where the JavaScript equivalent would look like
+
+	var range = [1,2,3,4];
+
+Instead, writing
+
+	range = [1...4] //3 dots
 		
+results in
+
+	var range = [1,2,3];
+
+This works also with variables
+
+	start = 1
+	end = 10
+
+	range = [start..end]
+
+Given an array `range = [1..10]`, here are some common **operations**
+
+	range[4..6]
+
+pulls out all the elements starting from index 4 up to index 6: `[5,6,7]`.  
+The JavaScript equivalent:
+
+	var range = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	range.slice(4, 7);
+
+Also 
+
+	range[4..range.length]
+
+works: `[5, 6, 7, 8, 9, 10]`
+
+### List comprehensions
+
+Having
+
+	locations = ["Bolzano", "Merano", "Bressanone"]
+
+which are cities in the province of Bolzano (BZ) of Italy. Now if we'd like to append a ", (BZ)" to each of these entries, in CoffeeScript this could be done as follows:
+
+	locations = ("#{location}, (BZ)" for location in locations)
+
+Interestingly, parenthesis are important here!
+
+This can even be combined with filters, 
+
+	locations = ("#{location}, (BZ)" for location in locations when location isnt "Merano")
+
+which would output: `["Bolzano, (BZ)", "Bressanone, (BZ)"]`  
+Here, the power of CoffeeScript's functional-like syntax becomes visible.
+
