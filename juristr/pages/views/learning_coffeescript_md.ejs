@@ -188,3 +188,116 @@ In **JS**
 
 	if age < 18
 		alert "Under 18"
+
+	//or
+	alert "Under 18" if age < 18
+
+### Operators
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>CoffeeScript
+			<th>JavaScript
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>== or is
+			<td>===
+		</tr>
+		<tr>
+			<td>!= or isnt
+			<td>!==
+		</tr>
+		<tr>
+			<td>not
+			<td>!
+		</tr>
+		<tr>
+			<td>and
+			<td>&&
+		</tr>
+		<tr>
+			<td>or
+			<td>||
+		</tr>
+		<tr>
+			<td>true yes on
+			<td>true
+		</tr>
+		<tr>
+			<td>false no off
+			<td>false
+		</tr>
+	</tbody>
+</table>
+
+This allows for statements like
+
+	if paid() and coffee() is on then pour()
+
+	addCaffeine() if not Decaf()
+	addCaffeine() unless Decaf()
+
+###Chained comparisons
+...can also be written very nicely.
+
+	if(2 < newLevel && newLevel < 5){ ... }
+
+in CF
+
+	if 2 < newLevel < 5
+		alert "In range"
+
+### Switch
+
+	message = switch cupsOfCoffee
+		when 0 then "Asleep"
+		when 1 then "Eyes Open"
+		when 2 then "Buzzed"
+		when 3 then "Dangerous"
+
+### Existential Operators
+A common operation in JavaScript is to check on whether something is _defined and not null_. In CoffeeScript there exists an operator for this, namely
+
+	if someVariable?
+		alert "It is defined"
+
+Another nice semplicifation is to initialize some default value if it hasn't been set yet.
+
+	if not cupsOfCoffee?
+		cupsOfCoffee = 0
+
+	//or
+	cupsOfCoffee = 0 if not cupsOfCoffee?
+
+	//or
+	cupsOfCoffee = 0 unless cupsOfCoffee?
+
+	//or most simply
+	cupsOfCoffee ?= 0
+
+Similarly, a function should only be called on an object if that object actually exists/is defined:
+
+	if coffeePot?
+		coffeePot.brew()
+
+	coffeePot?.brew()
+
+In addition, this can be used also in combination with function invocation, i.e. to call a given function on an object only if it actually exists:
+
+	vehicle.startEngine?().shiftGear?()
+
+which is extremely more expressive than the JavaScript alternative
+
+	var _base;
+
+	if (typeof vehicle.startEngine === "function") {
+	  if (typeof (_base = vehicle.startEngine()).shiftGear === "function") {
+	    _base.shiftGear();
+	  }
+	}
+
+## Ranges
+		
