@@ -175,6 +175,23 @@ or alternatively by first separately declaring the functions.
 
 	$(".drink li").hover a, b
 
+### Bind Example
+
+**JS**
+
+	$("#tabs ul li a").bind({
+		click: changeTab,
+		mouseenter: showNumberOfFlights,
+		mouseleave: hideNumberOfFlights
+	});
+
+**CS**
+
+	$("#tabs ul li a").bind
+	  click: changeTab
+	  mouseenter: showNumberOfFlights
+	  mouseleave: hideNumberOfFlights
+
 ## Conditionals and Operators
 
 ### If statements
@@ -505,4 +522,125 @@ All of this can obviously be combined with filters (as already seen in some of t
 	  "#{coffee} has #{attrs.inStock}"
 	toPrint.join ", "
 
+## Examples
+Some examples and their translation into CoffeeScript
 
+### showFlights function
+Take the following JavaScript function...
+
+	function showFlights(activeDiv){
+		$("#tabs div").hide();
+
+		if(fetchingFlights){
+			fetchingFlights.abort();
+		}
+
+		fetchingFlights = $.ajax("/flights", {
+			data: { date: activeDiv },
+			cache: false,
+			error: function(result){
+				if(result.statusText != "abort"){
+					$("#tabs #error").show();
+				}
+			}
+		});
+	}
+
+...and translate it line by line.
+
+---
+
+These lines
+
+	function showFlights(activeDiv) {
+		$("#tabs div").hide();
+
+can be translated as
+
+	showFlights = (activeDiv) ->
+	  $("#tabs div").hide()
+
+The if condition
+
+	if(fetchingFlights){
+		fetchingFlights.abort();
+	}
+
+can be translated as
+
+	if fetchingFlights
+	  fetchingFlights.abort()
+
+> or alternatively `fetchingFlights.abort() if fetchingFlights`
+
+The next step is to translate the ajax call.
+
+	fetchingFlights = $.ajax("/flights", {
+		...
+	});
+
+will translate into CoffeeScript as
+
+	fetchingFlights = $.ajax "/flights" 
+	  data: 
+	    date: activeDiv
+	  cache: false
+	  error: (result) ->
+	    $("#tabs #error").show() if result.statusText isnt "abort"
+
+> **Note**
+> 
+> - No comma is needed after `"/flights"` as the newline substitutes it
+> - The 2nd param of the `$.ajax` call is an object, so indentation can be used
+> - `data` is an object inside an object, so indentation applies here as well. Alternatively one could have written this as `data: date: activeDiv`
+
+### List Comprehensions
+Again, the JavaScript code
+
+	var filteredFlights = [];
+
+	$.each(currentFlights, function(index, flight){
+		if(stops === "2+" || flights.routing == 0) {
+			filteredFlights.push(flight);
+		}
+	});
+
+So, the array declaration can be defined as follows
+
+	filteredFlights = []
+
+then we need to loop over all `currentFlights` which can be done using the jQuery each function exactly like in the example
+
+	$.each currentFlights, (index, flight) ->
+
+and then adding the conditions
+
+	if stops is "2+" or flight.routing is 0
+
+s.t. all put together we would end up with
+
+	filteredFlights = []
+
+	$.each currentFlights, (index, flight) ->
+	  if stops is "2+" or flight.routing is 0
+	    filteredFlights.push flight
+
+This is the most simple direct translation from JavaScript. However, this doesn't leverage the full power of CoffeeScript.
+
+To do so, the above CoffeeScript can be further refactored. The jQuery each can be substituted with a plain CoffeeScript loop
+
+	for flight in currentFlights
+
+to this we can directly append a filter
+
+	stops is "2+" or flights.routing is 0
+
+and then return a flight:
+
+	flight for flight in flights when stops is "2+" or flight.routing is 0
+
+Finally, put together
+
+	filteredFlights = (flight for flight in flights when stops is "2+" or flight.routing is 0)
+
+That's it. Really nice and readable.
