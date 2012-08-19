@@ -1,0 +1,190 @@
+# Learning CoffeeScript
+
+Seing and reading all the stuff about CoffeeScript, I thought it might be useful to get into that "language" in order to get a better understanding. There is a lot of material already online on http://coffeescript.org. This here are basically my notes of the Fluent Conference 2012 Talk about CoffeeScript by Gregg Pollack.  
+_(I've not been there - unfortunately - but O'Reilly granted me access to the conf vid collection)_
+
+## Setup
+
+### Installation
+
+ - Install node + npm
+ - Install the CoffeeScript compiler: `$ npm install -g coffee-script`
+
+### Usage
+
+`$ coffee -c test.coffee`  
+Produces test.js
+
+`$ coffee -cw test.coffee`  
+Every time `test.coffee` updates it will automatically re-compile it.
+
+The same works for entire directories.
+
+`$ coffee -c src -o js`  
+Compiles all CoffeeScript files in `src` to the `js` folder.
+
+`$ coffee -cw src -o js`  
+..continuous compilation on every change of a file in src.
+
+
+## Variables and Functions
+
+### Named functions
+
+**JS**
+
+    var coffee = function coffee(){
+    	return confirm("Ready for CoffeeScript?");
+	};
+
+**CS**
+
+	coffee = ->
+		confirm "Ready for CoffeeScript?"
+
+CoffeeScript (CS) is intended instead of using the curly brackets. Indentation is normally either _2 spaces_ or _1 tab_.
+
+`->` converts to `function()`
+
+What also important is that in CS, functions _always have a return value_ which automatically is the last line in the function.
+
+## Returning a string
+If one would like to the return the answer (in the above function) as `string`, then in **JS** this would look like
+
+	var coffee = function(){
+		var result = confirm("Ready for CoffeeScript?");
+		return "Your answer is " + result + "!";
+	}
+
+in **CS** instead
+
+	coffee = ->
+		result = confirm "Ready for CoffeeScript?"
+		"Your answer is " + result + "!"
+
+A variant is to write the string concatenation as follows
+
+	"Your answer is #{result}!"
+
+To **note**
+
+ - No variable declaration needed
+ - parenthesis are optional; `confirm("Ready...")` is equal to `confirm "Ready..."
+
+### Calling functions
+
+**Decl**
+
+	coffee = ->
+
+**Invocation**
+
+	coffee()
+
+---
+
+**Decl**
+
+	coffee = (message) ->
+
+**Invocation**
+
+	coffee("Yes")
+	
+	//alternatively
+	coffee "Yes"
+
+---
+
+**Decl**
+
+	coffee = (message, other) ->
+
+**Invocation**
+
+	coffee("Yes", 2)
+	coffee "Yes", 2
+
+### Optional params
+
+Similar to C# where you can define optional parameters as
+
+	public void SomeMethod(string x = "hello, world") { ... }
+
+you can write in **CS**
+
+	coffee = (message = "Ready for CoffeeScript") ->
+		answer = confirm message
+		"Your answer is #{answer}"
+
+**Note**, no return statement is written explicitly, the _last line_ will be returned automatically.
+
+## jQuery with CoffeeScript
+
+The following jQuery JavaScript sample
+
+	jQuery(function($){
+
+		function changeTab(e){
+			e.preventDefault();
+			$("#tab li a.active").removeClass("active");
+			$(this).addClass("active");
+		}
+
+		$("#tab ul li a").click(changeTab);
+	});
+
+Would translate to
+
+	$ ->
+		changeTab = (e) ->
+			e.preventDefault()
+			$("#tab li a.active").removeClass "active"
+			$(@).addClass "active"
+
+		$("#tab ul li a").click changeTab
+
+**Note**
+
+ - `jQuery(function($))` can be translated to `$ ->` or `jQuery ($) ->`
+ - @ = this (shortcut)
+
+Declaring a function inline like
+
+	$("#tab ul li a").click(function(e){
+		...
+	});
+
+translates to
+
+	$("#tab ul li a").click (e) ->
+		...
+
+An interesting example (from an understanding point of view) is the jQuery[hover](http://api.jquery.com/hover/) function as it takes two functions as input. In CS this gets written as
+
+	$(".drink li").hover(
+		-> 
+			$(@).find(".span").show()
+		->
+			$(@).find(".span").hide()
+
+or alternatively by first separately declaring the functions.
+
+	a = -> $(@).find("span").show();
+	b = -> $(@).find("span").hide();
+
+	$(".drink li").hover a, b
+
+## Conditionals and Operators
+
+### If statements
+
+In **JS**
+
+	if(age < 18)
+		alert("Under 18");
+
+**CS**
+
+	if age < 18
+		alert "Under 18"
