@@ -1,6 +1,6 @@
 # Learning CoffeeScript
 
-Seing and reading all the stuff about CoffeeScript, I thought it might be useful to get into that "language" in order to get a better understanding. There is a lot of material already online on http://coffeescript.org. This here are basically my notes of the Fluent Conference 2012 Talk about CoffeeScript by Gregg Pollack.  
+Seing and reading all the stuff about CoffeeScript, I thought it might be useful to get into that "language" in order to get a better understanding. There is a lot of material already online on http://coffeescript.org. This here are basically my notes of the Fluent Conference 2012 Talk about "A Sip of CoffeeScript" by Gregg Pollack.  
 _(I've not been there - unfortunately - but O'Reilly granted me access to the conf vid collection)_
 
 ## Setup
@@ -66,10 +66,10 @@ A variant is to write the string concatenation as follows
 
 	"Your answer is #{result}!"
 
-To **note**
-
- - No variable declaration needed
- - parenthesis are optional; `confirm("Ready...")` is equal to `confirm "Ready..."
+> **Note**
+> 
+> - No variable declaration needed
+> - parenthesis are optional; `confirm("Ready...")` is equal to `confirm "Ready..."
 
 ### Calling functions
 
@@ -117,7 +117,7 @@ you can write in **CS**
 		answer = confirm message
 		"Your answer is #{answer}"
 
-**Note**, no return statement is written explicitly, the _last line_ will be returned automatically.
+> **Note:** no return statement is written explicitly, the _last line_ will be returned automatically.
 
 ## jQuery with CoffeeScript
 
@@ -144,10 +144,10 @@ Would translate to
 
 		$("#tab ul li a").click changeTab
 
-**Note**
-
- - `jQuery(function($))` can be translated to `$ ->` or `jQuery ($) ->`
- - @ = this (shortcut)
+> **Note**
+>
+> - `jQuery(function($))` can be translated to `$ ->` or `jQuery ($) ->`
+> - @ = this (shortcut)
 
 Declaring a function inline like
 
@@ -399,4 +399,110 @@ This can even be combined with filters,
 
 which would output: `["Bolzano, (BZ)", "Bressanone, (BZ)"]`  
 Here, the power of CoffeeScript's functional-like syntax becomes visible.
+
+### Splats
+These are a convenient way for passing a variable number of arguments into a function.
+
+Example
+
+	searchLocation = (brand, cities...) ->
+		"Looking for #{brand} in #{cities.join(,)}"
+
+which can then be called like `searchLocation "Starbucks", "Orlando", "New York"`.
+
+Alternatively also an entire array can be sent to the function
+
+	params = ["Starbucks", "Orlando", "New York", "Washington"]
+	searchLocation(params...)
+
+The `...` are needed as otherwise the assumption would be to send in **one array parameter** instead of a list of arguments. In fact, CoffeeScript translates this
+
+	searchLocation(params...)
+
+into
+
+	searchLocation.apply(null, params);
+
+whereas it translates
+
+	searchLocation(params)
+
+into
+
+	searchLocation(params);
+
+## Objects
+Objects can be defined in the following ways
+
+	coffee = { name: "Meindl", strength: 2}
+
+and since curly braces are optional, this is equivalent
+
+	coffee = name: "Meindl", strength: 2
+
+and commas could be replaced by newline chars
+
+	coffee = 
+	  name: "Meindl"
+	  strength: 2
+
+As you already imagined, adding anonymous functions works quite similar
+
+	coffee =
+	  name: "Meindl"
+	  strength: 2
+	  brew: -> alert "Brewing #{@name}"
+
+> Indentation is particularly important here! Normally 2 spaces are used. **Wrong indentation leads to wrong translation into JavaScript!**
+
+Object declarations can also be nested arbitrarily like
+
+	coffee =
+	  french:
+	    strength: 1
+	    inStock: 20
+	  italian:
+	    strength: 2
+	    inStock: 12
+	  decaf:
+	    strength: 0
+	    inStock:8
+
+The according JavaScript translation is quite obvious:
+
+	var coffee = {
+	  french: {
+	    strength: 1,
+	    inStock: 20
+	  },
+	  italian: {
+	    strength: 2,
+	    inStock: 12
+	  },
+	  decaf: {
+	    strength: 0,
+	    inStock: 8
+	  }
+	};
+
+### Object iteration
+In CoffeeScript `of` can be used for object iteration.
+
+	"#{coffee} has #{attrs.inStock}" for coffee, attrs of coffee
+
+The equivalent JavaScript looks like
+
+	var attrs, coffee;
+
+	for (coffee in coffee) {
+  		attrs = coffee[coffee];
+  		"" + coffee + " has " + attrs.inStock;
+	}
+
+All of this can obviously be combined with filters (as already seen in some of the previous sections) and printed out nicely. For instance
+
+	toPrint = for coffee, attrs of coffees when attrs.inStock > 0
+	  "#{coffee} has #{attrs.inStock}"
+	toPrint.join ", "
+
 
