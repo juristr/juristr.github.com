@@ -2,10 +2,12 @@ steal(
 	'jquery/controller',
 	'jquery/controller/route',
 	'jquery/controller/view',
-	'jquery/view/ejs')
+	'jquery/view/ejs',
+	'./pages.css')
 .then(
 	//'./resources/markdown/Markdown.Sanitizer.js',
-	'./resources/markdown/Markdown.Converter.js'
+	'./resources/markdown/Markdown.Converter.js',
+	'./resources/prettify.js'
 	)
 .then(
 	'./views/pageslist.ejs'
@@ -21,7 +23,10 @@ steal(
 
 		//publics
 		renderPage: function(pageName){
-			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));	
+			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));
+
+			this._addPrettify();
+			prettyPrint();
 		},
 
 		renderPagesList: function(){
@@ -65,7 +70,19 @@ steal(
             }
             b = b.join('');
             return "mailto:" + b;
-        }
+        },
+
+        _addPrettify: function () {
+			var els = document.querySelectorAll('pre');
+			for (var i = 0, el; el = els[i]; i++) {
+				if (!el.classList.contains('noprettyprint')) {
+					el.classList.add('prettyprint');
+				}
+				el.classList.add('drop-shadow');
+				el.classList.add('curved');
+				el.classList.add('curved-hz-2');
+			}
+		}
 	});
 
 });
