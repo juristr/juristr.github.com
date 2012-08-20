@@ -1,9 +1,11 @@
-# Learning CoffeeScript
+# <section class="last-changed">August 20, 2012</section> It's time to learn CoffeeScript
 
-Seing and reading all the stuff about CoffeeScript, I thought it might be useful to get into that "language" in order to get a better understanding. There is a lot of material already online on http://coffeescript.org. This here are basically my notes of the Fluent Conference 2012 Talk about "A Sip of CoffeeScript" by Gregg Pollack.  
-_(I've not been there - unfortunately - but O'Reilly granted me access to the conf vid collection)_
+Seing and reading all the stuff about CoffeeScript, I thought it might be useful to get into that "language" as well in order to get a better understanding. There is a lot of material already online on http://coffeescript.org but still, I learn a lot better and faster if I write my own notes and examples.
+
+Therefore, this tutorial here is basically the result of taking notes and writing down examples of the Fluent Conference 2012 Talk about "A Sip of CoffeeScript" by Gregg Pollack. Unfortunately I wasn't there myself, but O'Reilly was so kind to grant me full access to the conference video collection.
 
 ## Setup
+You can either install CoffeeScript on your machine directly or just try the examples directly on the [coffeescript.org](http://coffeescript.org) website (choosing the "Try CoffeeScript" tab, which is more than enough for this tutorial).
 
 ### Installation
 
@@ -40,7 +42,7 @@ Compiles all CoffeeScript files in `src` to the `js` folder.
 **CS**
 
 	coffee = ->
-		confirm "Ready for CoffeeScript?"
+	  confirm "Ready for CoffeeScript?"
 
 CoffeeScript (CS) is intended instead of using the curly brackets. Indentation is normally either _2 spaces_ or _1 tab_.
 
@@ -59,8 +61,8 @@ If one would like to the return the answer (in the above function) as `string`, 
 in **CS** instead
 
 	coffee = ->
-		result = confirm "Ready for CoffeeScript?"
-		"Your answer is " + result + "!"
+	  result = confirm "Ready for CoffeeScript?"
+	  "Your answer is " + result + "!"
 
 A variant is to write the string concatenation as follows
 
@@ -114,8 +116,8 @@ Similar to C# where you can define optional parameters as
 you can write in **CS**
 
 	coffee = (message = "Ready for CoffeeScript") ->
-		answer = confirm message
-		"Your answer is #{answer}"
+	  answer = confirm message
+	  "Your answer is #{answer}"
 
 > **Note:** no return statement is written explicitly, the _last line_ will be returned automatically.
 
@@ -137,12 +139,12 @@ The following jQuery JavaScript sample
 Would translate to
 
 	$ ->
-		changeTab = (e) ->
-			e.preventDefault()
-			$("#tab li a.active").removeClass "active"
-			$(@).addClass "active"
+	  changeTab = (e) ->
+	    e.preventDefault()
+	    $("#tab li a.active").removeClass "active"
+		$(@).addClass "active"
 
-		$("#tab ul li a").click changeTab
+	  $("#tab ul li a").click changeTab
 
 > **Note**
 >
@@ -158,15 +160,15 @@ Declaring a function inline like
 translates to
 
 	$("#tab ul li a").click (e) ->
-		...
+	  ...
 
 An interesting example (from an understanding point of view) is the jQuery[hover](http://api.jquery.com/hover/) function as it takes two functions as input. In CS this gets written as
 
 	$(".drink li").hover(
-		-> 
-			$(@).find(".span").show()
-		->
-			$(@).find(".span").hide()
+	  -> 
+	    $(@).find(".span").show()
+	  ->
+		$(@).find(".span").hide()
 
 or alternatively by first separately declaring the functions.
 
@@ -204,7 +206,7 @@ In **JS**
 **CS**
 
 	if age < 18
-		alert "Under 18"
+	  alert "Under 18"
 
 	//or
 	alert "Under 18" if age < 18
@@ -265,26 +267,26 @@ This allows for statements like
 in CF
 
 	if 2 < newLevel < 5
-		alert "In range"
+	  alert "In range"
 
 ### Switch
 
 	message = switch cupsOfCoffee
-		when 0 then "Asleep"
-		when 1 then "Eyes Open"
-		when 2 then "Buzzed"
-		when 3 then "Dangerous"
+	  when 0 then "Asleep"
+	  when 1 then "Eyes Open"
+	  when 2 then "Buzzed"
+	  when 3 then "Dangerous"
 
 ### Existential Operators
 A common operation in JavaScript is to check on whether something is _defined and not null_. In CoffeeScript there exists an operator for this, namely
 
 	if someVariable?
-		alert "It is defined"
+	  alert "It is defined"
 
 Another nice semplicifation is to initialize some default value if it hasn't been set yet.
 
 	if not cupsOfCoffee?
-		cupsOfCoffee = 0
+	  cupsOfCoffee = 0
 
 	//or
 	cupsOfCoffee = 0 if not cupsOfCoffee?
@@ -298,7 +300,7 @@ Another nice semplicifation is to initialize some default value if it hasn't bee
 Similarly, a function should only be called on an object if that object actually exists/is defined:
 
 	if coffeePot?
-		coffeePot.brew()
+	  coffeePot.brew()
 
 	coffeePot?.brew()
 
@@ -325,16 +327,16 @@ Arrays can be defined like
 or by using a _newline_ char instead of a comma:
 
 	locations = [
-		"New York"
-		"Los Angeles"
-		"Washington"
+	  "New York"
+	  "Los Angeles"
+	  "Washington"
 	]
 
 ### Looping over...
 ...the elements is as easy as
 
 	locations.forEach(location, index) ->
-		alert "Location #{location}"
+	  alert "Location #{location}"
 
 which is nothing else than using the standard JavaScript `forEach`
 
@@ -345,7 +347,7 @@ which is nothing else than using the standard JavaScript `forEach`
 Alternatively
 
 	for location in locations
-		alert "Location #{location}"
+	  alert "Location #{location}"
 
 which should not be confounded with the JavaScript `for in` loop for iterating over Object literals and which **should not** be used for array iterations. Instead the above CoffeeScript `for ... in` loop will be translated into this
 
@@ -423,7 +425,7 @@ These are a convenient way for passing a variable number of arguments into a fun
 Example
 
 	searchLocation = (brand, cities...) ->
-		"Looking for #{brand} in #{cities.join(,)}"
+	  "Looking for #{brand} in #{cities.join(,)}"
 
 which can then be called like `searchLocation "Starbucks", "Orlando", "New York"`.
 

@@ -21,6 +21,12 @@
 			"title": "Tutorials",
 			"items": [
 				{
+					"title": "It's time to learn CoffeeScript",
+					"description": "A intro tutorial on CoffeeScript",
+					"publishedDate": "08/20/2012",
+					"link": "#!pages/learning_coffeescript"
+				},
+				{
 					"title": "Setting up Git with TFS",
 					"description": "Tutorial on how to get started with Git and TFS",
 					"publishedDate": "08/14/2012",
