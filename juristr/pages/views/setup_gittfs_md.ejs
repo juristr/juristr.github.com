@@ -1,0 +1,37 @@
+# <section class="last-changed">August 14, 2012</section> Setting up Git with TFS
+Today [Microsoft announced](http://blogs.msdn.com/b/bharry/archive/2012/08/13/announcing-git-integration-with-tfs.aspx) their git support for TFS that allows you to work with TFS as well as Git on the same TFS project.
+This tutorial briefly links all the stuff you need for getting started.
+
+## Download
+Download the latest version from [Codeplex](http://gittf.codeplex.com/). You should have JRE in your path as well as which you can either download from
+
+- http://msysgit.github.com/ or
+- http://windows.github.com
+
+## Setup on Windows
+I extracted the git-tf zip file I got and placed it somewhere in my Programs folder. Then I pointed the "Environment Variables" to the directory s.t. I can use it from the command line.
+
+If you now open a new Command Prompt you should get something like this
+
+	Microsoft Windows [Version 6.1.7601]
+	Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+	C:\Users\jstrumpfloh>git tf
+	usage: git-tf [--version] [--help] [--quiet|-q|--verbose] [<command...>]
+
+	The git-tf commands are:
+	   help       Displays usage information
+	   clone      Initializes a git repository from a TFS path
+	   configure  Configures an existing git repository to add to TFS
+	   checkin    Checks in changes to a TFS folder
+	   fetch      Fetch the latest code from TFS into FETCH_HEAD
+	   pull       Pulls the latest code from TFS and merge/rebase the changes into master
+	   shelve     Shelves the changes to a TFS folder (Beta)
+
+**Done**
+
+# Links
+- [Official docs](http://gittf.codeplex.com/)
+
+
+  

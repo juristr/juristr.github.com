@@ -21,6 +21,12 @@
 			"title": "Tutorials",
 			"items": [
 				{
+					"title": "Setting up Git with TFS",
+					"description": "Tutorial on how to get started with Git and TFS",
+					"publishedDate": "08/14/2012",
+					"link": "#!pages/setup_gittfs"
+				},
+				{
 					"title": "Setting up Apache",
 					"description": "Quick guide on how to setup Apache2 webserver on OSX and Windows",
 					"publishedDate": "08/13/2012",
