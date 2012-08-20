@@ -10,7 +10,8 @@ steal(
 	'./resources/prettify.js'
 	)
 .then(
-	'./views/pageslist.ejs'
+	'./views/pageslist.ejs',
+	'./views/versionhistory.ejs'
 	)
 .then(function(){
 	
@@ -23,10 +24,24 @@ steal(
 
 		//publics
 		renderPage: function(pageName){
+			var $versionHistory;
+
 			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));
 
 			this._addPrettify();
 			prettyPrint();
+
+			$versionHistory = this.element.find("#versionhistory");
+			if($versionHistory.length > 0){
+				$.ajax({
+					url: "https://api.github.com/repos/juristr/juristr.github.com/commits?path=./juristr/pages/views/" + pageName + "_md.ejs&callback=?",
+					dataType: "json",
+					type: "GET",
+					success: this.proxy(function(result){
+						$versionHistory.html(this.view("versionhistory", result.data));
+					})
+				});
+			}
 		},
 
 		renderPagesList: function(){

@@ -1,0 +1,5 @@
+<ul>
+	<% for(var i=0; i<this.length; i++){ %>
+		<li><%= this[i].commit.message %> <%= (moment(this[i].commit.committer.date).fromNow()) %></li>
+	<% } %>
+</ul>
