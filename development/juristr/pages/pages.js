@@ -7,8 +7,13 @@ steal(
 .then(
 	//'./resources/markdown/Markdown.Sanitizer.js',
 	'./resources/markdown/Markdown.Converter.js',
-	'./resources/prettify.js'
+	'./resources/prettify.js',
+	'./resources/jqueryui/jquery-ui-1.8.23.custom.css',
+	'./resources/jqueryui/jquery-ui-1.8.23.custom.min.js'
 	)
+.then(
+	'./resources/tocify/jquery.tocify.css',
+	'./resources/tocify/jquery.tocify.js')
 .then(
 	'./views/pageslist.ejs',
 	'./views/versionhistory.ejs'
@@ -24,9 +29,11 @@ steal(
 
 		//publics
 		renderPage: function(pageName){
-			var $versionHistory;
+			var $versionHistory,
+				$toc;
 
 			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));
+			//this.element.append("<section class='span4'><div id='toc'></div></section>");
 
 			this._addPrettify();
 			prettyPrint();
@@ -41,6 +48,11 @@ steal(
 						$versionHistory.html(this.view("versionhistory", result.data));
 					})
 				});
+			}
+
+			$toc = this.element.find("#toc");
+			if($toc.length > 0){
+				$toc.tocify();
 			}
 		},
 
