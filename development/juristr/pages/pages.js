@@ -33,7 +33,18 @@ steal(
 				$toc;
 
 			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));
-			//this.element.append("<section class='span4'><div id='toc'></div></section>");
+
+			$toc = this.element.find("#toc");
+			if($toc.length > 0){
+				$toc.remove();
+
+				var $navSection = $("<section class='span4'></div>");
+					$navSection.append($toc);
+					
+				this.element.append($navSection);
+
+				$toc.tocify();
+			}
 
 			this._addPrettify();
 			prettyPrint();
@@ -48,11 +59,6 @@ steal(
 						$versionHistory.html(this.view("versionhistory", result.data));
 					})
 				});
-			}
-
-			$toc = this.element.find("#toc");
-			if($toc.length > 0){
-				$toc.tocify();
 			}
 		},
 
