@@ -35,6 +35,7 @@ steal(
 			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));
 
 				url: "https://api.github.com/repos/juristr/juristr.github.com/commits?per_page=10&path=./juristr/pages/views/" + pageName + "_md.ejs&callback=?",
+					this.find("h1").prepend("<section class='last-changed' rel='tooltip' data-original-title='Last updated'>" + moment(lastUpdated).format("MMMM Do, YYYY") + "</section>");
 			$toc = this.element.find("#toc");
 			if($toc.length > 0){
 				$toc.remove();
