@@ -34,8 +34,27 @@ steal(
 
 			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));
 
+			this._addPrettify();
+			prettyPrint();
+
+			$.ajax({
 				url: "https://api.github.com/repos/juristr/juristr.github.com/commits?per_page=10&path=./juristr/pages/views/" + pageName + "_md.ejs&callback=?",
+				dataType: "json",
+				type: "GET",
+				success: this.proxy(function(result){
+					var lastUpdated = result.data[0].commit.committer.date;
 					this.find("h1").prepend("<section class='last-changed' rel='tooltip' data-original-title='Last updated'>" + moment(lastUpdated).format("MMMM Do, YYYY") + "</section>");
+
+					this.find("*[rel=tooltip]").tooltip({ placement: "left" });
+
+					var $versionHistory = this.find("#versionhistory");
+					if($versionHistory.length > 0){
+						$versionHistory.html(this.view("versionhistory", result.data));
+					}
+				})
+			});
+
+			//render TOC
 			$toc = this.element.find("#toc");
 			if($toc.length > 0){
 				$toc.remove();
@@ -46,21 +65,6 @@ steal(
 				this.element.append($navSection);
 
 				$toc.tocify();
-			}
-
-			this._addPrettify();
-			prettyPrint();
-
-			$versionHistory = this.element.find("#versionhistory");
-			if($versionHistory.length > 0){
-				$.ajax({
-					url: "https://api.github.com/repos/juristr/juristr.github.com/commits?path=./juristr/pages/views/" + pageName + "_md.ejs&callback=?",
-					dataType: "json",
-					type: "GET",
-					success: this.proxy(function(result){
-						$versionHistory.html(this.view("versionhistory", result.data));
-					})
-				});
 			}
 		},
 
