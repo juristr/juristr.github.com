@@ -34,6 +34,7 @@ steal(
 
 			this.element.html(this._renderMarkdown(this.view(pageName + "_md")));
 
+				url: "https://api.github.com/repos/juristr/juristr.github.com/commits?per_page=10&path=./juristr/pages/views/" + pageName + "_md.ejs&callback=?",
 			$toc = this.element.find("#toc");
 			if($toc.length > 0){
 				$toc.remove();
