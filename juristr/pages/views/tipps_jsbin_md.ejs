@@ -4,3 +4,11 @@ Some tipps regarding the usage of [JSBin](http://jsbin.com).
 ## Customizing JS Bin's Editor
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/pzFqaRJwNQ8" frameborder="0" allowfullscreen></iframe>
+
+All the editor specific settings are directly forwarded to [CodeMirror](http://codemirror.net/) which is the editor used inside JSbin. The keys can be found [here](http://codemirror.net/doc/manual.html#config) and set with
+
+    jsbin.settings.editor.<code_mirror_key> = <value>
+
+Another interesting setting:
+
+    jsbin.settings.debug = true;
