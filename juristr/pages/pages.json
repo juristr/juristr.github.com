@@ -14,7 +14,19 @@
 					"description": "A nice list of checks to test whether you really know JavaScript",
 					"publishedDate": "07/21/2012",
 					"link": "#!pages/uknowjavascript"
-				}
+				},
+				{
+					"title": "JSBin Tipps and Tricks",
+					"description": "A collection of tipps and tricks around using JSBin",
+					"publishedDate": "08/23/2012",
+					"link": "#!pages/tipps_jsbin"
+				},
+				{
+					"title": "Chrome Developer Tools",
+					"description": "Useful findings to get up to speed in developing JavaScript apps",
+					"publishedDate": "08/24/2012",
+					"link": "#!pages/chromedevtools"
+				}								
 			]
 		},
 		{
