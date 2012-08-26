@@ -649,3 +649,216 @@ Finally, put together
 	filteredFlights = (flight for flight in flights when stops is "2+" or flight.routing is 0)
 
 That's it. Really nice and readable.
+
+## Object Orientation
+
+Take the following CS object
+
+	coffee = 
+	  name: "French"
+	  strength: 2
+	  brew: -> alert "brewing #{name}"
+	  pour: (amaount) ->
+	    if amount is 1
+	      "Poured a single cup"
+	    else
+	      "Poured #{amount} cups"
+
+This can be turned into a **class** as follows.
+
+First the class definition which is written
+
+	class Coffee
+
+then we can add a constructor
+
+	constructor: (name, strength=1) ->
+	  @name = name
+	  @strength = strength
+
+Remember, the `@` is like an alias for `this`, so `@name = name` does nothing else than setting the passed constructor parameter onto the class instance member. There is a nice _shortcut_ for this, namely to write the constructor like
+
+	constructor: (@name, @strength = 1) ->
+
+The instance functions can be taken over just normally s.t. the full class definition then is the following:
+
+	class Coffee
+
+	  constructor: (@name, @strength = 1) ->
+
+	  brew: -> alert "brewing #{name}"
+	  
+	  pour: (amaount) ->
+	    if amount is 1
+	      "Poured a single cup"
+	    else
+	      "Poured #{amount} cups"
+
+This class definition can now be used just as expected
+
+	french = new Coffee("French", 2)
+	french.brew()
+
+You might wonder how CoffeeScript translates this to JavaScript? Here's the result:
+
+	var Coffee;
+
+	Coffee = (function() {
+
+	  function Coffee(name, strength) {
+	    this.name = name;
+	    this.strength = strength != null ? strength : 1;
+	  }
+
+	  Coffee.prototype.brew = function() {
+	    return alert("brewing " + name);
+	  };
+
+	  Coffee.prototype.pour = function(amaount) {
+	    if (amount === 1) {
+	      return "Poured a single cup";
+	    } else {
+	      return "Poured " + amount + " cups";
+	    }
+	  };
+
+	  return Coffee;
+
+	})();
+
+It creates a nice clean object using the module pattern.
+
+### Inheritance
+
+Inheritance is done by using the `extends` keyword:
+
+	class MaxgoodHouse extends Coffee
+
+What could be done is to change the constructor s.t.
+
+	constructor: (@name, @strength=1) ->
+		@brand = "Maxgood House"
+
+Calling
+
+	maxgood = new MaxgoodHouse("maxgood")
+	maxgood.brew()
+
+would work, as it would call the inherited function from `Coffee`. Obviously one could also overwrite an existing function
+
+	brew: -> alert "brewing #{@brand} #{@name}"
+
+Similarly, it is possible to call the original function from the inherited class like
+
+	pour: (amount) ->
+		"#{super(amount)}, but it sucks"
+
+> `super(amount)` basically calls the parent's class `pour(..)` function
+
+
+### The "Fat Arrow"
+
+When having the following class
+
+	class Coffee
+
+	  constructor: (@name, @strength = 1, @inventory) ->
+
+	  pourClick ->
+	    $("pour-#{name}").click (event) ->
+	      if @inventory isnt 0
+	        @inventory = -1
+	        alert "Poured a cup of #{@name}"
+
+This would give an **error**!! Why? Think of how the according JavaScript might look like
+
+	$("someSelector").click(function(){
+		if(this.inventory !== 0){
+			this.inventory = -1;
+			...
+		}
+	});
+
+You see the problem. `this` inside the click wrapped function doesn't point anymore to the object instance but to the clicked DOM element. In JavaScript this can be either solved using something like `var self = this` 
+
+	var self = this;
+	$("someSelector").click(function(){
+		if(self.inventory !== 0){
+			...
+		}
+	});
+
+or by using the `jQuery.proxy` function
+
+	$("someSelector").click($.proxy(function(){
+		if(this.inventory !== 0){ ... }
+	}), this);
+
+Depends on your preference.
+
+With CoffeeScript this behavior can be fixed using the so-called **fat arrow**
+
+	$("pour-#{@name}").click (event) =>
+	 if @inventory isnt 0
+	        @inventory = -1
+	        alert "Poured a cup of #{@name}"
+
+Wondering how CoffeeScript translates it? Here it is:
+
+	var _this = this;
+
+	$("pour-" + this.name).click(function(event) {
+	  if (_this.inventory !== 0) {
+	    _this.inventory = -1;
+	    return alert("Poured a cup of " + _this.name);
+	  }
+	});
+
+It uses the _self_ mechanism.
+
+### Using a Class for Encapsulation
+
+Consider this sample
+
+	var selectFlights = {
+
+		var fetchingFlights: null,
+
+		init: function(){
+			var self = this;
+
+			$("#tabs ul li a").bind({
+				click: this.changeTab
+			});
+
+			$("#tabs #error a").click(function(ev){
+				ev.preventDefault();
+				self.showFlights($("#tabs li a.active").attr("href"));
+			});
+		},
+
+		showFlights: function(activeDiv) { ... }
+		changeTab: function(event) { ... }
+
+	};
+
+Refactoring this to CoffeeScript could be done as follows.
+
+	class SelectFlights
+
+	  constructor: (@fetchingFlights=null) ->
+	    $("#tabs ul li a").bind
+	      click: @changeTab
+
+	    $("#tabs #error a").click (ev) =>
+	      ev.preventDefault
+	      @showFlights $("#tabs li a.active").attr("href")
+
+	    showFlights: (activeDiv) ->
+
+	    changeTab: (event) =>
+
+> **Note**, `changeTab` needs the fat arrow as it runs under the context of the click event handler registered in the constructor.
+
+
+
