@@ -33,6 +33,12 @@
 			"title": "Tutorials",
 			"items": [
 				{
+					"title": "Jasime - An Introduction",
+					"description": "Introduction to testing JavaScript with Jasmine",
+					"publishedDate": "08/29/2012",
+					"link": "#!pages/jasmineintro"
+				},
+				{
 					"title": "It's time to learn CoffeeScript",
 					"description": "A intro tutorial on CoffeeScript",
 					"publishedDate": "08/20/2012",
