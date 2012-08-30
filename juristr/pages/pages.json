@@ -16,19 +16,28 @@
 					"link": "#!pages/uknowjavascript"
 				},
 				{
-					"title": "JSBin Tipps and Tricks",
-					"description": "A collection of tipps and tricks around using JSBin",
+					"title": "Dev Machine Setup",
+					"description": "Setup of my machines as a developer",
+					"publishedDate": "08/30/2012",
+					"link": "#!pages/devmachinesetup"
+				}				
+			]
+		},
+		{
+			"title": "Tipps and Tricks",
+			"items": [
+				{
+					"title": "Working with JSBin",
 					"publishedDate": "08/23/2012",
 					"link": "#!pages/tipps_jsbin"
 				},
 				{
 					"title": "Chrome Developer Tools",
-					"description": "Useful findings to get up to speed in developing JavaScript apps",
 					"publishedDate": "08/24/2012",
 					"link": "#!pages/chromedevtools"
-				}								
+				}
 			]
-		},
+		},		
 		{
 			"title": "Tutorials",
 			"items": [
