@@ -24,8 +24,13 @@
 			]
 		},
 		{
-			"title": "Tipps and Tricks",
+			"title": "Tips and Tricks",
 			"items": [
+				{
+					"title": "Sublime Text 2",
+					"publishedDate": "09/3/2012",
+					"link": "#!pages/tips_sublime"
+				},
 				{
 					"title": "Working with JSBin",
 					"publishedDate": "08/23/2012",
