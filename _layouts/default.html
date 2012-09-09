@@ -9,28 +9,25 @@
 	<meta content='Juri&quot;s website.' name='description'/>
 	<meta content='.Net, JavaScript, Microsoft Technologies, Google, Tips and Tricks, Software Development, Programming' name='keywords'/>	
 	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+
+	<script type="text/javascript" src="/assets/js/moment.min.js"></script>
+	<script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/bootstrap/css/bootstrap-responsive.min.css">
+	<link href="/assets/site.css" rel="stylesheet">
+
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-	<script type="text/javascript">
-        setTimeout(function(){
-            var container = document.getElementById("container"),
-                screenLoadingDiv = document.getElementById("screenloading");
-
-            if(container && screenLoadingDiv && container.style.display === "none"){
-                screenLoadingDiv.style.display = "block";
-            }
-        }, 2500);
-    </script>
 </head>
 <body>
-	<div id="screenloading" style="display:none; top:40%; left:33%; position:fixed">
-		<p><img src="resources/imgs/loader.gif">&nbsp;Hmm..seems to take longer than expected...just another couple of seconds plz</p>
-	</div>
-	<div id="container" class="container-fluid" style="display:none">
+	<div id="container" class="container-fluid">
 		<div class="row-fluid">
 			<div class="span1">
 				<div id="sidebar">
@@ -50,7 +47,7 @@
 				</div>
 			</div>
 			<section class="span11 js-content">
-				
+				{{content}}
 			</section>
 		</div>
 
@@ -61,21 +58,5 @@
 		</footer>
 
 	</div>
-
-	<script type='text/javascript' src='steal.production.js?production.js'></script>
-	<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=3619804; 
-var sc_invisible=1; 
-var sc_security="118662eb"; 
-</script>
-<script type="text/javascript"
-src="http://www.statcounter.com/counter/counter.js"></script>
-<noscript><div class="statcounter"><a title="visit tracker
-on tumblr" href="http://statcounter.com/tumblr/"
-target="_blank"><img class="statcounter"
-src="http://c.statcounter.com/3619804/0/118662eb/1/"
-alt="visit tracker on tumblr"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
 </body>
 </html>
