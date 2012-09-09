@@ -3,7 +3,6 @@ layout: default
 title: Hello World!
 tagline: Supporting tagline
 ---
-
 <div class="span12">
   <div class="row-fluid">
     <div class="span6 js-blognews">
@@ -28,3 +27,11 @@ tagline: Supporting tagline
     <div class="span12 js-github-latest"></div>
   </div>  
 </div>
+<script>
+$(function(){
+  $(".publishDate").each(function(el){
+    var $el = $(this);
+    $el.html(moment($el.text()).fromNow());
+  });
+});
+</script>

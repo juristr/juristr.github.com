@@ -2,5 +2,5 @@
 
 load("steal/rhino/rhino.js");
 steal('steal/build','steal/build/scripts','steal/build/styles',function(){
-	steal.build('juristr/scripts/build.html',{to: '../'});
+	steal.build('juristr/scripts/build.html',{to: './'});
 });

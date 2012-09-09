@@ -89,9 +89,9 @@ steal(
 		}
 	});
 
-	new Juristr.Routing(document.body);	
+	//new Juristr.Routing(document.body);	
 	$(".gravatar").corner("5px");
 
-	$("#screenloading").hide();
-	$("#container").fadeIn();
+	//$("#screenloading").hide();
+	//$("#container").fadeIn();
 });
