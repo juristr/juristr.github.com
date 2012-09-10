@@ -100,6 +100,14 @@ task :preview do
   system "jekyll --auto --server"
 end # task :preview
 
+# Changes the codepage to allow running jekyll on win as well
+task :runwin do
+    puts '* Changing the codepage'
+    `chcp 65001`
+    puts '* Running Jekyll'
+    `jekyll --server --auto`
+end
+
 # Public: Alias - Maintains backwards compatability for theme switching.
 task :switch_theme => "theme:switch"
 
