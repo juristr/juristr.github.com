@@ -15,7 +15,7 @@ tagline: Supporting tagline
             </p>
         {% endfor %}
       </section>
-      <p><a class="btn" href="http://blog.js-development.com" target="_window">More »</a></p>
+      <p><a class="btn" href="posts.html" target="_window">More »</a></p>
     </div>
     <div class="span6 js-tweets"></div>
   </div>
