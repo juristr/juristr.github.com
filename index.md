@@ -73,12 +73,12 @@ title: Juri Strumpflohner
         <div class="span9">
           <p><strong>Computer geek and martial arts practitioner</strong></p>
           <p>
-            I'm currently working as a <a href="http://careers.stackoverflow.com/juristr">software architect</a> for an e-government company mostly
-            developing cool rich client web applications with JavaScript, HTML5. Oh, I'm a 
+            I'm currently working as a <a href="http://careers.stackoverflow.com/juristr">software architect</a> for an e-government company 
+            where I help to develop cool rich client web applications with JavaScript, HTML5. Oh, I'm a 
             .Net guy as well.
           </p>
           <p>
-            Sounds interesting, just 
+            Sounds interesting? Just 
             <iframe allowtransparency="true" frameborder="0" scrolling="no" class="twitter-follow-button"
   src="http://platform.twitter.com/widgets/follow_button.1347008535.html#_=1347483259773&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=rtomayko&amp;show_count=false&amp;show_screen_name=false&amp;size=l" >
             </iframe> me on Twitter then.
@@ -96,7 +96,7 @@ title: Juri Strumpflohner
   <div class="span10" style="text-align:center">
     <ul class="nav nav-pills">
       <li>
-        <a href="#">Blog</a>
+        <a href="/blog">Blog</a>
       </li>
       <li>
         <a href="#">Projects</a>

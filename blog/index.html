@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog Posts
+---
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <article>
+          <header>
+            <h1 class="post-title"><a href="{{post.url}}">{{ post.title }}</a></h1>
+            <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+          </header>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+
+
+<script>
+// $(function(){
+//   $(".publishDate").each(function(el){
+//     var $el = $(this);
+//     $el.html(moment($el.text()).fromNow());
+//   });
+// });
+</script>

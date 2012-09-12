@@ -26,8 +26,8 @@
     <!--
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     -->
-    <link href="/assets/site.css" rel="stylesheet">
-    <link href="/assets/pages.css" rel="stylesheet">
+    <!-- <link href="/assets/site.css" rel="stylesheet">
+    <link href="/assets/pages.css" rel="stylesheet"> -->
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -36,6 +36,67 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+
+    <style>
+      html, body, button, input, select, textarea {
+        font-size: 20px;
+        color: #57534A !important;
+      }
+
+      body, textarea {
+        line-height: 1.4;
+      }
+
+      .main-content {
+        border-left: 1px solid #E3E3E3;
+      }
+
+     
+      .post-list > li {
+        list-style:none;
+        padding-top: 30px;
+      }
+
+      ul.post-list > li::before {
+        content: "";
+        position: absolute;
+        right: 100%;
+        margin-top: 0.55em;
+        margin-right: 0.333em;
+        width: 6px;
+        height: 6px;
+        border-radius: 14px;
+        background-color: #423F37;
+      }
+
+      .post-title {
+        font-size: 21px !important;
+      }
+
+      .post-title > a {
+        color: inherit;
+        text-decoration: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+      }
+
+      .post-date {
+        display: block;
+        font-size: 15px;
+        color: #C7C2B8;
+      }
+
+      h1, h2, h3, .post-list .post-title {
+        color: #423F37;
+        font-weight: 600;
+      }
+
+      .nav .home {
+        position: fixed;
+        top: 1.3rem;
+        left: 1.3rem;
+      }
+    </style>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 
@@ -46,25 +107,31 @@
   <body>
     <div id="container" class="container-fluid">
       <div class="row-fluid">
-        <div class="span1">
-          <div id="sidebar">
-            <a href="/">
-              <section class="profile">
-                <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=128" class="gravatar">
-              </section>
-            </a>
-
-            <ul class="nav nav-list">
-              <li><a href="/pages/about">about</a>
-              <li><a href="http://careers.stackoverflow.com/juristr">cv</a>
-              <li><a href="#!pages">pages</a>
-              <li><a href="#!pages/talks">talks</a>
-              <li><a href="/pages/projects">projects</a>
+        <div class="span2">
+          <!-- <nav>
+            <ul class="nav nav-pills">
+              <li>
+                <a href="/blog">Blog</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Tutorials</a>
+              </li>
+              <li>
+                <a href="#">Talks</a>
+              </li>      
+              <li>
+                <a href="#">About</a>
+              </li>      
             </ul>
-          </div>
+          </nav>    -->       
         </div>
-        <section class="span11 js-content">
+        <section class="span8 main-content">
           {{content}}
+        </section>
+        <section class="span2">
         </section>
       </div>
 
@@ -75,7 +142,7 @@
       </footer>
 
     </div>
-    <script type='text/javascript' src='/assets/js/steal.production.js?/assets/js/production.js'></script>
+    <!--script type='text/javascript' src='/assets/js/steal.production.js?/assets/js/production.js'></script-->
 
     <script>
       $(function(){
