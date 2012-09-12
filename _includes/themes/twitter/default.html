@@ -79,12 +79,10 @@
 
     <script>
       $(function(){
-        // setTimeout(function(){
-        //   $(".js-tweets").juristr_tweets();
-        //   $(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
-        //   $(".js-stackoverflow-latest").juristr_stackexchange();
-        //   new Juristr.Github($(".js-github-latest")).loadFeedData();
-        // },1000);
+        $(".js-tweets").juristr_tweets();
+        $(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
+        $(".js-stackoverflow-latest").juristr_stackexchange();
+        new Juristr.Github($(".js-github-latest")).loadFeedData();
       });
     </script>
   </body>
