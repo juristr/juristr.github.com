@@ -45,45 +45,8 @@
 
   <body>
     <div id="container" class="container-fluid">
-      <div class="row-fluid">
-        <div class="span1">
-          <div id="sidebar">
-            <a href="/">
-              <section class="profile">
-                <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=128" class="gravatar">
-              </section>
-            </a>
-
-            <ul class="nav nav-list">
-              <li><a href="/pages/about">about</a>
-              <li><a href="http://careers.stackoverflow.com/juristr">cv</a>
-              <li><a href="#!pages">pages</a>
-              <li><a href="#!pages/talks">talks</a>
-              <li><a href="/pages/projects">projects</a>
-            </ul>
-          </div>
-        </div>
-        <section class="span11 js-content">
-          {{content}}
-        </section>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>© Juri Strumpflohner - JS-Development 2012</p>
-      </footer>
-
+      {{content}}
     </div>
     <script type='text/javascript' src='/assets/js/steal.production.js?/assets/js/production.js'></script>
-
-    <script>
-      $(function(){
-        $(".js-tweets").juristr_tweets();
-        $(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
-        $(".js-stackoverflow-latest").juristr_stackexchange();
-        new Juristr.Github($(".js-github-latest")).loadFeedData();
-      });
-    </script>
   </body>
 </html>

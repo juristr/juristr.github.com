@@ -1,37 +1,131 @@
 ---
-layout: default
-title: Hello World!
-tagline: Supporting tagline
+layout: home
+title: Juri Strumpflohner
 ---
-<div class="span12">
-  <div class="row-fluid">
-    <div class="span6 js-blognews">
-      <h2>Latest from my blog</h2>
-      <section>
-        {% for post in site.posts %}
-            <p class="feedentry">
-              <span class="publishDate">{{ post.date }}</span>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </p>
-        {% endfor %}
-      </section>
-      <p><a class="btn" href="posts.html" target="_window">More »</a></p>
+<style>
+  body {
+    font-size: 22px;
+    line-height: 1.8;
+    font-family: 'lucida grande', 'helvetica neue', helvetica, sans-serif;
+    color: #57534A;
+  }
+
+  h1 {
+    font-family: georgia, 'bitstream vera sans serif', 'lucida grande', helvetica, verdana, sans-serif;
+    font-weight:normal;
+    text-align:center;
+    border-bottom:0;
+    margin: 100px 0;
+    line-height: 1;
+    font-size: 100px;
+    text-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: -3px;
+  }
+
+  img.gravatar {
+    border-radius: 2px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    margin: -2px 30px 25px 0;
+  }
+
+  p {
+    padding-bottom:8px;
+  }
+
+  .twitter-follow-button {
+    position: relative;
+    top: 10px;
+    width:80px; 
+    height:30px;
+  }
+
+  .nav-pills {
+    text-align:center;
+  }
+
+  .nav-pills > li {
+      display: inline-block;
+      *display:inline; /* ie7 fix */
+      float: none; /* this is the part that makes it work */
+  }
+</style>
+
+<div class="row-fluid">
+  <div class="span12">
+    <div class="span1">
     </div>
-    <div class="span6 js-tweets"></div>
+    <section class="span10">
+      <h1>Juri Strumpflohner</h1>
+    </section>
+    <div class="span1">
+    </div>
   </div>
-  <div class="row-fluid">
-    <div class="span6 js-stackoverflow-top"></div>
-    <div class="span6 js-stackoverflow-latest"></div>
-  </div>
-  <div class="row-fluid">
-    <div class="span12 js-github-latest"></div>
-  </div>  
 </div>
-<script>
-$(function(){
-  $(".publishDate").each(function(el){
-    var $el = $(this);
-    $el.html(moment($el.text()).fromNow());
-  });
-});
-</script>
+<div class="row-fluid">
+  <div class="span12">
+    <div class="span1">
+    </div>
+    <div class="span10">
+      <div class="span12">
+        <div class="span3">
+          <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=256" class="gravatar img-rounded">
+        </div>
+        <div class="span9">
+          <p><strong>Computer geek and martial arts practitioner</strong></p>
+          <p>
+            I'm currently working as a <a href="http://careers.stackoverflow.com/juristr">software architect</a> for an e-government company mostly
+            developing cool rich client web applications with JavaScript, HTML5. Oh, I'm a 
+            .Net guy as well.
+          </p>
+          <p>
+            Sounds interesting, just 
+            <iframe allowtransparency="true" frameborder="0" scrolling="no" class="twitter-follow-button"
+  src="http://platform.twitter.com/widgets/follow_button.1347008535.html#_=1347483259773&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=rtomayko&amp;show_count=false&amp;show_screen_name=false&amp;size=l" >
+            </iframe> me on Twitter then.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="span1">
+    </div>
+  </div>
+</div>
+<div class="row-fluid" style="margin-top:30px">
+  <div class="span1">
+  </div>
+  <div class="span10" style="text-align:center">
+    <ul class="nav nav-pills">
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">Projects</a>
+      </li>
+      <li>
+        <a href="#">Tutorials</a>
+      </li>
+      <li>
+        <a href="#">Talks</a>
+      </li>      
+      <li>
+        <a href="#">About</a>
+      </li>      
+    </ul>
+    <!-- <div class="span12">
+      <div class="span3">
+        <a href="#">Blog</a>
+      </div>
+      <div class="span3">
+        <a href="#">Projects</a>
+      </div>
+      <div class="span3">
+        <a href="#">Talks</a>
+      </div>
+      <div class="span3">
+        <a href="#">About</a>
+      </div>      
+    </div> -->
+  </div>
+  <div class="span1">
+  </div>
+</div>
