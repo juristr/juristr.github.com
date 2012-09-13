@@ -32,7 +32,7 @@ a.home:hover{
 
 .post-list > li {
   list-style:none;
-  padding-top: 30px;
+  /*padding-top: 30px;*/
 }
 
 ul.post-list > li::before {
