@@ -80,7 +80,7 @@ title: Juri Strumpflohner
           <p>
             Sounds interesting? Just 
             <iframe allowtransparency="true" frameborder="0" scrolling="no" class="twitter-follow-button"
-  src="http://platform.twitter.com/widgets/follow_button.1347008535.html#_=1347483259773&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=rtomayko&amp;show_count=false&amp;show_screen_name=false&amp;size=l" >
+  src="http://platform.twitter.com/widgets/follow_button.1347008535.html#_=1347483259773&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=juristr&amp;show_count=false&amp;show_screen_name=false&amp;size=l" >
             </iframe> me on Twitter then.
           </p>
         </div>

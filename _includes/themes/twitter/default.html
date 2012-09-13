@@ -96,6 +96,20 @@
         top: 1.3rem;
         left: 1.3rem;
       }
+
+      .profile {
+        position: absolute;
+        bottom: 60px;
+        left: 30px;
+      }
+
+      .profile-name {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.8rem;
+        margin-top: 0;
+        margin-bottom: 0.2rem;
+      }
     </style>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
@@ -108,25 +122,49 @@
     <div id="container" class="container-fluid">
       <div class="row-fluid">
         <div class="span2">
-          <!-- <nav>
-            <ul class="nav nav-pills">
-              <li>
-                <a href="/blog">Blog</a>
-              </li>
-              <li>
-                <a href="#">Projects</a>
-              </li>
-              <li>
-                <a href="#">Tutorials</a>
-              </li>
-              <li>
-                <a href="#">Talks</a>
-              </li>      
-              <li>
-                <a href="#">About</a>
-              </li>      
-            </ul>
-          </nav>    -->       
+          <div class="profile">
+            <div class="row-fluid">
+              <div class="span8 offset2">
+                <a href="/"><img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=128&amp;d=identicon&amp;r=PG" class="img-circle"></a>
+              </div>
+            </div>
+            <div class="row-fluid">
+              <div class="span12">
+                  <h2 class="profile-name">Juri Strumpflohner</h2>
+                  <div class="row-fluid">
+                    <div class="span8 offset4">
+                      <img src="/assets/images/github.png"/>
+                      <img src="/assets/images/rss.png"/>
+                      <img src="/assets/images/twitter.png"/>
+                    </div>
+                  </div>
+              </div>
+            </div>
+           <!--  <div class="row-fluid">
+              <div class="span12">
+                <nav>
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="/blog">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#">Projects</a>
+                    </li>
+                    <li>
+                      <a href="#">Tutorials</a>
+                    </li>
+                    <li>
+                      <a href="#">Talks</a>
+                    </li>      
+                    <li>
+                      <a href="#">About</a>
+                    </li>      
+                  </ul>
+                </nav>                  
+              </div>
+            </div> -->
+          </div>
+                  
         </div>
         <section class="span8 main-content">
           {{content}}
@@ -135,22 +173,22 @@
         </section>
       </div>
 
-      <hr>
+      <!-- <hr>
 
       <footer>
         <p>© Juri Strumpflohner - JS-Development 2012</p>
-      </footer>
+      </footer> -->
 
     </div>
     <!--script type='text/javascript' src='/assets/js/steal.production.js?/assets/js/production.js'></script-->
 
     <script>
-      $(function(){
-        $(".js-tweets").juristr_tweets();
-        $(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
-        $(".js-stackoverflow-latest").juristr_stackexchange();
-        new Juristr.Github($(".js-github-latest")).loadFeedData();
-      });
+      // $(function(){
+      //   $(".js-tweets").juristr_tweets();
+      //   $(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
+      //   $(".js-stackoverflow-latest").juristr_stackexchange();
+      //   new Juristr.Github($(".js-github-latest")).loadFeedData();
+      // });
     </script>
   </body>
 </html>
