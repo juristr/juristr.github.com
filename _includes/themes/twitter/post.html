@@ -1,19 +1,21 @@
-<section class="span8 pages-content">
+<article>
   <h1>
-    <section class="date last-changed" rel="tooltip" data-original-title="Last updated">
-      {{ page.date }}
-    </section>
-    {{ page.title }} <small>Supporting tagline</small>
+    {{ page.title }}
   </h1>
+  <time class="post-date">
+    {{ page.date | date: "%B %d, %Y" }}
+  </time>
   <!--
   {% unless page.tags == empty %}
       {% assign tags_list = page.tags %}
       {% include JB/tags_list %}
   {% endunless %} 
--->
-
-  {{ content }}
-
+  -->
+  <div class="article-body">
+    {{ content }}
+  </div>
+  
+</article>
   <hr>
   <div class="pagination">
     <ul>

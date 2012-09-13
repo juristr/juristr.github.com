@@ -23,9 +23,8 @@
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-responsive.min.css">
-    <!--
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    -->
+    
     <!-- <link href="/assets/site.css" rel="stylesheet">
     <link href="/assets/pages.css" rel="stylesheet"> -->
 
@@ -37,82 +36,6 @@
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
 
-    <style>
-      html, body, button, input, select, textarea {
-        font-size: 20px;
-        color: #57534A !important;
-      }
-
-      body, textarea {
-        line-height: 1.4;
-      }
-
-      .main-content {
-        border-left: 1px solid #E3E3E3;
-      }
-
-     
-      .post-list > li {
-        list-style:none;
-        padding-top: 30px;
-      }
-
-      ul.post-list > li::before {
-        content: "";
-        position: absolute;
-        right: 100%;
-        margin-top: 0.55em;
-        margin-right: 0.333em;
-        width: 6px;
-        height: 6px;
-        border-radius: 14px;
-        background-color: #423F37;
-      }
-
-      .post-title {
-        font-size: 21px !important;
-      }
-
-      .post-title > a {
-        color: inherit;
-        text-decoration: inherit;
-        font-weight: inherit;
-        font-size: inherit;
-      }
-
-      .post-date {
-        display: block;
-        font-size: 15px;
-        color: #C7C2B8;
-      }
-
-      h1, h2, h3, .post-list .post-title {
-        color: #423F37;
-        font-weight: 600;
-      }
-
-      .nav .home {
-        position: fixed;
-        top: 1.3rem;
-        left: 1.3rem;
-      }
-
-      .profile {
-        position: fixed;
-        bottom: 60px;
-        left: 30px;
-        z-index: 1;
-      }
-
-      .profile-name {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 0.8rem;
-        margin-top: 0;
-        margin-bottom: 0.2rem;
-      }
-    </style>
-
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 
     <script type="text/javascript" src="/assets/js/moment.min.js"></script>
@@ -123,10 +46,17 @@
     <div id="container" class="container-fluid">
       <div class="row-fluid">
         <div class="span2">
+          <div class="home">
+            <div class="row-fluid">
+              <div class="span8 offset4">
+                <a href="/" class="home"></a>
+              </div>
+            </div>
+          </div>
           <div class="profile">
             <div class="row-fluid">
               <div class="span8 offset2">
-                <a href="/"><img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=128&amp;d=identicon&amp;r=PG" class="img-circle"></a>
+                <a href="/"><img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=128&amp;d=identicon&amp;r=PG" class="img-rounded"></a>
               </div>
             </div>
             <div class="row-fluid">
@@ -134,9 +64,9 @@
                   <h2 class="profile-name">Juri Strumpflohner</h2>
                   <div class="row-fluid">
                     <div class="span8 offset4">
-                      <img src="/assets/images/github.png"/>
-                      <img src="/assets/images/rss.png"/>
-                      <img src="/assets/images/twitter.png"/>
+                      <a href="#"><img src="/assets/images/github.png"/></a>
+                      <a href="http://twitter.com/juristr"><img src="/assets/images/twitter.png"/></a>                      
+                      <a href="#"><img src="/assets/images/rss.png"/></a>
                     </div>
                   </div>
               </div>
