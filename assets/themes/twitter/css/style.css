@@ -100,6 +100,14 @@ article > h1 {
   margin-bottom:0;
 }
 
+.article-body > h2 {
+  font-size:25px;
+}
+
+.article-body > h3 {
+  font-size:22px;
+}
+
 .article-body {
   font-size:18px;
   font-weight:300;
