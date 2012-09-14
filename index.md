@@ -108,7 +108,7 @@ title: Juri Strumpflohner
         <a href="#">talks</a>
       </li>      
       <li>
-        <a href="#">about</a>
+        <a href="/about">about</a>
       </li>      
     </ul>
     <!-- <div class="span12">

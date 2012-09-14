@@ -50,6 +50,7 @@ ul.post-list > li::before {
 h1.post-title {
   font-size: 21px !important;
   margin-bottom:-5px;
+  padding-top:25px;
 }
 
 h1.post-title > a {
@@ -92,7 +93,30 @@ h1, h2, h3 {
 }
 
 article {
+  /*font-family: calibri,tahoma,arial,sans-serif;*/
   padding-top:45px;
+  padding-bottom:50px;
+  font-size:18px;
+  font-weight:300;
+}
+
+article img {
+  padding:3px;
+  max-width:100%;
+  border:1px solid #EEE;
+}
+
+article figure{
+  margin-left:0;
+}
+
+article figcaption {
+  display: block;
+  line-height: 1.2;
+  font-size: 0.8rem;
+  color: #A19C91;
+  font-style: italic;
+  padding-left:5px;
 }
 
 article > h1 {
@@ -101,9 +125,6 @@ article > h1 {
 }
 
 .article-body {
-  font-family: calibri,tahoma,arial,sans-serif;
-  font-size:18px;
-  font-weight:300;
   padding-top:35px;
 }
 

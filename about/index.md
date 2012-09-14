@@ -1,10 +1,13 @@
 ---
-layout: page
+layout: default
 title: Juri Strumpflohner
-description: ""
 ---
-{% include JB/setup %}
-<p><img src="./imgs/aboutme.jpg"></p>
+# Juri Strumpflohner	
+
+<figure>
+    <img src="./imgs/aboutme.jpg">
+    <figcaption>My passion..</figcaption>
+</figure>
 
 Currently Juri works as a [software architect](http://careers.stackoverflow.com/juristr) at a local, south-tyrolean e-government company. Beside being a coding geek,
 he is always in search for new interesting technologies with a major
