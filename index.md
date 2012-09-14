@@ -96,19 +96,19 @@ title: Juri Strumpflohner
   <div class="span10" style="text-align:center">
     <ul class="nav nav-pills">
       <li>
-        <a href="/blog">Blog</a>
+        <a href="/blog">blog</a>
       </li>
       <li>
-        <a href="#">Projects</a>
+        <a href="/projects">projects</a>
       </li>
       <li>
-        <a href="#">Tutorials</a>
+        <a href="#">tutorials</a>
       </li>
       <li>
-        <a href="#">Talks</a>
+        <a href="#">talks</a>
       </li>      
       <li>
-        <a href="#">About</a>
+        <a href="#">about</a>
       </li>      
     </ul>
     <!-- <div class="span12">
