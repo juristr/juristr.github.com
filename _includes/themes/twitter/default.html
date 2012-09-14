@@ -40,6 +40,7 @@
 
     <script type="text/javascript" src="/assets/js/moment.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/prettify.js"></script>
   </head>
 
   <body>
@@ -122,6 +123,17 @@
       //   $(".js-stackoverflow-latest").juristr_stackexchange();
       //   new Juristr.Github($(".js-github-latest")).loadFeedData();
       // });
+      var els = document.querySelectorAll('pre');
+      for (var i = 0, el; el = els[i]; i++) {
+        if (!el.classList.contains('noprettyprint')) {
+          el.classList.add('prettyprint');
+        }
+        el.classList.add('drop-shadow');
+        el.classList.add('curved');
+        el.classList.add('curved-hz-2');
+      }
+
+      prettyPrint();
     </script>
   </body>
 </html>
