@@ -40,3 +40,10 @@ As already Einstein said...
 
 > Test comment, 
 asdasdf asdf asdf asdf asdf 
+
+And here's some C# code
+
+	public class Person
+	{
+		public string Name { get; set; }
+	}

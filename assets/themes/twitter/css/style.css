@@ -142,6 +142,9 @@ article > h1 {
 }
 
 /* Prettyprint */
+pre code {
+  font-size:13px;
+}
 pre code { background: transparent; padding: 0; border-radius: initial;}
 
 pre.prettyprint {
