@@ -1,0 +1,9 @@
+---
+layout: post
+title: "HowTo: Detect Assembly dependencies at runtime"
+date: 2009-02-25
+comments: false
+tags: [  HowTo, C#, .Net ]
+---
+
+I'm currently developing a small project for myself, where I'm trying to build a small plugin framework (for experimenting purposes). In that environment I just came across the problem of detecting an assemblies dependencies at runtime. And actually to my surprise it is easier as I expected.<br /><ol><li>Retrieve an instance of the current assembly. Either you have it already or it can be retrieved with<br /><br /><pre class="prettyprint">Assembly currentAssembly = Assembly.GetExecutingAssembly();<br /></pre></li><li>Then get all of it's referenced assemblies<br /><br /><pre class="prettyprint">AssemblyName[] referencedAssemblies = currentAssembly.GetReferencedAssemblies();</pre></li></ol>This will give you a list of referenced assemblies which can then be instantiated in the way it is needed.

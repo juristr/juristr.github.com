@@ -1,0 +1,9 @@
+---
+layout: post
+title: "The type X is not accessible due to restriction on the..."
+date: 2008-11-09
+comments: false
+tags: [  RCP, Eclipse ]
+---
+
+For some university course we currently have to modify an Open Source application with LOC &gt; 50,000. So due to our particular interest in Eclipse RCP development, our team has chosen the <a href="http://www.rssowl.org/">RSSOwl</a>, a smart Newsfeed reader which is based on Eclipse RCP (you should check it out).<br />After downloading the latest source from the code repository, the build seemed to be broken since it reported about 18 errors saying something like:<br /><blockquote>The type [X] is not accessible due to restriction on required library [Y].</blockquote>...where [X] and [Y] are of course placeholders for the class and jar library :) . After some (actually long) search on the web, one of my collegues found the "solution" for the problem. It was actually a wrong Eclipse configuration of the Java compiler. What has to be done is to set the "Forbidden reference (access rules)" under the "Deprecated and restricted API" from "Error" to "Warning".<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_tF6XjsUy87k/SRatqFECGrI/AAAAAAAABns/U385rXJ29dM/s1600-h/rssowl_equinox.security_errors_warnings.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/_tF6XjsUy87k/SRatqFECGrI/AAAAAAAABns/U385rXJ29dM/s320/rssowl_equinox.security_errors_warnings.jpg" /></a></div><br />In this way Eclipse will treat the problem as a warning instead of an error. I discussed that configuration with the RSSOwl author and he affirmed me that it is fine to have the configuration set to "warning".

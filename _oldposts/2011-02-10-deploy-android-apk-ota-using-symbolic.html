@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Deploy Android APK OTA Using Symbolic Links and Dropbox"
+date: 2011-02-10
+comments: false
+tags: [  OSX, Linux, mobile dev, Android ]
+---
+
+Couple of time ago I wrote a blog post describing<a href="http://blog.js-development.com/2010/07/howto-install-your-android-app-ota-on.html"> how you can use Dropbox for deploying your Android APK basically over-the-air</a> to your device. That involved copying your APK to a dedicated Dropbox folder that can then be accessed from your Android device to install it.<br /><br />Instead of copying manually, on Unix based systems (Linux, OSX,..) you can also make use of <a href="http://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a>.<br /><ol><li>Open the terminal.</li><li>Navigate to your Dropbox folder where you want to have your APK file</li><li>type&nbsp;<code>ln -s &lt;/path-to-your-apk/ApkName.apk&gt; &lt;ApkName.apk&gt;</code></li></ol><div>For example consider I have my Android project at /Users/Juri/Projects/MyProjName, then I would create a link that looks like</div><pre class="brush:bash">ln -s /Users/Juri/Projects/MyProjName/bin/MyProjName.apk MyProjName.apk<br /></pre>Every time I build my project inside Eclipse, a new APK will be created which will then automatically be uploaded to Dropbox.<br /><br /><span class="Apple-style-span" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 24px;"><i>(If you don't have Dropbox you can get an invitation with 250MB additional storage space&nbsp;<a href="https://www.getdropbox.com/referrals/NTEwOTM2OQ" muse_scanned="true" style="color: #0066cc; text-decoration: none;">here</a>)</i></span>

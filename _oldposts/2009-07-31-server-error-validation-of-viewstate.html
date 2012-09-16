@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Server Error: Validation of viewstate MAC failed."
+date: 2009-07-31
+comments: false
+tags: [  ASP.net, Web dev, .Net ]
+---
+
+If you get the following error...<br /><blockquote>Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that <machinekey> configuration specifies the same validationKey and validation algorithm. AutoGenerate cannot be used in a cluster.</machinekey></blockquote><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/_tF6XjsUy87k/SnL7CbaCdvI/AAAAAAAACbo/w4ds4C3UyL0/s1600-h/MACValidationErrorASP.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/_tF6XjsUy87k/SnL7CbaCdvI/AAAAAAAACbo/w4ds4C3UyL0/s400/MACValidationErrorASP.jpg" /></a></div><br />You have to specify  the "&lt;machinekey&gt;" in your web.config. Actually the error itself already explains it.<br /><pre class="prettyprint">&lt;system.web&gt;<br />    &lt;machineKey validationKey="yourAlphaNumericValidationKey" decryptionKey="yourAlphaNumericDecryptionKey" validation="SHA1"/&gt;<br />   ...<br />&lt;system.web&gt;<br />    </pre>

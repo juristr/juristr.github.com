@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Recursive version of the FindControl(..) method"
+date: 2008-06-27
+comments: false
+tags: [  ASP.net, C#, .Net ]
+---
+
+I don't know why there is none already implemented in the .NET framework. Anyway it wasn't too difficult to write one  by myself:<br /><pre class="prettyprint">/// &lt;summary&gt;<br />/// Recursive version of the FindControl method.<br />/// &lt;/summary&gt;<br />/// &lt;param name="parent"&gt;Parent to where to start the search for the control&lt;/param&gt;<br />/// &lt;param name="controlId"&gt;ID of the control to search for&lt;/param&gt;<br />/// &lt;returns&gt;&lt;/returns&gt;<br />public static Control FindControlRecursive(Control parent, string controlId)<br />{<br />   if (controlId == parent.ID)<br />      return parent;<br /><br />   foreach (Control ctrl in parent.Controls)<br />   {<br />      Control tmp = FindControlRecursive(ctrl, controlId);<br />      if (tmp != null)<br />         return tmp;<br />   }<br /><br />   return null;<br />}</pre><br />I strongly recommend to check also <a href="http://blog.js-development.com/2009/10/repeater-looses-its-data-collection.html">this post</a>.

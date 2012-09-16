@@ -1,0 +1,9 @@
+---
+layout: post
+title: "FriendlyBool Extender What?"
+date: 2011-02-03
+comments: false
+tags: [  ASP.net, C# ]
+---
+
+From now and then it happens that I have to databind some entities onto the UI, containing boolean datatypes like "Married" or "Editable" and so on. Printing out "true" or "false" is not really user friendly, so normally what is being done is to have some kind of if clauses like<br /><pre class="brush:c#">if (Person.Married == true)<br />{<br />  return "Yes";<br />}<br />else<br />{<br />  return "No";<br />}<br /></pre>Obviously this repeats as more people have to do that. So why not create a nice C# extender on boolean types :)<br /><a name='more'></a><br /><pre class="brush:c#">public static class FriendlyBoolAnswerExtender<br />{<br /><br />    public static string ToFriendlyBoolAnswer(this bool booleanAnswer)<br />    {<br />        if (booleanAnswer)<br />            return "Yes";<br />        else<br />            return "No";<br />    }<br /><br />}<br /></pre>...and the usage<br /><pre class="brush:c#">true.ToFriendlyBoolAnswer();<br />someObject.Married.ToFriendlyBoolAnswer();<br /></pre>Nothing special actually, but still nice to have and the code gets a bit more elegant and readable :). Of course strings are not returned hardcoded but refactored out <a href="http://blog.js-development.com/2011/01/aspnet-organize-your-resources-correct.html">into resource files</a>.

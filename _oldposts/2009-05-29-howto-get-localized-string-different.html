@@ -1,0 +1,9 @@
+---
+layout: post
+title: "HowTo: Get localized string different from the current culture"
+date: 2009-05-29
+comments: false
+tags: [  HowTo, ASP.net, C#, .Net ]
+---
+
+Localization is a key part of most applications. For this purpose you usually use resource files (property files in Java, actually they are the same) with the according culture extension, like "MyResources.resx" for the default language, "MyResources.de.resx" for German etc...<br />You can then access your resources by using "GetLocalResourceObject(...)" for resources related to your current UserControl or Webpage/Form or "GetGlobalResourceObject(...)" for resources that are global to your application (App_GobalResources folder) and you'll automatically get the localized object in the current thread culture.<br /><br />Often however you may have the case where you want to retrieve a resource object in a different culture than the current one. This can be achieve as follows (example for the german culture):<br /><pre class="prettyprint">CultureInfo info = CultureInfo.CreateSpecificCulture("de-De");<br />string localizedString = Properties.Resources.ResourceManager.GetString("BackText", info);</pre>

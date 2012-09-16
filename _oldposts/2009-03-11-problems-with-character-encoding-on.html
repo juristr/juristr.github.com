@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Problems with character encoding on cookies"
+date: 2009-03-11
+comments: false
+tags: [  ASP.net, C#, Web dev, .Net ]
+---
+
+For preserving the search&nbsp;criteria on some page of our web application we're saving the different settings of the search filters into a cookie. So, when the user comes back next time we can restore the search filter settings that have been used previously.<br />Now however one of my working&nbsp;colleagues had the problem that some strings where not correctly retrieved from the cookie. Actually it was a character encoding problem. Characters like "ü,ö,.." were not displayed correctly after retrieving them from the cookie. I'm not sure whether you can set the character encoding of cookies. I don't think so, I've however not done any deep search on the web. Our solution was to do an url-encoding/decoding on the "critical" values of the cookie. So you can do something like<br /><pre class="prettyprint">public void SaveValuesToCookie(){<br />   ...<br />   Response.Cookies["key1"]["valuekey"] = Server.UrlEncode(criticalValue);<br />   ...<br />}<br /><br />public void LoadValuesFromCookie(){<br />   ...<br />   retrievedValue = Server.UrlDecode(Request.Cookies["key1"]["valuekey"]);<br />   ...<br />}<br /></pre>

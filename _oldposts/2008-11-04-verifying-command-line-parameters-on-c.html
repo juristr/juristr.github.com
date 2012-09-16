@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Verifying command line parameters on C++ main method"
+date: 2008-11-04
+comments: false
+tags: [  C++ ]
+---
+
+Just a very quick example on how to verify the correct number of command-line parameters on a C++ (or C) main method:<br /><pre class="prettyprint">int main(int argc, char **argv) {<br />    if(<b>argc &lt; 3</b>){<br />       ...<br />       //give some useful information to the user, i.e. the number<br />       //of required parameters and maybe also a short example<br />       ...<br />       //stop the execution of the program<br />       return EXIT_FAILURE;<br />    }<br />}<br /></pre>The checking of the correct number of parameters is done with the "argc" parameter of the main method, while the actual reading is done by using the argv parameter, i.e. argv[1] for the 1st parameter.<br /><u>Hint:</u> the input is given as array of char arrays: char**. char* = array of characters = string, so conversion to a string type is straightforward:<br /><pre class="prettyprint">string myString = argv[1]<br /></pre>

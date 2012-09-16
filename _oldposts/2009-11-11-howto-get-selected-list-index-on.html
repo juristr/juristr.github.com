@@ -1,0 +1,9 @@
+---
+layout: post
+title: "HowTo: Get the selected list index on Android Activity from context menu event"
+date: 2009-11-11
+comments: false
+tags: [  HowTo, mobile dev, Android ]
+---
+
+Consider the situation where you have an Activity displaying a list of items. You have a context menu and a normal option menu. When pressing the option menu button, you can get the selected item and index as follows:<br /><pre class="prettyprint">//the selected index<br />int index = listView.getSelectedItemPosition();<br /><br />//selected item<br />Object selObj = listView.getSelectedItem();<br /></pre>It is as simple as that. If you registered a context menu on the list, then the situation changes slightly and the "getSelectedItemPosition()" will fail. Instead, you have to do something like this<br /><pre class="prettyprint">AdapterView.AdapterContextMenuInfo menuInfo;<br />menuInfo = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();<br />int index = menuInfo.position;<br /></pre>

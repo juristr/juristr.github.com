@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Testing Your SUT Against Exceptions"
+date: 2010-11-23
+comments: false
+tags: [  Unit Testing, lessions learned, C#, Software testing, .Net ]
+---
+
+When you test your method for exceptions (which is good practice) the usually naive approach - which btw I was following myself till today - is to wrap your method under test with an appropriate try-catch and set a boolean.<br /><pre class="brush:java">[TestMethod]<br />public void TestMapPositionUpdate_NullPosition_ShouldFireArgumentException()<br />{<br />    //Setup<br />    Position nullPosition = null;<br /><br />    //Exercise<br />    bool exceptionCaught = false;<br />    try<br />    {<br />        ObjectMapper.MapPositionUpdate(nullPosition, "", "", false, "someValue");<br />    }<br />    catch (ArgumentException)<br />    {<br />        exceptionCaught = true;<br />    }<br /><br />    //Verify<br />    Assert.IsTrue(exceptionCaught, "The exception should have happened");<br />}</pre>I really don't like this approach because it involves writing a lot of code just to verify an exception has been raised and consequently it <b>clutters up the test code</b> and impacts on the <b>readability</b>.<br />Today I found that MS unit tests provides a nice attribute to overcome this problem, namely <code>ExpectedException</code>. This allows to nicely refactor the previous test method as follows:<br /><pre class="brush:java; highlight:[2]">[TestMethod]<br />[ExpectedException(typeof(ArgumentNullException))]<br />public void TestMapPositionUpdate_NullPosition_ShouldFireArgumentException()<br />{<br />    //Setup<br />    Position nullPosition = null;<br /><br />    //Exercise<br />    ObjectMapper.MapPositionUpdate(nullPosition, "", "", false, "someValue");<br />}</pre>Clean, isn't it. Already by looking at this test code, you immediately understand what it is about.&nbsp;If you happen to know other such interesting attributes,<b> feel free to leave a comment</b> ;)

@@ -1,0 +1,9 @@
+---
+layout: post
+title: "DockLayoutPanel doesn't work correctly??"
+date: 2010-02-19
+comments: false
+tags: [  GWT, Java, Web dev ]
+---
+
+Suppose you'd like to create a layout like the following using GWT:<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://code.google.com/webtoolkit/doc/latest/images/DockLayoutPanel.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="240" src="http://code.google.com/webtoolkit/doc/latest/images/DockLayoutPanel.png" width="320" /></a></div><br />With GWT 2.0 the documentation suggests to use the <a href="http://code.google.com/webtoolkit/doc/latest/DevGuideUiPanels.html#LayoutPanels">DockLayoutPanel</a>.<br /><pre class="prettyprint">&lt;g:DockLayoutPanel unit='EM'&gt;<br />  &lt;g:north size='4'&gt;<br />    &lt;g:Label&gt;Header&lt;/g:Label&gt;<br />  &lt;/g:north&gt;<br /><br />  &lt;g:west size='16'&gt;<br />    &lt;g:Label&gt;Navigation&lt;/g:Label&gt;<br />  &lt;/g:west&gt;<br /><br />  &lt;g:center&gt;<br />    &lt;g:ScrollPanel&gt;<br />      &lt;g:Label&gt;Content Area&lt;/g:Label&gt;<br />    &lt;/g:ScrollPanel&gt;<br />  &lt;/g:center&gt;<br />&lt;/g:DockLayoutPanel&gt;</pre><br />However pay attention, this won't work if you use the standard mechanism like<br /><pre class="prettyprint">public void onModuleLoad() {<br /> RootPanel.get("main").add(new MainUI());<br />}</pre>where the <code>new MainUI()</code> contains the <code>DockLayoutPanel</code> as root element (I assume you're using GWT's new UiBinder mechanism), then the <code>DockLayoutPanel</code> won't work surprisingly.<br /><br />Instead you have to use<br /><pre class="prettyprint">public void onModuleLoad() {<br />   RootLayoutPanel panel = RootLayoutPanel.get();<br />   panel.add(new MainUI());<br />}</pre>

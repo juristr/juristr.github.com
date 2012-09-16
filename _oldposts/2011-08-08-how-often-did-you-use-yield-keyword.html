@@ -1,0 +1,9 @@
+---
+layout: post
+title: "How often did you use the Yield keyword??"
+date: 2011-08-08
+comments: false
+tags: [  Best Practices, C#, .Net ]
+---
+
+<div>If you think about your coding...how often have you used C#'s <code>yield</code> keyword? To be honest I continuously forget to use it myself, too. But it would be so useful in certain scenarious. Take for instance:<br /><pre class="brush:c#">public IEnumerale&lt;Person&gt; FindMalePeople(IEnumerable&lt;Person&gt; people)<br />{<br />   IEnumerable&lt;Person&gt; result = new IList&lt;Person&gt;();<br />   <br />   foreach(Person person in people)<br />   {<br />      if(person.IsMale())<br />         result.add(person);<br />   }<br /><br />   return result;<br />}</pre><br /><a name='more'></a>You would write something like the cods above, right? Well ok..forget about Linq for a moment ;-) . Instead by using <code>yield</code> you could rewrite the above as follows: <br /><pre class="brush:c#">public IEnumerable&lt;Person&gt; FindMalePeople(IEnumerable&lt;Person&gt; people)<br />{<br />   foreach(Person person in people)<br />   {<br />      if(person.IsMale())<br />         yield return person;<br />   }<br />}<br /></pre>Although initially you may get a little used to it in terms of readability, this code is much more memory efficient as we don't need to store the result in an intermediate temporary list as it was done in the 1st example.</div>

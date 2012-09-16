@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Tomcat: "IllegalStateException: No output folder""
+date: 2010-12-26
+comments: false
+tags: [  OSX, Java, Linux, Web dev ]
+---
+
+Today, I started to create a couple of JSP pages for the server-side part of my MSc thesis project in order to be able to output some meaningful statistics of the underlying data in form of diagrams. The server was already based on Tomcat and Spring because the mobile client transmits the data over XML-RPC HTTP to an appropriate Spring controller which handles the requests. So everything I needed to do was to<br /><ul><li>create a "jsp" folder inside the WEB-INF directory</li><li>inside the "jsp" folder, create a jsp file with the desired content</li><li>create a Spring controller, which returns as <code>ModelAndView</code> the jsp page</li><li>create a <code>ViewResolver</code> bean in the spring configuration</li><li>define a correct mapping in the <code>SimpleUrlHandlerMapping</code> that points to the before created controller</li></ul>That was it, everything seemed to work, but when I made a request I got<br /><pre class="code">org.apache.jasper.JasperException: java.lang.IllegalStateException: No output folder</pre><br /><a name='more'></a>The problem here were incorrectly set permissions on the Tomcat installation folder. Basically, the installation was done under the root user while the application started as the user with which I was currently logged on at my machine. To solve this it's enough to do the following:<br /><pre class="brush:bash">chown -R Juri apache-tomcat-6.0.29<br /></pre>
