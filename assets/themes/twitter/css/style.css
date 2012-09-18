@@ -35,6 +35,14 @@ a.home:hover{
   /*padding-top: 30px;*/
 }
 
+ul.post-list{
+  margin:0;
+}
+
+ul.post-list h1{
+  line-height:28px;
+}
+
 ul.post-list > li::before {
   content: "";
   position: absolute;
