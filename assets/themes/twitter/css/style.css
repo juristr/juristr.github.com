@@ -108,6 +108,10 @@ article {
   font-weight:300;
 }
 
+article > .tags{
+  font-size: 15px;
+}
+
 article img {
   padding:3px;
   margin-top:10px;

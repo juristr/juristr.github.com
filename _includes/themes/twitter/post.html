@@ -4,6 +4,11 @@
   <time class="post-date">
     {{ page.date | date: "%B %d, %Y" }}
   </time>
+  <section class="tags">
+    {% for tag in page.tags %}
+      <a href="/blog/tags#{{tag}}">{{ tag }}</a>
+    {% endfor %}    
+  </section>
   <!--
   {% unless page.tags == empty %}
       {% assign tags_list = page.tags %}

@@ -2,8 +2,9 @@
 layout: post
 title: "It's time to learn CoffeeScript"
 description: ""
-category: tutorial
+category: bliki
 tags: [JavaScript, CoffeeScript, WebDev]
+comments: false
 ---
 {% include JB/setup %}
 
