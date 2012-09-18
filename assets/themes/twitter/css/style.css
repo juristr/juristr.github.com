@@ -149,15 +149,15 @@ article > h1 {
   font-weight:300;
 }
 
-.article-body > h2 {
+article > h2 {
   font-size:25px;
 }
 
-.article-body > h3 {
+article > h3 {
   font-size:22px;
 }
 
-.article-body > ul {
+article > ul {
   padding-top: 10px;
 }
 
