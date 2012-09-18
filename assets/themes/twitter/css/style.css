@@ -132,6 +132,8 @@ article figcaption {
 article > h1 {
   font-size:30px;
   margin-bottom:0;
+  line-height:30px;
+  padding-bottom:5px;
 }
 
 .article-body {
@@ -151,9 +153,18 @@ article > h1 {
   font-size:22px;
 }
 
+.article-body > ul {
+  padding-top: 10px;
+}
+
+.article-body > blockquote {
+  margin-top:20px;
+}
+
 /* Prettyprint */
 pre code {
   font-size:13px;
+  width: 100%;
 }
 pre code { background: transparent; padding: 0; border-radius: initial;}
 
@@ -185,6 +196,20 @@ pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
 pre.prettyprint, code.prettyprint {
   background-color: #444;
   border-radius: 8px;
+}
+
+ol.linenums > li{
+  color: white;
+}
+
+code {
+  background-color: #FEE9CC;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 1px 3px;
+  font-size: 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /* stackoverflow */

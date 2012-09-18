@@ -67,7 +67,7 @@
                     <div class="span8 offset4">
                       <a href="https://github.com/juristr"><img src="/assets/images/github.png"/></a>
                       <a href="http://twitter.com/juristr"><img src="/assets/images/twitter.png"/></a>                      
-                      <a href="#"><img src="/assets/images/rss.png"/></a>
+                      <a href="/blog/atom.xml"><img src="/assets/images/rss.png"/></a>
                     </div>
                   </div>
               </div>
@@ -127,6 +127,7 @@
       for (var i = 0, el; el = els[i]; i++) {
         if (!el.classList.contains('noprettyprint')) {
           el.classList.add('prettyprint');
+          //el.classList.add('linenums');
         }
         el.classList.add('drop-shadow');
         el.classList.add('curved');

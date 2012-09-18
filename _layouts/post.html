@@ -2,4 +2,7 @@
 layout: default
 ---
 {% include JB/setup %}
+{% for tag in page.tags %}
+  <a href="/blog/tags#{{tag}}">{{ tag }}</a>
+{% endfor %}
 {% include themes/twitter/post.html %}
