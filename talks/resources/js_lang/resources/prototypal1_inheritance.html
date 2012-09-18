@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link rel="stylesheet" type="text/css" href="../css/presentation.css">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jsconsole.js"></script>
+	</head>
+	<body>
+		<div style="text-align:center;top:40px;left:45%;position:absolute">
+			<p style="font-size:20pt;padding-bottom:15px;color:gray">Use the source, Luke</p>
+			<img src="imgs/yoda.png" />
+		</div>
+		<div id="terminal">
+
+		</div>
+
+		<script type="text/javascript">
+			var Animal = function(name){
+   				this.name = name;         
+			};
+			Animal.prototype.makeSound = function(){
+			    console.log(this.name + ": " + (this.sound || "(bo)"));
+			};
+			Animal.prototype.doEat = function(){
+				console.log("Eat what?");
+			};
+
+
+			var Mammal = function(name){
+ 				//call base class
+				Animal.call(this, name);
+			};
+
+			Mammal.prototype = new Animal();
+			Mammal.prototype.constructor = Mammal;
+
+			Mammal.prototype.warmBlooded = function(){
+				console.log("Sure! " + this.name + " is warm blooded!");
+			};
+			Mammal.prototype.doEat = function(){
+				console.log("Mammals such as " + this.name + " like to eat meat!");
+			};
+
+
+			var Bird = function(name){
+				Animal.call(this, name);
+				this.sound = "cip cip cip";
+			};
+			Bird.prototype = new Animal();
+			Bird.prototype.constructor = Bird;
+			Bird.prototype.canFly = function(){
+				console.log("I think so");
+			};
+			Bird.prototype.doEat = function(){
+				console.log("Birds eat mostly grains.");
+			};
+
+			var Cat = function(name){
+				Mammal.call(this, name);
+				this.sound = "miao";
+			};
+			Cat.prototype = new Mammal();
+			Cat.prototype.constructor = Cat;
+			Cat.prototype.doEat = function(){
+				console.log(this.name + " likes milk!");
+			};
+
+			var Dog = function(name){
+				Mammal.call(this, name);
+				this.sound = "wuff";
+			};
+			Dog.prototype = new Mammal();
+			Dog.prototype.constructor = Dog;
+
+			var Parrot = function(name){
+				Bird.call(this, name);
+				this.sound = "Hellooo";
+			};
+			Parrot.prototype = new Bird();
+			Parrot.prototype.constructor = Parrot;
+		</script>
+
+		<script type="text/javascript">
+			var dog = new Dog("Bello");
+			dog.makeSound();
+			dog.warmBlooded();
+
+			var cat = new Cat("Mietze");
+			cat.makeSound();
+
+			var bird = new Bird("Hansi");
+			bird.makeSound();
+
+			var parrot = new Parrot("Parrot");
+			parrot.makeSound();
+
+			//----
+
+			bird.doEat();
+			cat.doEat();
+			dog.doEat();
+		</script>
+
+		<!--
+		<script type="text/javascript">
+			var animals = [
+				new Dog("Bello"),
+				new Cat("Mietze"),
+				new Parrot("Parrot"),
+				new Bird("Hansi")
+			];
+
+			for(var i=0; i<animals.length; i++){
+				animals[i].makeSound();
+			}
+		</script>	
+		-->
+	</body>
+</html>

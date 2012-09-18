@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link rel="stylesheet" type="text/css" href="../css/presentation.css">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jsconsole.js"></script>
+	</head>
+	<body>
+		<div style="text-align:center;top:40px;left:45%;position:absolute">
+			<p style="font-size:20pt;padding-bottom:15px;color:gray">Use the source, Luke</p>
+			<img src="imgs/yoda.png" />
+		</div>
+		<div id="terminal">
+
+		</div>
+
+
+		<script type="text/javascript">
+			//ECMAScript 5 Shim
+			if (typeof Object.create !== 'function') {
+			    Object.create = function (o) {
+			        function F() {}
+			        F.prototype = o;
+			        return new F();
+			    };
+			}
+
+			var anAnimal = {
+				name: "(unknown)",
+				makeSound: function(){
+					console.log(this.name + ": " + (this.sound || "(bo)"));
+				},
+				doEat: function(){
+					console.log("Eat what?");
+				}
+			};
+
+			var aMammal = Object.create(anAnimal, {
+				doEat: {
+					value: function(){
+						console.log("Mammals such as " + this.name + " like to eat meat!");
+					}
+				},
+				warmBlooded: {
+					value: function(){
+						console.log("Sure! " + this.name + " is warm blooded!");
+					}
+				}
+			});
+
+			var aBird = Object.create(anAnimal, {
+				sound: { value: "cip cip cip"},
+				doEat: {
+					value: function(){
+						console.log("Birds eat mostly grains.");
+					}
+				},
+				canFly: {
+					value: function(){
+						console.log("I think so");
+					}
+				}
+			});
+
+			var aCat = Object.create(aMammal, {
+				sound: { value: "miao"},
+				doEat: {
+					value: function(){
+						console.log(this.name + " likes milk!");
+					}
+				}
+			});
+
+			var aDog = Object.create(aMammal, {
+				sound: { value: "wuff" }
+			});
+
+			var aParrot = Object.create(aBird, {
+				sound: { value: "Hellooo"}
+			});
+		</script>
+
+		<script type="text/javascript">
+			var dog = Object.create(aDog, {
+				name: { value: "Bello"}
+			});
+			dog.makeSound();
+			dog.warmBlooded();
+			
+			var cat = Object.create(aCat);
+			cat.name = "Mietze";
+			cat.makeSound();
+
+			var canary = Object.create(aBird, {
+				name: { value: "Hansi"}
+			});
+			canary.makeSound();
+
+			var parrot = Object.create(aParrot, {
+				name: { value: "Parrot" }
+			});
+			parrot.makeSound();
+
+			//----
+			canary.doEat();
+			cat.doEat();
+			dog.doEat();
+		</script>		
+	</body>
+</html>

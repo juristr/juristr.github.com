@@ -105,7 +105,7 @@ title: Juri Strumpflohner
         <a href="/tutorials">tutorials</a>
       </li>
       <li>
-        <a href="#">talks</a>
+        <a href="/talks">talks</a>
       </li>      
       <li>
         <a href="/about">about</a>
