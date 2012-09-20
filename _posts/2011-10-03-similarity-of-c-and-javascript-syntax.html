@@ -1,0 +1,13 @@
+---
+layout: post
+title: "The Similarity of C# and JavaScript Syntax"
+date: 2011-10-03
+comments: false
+tags: [  JavaScript, C#, Web dev ]
+---
+
+<p>I'm currently diving deeply into creating rich JavaScript web applications. You cannot deny that they are now the must have for modern-looking web (2.0) apps. They are <a href="https://read.amazon.com/">rich, user-friendly</a> and provide a <a href="http://trello.com/">desktop-like experience</a> within the browser..without the need to install heavy applications or <a href="http://www.silverlight.net/">runtimes</a>. While initially building such apps was a pure pain, emerging JavaScript frameworks and libraries make it really fun and easy. So webdevs out there...if you want to keep up, go and get in touch with JavaScript. <b>It is</b> the language of programming the web :).</p>
+
+Just when coding some JavaScript I noted that the syntax between C# and JavaScript is actually quite similar. Take these examples:<br /><br />
+
+<h2>Variables</h2><br /><b>C#</b><br /><pre class="brush:c#">var x = "some string";</pre><b>JavaScript</b><br /><pre class="brush:javascript">var x = "some string";</pre><br /><br /><h2>Anonymous Object initialization</h2><br /><b>C#</b><br /><pre class="brush:c#">var x = new {<br />   Name = "Juri",<br />   Surname = "Strumpflohner"<br />};</pre><b>JavaScript</b><br /><pre class="brush:javascript">var x = {<br />   name: "Juri",<br />   surname: "Strumpflohner"<br />};</pre><br /><br /><h2>Delegates/Callbacks</h2><br /><b>C#</b><br /><pre class="brush:c#">var result = SomeFunction(<br />   () =&gt; {<br />      //A delegate method performing some work<br />   }<br />);</pre><b>JavaScript</b><br /><pre class="brush:javascript">var result = someFunction(function (){<br />   //callback / delegate<br />});</pre>
