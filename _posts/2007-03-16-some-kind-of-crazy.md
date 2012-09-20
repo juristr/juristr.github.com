@@ -2,7 +2,7 @@
 layout: post
 title: "Some kind of crazy"
 date: 2007-03-16
-comments: false
+comments: true
 tags: [  Google ]
 ---
 

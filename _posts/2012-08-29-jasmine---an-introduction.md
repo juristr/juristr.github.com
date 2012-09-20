@@ -4,7 +4,7 @@ title: "Jasmine - An Introduction"
 description: ""
 category: bliki
 tags: []
-comments: false
+comments: true
 ---
 {% include JB/setup %}
 

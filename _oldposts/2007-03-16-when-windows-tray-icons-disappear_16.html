@@ -2,7 +2,7 @@
 layout: post
 title: "When Windows tray-icons disappear misteriously"
 date: 2007-03-16
-comments: false
+comments: true
 tags: [  Windows OS ]
 ---
 

@@ -4,7 +4,7 @@ title: "It's time to learn CoffeeScript"
 description: ""
 category: bliki
 tags: [JavaScript, CoffeeScript, WebDev]
-comments: false
+comments: true
 ---
 {% include JB/setup %}
 
