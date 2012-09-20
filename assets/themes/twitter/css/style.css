@@ -165,7 +165,7 @@ article > ul {
   margin-top:20px;
 }*/
 
-.article-body > blockquote {
+/*.article-body > blockquote {
   background: whiteSmoke url("/assets/images/blockquote.png") no-repeat scroll 8px 7px;
   border-bottom: 1px solid #CCC;
   border-top: 1px solid #CCC;
@@ -174,6 +174,21 @@ article > ul {
   margin-left: 0;
   margin-right: 0;
   margin-top:10px;
+  font-style: italic;
+  color: #5D5D5D;
+  line-height: 1.6;
+  font-family: georgia;
+}*/
+
+.article-body > blockquote {
+  background: white url("/assets/images/blockquote.png") no-repeat scroll 8px 7px;
+  border: 0;
+  min-height: 50px;
+  padding: 20px 20px 20px 40px;
+  margin-left: 15px;
+  margin-right: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
   font-style: italic;
   color: #5D5D5D;
   line-height: 1.6;

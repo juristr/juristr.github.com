@@ -22,7 +22,7 @@ Personally, I think this question shouldn't be made any more nowadays, but still
 - refactor as you need
 
 > Fear not! I am using Jasmine to refactor JavaScript safely  
-(by an unknown Twitter user)
+> (by an unknown Twitter user)
 
 ## Setup Jasmine and Useful links
 Here are some useful links to get started:
