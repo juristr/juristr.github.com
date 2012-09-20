@@ -180,7 +180,7 @@ article > ul {
   font-family: georgia;
 }*/
 
-.article-body > blockquote {
+.article-body blockquote {
   background: white url("/assets/images/blockquote.png") no-repeat scroll 8px 7px;
   border: 0;
   min-height: 50px;
@@ -250,7 +250,7 @@ code {
 kbd {
     padding: 0.1em 0.6em;
     border: 1px solid #CCC;
-    font-size: 13px;
+    font-size: 15px;
     font-family: Arial,Helvetica,sans-serif;
     background-color: #F7F7F7;
     color: #333;

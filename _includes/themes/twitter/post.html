@@ -5,6 +5,7 @@
     {{ page.date | date: "%B %d, %Y" }}
   </time>
   <section class="tags">
+    Filed under:
     {% for tag in page.tags %}
       <a href="/blog/tags#{{tag}}">{{ tag }}</a>
     {% endfor %}    
