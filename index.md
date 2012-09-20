@@ -11,8 +11,8 @@ title: Juri Strumpflohner
   }
 
   h1 {
-    font-family: georgia, 'bitstream vera sans serif', 'lucida grande', helvetica, verdana, sans-serif;
-    font-weight:normal;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight:300;
     text-align:center;
     border-bottom:0;
     margin: 100px 0;
