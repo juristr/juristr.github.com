@@ -1,0 +1,9 @@
+---
+layout: post
+title: "We're sorry....but your query looks..."
+date: 2007-04-26
+comments: true
+tags: [  Google ]
+---
+
+I'm using the <a href="http://code.google.com/hosting/">Google Project Hosting</a> service for a university project I'm currently involved in. Recently I got the following error when I wanted to commit my changed code and thought it may be helpful to post it here:<br /><blockquote>We’re sorry… but your query looks similar to automated requests from a computer virus or spyware application. To protect our users, we can’t process your request right now. We’ll restore your access as quickly as possible, so try again soon.</blockquote>Such failures occur, since Google implemented a limit of an average rate of 1 request per 1.725 seconds per API key, rather than waiting for 50,000 requests in one day. This seems to apply also to the <a href="http://www.google.com/apis/maps/">Google Map API</a> keys, but I'm not sure regarding that, since I didn't test it.<br /><br />The error appears - as in my case - if you're creating and deleting things from your Google SVN repository in a very short time. I, for example, deleted a folder immediately after I created it, since I made a typo...Unfortunately the typo happened also the 2nd time :D, so I again had to delete the folder. The 3rd time the error then popped up.<br /><br />In my case, the solution to this problem, was to disconnect from my ISP, in order to get a different IP address. If you have a static IP address you either have to wait for a certain amount of time (I think at max. up to five days, but I'm not exactly sure about the exact timeframe).<br />What will for sure work is to contact your ISP and ask for another IP address.

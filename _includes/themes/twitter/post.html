@@ -1,0 +1,44 @@
+  <h1>
+    {{ page.title }}
+  </h1>
+  <time class="post-date">
+    {{ page.date | date: "%B %d, %Y" }}
+  </time>
+  <section class="tags">
+    {% unless page.tags == empty %}
+      Filed under:
+      {% for tag in page.tags %}
+        <a href="/blog/tags#{{tag}}">{{ tag }}</a>
+      {% endfor %}    
+    {% endunless %}
+  </section>
+  <!--
+  {% unless page.tags == empty %}
+      {% assign tags_list = page.tags %}
+      {% include JB/tags_list %}
+  {% endunless %} 
+  -->
+  <div class="article-body">
+    {{ content }}
+  </div>
+  
+  <hr>
+  <div class="pagination">
+    <ul>
+    {% if page.previous %}
+      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+    {% else %}
+      <li class="prev disabled"><a>&larr; Previous</a></li>
+    {% endif %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+    {% if page.next %}
+      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+    {% else %}
+      <li class="next disabled"><a>Next &rarr;</a>
+    {% endif %}
+    </ul>
+  </div>
+  <hr>
+  {% include JB/comments %}
+
+</div>

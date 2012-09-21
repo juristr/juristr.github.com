@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Create DOM Tree out of a Dynamic HTML String"
+date: 2011-06-21
+comments: true
+tags: [  JavaScript, Web dev, jQuery ]
+---
+
+<p>Just a very short post before I go to bed as I'm really tired today. I just played around with some JavaScript code, building a Google Chrome extension when I came to the point where I needed to process the DOM tree of a HTML string.</p>
+
+Basically I had something like the following:<br /><pre class="brush:js">...<br />   var dynamicHtmlString = "&lt;pre&gt;public class SomeClass{....}&lt;/pre&gt;";<br />   ...<br /></pre>The <code>dynamicHtmlString</code> was build by my JavaScript code through a long-lasting process. At the end I wanted to format those (basically pieces of source code) in a proper way by associating the "prettyprint" css class to all "pre" elements and then calling <a href="http://code.google.com/p/google-code-prettify/">google-code-prettify's</a> <code>prettyPrint()</code> method.<br /><br />Simply doing <code>document.body.innerHTML=dynamicHtmlString;</code> doesn't work obviously as I wanted to use jQuery for traversing the DOM and adding the CSS class. Luckly, jQuery does also support creating the DOM tree, by simply wrapping html code within <code>$()</code>.<br /><pre class="brush:js">   var dynamicHtmlString = "&lt;pre&gt;public class SomeClass{....}&lt;/pre&gt;";<br />   $(dynamicHtmlString).appendTo("body");<br /><br />   $("pre").each(function(){<br />      $(this).attr("class", "prettyprint"); //check this for compatibility with v1.6 -&gt; use .prop(...) otherwise<br />   });<br />   prettyPrint();<br /></pre>So that did the job. Pretty easy, isn't it :). This tells a lot about the power of <a href="http://jquery.com/">jQuery</a>. Love this library!

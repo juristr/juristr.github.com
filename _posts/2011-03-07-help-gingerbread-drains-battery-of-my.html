@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Help, Gingerbread drains the Battery of my Nexus One!!"
+date: 2011-03-07
+comments: true
+tags: [  Android ]
+---
+
+<p>A couple of days ago I finally got the eagerly awaited system upgrade to Gingerbread on my Nexus One. The update went pretty well, although <a href="http://www.google.com/support/forum/p/Google+Mobile/thread?tid=3f913fd2072e570c&amp;hl=en">some Nexus One users reported</a> about problems with the updating process. The only thing I noticed is that Dropbox didn't work after the upgrade.</p>
+
+A re-install solved the issue. All-in-all Gingerbread is great. Beside UI enhancements it feels also faster than Froyo. However, after trying it for two days now, I noticed a substantial increase in battery consumption. By looking at the system battery stats (Settings -&gt; About phone -&gt; Battery use), Android System was listed to <b>consume 23% of the battery</b> *confused*.
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://www.android.com/images/gingerdroid.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" height="200" src="http://www.android.com/images/gingerdroid.png" width="162" /></a></div>Apparently the problem is a bug in Gingerbread version 2.3.3 (you know there is 2.4 as well) on how the system handles the Wifi adapter. If you go into your Settings -&gt; Wireless &amp; Networks -&gt; Wi-Fi settings, press the menu button and click on "Advanced", you'll see a menu entry "Wi-Fi sleep policy". Gingerbread seems to have a <b>problem</b> when that option is set to <b>"When screen turns off"</b>. While that may sound to be the most energy-saving option, the bug turns it into a battery killer. If you <b>switch the option to "Never"</b>, the Android system will only consume ~3% in the battery stats.<br /><div class="separator" style="clear: both; text-align: center;"><a href="https://lh3.googleusercontent.com/-256Pn3lJMbw/TXVfV97iECI/AAAAAAAAC0I/2ATESOLWrqE/s1600/nexus_one_ginger_wifiproblem.png" imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="320" src="https://lh3.googleusercontent.com/-256Pn3lJMbw/TXVfV97iECI/AAAAAAAAC0I/2ATESOLWrqE/s320/nexus_one_ginger_wifiproblem.png" width="163" /></a></div>Obviously, in addition to this, the best battery saver is to just turn Wi-Fi off when you don't need it ;). <b>Caution</b>, if one of the future updates fixes this problem (which I strongly hope), you have to set the option back again.

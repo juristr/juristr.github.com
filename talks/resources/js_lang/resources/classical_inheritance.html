@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link rel="stylesheet" type="text/css" href="../css/presentation.css">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jsconsole.js"></script>
+	</head>
+	<body>
+		<div style="text-align:center;top:40px;left:45%;position:absolute">
+			<p style="font-size:20pt;padding-bottom:15px;color:gray">Use the source, Luke</p>
+			<img src="imgs/yoda.png" />
+		</div>
+		<div id="terminal">
+
+		</div>
+
+		<script>
+			//Implementation from
+			//	http://javascript.crockford.com/inheritance.html
+			Function.prototype.method = function (name, func) {
+			    this.prototype[name] = func;
+			    return this;
+			};
+
+			Function.method('inherits', function (parent) {
+			    var d = {}, p = (this.prototype = new parent());
+			    this.method('uber', function uber(name) {
+			        if (!(name in d)) {
+			            d[name] = 0;
+			        }        
+			        var f, r, t = d[name], v = parent.prototype;
+			        if (t) {
+			            while (t) {
+			                v = v.constructor.prototype;
+			                t -= 1;
+			            }
+			            f = v[name];
+			        } else {
+			            f = p[name];
+			            if (f == this[name]) {
+			                f = v[name];
+			            }
+			        }
+			        d[name] += 1;
+			        r = f.apply(this, Array.prototype.slice.apply(arguments, [1]));
+			        d[name] -= 1;
+			        return r;
+			    });
+			    return this;
+			});
+
+		</script>
+
+
+		<script type="text/javascript">
+			var Animal = function(name){
+   				this.name = name;         
+			};
+			Animal.method("makeSound", function(){
+				console.log(this.name + ": " + (this.sound || "(bo)"));
+			});
+
+			Animal.method("doEat", function(){
+				console.log("Eat what?");
+			});
+
+			var Mammal = function(name){
+ 				//call base class
+				Animal.call(this, name);
+			};
+			Mammal.inherits(Animal);
+
+			Mammal.method("warmBlooded", function(){
+				console.log("Sure! " + this.name + " is warm blooded!");
+			});
+			Mammal.method("doEat", function(){
+				console.log("Mammals such as " + this.name + " like to eat meat!");
+			});
+
+			var Bird = function(name){
+				Animal.call(this, name);
+				this.sound = "cip cip cip";
+			};
+			Bird.inherits(Animal);
+			Bird.method("canFly", function(){
+				console.log("I think so");
+			});
+			Bird.method("doEat", function(){
+				console.log("Birds eat mostly grains.");
+			});
+
+			var Cat = function(name){
+				Mammal.call(this, name);
+				this.sound = "miao";
+			};
+			Cat.inherits(Mammal);
+			Cat.method("doEat", function(){
+				console.log(this.name + " likes milk!");
+			});
+
+			var Dog = function(name){
+				Mammal.call(this, name);
+				this.sound = "wuff";
+			};
+			Dog.inherits(Mammal);
+
+			var Parrot = function(name){
+				Bird.call(this, name);
+				this.sound = "Hellooo";
+			};
+			Parrot.inherits(Bird);
+		</script>
+
+		<script type="text/javascript">
+			var dog = new Dog("Bello");
+			dog.makeSound();
+			dog.warmBlooded();
+
+			var cat = new Cat("Mietze");
+			cat.makeSound();
+
+			var bird = new Bird("Hansi");
+			bird.makeSound();
+
+			var parrot = new Parrot("Parrot");
+			parrot.makeSound();
+
+			//----
+
+			bird.doEat();
+			cat.doEat();
+			dog.doEat();
+		</script>
+	</body>
+</html>

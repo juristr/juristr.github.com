@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Strange focus behavior on Firefox 3+"
+date: 2008-11-06
+comments: true
+tags: [  ASP.net, Web dev, .Net ]
+---
+
+Apparently it seems as if Firefox has changed the way the focus is set on the page starting with version 3+.<br />When using the &lt;yourcontrol&gt;.Focus() method on Asp.net the current behavior is that Firefox automatically scrolls the page till the "focused" element is in the very last row of the screen. This is really nerving, especially if you're using Asp.net Ajax UpdatePanels. In that case you have that as soon as the asynchronous postback caused by the UpdatePanel returns, your page starts to jump around (if on the server-side you set the focus on some control).<br />I used the following piece of code inside some Helper class to solve the problem. The idea is basically to use the ScriptManager to register a JavaScript which is launched as soon as the postback comes back to the client.<br /><pre class="prettyprint">public static void SetFocusByJavaScript(Page page, Control targetControl)<br />{<br />    SetFocusByJavaScript(page, targetControl.ClientID);<br />}<br /><br />public static void SetFocusByJavaScript(Page page, string clientID)<br />{<br />    string uniqueScriptId = String.Concat("focusScript", clientID);<br />    string scriptBody = String.Format("setTimeout(\"$get('{0}').focus();\", 100);", clientID);<br />    ScriptManager.RegisterStartupScript(page, page.GetType(), uniqueScriptId, scriptBody, true);<br />}<br /></pre>By the way this would be a nice candidate for writing an extender method on the control class...Should be realizable in an easy way.

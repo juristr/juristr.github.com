@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Don't use negated method names!"
+date: 2009-08-28
+comments: true
+tags: [  Best Practices, Software Design ]
+---
+
+What does this mean. Don't write something like<br /><pre class="prettyprint">public bool Is<b>Not</b>Correct(...)<br />{<br />   ...<br />}<br /></pre>but rather write<br /><pre class="prettyprint">public bool IsCorrect(...)<br />{<br />   ...<br />}<br /></pre>and the caller of the method then does the negation by calling it like<br /><pre class="prettyprint">if(!IsCorrect(...)){<br />  //do something<br />}<br /></pre>or<br /><pre class="prettyprint">if(IsCorrect(...) == false){<br />  //do something<br />}<br /></pre>as you prefer.<br /><br />For instance consider the "pseudo-like-code" example<br /><pre class="prettyprint">bool IsNotCorrect("today is Monday")<br />{<br /><br />}<br /></pre>and in the program I want to check whether <b>today is Monday</b>. So what I would have to write is<br /><pre class="prettyprint">..<br />bool isMonday = !IsNotCorrect("today is Monday");<br /></pre>This is some kind of "double negation". The "IsNotCorrect(...)" will return "true" if today is NOT Monday, and false otherwise. Too complicated.<br /><br />I mean this sounds somehow obvious to me and I guess a lot of people are doing this already without even thinking about it, but still I often see code written in this manner wherefore I guess it's worth mentioning.

@@ -1,0 +1,106 @@
+.author{
+    font-size:20pt;
+    color:#555;
+    position:absolute;
+    right:5px;
+}
+
+p {
+  font-size:30px;
+}
+
+h1 {
+  font-size:65px;
+}
+
+a.livecode {
+  float:right;
+  font-size:25pt;
+}
+
+/* Pretty print */
+
+.prettyprint .str, /* string content */
+.prettyprint .atv { /* a markup attribute value */
+  color: rgb(0, 138, 53); 
+}  
+.prettyprint .kwd, /* a keyword */
+.prettyprint .tag { /* a markup tag name */
+  color: rgb(0, 102, 204);
+}
+.prettyprint .com { /* a comment */
+  color: rgb(127, 127, 127); 
+  font-style: italic; 
+}  
+.prettyprint .lit { /* a literal value */
+  color: rgb(127, 0, 0);
+}  
+.prettyprint .pun, /* punctuation, lisp open bracket, lisp close bracket */
+.prettyprint .opn, 
+.prettyprint .clo { 
+  color: rgb(127, 127, 127); 
+}
+.prettyprint .typ, /* a type name */
+.prettyprint .atn, /* a markup attribute name */ 
+.prettyprint .dec, 
+.prettyprint .var { /* a declaration; a variable name */
+  color: rgb(127, 0, 127);
+}
+
+pre {
+  font-family: 'Droid Sans Mono', 'Courier New', monospace;
+
+  font-size: 64%;
+  line-height: 45px;
+  /*padding: 10px 20px;*/
+
+  letter-spacing: -1px;
+
+  margin-bottom: 20px;text-shadow: none;
+  text-shadow: none;
+  /*overflow: hidden;*/
+}
+
+pre.small{
+    font-size:44%;
+    line-height:25px;
+}
+
+pre.large{
+    font-size:80%;
+}
+
+/*
+pre {
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .8);
+}
+*/
+
+code {
+  font-size: 95%;
+  font-family: 'Droid Sans Mono', 'Courier New', monospace;
+
+  color: black;
+}
+
+/* terminal */
+#terminal {
+  margin: 1em 0 0;
+  padding: .25em 0;
+  height: 400px;
+  background: #1F140D;
+  overflow: auto;
+}
+
+#terminal p, #terminal pre {
+  margin: 2px;
+  padding: 0 8px;
+  color: #55D839 !important;
+  font-size: 85%;
+  font-family: Monaco, monospace;
+  color: #55D839 !important;
+}

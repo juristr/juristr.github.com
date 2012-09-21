@@ -1,0 +1,9 @@
+---
+layout: post
+title: "GMap script being reused"
+date: 2008-07-13
+comments: true
+tags: [  Projects ]
+---
+
+It is always nice to see people adapt and use your work. Today I made a quick look to my blog access statistics and found the following <a href="http://www.eve-liga.de/Map/">webpage</a> using a <a href="http://juri.strumpflohner.googlepages.com/map.htm">Google map script which I made</a> (<a href="http://juri.strumpflohner.googlepages.com/mapsource.htm">description</a>) about more than a year ago. The script is really simple and still I found many people reusing it on their webpages (i.e. <a href="http://www.study-board.de/">Study-board.de</a> where the map is however no more visible to the public recently). Probably because the script is reusable in terms that it retrieves its data - which is going to be displayed - from a simple XML file. Both pages, which are forums, used the script for displaying the locations of their members by modifying it s.t. the XML output is produced by a dynamic page on the server (such as a php page).Seeing this, I could think of optimizing the script since it is not really performance optimized when there are a lot of entries inside the XML.  I've already something in mind of how a reusable component could be created. The problem - as always - is just having the time for doing so. I'll think about it...In case you're interested just follow my blog. I'll publish a possible newer version of the script here.<span style="font-size:85%;"> Related projects: <a href="http://www.js-development.com/newsmapper">Newsmapper</a></span>

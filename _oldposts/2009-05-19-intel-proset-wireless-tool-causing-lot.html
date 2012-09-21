@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Intel ProSet Wireless tool causing a lot of trouble"
+date: 2009-05-19
+comments: true
+tags: [  HowTo, Windows OS ]
+---
+
+Years ago I installed the Intel ProSet Wireless tool for managing my wireless network connections on my HP Compaq. Initially it worked quite well, but then updating it several times introduced a couple of bugs such as delaying the windows startup time because a related service waited till a certain timeout for proceeding etc...really annoying. But disabling the tool for switching back to the Windows integrated wireless management didn't work, since starting the "Wireless Zero Configuration" service always gave me the following error message:<br /><blockquote>Could not start the wireless zero configuration service on local computer.<br />Error1068: The dependency service or group failed to start.</blockquote>After a long fight I now resolved the issue. In the Windows registry one has to go to \HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Ndisuio and change the value of the "Start" setting from 4 to 2. Then reboot Windows and the Wireless Zero Configuration service should start without any problems, allowing to again use the Windows utility for configuring the wireless networks.<br /><i>(this has been tested on Windows XP Prof. Service Pack 2)</i>

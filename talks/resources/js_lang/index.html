@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Siag JavaScript Course</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/presentation.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    <style>
+        h1, h2, h3 {
+            font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="overview" class="step" class="step" data-x="0" data-y="0" data-scale="15"></div>
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="5">
+        <h1>JavaScript</h1>
+        <span class="try">the language</span>
+        <span class="author">
+            by Juri Strumpflohner
+        </span>
+    </div>
+
+    <div id="history" class="step" data-x="-4500" data-y="0" data-rotate="90" data-scale="4">
+        <h1>History</h1>
+        <p>Once upon a time, the most geeky thing was to have something like</p>
+        <a href="javascript:alert('Hi, welcome to my homepage!')" style="background:none"><pre>alert("Hi, welcome to my homepage!");</pre></a>
+    </div>
+
+    <div id="modernApps" class="step" data-x="-2750" data-y="-1300" data-rotate="0" data-scale="1.5">
+        <h1>Today</h1>
+        <ul>
+            <li><a href="http://www.gmail.com">Gmail</a>, <a href="http://plus.google.com">Google+</a>, <a href="http://www.facebook.com">Facebook</a>
+            <li>Windows Metro Apps
+        </ul>
+        <a href="http://www.evolutionoftheweb.com/" style="font-size:15pt" target="_window">(Evolution of the Web)</a>
+     </div>
+
+     <div id="metro" class="step" data-x="-3050" data-y="-640" data-rotate="0" data-scale="0.5">
+        <img src="resources/imgs/metro.png"/>
+     </div>
+
+     <div id="metrotemplate" class="step" data-x="-3150" data-y="-550" data-rotate="0" data-scale="0.1">
+        <img src="resources/imgs/metrotemplate.png"/>
+     </div>
+
+    <div id="javascript_popularity" class="step" data-x="-5900" data-y="700" data-rotate="0" data-scale="1">
+        <img src="resources/imgs/githublangs.png"/>
+        <p>
+            <a href="http://www.readwriteweb.com/hack/2012/06/5-ways-to-tell-which-programming-lanugages-are-most-popular.php" target="_windows">5 Ways to tell which programming languages are most popular</a>
+        </p>
+    </div>
+
+    <div id="javascriptframeworks" class="step" data-x="-7500" data-y="-500" data-rotate="90" data-scale="2">
+        <h1>Some of the most popular frameworks</h1>
+        <a href="http://knockoutjs.com/"><img src="resources/imgs/knockoutjs.png"></a>
+        <a href="http://javascriptmvc.com/"><img src="resources/imgs/javascriptmvc.png"></a>
+        <a href="http://backbonejs.org/"><img src="resources/imgs/backbonejs.png"></a>
+        <a href="http://spinejs.org/">Spine</a>
+        <a href="http://emberjs.com/"><img src="resources/imgs/emberjs.png"></a>
+        <a href="https://developers.google.com/closure/library/">Closure</a>
+        <a href="http://angularjs.org/"><img src="resources/imgs/angularjs.png"></a>        
+    </div>
+    
+    <div id="todomvc" class="step" data-x="-7900" data-y="-500" data-rotate="90" data-scale="0.1">
+        <a href="http://addyosmani.github.com/todomvc/" target="_blank"><img src="resources/imgs/todomvc.png"></a>
+    </div>
+
+     <div id="ecmascript" class="step" data-x="-5500" data-y="-2800" data-rotate="180" data-scale="2">
+        <h1>ECMAScript</h1>
+        <p>name of the language; JavaScript is a dialect, like JScript or ActionScript</p>
+        <img src="resources/imgs/ecmascript_history.png" width="110%"/>
+     </div>
+
+    <div id="syntax" class="step" data-x="-2500" data-y="-4000" data-rotate="180" data-scale="3">
+        <h1>Syntax</h1>
+<pre class="small">
+function everything() {
+    var x = {a:10}, y=[1,2], z = function() { };
+    for(var p in x){
+        lbl: for(var i=0; i<10; i++){
+            switch(x[p]) {
+                case 0: continue; default: break lbl;
+            }
+        }
+        if(x instanceof String || 'a' in x) delete x.a;
+    }
+    while(typeof true){
+        if(void false){
+            thix.x = 3 / (-this.f()) ? /foo/g : new String("hello");
+        }else{
+            do { try { throw 3; } catch(e) { debugger; return; } finally {}}
+            while(false);
+        }
+    }
+}
+</pre>        
+    </div>
+
+    <div id="basicTypes" class="step" data-x="0" data-y="-4500" data-rotate="270" data-scale="3">
+        <h1>Primitives</h1>
+        <pre class="large">x = 1</pre>
+        <pre class="large">x = "Hello"</pre>
+        <pre class="large">x = true</pre>
+    </div>
+
+    <div id="number" class="step" data-x="-500" data-y="-4500" data-rotate-x="70" data-rotate="180" data-scale="0.5">
+        <pre>
+var x = 15,
+    y = 0.65,
+    z = 3.14e1045;
+
+console.log(y.toFixed()); //prints 1
+
+var aNumber = new Number("3");
+console.log(aNumber.valueOf()); //prints 3
+
+parseInt("3"); parseFloat("3.1");</pre>
+    </div>
+
+    <div id="string" class="step" data-x="-100" data-y="-4500" data-rotate-x="70" data-rotate="180" data-scale="0.5">
+        <pre>
+var x = "hello, world!",
+    y = 'hello, world!',
+    z = "Hello ' world!",
+    w = 'Hello " world!';
+    t = new String("Hello, World");
+
+x.substring(7,x.length-1); //world
+        </pre>
+    </div>
+
+    <div id="boolean" class="step" data-x="200" data-y="-4500" data-rotate-x="70" data-rotate="180" data-scale="0.5">
+        <pre>
+var x = true;
+
+x = new Boolean(true);
+x = new Boolean(false);
+x = new Boolean(1);
+x = new Boolean(0);
+
+x = new Boolean("false");
+x.valueOf(); //true !!!!!
+        </pre>
+    </div>
+
+    <div id="dynamic" class="step" data-x="-300" data-y="-4900" data-rotate-x="70" data-rotate="180" data-scale="0.5">
+        <pre>
+var x = 15;
+x = "hello, world!";
+x = true;
+        </pre>
+    </div>
+
+    <div id="attentionComparisons" class="step" data-x="-300" data-y="-5700" data-rotate-x="70" data-rotate="180" data-scale="0.5">
+        <h1>Attention!</h1>
+        <pre>var x = 3;
+var y = 3;
+
+console.log(x === y); //true -> comparison by copy
+
+var x = 3;
+var z = new Number("3");
+console.log(x === z); //false -> comparison by reference
+
+console.log(x === z.valueOf()); //true
+    </div>
+   
+    <div id="undefinedNull" class="step" data-x="1300" data-y="-4500" data-rotate="270" data-scale="3">
+<pre class="large">undefined
+null</pre>
+    </div>
+
+    <div id="undefinedNullSamples" class="step" data-x="800" data-y="-4250" data-rotate-x="70" data-rotate="180" data-scale="0.5">
+        <pre>
+var x;
+console.log(x); //prints undefined
+
+var myFunc = function(){
+    console.log("hallo");
+}
+//returns undefined, not null!
+var returnValue = myFunc();
+        </pre>
+    </div>
+
+    <div id="undefinedNullSamples2" class="step" data-x="1400" data-y="-4250" data-rotate-x="70" data-rotate="180" data-scale="0.5">
+        <pre>
+var x;
+if(x){
+    console.log("x is defined");
+}else{
+    console.log("x is undefined");
+}
+
+if(x === undefined) { ... }
+
+var valOrDefault = aPerson.address || { nation: "Italy" };
+
+address.nation || (address.nation = { name: "Italy" });
+        </pre>
+    </div>
+
+    <div id="buildInObjects" class="step" data-x="2700" data-y="-4500" data-rotate="270" data-scale="3">
+        <h1>Build-in Objects</h1>
+<pre class="large">//host defined
+document 
+Window
+
+<a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Object" target="_window">Object</a>
+<a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Array" target="_window">Array</a>
+<a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Function" target="_window">Function</a>
+<a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/RegExp" target="_window">RegExp</a>
+<a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Error" target="_window">Error</a>
+<a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Date" target="_window">Date</a></pre>
+    </div>
+
+    <div id="userdefinedObjects" class="step" data-x="2000" data-y="-2000" data-rotate="360" data-scale="2.5">
+        <h1>Custom objects</h1>
+        <pre class="small">
+var x = {};
+x.firstname = "Juri";
+x.age = 27;
+
+x["firstname"] = "Juri";
+x["age"] = 27;
+
+x = {
+    firstname: "Juri",
+    age: 27,
+    display: function() { ... }
+};
+
+x["space property"] = "Hi there!"; 
+//x.space property doesn't work!
+        </pre>
+    </div>
+
+    <div id="prototype" class="step" data-x="5000" data-y="-4000" data-rotate="270" data-scale="4">
+        <h1>Prototype</h1>
+        <pre>
+var x = {};
+console.log(x.toString()); //prints [object Object] ??
+        </pre>
+        <img src="resources/imgs/prototype_chromdevtools.png">
+    </div>
+
+    <div id="prototype_chain" class="step" data-x="7000" data-y="-3500" data-rotate="360" data-scale="2">
+        <h1>What for?</h1>
+        <p>Reuse, Inheritance</p>
+        <h2>Prototype Chain:</h2>
+        <!-- Edit: http://yuml.me/edit/8c4b626a -->
+        <img src="resources/imgs/obj_prototype_chain.png">
+    </div>
+
+    <div id="inheritance_types" class="step" data-x="8000" data-y="-2600" data-rotate="360" data-scale="1.5">
+        <h1>Inheritance Patterns</h1>
+        <ul>
+            <li><a href="http://javascript.crockford.com/prototypal.html">Prototypal</a>
+            <li><a href="http://www.crockford.com/javascript/inheritance.html">Classical</a>
+        </ul>
+    </div>
+
+    <div id="inheritance" class="step" data-x="7000" data-y="-1500" data-rotate="360" data-scale="2">
+        <h2>Prototypal Inheritance Sample</h2>
+        <!--Edit: http://yuml.me/3092bf0b -->
+        <img src="resources/imgs/inheritanceGraph.png">        
+    </div>
+
+    <div id="proto1_inheritance_animal" class="step" data-x="6000" data-y="-2100" data-rotate="360" data-scale="0.5">
+        <pre>
+var Animal = function(name){
+    this.name = name;         
+};
+Animal.prototype.makeSound = function(){
+    console.log(this.name + ": " + (this.sound || "(bo)"));
+};
+Animal.prototype.doEat = function(){
+    console.log("Eat what?");
+};
+    </pre>
+    </div>
+<
+    <div id="proto1_inheritance_mammal" class="step" data-x="6000" data-y="-1700" data-rotate="360" data-scale="0.5">
+        <pre>
+var Mammal = function(name){
+    //call base class
+    Animal.call(this, name);
+};
+
+//inheritance: linking in the prototype chain
+Mammal.prototype = new Animal();
+Mammal.prototype.constructor = Mammal;
+
+Mammal.prototype.warmBlooded = function(){
+    console.log("Sure! " + this.name + " is warm blooded!");
+};
+Mammal.prototype.doEat = function(){
+    console.log("Mammals such as " + this.name + " like to eat meat!");
+};
+    </pre>
+    </div>
+
+     <div id="proto1_inheritance_bird" class="step" data-x="7050" data-y="-1650" data-rotate="360" data-scale="0.5">
+        <pre>
+var Bird = function(name){
+    Animal.call(this, name);
+    this.sound = "cip cip cip";
+};
+Bird.prototype = new Animal();
+Bird.prototype.constructor = Bird;
+Bird.prototype.canFly = function(){
+    console.log("I think so");
+};
+Bird.prototype.doEat = function(){
+    console.log("Birds eat mostly grains.");
+};
+    </pre>
+    </div> 
+
+     <div id="proto1_inheritance_parrot" class="step" data-x="7100" data-y="-1200" data-rotate="360" data-scale="0.5">
+        <pre>
+var Parrot = function(name){
+    Bird.call(this, name);
+    this.sound = "Hellooo";
+};
+Parrot.prototype = new Bird();
+Parrot.prototype.constructor = Parrot;
+    </pre>
+    </div> 
+
+     <div id="proto1_inheritance_cat" class="step" data-x="6100" data-y="-1300" data-rotate="360" data-scale="0.5">
+        <pre>
+var Cat = function(name){
+    Mammal.call(this, name);
+    this.sound = "miao";
+};
+Cat.prototype = new Mammal();
+Cat.prototype.constructor = Cat;
+Cat.prototype.doEat = function(){
+    console.log(this.name + " likes milk!");
+};
+    </pre>
+    </div>
+    
+    <div id="proto1_inheritance_dog" class="step" data-x="6650" data-y="-1250" data-rotate="360" data-scale="0.5">
+    <pre>
+var Dog = function(name){
+    Mammal.call(this, name);
+    this.sound = "wuff";
+};
+Dog.prototype = new Mammal();
+Dog.prototype.constructor = Dog
+    </pre>
+    </div>     
+
+    <div id="proto1_inheritance_usage" class="step" data-x="7000" data-y="-100" data-rotate="360" data-scale="2">
+        <h2>Usage...</h2>
+        <pre class="small">
+var dog = new Dog("Bello");
+dog.makeSound();
+dog.warmBlooded();
+
+var cat = new Cat("Mietze");
+cat.makeSound();
+
+var bird = new Bird("Hansi");
+bird.makeSound();
+
+var parrot = new Parrot("Parrot");
+parrot.makeSound();
+
+//----
+
+bird.doEat();
+cat.doEat();
+dog.doEat();
+        </pre>
+        <p>
+            Here's a live <a href="resources/prototypal1_inheritance.html" target="_window">example</a>.
+        </p>
+    </div>
+
+<div id="prototypal_inheritance_usage" class="step" data-x="5000" data-y="200" data-rotate="90" data-scale="3">
+
+<h1>Object.create()</h1>
+<pre class="small">
+var anAnimal = {
+    name: "(unknown)",
+    makeSound: function(){
+        console.log(this.name + ": " + (this.sound || "(bo)"));
+    },
+    doEat: function(){
+        console.log("Eat what?");
+    }
+};
+
+// supposing aMammal already links to anAnimal, the creation of
+// a dog would look like
+
+var aDog = Object.create(aMammal, {
+    sound: { value: "wuff" }
+});
+
+var bello = <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/create/" target="_window">Object.create(aDog, { name: { value: "Bello" }})</a>;</pre>
+<p>
+    Let's switch over to a more concrete <a href="resources/prototypal2_inheritance.html" target="_window">example</a>.
+</p>
+<p>
+    This is pure <strong>Object Inheritance</strong></p>
+</div>
+
+<div id="classical_inheritance" class="step" data-x="10000" data-y="-4800" data-rotate="0" data-scale="3">
+    <h1>Classical Inheritance</h1>
+    <p>Trying to obfuscate the prototype mechanism and making it more like normal/classical inheritance</p>
+<pre class="small">
+var Animal = Class.extend({
+    init: function(name){
+        this.name = name;
+    },
+
+    makeSound: function(){
+        console.log(this.name + ": " + (this.sound || "(bo)"));
+    },
+
+    doEat: function(){
+        console.log("Eat what?");
+    }
+});
+</pre>
+</div>
+
+<div id="classical_inheritance_sample" class="step" data-x="10000" data-y="-3400" data-rotate="0" data-scale="3">
+<pre class="small">
+var Mammal = Animal.extend({
+    init: function(name){
+        this._super(name);
+    },
+
+    warmBlooded: function(){
+        console.log("Sure! " + this.name + " is warm blooded!");
+    },
+
+    doEat: function(){
+        console.log("Mammals such as " + this.name + " like to eat meat!");
+    }
+});
+</pre>
+<a href="resources/classical2_inheritance.html" target="_window" class="livecode">live</a>
+</div>
+
+<div id="instance_operators" class="step" data-x="10000" data-y="-2000" data-rotate="0" data-scale="3">
+    <h1>Instance Operators</h1>
+    <pre>
+var bello = new Dog("Bello");
+bello instanceof Dog; //true
+
+var bello = Object.create(aDog, { name: { value: "Bello" }});
+aDog.isPrototypeOf(bello); //true
+    </pre>
+</div>
+
+<div id="getterssetters" class="step" data-x="10000" data-y="-200" data-rotate="0" data-scale="3">
+    <pre class="small">
+var dog = {
+    get name() { return this._name; },
+    set name(v) { this._name = v;  }
+};
+
+dog.name = "Bello";
+console.log(dog.name); //prints "Bello"
+    </pre>
+    <img src="resources/imgs/getownpropertydescriptor.png" width="100%"/>
+    <pre>
+Object.defineProperty(...);        
+    </pre>
+<a href="http://jsbin.com/olucey/1/edit" class="livecode" target="_window">Live</a>    
+</div>
+
+<div id="functions" class="step" data-x="8000" data-y="4000" data-rotate="0" data-scale="3">
+    <h1>Functions</h1>
+    ..are objects:
+    <p><img src="resources/imgs/functionprototype.png"/></p>
+    <pre>
+function test (param1, param2) { ... }
+var test = function (param1, param2) { ... }
+var test = function test (param1, param2) { ... }
+    </pre>
+</div>
+
+<div id="functions_passingaround" class="step" data-x="6000" data-y="2500" data-rotate="90" data-scale="1">
+    <h2>Can be passed around..</h2>
+    <pre>function logWrapper(func) {
+    return function() {
+        console.log("Before");
+        var result = func.apply(this, arguments);
+        console.log("After with result: " + result);
+        return result;
+    }
+}
+
+var result = logWrapper(function(a,b) { return a+b; });
+result(3,2); //call the wrapped function</pre>
+<a href="http://jsbin.com/omiyam/1/edit" class="livecode" target="_window">live</a>
+</div>
+
+<div id="functions_arguments" class="step" data-x="8000" data-y="2000" data-rotate="0" data-scale="1">
+    <h1>arguments</h1>
+    <pre>
+var foo = function(a, b, c){
+    console.log(arguments.length); //prints # function params
+    console.log(arguments[0]); //read first argument (a)
+
+    // points to foo(); recursive invocation
+    // (WARN: not supported in ES5 with strict mode)
+    arguments.callee();
+};
+    </pre>
+</div>
+
+<div id="functions_thiskeyword" class="step" data-x="8000" data-y="2700" data-rotate="0" data-scale="1">
+    <h1>this</h1>
+    <pre>
+var person = {
+    name: "John",
+    printName: function(){
+        console.log(this.name);
+    }
+};
+
+person.printName(); //prints "John"
+    </pre>
+    <a href="http://jsfiddle.net/juristr/ALPQg" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="functions_applycall" class="step" data-x="9800" data-y="2200" data-rotate="0" data-scale="1">
+    <h1>apply & call</h1>
+    <pre>
+var anotherPerson = {
+    name: "Jack"
+};
+
+var printNameFunc = person.printName;
+printNameFunc.call(anotherPerson);
+
+//difference call and apply
+printNameFunc.call(anotherPerson, param1, param2)
+printNameFunc.apply(anotherPerson, [param1, param2])
+</pre>
+    <a href="http://jsbin.com/ibuwim/1" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="functions_funscope" class="step" data-x="10000" data-y="3700" data-rotate="-45" data-scale="1">
+    <h1>Scope</h1>
+    <p>...in C#/Java</p>
+<pre>
+string test = "hallo";
+{
+    string anotherTest = "world";    
+}
+test = anotherTest; //compiler error
+</pre>
+<p>In JavaScript it works -> <strong>function scope</strong> not block scope</p>
+</div>
+
+
+
+<div id="functions_scope" class="step" data-x="11000" data-y="4200" data-rotate="-45" data-scale="1">
+    <h1>Scope in JavaScript</h1>
+    <pre>
+(function(){
+    var x = 1;
+    console.log(x);
+})();
+
+console.log(x); //x is undefined
+</pre>
+    <a href="http://jsbin.com/enucav/1/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="functions_accessingoutervars" class="step" data-x="10500" data-y="5000" data-rotate="40" data-scale="1">
+    <h1>Accessing outer variables</h1>
+    <pre>
+var x = 0;
+(function(){
+    x = 1;
+})();
+
+console.log(x); //1
+</pre>
+    <a href="http://jsbin.com/osefax/1/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="modulepattern" class="step" data-x="9600" data-y="5200" data-rotate="0" data-scale="1">
+    <h1>Module Pattern</h1>
+    <p>Isolating...</p>
+    <pre>
+(function($, exports){
+    //get jQuery mapped to $
+    //use exports to export functions and
+    //variables to the outside
+})(jQuery, window);
+</pre>
+</div>
+
+<div id="modulepattern_example" class="step" data-x="9600" data-y="5900" data-rotate="0" data-scale="1">
+    <h1>Example</h1>
+    <pre>
+var myObj = {};
+
+(function(data, exp){
+  var multi = function(){
+      return data * 2;
+  };
+  
+  exp.compute = function(val){
+    return val + multi();
+  };
+  
+}(3, myObj));</pre>
+    <a href="http://jsbin.com/aliyat/1/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="closures" class="step" data-x="7600" data-y="5800" data-rotate="0" data-scale="1">
+    <h1>Closures</h1>
+    <pre>
+var f = function(){
+   var x = 1;
+   return function(){
+      console.log(x);
+   };        
+};
+
+var printFunc = f();
+printFunc();​ //prints 1</pre>
+    <a href="http://jsbin.com/ufajaw/1/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="hoisting" class="step" data-x="4200" data-y="4500" data-rotate="90" data-scale="3">
+   <h1>"Hoisting"</h1>
+   <p>What will be printed?</h2>
+<pre>
+var foo = 1;
+function bar() {
+    if (!foo) {
+        var foo = 10;
+    }
+    console.log(foo);
+}
+bar();
+</pre>
+   <a href="http://jsbin.com/ikasij/1/edit" target="_window" class="livecode">Live</a>
+</div>
+
+
+
+<div id="hoistingresult" class="step" data-x="2500" data-y="4500" data-rotate="90" data-scale="2">
+   <h2>Transformed to...</h2>
+<pre>
+var foo = 1;
+function bar() {
+    var foo;
+    if (!foo) {
+        foo = 10;
+    }
+    console.log(foo);
+}
+bar();
+</pre>
+    <a href="http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting" target="_window">Article</a>
+   <a href="http://jsbin.com/ikasij/2/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="vardeclbestpractice" class="step" data-x="2500" data-y="3000" data-rotate="180" data-rotate-x="45" data-scale="1">
+   <h2>Therefore...</h2>
+   <p>Declare all variables at the beginning of their scope</p>
+<pre>
+function test(){
+    var x,
+        y = 0,
+        nums = [1,2,3,4,5];
+
+    //exception: loops..they read better this way
+    for(var i=0; i&lt;nums; i++) { ... }
+    ...
+}
+</pre>
+</div>
+
+<div id="loops" class="step" data-x="7900" data-y="5800" data-rotate="0" data-scale="0.2">
+    <h1>Nasty Loops</h1>
+<pre class="small">//wrong sample
+var people = [
+    { id: 1, name: "Juri"; },
+    { id: 2, name: "Simon" },
+    { id: 3, name: "Peter" }];
+
+for(var i=0, len=people.length; i&lt;len; i++){
+    var $li = $(&quot;&lt;li&gt;&quot; + people[i].name + &quot;&lt;/li&gt;&quot;);
+    
+    $li.click(function(){
+       alert(&quot;You clicked on &quot; + people[i].name);                
+    });
+    
+    $(&quot;#people&quot;).append($li);   
+}</pre>
+    <a href="http://jsfiddle.net/juristr/QYBjz/1/light/" target="_window" class="livecode">Live (wrong)</a><br/>
+    <a href="http://jsfiddle.net/juristr/QYBjz/2/" target="_window" class="livecode">Live (correct)</a>
+
+</div>
+
+<div id="functions_maintainingcontext" class="step" data-x="6000" data-y="5800" data-rotate="90" data-scale="1">
+   <h1>Maintaining Context</h1>
+   <pre>
+model.save(function(){
+    this._someLocalVariable = ... 
+    //not accessible as this points to
+    //the model
+});
+</pre>
+</div>
+
+<div id="functions_proxy" class="step" data-x="5500" data-y="5800" data-rotate="90" data-scale="1">
+    <h2>this.callback(...)</h2>
+   <pre>
+model.save(this.callback(function(){
+    this._someLocalVariable = ... 
+    //not accessible as this points to
+    //the model
+}));
+</pre>
+    <a href="http://jsbin.com/urexic/edit" target="_window" class="livecode">Live (incorrect)</a><br/>
+    <a href="http://jsbin.com/urexic/2/edit" target="_window" class="livecode">Live (working)</a>
+</div>
+
+<div id="functions_proxyimpl" class="step" data-x="5000" data-y="5800" data-rotate="90" data-scale="1">
+   <h2>...in its simplest implementation..</h2>
+   <pre>
+callback = function(func){
+    var self = this;
+    return (function(){
+        return func.apply(self, arguments);
+    });
+};
+</pre>
+</div>
+
+<div id="functions_proxyjquery" class="step" data-x="5500" data-y="4500" data-rotate="0" data-scale="1">
+   <h2>Normally called: proxy</h2>
+   <p><a href="http://api.jquery.com/jQuery.proxy/" target="_window">jQuery.proxy(..)</a></p>
+   <pre class="small">
+proxy: function( fn, context ) {
+    var tmp, args, proxy;
+
+    if ( typeof context === "string" ) {
+        tmp = fn[ context ];
+        context = fn;
+        fn = tmp;
+    }
+
+    // Quick check to determine if target is callable, in the spec
+    // this throws a TypeError, but we will just return undefined.
+    if ( !jQuery.isFunction( fn ) ) {
+        return undefined;
+    }
+
+    // Simulated bind
+    args = core_slice.call( arguments, 2 );
+    proxy = function() {
+        return fn.apply( context, args.concat( core_slice.call( arguments ) ) );
+    };
+
+    // Set the guid of unique handler to the same of original handler, so it can be removed
+    proxy.guid = fn.guid = fn.guid || proxy.guid || jQuery.guid++;
+
+    return proxy;
+},
+</pre>
+</div>
+
+<div id="exceptions" class="step" data-x="3800" data-y="6600" data-rotate="0" data-scale="3">
+   <h1>Exceptions</h1>
+   <p>6 core error constructors</p>
+   <ul style="font-size:20pt">
+        <li>- EvalError
+        <li>- RangeError
+        <li>- ReferenceError
+        <li>- SyntaxError
+        <li>- TypeError
+        <li>- URIError
+   </ul>
+   <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Error#Error_types" target="_window" style="font-size:20pt">link MDN</a>
+</div>
+
+<div id="custom_exception" class="step" data-x="3800" data-y="8200" data-rotate="0" data-scale="2">
+    <h2>Custom Exceptions</h2>
+    <pre>
+function NotNumberException() {
+    this.name = "NotNumberException";
+}
+function NotPositiveNumberException(message) {
+    this.name = "NotPositiveNumberException";
+    this.message = message;
+}
+    </pre>
+<a href="http://jsbin.com/ubafev/1/edit" target="_window" class="livecode">live</a>   
+</div>
+
+<div id="gimmicks" class="step" data-x="-2000" data-y="5500" data-rotate="0" data-scale="3">
+   <h1>Some gimmicks</h1>
+</div>
+
+
+<div id="propertyloop" class="step" data-x="-5500" data-y="2500" data-rotate="-90" data-scale="2">
+   <h1>Object Property/for-in Loop</h1>
+<pre>
+for(var p in obj){
+    //if(obj.hasOwnProperty(p)) {
+        console.log(obj[p]);
+    //}
+}
+</pre>
+<p>(Note: don't use it to iterate over arrays!)</p>
+<a href="http://jsbin.com/ireqoy/3/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="arrays" class="step" data-x="-5500" data-y="5500" data-rotate="90" data-scale="2">
+   <h1>Arrays</h1>
+<pre>
+var arr1 = new Array(),
+    arr2 = [];
+</pre>
+</div>
+
+<div id="arrayops" class="step" data-x="-6500" data-y="5500" data-rotate="90" data-scale="2">
+<pre>
+//most common operations
+//(results, always starting from this array)
+var arr = [1,2,3,4,5];
+
+arr.join(";"); //"1;2;3;4;5"
+
+arr.slice(2,4); //[3,4]
+
+arr.push(6); //[1,2,3,4,5,6];
+arr.pop(); //6 -> [1,2,3,4,5]
+arr.shift(); //1 -> [2,3,4,5]
+
+arr.reverse(); //[5,4,3,2,1]
+</pre>
+</div>
+
+<div id="arraysort" class="step" data-x="-7900" data-y="5500" data-rotate="90" data-scale="2">
+<pre>
+var arr = [5,1,4,3,2];
+
+arr.sort(function(a,b){
+    if (a < b)
+        return -1;
+    if (a > b)
+        return 1;
+    
+    // a must be equal to b
+    return 0;
+});
+
+console.log(arr); //[1,2,3,4,5]
+</pre>
+<a href="http://jsbin.com/owupew/1/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="arrayopsall" class="step" data-x="-7200" data-y="6500" data-rotate="0" data-rotate-x="-55" data-scale="1">
+    <h2>The most common array operations</h2>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/pop">pop()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/push">push()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/reverse">reverse()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/shift">shift()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/sort">sort()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/splice">splice()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/shift">shift()</a>    
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/unshift">unshift()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/sort">sort()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/concat">concat()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/join">join()</a>
+    <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/slice">slice()</a>
+</div>
+
+<div id="arraytypes" class="step" data-x="-6000" data-y="6900" data-rotate="0" data-rotate-x="-55" data-scale="1">
+    <p>We're in a dynamic world...</p>
+    <h2>..so obviously, arrays can contain different "types"</h2>    
+<pre>
+//also note the indices I'm using..
+var arr = [];
+arr[1] = 3;
+arr[3] = "Hallo";
+arr[10] = { name: "Juri" };
+</pre>
+<img src="resources/imgs/arraytypes.png"/>
+</div>
+
+<div id="regexfun" class="step" data-x="200" data-y="6600" data-rotate="0" data-scale="2">
+    <h1>Regex Fun</h1>
+<pre>
+var regex = /[0-9]/g,
+    text = "Test1234";
+
+var matches = text.match(regex);
+console.log(matches); //prints ["1", "2", "3", "4"]
+</pre>
+<a href="http://jsbin.com/orutuh/edit" target="_window" class="livecode">Live</a>
+<p>
+    <a href="http://scriptular.com/" target="_window">http://scriptular.com/</a>
+</p>
+</div>
+
+
+<div id="efficientjavascript" class="step" data-x="-1500" data-y="2900" data-rotate="0" data-scale="2">
+    <h1>Efficient JavaScript</h1>
+</div>
+
+
+<div id="donteval" class="step" data-x="-3500" data-y="2300" data-rotate="90" data-scale="1">
+    <h1>Don't use eval</h1>
+<pre>eval("alert('test')")</pre>
+</div>
+
+<div id="globals" class="step" data-x="-1500" data-y="1600" data-scale="1">
+    <h1>attention to globals...</h1>
+<pre>x = 3;</pre>
+<img src="resources/imgs/globals.png"/>
+</div>
+
+<div id="forinslow" class="step" data-x="-300" data-y="2000" data-scale="1">
+    <h2>for-in loops are</h2>
+    <h1>s...l...o...w</h1>
+<pre>
+var arr = [1,2,3,4,5];
+var sum = 0;
+//slow
+for(var i in arr){
+    sum += arr[i];
+}
+
+//fast
+for(var i=0, len=arr.length; i&lt;len; i++){
+    sum += arr[i];
+}
+</pre>
+</div>
+
+<div id="stringmanip" class="step" data-x="400" data-y="2900" data-scale="1">
+    <h1>String manipulations</h1>
+    <p>use new String("...");</p>
+<pre>
+//slow
+var s = "abcdefgh";
+for (var i=0; i&lt;s.length; i++){
+   s.charAt(i);
+}
+
+//fast
+var s = new String("abcdefgh");
+for (var i=0; i&lt;s.length; i++){
+   s.charAt(i);
+}</pre>
+<p>(Attention: <code>s[1]</code> would work in most browsers, but not IE!!)</p>
+</div>
+
+<div id="curlies" class="step" data-x="-100" data-y="3900" data-scale="1">
+    <h1>{......}</h1>
+<pre>
+//this
+return {
+    ...
+};
+
+//instead of
+return
+{
+    ...
+};</pre>
+<p>In JavaScript this might make a difference! <strong>Automatic Semicolon Insertion</strong></p>
+</div>
+
+<div id="curlieserror" class="step" data-x="-450" data-y="3600" data-scale="0.1">
+<pre>
+function createPerson(firstname) {
+  return
+  {
+    firstname: first
+  };
+}
+
+var p = createPerson("Juri");
+console.log(p.firstname); //error! why?
+</pre>
+<a href="http://jsbin.com/utogep/2/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div id="performance_jquery" class="step" data-x="-1600" data-y="4100" data-scale="1">
+    <h1>jQuery Performance tipps</h1>
+<iframe src="http://www.slideshare.net/slideshow/embed_code/8520572" width="627" height="556" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe> 
+<p style="font-size:15pt">
+<strong> <a href="http://www.slideshare.net/AddyOsmani/jquery-proven-performance-tips-tricks" title="jQuery Proven Performance Tips &amp; Tricks" target="_blank">jQuery Proven Performance Tips &amp; Tricks</a> </strong> from <strong><a href="http://www.slideshare.net/AddyOsmani" target="_blank">Addy Osmani</a></strong> </p>
+</div>
+
+<div id="jquery_selectorSpeed" class="step" data-x="-1100" data-y="4100" data-rotate="-90" data-rotate-y="45" data-scale="0.5">
+    <h1>Selector Speed</h1>
+<pre>
+$("#element, form, input"); //fastest
+$(".js-someelement"); //slower
+
+//slowest
+$(":visible, :hidden");
+$("[attribute=value]");
+</pre>
+</div>
+
+<div id="jquery_parentchild" class="step" data-x="-1300" data-y="4700" data-rotate="-20" data-rotate-x="-45" data-rotate-y="30" data-scale="0.5">
+    <h1>Parent - Child Relationsships: Restrict</h1>
+<p>From fastest to slowests</p>
+<pre>
+$parent.find(".child"); //fastest
+$(".child", $parent); //~5-10% slower
+$("#parent").find(".child");  //~16% slower
+$(".child, $("#parent")); //~23% slower
+$parent.children(".child"); //~50% slower
+$("#parent > .child"); //~70% slower
+$("#parent .child"); //~77% slower
+</pre>
+<a href="http://jsperf.com/jquery-selectors-context/2" target="_window">jsPerf tests</a>
+</div>
+
+<div id="jquery_caching" class="step" data-x="-2100" data-y="4700" data-rotate="20" data-rotate-x="-45" data-rotate-y="-30" data-scale="0.5">
+    <h1>Caching and Chaining</h1>
+<p>storing for later reuse</p>
+<pre>
+//use cached selectors
+var parents = $(".parents"),
+    children = $(".parents").find(".child"), //bad
+    kids = parents.find(".child"); //use cached selector
+
+//chain
+$("#form").submit(function(el, ev){
+   el.addClass("inprogress")
+     .removeClass("editable")
+     .fadeOut(500);
+});
+</pre>
+<a href="http://jsperf.com/jquery-chaining" target="_window">jsPerf tests</a>
+</div>
+
+<div id="jquery_dommanipulations" class="step" data-x="-2400" data-y="4100" data-rotate="90" data-rotate-y="-45" data-scale="0.5">
+    <h1>Dom Manipulations are slow!</h1>
+<pre>
+//first create in memory
+var $toAttach = $("&lt;div&gt;")
+                    .addClass("full")
+                    .append("&lt;input type='text'/&gt;");
+$("#parent").append($toAttach);                    
+</pre>
+<a href="http://api.jquery.com/detach/" target="_window">jQuery.detach()</a>
+</div>
+
+
+<div id="parallelizeajax" class="step" data-x="-3200" data-y="3200" data-scale="1">
+    <h1>"Parallelize" Ajax Calls</h1>
+<pre>
+$.ajax({
+    ...
+    success: function(result1){
+        $.ajax({
+            ...
+            success: function(result2){
+                this._renderView(result1, result2);
+            }
+        });
+    }
+});
+</pre>
+</div>
+
+<div id="parallelizeajax_deferreds" class="step" data-x="-3200" data-y="3700" data-scale="0.5">
+    <h1>Deferreds</h1>
+<pre>
+var call1 = $.ajax({ url: ... });
+var call2 = $.ajax({ url: ... });
+
+$.when(call1, call2).done(function(resp1, resp2){
+    //use response data
+});
+</pre>
+<a href="http://jsbin.com/ovajej/2/edit" target="_window" class="livecode">Live</a>
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+<script src="js/prettify.js"></script>
+<script type="text/javascript">
+function addPrettify() {
+  var els = document.querySelectorAll('pre');
+  for (var i = 0, el; el = els[i]; i++) {
+    if (!el.classList.contains('noprettyprint')) {
+      el.classList.add('prettyprint');
+    }
+    el.classList.add('drop-shadow');
+    el.classList.add('curved');
+    el.classList.add('curved-hz-2');
+  }
+};
+
+$(function(){
+    addPrettify();
+    prettyPrint();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+---
+layout: post
+title: "HowTo: execute a file download from Windows command line"
+date: 2008-11-10
+comments: true
+tags: [  HowTo, Windows OS ]
+---
+
+Under Linux it is often very comfortable to download files quickly from within the shell by typing wget [some URL], especially if you do that from within a script. Under Windows this is not directly possible since there doesn't exist a wget-like program (at least I didn't find one). I guess if you install cygwin, then it may be possible to use wget again, I'd have to check that. Anyway, if you don't want to install cygwin and you have installed ServicePack2 (Win XP), then there is an application called "<a href="http://msdn.microsoft.com/en-us/library/aa362813.aspx">BitsAdmin</a>" which allows you do to a similar job. The application usually comes under the Support Tools of the ServicePack 2.<br />Usage:<br /><pre class="code">&lt;installLocation&gt;\bitsadmin.exe /transfer &lt;jobName&gt; /download /priority normal &lt;url to file to download&gt; &lt;path where downloaded file should be stored&gt;<br /></pre>So an example could look as follows:<br /><pre class="code">C:\SupportTools\bitsadmin.exe /transfer chromiumUpdate /download /priority normal http://build.chromium.org/buildbot/continuous/LATEST/chrome-win32.zip C:\chromium\chomiumLatest.zip<br /></pre>This downloads a zip-file containing the latest Chromium build (<a href="http://blog.chromium.org/2008/10/google-chrome-chromium-and-google.html">What's the difference between Chromium and Chrome?</a>).<br /><br /><u>References:</u><br />http://msdn.microsoft.com/en-us/library/aa362813.aspx<br />http://msdn.microsoft.com/en-us/library/aa362812(VS.85).aspx

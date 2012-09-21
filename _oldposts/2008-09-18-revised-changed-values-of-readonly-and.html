@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Revised: Changed values of readonly and disabled fields...."
+date: 2008-09-18
+comments: true
+tags: [  ASP.net, Web dev, .Net ]
+---
+
+In <a href="http://blog.js-development.com/2008/09/changed-values-of-readonly-and-disabled.html">a previous post</a> I wrote about the problem that the values of readonly or disabled fields are not retrieved after a postback because it appears as if ASP.net doesn't handle their viewstate. I don't know whether this was a design choice because they assumed that readonly fields aren't supposed to change or whether it is a bug. Anyway, as I've stated, it may nevertheless be the case where the values of readonly fields are modified (i.e. by JavaScript).<br />In my previous post I've described a workaround that uses JavaScript to prevent any user-input etc...This may however not always be the best solution since you have for instance to handle the tab-key explicitly because otherwise it won't be possible to navigate over your text-field by pressing the tab-key (the cursor would get stuck on your textbox). So a better solutions is to leave the text-field as it is, adding the readonly property to "true" and doing whatever you need. You also don't need any JavaScript event handlers. What you have to do instead is to explicitly retrieve the value of your text-field in the PageLoad event by querying the Request object:<br /><pre class="prettyprint">txbWorkOfficeCompanyCode.Text = Request[this.txbWorkOfficeCompanyCode.UniqueID];<br /></pre>
