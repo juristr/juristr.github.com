@@ -5,10 +5,12 @@
     {{ page.date | date: "%B %d, %Y" }}
   </time>
   <section class="tags">
-    Filed under:
-    {% for tag in page.tags %}
-      <a href="/blog/tags#{{tag}}">{{ tag }}</a>
-    {% endfor %}    
+    {% unless page.tags == empty %}
+      Filed under:
+      {% for tag in page.tags %}
+        <a href="/blog/tags#{{tag}}">{{ tag }}</a>
+      {% endfor %}    
+    {% endunless %}
   </section>
   <!--
   {% unless page.tags == empty %}
