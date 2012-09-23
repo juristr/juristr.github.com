@@ -133,11 +133,21 @@ article figcaption {
   padding-left:5px;
 }
 
-article > h1 {
+article h1 {
   font-size:30px;
   margin-bottom:0;
   line-height:30px;
   padding-bottom:5px;
+}
+
+article h2 {
+  font-size:25px;
+  line-height:30px;
+}
+
+article h3 {
+  font-size:22px;
+  line-height:30px;
 }
 
 .article-body {
@@ -149,13 +159,6 @@ article > h1 {
   font-weight:300;
 }
 
-article > h2 {
-  font-size:25px;
-}
-
-article > h3 {
-  font-size:22px;
-}
 
 article > ul {
   padding-top: 10px;
