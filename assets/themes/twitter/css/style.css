@@ -236,7 +236,7 @@ ol.linenums > li{
   color: white;
 }
 
-code {
+/*code {
   background-color: #FEE9CC;
   color: rgba(0, 0, 0, 0.75);
   padding: 1px 3px;
@@ -244,6 +244,20 @@ code {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}*/
+
+code{
+  padding: 0px 5px 2px;
+  border: 1px solid #DDD;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-family: Monaco,"DejaVu Sans Mono","Courier New",monospace;
+  font-size: 13px;
+  color: #666;
 }
 
 /* stackoverflow */
