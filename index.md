@@ -16,7 +16,7 @@ title: Juri Strumpflohner
     text-align:center;
     border-bottom:0;
     margin: 100px 0;
-    line-height: 1;
+    line-height: 20px;
     font-size: 100px;
     text-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
     letter-spacing: -3px;
