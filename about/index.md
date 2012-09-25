@@ -20,3 +20,5 @@ In his free time, Juri is a passionate martial arts practitioner. He's been prac
 now for roughly over 12 years and owns a black belt (2nd DAN).
 
 To contact him, just drop him a line on [Twitter](http://twitter.com/juristr) or at <juri.strumpflohner@js-development.com>.
+
+<a href="http://www.dzone.com/users/juristr"><img src="http://www.dzone.com/sites/all/files/big-mvbbutton.png"></a>
