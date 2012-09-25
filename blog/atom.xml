@@ -15,9 +15,9 @@ title : Atom Feed
    <email>{{ site.author.email }}</email>
  </author>
 
- {% for post in site.posts limit:1 %}
+ {% for post in site.posts limit:20 %}
  <entry>
-   <title>abc: {{ post.title | xml_escape }}</title>
+   <title>{{ post.title | xml_escape }}</title>
    <link href="{{ site.production_url }}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.production_url }}{{ post.id }}</id>
