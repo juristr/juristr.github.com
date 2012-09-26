@@ -5,17 +5,27 @@ description: ""
 tags: []
 ---
 {% include JB/setup %}
-About six years ago I decided to create a Blogger account and start blogging. That worked perfectly and it was a good way to start blogging. However, now I think it's time to change.
+About six years ago I decided to create a Blogger account and start blogging. That worked perfectly and it was a good way to start. However, now I think it's time to change.
 
 ## Changing the Domain
-I will no longer continue blogging under [blog.js-development.com](http://blog.js-development.com) but rather under the domain [juristr.com](http://juristr.com). I think it's a more meaningful and representative domain name as I'm present with that acronym at a [variety](http://github.com/juristr) [of services](http://twitter.com/juristr). It stands for "Juri Strumpflohner" (as you might have guessed). I thought about using juristrumpflohner.com, however that seemed to long and hard to remember ;).
+I will no longer continue blogging under [blog.js-development.com](http://blog.js-development.com) but rather under the domain [juristr.com](http://juristr.com). I think it's a more meaningful and representative domain name as I'm present with that acronym on a [variety](http://github.com/juristr) [of services](http://twitter.com/juristr).
 
-Still, [blog.js-development.com](http://blog.js-development.com) will remain as it is and I will keep it for now. Too many pages link to it in order to simply cut it off. What I did however is to migrate all six years of posting on js-development to juristr.com in order to preserve them.
+Still, [blog.js-development.com](http://blog.js-development.com) will remain as it is and I will keep it for now. Too many pages link to it in order to simply cut it off. What I did however is to migrate all six years of posting from js-development to juristr.com in order to preserve them.
 
 ## Changing the Blog Engine
-I'm not only going to change the domain, but mainly the blogging engine. Yep, juristr.com is no more hosted on blogger, but on [Github](http://github.com) instead. The guys there just do an amazing job. They created [Jekyll](https://github.com/mojombo/jekyll), a static site generator which now also powers juristr.com.
+I'm not only going to change the domain, but mainly the blogging engine. Yep, juristr.com is no more hosted on blogger, but on [Github](http://github.com) instead powered by [Jekyll](https://github.com/mojombo/jekyll). The guys there just do an amazing job.
 
-## Why?
+### Why?
+I'm not going to much into the details. Here are the main reasons why I switched:
+
+1. **Ease of posting** - I'm a purely technical writer. Most of my articles and posts contain source code. Moreover I have very little time to write down my posts. So my usual approach is to write down some draft points when I encounter some interesting stuff for then expanding them later to a properly structured post ready for being published. Blogger makes it really hard to post source code. You continuously have to switch between the HTML and WYSIWYG view fumbling around with tedious formattings..because I think format and style is important after all. Jekyll has Markdown support which I love. It's like LaTeX, you concentrate on the content, not on the styling.
+2. **Full control** - Jekyll gives me full control over my content. It's on GitHub, remember? So it is basically a collection of static files
+3. Flexibility
+4. Source controlled
+
+
+
+
 Why I changed from Blogger to Jekyll and Github?
 
 1. Flexibility
