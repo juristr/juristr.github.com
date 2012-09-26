@@ -120,6 +120,10 @@ article img {
   border:1px solid #EEE;
 }
 
+article a > img{
+  border:0;
+}
+
 article figure{
   margin-left:0;
 }
@@ -160,8 +164,9 @@ article h3 {
 }
 
 
-article > ul {
-  padding-top: 10px;
+article ul {
+  /*padding-top: 10px;*/
+  margin: 5px 0 15px 25px;
 }
 
 /*.article-body > blockquote {

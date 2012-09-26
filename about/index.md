@@ -20,3 +20,18 @@ In his free time, Juri is a passionate martial arts practitioner. He's been prac
 now for roughly over 12 years and owns a black belt (2nd DAN).
 
 To contact him, just drop him a line on [Twitter](http://twitter.com/juristr) or at <juri.strumpflohner@js-development.com>.
+
+
+<div class="row-fluid">
+  <div class="span4">
+    <a href="http://stackoverflow.com/users/50109/juri">
+        <img src="http://stackoverflow.com/users/flair/50109.png" width="208" height="58" alt="profile for Juri at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Juri at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+    </a>
+  </div>
+  <div class="span4">
+    <a href="http://www.dzone.com/users/juristr"><img src="http://www.dzone.com/sites/all/files/big-mvbbutton.png"></a>      
+  </div>
+  <div class="span4">
+    <a href="http://coderwall.com/juristr"><img alt="Endorse juristr on Coderwall" src="http://api.coderwall.com/juristr/endorsecount.png" /></a>      
+  </div>
+</div>

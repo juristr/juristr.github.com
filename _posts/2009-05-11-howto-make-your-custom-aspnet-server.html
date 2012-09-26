@@ -1,0 +1,11 @@
+---
+layout: post
+title: "HowTo: Make your custom ASP.net server control validatable"
+date: 2009-05-11
+comments: true
+tags: [  HowTo, ASP.net, C#, Web dev, .Net ]
+---
+
+<p>Content validation is a major issue of every application. It is an absolute "must have" to notify the user about invalid data he may have entered. Asp.net provides nice validators which you can drag onto your page and attach to a specific control by defining the ControlToValidate attribute of the validator.</p>
+
+So if you design your custom server control you would like to make it also validatable. Many approaches I've seen on the web is to directly integrate the validators in the custom server control and so to provide predefined validation functions. This can be useful in special cases s.t. the programmer/user of the server control doesn't have to bother about validation (i.e. create a custom control "AutoValidateTextBox").<br />A much cleaner approach however is to decouple validation from the implementation of the server control. This increases the flexibility for the user of the control in the way that he possibly can specify whatever validator he likes (if not generate and attach validators automatically). But if you just add your control to a page or user control and you add a validator, you'll get an error like:<br /><br /><blockquote>Control "YourCustomControl" referenced by the ControlToValidate property of "theAddedValidator" cannot be validated.</blockquote><br />To avoid this problem and to make your control validatable, you have to tell somehow which property exposed by your control is the one that should be validated. This can be done by specifying the following attribute on your server control's class:<br /><pre class="prettyprint"><b>[ValidationProperty("Value")]</b><br />public class MyCustomServerControl : WebControl, INamingContainer<br />{<br /><br />   ...<br /><br /><br />   //the property that will be validated<br />   public String <b>Value</b><br />   {<br />      get<br />      {<br />         ...<br />      }<br />      set<br />      {<br />         ...<br />      }<br />   }<br /><br />   ...<br /><br />}</pre>
