@@ -72,7 +72,7 @@ JB :
   #
   archive_path: /archive.html
   categories_path : /categories.html
-  tags_path : /tags.html
+  tags_path : /blog/tags/index.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
