@@ -147,11 +147,16 @@ article h1 {
 article h2 {
   font-size:25px;
   line-height:30px;
+  border-bottom: 1px solid #CCC;
 }
 
 article h3 {
   font-size:22px;
   line-height:30px;
+}
+
+article h2, h3{
+  padding-top:15px;
 }
 
 .article-body {
