@@ -4,7 +4,7 @@ html, body, button, input, select, textarea {
 }
 
 body, textarea {
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .main-content {
@@ -194,7 +194,7 @@ article ul {
 }*/
 
 .article-body blockquote {
-  background: white url("/assets/images/blockquote.png") no-repeat scroll 8px 7px;
+  /*background: white url("/assets/images/blockquote.png") no-repeat scroll 8px 7px;
   border: 0;
   min-height: 50px;
   padding: 20px 20px 20px 40px;
@@ -205,7 +205,14 @@ article ul {
   font-style: italic;
   color: #5D5D5D;
   line-height: 1.6;
-  font-family: georgia;
+  font-family: georgia;*/
+  padding: 0.7em 2em;
+  border: 1px solid #CCC;
+  border-left: 8px solid #E22C29;
+  background-color: #F7F7F7;
+  font-style: italic;
+  color: #555;
+  margin-left:25px;
 }
 
 /* Prettyprint */
