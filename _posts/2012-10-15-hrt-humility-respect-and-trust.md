@@ -48,7 +48,7 @@ The book is amazing and contains lots of useful information. But in the end it a
 There is a key ingredient for these different team stakeholders to play together in a well manner and it is called "HRT", pronounced "heart".
 
 <figure>
-    <img src="/blog/assets/imgs/hrt.png">
+    <img src="/blog/assets/imgs/HRT.png">
     <figcaption>From the book "Team Geek", Brian W. Fitzpatrick and Ben Collins-Sussman, O'Reilly, June 2012.</figcaption>
 </figure>
 
