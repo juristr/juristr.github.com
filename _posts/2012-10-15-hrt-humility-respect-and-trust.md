@@ -28,7 +28,7 @@ Different roles with different very concrete responsibilities. **But no one is m
 
 ## "Team Geek - A Software Developer's Guide to Working Well with Others" by Brian W. Fitzpatrick and Ben Collins-Sussman (O'Reilly)
 
-This is the title of the last book I [received](http://localhost:4000/blog/2012/08/mobile-javascript-application/) [from O'Reilly](http://localhost:4000/blog/2012/08/fluent-conference-javascript-beyond_29/). 
+This is the title of the last book I [received](/blog/2012/08/mobile-javascript-application/) [from O'Reilly](/blog/2012/08/fluent-conference-javascript-beyond_29/). 
 
 ![](/blog/assets/imgs/teamgeekcover.gif)
 
