@@ -168,6 +168,10 @@ article h2, h3{
   font-weight:300;
 }
 
+.article-body > p:first-child > code {
+  font-size:18px;
+}
+
 
 article ul {
   /*padding-top: 10px;*/
@@ -213,6 +217,19 @@ article ul {
   font-style: italic;
   color: #555;
   margin-left:25px;
+}
+
+#related-posts .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#related-posts ul {
+  margin-left:0;
+}
+
+#related-posts ul > li {
+  list-style-type: none;
 }
 
 /* Prettyprint */
@@ -299,4 +316,16 @@ kbd {
     text-shadow: 0 1px 0 white;
     line-height: 1.4;
     white-space: nowrap;
+}
+
+@media (max-width: 979px) { 
+  .main-content {
+    border-left:0;
+    padding-left:0;
+  }
+
+  article {
+    padding-top:0;
+  }
+  
 }

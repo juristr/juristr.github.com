@@ -1,0 +1,33 @@
+<div class="navbar navbar-inverse navbar-fixed-top hidden-desktop">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li>
+            <a href="/">home</a>
+          </li>        
+          <li>
+            <a href="/blog">blog</a>
+          </li>
+          <li>
+            <a href="/projects">projects</a>
+          </li>
+          <li>
+            <a href="/bliki">bliki</a>
+          </li>
+          <li>
+            <a href="/talks">talks</a>
+          </li>      
+          <li>
+            <a href="/about">about</a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>

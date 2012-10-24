@@ -22,6 +22,25 @@ title: Juri Strumpflohner
     letter-spacing: -3px;
   }
 
+  @media (max-width: 550px) {
+    h1 {
+      font-size:45px !important;
+      line-height: 50px !important;
+      margin:0 !important;
+    }
+
+    .navbar li{
+      font-size:20px;
+    }
+  }
+
+  @media (min-width: 551px) and (max-width: 979px) {
+    h1 {
+      font-size:95px !important;
+      line-height: 80px !important;
+    }
+  }
+
   img.gravatar {
     border-radius: 2px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
@@ -49,7 +68,6 @@ title: Juri Strumpflohner
       float: none; /* this is the part that makes it work */
   }
 </style>
-
 <div class="row-fluid">
   <div class="span12">
     <div class="span1">
@@ -67,7 +85,7 @@ title: Juri Strumpflohner
     </div>
     <div class="span10">
       <div class="span12">
-        <div class="span3">
+        <div class="span3 visible-desktop">
           <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=256" class="gravatar img-rounded">
         </div>
         <div class="span9">
