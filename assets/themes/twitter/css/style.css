@@ -224,11 +224,11 @@ article ul {
   font-weight: bold;
 }
 
-#related-posts ul {
+#related-posts > ul {
   margin-left:0;
 }
 
-#related-posts ul > li {
+#related-posts > ul > li {
   list-style-type: none;
 }
 
@@ -283,7 +283,7 @@ ol.linenums > li{
   border-radius: 3px;
 }*/
 
-code{
+code {
   padding: 0px 5px 2px;
   border: 1px solid #DDD;
   -webkit-border-radius: 3px;
@@ -293,7 +293,7 @@ code{
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   font-family: Monaco,"DejaVu Sans Mono","Courier New",monospace;
-  font-size: 13px;
+  font-size: 16px;
   color: #666;
 }
 
