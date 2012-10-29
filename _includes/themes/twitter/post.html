@@ -8,7 +8,7 @@
     {% unless page.tags == empty %}
       Filed under:
       {% for tag in page.tags %}
-        <a href="/blog/tags#{{tag}}">{{ tag }}</a>
+        <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
       {% endfor %}    
     {% endunless %}
   </section>

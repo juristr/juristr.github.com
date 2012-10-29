@@ -219,6 +219,36 @@ article ul {
   margin-left:25px;
 }
 
+
+.post-tag {
+  color: #304955;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  line-height: 12px;
+  margin: 2px 2px 6px 0;
+  overflow: visible;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  background-color: #E6F1F7;
+  padding: 2px 8px 4px 8px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: padding 0.1s ease-out;
+  -moz-transition: padding 0.1s ease-out;
+  transition: padding 0.1s ease-out;
+}
+
+a.post-tag:hover{
+  text-decoration:none;
+  background:#d6f2ff url('/assets/images/sprites.png') no-repeat -220px -296px;
+  padding-left:18px;
+  -webkit-transition:padding 0.1s ease-in,background-image 0.1s ease-in;
+  -moz-transition:padding 0.1s ease-in,background-image 0.1s ease-in;
+  transition:padding 0.1s ease-in,background-image 0.1s ease-in;
+}
+
 #related-posts .title {
   font-size: 18px;
   font-weight: bold;
