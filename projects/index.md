@@ -2,6 +2,7 @@
 layout: default
 title: Juri Strumpflohner
 ---
-# This is the projects site
+# My Projects
+This pages shows the projects I'm currently involved in.
 
-_under construction..._
+_under construction...in the mean time you might want to head over to [GitHub](http://github.com/juristr)_
