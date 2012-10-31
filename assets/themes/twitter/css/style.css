@@ -5,6 +5,7 @@ html, body, button, input, select, textarea {
 
 body, textarea {
   line-height: 1.5;
+  border-top: 4px solid #EA7E15;
 }
 
 .main-content {
@@ -147,7 +148,7 @@ article h1 {
 article h2 {
   font-size:25px;
   line-height:30px;
-  border-bottom: 1px solid #EEE;
+  /*border-bottom: 1px solid #EEE;*/
 }
 
 article h3 {
@@ -210,13 +211,21 @@ article ul {
   color: #5D5D5D;
   line-height: 1.6;
   font-family: georgia;*/
-  padding: 0.7em 2em;
+  /*padding: 0.7em 2em;
   border: 1px solid #CCC;
   border-left: 8px solid #E22C29;
   background-color: #F7F7F7;
   font-style: italic;
   color: #555;
-  margin-left:25px;
+  margin-left:25px;*/
+  position: relative;
+  padding-left: 15px;
+  /*border-left: 10px solid #348EC0;*/
+  border-left: 10px solid #EA7E15;
+  font-size: 14px;
+  line-height: 1.7143;
+  color: #888;
+  margin-left: 20px;
 }
 
 
