@@ -1,27 +1,29 @@
-# Visual Studio
+---
+layout: post
+title: "Visual Studio Tips"
+description: "asdf asd fasdf "
+category: bliki
+tags: [ Visual Studio, tools]
+---
+{% include JB/setup %}
+
 At work, I spend a huge amount of my time working with Microsoft Technologies. As such, I also use Visual Studio. Here are some of the tipps and tricks to efficiently work with it.
-
-## Plugins
-Here's a list of plugins I find quite useful.
-
-### Freely available
-
-- [VSCommands](http://vscommands.squaredinfinity.com/)
 
 ## Keystrokes
 Here are my preferred keystrokes. Note, keystrokes separated by a comma mean you have to use them in sequence in order to activate the command.  
 They refer to VS2012 but some may also work in previous versions.
 
 ### Standard
+
 <table class="table table-striped">
 <thead>
-    <th width="25%">Shortcut</th>
+    <th width="35%">Shortcut</th>
     <th>Description</th>
 </thead>
 <tbody>
     <tr>
-        <td><kbd>Ctrl</kbd>+<kbd>K</kbd>, <kbd>Ctrl</kbd>+<kbd>D</kbd>
-        <td>Autoformat the document, whether it is an HTML page, CS or JavaScript file
+        <td><kbd>Ctrl</kbd>+<kbd>K</kbd>, <kbd>Ctrl</kbd>+<kbd>D</kbd></td>
+        <td>Autoformat the document, whether it is an HTML page, CS or JavaScript file</td>
     </tr>
     <tr>
         <td><kbd>Ctrl</kbd>+<kbd>K</kbd>,<kbd>C</kbd></td>
@@ -32,7 +34,7 @@ They refer to VS2012 but some may also work in previous versions.
         <td>Un-comment the selected part</td>
     </tr>
     <tr>
-        <td><kbd>Ctrl</kbd>+<kbd>Q</kbd>
+        <td><kbd>Ctrl</kbd>+<kbd>Q</kbd></td>
         <td>Place the cursor in the Quick-Launch box for then executing some menu command</td>
     </tr>
     <tr>
@@ -50,15 +52,15 @@ They refer to VS2012 but some may also work in previous versions.
     <tr>
         <td><kbd>Ctrl</kbd>+<kbd>M</kbd>,<kbd>Ctrl</kbd>+<kbd>O</kbd></td>
         <td>Collapse to definitions</td>
-    </tr>
+    </tr>    
 </tbody>
 </table>
 
+### Custom mapped ###
 
-### Custom mapped
 <table class="table table-striped">
 <thead>
-    <th width="25%">Shortcut</th>
+    <th width="35%">Shortcut</th>
     <th>Description</th>
 </thead>
 <tbody>
