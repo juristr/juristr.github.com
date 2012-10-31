@@ -42,7 +42,7 @@
             }
     }
 
-	$.fn.scrollTop = function(){
+	$.fn.scrolltop = function(){
 		var scrollButton = $('<div class="scroll-menu"><div><a href="javascript:;" class="js-scroll">Top</a></div></div>)');
 		$("body").prepend(scrollButton);
 

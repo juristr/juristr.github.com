@@ -12,6 +12,16 @@
       {% endfor %}    
     {% endunless %}
   </section>
+  <script type="text/javascript">
+    $(function(){
+      {% if page.categories[0] == "bliki" %}
+        $(".toc-container").show();
+        $("#toc").tocify();
+      {% else %}
+        $.fn.scrolltop();
+      {% endif %}
+    });
+  </script>
   <!--
   {% unless page.tags == empty %}
       {% assign tags_list = page.tags %}
@@ -38,8 +48,6 @@
       <li class="next disabled"><a>Next &rarr;</a>
     {% endif %}
     </ul>
-  </div>
-  <hr>
-  {% include JB/comments %}
-
 </div>
+<hr>
+{% include JB/comments %}

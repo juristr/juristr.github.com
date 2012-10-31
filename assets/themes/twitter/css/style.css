@@ -357,6 +357,14 @@ kbd {
     white-space: nowrap;
 }
 
+.toc-container {
+  padding-top: 45px;
+}
+
+.toc-container .nav-list > .active > a {
+  background-color: #EA7E15;
+}
+
 @media (max-width: 979px) { 
   .main-content {
     border-left:0;
