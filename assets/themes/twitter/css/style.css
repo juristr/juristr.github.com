@@ -5,7 +5,7 @@ html, body, button, input, select, textarea {
 
 body, textarea {
   line-height: 1.5;
-  border-top: 4px solid #EA7E15;
+  border-top: 4px solid #008CCC;
 }
 
 .main-content {
@@ -218,14 +218,24 @@ article ul {
   font-style: italic;
   color: #555;
   margin-left:25px;*/
-  position: relative;
+  
+  /*position: relative;
   padding-left: 15px;
-  /*border-left: 10px solid #348EC0;*/
-  border-left: 10px solid #EA7E15;
+  border-left: 10px solid #008CCC;
   font-size: 14px;
   line-height: 1.7143;
   color: #888;
-  margin-left: 20px;
+  margin-left: 20px;*/
+
+  display: inline-block;
+  padding-left: 18px;
+  padding-bottom: 0;
+  font-size: 15px;
+  line-height: 25px;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-left: 10px solid #008CCC;;
 }
 
 
@@ -362,7 +372,11 @@ kbd {
 }
 
 .toc-container .nav-list > .active > a {
-  background-color: #EA7E15;
+  background-color: #008CCC;
+}
+
+.scroll-menu {
+  background-color: #008CCC !important;
 }
 
 @media (max-width: 979px) { 
