@@ -8,6 +8,10 @@ body, textarea {
   border-top: 4px solid #008CCC;
 }
 
+li {
+  list-style-type: disc;
+}
+
 .main-content {
   border-left: 1px solid #E3E3E3;
   padding-left:50px;
@@ -109,8 +113,9 @@ article {
   /*font-family: calibri,tahoma,arial,sans-serif;*/
   padding-top:45px;
   padding-bottom:50px;
-  font-size:16px;
+  font-size:18px;
   font-weight:300;
+  color: #57534A !important;
 }
 
 article > .tags{
@@ -169,7 +174,7 @@ article h2, h3{
 }
 
 .article-body > p:first-child {
-  font-size:21px;
+  font-size:23px;
   font-weight:300;
 }
 

@@ -35,3 +35,7 @@ To contact him, just drop him a line on [Twitter](http://twitter.com/juristr) or
     <a href="http://coderwall.com/juristr"><img alt="Endorse juristr on Coderwall" src="http://api.coderwall.com/juristr/endorsecount.png" /></a>      
   </div>
 </div>
+
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/it/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Italy License</a>.
+</p>
