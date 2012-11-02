@@ -58,13 +58,16 @@
     <div id="container" class="container-fluid">
       <div class="row-fluid">
         <div class="span2 hidden-phone hidden-tablet">
-          <div class="home">
+          <div class="home" style="display:none">
             <div class="row-fluid">
               <div class="span8 offset4">
                 <a href="/" class="home"></a>
               </div>
             </div>
           </div>
+          <ul class="nav nav-pills nav-list sidebar-nav">
+            {% include mycustoms/nav-list %}            
+          </ul>
           <div class="profile">
             <div class="row-fluid">
               <div class="span8 offset2">

@@ -8,24 +8,7 @@
       </a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li>
-            <a href="/">home</a>
-          </li>        
-          <li>
-            <a href="/blog">blog</a>
-          </li>
-          <li>
-            <a href="/projects">projects</a>
-          </li>
-          <li>
-            <a href="/bliki">bliki</a>
-          </li>
-          <li>
-            <a href="/talks">talks</a>
-          </li>      
-          <li>
-            <a href="/about">about</a>
-          </li>
+          {% include mycustoms/nav-list %}
         </ul>
       </div><!--/.nav-collapse -->
     </div>

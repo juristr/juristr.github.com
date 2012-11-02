@@ -69,6 +69,10 @@ h1.post-title > a {
   font-size: inherit;
 }
 
+h1.post-title > a:hover {
+  color: #008CCC;
+}
+
 .post-date {
   display: block;
   font-size: 15px;
@@ -365,6 +369,29 @@ kbd {
     text-shadow: 0 1px 0 white;
     line-height: 1.4;
     white-space: nowrap;
+}
+
+.sidebar-nav {
+  position: fixed;
+  top: 47px;
+  left: 30px;
+}
+
+ul.nav-pills > li > a {
+  padding: 10px;
+}
+
+ul.nav-pills > li > a:hover {
+  color: white;
+  background-color: #008CCC;
+}
+
+.sidebar-nav > li{
+  display:block;
+  list-style-type: none;
+  clear: left;
+  margin-top:5px;
+  margin-bottom:5px;
 }
 
 .toc-container {
