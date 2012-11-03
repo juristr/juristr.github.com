@@ -119,6 +119,17 @@
       //   $(".js-stackoverflow-latest").juristr_stackexchange();
       //   new Juristr.Github($(".js-github-latest")).loadFeedData();
       // });
+      // 
+      
+      $("pre").each(function(){
+        var el = $(this);
+        if(el.hasClass("noprettyprint") === false){
+          el.addClass("prettyprint");
+          //el.addClas("linenums");  
+        }
+      });
+
+      /*
       var els = document.querySelectorAll('pre');
       for (var i = 0, el; el = els[i]; i++) {
         if (!el.classList.contains('noprettyprint')) {
@@ -129,6 +140,7 @@
         el.classList.add('curved');
         el.classList.add('curved-hz-2');
       }
+      */
 
       prettyPrint();
     </script>
