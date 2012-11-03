@@ -380,6 +380,7 @@ kbd {
   position: fixed;
   top: 47px;
   left: 30px;
+  width: 100px;
 }
 
 ul.nav-pills > li > a {
