@@ -19,8 +19,16 @@ detailled information keep an eye on his [CV](http://careers.stackoverflow.com/j
 In his free time, Juri is a passionate martial arts practitioner. He's been practicing Yoseikan Budo
 now for roughly over 12 years and owns a black belt (2nd DAN).
 
-To contact him, just drop him a line on [Twitter](http://twitter.com/juristr) or at <juri.strumpflohner@js-development.com>.
+You can find him
 
+- on [Twitter](http://twitter.com/juristr)
+- on [GitHub](http://github.com/juristr)
+- on [Stack Overflow](http://stackoverflow.com/users/50109/juri)
+- on [Geekli.st](https://geekli.st/juri)
+- on [Facebook](https://www.facebook.com/pages/Juri-Strumpflohners-TechBlog/157432560964701)
+- on ...
+
+or just drop him a line at <juri.strumpflohner@js-development.com>.
 
 <div class="row-fluid">
   <div class="span4">
