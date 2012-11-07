@@ -48,6 +48,11 @@ ul.post-list h1{
   line-height:28px;
 }
 
+ul.post-list .post-date{
+  padding-left: 0;
+  background:0;
+}
+
 ul.post-list > li::before {
   content: "";
   position: absolute;
@@ -81,6 +86,8 @@ h1.post-title > a:hover {
   display: block;
   font-size: 15px;
   color: #C7C2B8;
+  background: url(/assets/images/icon_date.gif) 0 3px no-repeat;
+  padding-left: 22px;
 }
 
 h1, h2, h3 {
@@ -118,8 +125,13 @@ article {
   color: #57534A !important;
 }
 
-article > .tags{
-  font-size: 15px;
+article .tags{
+  background: url(/assets/images/icon_tags.gif) 0 3px no-repeat;
+  padding-left: 22px;
+}
+
+article .tags a{
+  font-size: 12px !important;
 }
 
 article img {
@@ -275,6 +287,22 @@ a.post-tag:hover{
   -webkit-transition:padding 0.1s ease-in,background-image 0.1s ease-in;
   -moz-transition:padding 0.1s ease-in,background-image 0.1s ease-in;
   transition:padding 0.1s ease-in,background-image 0.1s ease-in;
+}
+
+.inline-bio {
+  border-top: 4px solid #008CCC;
+  margin-top:40px;
+}
+
+.inline-bio .bio-author {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  display: block;
+}
+
+.inline-bio img{
+  border: 0;
 }
 
 #related-posts .title {
