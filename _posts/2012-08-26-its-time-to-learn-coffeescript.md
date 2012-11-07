@@ -861,3 +861,8 @@ Refactoring this to CoffeeScript could be done as follows.
         changeTab: (event) =>
 
 > **Note**, `changeTab` needs the fat arrow as it runs under the context of the click event handler registered in the constructor.
+
+## Resources
+Here are some further resources I found on the web:
+
+- [Coffeescript Cookbook](http://coffeescriptcookbook.com/)

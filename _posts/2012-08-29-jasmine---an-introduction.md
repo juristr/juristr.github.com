@@ -76,6 +76,8 @@ Jasmine has the following "matchers":
 - `toThrow()`
 - ...
 
+A detailled description can be found on the [GitHub repo wiki](https://github.com/pivotal/jasmine/wiki/Matchers).
+
 ## Spies
 ..it also has **Spies** which is how they do test doubles in Jasmine, basically thy include mocks, stubs, fakes or doubles.
 
