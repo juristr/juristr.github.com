@@ -86,8 +86,8 @@ h1.post-title > a:hover {
   display: block;
   font-size: 15px;
   color: #C7C2B8;
-  background: url(/assets/images/icon_date.gif) 0 3px no-repeat;
-  padding-left: 22px;
+  /*background: url(/assets/images/icon_date.gif) 0 3px no-repeat;*/
+  /*padding-left: 22px;*/
 }
 
 h1, h2, h3 {
@@ -126,8 +126,8 @@ article {
 }
 
 article .tags{
-  background: url(/assets/images/icon_tags.gif) 0 3px no-repeat;
-  padding-left: 22px;
+  /*background: url(/assets/images/icon_tags.gif) 0 3px no-repeat;
+  padding-left: 22px;*/
 }
 
 article .tags a{
