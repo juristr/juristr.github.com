@@ -79,7 +79,7 @@ Jasmine has the following "matchers":
 A detailled description can be found on the [GitHub repo wiki](https://github.com/pivotal/jasmine/wiki/Matchers).
 
 ## Spies
-..it also has **Spies** which is how they do test doubles in Jasmine, basically thy include mocks, stubs, fakes or doubles.
+..it also has [**Spies**](http://pivotal.github.com/jasmine/#section-Spies) which is how they do test doubles in Jasmine, basically they include mocks, stubs, fakes or doubles.
 
 Here's an example of spying on something
 
@@ -124,6 +124,19 @@ The `Game.js` itself looks like
             ball.inflate();
         }
     }
+
+### Spies Inspection
+Another very powerful concept is the possibility to inspect the result of the execution of the spy, i.e. when spying on the "inflate" function like
+
+    spy(ball, "inflate");
+
+it is then possible to inspect the call by using
+
+    ball.inflate.calls[0]
+    ball.inflate.mostRecentCall
+    ball.inflate.mostRecentCall.args[0]
+
+and so on.
 
 ## The Mock Clock
 This mechanism is used to test calls to `setTimeout()` or `setInterval()`. Jasmine basically overwrites these functions and makes them synchronous s.t. they don't tick until (in the test) one explicitly gives them the command to do so. 
