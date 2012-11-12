@@ -411,6 +411,11 @@ kbd {
   width: 100px;
 }
 
+.sidebar-nav .active {
+  border-bottom: 4px solid #008CCC;
+  border-radius: 0;
+}
+
 ul.nav-pills > li > a {
   padding: 10px;
 }
