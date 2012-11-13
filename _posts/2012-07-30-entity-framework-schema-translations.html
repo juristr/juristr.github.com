@@ -4,6 +4,7 @@ title: "Entity Framework Schema Translations"
 date: 2012-07-30
 comments: true
 tags: [  Entity Framework, .Net ]
+reposts: ["http://dotnet.dzone.com/articles/entity-framework-schema-0"]
 ---
 
 <p>You should have <a href="http://blog.js-development.com/2008/09/best-practices-deploying-webapps.html" target="_blank">different setup environments</a>, right. Normally something like dev, test (or staging) and production. This implies to have different DBs as well. At work we have Oracle databases and there we don't really have different DB "instances" but different schemas, depending on the environment we deploy to. This post presents an approach of allowing to dynamically "rewrite" the schema defined in the EF mappings in an easy to use way.</p>

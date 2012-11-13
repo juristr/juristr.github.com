@@ -4,6 +4,7 @@ title: "Jasmine - An Introduction"
 description: ""
 category: bliki
 tags: []
+reposts: ["http://css.dzone.com/articles/jasmine-introduction"]
 comments: true
 ---
 {% include JB/setup %}

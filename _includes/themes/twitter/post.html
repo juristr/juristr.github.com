@@ -46,7 +46,7 @@
         This post has been re-published at
         <ul>
           {% for repostUrl in page.reposts %}
-            <li><a href="{{repostUrl}}">{{ repostUrl }}</a></li>
+            <li><a href="{{repostUrl}}" rel="nofollow">{{ repostUrl }}</a></li>
           {% endfor %}
         </ul>
       {% endif %}

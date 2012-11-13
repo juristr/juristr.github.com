@@ -4,6 +4,7 @@ title: "It's time to learn CoffeeScript"
 description: ""
 category: bliki
 tags: [JavaScript, CoffeeScript, WebDev]
+reposts: ["http://css.dzone.com/articles/its-time-learn-coffeescript"]
 comments: true
 ---
 {% include JB/setup %}

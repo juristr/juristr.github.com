@@ -4,6 +4,7 @@ title: "Visual Studio Tips"
 description: "asdf asd fasdf "
 category: bliki
 tags: [ Visual Studio, tools]
+reposts: ["http://dotnet.dzone.com/articles/visual-studio-tips"]
 ---
 {% include JB/setup %}
 
