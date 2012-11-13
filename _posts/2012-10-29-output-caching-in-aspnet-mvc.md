@@ -4,7 +4,7 @@ title: "Output Caching in ASP.net MVC"
 description: ""
 category: 
 tags: [ASP.net MVC, C#, WebDev]
-reposts: ["http://dotnet.dzone.com/articles/output-caching-aspnet-mvc"]
+reposts: ["http://dotnet.dzone.com/articles/output-caching-aspnet-mvc", "http://www.dotnetcodegeeks.com/2012/11/output-caching-in-asp-net-mvc.html"]
 ---
 {% include JB/setup %}
 

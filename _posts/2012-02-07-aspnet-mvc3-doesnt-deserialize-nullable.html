@@ -4,6 +4,7 @@ title: "ASP.net MVC3: Doesn't Deserialize Nullable Properties from Json"
 date: 2012-02-07
 comments: true
 tags: [  JavaScript, C#, ASP.net MVC, Web dev, .Net ]
+reposts: ["http://www.dotnetcodegeeks.com/2012/02/aspnet-mvc3-doesnt-deserialize-nullable.html"]
 ---
 
 <p>A couple of days ago I noticed that the <code>Nullable</code> properties of a C# object were not properly deserialized when posting back a Json object to an MVC3 action. It seems like this is a bug in the <code><a href="http://msdn.microsoft.com/en-us/library/system.web.script.serialization.javascriptserializer.aspx" target="_blank">JavaScriptSerializer</a></code> used by MVC3 to serialize/deserialize Json data.</p>
