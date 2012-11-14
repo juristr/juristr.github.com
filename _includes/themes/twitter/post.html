@@ -2,17 +2,17 @@
     {{ page.title }}
   </h1>
   <div class="row-fluid">
-    <div class="span3">
+    <!--<div class="span3">-->
       <time class="post-date">
         {{ page.date | date: "%B %d, %Y" }}
       </time>
-    </div>
+    <!--</div>-->
     {% unless page.tags == empty %}
-      <div class="span9 tags">
+      <!--<div class="span9 tags">-->
           {% for tag in page.tags %}
             <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
           {% endfor %}
-      </div>
+      <!--</div>-->
     {% endunless %}
   </div>
   <script type="text/javascript">
