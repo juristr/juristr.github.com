@@ -14,7 +14,7 @@ At work, I spend a huge amount of my time working with Microsoft Technologies. A
 Here are my preferred keystrokes. Note, keystrokes separated by a comma mean you have to use them in sequence in order to activate the command.  
 They refer to VS2012 but some may also work in previous versions.
 
-### Standard
+### Code Editing
 
 <table class="table table-striped">
 <thead>
@@ -34,6 +34,25 @@ They refer to VS2012 but some may also work in previous versions.
         <td><kbd>Ctrl</kbd>+<kbd>K</kbd>,<kbd>U</kbd></td>
         <td>Un-comment the selected part</td>
     </tr>
+</tbody>
+</table>
+
+### Code Navigation
+
+<table class="table table-striped">
+<thead>
+    <th width="35%">Shortcut</th>
+    <th>Description</th>
+</thead>
+<tbody>
+    <tr>
+        <td><kbd>F12</kbd></td>
+        <td>Goto Definition</td>
+    </tr>
+    <tr>
+        <td><kbd>Shift</kbd>+<kbd>F12</kbd></td>
+        <td>Goto Definition</td>
+    </tr>    
     <tr>
         <td><kbd>Ctrl</kbd>+<kbd>Q</kbd></td>
         <td>Place the cursor in the Quick-Launch box for then executing some menu command</td>
@@ -53,7 +72,7 @@ They refer to VS2012 but some may also work in previous versions.
     <tr>
         <td><kbd>Ctrl</kbd>+<kbd>M</kbd>,<kbd>Ctrl</kbd>+<kbd>O</kbd></td>
         <td>Collapse to definitions</td>
-    </tr>    
+    </tr>
 </tbody>
 </table>
 
