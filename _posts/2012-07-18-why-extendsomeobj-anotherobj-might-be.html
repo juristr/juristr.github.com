@@ -4,6 +4,7 @@ title: "Why $.extend(someObj, anotherObj) might be dangerous!"
 date: 2012-07-18
 comments: true
 tags: [  JavaScript, Web dev ]
+reposts: ["http://www.dzone.com/articles/why-extendsomeobj-anotherobj"]
 ---
 
 <p>You often have the need to <i>merge</i> two objects. A common use case is that of combining parameters for a $.ajax call. jQuery has a nice function for that, namely <a href="http://api.jquery.com/jQuery.extend/" target="_blank">jQuery.extend</a>. The function definition is something like <code>jQuery.extend(target, [object 1], [object 2])</code>. But attention, this might have dangerouse side effects if not used properly!
