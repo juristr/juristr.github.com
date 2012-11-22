@@ -30,6 +30,12 @@ You can find him
 
 or just drop him a line at <juri.strumpflohner@js-development.com>.
 
+Posts on this site might get re-published on
+
+- [DZone](http://www.dzone.com/users/juristr)
+- [Java Code Geeks](http://www.javacodegeeks.com/)
+- [.Net Code Geeks](http://www.dotnetcodegeeks.com/)
+
 <div class="row-fluid">
   <div class="span4">
     <a href="http://stackoverflow.com/users/50109/juri">
