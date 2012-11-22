@@ -4,6 +4,7 @@ title: "Lessions Learned: Don't Expose EF Entities to the Client Directly"
 description: ""
 category: 
 tags: [JavaScript, lessions learned, C#, .Net, ASP.net MVC, Web dev]
+reposts: ["http://dotnet.dzone.com/articles/lessions-learned-dont-expose"]
 ---
 {% include JB/setup %}
 
