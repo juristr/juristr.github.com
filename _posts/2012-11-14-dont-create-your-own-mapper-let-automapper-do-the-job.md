@@ -123,5 +123,8 @@ and a mapping configuration
 
 The interesting property here is the `TheCustomerName` property in the `OrderDto`. AutoMapper basically fills it following the source object's relation `TheCustomer` and taking the corresponding `Name` property. Extremley elegant!
 
+## In Java?
+Its quite some time since I last actively developed in Java, but apparently there is a new tool called ModelMapper which does quite a similar job as AutoMapper. You may want to check it out here: [http://modelmapper.org/](http://modelmapper.org/).
+
 ## Conclusion
 Don't reinvent the wheel! Go and check it out.
