@@ -1,0 +1,11 @@
+@media print{
+    .navbar,
+    .tags,
+    .toc-container ,
+    .blog-sidebar,
+    #related-posts,
+    .pagination,
+    #disqus_thread {
+        display:none !important;
+    }
+}

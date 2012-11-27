@@ -7,13 +7,15 @@
         {{ page.date | date: "%B %d, %Y" }}
       </time>
     <!--</div>-->
-    {% unless page.tags == empty %}
-      <!--<div class="span9 tags">-->
-          {% for tag in page.tags %}
-            <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
-          {% endfor %}
-      <!--</div>-->
-    {% endunless %}
+    <div class="tags">
+      {% unless page.tags == empty %}
+        <!--<div class="span9 tags">-->
+            {% for tag in page.tags %}
+              <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
+            {% endfor %}
+        <!--</div>-->
+      {% endunless %}
+    </div>
   </div>
   <script type="text/javascript">
     $(function(){
