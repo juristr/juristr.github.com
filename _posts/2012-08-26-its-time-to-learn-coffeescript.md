@@ -867,3 +867,4 @@ Refactoring this to CoffeeScript could be done as follows.
 Here are some further resources I found on the web:
 
 - [Coffeescript Cookbook](http://coffeescriptcookbook.com/)
+- [JavaScript <-> CoffeeScript Online Compiler](http://js2coffee.org/)
