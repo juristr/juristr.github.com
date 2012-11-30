@@ -1,0 +1,25 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>juristr.com</title>
+ <link href="http://juristr.com/blog/atom.xml" rel="self"/>
+ <link href="http://juristr.com"/>
+ <updated>2012-11-29T09:52:27-08:00</updated>
+ <id>http://juristr.com</id>
+ <author>
+   <name>Juri Strumpflohner</name>
+   <email>juri.strumpflohner@gmail.com</email>
+ </author>
+ 
+ <entry>
+   <title>HowTo: Subscribe to Failed TFS Builds</title>
+   <link href="http://juristr.com/blog/2012/11/howto-subscribe-to-failed-tfs-builds"/>
+   <updated>2012-11-23T00:00:00-08:00</updated>
+   <id>http://juristr.com/blog/2012/11/howto-subscribe-to-failed-tfs-builds</id>
+   <content type="html">
+        
+   </content>
+ </entry>
+ 
+</feed>
