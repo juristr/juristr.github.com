@@ -78,7 +78,20 @@ and much more. So go and [check out the docs](https://github.com/AutoMapper/Auto
 
 ### The Mapping
 
-I usually create a static class `DtoMapper` which has an `Init()` where all the configuration lies. In the class constructor where I need the mapping I then call that init
+I usually create a static class `DtoMapper` which has an `Init()` where all the configuration lies. 
+
+    public static class DtoMapper
+    {
+        public static void Init()
+        {
+            Mapper.CreateMap<Person, Parent>();
+            ...
+        }
+    }
+
+This is a matter of preference. You could do that somewhere else as well, or just selectively for the kind of mapping you currently need.
+
+In the class (or controller) constructor where I need the mapping I then call that init
 
     DtoMapper.Init();
 
@@ -122,6 +135,17 @@ and a mapping configuration
     Mapper.CreateMap<Order, OrderDto>();
 
 The interesting property here is the `TheCustomerName` property in the `OrderDto`. AutoMapper basically fills it following the source object's relation `TheCustomer` and taking the corresponding `Name` property. Extremley elegant!
+
+To come back to ASP.net MVC. You could now invoke the `DtoMapper.Init()` where appropriate (i.e. in the Global.asax or the controller constructor) for initializing the mapping configurations. The controller method then looks as follows
+
+    class SomeController : IController
+    {
+        public JsonResult GetCustomerById(long id)
+        {
+            var customerEntity = customerRepository.GetById(id);
+            return Json(mapper.Map<CustomerDto>(customerEntity), JsonRequestBehavior.AllowGet);
+        }
+    }
 
 ## In Java?
 Its quite some time since I last actively developed in Java, but apparently there is a new tool called ModelMapper which does quite a similar job as AutoMapper. You may want to check it out here: [http://modelmapper.org/](http://modelmapper.org/).
