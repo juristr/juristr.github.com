@@ -4,6 +4,7 @@ title: "HowTo: Subscribe to Failed TFS Builds"
 description: ""
 category: bliki
 tags: [ "Visual Studio", "HowTo"]
+reposts: ["http://dotnet.dzone.com/articles/howto-subscribe-failed-tfs"]
 ---
 {% include JB/setup %}
 
