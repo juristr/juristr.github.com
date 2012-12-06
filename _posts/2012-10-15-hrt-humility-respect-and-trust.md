@@ -69,3 +69,5 @@ These simple pillars should be the core of every team. They're simple and do not
 ...stop ranting and become a team player. **Trust** in the fact that everyone in the team does his best, **respect** the work created by others, accept criticism and propose improvements. That's the only way to become a better software developer (and not only) after all.
 
 Reflect about HRT the next time your in a team. Are you following these principals? Do you treat others with respect? Are you a team player or a lone wolf? In the end, these don't just apply to software development...
+
+[![](http://cdn.oreilly.com/bloggers/blogger-review-badge-200.png)](http://oreilly.com/bloggers/?cmp=ex-orm-blgr-juri-strumpflohner)
