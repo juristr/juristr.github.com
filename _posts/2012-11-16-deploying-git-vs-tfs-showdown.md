@@ -4,7 +4,7 @@ title: "Deploying: Git vs. TFS Showdown"
 description: ""
 category: 
 tags: [tools]
-reposts: ["http://agile.dzone.com/articles/deploying-git-vs-tfs-showdown"]
+reposts: ["http://agile.dzone.com/articles/deploying-git-vs-tfs-showdown", "http://www.dotnetcodegeeks.com/2012/11/deploying-git-vs-tfs-showdown.html"]
 ---
 {% include JB/setup %}
 
