@@ -32,7 +32,7 @@ This is the title of the last book I [received](/blog/2012/08/mobile-javascript-
 
 ![](/blog/assets/imgs/teamgeekcover.gif)
 
-Brian Fitzpatrick and Ben Collins-Sussman, both lead developers at Google, describe their experiences and lessions learned during their career as developers and team leads at Google.
+Brian Fitzpatrick and Ben Collins-Sussman, both lead developers at Google, describe their experiences and lessons learned during their career as developers and team leads at Google.
 
 > Software development is a team sport.
 
