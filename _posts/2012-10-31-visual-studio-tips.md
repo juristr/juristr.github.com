@@ -14,6 +14,24 @@ At work, I spend a huge amount of my time working with Microsoft Technologies. A
 Here are my preferred keystrokes. Note, keystrokes separated by a comma mean you have to use them in sequence in order to activate the command.  
 They refer to VS2012 but some may also work in previous versions.
 
+### Generic Ones
+<table class="table table-striped">
+<thead>
+    <th width="35%">Shortcut</th>
+    <th>Description</th>
+</thead>
+<tbody>
+    <tr>
+        <td><kbd>Ctrl</kbd>+<kbd>F5</kbd></td>
+        <td>Launch Application without debugging (usually faster than with debugging enabled)</td>
+    </tr>
+    <tr>
+        <td><kbd>Shift</kbd>+<kbd>F5</kbd></td>
+        <td>Stop a debugging session</td>
+    </tr>
+</tbody>
+</table>
+
 ### Code Editing
 
 <table class="table table-striped">
