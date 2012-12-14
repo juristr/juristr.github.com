@@ -9,6 +9,11 @@ tags: ["book review", "ASP.net MVC", "C#", ".Net"]
 
 This is one of the recent books I got from O'Reilly. It is probably the most comprehensive and detailed one I've encountered so far regarding ASP.net MVC development. More than 400 pages, from the very basics of the MVC pattern, client-side JavaScript and Mobile web development, application architecture to successfully deploying an ASP.net MVC application in production.
 
+<figure>
+    <a href="http://oreillynet.com/pub/reviewproduct/874" rel="nofollow"><img src="/blog/assets/imgs/coverprogrammingaspnet.gif" /></a>
+    <figcaption>Book cover; click to see other reviews</figcaption>
+</figure>
+
 ## For Beginners and Experts
 First of all, the book is very nicely structured and can be suggested to both, total ASP.net MVC beginners as well as to ASP.net MVC experts. Obviously, the latter will skip the initial chapters. Those mainly deal with the very fundamentals like
 
