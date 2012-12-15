@@ -142,6 +142,10 @@ article img {
   border:1px solid #EEE;
 }
 
+article img.noborder {
+  border: 0;
+}
+
 article a > img{
   border:0;
 }
