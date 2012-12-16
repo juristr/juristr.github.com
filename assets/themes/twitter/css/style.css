@@ -187,6 +187,7 @@ article h2, h3{
 
 .article-body {
   padding-top:35px;
+  text-align: justify;
 }
 
 .article-body > p:first-child {
