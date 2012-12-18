@@ -64,6 +64,7 @@ That said, I guess **Devbook** is now really obsolete. So far I never found a va
 **Devbook GWT**
 - Google Web Toolkit and the Google App Engine cloud platform
 - Spring Web framework
+- Hibernate (together with GAEs data store)
 - generally, developing rich ajax clients
 
 So, enjoy Gist and keep sharing code!
