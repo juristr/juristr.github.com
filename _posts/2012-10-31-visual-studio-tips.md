@@ -10,6 +10,11 @@ reposts: ["http://dotnet.dzone.com/articles/visual-studio-tips"]
 
 At work, I spend a huge amount of my time working with Microsoft Technologies. As such, I also use Visual Studio. Here are some of the tipps and tricks to efficiently work with it.
 
+## Plugins
+
+- **[ASP.net and Web Tools 2012](http://www.asp.net/vnext)**
+
+
 ## Keystrokes
 Here are my preferred keystrokes. Note, keystrokes separated by a comma mean you have to use them in sequence in order to activate the command.  
 They refer to VS2012 but some may also work in previous versions.

@@ -4,6 +4,7 @@ title: "Cerego - Learn Anything, Everywhere"
 description: ""
 category: 
 tags: []
+reposts: ["http://www.dzone.com/articles/cerego-learn-anything-anywhere"]
 ---
 {% include JB/setup %}
 ![](/blog/assets/imgs/ceregoslogan.png)
