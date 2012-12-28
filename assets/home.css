@@ -1,0 +1,59 @@
+body {
+  /*background: url('https://kippt.com/static/img/home-bg-lib.jpg?353ade99c2ac') center 80px no-repeat, url('https://kippt.com/static/img/home-bg-black.png?353ade99c2ac') left 80px repeat-x;*/
+    padding-top: 55px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-weight: 300 !important;
+}
+
+#intro {
+  background: url('/assets/images/juri_sidekick.jpg') center no-repeat;
+}
+
+.hero-unit {
+    padding: 0px 0 120px 0;
+    margin-right: -80px;
+    margin-bottom: 0;
+    background: none;
+  /*background: url('/assets/image/kipptbg.jpg') right bottom no-repeat;*/
+}
+
+.hero-unit h1 {
+    font-size: 52px;
+    font-weight: 300 !important;
+    width: 450px;
+    line-height: 1.1;
+    font-weight: bold;
+    margin-top: 90px;
+    color: #fff;
+    text-shadow: 0 0 10px 40px #000;
+    padding-bottom: 20px;
+}
+
+.hero-unit small {
+  color: #fff;
+  font-weight: 300 !important;
+}
+
+.hero-unit p {
+  color: #fff;
+}
+
+h3 {
+    font-weight: 300 !important;
+}
+
+.twitter-follow-button {
+    position: relative;
+    top: 10px;
+    width: 80px;
+    height: 30px;
+}
+
+.nav-pills > li {
+    display: inline-block;
+    *display: inline;
+  /* ie7 fix */
+    float: none;
+ /* this is the part that makes it work */
+    font-size: 25px;
+}

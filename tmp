@@ -1,0 +1,89 @@
+        <div style="background-image:url('/assets/images/kipptbg.jpg'); height: 360px; border-top: 1px solid #d3d3d3; border-bottom: 1px solid #d3d3d3;">
+            <div class="container">
+                <div class="row">
+                    <div class="span6 offset1">
+                        <div class="row">
+                            <div class="span6" style="margin-top: 140px;">
+                                <p style="font-size: 50px; font-weight: bolder; color: #ffffff; text-shadow: 1px 1px #000;">
+                                    Juri Strumpflohner
+                                </p>
+                                <p style="margin-top: 30px;font-size: 20px; font-weight: 300; color: #ffffff; text-shadow: 1px 1px #000;">
+                                    Computer Geek and Martial Arts Passionate
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div class="row" style="margin-top: 20px;">
+                    <div class="span6">
+                        <a class="btn btn-success btn-large" target="_blank" href="https://play.google.com/store/apps/details?id=fm.clean">Get it for FREE on Google Play »</a>
+                    </div>
+                </div>
+-->
+                    </div>
+                    <!-- <div class="span5" style="background-image:url('/img/phone.png');
+                    height: 360px; background-size: auto 560px; background-repeat:no-repeat;">
+            </div>-->
+                </div>
+            </div>
+        </div>
+
+<style>
+  /*
+  body {
+    font-size: 22px;
+    line-height: 1.8;
+    font-family: 'lucida grande', 'helvetica neue', helvetica, sans-serif;
+    color: #57534A;
+  }
+
+  h1 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight:300;
+    text-align:center;
+    border-bottom:0;
+    margin: 100px 0;
+    line-height: 20px;
+    font-size: 100px;
+    text-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
+    letter-spacing: -3px;
+  }
+
+  @media (max-width: 550px) {
+    h1 {
+      font-size:45px !important;
+      line-height: 50px !important;
+      margin:0 !important;
+    }
+
+    .navbar li{
+      font-size:20px;
+    }
+  }
+
+  @media (min-width: 551px) and (max-width: 979px) {
+    h1 {
+      font-size:95px !important;
+      line-height: 80px !important;
+    }
+  }
+
+  img.gravatar {
+    border-radius: 2px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    margin: -2px 30px 25px 0;
+  }
+
+  p {
+    padding-bottom:8px;
+  }
+
+  .twitter-follow-button {
+    position: relative;
+    top: 10px;
+    width:80px; 
+    height:30px;
+  }
+
+  .nav-pills {
+    text-align:center;
+  }*/
+</style>
