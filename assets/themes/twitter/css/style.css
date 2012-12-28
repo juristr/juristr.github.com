@@ -1,3 +1,7 @@
+body {
+  /*background-color: #e8e8e8;*/
+}
+
 html, body, button, input, select, textarea {
   /*font-size: 20px;*/
   color: #57534A !important;
@@ -15,6 +19,8 @@ body, textarea {
 .main-content {
   /*border-left: 1px solid #E3E3E3;
   padding-left:50px;*/
+  background-color: white;
+  padding: 20px;
 }
 
 .home{
@@ -441,6 +447,7 @@ ul.nav-pills > li > a:hover {
 
 .toc-container {
   padding-top: 45px;
+  padding-left: 30px;
 }
 
 .toc-container .nav-list > .active > a {
@@ -477,11 +484,6 @@ ul.nav-pills > li > a:hover {
   color:#000;
   display:block;
   padding:0 20px;
-}
-
-.navbar i{
-  margin-top:-2px;
-  margin-right:0;
 }
 
 .navbar a:hover{
@@ -521,6 +523,88 @@ ul.nav-pills > li > a:hover {
      -moz-transition: background 0.4s linear;
           transition: background 0.4s linear;
 }
+
+#follow-menu-div{
+  width:380px;
+  padding:20px;
+}
+
+#follow-menu-div table{
+  width:100%;
+  text-transform: none;
+  font-family: "proxima-nova-1","proxima-nova-2";
+  color:#000;
+  font-weight:normal;
+  font-size:15px;
+}
+
+#follow-menu-div td{
+  margin:0 16px;
+  height:38px;
+  line-height:21px;
+}
+
+.navbar li #follow-menu-div a:link,
+.navbar li #follow-menu-div a:visited{
+  color:#333;
+  display:block;
+  border-bottom:solid 1px #dfdfdf;
+  background:#fff;
+  padding:0;
+  padding-top:6px;
+  padding-bottom:10px;
+  margin:0 10px;
+  text-indent:30px;
+}
+
+.navbar li #follow-menu-div a:hover{
+  color:#999;
+}
+
+.navbar li #follow-menu-div .social-twitter a:link, 
+.navbar li #follow-menu-div .social-twitter a:visited{
+  background: url(/assets/images/icon-social.png) no-repeat -10px -4px;
+}
+.navbar li #follow-menu-div .social-google a:link,
+.navbar li #follow-menu-div .social-google a:visited{
+  background: url(/assets/images/icon-social.png) no-repeat -10px -43px;
+}
+
+.navbar li #follow-menu-div .social-facebook a:link,
+.navbar li #follow-menu-div .social-facebook a:visited{
+  background: url(/assets/images/icon-social.png) no-repeat -10px -118px;
+}
+
+.navbar li #follow-menu-div .social-linkedin a:link,
+.navbar li #follow-menu-div .social-linkedin a:visited{
+  background: url(/assets/images/icon-social.png) no-repeat -10px -80px;
+}
+
+.navbar li #follow-menu-div .social-soundcloud a:link,
+.navbar li #follow-menu-div .social-soundcloud a:visited{
+  background: url(/assets/images/icon-social.png) no-repeat -6px -156px;
+}
+
+.navbar li #follow-menu-div .social-rss a:link,
+.navbar li #follow-menu-div .social-rss a:visited{
+  background: url(/assets/images/icon-social.png) no-repeat -10px -194px;
+}
+
+.navbar li #follow-menu-div .social-github a:link,
+.navbar li #follow-menu-div .social-github a:visited{
+  background: url(/assets/images/github.png) no-repeat 0 7px;
+}
+
+.navbar li #follow-menu-div .social-stackoverflow a:link,
+.navbar li #follow-menu-div .social-stackoverflow a:visited{
+  background: url(/assets/images/stackoverflow.jpg) no-repeat 0 7px;
+}
+
+.navbar li #follow-menu-div .social-geeklist a:link,
+.navbar li #follow-menu-div .social-geeklist a:visited{
+  background: url(/assets/images/geeklist.png) no-repeat 0 7px;
+}
+
 
 @media (max-width: 979px) { 
   .main-content {

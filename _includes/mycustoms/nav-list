@@ -16,20 +16,26 @@
 <li {% if page.current == 'about' %} class="current" {% endif %}>
   <a href="/about">about</a>
 </li>
-<li class="nav pull-right"><a id="follow-menu" role="button" data-toggle="dropdown" data-target="#" href="woorkup.com/2012/12/26/benvenuti-era-terza-repubblica-social/"><i class="icon-plus icon-white"></i> Subscribe</a>
+<li class="nav pull-right"><a id="follow-menu" role="button" data-toggle="dropdown" data-target="#" href="woorkup.com/2012/12/26/benvenuti-era-terza-repubblica-social/"><i class="icon-plus icon-white"></i> Follow Me</a>
       <div id="follow-menu-div" class="dropdown-menu" role="menu" aria-labelledby="follow-menu">
           <table>
             <tbody><tr>
-              <td class="social-twitter"><a href="http://twitter.com/woork">Twitter 116k+</a></td>
-              <td class="social-google"><a href="https://plus.google.com/+antonioLupetti/">Google+ 62k</a></td>
+              <td class="social-twitter"><a href="http://twitter.com/juristr">Twitter</a></td>
+              <td class="social-google"><a href="https://plus.google.com/104904743888756261987/posts">Google+</a></td>
             </tr>
             <tr>
-              <td class="social-facebook"><a href="http://www.facebook.com/antoniolupetti">Facebook</a></td>
-              <td class="social-linkedin"><a href="http://www.linkedin.com/in/antoniolupetti">Linkedin</a></td>
+              <td class="social-facebook"><a href="https://www.facebook.com/pages/Juri-Strumpflohners-TechBlog/157432560964701">Facebook</a></td>
+              <td class="social-linkedin"><a href="http://linkedin.com/in/juristr/">Linkedin</a></td>
             </tr>
             <tr>
-              <td class="social-soundcloud"><a href="http://soundcloud.com/woork">SoundCloud</a></td>
-              <td class="social-rss"><a href="http://woorkup.com/feed/">RSS Feed</a></td>
+              <td class="social-stackoverflow"><a href="http://stackoverflow.com/users/50109/juri">StackOverflow</a></td>
+              <td class="social-geeklist"><a href="https://geekli.st/juri">Geekli.st</a></td>
+            </tr>            
+            <tr>
+              <td class="social-github">
+                <a href="http://github.com/juristr">GitHub</a>
+              </td>
+              <td class="social-rss"><a href="http://feeds.feedburner.com/juristrumpflohner">RSS Feed</a></td>
             </tr>
           </tbody></table>
       </div>
