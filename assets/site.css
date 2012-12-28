@@ -2,6 +2,18 @@ body {
 	margin-top: 15px;
 }
 
+.navbar-inverse .navbar-inner {
+	background-color: #008CCC;
+	/*background-image: -moz-linear-gradient(top,#222,#111);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#222),to(#111));
+	background-image: -webkit-linear-gradient(top,#222,#111);
+	background-image: -o-linear-gradient(top,#222,#111);
+	background-image: linear-gradient(to bottom,#222,#111);*/
+	background-repeat: repeat-x;
+	border-color: #252525;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222',endColorstr='#ff111111',GradientType=0);
+}
+
 .last-changed {
 	margin-bottom: 17px;
 	font-family: "Yanone Kaffeesatz", Helvetica, sans-serif;

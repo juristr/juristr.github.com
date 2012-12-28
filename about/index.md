@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Juri Strumpflohner
+current: about
 ---
 # Juri Strumpflohner	
 

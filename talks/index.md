@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Talks
+current: talks
 ---
 # Talks
 

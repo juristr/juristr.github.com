@@ -8,13 +8,13 @@ body, textarea {
   border-top: 4px solid #008CCC;
 }
 
-li {
+.article-body li {
   list-style-type: disc;
 }
 
 .main-content {
-  border-left: 1px solid #E3E3E3;
-  padding-left:50px;
+  /*border-left: 1px solid #E3E3E3;
+  padding-left:50px;*/
 }
 
 .home{
@@ -449,6 +449,77 @@ ul.nav-pills > li > a:hover {
 
 .scroll-menu {
   background-color: #008CCC !important;
+}
+
+.navbar{
+  /*background:#e8e8e8;*/
+  background: white;
+  font-weight:300;
+  height:40px;
+  line-height:40px;
+  font-size:13px;
+  margin-bottom:0;
+  border-bottom:solid 1px #d3d3d3;
+}
+
+.navbar ul{
+  margin:0; 
+  padding:0;
+}
+
+.navbar ul li{
+  float:left;
+  height:40px;
+  line-height:40px;
+}
+
+.navbar a{
+  color:#000;
+  display:block;
+  padding:0 20px;
+}
+
+.navbar i{
+  margin-top:-2px;
+  margin-right:0;
+}
+
+.navbar a:hover{
+  text-decoration:none;
+  /*background:#9d2c50;*/
+  background:#008CCC;
+  color:#fff;
+  -webkit-transition: background 0.4s linear;
+     -moz-transition: background 0.4s linear;
+          transition: background 0.4s linear;
+}
+
+.navbar li.current a{
+  background:#008CCC;
+  /*background:#9d2c50;*/
+  color:#fff;
+}
+
+.navbar li.nav{
+  color:#FFF;
+  float:right;
+  margin-left:1px;
+  margin-right:0;
+}
+.navbar li.nav a:link, 
+.navbar li.nav a:visited{
+    background:#000;
+    color:#fff;
+}
+
+.navbar li.nav a:hover{
+  text-decoration:none;
+  background:#008CCC;
+  /*background:#9d2c50;*/
+  color:#fff;
+  -webkit-transition: background 0.4s linear;
+     -moz-transition: background 0.4s linear;
+          transition: background 0.4s linear;
 }
 
 @media (max-width: 979px) { 

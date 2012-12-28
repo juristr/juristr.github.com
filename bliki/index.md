@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Bliki
+current: bliki
 ---
 # Bliki
 The intention of this section here is to represent a [Bliki](http://www.martinfowler.com/bliki/WhatIsaBliki.html), basically articles which are not pure blog posts, but are more detailled and moreover which may change/get updated over time.

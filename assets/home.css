@@ -1,12 +1,12 @@
 body {
   /*background: url('https://kippt.com/static/img/home-bg-lib.jpg?353ade99c2ac') center 80px no-repeat, url('https://kippt.com/static/img/home-bg-black.png?353ade99c2ac') left 80px repeat-x;*/
-    padding-top: 55px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
     font-weight: 300 !important;
 }
 
 #intro {
   background: url('/assets/images/juri_sidekick.jpg') center no-repeat;
+  height:383px;
 }
 
 .hero-unit {
@@ -56,4 +56,10 @@ h3 {
     float: none;
  /* this is the part that makes it work */
     font-size: 25px;
+}
+
+@media (max-width: 979px) { 
+ .navbar-fixed-top {
+    margin-bottom: 0px;
+  } 
 }

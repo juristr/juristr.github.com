@@ -18,12 +18,12 @@
             var ch = document.body.clientHeight;
             var item, attr, top, i;
             el = $(".scroll-menu");
-            if (scrollTop >= 80)   {
+            if (scrollTop >= 100)   {
                     if (scrollMenuLocked) {
                             for (i = 0; i < el.length; i++) {
                                     item = $(el[i]);
                                     attr = item.attr('data-top');
-                                    top = attr ? attr : '8px';
+                                    top = attr ? attr : '50px';
                                     item.animate({top:top});
                             }
                     }

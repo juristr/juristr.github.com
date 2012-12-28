@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Juri Strumpflohner
+current: projects
 ---
 # My Projects
 This pages shows the projects I'm currently involved in.
