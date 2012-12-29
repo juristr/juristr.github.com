@@ -10,7 +10,7 @@ module Jekyll
       #  return img
       #end
       #return doc # | strip_html | truncatewords:75
-      return doc.first_element_child;
+      return content | strip_html | truncatewords:75;
     end
 
   end
