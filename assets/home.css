@@ -4,7 +4,7 @@ body {
 }
 
 #intro {
-  background: url('/assets/images/juri_sidekick.jpg') center no-repeat;
+  background: url('/assets/images/juri_sidekick_org.png') right no-repeat, url('/assets/images/extenderbg.png') left repeat-x;
   height:383px;
 }
 
