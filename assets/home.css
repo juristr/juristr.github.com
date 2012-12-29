@@ -1,5 +1,4 @@
 body {
-  /*background: url('https://kippt.com/static/img/home-bg-lib.jpg?353ade99c2ac') center 80px no-repeat, url('https://kippt.com/static/img/home-bg-black.png?353ade99c2ac') left 80px repeat-x;*/
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
     font-weight: 300 !important;
 }
@@ -14,7 +13,6 @@ body {
     margin-right: -80px;
     margin-bottom: 0;
     background: none;
-  /*background: url('/assets/image/kipptbg.jpg') right bottom no-repeat;*/
 }
 
 .hero-unit h1 {
