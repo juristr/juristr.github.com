@@ -201,7 +201,7 @@ article h2, h3{
 }
 
 .article-body > p:first-child {
-  font-size:23px;
+  font-size:20px;
   font-weight:300;
 }
 
@@ -465,6 +465,13 @@ ul.nav-pills > li > a:hover {
 
 .toc-container .nav-list > .active > a {
   background-color: #008CCC;
+}
+
+#toc {
+  width: 24%;
+  webkit-border-radius: 0;
+  moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .scroll-menu {

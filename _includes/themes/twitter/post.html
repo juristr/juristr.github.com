@@ -21,7 +21,7 @@
     $(function(){
       {% if page.categories[0] == "bliki" %}
         $(".toc-container").show();
-        $("#toc").tocify();
+        $("#toc").tocify({ scrollTo: 30 });
       {% else %}
         $.fn.scrolltop();
       {% endif %}

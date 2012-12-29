@@ -29,7 +29,7 @@ You can find him
 - on [Facebook](https://www.facebook.com/pages/Juri-Strumpflohners-TechBlog/157432560964701)
 - on ...
 
-or just drop him a line at <juri.strumpflohner@js-development.com>.
+or just drop him a line at <info@juristr.com>.
 
 Posts on this site might get re-published on
 

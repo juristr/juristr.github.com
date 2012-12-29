@@ -1,10 +1,10 @@
 <li {% if page.current == 'home' %} class="current" {% endif %}>
   <a href="/">home</a>
 </li>        
-<li {% if page.current == 'blog' %} class="current" {% endif %}>
+<li {% if page.current == 'blog' and page.categories[0] != 'bliki' %} class="current" {% endif %}>
   <a href="/blog">blog</a>
 </li>
-<li {% if page.current == 'bliki' %} class="current" {% endif %}>
+<li {% if page.current == 'bliki' or page.categories[0] == 'bliki' %} class="current" {% endif %}>
   <a href="/bliki">bliki</a>
 </li>
 <li {% if page.current == 'projects' %} class="current" {% endif %}>
