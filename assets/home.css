@@ -40,6 +40,10 @@ h3 {
     font-weight: 300 !important;
 }
 
+.twitter-follow {
+  padding-top: 95px;
+}
+
 .twitter-follow-button {
     position: relative;
     top: 10px;

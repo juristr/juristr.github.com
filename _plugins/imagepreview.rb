@@ -10,11 +10,11 @@ module Jekyll
       #  return img
       #end
       #return doc # | strip_html | truncatewords:75
-      return content | strip_html | truncatewords:75;
+      #return content | strip_html | truncatewords:75;
     end
 
   end
 
 end
 
-Liquid::Template.register_filter(Jekyll::ImagePreview)
+#Liquid::Template.register_filter(Jekyll::ImagePreview)

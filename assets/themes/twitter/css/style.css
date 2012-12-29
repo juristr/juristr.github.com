@@ -544,6 +544,10 @@ ul.nav-pills > li > a:hover {
           transition: background 0.4s linear;
 }
 
+.nav-collapse {
+  background-color: white;
+}
+
 #follow-menu-div{
   width:380px;
   padding:20px;
