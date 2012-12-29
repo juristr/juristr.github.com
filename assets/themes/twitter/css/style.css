@@ -12,6 +12,11 @@ body, textarea {
   border-top: 4px solid #008CCC;
 }
 
+.brand {
+  margin-left: 10% !important;
+  padding: 0 !important;
+}
+
 .article-body li {
   list-style-type: disc;
 }
