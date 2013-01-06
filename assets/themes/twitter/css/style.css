@@ -17,7 +17,7 @@ body, textarea {
   padding: 0 !important;
 }
 
-.article-body li {
+.article-body ul li {
   list-style-type: disc;
 }
 
