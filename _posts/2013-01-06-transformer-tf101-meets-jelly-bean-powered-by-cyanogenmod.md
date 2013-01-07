@@ -35,7 +35,7 @@ by using a _Win7 x64_ setup for rooting the device and flashing ClockworkMod.
 Before starting it's good to download the necessary files and immediately place them on the devices internal storage (or sdcard mount) s.t. we have them ready when we need them.
 
 1. [Download][cm_unofficial_downs] the latest (unofficial) CM 10 version (I used cm_tf101-v6).
-1. [Download][gapps_latest] the Google Apps package for Jelly Bean. Note that the latest package "gapps-jb-20121212-signed.zip" seems to be broken as it corrupted the CM10 installation. I used "gapps-jb-20121011-signed.zip" instead which works fine.
+1. [Download][gapps_latest] the Google Apps package for Jelly Bean v 4.1.2, that is "gapps-jb-20121011-signed.zip".
 
 > Note that this is not an **official CM version** but one build by some XDA developer from the CM's GitHub repository. See [this forum entry](http://forum.xda-developers.com/showthread.php?t=1858295) for more details.
 
