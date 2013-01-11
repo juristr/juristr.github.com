@@ -77,4 +77,4 @@ Here are some starting points mentioned in the presentation and updated with som
 - [statuscode.org](http://statuscode.org/)
 - [responsivedesignweekly.com](http://responsivedesignweekly.com)
 
-Obviously, feel free to follow myself as well :)
+Obviously, feel free to follow me as well :)
