@@ -11,7 +11,7 @@ The web is evolving extremely fast, especially in the recent years I have the fe
 
 Here's a nice slideshow from Chris Coyier about how to stay up to date on web technology.
 
-{% speakerdeck 5112451026bf013092b722000a1d8877 %}
+<script async="true" class="speakerdeck-embed" data-id="5112451026bf013092b722000a1d8877" src="//speakerdeck.com/assets/embed.js"> </script>
 
 ## My personal suggestions
 Here are some of my experiences:
