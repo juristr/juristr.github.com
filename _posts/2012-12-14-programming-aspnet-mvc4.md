@@ -46,7 +46,7 @@ The book also dedicates an entire chapter to "web application architecture" trea
 
 The chapter also mentions more commonly known best practices like
 
-- **IoC (Inversion of Control) -** by describing the core concepts and differences to the Factory or Service locator pattern. Moreover the most common IoC libs are listed and it is highlighted how they nicely integrate into the MVC platform by using the MVC [DependencyResolver class]("http://msdn.microsoft.com/en-us/library/system.web.mvc.dependencyresolver(v=vs.98).aspx"))
+- **IoC (Inversion of Control) -** by describing the core concepts and differences to the Factory or Service locator pattern. Moreover the most common IoC libs are listed and it is highlighted how they nicely integrate into the MVC platform by using the MVC [DependencyResolver class]("http://msdn.microsoft.com/en-us/library/system.web.mvc.dependencyresolver(v=vs.98).aspx")
 - **SOLID -** class design principle
 - **DRY principle**
 
