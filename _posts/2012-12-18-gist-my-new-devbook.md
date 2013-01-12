@@ -4,6 +4,7 @@ title: "Gist: My New Devbook"
 description: ""
 category: 
 tags: [Projects]
+reposts: ["http://java.dzone.com/articles/gist-my-new-devbook"]
 ---
 {% include JB/setup %}
 

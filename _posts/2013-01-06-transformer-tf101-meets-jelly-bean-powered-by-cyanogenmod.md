@@ -4,6 +4,7 @@ title: "Transformer TF101 meets Jelly Bean powered by CyanogenMod"
 description: ""
 category: bliki
 tags: [Android]
+reposts: ["http://mobile.dzone.com/articles/transformer-tf101-meets-jelly"]
 ---
 {% include JB/setup %}
 During the Christmas holidays I found a bit of time to upgrade my old (but still nicely working) Nexus One to CyanogenMod 7 and I'm really happy about that. Today I decided to give my Asus Transformer TF101 a go as well.
