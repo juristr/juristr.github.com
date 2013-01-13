@@ -4,6 +4,7 @@ title: "How to Stay Up To Date On Web Technology"
 description: ""
 category: 
 tags: []
+reposts: ["http://css.dzone.com/articles/how-stay-date-web-technology"]
 ---
 {% include JB/setup %}
 
