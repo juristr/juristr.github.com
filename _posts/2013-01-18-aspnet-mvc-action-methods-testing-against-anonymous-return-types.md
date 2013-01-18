@@ -46,9 +46,9 @@ It gets more interesting when you return anonymous types as in this dummy exampl
 
 **How do you verify that the returned object's property `Sum` contains the value 10??** Reflection would be one possibility, but with the **dynamic types** it's even easier.
 
-But caution, because _anonymous types are internal_, you need to add the `InternalsVisibleTo` attribute on the tested assembly, s.t. the test project can access its internal objects. Assume you have a project "AspMvcFrontEnd" and a corresponding test project called "AspMvcFrontEnd.Tests" and that the project name corresponds to the produced assembly name. Then you would have to add the following line **to the assembly you're testing, that is the one hosting the controllers**:
+But caution, because _anonymous types are internal_, you need to add the `InternalsVisibleTo` attribute on the tested assembly, s.t. the test project can access its internal objects. Assume you have a project "AspMvcFrontEnd" and a corresponding test project called "AspMvcFrontEnd.Tests" and that the project name corresponds to the produced assembly name. Then you would have to add the following line **to the `AssemblyInfo.cs` of the assembly you're testing, that is the one hosting the controllers**:
 
-    [InternalsVisibleTo("AspMvcFrontEnd.Tests")]
+    [assembly: InternalsVisibleTo("AspMvcFrontEnd.Tests")]
 
 in the `AssemblyVersion.cs` file of "AspMvcFrontEnd".
 
