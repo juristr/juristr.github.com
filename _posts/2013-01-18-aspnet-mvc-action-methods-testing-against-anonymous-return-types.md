@@ -50,8 +50,6 @@ But caution, because _anonymous types are internal_, you need to add the `Intern
 
     [assembly: InternalsVisibleTo("AspMvcFrontEnd.Tests")]
 
-in the `AssemblyVersion.cs` file of "AspMvcFrontEnd".
-
 The corresonding test can then be written in quite a simple form like this (note the definition of the dynamic type):
 
     [TestMethod]
