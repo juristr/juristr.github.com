@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "Testing Anonymous Types"
+title: "ASP.net MVC Action Methods: Testing Against Anonymous Return Types"
 description: ""
+category: 
 tags: [Unit Testing, C#]
 ---
+{% include JB/setup %}
+
 
 I don't use dynamic types regularly, but there are always again situations when they come in quite handy. Here is one example of testing an MVC controller's return value.
 
@@ -41,9 +44,9 @@ It gets more interesting when you return anonymous types as in this dummy exampl
         return Json(new { Sum = 10 }, JsonRequestBehavior.AllowGet);
     }
 
-How do you verify that the returned object's property `Sum` contains the value 10?? Reflection would be one possibility, but with the new dynamic types it's even easier.
+**How do you verify that the returned object's property `Sum` contains the value 10??** Reflection would be one possibility, but with the **dynamic types** it's even easier.
 
-For it to work you have to add the `InternalsVisibleTo` attribute on the tested assembly, s.t. the test project can access its internal objects. Assume you have a project "AspMvcFrontEnd" and a corresponding test project called "AspMvcFrontEnd.Tests" and assume that the project name corresponds to the produced assembly name. Then you would have to add the following line
+But caution, because _anonymous types are internal_, you need to add the `InternalsVisibleTo` attribute on the tested assembly, s.t. the test project can access its internal objects. Assume you have a project "AspMvcFrontEnd" and a corresponding test project called "AspMvcFrontEnd.Tests" and that the project name corresponds to the produced assembly name. Then you would have to add the following line **to the assembly you're testing, that is the one hosting the controllers**:
 
     [InternalsVisibleTo("AspMvcFrontEnd.Tests")]
 
