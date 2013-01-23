@@ -348,6 +348,11 @@ a.post-tag:hover{
   list-style-type: none;
 }
 
+pre {
+  word-wrap: normal;
+  word-break: normal;
+}
+
 /* Prettyprint */
 pre code {
   font-size:13px;
