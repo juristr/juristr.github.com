@@ -4,6 +4,7 @@ title: "ASP.net MVC Action Methods: Testing Against Anonymous Return Types"
 description: ""
 category: 
 tags: [Unit Testing, C#]
+reposts: ["http://dotnet.dzone.com/articles/aspnet-mvc-action-methods"]
 ---
 {% include JB/setup %}
 
