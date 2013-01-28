@@ -532,9 +532,24 @@ ul.nav-pills > li > a:hover {
 }
 
 .navbar li.current a{
+  height:95%;
+  font-weight:bold;
+  /*
   background:#008CCC;
   color:#fff;
+  */
   /*border-bottom: 3px solid #008CCC;*/
+}
+
+.navbar li.current > span.marker {
+  display:block;
+}
+
+.navbar .marker {
+  display:none;
+  background: #008CCC;
+  z-index: 22;
+  height: 3px;
 }
 
 .navbar li.nav{
