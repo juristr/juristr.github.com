@@ -704,6 +704,10 @@
 }
 
 @media (max-width: 979px) { 
+  .ads-container {
+    display:none;
+  }
+
   .main-content {
     border-left:0;
     padding-left:0;
