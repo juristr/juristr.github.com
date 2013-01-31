@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Simulate a slow network connection"
+title: "Test Your App Under Slow Network Speeds"
 description: ""
 category: bliki
 tags: []
@@ -33,9 +33,35 @@ There are several tools available for windows. Probably the simplest approach is
     <figcaption>Fiddler2</figcaption>
 </figure>
 
-
-
-[Plugin for delaying response](http://fiddlerdelayext.codeplex.com/)
-
+This will simulate a modem like network speed which allows you to test and fine-tune your webapp under more extreme, inconvenient situations.  
+Actually there's also a [Fiddler plugin](http://fiddlerdelayext.codeplex.com/) which lets you add a delay in ms to any kind of response. I did not test it in depth.
 
 ### On OSX
+OSX has a tool called **Network Link Conditioner** which allows you to do a similar job. To install it you need to first download XCode (can be downloaded freely from the App Store). Once installed
+
+1. Open XCode
+1. Navigate the menu XCode > Open Developer Tool > More Developer Tools. This will open Apple's website
+1. Download the "Hardware IO Tools for XCode"
+
+<figure>
+  <img src="/blog/assets/imgs/hardwareIoTools.png"/>
+  <figcaption>Download the Hardware IO Tools</figcaption>
+</figure>
+
+Once downloaded, open the package and install the Network Link Conditioner tool
+
+![](/blog/assets/imgs/hardwaretools.png)
+
+It will automatically be installed in your preference pane. Here you go
+
+![](/blog/assets/imgs/netlinkconditioner.png)
+
+Just select the desired speed option and activate it. The nice thing about this tool is that you have already a bunch of configurations at hand.
+
+### Other tools
+Here are some other potentially interesting tools related to trottling your network speed for testing purposes.
+
+- [RoboHydra](http://dev.opera.com/articles/view/robohydra-a-new-testing-tool-for-client-server-interactions/)
+- [TCPMon](http://ws.apache.org/commons/tcpmon/)
+
+Feel free to add yours in the comment section.
