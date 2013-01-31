@@ -677,6 +677,9 @@
     background-color: #f7f7f7;
     border-radius: 4px;
   }
+  .ads-container hr {
+    margin: 5px 0;
+  }
   .ads-container:before, .ads-container:after {
     display: table;
     content: "";
