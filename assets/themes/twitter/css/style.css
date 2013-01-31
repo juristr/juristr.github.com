@@ -499,6 +499,9 @@
     font-size:13px;
     margin-bottom:0;
     border-bottom:solid 1px #d3d3d3;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
   }
 
   .navbar ul{

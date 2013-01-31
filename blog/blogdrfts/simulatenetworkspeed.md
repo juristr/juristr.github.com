@@ -19,13 +19,23 @@ Couple of days ago I got inspired by a Tweet between [Addy Osmani](https://twitt
 </figure>
 
 ## Do you Test your Application under Different Network Speeds?? How often?
-I can just remember to have done it once because it was an explicit non-functional requirement from our customer as there where people connecting through 56k modems(!!).  When I regularly did it was when doing mobile development with Android. There it's a must as mobile connections are highly vulnerable in terms of network connection failures or speed differences. Depending on your user's [internet service provider](http://www.clearinternetservice.org/) there might be quite different kind of network speeds.
+I can just remember to have done it once because it was an explicit non-functional requirement from our customer as there where people connecting through 56k modems(!!).  When I regularly did it was when doing mobile development with Android. There it's a must as mobile connections are highly vulnerable in terms of network connection failures or speed differences. Depending on your user's [internet service provider](http://www.clearinternetservice.org/) or general connectivity, there might be quite different kind of network speeds.
 
 But what about web applications, especially when creating rich JavaScript web clients where you have a lot of caching possibilities.
 
 ## How to Simulate Different Network Types
 
 ### On Windows
+There are several tools available for windows. Probably the simplest approach is to use [Fiddler2](http://www.fiddler2.com/fiddler2/), a tool which you should have installed anyway as a web developer. Just download and start it. In the menu, there's an entry called "Rules", open it and navigate to "Performance". There you should see an item called **"Simulate Modem Speeds"**.
+
+<figure>
+    <img src="/blog/assets/imgs/fiddler2modemspeed.png" />
+    <figcaption>Fiddler2</figcaption>
+</figure>
+
+
+
+[Plugin for delaying response](http://fiddlerdelayext.codeplex.com/)
 
 
 ### On OSX
