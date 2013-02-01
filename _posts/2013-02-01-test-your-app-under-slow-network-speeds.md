@@ -61,6 +61,7 @@ Just select the desired speed option and activate it. The nice thing about this 
 ### Other tools
 I have to admit that I did not perform an in-depth research about other possible tools. Here are just some other potentially interesting ones I encountered.
 
+- [Charlesproxy](http://www.charlesproxy.com/)
 - [RoboHydra](http://dev.opera.com/articles/view/robohydra-a-new-testing-tool-for-client-server-interactions/)
 - [TCPMon](http://ws.apache.org/commons/tcpmon/)
 
