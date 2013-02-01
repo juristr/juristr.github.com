@@ -2,7 +2,7 @@
 layout: post
 title: "Test Your App Under Slow Network Speeds"
 description: ""
-category: bliki
+category:
 tags: []
 ---
 
@@ -19,9 +19,9 @@ Couple of days ago I got inspired by a Tweet between [Addy Osmani](https://twitt
 </figure>
 
 ## Do you Test your Application under Different Network Speeds?? How often?
-I can just remember to have done it once because it was an explicit non-functional requirement from our customer as there where people connecting through 56k modems(!!).  When I regularly did it was when doing mobile development with Android. There it's a must as mobile connections are highly vulnerable in terms of network connection failures or speed differences. Depending on your user's [internet service provider](http://www.clearinternetservice.org/) or general connectivity, there might be quite different kind of network speeds.
+I can just remember to have done it once because it was an explicit non-functional requirement from our customer as there where people connecting through 56k modems(!!). Typically when developing mobile application this is an absolute must because mobile connections are highly vulnerable in terms of network connection failures or speed differences. As such, depending on your user's [internet service provider](http://www.clearinternetservice.org/) and/or the availability or absense of broadband mobile networks, he might get quite different experiences when using your application.
 
-But what about web applications, especially when creating rich JavaScript web clients where you have a lot of caching possibilities.
+Modern web applications provide a lot of possibilities for bandwidth optimizations, especially also considering HTML5 additions like the different browser storage mechanisms. I'm not going into too much details here but rather I'd like to quickly show how you can test your application under potentially poor network conditions.
 
 ## How to Simulate Different Network Types
 
@@ -34,10 +34,10 @@ There are several tools available for windows. Probably the simplest approach is
 </figure>
 
 This will simulate a modem like network speed which allows you to test and fine-tune your webapp under more extreme, inconvenient situations.  
-Actually there's also a [Fiddler plugin](http://fiddlerdelayext.codeplex.com/) which lets you add a delay in ms to any kind of response. I did not test it in depth.
+Actually there's also a [Fiddler plugin](http://fiddlerdelayext.codeplex.com/) which lets you add a delay in ms to any kind of response. I did not test that one in depth, though.
 
 ### On OSX
-OSX has a tool called **Network Link Conditioner** which allows you to do a similar job. To install it you need to first download XCode (can be downloaded freely from the App Store). Once installed
+OSX has a tool called **Network Link Conditioner** which allows you to do a similar job. To install it you need to first download XCode which is freely available in the App Store market. Once installed
 
 1. Open XCode
 1. Navigate the menu XCode > Open Developer Tool > More Developer Tools. This will open Apple's website
@@ -48,18 +48,18 @@ OSX has a tool called **Network Link Conditioner** which allows you to do a simi
   <figcaption>Download the Hardware IO Tools</figcaption>
 </figure>
 
-Once downloaded, open the package and install the Network Link Conditioner tool
+Once downloaded, open the package and install the "Network Link Conditioner.prefPane" tool...
 
 ![](/blog/assets/imgs/hardwaretools.png)
 
-It will automatically be installed in your preference pane. Here you go
+...which will automatically be installed on your preference pane. Here you go
 
 ![](/blog/assets/imgs/netlinkconditioner.png)
 
 Just select the desired speed option and activate it. The nice thing about this tool is that you have already a bunch of configurations at hand.
 
 ### Other tools
-Here are some other potentially interesting tools related to trottling your network speed for testing purposes.
+I have to admit that I did not perform an in-depth research about other possible tools. Here are just some other potentially interesting ones I encountered.
 
 - [RoboHydra](http://dev.opera.com/articles/view/robohydra-a-new-testing-tool-for-client-server-interactions/)
 - [TCPMon](http://ws.apache.org/commons/tcpmon/)
