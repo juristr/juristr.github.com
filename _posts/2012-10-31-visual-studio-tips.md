@@ -3,7 +3,7 @@ layout: post
 title: "Visual Studio Tips"
 description: "asdf asd fasdf "
 category: bliki
-tags: [ Visual Studio, tools]
+tags: [ Visual Studio, tooling]
 reposts: ["http://dotnet.dzone.com/articles/visual-studio-tips"]
 ---
 {% include JB/setup %}
