@@ -4,56 +4,47 @@ title: Juri's TechBlog
 current: blog
 ---
 <div class="post-list">
-  {% for post in site.posts %}
-    {% if forloop.first %}
-      <div class="row-fluid">
-        <article class="span12">
-          <div class="row-fluid">
-            {% if post.postimg != '' %}
-              <div class="span5">
-                <a href="{{post.url}}"><img src="{{post.postimg}}" /></a>
-              </div>
-              <div class="span7">
-                <h1><a href="{{post.url}}">{{ post.title }}</a></h1>
-                <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
-                <div class="article-body">
-                  <p>{{ post.content | strip_html | truncatewords:75}}</p>
-                </div>
-                <a href="{{post.url}}" class="btn btn-primary pull-right">Read more &raquo;</a>
-              </div>
-            {% else %}
-              <div class="article-body">
-                <p>{{ post.content | strip_html | truncatewords:75}}</p>
-              </div>
-              <a href="{{post.url}}" class="btn btn-primary pull-right">Tell me more &raquo;</a>
-            {% endif %}
+  <div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+      {% for post in site.posts limit:3 %}
+        <div class="item {% if forloop.first %} active {% endif %} {% if post.postimg == nil %} noimage {% endif %}">
+          <img src="{{post.postimg}}" />
+          <div class="carousel-caption">
+            <h1><a href="{{post.url}}">{{ post.title }}</a></h1>
+            <p>{{ post.content | strip_html | truncatewords:75}}</p>
           </div>
-        </article>
-      </div>
-      <hr />
-    {% else %}
-      {% cycle 'add rows': '<div class="row-fluid">', nil, nil %}
-        <div class="span4">
-          {% if post.postimg == nil %}
-            <h1 class="post-title-large"><a href="{{post.url}}">{{ post.title }}</a></h1>
-          {% else %}
-          <div class="carousel">
-            <div class="carousel-inner">
-              <div class="item active">
-                <a href="{{post.url}}"><img src="{{post.postimg}}" /></a>
-                <div class="carousel-caption">
-                  <h1 class="post-title">
-                    <a href="{{post.url}}">{{ post.title }}</a>
-                    <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
-                  </h1>
-                </div>  
-              </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+  <hr/>
+  {% for post in site.posts offset:3 %}
+    {% cycle 'add rows': '<div class="row-fluid">', nil, nil %}
+      <div class="span4">
+        {% if post.postimg == nil %}
+          <h1 class="post-title-large">
+            <a href="{{post.url}}">{{ post.title }}</a>
+            <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+          </h1>
+        {% else %}
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <a href="{{post.url}}"><img src="{{post.postimg}}" /></a>
+              <div class="carousel-caption">
+                <h1 class="post-title">
+                  <a href="{{post.url}}">{{ post.title }}</a>
+                  <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+                </h1>
+              </div>  
             </div>
           </div>
-          {% endif %}
         </div>
-      {% cycle 'close rows': nil, nil, '</div>' %}
-    {% endif %}
-
+        {% endif %}
+      </div>
+    {% cycle 'close rows': nil, nil, '</div>' %}
   {% endfor %}
 </div>

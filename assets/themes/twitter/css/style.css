@@ -56,6 +56,24 @@
     text-decoration: none;
   }
 
+  .post-list .carousel-caption p {
+    color: #57534A !important;
+  }
+
+  .carousel-inner img {
+    border: 0;
+    margin: auto;
+  }
+
+  .carousel-inner .noimage {
+    min-height: 200px;
+  }
+
+  .noimage .carousel-caption {
+    width: 80%;
+    margin: auto;
+  }
+
   .post-list .carousel-caption {
     background: rgba(255, 255, 255, 0.8);
   }
