@@ -3,6 +3,7 @@ layout: post
 title: "HRT - Humility, Respect and Trust"
 description: ""
 category: 
+postimg: /blog/assets/imgs/HRT.png
 tags: [book review]
 ---
 {% include JB/setup %}

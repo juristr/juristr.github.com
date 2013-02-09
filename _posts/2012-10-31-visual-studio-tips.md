@@ -3,6 +3,7 @@ layout: post
 title: "Visual Studio Tips"
 description: "asdf asd fasdf "
 category: bliki
+postimg: /blog/assets/imgs/vs2012-logo.png
 tags: [ Visual Studio, tools]
 reposts: ["http://dotnet.dzone.com/articles/visual-studio-tips"]
 ---

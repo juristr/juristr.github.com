@@ -52,6 +52,11 @@
     margin-top: 25px;
   }
 
+  .post-list .post-preview {
+    min-height: 230px;
+    max-height: 350px;
+  }
+
   .post-list a:hover {
     text-decoration: none;
   }
