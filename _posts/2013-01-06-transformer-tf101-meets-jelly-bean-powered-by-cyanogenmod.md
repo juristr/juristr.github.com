@@ -4,6 +4,7 @@ title: "Transformer TF101 meets Jelly Bean powered by CyanogenMod"
 description: ""
 category: bliki
 tags: [Android]
+postimg: /blog/assets/imgs/cmjellybean.png
 reposts: ["http://mobile.dzone.com/articles/transformer-tf101-meets-jelly"]
 ---
 {% include JB/setup %}

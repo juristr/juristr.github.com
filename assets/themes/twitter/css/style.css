@@ -27,6 +27,7 @@
     padding-left:50px;*/
     background-color: white;
     padding: 20px;
+    margin-top: 45px;
   }
 
   .home{
@@ -45,6 +46,27 @@
 
   a.home:hover{
     background: url("home_active.png") no-repeat transparent;
+  }
+
+  .post-list {
+    margin-top: 25px;
+  }
+
+  .post-list a:hover {
+    text-decoration: none;
+  }
+
+  .post-list .carousel-caption {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .post-list .row-fluid {
+    padding-bottom: 25px;
+  }
+
+  .post-list .post-title-large {
+    font-size: 35px;
+    line-height: 45px;
   }
 
   .post-list > li {
@@ -79,8 +101,12 @@
 
   h1.post-title {
     font-size: 21px !important;
-    margin-bottom:-5px;
     padding-top:25px;
+  }
+
+  .post-list .post-title {
+    padding-top:0;
+    margin-top:0;
   }
 
   h1.post-title > a {
@@ -130,7 +156,7 @@
 
   article {
     /*font-family: calibri,tahoma,arial,sans-serif;*/
-    padding-top:45px;
+    /*padding-top:45px;*/
     padding-bottom:50px;
     font-size:17px;
     font-weight:300;

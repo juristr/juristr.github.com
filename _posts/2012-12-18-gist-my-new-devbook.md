@@ -3,6 +3,7 @@ layout: post
 title: "Gist: My New Devbook"
 description: ""
 category: 
+postimg: https://f.cloud.github.com/assets/2/4907/259773c0-432e-11e2-869a-1da894bf0bd0.png
 tags: [Projects]
 reposts: ["http://java.dzone.com/articles/gist-my-new-devbook"]
 ---

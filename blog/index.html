@@ -1,26 +1,59 @@
 ---
-layout: default
+layout: page
 title: Juri's TechBlog
 current: blog
 ---
+<div class="post-list">
+  {% for post in site.posts %}
+    {% if forloop.first %}
+      <div class="row-fluid">
+        <article class="span12">
+          <div class="row-fluid">
+            {% if post.postimg != '' %}
+              <div class="span5">
+                <a href="{{post.url}}"><img src="{{post.postimg}}" /></a>
+              </div>
+              <div class="span7">
+                <h1><a href="{{post.url}}">{{ post.title }}</a></h1>
+                <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+                <div class="article-body">
+                  <p>{{ post.content | strip_html | truncatewords:75}}</p>
+                </div>
+                <a href="{{post.url}}" class="btn btn-primary pull-right">Read more &raquo;</a>
+              </div>
+            {% else %}
+              <div class="article-body">
+                <p>{{ post.content | strip_html | truncatewords:75}}</p>
+              </div>
+              <a href="{{post.url}}" class="btn btn-primary pull-right">Tell me more &raquo;</a>
+            {% endif %}
+          </div>
+        </article>
+      </div>
+      <hr />
+    {% else %}
+      {% cycle 'add rows': '<div class="row-fluid">', nil, nil %}
+        <div class="span4">
+          {% if post.postimg == nil %}
+            <h1 class="post-title-large"><a href="{{post.url}}">{{ post.title }}</a></h1>
+          {% else %}
+          <div class="carousel">
+            <div class="carousel-inner">
+              <div class="item active">
+                <a href="{{post.url}}"><img src="{{post.postimg}}" /></a>
+                <div class="carousel-caption">
+                  <h1 class="post-title">
+                    <a href="{{post.url}}">{{ post.title }}</a>
+                    <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+                  </h1>
+                </div>  
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      {% cycle 'close rows': nil, nil, '</div>' %}
+    {% endif %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-            <h1 class="post-title"><a href="{{post.url}}">{{ post.title }}</a></h1>
-            <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
-      </li>
-    {% endfor %}
-  </ul>
-
-
-
-
-<script>
-// $(function(){
-//   $(".publishDate").each(function(el){
-//     var $el = $(this);
-//     $el.html(moment($el.text()).fromNow());
-//   });
-// });
-</script>
+  {% endfor %}
+</div>

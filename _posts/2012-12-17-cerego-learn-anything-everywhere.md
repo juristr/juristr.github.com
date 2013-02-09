@@ -3,6 +3,7 @@ layout: post
 title: "Cerego - Learn Anything, Everywhere"
 description: ""
 category: 
+postimg: /blog/assets/imgs/ceregoslogan.png
 tags: []
 reposts: ["http://www.dzone.com/articles/cerego-learn-anything-anywhere"]
 ---

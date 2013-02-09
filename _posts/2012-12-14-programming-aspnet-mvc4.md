@@ -3,6 +3,7 @@ layout: post
 title: "Programming ASP.net MVC4 by J. Chadwick, T. Snyder and H. Panda"
 description: ""
 category: 
+postimg: /blog/assets/imgs/coverprogrammingaspnet.gif
 tags: ["book review", "ASP.net MVC", "C#", ".Net"]
 ---
 {% include JB/setup %}

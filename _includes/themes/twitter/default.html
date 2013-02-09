@@ -49,49 +49,15 @@
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <link href="{{ ASSET_PATH }}/css/print.css" rel="stylesheet" type="text/css" media="print">
+
+    <link rel="stylesheet" href="/about/card.css">
   </head>
 
   <body>
     {% include mycustoms/navbar %}
     <div class="container">
       <div class="row-fluid">
-        <section class="span12 main-content">
-          <article class="span8">
-            {{content}}
-          </article>
-          <div class="span4 sidebar">
-            <!--
-            <section class="span12 widget">
-              <h3>Latest Posts</h3>
-              <p>
-                Abc...
-              </p>
-            </section>
-            <section class="span12 widget">
-              <h3>Tweets</h3>
-              <ul>
-                <li>Tweet 1</li>
-                <li>Tweet 2</li>
-                <li>Tweet 3</li>
-              </ul>
-            </section>
-            <section class="span12 widget">
-              <h3>Latest Posts</h3>
-              <p>
-                Abc...
-              </p>
-            </section>
-          -->
-            <div class="toc-container" style="display:none">
-              <div id="toc"></div>
-            </div>
-          </div>
-          <!--
-          <div class="span4 toc-container" style="display:none">
-            <div id="toc"></div>
-          </div>
-        -->
-        </section>
+        {{ content }}
       </div>
     </div>
     <script>
