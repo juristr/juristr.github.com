@@ -1,13 +1,11 @@
-<section class="span12 main-content">
+<section class="span12 main-content post">
   <article class="span8">
     <h1>
       {{ page.title }}
     </h1>
     <div class="row-fluid">
       <!--<div class="span3">-->
-        <time class="post-date">
-          {{ page.date | date: "%B %d, %Y" }}
-        </time>
+
       <!--</div>-->
       <div class="tags">
         {% unless page.tags == empty %}
@@ -36,6 +34,9 @@
     {% endunless %} 
     -->
     <div class="article-body">
+      <time class="post-date">
+        {{ page.date | date: "%B %d, %Y" }}&nbsp;-&nbsp;
+      </time>
       {{ content }}
     </div>
     

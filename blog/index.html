@@ -37,12 +37,12 @@ current: blog
               <div class="carousel-caption">
                 <h1 class="post-title">
                   <a href="{{post.url}}">{{ post.title }}</a>
-                  <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
                 </h1>
               </div>  
             </div>
           </div>
         </div>
+        <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
         {% endif %}
       </div>
     {% cycle 'close rows': nil, nil, '</div>' %}

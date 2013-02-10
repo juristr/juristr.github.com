@@ -4,7 +4,8 @@ title: "Test Your App Under Slow Network Speeds"
 description: ""
 postimg: /blog/assets/imgs/netlinkconditioner.png
 category:
-tags: []
+reposts: ["http://architects.dzone.com/articles/test-your-app-under-slow"]
+tags: [Software testing, tooling]
 ---
 
 I guess that I don't have to start talking about the importance of testing in the software development process. There are couple of different kind of tests which I'm not going to mention now, but generally speaking a good test should verify the correct implementation of the business requirements but also test the software on its boundaries and edge cases.

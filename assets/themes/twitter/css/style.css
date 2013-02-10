@@ -8,6 +8,10 @@
     color: #57534A !important;
   }
 
+  b, strong {
+    font-weight: 600;
+  }
+
   body, textarea {
     line-height: 1.5;
     border-top: 4px solid #008CCC;
@@ -59,6 +63,10 @@
 
   .post-list a:hover {
     text-decoration: none;
+  }
+
+  .post-list .carousel {
+    margin-bottom:0;
   }
 
   .post-list .carousel-caption p {
@@ -144,11 +152,18 @@
   }
 
   .post-date {
-    display: block;
+    display:block;
     font-size: 15px;
     color: #C7C2B8;
+    text-transform: uppercase;
     /*background: url(/assets/images/icon_date.gif) 0 3px no-repeat;*/
     /*padding-left: 22px;*/
+  }
+
+  .post .post-date {
+    display: inline;
+    padding-right: 5px;
+    margin-top:5px;
   }
 
   h1, h2, h3 {
@@ -180,10 +195,12 @@
   article {
     /*font-family: calibri,tahoma,arial,sans-serif;*/
     /*padding-top:45px;*/
+    font-family: 'Open Sans', Helvetica, sans-serif;
     padding-bottom:50px;
     font-size:17px;
-    font-weight:300;
+    font-weight:100;
     color: #57534A !important;
+    line-height: 175%;
   }
 
   article .tags{
@@ -224,31 +241,43 @@
     padding-left:5px;
   }
 
+  .post h1,h2,h3 {
+    margin: 40px -30px 30px -30px;
+    padding: 15px 30px 15px 23px;
+  }
+
+  .post h1 {
+    border-left: 7px solid #eee;
+  }
+
+  .post h2 {
+    border-left: 5px solid #eee;
+  }
+
+  .post h3 {
+    border-left: 3px solid #eee;
+  }
+
   article h1 {
     font-size:30px;
     margin-bottom:0;
     line-height:30px;
     padding-bottom:5px;
-    border-left: 7px solid #eee;
   }
 
   article h2 {
     font-size:25px;
     line-height:30px;
-    border-left: 5px solid #eee;
     /*border-bottom: 1px solid #EEE;*/
   }
 
   article h3 {
     font-size:20px;
     line-height:30px;
-    border-left: 3px solid #eee;
   }
 
   article h1, h2, h3 {
-    font-weight: 300;
-    margin: 40px -30px 30px -30px;
-    padding: 15px 30px 15px 23px;
+    font-weight: 400;
   }
 
   article h2, h3{
@@ -260,12 +289,13 @@
     text-align: justify;
   }
 
-  .article-body > p:first-child {
+  .article-body p:first-of-type {
     font-size:20px;
     font-weight:300;
+    display: inline;
   }
 
-  .article-body > p:first-child > code {
+  .article-body p:first-of-type > code {
     font-size:18px;
   }
 
