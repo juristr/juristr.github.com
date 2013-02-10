@@ -56,6 +56,17 @@
     margin-top: 25px;
   }
 
+  .post-list .section-year {
+    font-size: 60px;
+    font-weight: 600;
+    text-align:center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+
   .post-list .post-preview {
     min-height: 230px;
     max-height: 350px;
@@ -98,6 +109,7 @@
   .post-list .post-title-large {
     font-size: 35px;
     line-height: 45px;
+    text-align: center;
   }
 
   .post-list > li {
@@ -154,10 +166,15 @@
   .post-date {
     display:block;
     font-size: 15px;
-    color: #C7C2B8;
+    /*color: #C7C2B8;*/
+    color: #999 !important;
     text-transform: uppercase;
     /*background: url(/assets/images/icon_date.gif) 0 3px no-repeat;*/
     /*padding-left: 22px;*/
+  }
+
+  .post-list .post-date {
+    text-align: center;
   }
 
   .post .post-date {
@@ -242,8 +259,9 @@
   }
 
   .post h1,h2,h3 {
-    margin: 40px -30px 30px -30px;
+    margin: 40px -30px 15px -30px;
     padding: 15px 30px 15px 23px;
+    text-transform: uppercase;
   }
 
   .post h1 {
@@ -303,6 +321,10 @@
   article ul {
     /*padding-top: 10px;*/
     margin: 5px 0 15px 25px;
+  }
+
+  article li {
+    line-height: inherit;
   }
 
   /*.article-body > blockquote {
