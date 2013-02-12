@@ -3,6 +3,7 @@ layout: post
 title: "2nd Dan Yoseikan Budo"
 description: ""
 category: 
+postimg: /blog/assets/imgs/2ndDanDiploma.jpg
 tags: [ personal]
 ---
 {% include JB/setup %}

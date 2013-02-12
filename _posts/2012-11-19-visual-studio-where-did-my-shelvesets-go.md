@@ -3,6 +3,7 @@ layout: post
 title: "Visual Studio: Where Did My Shelvesets Go?"
 description: ""
 category: 
+postimg: /blog/assets/imgs/vs2012_unshelve_menu.png
 tags: ["Visual Studio"]
 ---
 {% include JB/setup %}

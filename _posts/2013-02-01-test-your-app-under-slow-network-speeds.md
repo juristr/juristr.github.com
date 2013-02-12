@@ -2,6 +2,7 @@
 layout: post
 title: "Test Your App Under Slow Network Speeds"
 description: ""
+postimg: /blog/assets/imgs/netlinkconditioner.png
 category:
 reposts: ["http://architects.dzone.com/articles/test-your-app-under-slow"]
 tags: [Software testing, tooling]

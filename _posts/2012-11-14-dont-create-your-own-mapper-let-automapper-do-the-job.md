@@ -3,6 +3,7 @@ layout: post
 title: "Don't Create Your Own Mapper, Let AutoMapper Do The Job!"
 description: ""
 category: 
+postimg: /blog/assets/imgs/automapper.png
 tags: [C#]
 ---
 {% include JB/setup %}

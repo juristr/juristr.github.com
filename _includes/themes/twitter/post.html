@@ -1,77 +1,87 @@
-  <h1>
-    {{ page.title }}
-  </h1>
-  <div class="row-fluid">
-    <!--<div class="span3">-->
+<section class="span12 main-content post">
+  <article class="span8">
+    <h1>
+      {{ page.title }}
+    </h1>
+    <div class="row-fluid">
+      <!--<div class="span3">-->
+
+      <!--</div>-->
+      <div class="tags">
+        {% unless page.tags == empty %}
+          <!--<div class="span9 tags">-->
+              {% for tag in page.tags %}
+                <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
+              {% endfor %}
+          <!--</div>-->
+        {% endunless %}
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(function(){
+        {% if page.categories[0] == "bliki" %}
+          $(".toc-container").show();
+          $("#toc").tocify({ scrollTo: 30 });
+        {% else %}
+          $.fn.scrolltop();
+        {% endif %}
+      });
+    </script>
+    <!--
+    {% unless page.tags == empty %}
+        {% assign tags_list = page.tags %}
+        {% include JB/tags_list %}
+    {% endunless %} 
+    -->
+    <div class="article-body">
       <time class="post-date">
-        {{ page.date | date: "%B %d, %Y" }}
+        {{ page.date | date: "%B %d, %Y" }}&nbsp;-&nbsp;
       </time>
-    <!--</div>-->
-    <div class="tags">
-      {% unless page.tags == empty %}
-        <!--<div class="span9 tags">-->
-            {% for tag in page.tags %}
-              <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
+      {{ content }}
+    </div>
+    
+    <div class="row-fluid inline-bio">
+      <div class="span2">
+        <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=80&amp;d=identicon&amp;r=PG" class="img-rounded">
+      </div>
+      <div class="span10">
+        <span class="bio-author"><a href="/about">Juri Strumpflohner</a></span>
+        <p>Juri Strumpflohner currently works as a software architect focusing mainly on creating rich client web applications with JavaScript and the Microsoft technology stack. You can find him on <a href="http://twitter.com/juristr">Twitter</a>, <a href="http://github.com/juristr">GitHub</a> and <a href="http://stackoverflow.com/users/50109/juri">Stackoverflow</a>.</p>
+        {% if page.reposts && page.reposts.length > 0 %}
+          <p style="font-weight:bold">This article has been re-published at</p>
+          <ul>
+            {% for repostUrl in page.reposts %}
+              <li><a href="{{repostUrl}}" rel="nofollow">{{ repostUrl }}</a></li>
             {% endfor %}
-        <!--</div>-->
-      {% endunless %}
+          </ul>
+        {% endif %}
+        <p>
+      </div>
     </div>
-  </div>
-  <script type="text/javascript">
-    $(function(){
-      {% if page.categories[0] == "bliki" %}
-        $(".toc-container").show();
-        $("#toc").tocify({ scrollTo: 30 });
+    <hr>
+    {% include mycustoms/relatedposts %}
+    <hr>
+    <div class="pagination">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
       {% else %}
-        $.fn.scrolltop();
+        <li class="prev disabled"><a>&larr; Previous</a></li>
       {% endif %}
-    });
-  </script>
-  <!--
-  {% unless page.tags == empty %}
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-  {% endunless %} 
-  -->
-  <div class="article-body">
-    {{ content }}
-  </div>
-  
-  <div class="row-fluid inline-bio">
-    <div class="span2">
-      <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=80&amp;d=identicon&amp;r=PG" class="img-rounded">
-    </div>
-    <div class="span10">
-      <span class="bio-author"><a href="/about">Juri Strumpflohner</a></span>
-      <p>Juri Strumpflohner currently works as a software architect focusing mainly on creating rich client web applications with JavaScript and the Microsoft technology stack. You can find him on <a href="http://twitter.com/juristr">Twitter</a>, <a href="http://github.com/juristr">GitHub</a> and <a href="http://stackoverflow.com/users/50109/juri">Stackoverflow</a>.</p>
-      {% if page.reposts && page.reposts.length > 0 %}
-        <p style="font-weight:bold">This article has been re-published at</p>
-        <ul>
-          {% for repostUrl in page.reposts %}
-            <li><a href="{{repostUrl}}" rel="nofollow">{{ repostUrl }}</a></li>
-          {% endfor %}
-        </ul>
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a>
       {% endif %}
-      <p>
-    </div>
+      </ul>
   </div>
   <hr>
-  {% include mycustoms/relatedposts %}
-  <hr>
-  <div class="pagination">
-    <ul>
-    {% if page.previous %}
-      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
-    {% else %}
-      <li class="prev disabled"><a>&larr; Previous</a></li>
-    {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
-    {% if page.next %}
-      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-    {% else %}
-      <li class="next disabled"><a>Next &rarr;</a>
-    {% endif %}
-    </ul>
-</div>
-<hr>
-{% include JB/comments %}
+  {% include JB/comments %}
+  </article>
+  <div class="span4 sidebar">
+    <div class="toc-container" style="display:none">
+      <div id="toc"></div>
+    </div>
+  </div>
+</section>

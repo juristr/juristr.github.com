@@ -3,6 +3,7 @@ layout: post
 title: "Retrospective 2012"
 description: ""
 category: 
+postimg: /blog/assets/imgs/new-years-eve.jpg
 tags: [Blogging]
 ---
 {% include JB/setup %}

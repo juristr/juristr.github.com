@@ -12,7 +12,7 @@
     <meta content='Juri&quot;s website.' name='description'/>
     <meta content='.Net, JavaScript, Microsoft Technologies, Google, Tips and Tricks, Software Development, Programming' name='keywords'/>  
     <meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
-
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -49,49 +49,15 @@
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <link href="{{ ASSET_PATH }}/css/print.css" rel="stylesheet" type="text/css" media="print">
+
+    <link rel="stylesheet" href="/about/card.css">
   </head>
 
   <body>
     {% include mycustoms/navbar %}
     <div class="container">
       <div class="row-fluid">
-        <section class="span12 main-content">
-          <article class="span8">
-            {{content}}
-          </article>
-          <div class="span4 sidebar">
-            <!--
-            <section class="span12 widget">
-              <h3>Latest Posts</h3>
-              <p>
-                Abc...
-              </p>
-            </section>
-            <section class="span12 widget">
-              <h3>Tweets</h3>
-              <ul>
-                <li>Tweet 1</li>
-                <li>Tweet 2</li>
-                <li>Tweet 3</li>
-              </ul>
-            </section>
-            <section class="span12 widget">
-              <h3>Latest Posts</h3>
-              <p>
-                Abc...
-              </p>
-            </section>
-          -->
-            <div class="toc-container" style="display:none">
-              <div id="toc"></div>
-            </div>
-          </div>
-          <!--
-          <div class="span4 toc-container" style="display:none">
-            <div id="toc"></div>
-          </div>
-        -->
-        </section>
+        {{ content }}
       </div>
     </div>
     <script>
