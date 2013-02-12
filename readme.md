@@ -8,4 +8,4 @@ Here are some useful references to get started.
 - [Jekyll Bootstrap](http://jekyllbootstrap.com)
 
 # License
-[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+This site is licensed under [Creative (CC BY-NC-SA 3.0)](http://creativecommons.org/licenses/by-nc-sa/3.0/). Feel free to take a look at the source code and learn from it.
