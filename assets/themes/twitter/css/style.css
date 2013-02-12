@@ -1,15 +1,17 @@
 @media screen {
   body {
     /*background-color: #e8e8e8;*/
+    color: black;
   }
 
   html, body, button, input, select, textarea {
     /*font-size: 20px;*/
-    color: #57534A !important;
+    /*color: #57534A !important;*/
   }
 
   b, strong {
     font-weight: 600;
+    color: #555;
   }
 
   body, textarea {
@@ -81,7 +83,12 @@
   }
 
   .post-list .carousel-caption p {
-    color: #57534A !important;
+    /*color: #57534A !important;*/
+    color: black;
+  }
+
+  .post-list .carousel {
+    padding: 0 0 30px 0;
   }
 
   .carousel-inner img {
@@ -110,6 +117,10 @@
     font-size: 35px;
     line-height: 45px;
     text-align: center;
+  }
+
+  .post-list ul, ol {
+    padding: 0 0 20px 35px;
   }
 
   .post-list > li {
@@ -214,9 +225,9 @@
     /*padding-top:45px;*/
     font-family: 'Open Sans', Helvetica, sans-serif;
     padding-bottom:50px;
-    font-size:17px;
+    font-size:20px;
     font-weight:100;
-    color: #57534A !important;
+    /*color: #57534A !important;*/
     line-height: 175%;
   }
 
@@ -226,7 +237,7 @@
   }
 
   article .tags a{
-    font-size: 12px !important;
+    /*font-size: 12px !important;*/
   }
 
   article img {
@@ -309,7 +320,7 @@
 
   .article-body p:nth-child(2) {
     font-size:20px;
-    font-weight:300;
+    font-weight:400;
     display: inline;
   }
 
@@ -321,6 +332,7 @@
   .article-body div:nth-child(3),
   .article-body img:nth-child(3) {
     clear:both;
+    padding-top:20px;
   }
 
 
@@ -529,7 +541,7 @@
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     font-family: Monaco,"DejaVu Sans Mono","Courier New",monospace;
-    font-size: 14px;
+    font-size: 20px;
     color: #666;
     background-color: #fee9cc;
   }

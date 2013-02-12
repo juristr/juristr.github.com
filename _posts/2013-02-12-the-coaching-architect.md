@@ -10,10 +10,10 @@ tags: [ Tech vids, coaching]
 In this talk, [Roy Osherove](https://twitter.com/RoyOsherove) speaks about how to become a better coach. A nice talk highlighting some of my personal principles I try to follow every day. Coaching others is a nice thing if you like it, but it also needs to be learned.
 
 <p> </p>
-<iframe width="560" height="315" src="http://www.youtube.com/embed/uvwW_CRmWmo" frameborder="0" allowfullscreen="true"> </iframe>
+<iframe width="750" height="500" src="http://www.youtube.com/embed/uvwW_CRmWmo" frameborder="0" allowfullscreen="true"> </iframe>
 
-## TL;DR
-[Jump here](#conclusion) then.
+### TL;DR
+Ok..., so [jump here](#conclusion) then.
 
 ## Talk Notes
 
