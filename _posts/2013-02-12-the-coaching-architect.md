@@ -55,6 +55,7 @@ Here are my notes I took during the talk.
 Observations have shown that there are periods of slow learning followed by periods of very quick learning. The reason for such **ravines before the fast growth** are because we first need to "unlearn" what we knew before in order to be able to acquire new knowledge and try something new. For example:
 
 - when switching programming language: initially stupid, but then - knowing different programming languages - you know different kind of patterns, different viewpoints which make you more productive; teach you to think about a problem from various angles
+- when starting with TDD. Initially you're awfully slow and you seem to not move ahead. But once you got it, your performance and quality of code will increase drammatically.
 
 > To grow the team, we must first realize we can do this ourselves.
 
