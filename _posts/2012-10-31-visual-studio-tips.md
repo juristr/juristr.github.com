@@ -12,8 +12,8 @@ At work, I spend a huge amount of my time working with Microsoft Technologies. A
 
 ## Plugins
 
-- **[ASP.net and Web Tools 2012](http://www.asp.net/vnext)**
-
+- [ASP.net and Web Tools 2012](http://www.asp.net/vnext)
+- [MultiEdit](http://visualstudiogallery.msdn.microsoft.com/2beb9705-b568-45d1-8550-751e181e3aef)
 
 ## Keystrokes
 Here are my preferred keystrokes. Note, keystrokes separated by a comma mean you have to use them in sequence in order to activate the command.  
@@ -117,3 +117,11 @@ They refer to VS2012 but some may also work in previous versions.
     </tr>
 </tbody>
 </table>
+
+## Features
+
+### Go To Test/Code
+
+Quickly jumping to the according test class. Just right-click and select the corresponding menu item.
+
+![](/blog/assets/imgs/vs_gototestcode.png)
