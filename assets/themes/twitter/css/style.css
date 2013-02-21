@@ -161,6 +161,7 @@
   .post-list .post-title {
     padding-top:0;
     margin-top:0;
+    text-align: center;
   }
 
   h1.post-title > a {
