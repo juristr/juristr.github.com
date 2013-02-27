@@ -224,10 +224,11 @@
   article {
     /*font-family: calibri,tahoma,arial,sans-serif;*/
     /*padding-top:45px;*/
-    font-family: 'Open Sans', Helvetica, sans-serif;
+    /*font-family: 'Open Sans', Helvetica, sans-serif;*/
+    font: 19px/1.5 'Source Sans Pro', sans-serif;
     padding-bottom:50px;
-    font-size:20px;
-    font-weight:100;
+    /*font-size:20px;
+    font-weight:100;*/
     /*color: #57534A !important;*/
     line-height: 175%;
   }
@@ -320,8 +321,7 @@
   }
 
   .article-body p:nth-child(2) {
-    font-size:20px;
-    font-weight:400;
+    font-size:22px;
     display: inline;
   }
 
