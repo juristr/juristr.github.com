@@ -225,7 +225,7 @@
     /*font-family: calibri,tahoma,arial,sans-serif;*/
     /*padding-top:45px;*/
     /*font-family: 'Open Sans', Helvetica, sans-serif;*/
-    font: 18px/1.5 'Source Sans Pro', sans-serif;
+    font: 19px/1.5 'Source Sans Pro', sans-serif;
     padding-bottom:50px;
     /*font-size:20px;
     font-weight:100;*/
@@ -403,6 +403,19 @@
     margin-bottom: 10px;
     border-left: 10px solid #008CCC;
     color: #666 !important;
+    font-style: italic;
+  }
+
+  .article-body blockquote cite:before {
+    content: "—";
+    padding-right: 0.3em;
+    padding-left: 0.3em;
+    color: #aaa;
+  }
+
+  .article-body blockquote cite {
+    font-size: 85%;
+    font-style: normal;
   }
 
   .article-body blockquote p {
