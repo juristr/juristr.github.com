@@ -495,49 +495,80 @@
   pre {
     word-wrap: normal;
     word-break: normal;
-    padding: 15px 45px 15px 25px;
+    padding: 15px 45px 15px 25px !important;
     margin-left: -25px;
     width:100%;
     border-radius:0;
   }
 
-  /* Prettyprint */
+
   pre code {
     font-size:13px;
     width: 100%;
   }
   pre code { background: transparent; padding: 0; border-radius: initial;}
 
-  pre.prettyprint {
-    background: #fff;
-  }
+/* Prettyprint */
+.pln {
+  color: #c5c8c6; }
 
-  pre.prettyprint.small {
-    padding: 0.5em;
-  }
+.str {
+  color: #b5bd68; }
 
-  /* Pretty printing styles. Used with prettify.js. */
-  /* Vim sunburst theme by David Leibovic */
+.kwd {
+  color: #b294bb; }
 
-  pre .str, code .str { color: #65B042; } /* string  - green */
-  pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
-  pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
-  pre .typ, code .typ { color: #89bdff; } /* type - light blue */
-  pre .lit, code .lit { color: #3387CC; } /* literal - blue */
-  pre .pun, code .pun { color: #fff; } /* punctuation - white */
-  pre .pln, code .pln { color: #fff; } /* plaintext - white */
-  pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
-  pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
-  pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
-  pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+.com {
+  color: #969896;
+  font-style: italic; }
 
-  pre.prettyprint, code.prettyprint {
-    background-color: #444;
-  }
+.typ {
+  color: #de935f; }
 
-  ol.linenums > li{
-    color: white;
-  }
+.lit {
+  color: #f0c674; }
+
+.pun {
+  color: #c5c8c6; }
+
+.opn {
+  color: #c5c8c6; }
+
+.clo {
+  color: #c5c8c6; }
+
+.tag {
+  color: #cc6666; }
+
+.atn {
+  color: #f0c674; }
+
+.atv {
+  color: #8abeb7; }
+
+.dec {
+  color: #c5c8c6; }
+
+.var {
+  color: #c82829; }
+
+.fun {
+  color: #cc6666; }
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint {
+  background-color: #1d1f21;
+  padding: 10px;
+  border: 1px solid #E1E1E8; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  color: #969896;
+  margin: 0 0 0 40px; }
+
+ol.linenums li {
+  line-height: 18px;
+  padding-left: 12px; }
 
   /*code {
     background-color: #FEE9CC;
