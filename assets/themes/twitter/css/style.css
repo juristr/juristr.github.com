@@ -492,6 +492,10 @@
     list-style-type: none;
   }
 
+  code, pre {
+    font-family: 'Source Code Pro', sans-serif;
+  }
+
   pre {
     word-wrap: normal;
     word-break: normal;
@@ -589,7 +593,7 @@ ol.linenums li {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    font-family: Monaco,"DejaVu Sans Mono","Courier New",monospace;
+    /*font-family: Monaco,"DejaVu Sans Mono","Courier New",monospace;*/
     font-size: 17px;
     color: #666;
     background-color: #fee9cc;
