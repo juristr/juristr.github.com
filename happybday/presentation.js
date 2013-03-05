@@ -4,7 +4,7 @@ jQuery.fn.wait = function (MiliSeconds) {
 };
 
 
-$(function(){
+$(function() {
   var currentStep = 0,
       steps = $(".js-step"),
       maxSteps = steps.length,
@@ -24,9 +24,13 @@ $(function(){
           }, waitTime);
         }
       };
-
   steps.hide();
-  loop();
+  
+  $('.js-start').click(function(){
+    $('.js-preintro').hide();
+    $('.js-presentation').show();
+    loop();
+  });
 
   $('.js-open-packtl').click(function(){
     steps.hide();

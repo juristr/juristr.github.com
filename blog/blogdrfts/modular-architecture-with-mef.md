@@ -10,11 +10,44 @@ The Managed Extensibility Framework (MEF) is a composition layer for .NET that a
 
 From the [MEF homepage](http://mef.codeplex.com/):
 
-> The Managed Extensibility Framework (MEF) is a composition layer for .NET that improves the flexibility, maintainability and testability of large applications. MEF can be used for third-party plugin extensibility, or it can bring the benefits of a loosely-coupled plugin-like architecture to regular applications. <cite>[http://mef.codeplex.com](http://mef.codeplex.com)</cite>
+> The Managed Extensibility Framework (MEF) is a composition layer for .NET that improves the flexibility, maintainability and testability of large applications. MEF can be used for third-party plugin extensibility, or it can bring the benefits of a loosely-coupled plugin-like architecture to regular applications. <cite><a href="http://mef.codeplex.com">http://mef.codeplex.com</a></cite>
 
-What's particularly interesting is that starting with .NET 4, MEF is natively included in the System.ComponentModel.Composition.dll.
+## What is MEF?
+That's probably the first question you're posing to yourself, at least I did. Or how does it compare with MAF (Managed AddIn Framework)? Is it a IoC (Inversion of Control Container)?
+These are typical questions I had. Here's a a summary which I extracted from various resources I listed below, trying to clarify these kind of issues.
 
-## Basics
+**What is MEF?**  
+MEF is a technology for facilitating the creation of modular applications that can be arbitrarily extended. To enable this, MEF has a build-in discovery process for finding extensions. It is a "plugin-architecture" but goes a little bit further. It is a compositional engine. In traditional plugin systems there tends to be a model where there is a host and extensions which are loaded (typically) through a configuration file. In MEF (due to its compositional nature), extensions can be discovered dynamically and furthermore (what's important), they'll get their dependencies injected by MEF. That allows to even extend an extension itself and it is where the concept of dependency injection comes in.
+
+**Is MEF an IoC Container then?**  
+Kind of, I'd say. MEF was designed to solve a specific set of problems, namely to getting apps to be extensible. Glenn Block (former PM on MEF) explained it this way:
+
+> [...] So again, taking it to a higher leel, it's about you use MEF to really manage a set of unknown things, you use IoC Containers to manage a set of known things. <cite><a href="http://www.hanselminutes.com/148/mef-managed-extensibility-framework-with-glenn-block" rel="nofollow">http://www.hanselminutes.com/148/mef-managed-extensibility-framework-with-glenn-block</a></cite>
+
+The point here is that in a typical IoC Container you have some registrations, like
+
+    builder.RegisterType<TaskController>().As<ITaskController>();
+
+and then you request that dependency on some other place in your system. So you **know very well** what your `ITaskController` will be and where its concrete instance will be.  
+MEF can do this equally, with the difference however, that you potentially **don't know where the concrete instance lives** as it might be added dynamically to your system through an extension.
+
+**What's the difference between MEF and MAF?**  
+MAF (Managed AddIn Framework) is more about focusing on isolation, security and versioning. It appears to be more difficult to use but has advantages of using different app domains to protect your client and to handle versioning between client and host.
+MEF on the other side is more around the concept of composition and simplicity. Another thing that might be quite important from a concept point of view is that MEF (to the contrary of MAF) doesn't clearly distinguish between host and plugin or extension. A host may pull in extension but even extensions themselves can import other extensions.
+
+**Where can I use MEF?**  
+IMHO, one of the advantages of MEF is that it is (since .NET 4) already part of the .NET framework under the System.ComponentModel.Composition.dll. Being integrated at a very low level, your can use it in whatever application you like, even when developing a framework. As such it is not coupled to a specific technology (like ASP or WPF etc..).
+
+### Introductory Resources
+Here are some resources that might help getting started with MEF:
+
+- [MEF MSDN Documentation](http://msdn.microsoft.com/en-us/library/dd460648.aspx)
+- [StackOverflow: Choosing Between MEF and MAF](http://stackoverflow.com/questions/835182/choosing-between-mef-and-maf-system-addin)
+- [Blog Post: MEF and other extensibility options in .Net; Includes videos at the end](http://emcpadden.wordpress.com/2008/12/07/managed-extensibility-framework-and-others/)
+- [Blog Post: MAF and MEF](http://kentb.blogspot.it/2009/02/maf-and-mef.html)
+- [Hanselminutes: Managed Extensibility Framework with Glenn Block](http://www.hanselminutes.com/148/mef-managed-extensibility-framework-with-glenn-block)
+
+## MEF Basics
 
 ### Export and Import
 
@@ -39,6 +72,13 @@ So to define an export, we can write it as follows:
         public IAction MyAction { get; set; }
 
     }
+
+What is important to know is that for **importing a list of dependencies** the `ImportMany` attribute has to be used like
+
+    [ImportMany]
+    public IEnumerable<IAction> Actions { get; set; }
+
+>  An ordinary ImportAttribute attribute is filled by one and only one ExportAttribute. If more than one is available, the composition engine produces an error. <cite>From the official MSDN docs</cite>
 
 ### Catalogs
 
