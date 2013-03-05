@@ -6,7 +6,7 @@ jQuery.fn.wait = function (MiliSeconds) {
 $(function(){
   setTimeout(function(){
     $('.js-hint').show();
-  }, 10000);
+  }, 15000);
 });
 
 $(window).load(function() {
