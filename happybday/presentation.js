@@ -40,4 +40,8 @@ $(window).load(function() {
     steps.hide();
     $('.js-packtl').fadeIn('slow');
   });
+
+  setTimeout(function(){
+    $('.js-hint').show();
+  }, 10000);
 });
