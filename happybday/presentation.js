@@ -32,7 +32,7 @@ $(window).load(function() {
   steps.hide();
 
   $('.js-start')
-    .html('Ok, jetzt clickn :)')
+    .html('Ok, jetzt klickn :)')
     .removeAttr('disabled')
     .removeClass('disabled');
   
