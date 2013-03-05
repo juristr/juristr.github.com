@@ -3,8 +3,7 @@ jQuery.fn.wait = function (MiliSeconds) {
     return this;
 };
 
-
-$(function() {
+$(window).load(function() {
   var currentStep = 0,
       steps = $(".js-step"),
       maxSteps = steps.length,
@@ -25,6 +24,11 @@ $(function() {
         }
       };
   steps.hide();
+
+  $('.js-start')
+    .html('Ok, jetzt clickn :)')
+    .removeAttr('disabled')
+    .removeClass('disabled');
   
   $('.js-start').click(function(){
     $('.js-preintro').hide();
