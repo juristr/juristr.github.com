@@ -33,6 +33,7 @@ $(window).load(function() {
   $('.js-start').click(function(){
     $('.js-preintro').hide();
     $('.js-presentation').show();
+    $('.js-hint').remove();
     loop();
   });
 
