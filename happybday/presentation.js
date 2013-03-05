@@ -3,6 +3,12 @@ jQuery.fn.wait = function (MiliSeconds) {
     return this;
 };
 
+$(function(){
+  setTimeout(function(){
+    $('.js-hint').show();
+  }, 10000);
+});
+
 $(window).load(function() {
   var currentStep = 0,
       steps = $(".js-step"),
@@ -33,7 +39,6 @@ $(window).load(function() {
   $('.js-start').click(function(){
     $('.js-preintro').hide();
     $('.js-presentation').show();
-    $('.js-hint').remove();
     loop();
   });
 
@@ -42,7 +47,5 @@ $(window).load(function() {
     $('.js-packtl').fadeIn('slow');
   });
 
-  setTimeout(function(){
-    $('.js-hint').show();
-  }, 10000);
+  $('.js-hint').remove();
 });
