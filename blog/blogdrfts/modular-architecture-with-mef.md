@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Basics: Modular Architecture with MEF"
+title: "MEF Part 1: The Basics"
 description: ""
 category: bliki
 tags: []
