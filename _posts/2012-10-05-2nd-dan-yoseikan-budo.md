@@ -4,7 +4,7 @@ title: "2nd Dan Yoseikan Budo"
 description: ""
 category: 
 postimg: /blog/assets/imgs/2ndDanDiploma.jpg
-tags: [ personal]
+tags: [ Personal ]
 ---
 {% include JB/setup %}
 
