@@ -439,9 +439,17 @@
 
 
   .post-tag {
-    color: #304955;
+    display: block;
+    float: left;
+    padding: 5px 10px 5px 10px;
+    margin: 4px 5px 5px 0;
+    background: transparent;
+    border: 2px solid #008CCC;
+    border-radius: 999px;    
+    -moz-border-radius: 999px;
     font-size: 13px;
     line-height: 12px;
+    /*color: #304955;
     margin: 2px 2px 6px 0;
     overflow: visible;
     text-decoration: none;
@@ -454,21 +462,27 @@
     border-radius: 10px;
     -webkit-transition: padding 0.1s ease-out;
     -moz-transition: padding 0.1s ease-out;
-    transition: padding 0.1s ease-out;
+    transition: padding 0.1s ease-out;*/
   }
 
   a.post-tag:hover{
-    text-decoration:none;
+    /*text-decoration:none;
     background:#d6f2ff url('/assets/images/sprites.png') no-repeat -220px -296px;
     padding-left:18px;
     -webkit-transition:padding 0.1s ease-in,background-image 0.1s ease-in;
     -moz-transition:padding 0.1s ease-in,background-image 0.1s ease-in;
-    transition:padding 0.1s ease-in,background-image 0.1s ease-in;
+    transition:padding 0.1s ease-in,background-image 0.1s ease-in;*/
+    background:#008CCC;
+    color:#fff;
+    /*border-bottom: 3px solid #008CCC;*/
+    -webkit-transition: background 0.4s linear;
+       -moz-transition: background 0.4s linear;
+            transition: background 0.4s linear;    
   }
 
   .inline-bio {
     border-top: 4px solid #008CCC;
-    margin-top:40px;
+    margin-top:15px;
   }
 
   .inline-bio .bio-author {
