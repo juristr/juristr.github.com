@@ -25,17 +25,16 @@
       </time>
       {{ content }}
     </div>
-    <div class="row-fluid">
-      <!--<div class="span3">-->
 
-      <!--</div>-->
-      <div class="tags">
+    <div class="row-fluid">
+      <div class="span1">
+          <strong>Tags:</strong>
+      </div>
+      <div class="span11 tags">
         {% unless page.tags == empty %}
-          <!--<div class="span9 tags">-->
-              {% for tag in page.tags %}
-                <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
-              {% endfor %}
-          <!--</div>-->
+          {% for tag in page.tags %}
+            <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
+          {% endfor %}
         {% endunless %}
       </div>
     </div>
