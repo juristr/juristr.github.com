@@ -4,7 +4,7 @@ title: "Test Your App Under Slow Network Speeds"
 description: ""
 postimg: /blog/assets/imgs/netlinkconditioner.png
 category:
-reposts: ["http://architects.dzone.com/articles/test-your-app-under-slow"]
+reposts: ["http://architects.dzone.com/articles/test-your-app-under-slow", "http://developer.yahoo.com/blogs/ydn/posts/2013/02/webp-table-partitioning-and-more/"]
 tags: [Software testing, tooling]
 ---
 
