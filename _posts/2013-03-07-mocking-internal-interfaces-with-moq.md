@@ -4,6 +4,7 @@ title: "Mocking Internal Interfaces with Moq"
 description: ""
 category:
 tags: [Unit Testing]
+reposts: ["http://dotnet.dzone.com/articles/mocking-internal-interfaces"]
 ---
 
 When creating some Class Library you should pay attention to the visibility of its members and have a clear vision of what you'd like to expose to its users and what on the other side should be hidden. When writing unit tests against such assemblies however, you obviously want to test everything, from the internal members to the externally exposes parts.
