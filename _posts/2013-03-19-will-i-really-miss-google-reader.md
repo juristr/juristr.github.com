@@ -51,6 +51,8 @@ The mobile clients look modern and clean and a big plus is that you can navigate
 
 Note that although the video demoes the iOS app, the Android one is exactly the same (due to the HTML5 approach of building it).
 
+A **negative** thing about Feedly for Android is its missing offline support. So far, when you start Feedly without an active connection, you'll get logged out. [Offline functionality is an extremely](https://getsatisfaction.com/feedly/topics/can_feedly_be_viewed_offline) important feature for a news reader as - most often especially when I don't have any active connection - I'd like to read through my feeds (that have been synched previously). If you like that as well, [go and vote this feature](https://getsatisfaction.com/feedly/topics/offline_support_for_mobile)!
+
 ### Customize it The Way You Like
 
 It has tons of customization possibilities. Starting from the background, font or the way articles are being presented.
@@ -80,4 +82,6 @@ Sounds like they have me already, right? Not yet, but I'm quite satisfied in usi
 
 Sure, I'm also missing some features like "Search" and there will come up a couple more when using Feedly for some weeks. But there's a [team behind which is working hard on improving the service](http://blog.feedly.com/) with the interest to become the best news reader app available and that makes hope for new amazing features to come soon.
 
-Lets see in a couple of weeks/months on whether I'll really miss Google Reader.
+As mentioned, one thing that puzzles me a bit is the missing offline capabilities of the Android client, so Feedly team, get that done soon ;). Vote for that feature [here](https://getsatisfaction.com/feedly/topics/offline_support_for_mobile) if you'd enjoy that as well.
+
+So let's see in a couple of weeks/months on whether I'll really miss Google Reader.
