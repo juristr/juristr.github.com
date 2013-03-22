@@ -19,6 +19,60 @@ This is the 2nd part in a series of MEF posts:
 - Command Pattern
 - Memento Pattern
 
+### Generic Commands
+
+    public class GenericCommand : ICommand
+    {
+        private Action execAction;
+        private Action undoAction;
+
+        public GenericCommand(Action execAction, Action undoAction)
+        {
+            this.execAction = execAction;
+            this.undoAction = undoAction;
+        }
+
+        public void Execute()
+        {
+            execAction.Invoke();
+        }
+
+        public void Undo()
+        {
+            undoAction.Invoke();
+        }
+
+        public string Description
+        {
+            get { return "Generic Action"; }
+        }
+    }
+
+Usage example
+
+    private void buttonOk_Click(object sender, EventArgs e)
+    {
+        var text = textBoxValue.Text;
+
+        if (!String.IsNullOrEmpty(text))
+        {
+            CommandHandler.Execute(
+                new GenericCommand(
+                    () =>
+                    {
+                        Values.Add(text);
+                    },
+                    () =>
+                    {
+                        Values.Remove(text);
+                    }));
+            textBoxValue.Text = "";
+        }
+
+        textBoxValue.Focus();
+    }
+
+
 ## Considerations
 
 - Limit stack size
@@ -28,6 +82,15 @@ This is the 2nd part in a series of MEF posts:
 
 http://pwlodek.blogspot.it/2010/12/introduction-to-interceptingcatalog.html
 
+    [Export(typeof(IGenericContractRegistry))]
+    public class GenericContractRegistry : GenericContractRegistryBase
+    {
+        protected override void Initialize()
+        {
+            Register(typeof(IUndoRedoStack<>), typeof(UndoRedoStack<>));
+            Register(typeof(IPublicUndoRedoStack<>), typeof(UndoRedoStack<>));
+        }
+    }
 
 ## Handling Context Switch
 Consider the case where you have - say - two windows on your screen: win1 and win2. They are potentially part of different plugins, so they don't know each other. However, they both make use of the undo/redo functionality. What happens if a command in the history targets win1 and then there follow some commands of win2. If I now close win1 (assume that's possible). What should happen to that specific command in the history??
@@ -46,4 +109,30 @@ What's now interesting is what happens when I delete "Sheet1".
 
 By again, looking at the stack, we see that the 1st executed action, namely the writing of "Hi there" in Sheet1 is no more present in the stack. It has been removed. That means our commands or actions need to somehow know their context or area within which they have been executed and moreover they need to be informed when that context is no more available.
 
+## Recreatable UserControl Parts
+When you create plugins that contribute to the UI you also want to be able to correctly handle their lifecycle, that is, to properly dispose them when the window is being closed or removed.
+
+### ExportFactory
+
+Having an import like
+
+    [Import(typeof(ValueControl), RequiredCreationPolicy=CreationPolicy.NonShared)]
+    public ExportFactory<ValueControl> View { get; set; }
+
+..resulted in the following exception.
+
+    The export 'WinFormsClientApplication.ValueModule.ValueControl (ContractName="WinFormsClientApplication.ValueModule.ValueControl")' is not assignable to type 'System.ComponentModel.Composition.ExportFactory`1[[WinFormsClientApplication.ValueModule.ValueControl, WinFormsClientApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+
+First of all, you need to make sure you registered the `ExportFactoryProvider`:
+
+    mainCatalog = new AggregateCatalog(...);
+
+    var exportFactoryProvider = new ExportFactoryProvider();
+    container = new CompositionContainer(mainCatalog, exportFactoryProvider);
+    exportFactoryProvider.SourceProvider = container;
+
+Furthermore it seems like specifying the concrete type in the `[Import]` doesn't work and as such the above mentioned import declaration has to be changed to the following
+    
+    [Import]
+    public ExportFactory<ValueControl> View { get; set; }
 
