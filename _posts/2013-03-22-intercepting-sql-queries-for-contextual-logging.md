@@ -5,6 +5,7 @@ description: ""
 category: 
 postimg: "/blog/assets/imgs/sqlquerybg.png"
 tags: [.net, Entity Framework]
+reposts: ["http://sql.dzone.com/articles/entity-framework-intercepting"]
 ---
 
 Proper logging is of major importance and a must have in any serious application. Writing logs is trivial and is already done successfully by a couple of open source libraries. But that's just the first step in successful application logging. The far more difficult part is to have proper metrics in place that aggregate the relevant information in a proper way and provide the necessary contextual information for being able to reproduce problems. This is the only way to prevent you from being flooded with useless waste.

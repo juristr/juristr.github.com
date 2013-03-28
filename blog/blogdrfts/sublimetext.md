@@ -6,6 +6,8 @@ category: bliki
 tags:
 ---
 
+> **Note**, if there is no hint about the installation of a plugin, you can simply use Package Control for adding the extension to Sublime Text.
+
 ## Package Control
 
 Url: [http://wbond.net/sublime_packages/package_control](http://wbond.net/sublime_packages/package_control)
@@ -34,9 +36,7 @@ Simply press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the Sublime M
 
 Url: [https://github.com/sergeche/emmet-sublime](https://github.com/sergeche/emmet-sublime)
 
-### Installation
-
-Using Package Control
+Emmet adds zen-coding capabilities to Sublime Text.
 
 ### Usage
 
@@ -46,11 +46,7 @@ Please refer to [https://github.com/sergeche/emmet-sublime#available-actions](ht
 
 Url: [https://bitbucket.org/CDuke/sublime-tfs/wiki/Home](https://bitbucket.org/CDuke/sublime-tfs/wiki/Home)
 
-Sublime TFS allows to directly interact with your TFS version control system.
-
-### Installation
-
-Using Package Control.
+Sublime TFS integrates Sublime and your TFS version control system.
 
 ### Usage
 
@@ -60,6 +56,20 @@ After successful installation of the plugin, you should see a "TFS" menu which i
 
 Url: [https://github.com/sobstel/SyncedSideBar](https://github.com/sobstel/SyncedSideBar)
 
-### Installation
+SynchedSidebar syncs the sidebar with the currently active text editor window, basically selecting the file in the sidebar view.
 
-Using Package Control.
+## Sidebar Enhancements
+
+Url: [https://github.com/titoBouzout/SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
+
+Adds nice functionality to the context menu of the sidebar like
+
+- Copy Path
+- Duplicate file
+- Move
+- Copy
+- ...
+
+## SublimeLinter
+
+Url: [https://github.com/SublimeLinter/SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
