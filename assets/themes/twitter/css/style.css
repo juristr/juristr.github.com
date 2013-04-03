@@ -4,6 +4,39 @@
     color: black;
   }
 
+
+  .post-meta {
+      font-weight: 700;
+      border-bottom: 1px solid #dededc;
+      padding-bottom: 12px;
+      color: #b3b3b1;
+      font-size: 12px;
+      margin-bottom: 21px;
+      line-height:1;
+  }
+
+  .post-meta a {
+      color: #57ad68;
+      text-decoration: none;
+      text-transform: uppercase
+  }
+
+  .post-meta a:hover {
+      color: #468c54
+  }
+
+  .post-meta .divider-word {
+      font-weight: 400;
+      font-style: italic;
+      margin: 0 5px
+  }
+
+
+
+
+
+
+
   html, body, button, input, select, textarea {
     /*font-size: 20px;*/
     /*color: #57534A !important;*/
@@ -281,13 +314,13 @@
     padding-left:5px;
   }
 
-  .post h1,h2,h3 {
+  /*.post h1,h2,h3 {
     margin: 40px -30px 15px -30px;
     padding: 15px 30px 15px 23px;
     text-transform: uppercase;
-  }
+  }*/
 
-  .post h1 {
+/*  .post h1 {
     border-left: 7px solid #eee;
   }
 
@@ -297,12 +330,13 @@
 
   .post h3 {
     border-left: 3px solid #eee;
-  }
+  }*/
 
   article h1 {
-    font-size:30px;
+    font-size: 48px;
+    font-weight:700 !important;
     margin-bottom:0;
-    line-height:30px;
+    line-height: 1.1;
     padding-bottom:5px;
   }
 
@@ -318,7 +352,7 @@
   }
 
   article h1, h2, h3 {
-    font-weight: 400;
+    font-weight: 600;
   }
 
   article h2, h3{
@@ -327,7 +361,6 @@
 
   .article-body {
     padding-top:10px;
-    text-align: justify;
   }
 
   .article-body p:nth-child(2) {
