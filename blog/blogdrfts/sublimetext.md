@@ -73,3 +73,20 @@ Adds nice functionality to the context menu of the sidebar like
 ## SublimeLinter
 
 Url: [https://github.com/SublimeLinter/SublimeLinter](https://github.com/SublimeLinter/SublimeLinter)
+
+## DocBlockr
+
+Url: [https://github.com/spadgos/sublime-jsdocs](https://github.com/spadgos/sublime-jsdocs)
+
+Allows to easily comment your code. Creates something like this:
+
+    /**
+     * [testFunction description]
+     * @param  {[type]} param1
+     * @param  {[type]} param2
+     * @return {[type]}
+     */
+    testFunction : function(param1, param2) {
+         
+    }
+    
