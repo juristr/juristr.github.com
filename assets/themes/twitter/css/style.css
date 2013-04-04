@@ -205,12 +205,6 @@
     text-align: center;
   }
 
-  .post .post-date {
-    display: inline;
-    padding-right: 5px;
-    margin-top:5px;
-  }
-
   .post-meta {
       font-weight: 700;
       border-bottom: 1px solid #dededc;
@@ -229,6 +223,18 @@
 
   .post-meta a:hover {
       color: #468c54
+  }
+
+  .post-meta .divider-word {
+      font-weight: 400;
+      font-style: italic;
+      margin: 0 5px
+  }
+
+  .post .post-date {
+    display: inline;
+    padding-right: 5px;
+    margin-top:5px;
   }
 
   h1, h2, h3 {
