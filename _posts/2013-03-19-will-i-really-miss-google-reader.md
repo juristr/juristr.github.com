@@ -4,6 +4,7 @@ title: "Will I really Miss Google Reader??"
 description: ""
 category:
 postimg: /blog/assets/imgs/feedlywebsite.png
+show_img_in_detail: true
 tags: [interesting apps]
 ---
 

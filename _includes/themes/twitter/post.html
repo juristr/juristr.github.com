@@ -1,5 +1,22 @@
 <section class="span12 main-content post">
+
   <article class="span8">
+    <div class="span12" style="margin-bottom:15px; text-align:center">
+      {% if page.postimg != nil and page.show_img_in_detail == true %}
+        <img src="{{page.postimg}}" />
+      {% endif %}
+    </div>
+    <div class="post-meta clearfix">
+      <span class="post-meta-author">
+        <a href="/about" class="post-author">Juri</a>
+        <span class="divider-word">on</span>
+      </span>
+      {% unless page.tags == empty %}
+        {% for tag in page.tags %}
+          <a href="/blog/tags#{{tag}}" style="margin-right:10px;">{{ tag }}</a>
+        {% endfor %}
+      {% endunless %}    
+    </div>
     <h1>
       {{ page.title }}
     </h1>

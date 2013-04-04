@@ -136,6 +136,14 @@
     /*padding-top: 30px;*/
   }
 
+  .post-list h1,h2,h3 {
+    font-weight:400;
+  }
+
+  .post-list h1 {
+    font-size: 30px;
+  }
+
   ul.post-list{
     margin:0;
   }
@@ -197,6 +205,32 @@
     text-align: center;
   }
 
+  .post-meta {
+      font-weight: 700;
+      border-bottom: 1px solid #dededc;
+      padding-bottom: 12px;
+      color: #b3b3b1;
+      font-size: 12px;
+      margin-bottom: 21px;
+      line-height:1;
+  }
+
+  .post-meta a {
+      color: #57ad68;
+      text-decoration: none;
+      text-transform: uppercase
+  }
+
+  .post-meta a:hover {
+      color: #468c54
+  }
+
+  .post-meta .divider-word {
+      font-weight: 400;
+      font-style: italic;
+      margin: 0 5px
+  }
+
   .post .post-date {
     display: inline;
     padding-right: 5px;
@@ -205,7 +239,7 @@
 
   h1, h2, h3 {
     color: #423F37;
-    font-weight: 600;
+    /*font-weight: 600;*/
   }
 
   .nav .home {
@@ -275,19 +309,19 @@
   article figcaption {
     display: block;
     line-height: 1.2;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #A19C91;
     font-style: italic;
     padding-left:5px;
   }
 
-  .post h1,h2,h3 {
+  /*.post h1,h2,h3 {
     margin: 40px -30px 15px -30px;
     padding: 15px 30px 15px 23px;
     text-transform: uppercase;
-  }
+  }*/
 
-  .post h1 {
+/*  .post h1 {
     border-left: 7px solid #eee;
   }
 
@@ -297,12 +331,13 @@
 
   .post h3 {
     border-left: 3px solid #eee;
-  }
+  }*/
 
   article h1 {
-    font-size:30px;
+    font-size: 48px;
+    font-weight:700;
     margin-bottom:0;
-    line-height:30px;
+    line-height: 1.1;
     padding-bottom:5px;
   }
 
@@ -318,7 +353,7 @@
   }
 
   article h1, h2, h3 {
-    font-weight: 400;
+    font-weight: 600;
   }
 
   article h2, h3{
@@ -327,7 +362,7 @@
 
   .article-body {
     padding-top:10px;
-    text-align: justify;
+    color: #333332;
   }
 
   .article-body p:nth-child(2) {
