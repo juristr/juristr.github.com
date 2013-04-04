@@ -1,6 +1,11 @@
 <section class="span12 main-content post">
 
   <article class="span8">
+    <div class="span12" style="margin-bottom:15px">
+      {% unless page.postimg == nil %}
+        <img src="{{page.postimg}}" />
+      {% endunless %}
+    </div>
     <div class="post-meta clearfix">
       <span class="post-meta-author">
         <a href="/about" class="post-author">Juri</a>
