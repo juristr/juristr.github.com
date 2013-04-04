@@ -4,6 +4,7 @@ title: "DZone MVB Goodies Box"
 description: ""
 category: 
 postimg: /blog/assets/imgs/dzonebox.jpg
+show_img_in_detail: true
 tags: []
 ---
 {% include JB/setup %}
