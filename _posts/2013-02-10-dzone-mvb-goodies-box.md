@@ -10,8 +10,6 @@ tags: []
 
 Yesterday morning I received a nice little box with a DZone label on it. Seems like they sent it to me as part of the [MVB program](/blog/2012/04/joining-dzone-mvb-program/) I recently joined. What a surprise! Opening the package...
 
-![](/blog/assets/imgs/dzonebox.jpg)
-
 ...unveiled a nice letter:
 
 <div class="row-fluid">
