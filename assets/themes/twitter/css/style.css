@@ -196,9 +196,6 @@
     font-size: 20px;
     /*color: #C7C2B8;*/
     color: #999 !important;
-    text-transform: uppercase;
-    /*background: url(/assets/images/icon_date.gif) 0 3px no-repeat;*/
-    /*padding-left: 22px;*/
   }
 
   .post-list .post-date {
@@ -206,11 +203,11 @@
   }
 
   .post-meta {
-      font-weight: 700;
+      font-weight: bold;
       border-bottom: 1px solid #dededc;
       padding-bottom: 12px;
       color: #b3b3b1;
-      font-size: 12px;
+      font-size: 13px;
       margin-bottom: 21px;
       line-height:1;
   }
