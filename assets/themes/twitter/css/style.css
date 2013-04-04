@@ -4,39 +4,6 @@
     color: black;
   }
 
-
-  .post-meta {
-      font-weight: 700;
-      border-bottom: 1px solid #dededc;
-      padding-bottom: 12px;
-      color: #b3b3b1;
-      font-size: 12px;
-      margin-bottom: 21px;
-      line-height:1;
-  }
-
-  .post-meta a {
-      color: #57ad68;
-      text-decoration: none;
-      text-transform: uppercase
-  }
-
-  .post-meta a:hover {
-      color: #468c54
-  }
-
-  .post-meta .divider-word {
-      font-weight: 400;
-      font-style: italic;
-      margin: 0 5px
-  }
-
-
-
-
-
-
-
   html, body, button, input, select, textarea {
     /*font-size: 20px;*/
     /*color: #57534A !important;*/
@@ -169,6 +136,14 @@
     /*padding-top: 30px;*/
   }
 
+  .post-list h1,h2,h3 {
+    font-weight:400;
+  }
+
+  .post-list h1 {
+    font-size: 30px;
+  }
+
   ul.post-list{
     margin:0;
   }
@@ -236,9 +211,29 @@
     margin-top:5px;
   }
 
+  .post-meta {
+      font-weight: 700;
+      border-bottom: 1px solid #dededc;
+      padding-bottom: 12px;
+      color: #b3b3b1;
+      font-size: 12px;
+      margin-bottom: 21px;
+      line-height:1;
+  }
+
+  .post-meta a {
+      color: #57ad68;
+      text-decoration: none;
+      text-transform: uppercase
+  }
+
+  .post-meta a:hover {
+      color: #468c54
+  }
+
   h1, h2, h3 {
     color: #423F37;
-    font-weight: 600;
+    /*font-weight: 600;*/
   }
 
   .nav .home {
@@ -334,7 +329,7 @@
 
   article h1 {
     font-size: 48px;
-    font-weight:700 !important;
+    font-weight:700;
     margin-bottom:0;
     line-height: 1.1;
     padding-bottom:5px;
