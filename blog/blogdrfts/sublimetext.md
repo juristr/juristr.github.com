@@ -90,3 +90,9 @@ Allows to easily comment your code. Creates something like this:
          
     }
     
+
+## Pretty Json
+
+Url: [https://github.com/dzhibas/SublimePrettyJson](https://github.com/dzhibas/SublimePrettyJson)
+
+Prettifies a compressed JSON string in the editor.
