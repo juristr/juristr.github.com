@@ -4,11 +4,9 @@ title: "Retrospective 2012"
 description: ""
 category: 
 postimg: /blog/assets/imgs/new-years-eve.jpg
+show_img_in_detail: true
 tags: [Blogging]
 ---
-{% include JB/setup %}
-
-![](/blog/assets/imgs/new-years-eve.jpg)
 
 Yes we're still [alive](https://www.google.com/search?q=21.12.2012) ;) No jokes apart, it's time for a year retrospective.
 

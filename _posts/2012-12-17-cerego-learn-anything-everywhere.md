@@ -4,11 +4,11 @@ title: "Cerego - Learn Anything, Everywhere"
 description: ""
 category: 
 postimg: /blog/assets/imgs/ceregoslogan.png
+show_img_in_detail: true
 tags: []
 reposts: ["http://www.dzone.com/articles/cerego-learn-anything-anywhere"]
 ---
-{% include JB/setup %}
-![](/blog/assets/imgs/ceregoslogan.png)
+
 It's now roughly 2 years I'm out of university. While also at may day-to-day job I cannot and don't want to stop learning and getting better, the time at the university was probably the most intense in terms of studying and learning. As a dev I'm continuously seeking for automation possibilities, so also to what regards my studying system.
 
 Already at the first years of my bachelor study period I started to think about how I could automate my learning process. I mean, it's always nearly the same. You have a given problem and you have to verify whether your brain has a good answer for it.
