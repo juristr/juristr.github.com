@@ -21,11 +21,9 @@ Consider for example GitHub's site:
     <figcaption>Some potential widgets of the GitHub site</figcaption>
 </figure>
 
-I just quickly went over its UI and the marked regions "might" possibly be independent widgets (but I'm sure there are even more than those). 
+I just quickly went over its UI and marked the regions that "might" possibly be independent widgets. I just highlighted some of the most obvious ones (but there are obviously a lot more than those).
 
-Separating your application into smaller parts is essential for keeping your architecture clean, reusable and mainly maintainable. The principle is a known concept in computer science: "divide and conquer". 
-
-Smaller parts have
+Separating your application into smaller parts is essential for keeping your architecture clean, reusable and mainly maintainable. The principle is a known concept in computer science: "divide and conquer". Divide everything up into smaller parts which have
 
 - lower complexity
 - are easier to test
@@ -33,6 +31,7 @@ Smaller parts have
 - cause less headaches
 - (etc...)
 
+and then compose them again together to form the whole application.
 
 ## But Wait: My Widgets Have to Communicate!
 
