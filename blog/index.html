@@ -4,9 +4,9 @@ title: Juri's TechBlog
 current: blog
 ---
 <div class="post-list">
-  <div id="myCarousel" class="carousel slide">
+  <div id="myCarousel" class="">
     <div class="carousel-inner">
-      {% for post in site.posts limit:3 %}
+      {% for post in site.posts limit:1 %}
         <div class="item {% if forloop.first %} active {% endif %} {% if post.postimg == nil %} noimage {% endif %}">
           <img src="{{post.postimg}}" />
           <div class="carousel-caption">
@@ -17,12 +17,12 @@ current: blog
       {% endfor %}
     </div>
     <!-- Carousel nav -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
   </div>
   <hr/>
   <div class="post-list-inner">
-    {% for post in site.posts %}
+    {% for post in site.posts offset:1 %}
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
       {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
       {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
