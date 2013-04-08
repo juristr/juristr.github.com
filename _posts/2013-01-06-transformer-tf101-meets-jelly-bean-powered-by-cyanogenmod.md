@@ -5,12 +5,11 @@ description: ""
 category: bliki
 tags: [Android]
 postimg: /blog/assets/imgs/cmjellybean.png
+show_img_in_detail: true
 reposts: ["http://mobile.dzone.com/articles/transformer-tf101-meets-jelly"]
 ---
 {% include JB/setup %}
 During the Christmas holidays I found a bit of time to upgrade my old (but still nicely working) Nexus One to CyanogenMod 7 and I'm really happy about that. Today I decided to give my Asus Transformer TF101 a go as well.
-
-![](/blog/assets/imgs/cmjellybean.png)
 
 The problem is that apparently the TF101 doesn't get the update to Jelly Bean and I definitely didn't want to miss it, so [CM](http://www.cyanogenmod.org/) is the best available option. Unfortunately it turned out that rooting and flashing the Transformer TF101 isn't as smooth as I thought and it involved quite a lot of reading through forums till I managed to get it working on my device. As such, this post is intended to provide you with the right information in order to save you some time (and nerves) while upgrading to CyanogenMod.
 

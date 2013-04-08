@@ -3,9 +3,10 @@
   <article class="span8">
     {% if page.postimg != nil and page.show_img_in_detail == true %}
       <div class="span12" style="margin-bottom:15px; text-align:center">
-          <img src="{{page.postimg}}" />
+          <img src="{{page.postimg}}" style="width:100%" />
       </div>
     {% endif %}
+
     <div class="post-meta clearfix">
       <span class="post-meta-author">
         <a href="/about" class="post-author">Juri</a>

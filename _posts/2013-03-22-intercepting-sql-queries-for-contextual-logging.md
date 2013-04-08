@@ -4,6 +4,7 @@ title: "Entity Framework: Intercepting SQL Queries for Contextual Logging"
 description: ""
 category: 
 postimg: "/blog/assets/imgs/sqlquerybg.png"
+show_img_in_detail: true
 tags: [.net, Entity Framework]
 reposts: ["http://sql.dzone.com/articles/entity-framework-intercepting"]
 ---
