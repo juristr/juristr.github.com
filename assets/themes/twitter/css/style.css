@@ -237,6 +237,7 @@
   }
 
   .post-headerline {
+    display:table !important;
     margin-bottom:15px;
     text-align:center;
     background: #393D48;
@@ -246,7 +247,8 @@
   }  
 
   .post-headerline .title {
-    padding-top: 100px;
+    display:table-cell;
+    vertical-align: middle;
     color: #d7ceb2;
     text-shadow: 3px 3px 0 #2c2e38, 5px 5px 0 #5c5f72;
     font: 80px 'BazarMedium';
