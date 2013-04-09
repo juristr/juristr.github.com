@@ -80,17 +80,69 @@ Usage example
 
 ## Open Generics Support
 
-http://pwlodek.blogspot.it/2010/12/introduction-to-interceptingcatalog.html
+Open Generics mechanism is commonly supported among dependency injection containers and it is the ability to specify an "open generic"-dependencies which then gets resolved to a concrete dependency at runtime. Consider for instance the following definition of an interface for a repository:
+
+    public interface IRepository<TItem> where TItem:new()
+    {
+        ...
+    }
+
+Of course the interface uses generics as I don't exactly know which kind of object it is going to operate upon. I then usually have a - again **generic** - implementation of such interface:
+
+    public class Repository<TItem> : IRepository<TItem> where TItem : new()
+    {
+        ...
+    }
+
+In order to use such repository in MEF I'd like to import it, but this time as a **concrete** instance because I know which kind of repository I need. For instance
+
+    public class MyOrderView
+    {
+        
+        [Import]
+        public IRepository<Order> OrderRepository { get; set; }
+
+    }
+
+As you can see, I specify an import of my generic `IRepository`, specifying this time however the concrete type of object my generic repository should operate upon. 
+
+To make this work in MEF I can simply put the right export statement on the `Repository<TItem>` implementation:
+
+    [Export(typeof(IRepository<>))]
+    public class Repository<TItem> : IRepository<TItem> where TItem : new()
+    { ... }
+
+> **Note:** This works only starting from .Net 4.5 onwards. MEF does not have any support for open generics in the version that ships with .Net 4. See below on how to overcome this issue.
+
+### Open Generics with MEF in .Net 4
+
+As mentioned above, native support for open generics is only available starting from .Net 4.5. If for some reason your project can't upgrade (such stupid reasons exist from now and then), there is a workaround for this. On GitHub there is a project called **[MefContrib](https://github.com/MefContrib/MefContrib)** which allows you to hook in support, although it's not that comfortable.
+
+**Step 1 is to get a reference to the MefContrib** project which can be fetched from NuGet. Simply type
+
+    PM> Install-Package MefContrib
+
+**Step 2 is to define a GenericContractRegistry** where you register all of the open generic types. For the example of our Repository type above this would look like
 
     [Export(typeof(IGenericContractRegistry))]
     public class GenericContractRegistry : GenericContractRegistryBase
     {
         protected override void Initialize()
         {
-            Register(typeof(IUndoRedoStack<>), typeof(UndoRedoStack<>));
-            Register(typeof(IPublicUndoRedoStack<>), typeof(UndoRedoStack<>));
+            Register(typeof(IRepository<>), typeof(Repository<>));
         }
     }
+
+**Step 3 is to adjust your bootstrapper** accordingly. That means you need to adjust the creation of your MEF `CompositionContainer`. For example:
+
+    var aggregateCatalog = new AggregateCatalog(new AssemblyCatalog(typeof(Program).Assembly));
+    aggregateCatalog.Catalogs.Add(new TypeCatalog(typeof(GenericTypeRegistry)));
+
+    var genericCatalog = new GenericCatalog(aggregateCatalog);
+
+    var compositionContainer = new CompositionContainer(genericCatalog);
+
+Note the registration of the GenericContractRegistry class from before and the `GenericCatalog` which takes the whole `AggregateCatalog` for then passing it to the `CompositionContainer`.
 
 ## Handling Context Switch
 Consider the case where you have - say - two windows on your screen: win1 and win2. They are potentially part of different plugins, so they don't know each other. However, they both make use of the undo/redo functionality. What happens if a command in the history targets win1 and then there follow some commands of win2. If I now close win1 (assume that's possible). What should happen to that specific command in the history??
