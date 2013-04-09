@@ -6,7 +6,11 @@
           <img src="{{page.postimg}}" style="width:100%" />
       </div>
     {% endif %}
-
+    {% if page.postheadline != nil %}
+      <div class="span12 post-headerline">
+        <p class="title">{{ page.postheadline }}</p>
+      </div>
+    {% endif %}
     <div class="post-meta clearfix">
       <span class="post-meta-author">
         <a href="/about" class="post-author">Juri</a>

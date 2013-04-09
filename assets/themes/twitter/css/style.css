@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'BazarMedium';
+  src: url('/assets/fonts/Bazar.ttf') format('truetype');
+  /*font-weight: normal;
+  font-style: normal;*/
+}
+
+
 @media screen {
   body {
     /*background-color: #e8e8e8;*/
@@ -226,6 +234,26 @@
       font-weight: 400;
       font-style: italic;
       margin: 0 5px
+  }
+
+  .post-headerline {
+    display:table !important;
+    margin-bottom:15px;
+    text-align:center;
+    background: #393D48;
+    height: 370px;
+    vertical-align: middle;
+    margin-left: 0;
+  }  
+
+  .post-headerline .title {
+    display:table-cell;
+    vertical-align: middle;
+    color: #d7ceb2;
+    text-shadow: 3px 3px 0 #2c2e38, 5px 5px 0 #5c5f72;
+    font: 80px 'BazarMedium';
+    letter-spacing: 10px;
+    text-transform: uppercase;    
   }
 
   .post .post-date {
