@@ -63,6 +63,9 @@ task :post do
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
+    post.puts 'postimg: "/blog/assets/imgs/XXXX.png"'
+    post.puts 'show_img_in_detail: false'
+    post.puts 'postheadline: ""'    
     post.puts "category: "
     post.puts "tags: []"
     post.puts "---"
