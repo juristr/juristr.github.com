@@ -1,11 +1,16 @@
 <section class="span12 main-content post">
 
   <article class="span8">
-    <div class="span12" style="margin-bottom:15px; text-align:center">
-      {% if page.postimg != nil and page.show_img_in_detail == true %}
+    {% if page.postimg != nil and page.show_img_in_detail == true %}
+      <div class="span12" style="margin-bottom:15px; text-align:center">      
         <img src="{{page.postimg}}" style="width:100%" />
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
+    {% if page.postheadline != nil %}
+      <div class="span12 post-headerline">
+        <p class="title">{{ page.postheadline }}</p>
+      </div>
+    {% endif %}
     <div class="post-meta clearfix">
       <span class="post-meta-author">
         <a href="/about" class="post-author">Juri</a>

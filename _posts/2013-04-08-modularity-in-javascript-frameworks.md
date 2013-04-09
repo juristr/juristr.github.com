@@ -6,6 +6,7 @@ postimg: /blog/assets/imgs/jmvc_observer.png
 show_img_in_detail: true
 category: 
 tags: [JavaScript, Software Architecture]
+reposts: ["http://architects.dzone.com/articles/modularity-javascript-mvc"]
 ---
 
 JavaScript MVC architectures are a de-facto standard when you create complex single-page JavaScript applications. But it doesn't stop here. MVC helps to separate reponsibilities for coordinating the data (model) and visualization (view), but it doesn't have a concept for coordination among an application's modules or widgets as you might call them.
