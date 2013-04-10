@@ -9,7 +9,7 @@ tags: []
 
 Today I deployed a webapp on our dev server and bam, YSOD:
 
-<pre class="noprettyprint">
+<pre class="nohighlight">
 Could not load file or assembly 'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e, Retargetable=Yes' or one of its dependencies. The given assembly name or codebase was invalid. (Exception from HRESULT: 0x80131047)
 </pre>
 
