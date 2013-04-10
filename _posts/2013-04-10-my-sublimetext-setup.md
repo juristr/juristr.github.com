@@ -2,7 +2,8 @@
 layout: post
 title: "My Sublime Text Setup"
 description: ""
-postheadline: "Sublime rocks!"
+postimg: "/blog/assets/imgs/sublimecode_background.png"
+show_img_in_detail: true
 category: "bliki"
 tags: [tooling]
 ---
