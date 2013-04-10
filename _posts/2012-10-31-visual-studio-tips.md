@@ -15,6 +15,7 @@ At work, I spend a huge amount of my time working with Microsoft Technologies. A
 
 - [ASP.net and Web Tools 2012](http://www.asp.net/vnext)
 - [MultiEdit](http://visualstudiogallery.msdn.microsoft.com/2beb9705-b568-45d1-8550-751e181e3aef)
+- [Productivity Power Tools 2013](http://visualstudiogallery.msdn.microsoft.com/3a96a4dc-ba9c-4589-92c5-640e07332afd)
 
 ## Keystrokes
 Here are my preferred keystrokes. Note, keystrokes separated by a comma mean you have to use them in sequence in order to activate the command.  
