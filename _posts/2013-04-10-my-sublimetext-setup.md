@@ -6,6 +6,7 @@ postimg: "/blog/assets/imgs/sublimecode_background.png"
 show_img_in_detail: true
 category: "bliki"
 tags: [tooling]
+reposts: ["http://architects.dzone.com/articles/my-sublime-text-setup"]
 ---
 
 I absolutely love this editor. A ridiculously fast editor which has everything you'd love to have from a simple notepad to an advanced, extensible IDE with auto-completion, highlighting to whatever you'd like to have. This post aims at mainly being a setup reference for myself.
