@@ -4,7 +4,7 @@ title: "Git Explained: For Beginners"
 description: ""
 postimg: "/blog/assets/imgs/XXXX.png"
 show_img_in_detail: false
-postheadline: "Git For Beginners"
+postheadline: "> git init"
 category:
 tags: [Git]
 ---
