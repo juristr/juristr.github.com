@@ -70,6 +70,11 @@ As can be seen, there is no direct relationship or communication among the modul
 
 > The observer pattern is different than pub/sub because it maintains state. We almost always favor the observer pattern over pub/sub in our applications. <cite>Justin Meyer (Founder of Bitovi and JavaScriptMVC)</cite>
 
+<figure>
+    <img src="http://localhost:4000/blog/assets/imgs/jmvc_observer.png" />
+    <figcaption>Interaction using Observer pattern</figcaption>
+</figure>
+
 The Observer pattern
 
 ## Resources

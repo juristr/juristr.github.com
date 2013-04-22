@@ -178,3 +178,131 @@ Lets change and commit it on master as well (this will generate a nice _conflict
 Our tree now visualizes the branch:
 
 ![](/blog/assets/imgs/gitrepo_tree4.png)
+
+## Merging
+
+The next step would be to merge our feature branch back into `master`. This is done by using the merge command
+
+    $ git merge my-feature-branch
+    Auto-merging hallo.txt
+    CONFLICT (content): Merge conflict in hallo.txt
+    Automatic merge failed; fix conflicts and then commit the result.    
+
+As expected, we have a merge conflict in `hallo.txt`.
+
+    Hello, world!
+    <<<<<<< HEAD
+    Hi I was changed in master
+    =======
+    Hi
+    >>>>>>> my-feature-branch
+
+Lets resolve it:
+
+    Hello, world!
+    Hi I was changed in master
+    Hi
+
+..and then commit it
+
+    $ git commit -a -m "resolve merge conflicts"
+    [master 6834fb2] resolve merge conflicts
+
+The tree reflects our merge.
+
+<figure>
+    <img src="/blog/assets/imgs/gitrepo_tree5.png" />
+    <figcaption>Fig 1: Tree state after the merge</figcaption>
+</figure>
+
+## Jumping to a certain commit
+
+Lets assume we want to jump back to a given commit. We can use the `git log` command to get all the SHA identifiers that uniquely identify each node in the tree.
+
+    $ git log
+    commit 6834fb2b38d4ed12f5486ebcb6c1699fe9039e8e
+    Merge: c8616db 2fa266a
+    Author: = <juri.strumpflohner@gmail.com>
+    Date:   Mon Apr 22 23:19:32 2013 +0200
+
+        resolve merge conflicts
+
+    commit c8616db8097e926c64bfcac4a09306839b008dc6
+    Author: Juri <juri.strumpflohner@gmail.com>
+    Date:   Mon Apr 22 09:39:57 2013 +0200
+
+        add line on hallo.txt
+
+    commit 2fa266aaaa61c51bd77334516139597a727d4af1
+    Author: Juri <juri.strumpflohner@gmail.com>
+    Date:   Mon Apr 22 09:24:00 2013 +0200
+
+        modify file adding hi
+
+    commit 03883808a04a268309b9b9f5c7ace651fc4f3f4b
+    Author: Juri <juri.strumpflohner@gmail.com>
+    Date:   Mon Apr 22 09:13:49 2013 +0200
+
+        add another file with some other content
+
+    commit aad15dea687e46e9104db55103919d21e9be8916
+    Author: Juri <juri.strumpflohner@gmail.com>
+    Date:   Mon Apr 22 08:58:51 2013 +0200
+
+        Add my first file    
+
+Take one of the identifiers (also if it isn't the whole one, it doesn't matter) and jump to that node by using the `checkout` command
+
+    $ git checkout c8616db
+    Note: checking out 'c8616db'.
+
+    You are in 'detached HEAD' state. You can look around, make experimental
+    changes and commit them, and you can discard any commits you make in this
+    state without impacting any branches by performing another checkout.
+
+    If you want to create a new branch to retain commits you create, you may
+    do so (now or later) by using -b with the checkout command again. Example:
+
+      git checkout -b new_branch_name
+
+    HEAD is now at c8616db... add line on hallo.txt
+
+Note the comment git prints out. What does that mean? Basically when I now change hallo.txt and commit the change, the tree looks as follows:
+<figure>
+    <img src="/blog/assets/imgs/gitrepo_tree6.png" />
+    <figcaption>Detached head state</figcaption>
+</figure>
+
+As you can see, the newly created node has no label on it. The only reference that currently points towards it is `head`. However, if we now switch to master again then the previous commit will be lost as we have no way of jumping back to that tree node.
+
+    $ git checkout master
+    Warning: you are leaving 1 commit behind, not connected to
+    any of your branches:
+
+      576bcb8 change file undoing previous changes
+
+    If you want to keep them by creating a new branch, this may be a good time
+    to do so with:
+
+     git branch new_branch_name 576bcb8239e0ef49d3a6d5a227ff2d1eb73eee55
+
+    Switched to branch 'master'    
+
+And in fact, git is so kind to remind us about this fact. The tree looks now again as in figure 6.
+
+## Rollback to before the merge
+
+Jumping back is nice, but what if we want to **undo** everything back to the state before the merge of the feature branch? It is as easy as
+
+    $ git reset --hard c8616db
+    HEAD is now at c8616db add line on hallo.txt
+
+<figure>
+    <img src="/blog/assets/imgs/gitrepo_tree4.png"/>
+    <figcaption>The tree after the reset</figcaption>
+</figure>
+
+## Resources and Links
+
+- http://gitready.com/
+- http://stackoverflow.com/questions/927358/how-to-undo-the-last-git-commit
