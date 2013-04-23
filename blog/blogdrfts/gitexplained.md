@@ -9,21 +9,38 @@ category:
 tags: [Git]
 ---
 
-I'm working with Git now for more than a year, only on my personal projects and those I have on GitHub however. At work we still use TFS and SVN (as of now). Recently [Paolo Perrotta](https://twitter.com/nusco) came to our company to hold a course about Agile planning where he also quickly explained Git in the context of refactoring. I really liked his approach of explaining it and that's why I'd like to replicate his explanation here.
+I'm working with Git now for about two years, only on my personal projects and those I have on GitHub however. At work we still use TFS and SVN (as of now). Recently [Paolo Perrotta](https://twitter.com/nusco) came to our company to hold a course about Agile planning where he also quickly explained Git in the context of refactoring. I really liked his approach of explaining it and that's why I'd like to replicate his explanation here.
 
-## Git is an advanced File System
+Git sits on top of your file system and manipulates files as you jump around on a Git repository. You can imagine Git as a **tree** structure where **each commit creates a new node** in that tree. Nearly all Git commands serve to navigate on this tree and to manipulate it accordingly. In fact, there are nearly no limits on what can be done. Moreover, each node only stores the diff to its ancestor which makes Git extremely powerful in terms of speed and memory consumption.
 
-His approach was to explain Git from the perspective of the tree which it constructs behind the scenes somehow.
-
-As such in this tutorial I'd like to take a look at how Git works by viewing a git repo from the point of view of a tree (which it is actually). I'll walk through some common use cases like
+As such in this tutorial I'd like to take a look at how Git works by viewing a Git repository from the point of view of the tree it constructs. To do so I walk through some common use cases like
 
 - adding/modifying a new file
 - creating and merging a branch with and without merge conflicts
-- rebasing aka "changing the history"
+- Viewing the history/changelog
+- Performing a rollback to a certain commit
+- Sharing/synching your code to a remote/central repository
 
-## Create a new Git Repository
+Note, I perform all of these operations on the command line. Even if you're not the shell-guy you should till give it a try to get comfortable with it to follow the examples in this post.
+
+## Terminology
+
+Here's the git terminology:
+
+- **master - ** the repository's main branch. Depending on the work flow it is the one people work on or the one where the integration happens
+- **clone - ** copies an existing git repository, normally from some remote location to your local environment.
+- **commit - ** submitting files to the repository; in other VCS it is often referred to as "checkin"
+- **fetch or pull - ** is like "update" or "get latest" in other VCS. The difference between fetch and pull is that pull combines both, fetching the latest code from a remote repo as well as performs the merging.
+- **push - ** is used to submit the code to a remote repository
+- **remote - ** these are "remote" locations of your repository, normally on some central server.
+- **SHA - ** every commit or node in the Git tree is identified by a unique SHA key. You can use them in various commands in order to manipulate a specific node.
+- **head - ** is a reference to the node to which the repository currently points. 
+- **branch - ** is just like in other VCS with the difference that a branch in Git is actually nothing more special than a particular label on a given node. It is not a physical copy of the files as in other popular VCS.
+
+## Lets get started: Create a new Git Repository
 
 Before starting, lets create a new directory where the git repository will live and `cd` into it:
+
 
     $ mkdir mygitrepo
     $ cd mygitrepo
@@ -96,7 +113,7 @@ So if we now step back for a second and take a look at the tree we would have th
 
 There is _one node_ where the "label" _master_ points to.
 
-## Adding another file
+## Add another file
 
 Lets add another file:
 
@@ -108,11 +125,11 @@ Lets add another file:
 
 Btw, note that this time I used `git add .` which adds all files in the current directory (`.`).
 
-From the point of view of the tree we now have another node and master has moved on to that.
+From the point of view of the tree we now have another node and master has moved on to that one.
 
 ![](/blog/assets/imgs/gitrepo_tree2.png)
 
-## Creating a (feature)branch
+## Create a (feature)branch
 
 Branching is why git is so powerful....
 
@@ -179,7 +196,7 @@ Our tree now visualizes the branch:
 
 ![](/blog/assets/imgs/gitrepo_tree4.png)
 
-## Merging
+## Merge and resolve conflicts
 
 The next step would be to merge our feature branch back into `master`. This is done by using the merge command
 
@@ -215,7 +232,7 @@ The tree reflects our merge.
     <figcaption>Fig 1: Tree state after the merge</figcaption>
 </figure>
 
-## Jumping to a certain commit
+## Jump to a certain commit
 
 Lets assume we want to jump back to a given commit. We can use the `git log` command to get all the SHA identifiers that uniquely identify each node in the tree.
 
@@ -290,7 +307,7 @@ As you can see, the newly created node has no label on it. The only reference th
 
 And in fact, git is so kind to remind us about this fact. The tree looks now again as in figure 6.
 
-## Rollback to before the merge
+## Rollback
 
 Jumping back is nice, but what if we want to **undo** everything back to the state before the merge of the feature branch? It is as easy as
 
@@ -301,6 +318,8 @@ Jumping back is nice, but what if we want to **undo** everything back to the sta
     <img src="/blog/assets/imgs/gitrepo_tree4.png"/>
     <figcaption>The tree after the reset</figcaption>
 </figure>
+
+The generic syntax here is `git reset --hard <tag/branch/commit id>`.
 
 ## Resources and Links
 
