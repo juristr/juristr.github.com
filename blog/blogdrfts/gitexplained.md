@@ -321,6 +321,10 @@ Jumping back is nice, but what if we want to **undo** everything back to the sta
 
 The generic syntax here is `git reset --hard <tag/branch/commit id>`.
 
+## Sharing/Synching your Repository
+
+Ultimately we want to share our code.
+
 ## Resources and Links
 
 - http://gitready.com/
