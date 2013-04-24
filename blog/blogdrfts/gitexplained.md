@@ -21,8 +21,6 @@ As such in this tutorial I'd like to take a look at how Git works by viewing a G
 - Performing a rollback to a certain commit
 - Sharing/synching your code to a remote/central repository
 
-Note, I perform all of these operations on the command line. Even if you're not the shell-guy you should till give it a try to get comfortable with it to follow the examples in this post.
-
 ## Terminology
 
 Here's the git terminology:
@@ -34,8 +32,14 @@ Here's the git terminology:
 - **push - ** is used to submit the code to a remote repository
 - **remote - ** these are "remote" locations of your repository, normally on some central server.
 - **SHA - ** every commit or node in the Git tree is identified by a unique SHA key. You can use them in various commands in order to manipulate a specific node.
-- **head - ** is a reference to the node to which the repository currently points. 
+- **head - ** is a reference to the node to which our working space of the repository currently points.
 - **branch - ** is just like in other VCS with the difference that a branch in Git is actually nothing more special than a particular label on a given node. It is not a physical copy of the files as in other popular VCS.
+
+## Workstation Setup
+
+I do not want to go into the details of setting up your workstation as there are numerous tools which partly vary on the different platforms. For this post I perform all of the operations on the command line. Even if you're not the shell-guy you should give it a try (it never hurts ;) ).
+
+To setup command line Git access simply go to [git-scm.com/downloads](http://git-scm.com/downloads) where you'll find the required downloads for your OS. More detailed information can be found [here as well](http://git-scm.com/book/en/Getting-Started-Installing-Git).
 
 ## Lets get started: Create a new Git Repository
 
@@ -323,9 +327,22 @@ The generic syntax here is `git reset --hard <tag/branch/commit id>`.
 
 ## Sharing/Synching your Repository
 
-Ultimately we want to share our code.
+Ultimately we want to share our code, normally by synching it to a central repository. For doing so, we have to add a **remote**.
+
+    $ git remote add origin git@github.com:juristr/intro.js.git
+
+To see whether I succeeded, simply type:
+
+    $ git remote -v
+
+which lists all of the added remotes. Now we need to **publish our local branch master** to the remote repository. This is done like
+
+    $ git push -u origin master
+
+And we're done.
 
 ## Resources and Links
 
-- http://gitready.com/
-- http://stackoverflow.com/questions/927358/how-to-undo-the-last-git-commit
+- [http://gitready.com/](http://gitready.com/)
+- [Book: Pro Git by Scott Chacon](http://git-scm.com/book)
+- [Try Git in 15 minutes](http://try.github.io/)
