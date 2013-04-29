@@ -1,18 +1,19 @@
 ---
 layout: post
 title: "Git Explained: For Beginners"
-description: ""
-postimg: "/blog/assets/imgs/XXXX.png"
-show_img_in_detail: false
-postheadline: "> git init"
-category:
+postimg: "/blog/assets/imgs/gitlogo.png"
+show_img_in_detail: true
+category: bliki
 tags: [Git]
 ---
 
-I'm working with Git now for about two years, only on my personal projects and those I have on GitHub however. At work we still use TFS and SVN (as of now). Recently [Paolo Perrotta](https://twitter.com/nusco) came to our company to hold a course about Agile planning where he also quickly explained Git in the context of refactoring. I really liked his approach of explaining it and that's why I'd like to replicate his explanation here.
+I'm working with Git now [for about two years](/blog/2010/11/juri-goes-git-first-steps/) but only for my personal projects and those I have on GitHub. At work we still use TFS and SVN (as of now). Recently [Paolo Perrotta](https://twitter.com/nusco) came to our company to hold a course about Agile planning and since Git was quite new to most of my mates, he also quickly explained Git in the context of refactoring. I really liked his approach of explaining it and that's why I'd like to replicate his explanation here.
 
-Git sits on top of your file system and manipulates files as you jump around on a Git repository. You can imagine Git as a **tree** structure where **each commit creates a new node** in that tree. Nearly all Git commands serve to navigate on this tree and to manipulate it accordingly. In fact, there are nearly no limits on what can be done. Moreover, each node only stores the diff to its ancestor which makes Git extremely powerful in terms of speed and memory consumption.
+## Just before we start..
 
+How is Git different from other VCS (Version Control Systems)? Probably the most obvious difference is that Git is distributed (unlike SVN or TFS for instance). This means, you'll have a local repository which lives inside a special folder named `.git` and you'll normally (but not necessarily) have a remote, central repository where different collaborators may contribute their code. Note that each of those contributors has an **exact clone** of the repository on their local workstation.
+
+Git itself can be imagined as something that sits on top of your file system and manipulates files. Even better, you can imagine Git as a **tree** structure where **each commit creates a new node** in that tree. Nearly all Git commands actually serve to navigate on this tree and to manipulate it accordingly.  
 As such in this tutorial I'd like to take a look at how Git works by viewing a Git repository from the point of view of the tree it constructs. To do so I walk through some common use cases like
 
 - adding/modifying a new file
@@ -27,7 +28,7 @@ Here's the git terminology:
 
 - **master - ** the repository's main branch. Depending on the work flow it is the one people work on or the one where the integration happens
 - **clone - ** copies an existing git repository, normally from some remote location to your local environment.
-- **commit - ** submitting files to the repository; in other VCS it is often referred to as "checkin"
+- **commit - ** submitting files to the repository (the local one); in other VCS it is often referred to as "checkin"
 - **fetch or pull - ** is like "update" or "get latest" in other VCS. The difference between fetch and pull is that pull combines both, fetching the latest code from a remote repo as well as performs the merging.
 - **push - ** is used to submit the code to a remote repository
 - **remote - ** these are "remote" locations of your repository, normally on some central server.
@@ -40,6 +41,11 @@ Here's the git terminology:
 I do not want to go into the details of setting up your workstation as there are numerous tools which partly vary on the different platforms. For this post I perform all of the operations on the command line. Even if you're not the shell-guy you should give it a try (it never hurts ;) ).
 
 To setup command line Git access simply go to [git-scm.com/downloads](http://git-scm.com/downloads) where you'll find the required downloads for your OS. More detailed information can be found [here as well](http://git-scm.com/book/en/Getting-Started-Installing-Git).
+
+After everything is set up and you have "git" in your PATH environment variable, then the first thing you have to do is to config git with your name and email:
+
+    $ git config --global user.name "Juri Strumpflohner"
+    $ git config --global user.email "myemail@gmail.com"
 
 ## Lets get started: Create a new Git Repository
 
@@ -159,6 +165,8 @@ Again
     * my-feature-branch
 
 > Note you can directly use the command `git checkout -b my-feature-branch` to _create_ and _checkout_  a new branch in one step.
+
+What's different to other VCS is that there is only _one working directory_. All of your branches live in the same one and there is not a separate folder for each branch you create. Instead, when you switch between branches, Git will replace the content of your working directory to reflect the one in the branch you're switching to.
 
 Lets modify one of our existing files
 
@@ -290,7 +298,11 @@ Take one of the identifiers (also if it isn't the whole one, it doesn't matter) 
 
     HEAD is now at c8616db... add line on hallo.txt
 
-Note the comment git prints out. What does that mean? Basically when I now change hallo.txt and commit the change, the tree looks as follows:
+Note the comment git prints out. What does that mean? **Detached head** means "head" is no more pointing to a branch "label" but instead to a specific commit in the tree.
+
+> You can think of the **HEAD** as the "current branch". When you switch branches with `git checkout`, the HEAD revision changes to point to the tip of the new branch. [...] It is possible for HEAD to refer to a specific revision that is not associated with a branch name. This situation is called a <a href="http://git-scm.com/docs/git-checkout#_detached_head">detached HEAD</a>. <cite><a href="http://stackoverflow.com/a/2304106/50109">Stackoverflow Post</a></cite>
+
+Basically when I now change hallo.txt and commit the change, the tree looks as follows:
 <figure>
     <img src="/blog/assets/imgs/gitrepo_tree6.png" />
     <figcaption>Detached head state</figcaption>
@@ -341,10 +353,46 @@ which lists all of the added remotes. Now we need to **publish our local branch 
 
     $ git push -u origin master
 
-And we're done.
+And we're done. 
+
+The real powerful thing is that you can add multiple different remotes. This is often used in combination with cloud hosting solutions for deploying your code on your server. For instance, you could add a remote named "deploy" which points to some cloud hosting server repository, like
+
+    $ git remote add deploy git@somecloudserver.com:juristr/myproject
+
+and then whenever you want to publish your branch you execute a 
+
+    $ git push deploy
+
+### Cloning
+
+Similarly it works if you'd like to start from an existing remote repository. The first step that needs to be done is to "checkout" the source code which is called **cloning** in Git terminology. So we would do something like
+
+    $ git clone git@github.com:juristr/intro.js.git
+    Cloning into 'intro.js'...
+    remote: Counting objects: 430, done.
+    remote: Compressing objects: 100% (293/293), done.
+    remote: Total 430 (delta 184), reused 363 (delta 128)
+    Receiving objects: 100% (430/430), 419.70 KiB | 102 KiB/s, done.
+    Resolving deltas: 100% (184/184), done.
+
+This will create a folder (in this case) named "intro.js" and if we enter it
+
+    $ cd intro.js/
+
+and check for the remotes we see that the according tracking information of the remote repository is already set up
+
+    $ git remote -v
+    origin  git@github.com:juristr/intro.js.git (fetch)
+    origin  git@github.com:juristr/intro.js.git (push)
+
+We can now start the commit/branch/push cycle just normally.
 
 ## Resources and Links
+
+The scenarios above were the simples, but at the same time probably also the most used ones. But there's a lot more Git is capable of. To get more details you may want to consult the links below.
 
 - [http://gitready.com/](http://gitready.com/)
 - [Book: Pro Git by Scott Chacon](http://git-scm.com/book)
 - [Try Git in 15 minutes](http://try.github.io/)
+- [Introduction to Git with Scott Chacon of GitHub](http://www.youtube.com/watch?v=ZDR433b0HJY&feature=youtu.be&t=21m4s)
+- [My personal Git Cheat Sheet where I continuously add stuff I want to remember](https://gist.github.com/juristr/5280366)
