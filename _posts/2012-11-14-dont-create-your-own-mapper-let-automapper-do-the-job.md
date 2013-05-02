@@ -116,7 +116,7 @@ The `AssertConfigurationIsValid()` will throw a nice, expressive exception in ca
         .ForMember(x => x.IgnoreProperty, opt => opt.Ignore());
 
 ## ASP.net MVC DTOs
-Whether you apply the MVVM pattern or you create a REST-like API for JavaScript clients. One of my lessons learned is for sure to [not expose the Entity Framework entities directly](/blog/2012/10/lessons-learned-dont-expose-ef-entities-to-the-client-directly/). Instead it is preferrable to create specific DTOs (or you could call them ViewModels as well) where you create highly specialized entities just of the purpose you need. 
+Whether you apply the MVVM pattern or you create a REST-like API for JavaScript clients. One of my lessons learned is for sure to [not expose the Entity Framework entities directly](/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/). Instead it is preferrable to create specific DTOs (or you could call them ViewModels as well) where you create highly specialized entities just of the purpose you need. 
 
 A useful feature in such case is AutoMapper's [Flattening](https://github.com/AutoMapper/AutoMapper/wiki/Flattening). Basically instead of rendering an object graph you often prefer to transfer a flat object to your client as it is easier to bind on the UI. So if you have an `Order` with a nested `Customer` object like
 
