@@ -397,3 +397,4 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [Try Git in 15 minutes](http://try.github.io/)
 - [Introduction to Git with Scott Chacon of GitHub](http://www.youtube.com/watch?v=ZDR433b0HJY&feature=youtu.be&t=21m4s)
 - [My personal Git Cheat Sheet where I continuously add stuff I want to remember](https://gist.github.com/juristr/5280366)
+- [Git Branching Model](http://www.slideshare.net/lemiorhan/git-branching-model)
