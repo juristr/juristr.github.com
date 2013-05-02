@@ -68,6 +68,8 @@ Enter your previously downloaded Jekyll blog repository and start Jekyll through
 
 Now you can open the corresponding blog markdown file in the web IDE and start writing your blog post. You can even directly run Jekyll on Nitrous and preview the resulting posts in the browser while writing it.
 
+Thanks to Chrome on Android you can seamlessly also write your Jekyll blog post from your tablet!
+
 Once finished, just git push it to GitHub as usual for publishing the post.
 
 ## Conclusion
