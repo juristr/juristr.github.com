@@ -42,7 +42,7 @@ Basically, when it sees a `no-cache` header then rather than not caching the res
 ## The Solution
 There is no clean solution for this problem, all you can do is to create a hack and limit it to the cases where it should apply, that is in case of a file download if the browser is IE and its version is less than v9.
 
-By default I have a BaseController class on each of my ASP.net MVC3 controllers which handles some shared endpoints for me. On that I had added an `[OutputCache(Duration=0)]` in order to prevent any kind of caching by default. [See this article](blog/2012/10/output-caching-in-aspnet-mvc/) for further details. To fix the mentioned IE bug I had to override the default [OutputCacheAttribute](http://aspnetwebstack.codeplex.com/SourceControl/changeset/view/e6ea9683f1db#src/System.Web.Mvc/OutputCacheAttribute.cs) as follows ([plz refer to this gist for eventual updates](https://gist.github.com/4633225)):
+By default I have a BaseController class on each of my ASP.net MVC3 controllers which handles some shared endpoints for me. On that I had added an `[OutputCache(Duration=0)]` in order to prevent any kind of caching by default. [See this article](/blog/2012/10/output-caching-in-aspnet-mvc/) for further details. To fix the mentioned IE bug I had to override the default [OutputCacheAttribute](http://aspnetwebstack.codeplex.com/SourceControl/changeset/view/e6ea9683f1db#src/System.Web.Mvc/OutputCacheAttribute.cs) as follows ([plz refer to this gist for eventual updates](https://gist.github.com/4633225)):
 
     using System;
     using System.Collections.Generic;
