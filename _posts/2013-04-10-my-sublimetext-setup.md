@@ -141,3 +141,9 @@ testFunction : function(param1, param2) {
     </tr>
   </tbody>
 </table>
+
+## Related Posts
+
+Here are some posts I find (and I'll update over time) covering similar aspects around Sublime Text setup.
+
+- [http://drewbarontini.com/setup/sublime-text](http://drewbarontini.com/setup/sublime-text)
