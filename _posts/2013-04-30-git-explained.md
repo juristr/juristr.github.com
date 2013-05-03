@@ -5,7 +5,7 @@ postimg: "/blog/assets/imgs/gitlogo.png"
 show_img_in_detail: true
 category: bliki
 tags: [Git]
-reposts: ["http://dotnet.dzone.com/articles/intro-git"]
+reposts: ["http://dotnet.dzone.com/articles/intro-git", "http://www.javacodegeeks.com/2013/05/git-explained-for-beginners.html"]
 ---
 
 I'm working with Git now [for about two years](/blog/2010/11/juri-goes-git-first-steps/) but only for my personal projects and those I have on GitHub. At work we still use TFS and SVN (as of now). Recently [Paolo Perrotta](https://twitter.com/nusco) came to our company to hold a course about Agile planning and since Git was quite new to most of my mates, he also quickly explained Git in the context of refactoring. I really liked his approach of explaining it and that's why I'd like to replicate his explanation here.
@@ -340,6 +340,72 @@ Jumping back is nice, but what if we want to **undo** everything back to the sta
 
 The generic syntax here is `git reset --hard <tag/branch/commit id>`.
 
+## Undo Uncommitted Changes
+
+Another common scenario of "undoing" stuff is to simply discard local, yet uncommitted changes. 
+
+### Files Not Staged For a Commit
+
+Assume you modified a file. Executing `git status` would result in
+
+    $ git status
+    # On branch master
+    # Changes not staged for commit:
+    #   (use "git add <file>..." to update what will be committed)
+    #   (use "git checkout -- <file>..." to discard changes in working directory)
+    #
+    #       modified:   hallo.txt
+    #
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+So far nothing has been added to your local Git repo, nor has it been staged (registered) for being committed. What would it mean to discard those changes?? Think about the Git tree. Simply to get (checkout) the latest version of that file, right??
+
+Thus,
+
+    $ git checkout hallo.txt
+
+performs our "undo". A further
+
+    $ git status
+    # On branch master
+    nothing to commit, working directory clean
+
+### Files Staged for a Commit
+
+The other case might be when you modified a file and already staged it for being committed through a `git add` commit.
+
+    $ g status
+    # On branch master
+    # Changes to be committed:
+    #   (use "git reset HEAD <file>..." to unstage)
+    #
+    #       modified:   hallo.txt
+    #
+
+A `git checkout` wouldn't have any effect in this case, but instead (if you read what git printed on the status output) we have to do a **reset**. Why? Because the `git add` already created a node in the Git tree (actually not 100% correct: [see Git index vs. working tree](http://stackoverflow.com/questions/3689838/difference-between-head-working-tree-index-in-git) for more details) which have not yet been committed yet, however. Therefore we need to "reset" our current pointer to HEAD which is the top of our current branch.
+
+    $ git reset HEAD hallo.txt
+    Unstaged changes after reset:
+    M       hallo.txt
+
+and consequently:
+
+    $ g status
+    # On branch master
+    # Changes not staged for commit:
+    #   (use "git add <file>..." to update what will be committed)
+    #   (use "git checkout -- <file>..." to discard changes in working directory)
+    #
+    #       modified:   hallo.txt
+    #
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+We're now again in the state when we have local changes _not yet staged for a commit_ and can therefore use the `checkout` command to discard them. A quicker way of doing so is to use the
+
+    $ git reset --hard HEAD
+
+command which will do an un-staging + checkout in one command.
+
 ## Sharing/Synching your Repository
 
 Ultimately we want to share our code, normally by synching it to a central repository. For doing so, we have to add a **remote**.
@@ -354,13 +420,13 @@ which lists all of the added remotes. Now we need to **publish our local branch 
 
     $ git push -u origin master
 
-And we're done. 
+And we're done.
 
 The real powerful thing is that you can add multiple different remotes. This is often used in combination with cloud hosting solutions for deploying your code on your server. For instance, you could add a remote named "deploy" which points to some cloud hosting server repository, like
 
     $ git remote add deploy git@somecloudserver.com:juristr/myproject
 
-and then whenever you want to publish your branch you execute a 
+and then whenever you want to publish your branch you execute a
 
     $ git push deploy
 
@@ -397,3 +463,4 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [Try Git in 15 minutes](http://try.github.io/)
 - [Introduction to Git with Scott Chacon of GitHub](http://www.youtube.com/watch?v=ZDR433b0HJY&feature=youtu.be&t=21m4s)
 - [My personal Git Cheat Sheet where I continuously add stuff I want to remember](https://gist.github.com/juristr/5280366)
+- [Git Immersion](http://gitimmersion.com/index.html)
