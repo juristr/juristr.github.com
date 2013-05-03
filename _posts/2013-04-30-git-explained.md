@@ -464,3 +464,6 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [Introduction to Git with Scott Chacon of GitHub](http://www.youtube.com/watch?v=ZDR433b0HJY&feature=youtu.be&t=21m4s)
 - [My personal Git Cheat Sheet where I continuously add stuff I want to remember](https://gist.github.com/juristr/5280366)
 - [Git Immersion](http://gitimmersion.com/index.html)
+- [Git Branching Model](http://www.slideshare.net/lemiorhan/git-branching-model)
+
+If you have to add more, just let me know in the comments!
