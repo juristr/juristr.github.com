@@ -8,17 +8,17 @@ show_img_in_detail: true
 tags: [interesting apps]
 ---
 
-I guess you probably heard the latest announcements about the Google Reader shutdown. I heard about it already about half a year ago I guess, but didn't want to believe initially. But now it seems to turn into reality, at least starting with July 1st. The search for alternatives has begun…
+I guess you probably heard the latest announcements about the Google Reader shutdown. I heard about it already about half a year ago I guess, but didn't want to believe initially. Now it seems to turn into reality, at least starting with July 1st. The search for alternatives has begun…
 
-I'm a Google Reader user from the very beginning, when it was launched as a labs product. I liked the idea of having a web app where to collect and consume my news. At that time, it was quite a new thing as most RSS readers were desktop-based apps. But I liked the idea of being able to seemlessly access my news at my home computer or while studying at some university computer. 
+I'm a Google Reader user from the very beginning, when it was launched as a labs product. I liked the idea of having a web app where to collect and consume my news. At that time, it was quite a new thing as most RSS readers were desktop-based apps. I liked the idea of being able to seemlessly access my news at my home computer or while studying at some university computer. 
 
 That remained so, till now. GReader is my personal place for trying to consume the immense amount of news that get published on the web each day. Of course, it wasn't the only place, social networks, especially Twitter, have become more and more important for me to pick up some important article or an interesting link.
 
 ## Seems Time to Change
 
-Many passionate GReader users don't like the idea of moving to another product and so didn't I. They even [started a petition](https://www.change.org/petitions/google-keep-google-reader-running?utm_campaign=share_button_action_box&utm_medium=facebook&utm_source=share_petition) against stopping Google Reader. Nice initiatives that show how many people liked the product. But honestly speaking, I don't think Google will change its plans. And then, after all, if a company decides to quit a product, even if they change and keep it running, it will quickly become obsolete due to missing investments. It's already now that - if you compare GReader to other products - it lacks updated features like maybe a more modern UI, social network integrations and it's ages since its mobile Android client received significant updates. So I think, it's really time to move forward.
+Many passionate GReader users don't like the idea of moving to another product and so didn't I. They even [started a petition](https://www.change.org/petitions/google-keep-google-reader-running?utm_campaign=share_button_action_box&utm_medium=facebook&utm_source=share_petition) against stopping Google Reader. Nice initiatives that show how many people liked the product. Honestly speaking, I don't think Google will change its plans. And then, after all, if a company decides to quit a product, even if they change and keep it running, it will quickly become obsolete due to missing investments. It's already now that - if you compare GReader to other products - it lacks updated features like maybe a more modern UI, social network integrations and it's ages since its mobile Android client received significant updates. So I think, it's really time to move forward.
 
-But is switching really so hard as it seems?? Personally, when I look at my recent habits, I notice that my usage of Google Reader (on the web) declined significantly in the last years. Mostly I just added new feeds, but consumed them on my mobile, through GReader Android, or even more often through other 3rd party apps like [Press](https://play.google.com/store/apps/details?id=com.twentyfivesquares.press) or [Flipboard](https://play.google.com/store/apps/details?id=flipboard.app). So the day when the announcements about GReader's shutdown went out, I decided to look around for a worthy alternative.
+Is switching really so hard as it seems?? Personally, when I look at my recent habits, I notice that my usage of Google Reader (on the web) declined significantly in the last years. Mostly I just added new feeds and then consumed them on my mobile, through GReader Android, or even more often through other 3rd party apps like [Press](https://play.google.com/store/apps/details?id=com.twentyfivesquares.press) or [Flipboard](https://play.google.com/store/apps/details?id=flipboard.app). So the day when the announcements about GReader's shutdown went out, I decided to look around for a worthy alternative.
 
 ## Feedly - A Worthy Alternative?
 
@@ -46,7 +46,7 @@ The Chrome Extension adds a nice share button directly in the lower right corner
 
 The web frontend has been crafted with care for the details, something I especially note as a web dev. As such, for instance, menus disappear in the form of little icons when there is not enough space or fully expand on your 27'' monitor.
 
-The mobile clients look modern and clean and a big plus is that you can navigate throughout most of the app by exclusively using swipe gestures (a bit similar to Flipboard). But have a look at it by yourself:
+The mobile clients look modern and clean and a big plus is that you can navigate throughout most of the app by exclusively using swipe gestures (a bit similar to Flipboard). Have a look at it by yourself:
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/o0op66h-r6k" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
@@ -73,7 +73,7 @@ Beside UI customizations Feedly also tries to seamlessly integrate news feeds fr
 
 ## Conclusion
 
-Sounds like they have me already, right? Not yet, but I'm quite satisfied in using the service for only a couple of days now. I had some minor issues in getting logged in on the Android client, but I assume that's due to the high number of requests they're now getting due to the GReader shutdown notice. The product looks really very promising, I like the mobile client and I have all the imaginable customization possibilities I like and liked to have with GReader:
+Sounds like they have me already, right? Not yet, but I'm quite satisfied in using the service for only a couple of days now. I had some minor issues in getting logged in on the Android client, but presumably that's due to the high number of requests they're now getting due to the GReader shutdown notice. The product looks really very promising, I like the mobile client and I have all the imaginable customization possibilities I like and liked to have with GReader:
 
 - mark as read while scrolling over articles
 - mark all as read
@@ -81,7 +81,7 @@ Sounds like they have me already, right? Not yet, but I'm quite satisfied in usi
 - day/night mode on the mobile client (GReader client didn't even have this)
 - ...
 
-Sure, I'm also missing some features like "Search" and there will come up a couple more when using Feedly for some weeks. But there's a [team behind which is working hard on improving the service](http://blog.feedly.com/) with the interest to become the best news reader app available and that makes hope for new amazing features to come soon.
+Sure, I'm also missing some features like "Search" and there will come up a couple more when using Feedly for some weeks. Since there's a [team behind which is working hard on improving the service](http://blog.feedly.com/) with the interest to become the best news reader app available, makes hope for new amazing features to come soon.
 
 As mentioned, one thing that puzzles me a bit is the missing offline capabilities of the Android client, so Feedly team, get that done soon ;). Vote for that feature [here](https://getsatisfaction.com/feedly/topics/offline_support_for_mobile) if you'd enjoy that as well.
 
