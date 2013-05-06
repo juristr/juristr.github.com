@@ -374,7 +374,7 @@ performs our "undo". A further
 
 The other case might be when you modified a file and already staged it for being committed through a `git add` commit.
 
-    $ g status
+    $ git status
     # On branch master
     # Changes to be committed:
     #   (use "git reset HEAD <file>..." to unstage)
@@ -390,7 +390,7 @@ A `git checkout` wouldn't have any effect in this case, but instead (if you read
 
 and consequently:
 
-    $ g status
+    $ git status
     # On branch master
     # Changes not staged for commit:
     #   (use "git add <file>..." to update what will be committed)
