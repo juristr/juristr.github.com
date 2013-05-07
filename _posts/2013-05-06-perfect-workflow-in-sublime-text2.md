@@ -6,6 +6,7 @@ postimg: "/blog/assets/imgs/sublimetext_tutsplus.png"
 show_img_in_detail: true
 category:
 tags: [tooling]
+reposts: ["http://agile.dzone.com/articles/perfect-workflow-sublime-text"]
 ---
 
 I previously wrote about [my Sublime Text setup](/blog/2013/04/my-sublimetext-setup/). Well, Tuts+ has published a quite nice Sublime Text tutorial showing most of Sublime's features. Regardless of whether you're a Sublime Text enthusiast or not, you should definitely take a look at the tutorial.
