@@ -70,3 +70,7 @@ That said, I guess **Devbook** is now really obsolete. So far I never found a va
 - generally, developing rich ajax clients
 
 So, enjoy Gist and keep sharing code!
+
+### Update
+
+A new app has been released: [GistBox](http://www.gistboxapp.com/). This is exactly the thing I always wanted to arrive ultimately but never had the time to realize it. Amazing piece of work.
