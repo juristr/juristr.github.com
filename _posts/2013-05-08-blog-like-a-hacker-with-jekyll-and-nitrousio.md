@@ -7,9 +7,8 @@ category:
 tags: [ blogging, tooling ]
 ---
 
-One of the best moves I probably did about half a year ago was to move my Blog from blogger to Jekyll, hosted on GitHub.
-It simply reflects the kind of blogging experience you want as a dev with Markdown, full version control and amazing hosting on GitHub +
-not to forget: Jekyll. What I was missing so far, however, was the ability to blog from any computer or even tablet. Today I found a possible workflow: [Nitrous.IO](http://www.nitrious.io)
+One of the best moves I probably did about half a year ago was to move my [Blog from blogger to Jekyll](/blog/2012/09/im-relocating-my-domain-site-and-blog/), hosted on GitHub.
+It simply reflects the kind of blogging experience you want as a dev, with Markdown support, full version control and amazing hosting on GitHub plus - not to forget - [Jekyll](http://jekyllrb.com/). What I was missing so far, however, was the ability to blog from any computer or even tablet. Today I found a possible workflow: [Nitrous.IO](http://www.nitrious.io)
 
 Jekyll is awesome as a blogging engine. You get an engine that allows to dynamically generate static pages: the best of both worlds! This allows
 to have full control over the generated HTML code. Moreover Markdown editing is absolutely perfect for writing technical blog posts with lots of source code in it. 
