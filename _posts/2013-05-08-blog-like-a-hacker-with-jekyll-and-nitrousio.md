@@ -5,6 +5,7 @@ description: ""
 show_img_in_detail: false
 category: 
 tags: [ blogging, tooling ]
+reposts: ["http://css.dzone.com/articles/blog-hacker-jekyll-and"]
 ---
 
 One of the best moves I probably did about half a year ago was to move my [Blog from blogger to Jekyll](/blog/2012/09/im-relocating-my-domain-site-and-blog/), hosted on GitHub.
