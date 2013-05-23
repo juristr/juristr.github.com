@@ -340,9 +340,17 @@ Jumping back is nice, but what if we want to **undo** everything back to the sta
 
 The generic syntax here is `git reset --hard <tag/branch/commit id>`.
 
+### Using "revert" to rollback changes the nice way
+
+If you need to rollback an entire commit and (even worse) you might have synched it to a remote repository already, then using `git reset --hard` might not be so nice as in that way you're somehow rewriting history which is a no-go if you synched your repo to a remote one already.
+
+In such situation you can use the `revert` command which basically creates a new commit undoing all changes of a specific commit you specify. For instance consider you want to rollback a commit with ID `41b8684`:
+
+    git revert 41b8684
+
 ## Undo Uncommitted Changes
 
-Another common scenario of "undoing" stuff is to simply discard local, yet uncommitted changes. 
+Another common scenario of "undoing" stuff is to simply discard local, yet uncommitted changes.
 
 ### Files Not Staged For a Commit
 
