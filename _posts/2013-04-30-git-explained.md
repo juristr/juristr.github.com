@@ -48,7 +48,7 @@ After everything is set up and you have "git" in your PATH environment variable,
     $ git config --global user.name "Juri Strumpflohner"
     $ git config --global user.email "myemail@gmail.com"
 
-## Lets get started: Create a new Git Repository
+## Let's get started: Create a new Git Repository
 
 Before starting, lets create a new directory where the git repository will live and `cd` into it:
 
