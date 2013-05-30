@@ -23,6 +23,13 @@ As such in this tutorial I'd like to take a look at how Git works by viewing a G
 - Performing a rollback to a certain commit
 - Sharing/synching your code to a remote/central repository
 
+Before starting here, I highly recommend to first go through the initial pages of the [Git Reference Manual](http://git-scm.com/doc), especially the ["Getting Started - Git Basics" part](http://git-scm.com/book/en/Getting-Started-Git-Basics).
+
+<figure>
+    <img src="http://git-scm.com/figures/18333fig0106-tn.png" />
+    <figcaption>Illustration of the main three states your Git versioned file's lifecycle</figcaption>
+</figure>
+
 ## Terminology
 
 Here's the git terminology:
@@ -468,10 +475,13 @@ The scenarios above were the simples, but at the same time probably also the mos
 
 - [http://gitready.com/](http://gitready.com/)
 - [Book: Pro Git by Scott Chacon](http://git-scm.com/book)
+- [Visual Git Cheat-Sheet](http://ndpsoftware.com/git-cheatsheet.html)
 - [Try Git in 15 minutes](http://try.github.io/)
 - [Introduction to Git with Scott Chacon of GitHub](http://www.youtube.com/watch?v=ZDR433b0HJY&feature=youtu.be&t=21m4s)
 - [My personal Git Cheat Sheet where I continuously add stuff I want to remember](https://gist.github.com/juristr/5280366)
 - [Git Immersion](http://gitimmersion.com/index.html)
 - [Git Branching Model](http://www.slideshare.net/lemiorhan/git-branching-model)
+- [DZone Refcard: Getting Started with Git](http://refcardz.dzone.com/refcardz/getting-started-git)
+- [DZone Refcard: Git Patterns and Antipatterns](http://refcardz.dzone.com/refcardz/git-patterns-and-anti-patterns)
 
 If you have to add more, just let me know in the comments!
