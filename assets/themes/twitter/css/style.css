@@ -17,6 +17,21 @@
     /*color: #57534A !important;*/
   }
 
+  .front-bg {
+    top: 0;
+  }
+
+  .front-image {
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    vertical-align: middle;
+    max-height:537px;
+    width:100%;
+  }
+
   b, strong {
     font-weight: 600;
     /*color: #57534a;*/
@@ -24,7 +39,6 @@
 
   body, textarea {
     line-height: 1.5;
-    border-top: 4px solid #008CCC;
   }
 
   .brand {
