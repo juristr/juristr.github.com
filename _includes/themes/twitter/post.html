@@ -1,6 +1,6 @@
-<section class="span12 main-content post">
+<section class="main-content post" style="margin:0 auto; max-width: 700px">
 
-  <article class="span8">
+  <article class="span12">
     {% if page.postimg != nil and page.show_img_in_detail == true %}
       <div class="span12" style="margin-bottom:15px; text-align:center">
           <img src="{{page.postimg}}" style="width:100%" />
@@ -99,9 +99,9 @@
   <hr>
   {% include JB/comments %}
   </article>
-  <div class="span4 sidebar">
+  <!-- <div class="span4 sidebar">
     <div class="toc-container" style="display:none">
       <div id="toc"></div>
     </div>
-  </div>
+  </div> -->
 </section>
