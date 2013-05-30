@@ -21,14 +21,19 @@
     top: 0;
   }
 
+  .image-cover-wrap {
+    max-height:450px;
+    overflow: hidden;
+  }
+
   .front-image {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     vertical-align: middle;
-    max-height:537px;
+    /*max-height:450px;*/
     width:100%;
   }
 
