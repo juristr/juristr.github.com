@@ -37,6 +37,11 @@
     width:100%;
   }
 
+  .post-image > img {
+    border: 0;
+    max-height: 450px;
+  }
+
   b, strong {
     font-weight: 600;
     /*color: #57534a;*/

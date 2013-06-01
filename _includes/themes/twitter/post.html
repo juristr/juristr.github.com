@@ -1,15 +1,20 @@
-<div class="front-bg">
-  <div class="image-cover-wrap">
-    {% if page.postimg != nil and page.show_img_in_detail == true %}
+{% if page.postimg != nil and page.show_img_in_detail == true and page.coverimage == true %}
+  <div class="front-bg">
+    <div class="image-cover-wrap">
       <img class="front-image" src="{{page.postimg}}" />
-    {% endif %}
+    </div>
   </div>
-</div>
+{% endif %}
 <div class="container">
   <div class="row-fluid">
 
     <section class="main-content post" style="margin:0 auto; max-width: 700px">
       <article class="span12">
+        {% if page.postimg != nil and page.show_img_in_detail == true and page.coverimage == false %}
+          <div class="span12 post-image" style="margin-bottom:15px; text-align:center">
+              <img src="{{page.postimg}}" style="width:100%" />
+          </div>
+        {% endif %}
         {% if page.postheadline != nil %}
           <div class="span12 post-headerline">
             <p class="title">{{ page.postheadline }}</p>
