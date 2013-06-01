@@ -434,6 +434,17 @@
     padding-top:20px;
   }
 
+  .article-body>p{
+    margin-bottom:25px;
+  }
+
+  .article-body>hr{
+    border: 1px solid #dededc;
+    display: block;
+    width: 20%;
+    margin: 50px auto 40px auto;
+  }
+
   .article-body td > pre {
     padding: 0;
     margin-top: 10px;
@@ -499,16 +510,15 @@
 
     display: inline-block;
     padding: 15px 45px 15px 25px;
-    font-size: 20px !important;
-    line-height: 25px;
+    line-height: 28px;
     margin-left: 0;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     border-left: 6px solid #008CCC;
-    color: #666 !important;
+    /*color: #666 !important;*/
     margin-left: -25px;
     width: 100%;
-    background: #F7F7F7;
+    margin-bottom: 25px;
   }
 
   .article-body blockquote cite:before {
@@ -524,8 +534,9 @@
   }
 
   .article-body blockquote p {
-    font-size: 20px;
+    font-size: 23px;
     font-weight:normal;
+    font-style:italic;
   }
 
   .sidebar {
