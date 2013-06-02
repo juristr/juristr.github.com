@@ -10,7 +10,7 @@
 
     <section class="main-content post" style="margin:0 auto; max-width: 700px">
       <article class="span12">
-        {% if page.postimg != nil and page.show_img_in_detail == true and page.coverimage == false %}
+        {% if page.postimg != nil and page.show_img_in_detail == true and (page.coverimage == false or page.coverimage == nil) %}
           <div class="span12 post-image" style="margin-bottom:15px; text-align:center">
               <img src="{{page.postimg}}" style="width:100%" />
           </div>
