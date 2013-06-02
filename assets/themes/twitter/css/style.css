@@ -88,6 +88,7 @@
 
   .post-list {
     margin-top: 25px;
+    font: 19px/1.5 'Source Sans Pro', sans-serif;
   }
 
   .post-list .section-year {
@@ -324,6 +325,10 @@
     line-height: 175%;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
+  }
+
+  .post > article {
+    margin-top:60px;
   }
 
   article .tags{
@@ -810,16 +815,17 @@ ol.linenums li {
 
   .navbar{
     /*background:#e8e8e8;*/
-    background: white;
+    /*background: white;*/
+    background: #333332;
     font-weight:300;
     height:40px;
     line-height:40px;
     font-size:13px;
     margin-bottom:0;
-    border-bottom:solid 1px #d3d3d3;
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.43);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.43);
+    opacity: 0.85;
   }
 
   .navbar ul{
@@ -838,15 +844,16 @@ ol.linenums li {
   }
 
   .navbar a{
-    color:#000;
+    color: #b3b3b1;
     display:block;
     padding:0 20px;
   }
 
   .navbar a:hover{
+    color: #fff;
     text-decoration:none;
-    background:#008CCC;
-    color:#fff;
+    background: rgba(0,0,0,0.3);
+    opacity: 1;
     /*border-bottom: 3px solid #008CCC;*/
     -webkit-transition: background 0.4s linear;
        -moz-transition: background 0.4s linear;
@@ -856,14 +863,12 @@ ol.linenums li {
   .navbar li.current a{
     height:95%;
     font-weight:bold;
-    /*
-    background:#008CCC;
+    background: rgba(0,0,0,0.3);
     color:#fff;
-    */
     /*border-bottom: 3px solid #008CCC;*/
   }
 
-  .navbar li.current > span.marker {
+  /*.navbar li.current > span.marker {
     display:block;
   }
 
@@ -872,7 +877,7 @@ ol.linenums li {
     background: #008CCC;
     z-index: 22;
     height: 3px;
-  }
+  }*/
 
   .navbar li.nav{
     color:#FFF;
