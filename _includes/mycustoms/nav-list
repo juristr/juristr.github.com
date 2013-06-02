@@ -1,26 +1,20 @@
 <li {% if page.current == 'home' %} class="current" {% endif %}>
   <a href="/">home</a>
-  <span class="marker"></span>
 </li>        
 <li {% if page.current == 'blog' and page.categories[0] != 'bliki' %} class="current" {% endif %}>
-  <a href="/blog">blog</a>
-  <span class="marker"></span>  
+  <a href="/blog">blog</a>  
 </li>
 <li {% if page.current == 'bliki' or page.categories[0] == 'bliki' %} class="current" {% endif %}>
-  <a href="/bliki">bliki</a>
-  <span class="marker"></span>  
+  <a href="/bliki">bliki</a>  
 </li>
 <li {% if page.current == 'projects' %} class="current" {% endif %}>
-  <a href="/projects">projects</a>
-  <span class="marker"></span>  
+  <a href="/projects">projects</a>  
 </li>
 <li {% if page.current == 'talks' %} class="current" {% endif %}>
-  <a href="/talks">talks</a>
-  <span class="marker"></span>  
+  <a href="/talks">talks</a>  
 </li>      
 <li {% if page.current == 'about' %} class="current" {% endif %}>
-  <a href="/about">about</a>
-  <span class="marker"></span>  
+  <a href="/about">about</a>  
 </li>
 <li class="nav pull-right visible-desktop">
   <a id="follow-menu" role="button" data-toggle="dropdown" data-target="#" href="#">

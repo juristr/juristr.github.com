@@ -860,12 +860,12 @@ ol.linenums li {
             transition: background 0.4s linear;
   }
 
-  .navbar li.current a{
-    height:95%;
-    font-weight:bold;
-    background: rgba(0,0,0,0.3);
+  .navbar li.current{
+    background: rgba(0,0,0,0.5);
+  }
+
+  .navbar li.current a {
     color:#fff;
-    /*border-bottom: 3px solid #008CCC;*/
   }
 
   /*.navbar li.current > span.marker {
