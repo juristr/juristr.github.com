@@ -4,6 +4,7 @@ title: "My Sublime Text Setup"
 description: ""
 postimg: "/blog/assets/imgs/sublimecode_background.png"
 show_img_in_detail: true
+coverimage: true
 category: "bliki"
 tags: [tooling]
 reposts: ["http://architects.dzone.com/articles/my-sublime-text-setup"]

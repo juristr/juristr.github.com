@@ -1,0 +1,13 @@
+<div class="row-fluid author-inline-bio">
+  <div class="">
+    <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=80&amp;d=identicon&amp;r=PG" class="img-rounded">
+  </div>
+  <div class="">
+    <span class="bio-author">
+      <a href="/about">Juri Strumpflohner</a>
+    </span>
+    <!--<p>Juri Strumpflohner currently works as a software architect focusing mainly on creating rich client web applications with JavaScript and the Microsoft technology stack. You can find him on <a href="http://twitter.com/juristr">Twitter</a>, <a href="http://github.com/juristr">GitHub</a> and <a href="http://stackoverflow.com/users/50109/juri">Stackoverflow</a>.</p>-->
+    <p class="bio-content">Software architect, JavaScript, .Net, Android Developer and Blogger
+    <p>
+  </div>
+</div>
