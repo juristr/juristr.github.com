@@ -815,6 +815,7 @@ ol.linenums li {
 
   .scroll-menu {
     background-color: #333332 !important;
+    opacity: 0.85;
   }
 
   .navbar{
