@@ -555,6 +555,11 @@
     font-style:italic;
   }
 
+  .article-footer {
+    background: #f9f9f7;
+    border-top: 1px solid #e0e0df;
+  }
+
   .sidebar {
     /*border-left: solid 1px #d3d3d3;*/
     margin-top: 15px;
@@ -607,9 +612,10 @@
             transition: background 0.4s linear;
   }
 
-  #related-posts .title {
-    font-size: 18px;
-    font-weight: bold;
+  #related-posts {
+    font: 18px/1.5 'Source Sans Pro', sans-serif;
+    margin: 20px auto 50px auto;
+    max-width: 700px;
   }
 
   #related-posts > ul {

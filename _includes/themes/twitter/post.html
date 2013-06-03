@@ -90,9 +90,8 @@
         </div>
         <div class="author-bio-footer">
           {% include mycustoms/author-bio %}
-        </div>        
-        <hr>
-        {% include mycustoms/relatedposts %}
+        </div>
+        <!--
         <hr>
         <div class="pagination">
           <ul>
@@ -109,6 +108,7 @@
           {% endif %}
           </ul>
         </div>
+        -->
       </article>
       <!-- <div class="span4 sidebar">
         <div class="toc-container" style="display:none">
@@ -122,3 +122,6 @@
     {% include JB/comments %}    
   </div>
 </div>
+<section class="article-footer">
+  {% include mycustoms/relatedposts %}
+</section>
