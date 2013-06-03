@@ -1,20 +1,20 @@
 <li {% if page.current == 'home' %} class="current" {% endif %}>
-  <a href="/">home</a>
-</li>        
+  <a href="/" style="font-size:23px; color:#fff">J</a>
+</li>
 <li {% if page.current == 'blog' and page.categories[0] != 'bliki' %} class="current" {% endif %}>
-  <a href="/blog">blog</a>  
+  <a href="/blog">blog</a>
 </li>
 <li {% if page.current == 'bliki' or page.categories[0] == 'bliki' %} class="current" {% endif %}>
-  <a href="/bliki">bliki</a>  
+  <a href="/bliki">bliki</a>
 </li>
 <li {% if page.current == 'projects' %} class="current" {% endif %}>
-  <a href="/projects">projects</a>  
+  <a href="/projects">projects</a>
 </li>
 <li {% if page.current == 'talks' %} class="current" {% endif %}>
-  <a href="/talks">talks</a>  
-</li>      
+  <a href="/talks">talks</a>
+</li>
 <li {% if page.current == 'about' %} class="current" {% endif %}>
-  <a href="/about">about</a>  
+  <a href="/about">about</a>
 </li>
 <li class="nav pull-right visible-desktop">
   <a id="follow-menu" role="button" data-toggle="dropdown" data-target="#" href="#">
@@ -33,7 +33,7 @@
         <tr>
           <td class="social-stackoverflow"><a href="http://stackoverflow.com/users/50109/juri">StackOverflow</a></td>
           <td class="social-geeklist"><a href="https://geekli.st/juri">Geekli.st</a></td>
-        </tr>            
+        </tr>
         <tr>
           <td class="social-github">
             <a href="http://github.com/juristr">GitHub</a>
