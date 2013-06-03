@@ -10,4 +10,14 @@
     <p class="bio-content">Software architect, JavaScript, .Net, Android Developer and Blogger
     <p>
   </div>
+  {% unless page.tags == empty %}
+    <div class="tag-list">
+      <strong>Tags</strong>
+      <div class="tags">
+        {% for tag in page.tags %}
+          <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endunless %}  
 </div>

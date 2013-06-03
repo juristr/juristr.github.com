@@ -555,6 +555,14 @@
     font-style:italic;
   }
 
+  .tag-list {
+    padding-top: 10px;
+  }
+
+  .tag-list > strong {
+    padding-top: 10px;
+  }
+
   .article-footer {
     background: #f9f9f7;
     border-top: 1px solid #e0e0df;
@@ -572,58 +580,12 @@
 
   .post-tag {
     display: block;
-    float: left;
-    padding: 5px 10px 5px 10px;
-    margin: 4px 5px 5px 0;
-    background: transparent;
-    border: 2px solid #008CCC;
-    border-radius: 999px;
-    -moz-border-radius: 999px;
-    font-size: 13px;
-    line-height: 12px;
-    /*color: #304955;
-    margin: 2px 2px 6px 0;
-    overflow: visible;
-    text-decoration: none;
-    white-space: nowrap;
-    display: inline-block;
-    background-color: #E6F1F7;
-    padding: 2px 8px 4px 8px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-transition: padding 0.1s ease-out;
-    -moz-transition: padding 0.1s ease-out;
-    transition: padding 0.1s ease-out;*/
-  }
-
-  a.post-tag:hover{
-    /*text-decoration:none;
-    background:#d6f2ff url('/assets/images/sprites.png') no-repeat -220px -296px;
-    padding-left:18px;
-    -webkit-transition:padding 0.1s ease-in,background-image 0.1s ease-in;
-    -moz-transition:padding 0.1s ease-in,background-image 0.1s ease-in;
-    transition:padding 0.1s ease-in,background-image 0.1s ease-in;*/
-    background:#008CCC;
-    color:#fff;
-    /*border-bottom: 3px solid #008CCC;*/
-    -webkit-transition: background 0.4s linear;
-       -moz-transition: background 0.4s linear;
-            transition: background 0.4s linear;
   }
 
   #related-posts {
     font: 18px/1.5 'Source Sans Pro', sans-serif;
     margin: 20px auto 50px auto;
     max-width: 700px;
-  }
-
-  #related-posts > ul {
-    margin-left:0;
-  }
-
-  #related-posts > ul > li {
-    list-style-type: none;
   }
 
   code, pre {
@@ -1065,6 +1027,22 @@ ol.linenums li {
 
   .author-inline-bio img{
     border: 0;
+  }
+
+  .tag-list {
+    padding-top:10px;
+    position:relative;
+    top: auto;
+    right: auto;
+    width: auto;
+  }
+
+  .tag-list:before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: #dededc;
+    position: absolute;
   }  
 
 }
