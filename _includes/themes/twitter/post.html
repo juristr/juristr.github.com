@@ -55,6 +55,17 @@
             {{ page.date | date: "%B %d, %Y" }}&nbsp;-&nbsp;
           </time>
           {{ content }}
+          <div class="row-fluid">
+            {% if page.reposts && page.reposts.length > 0 %}
+              <hr />
+              <p><strong>This article has been re-published by</strong></p>
+              <ul>
+                {% for repostUrl in page.reposts %}
+                  <li><a href="{{repostUrl}}" rel="nofollow">{{ repostUrl }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
         </div>
 
         <div class="row-fluid">
@@ -69,16 +80,7 @@
             {% endunless %}
           </div>
         </div>
-        <div class="row-fluid">
-          {% if page.reposts && page.reposts.length > 0 %}
-            <p><strong>This article has been re-published by</strong></p>
-            <ul>
-              {% for repostUrl in page.reposts %}
-                <li><a href="{{repostUrl}}" rel="nofollow">{{ repostUrl }}</a></li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </div>
+
         <div class="row-fluid inline-bio">
           <div class="span2">
             <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=80&amp;d=identicon&amp;r=PG" class="img-rounded">
