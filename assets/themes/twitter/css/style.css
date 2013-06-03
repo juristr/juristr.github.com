@@ -318,6 +318,11 @@
     margin-bottom: 0.2rem;
   }
 
+  .article-comments {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
   article {
     /*font-family: calibri,tahoma,arial,sans-serif;*/
     /*padding-top:45px;*/
@@ -600,34 +605,6 @@
     -webkit-transition: background 0.4s linear;
        -moz-transition: background 0.4s linear;
             transition: background 0.4s linear;
-  }
-
-  .author-inline-bio {
-    /*border-top: 4px solid #008CCC;*/
-    /*border-top: 1px solid #dededc;*/
-    line-height: 1.4;
-    color: #666665;
-    width: 170px;
-    float: left;
-    margin-left: -220px;
-    text-align:right;
-  }
-
-  .author-inline-bio .bio-author {
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: 18px;
-    display: block;
-  }
-
-  .author-inline-bio .bio-content {
-    font-style: italic;
-    font-size: 14px;
-    font-weight:300;
-  }
-
-  .author-inline-bio img{
-    border: 0;
   }
 
   #related-posts .title {
@@ -1043,6 +1020,87 @@ ol.linenums li {
     display: block;
     margin-top: 9.333333333333334px;
   }*/
+
+}
+
+@media (min-width: 1200px) {
+
+  .author-bio-sidebar {
+    display:block;
+  }
+
+  .author-bio-footer {
+    display:none;
+  }
+
+  .author-inline-bio {
+    /*border-top: 4px solid #008CCC;*/
+    /*border-top: 1px solid #dededc;*/
+    line-height: 1.4;
+    color: #666665;
+    width: 170px;
+    float: left;
+    margin-left: -220px;
+    text-align:right;
+  }
+
+  .author-inline-bio .bio-author {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+  }
+
+  .author-inline-bio .bio-content {
+    font-style: italic;
+    font-size: 14px;
+    font-weight:300;
+  }
+
+  .author-inline-bio img{
+    border: 0;
+  }  
+
+}
+
+@media (max-width: 1199px) {
+
+  .author-bio-sidebar {
+    display:none;
+  }
+
+  .author-bio-footer {
+    display:block;
+  }
+
+  .author-image {
+    float:left;
+    padding-right: 15px;
+  }
+
+  .author-inline-bio {
+    /*border-top: 4px solid #008CCC;*/
+    border-top: 1px solid #dededc;
+    line-height: 1.4;
+    color: #666665;
+    width: 100%;
+  }
+
+  .author-inline-bio .bio-author {
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 23px;
+    display: block;
+  }
+
+  .author-inline-bio .bio-content {
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  .author-inline-bio img{
+    border: 0;
+  }  
 
 }
 

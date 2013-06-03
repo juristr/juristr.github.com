@@ -12,7 +12,9 @@
     {% else %}
     <section class="main-content post">
     {% endif %}
-      {% include mycustoms/author-bio %}
+      <div class="author-bio-sidebar">
+        {% include mycustoms/author-bio %}
+      </div>
       <article class="row-fluid">
         <header>
           {% if page.postimg != nil and page.show_img_in_detail == true and (page.coverimage == false or page.coverimage == nil) %}
@@ -86,6 +88,9 @@
             {% endunless %}
           </div>
         </div>
+        <div class="author-bio-footer">
+          {% include mycustoms/author-bio %}
+        </div>        
         <hr>
         {% include mycustoms/relatedposts %}
         <hr>
@@ -100,7 +105,7 @@
           {% if page.next %}
             <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
           {% else %}
-            <li class="next disabled"><a>Next &rarr;</a>
+            <li class="next disabled"><a>Next &rarr;</a></li>
           {% endif %}
           </ul>
         </div>
@@ -111,6 +116,8 @@
         </div>
       </div> -->
     </section>
+  </div>
+  <div class="row-fluid article-comments">
     <hr>
     {% include JB/comments %}    
   </div>
