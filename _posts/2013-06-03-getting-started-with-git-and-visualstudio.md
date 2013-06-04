@@ -6,6 +6,7 @@ postimg: "/blog/assets/imgs/vsgit/gitmeetsvs.png"
 show_img_in_detail: true
 category: bliki
 tags: [.Net]
+reposts: ["http://agile.dzone.com/articles/git-visual-studio-and-net"]
 ---
 
 A couple of weeks ago I wrote an introductory article "[Git Explained for Beginners](/blog/2013/04/git-explained/)" which aimed at introducing Git to beginners on the basis of Git's underlying tree structure. Since that article turned out to be quite popular and since I'm currently planning an introduction for our .Net devs on that topic, I decided to write this article, using a similar approach, but show-casing the use of Git from within Visual Studio.
