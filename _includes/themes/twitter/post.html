@@ -5,6 +5,11 @@
     </div>
   </div>
 {% endif %}
+<div class="sidebar">
+  <div class="toc-container" style="display:none">
+    <div id="toc"></div>
+  </div>
+</div>
 <div class="container">
   <div class="row-fluid">
     {% if page.postimg != nil and page.show_img_in_detail == true and page.coverimage == true %}
@@ -46,7 +51,7 @@
           $(function(){
             {% if page.categories[0] == "bliki" %}
               $(".toc-container").show();
-              $("#toc").tocify({ scrollTo: 30 });
+              $("#toc").tocify({ context: '.main-content', scrollTo: 30 });
             {% else %}
               $.fn.scrolltop();
             {% endif %}
@@ -97,11 +102,6 @@
         </div>
         -->
       </article>
-      <!-- <div class="span4 sidebar">
-        <div class="toc-container" style="display:none">
-          <div id="toc"></div>
-        </div>
-      </div> -->
     </section>
   </div>
   <div class="row-fluid article-comments">
