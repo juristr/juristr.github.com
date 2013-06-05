@@ -754,18 +754,42 @@ ol.linenums li {
 
   .toc-container {
     padding-top: 45px;
-    padding-left: 30px;
+  }
+
+  .toc-container .nav-list a {
+    color: #b3b3b1;
+    text-shadow: inherit;
   }
 
   .toc-container .nav-list > .active > a {
-    background-color: #008CCC;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .toc-container .nav-list a:hover {
+    color: #fff;
+    text-decoration:none;
+    background: rgba(0,0,0,0.3);
+    opacity: 1;
+    /*border-bottom: 3px solid #008CCC;*/
+    -webkit-transition: background 0.4s linear;
+       -moz-transition: background 0.4s linear;
+            transition: background 0.4s linear;
   }
 
   #toc {
-    width: 24%;
+    padding-left:0;
+    margin-left:0;
+    background: #333332;
+    opacity: 0.85;
+    width: 19%;
     webkit-border-radius: 0;
     moz-border-radius: 0;
     border-radius: 0;
+  }
+
+  #toc li {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
   .scroll-menu {

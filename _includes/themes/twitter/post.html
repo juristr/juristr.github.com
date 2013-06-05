@@ -10,6 +10,16 @@
     <div id="toc"></div>
   </div>
 </div>
+<script type="text/javascript">
+  $(function(){
+    {% if page.categories[0] == "bliki" %}
+      $(".toc-container").show();
+      $("#toc").tocify({ context: '.main-content', scrollTo: 40 });
+    {% else %}
+      $.fn.scrolltop();
+    {% endif %}
+  });
+</script>
 <div class="container">
   <div class="row-fluid">
     {% if page.postimg != nil and page.show_img_in_detail == true and page.coverimage == true %}
@@ -21,42 +31,30 @@
         {% include mycustoms/author-bio %}
       </div>
       <article class="row-fluid">
-        <header>
-          {% if page.postimg != nil and page.show_img_in_detail == true and (page.coverimage == false or page.coverimage == nil) %}
-            <div class="span12 post-image" style="margin-bottom:15px; text-align:center">
-                <img src="{{page.postimg}}" style="width:100%" />
-            </div>
-          {% endif %}
-          {% if page.postheadline != nil %}
-            <div class="span12 post-headerline">
-              <p class="title">{{ page.postheadline }}</p>
-            </div>
-          {% endif %}
-          <div class="post-meta">
-            <span class="post-meta-author">
-              <a href="/about" class="post-author">Juri</a>
-              <span class="divider-word">on</span>
-            </span>
-            {% unless page.tags == empty %}
-              {% for tag in page.tags %}
-                <a href="/blog/tags#{{tag}}" style="margin-right:10px;">{{ tag }}</a>
-              {% endfor %}
-            {% endunless %}
+        {% if page.postimg != nil and page.show_img_in_detail == true and (page.coverimage == false or page.coverimage == nil) %}
+          <div class="span12 post-image" style="margin-bottom:15px; text-align:center">
+              <img src="{{page.postimg}}" style="width:100%" />
           </div>
-          <h1>
-            {{ page.title }}
-          </h1>
-        </header>
-        <script type="text/javascript">
-          $(function(){
-            {% if page.categories[0] == "bliki" %}
-              $(".toc-container").show();
-              $("#toc").tocify({ context: '.main-content', scrollTo: 30 });
-            {% else %}
-              $.fn.scrolltop();
-            {% endif %}
-          });
-        </script>
+        {% endif %}
+        {% if page.postheadline != nil %}
+          <div class="span12 post-headerline">
+            <p class="title">{{ page.postheadline }}</p>
+          </div>
+        {% endif %}
+        <div class="post-meta">
+          <span class="post-meta-author">
+            <a href="/about" class="post-author">Juri</a>
+            <span class="divider-word">on</span>
+          </span>
+          {% unless page.tags == empty %}
+            {% for tag in page.tags %}
+              <a href="/blog/tags#{{tag}}" style="margin-right:10px;">{{ tag }}</a>
+            {% endfor %}
+          {% endunless %}
+        </div>
+        <h1>
+          {{ page.title }}
+        </h1>
         <!--
         {% unless page.tags == empty %}
             {% assign tags_list = page.tags %}
