@@ -7,7 +7,11 @@
 {% endif %}
 <div class="sidebar">
   <div class="toc-container" style="display:none">
-    <div id="toc"></div>
+    <div id="toc" style="left:0">
+      <div class="toc-control">
+        <div>TOC</div>
+      </div>
+    </div>
   </div>
 </div>
 <script type="text/javascript">
@@ -15,6 +19,16 @@
     {% if page.categories[0] == "bliki" %}
       $(".toc-container").show();
       $("#toc").tocify({ context: '.main-content', scrollTo: 40 });
+
+      $('.toc-control').click(function(){
+        var $lefty = $(this).parent();//.siblings('ul');
+        $lefty.animate({
+          left: parseInt($lefty.css('left'),10) == 0 ?
+            -$lefty.outerWidth() + 50 :
+            0
+        });
+      });
+
     {% else %}
       $.fn.scrolltop();
     {% endif %}
