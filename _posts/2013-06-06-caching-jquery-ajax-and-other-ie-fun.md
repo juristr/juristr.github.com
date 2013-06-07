@@ -5,6 +5,7 @@ description: ""
 show_img_in_detail: false
 category: 
 tags: [WebDev, JavaScript]
+reposts: ["http://css.dzone.com/articles/caching-jquery-ajax-and-other"]
 ---
 
 In the last couple of days I had quite a fun time debugging problems of our JavaScript SPAs on oldIE (thanks God we got the Browserstack licenses). Anyway, I encountered some quite interesting behavior of IE with jQuery Ajax calls and cached responses.
