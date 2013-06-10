@@ -752,6 +752,13 @@ ol.linenums li {
     margin-bottom:5px;
   }
 
+  .toc-border {
+    border: 0 6px 6px 0 !important;
+    -webkit-box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.43);
+    box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.43);
+  }
+
   .toc-control > div {
     font-size: 23px;
     color: #fff;
@@ -808,9 +815,6 @@ ol.linenums li {
     background: #333332;
     opacity: 0.85;
     width: 19%;
-    webkit-border-radius: 0;
-    moz-border-radius: 0;
-    border-radius: 0;
     border: 0;
   }
 
@@ -833,6 +837,7 @@ ol.linenums li {
     line-height:40px;
     font-size:13px;
     margin-bottom:0;
+
     -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.43);
     -moz-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.43);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.43);
