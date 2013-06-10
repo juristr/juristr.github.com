@@ -753,7 +753,9 @@ ol.linenums li {
   }
 
   .toc-border {
-    border: 0 6px 6px 0 !important;
+    -webkit-border-radius: 0 6px 6px 0 !important;
+    -moz-border-radius: 0 6px 6px 0 !important;
+    border-radius: 0 6px 6px 0 !important;
     -webkit-box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.43);
     -moz-box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.43);
     box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.43);
