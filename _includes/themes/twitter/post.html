@@ -7,7 +7,8 @@
 {% endif %}
 <div class="sidebar">
   <div class="toc-container" style="display:none">
-    <div id="toc" style="left:0">
+    <div class="toc-button" style="left:0">T</div>
+    <div id="toc" style="left:-400px">
       <div class="toc-control">
         <div>TOC</div>
       </div>
@@ -20,13 +21,31 @@
       $(".toc-container").show();
       $("#toc").tocify({ context: '.main-content', scrollTo: 40 });
 
-      $('.toc-control').click(function(){
-        var $lefty = $(this).parent();//.siblings('ul');
+      var $tocButton = $('.toc-button'),
+          $toc = $('#toc');
+
+      var toggleToc = function(){
+        var $lefty = $toc;//.siblings('ul');
         $lefty.animate({
           left: parseInt($lefty.css('left'),10) == 0 ?
-            -$lefty.outerWidth() + 50 :
-            0
+            -$lefty.outerWidth() : 0
         });
+      };
+      var toggleTocButton = function(){
+        $tocButton.animate({
+          left: parseInt($tocButton.css('left'),10) == 0 ?
+            -$tocButton.outerWidth() : 0
+        });
+      };
+
+      $('.toc-control').click(function(){
+        toggleToc();
+        toggleTocButton();
+      });
+
+      $('.toc-button').click(function(){
+        toggleTocButton();
+        toggleToc();
       });
 
     {% else %}

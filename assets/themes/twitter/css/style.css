@@ -764,9 +764,22 @@ ol.linenums li {
     cursor: pointer;
   }
 
-  .toc-container {
-    padding-top: 45px;
+  .toc-button {
+    font-size: 23px;
+    color: #fff;
+    font-weight: bold;
+    width: 40px;
+    background: black;
+    display: block;
+    text-align: center;
+    background-color: rgba(0,0,0,0.85);
+    cursor: pointer;
     position: fixed;
+  }
+
+  .toc-container {
+    top: 60px;
+    position: absolute;
   }
 
   .toc-container .nav-list a {
