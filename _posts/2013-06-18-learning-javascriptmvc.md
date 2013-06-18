@@ -2,7 +2,7 @@
 layout: post
 title: "Learning JavaScriptMVC"
 description: ""
-postimg: "/blog/assets/imgs/learningjmvc_cover.jpg"
+postimg: "/blog/assets/imgs/learning-jmvc-cover.png"
 show_img_in_detail: true
 category: 
 tags: [book review, JavaScript, WebDev]
@@ -10,20 +10,23 @@ tags: [book review, JavaScript, WebDev]
 
 About half a year ago, Packt Publishing approached me for a technical review of a new book about JavaScriptMVC they were about to publish. I agreed and started to participate in the review process. Now, after a bit of a delay the book was successfully published and last week I also got my copy of the book delivery at home: "Learning JavaScriptMVC".
 
+![](/blog/assets/imgs/learning_jmvc_review.png)
+
 ## So what is the book about?
 
-As you might have guessed, the book is about JavaScript  programming. More specifically it is about developing single-page JavaScript applications by using the [JavaScriptMVC framework](http://javascriptmvc.com). JMVC (short for JavaScriptMVC) is one of the dozens of JavaScript MVC frameworks out there beside others like Backbone, AngularJS, Ember, Spine etc...  
+As you might have guessed, the book is about JavaScript  programming. More specifically it is about developing single-page JavaScript applications by using the [JavaScriptMVC framework](http://javascriptmvc.com). JMVC (short for JavaScriptMVC) is one of the dozens of JavaScript MVC frameworks out there, like Backbone, AngularJS, Ember, Spine etc...  
 So far I actually didn't write that much about it on my blog here, although I heavily use it since we adopted it as our main SPA (Single Page Application) framework at work. Hopefully, in the next months I'm able to publish something more about it.
 
-The book is a very basic introduction to the framework and is therefore perfectly suited for novices in this area.
+The book is expecially suited for novices in this area as it slowly but steadily introduces you to JMVC's concepts, without overwhelming you with too much of information. In its approximately 100 pages, the author managed to find the balance between the necessary theoretical information and their corresponding practical application.
 
-## Structure
+The book starts by introducing the concept of a single page application before then proceeding to guide the user through the installation and setup process of a new JMVC project. It describes the architecture of JMVC by detailing each of its building blocks, namely DocumentJS (the documentation engine), FuncUnit (advanced QUnit UI testing), jQueryMX (its core basically) and StealJS (for dependency management and code generation).
 
-(About the chapters and their corresponding content)
+Towards the end it illustrates the pratical application of JMVC's concepts on the basis of a time tracking and invoicing app for freelancers.
 
-## Conclusion - Words about JMVC
 
-IMHO, JavaScriptMVC is great, especially if you're completely new to the world of JavaScript SPAs. JMVC is great because it bundles everything you need
+## Conclusion - Some Words about JMVC
+
+IMHO, JavaScriptMVC is great, especially if you're completely new to the world of JavaScript SPAs as it bundles everything you need
 
 - **Code Generators -** for generating the JavaScript application structure which is quite nice for having a starting point. Moreover the generators are flexible and extensible s.t. you can easily customize it for your corporate environment.
 - **Testing -** Full integration with QUnit and FuncUnit, a JMVC evolution of QUnit for more advanced UI testing.
@@ -44,3 +47,6 @@ Well yes, that might be true. Although the guys at Bitovi (the consulting compan
 ### Links
 
 - [Learning JavaScriptMVC, Wojciech Bednarski, Packt Publishing, May 2013](http://www.packtpub.com/building-javasript-web-applications-using-javascriptmvc/book)
+- [JavaScriptMVC Homepage](http://javascriptmvc.com)
+- [JavaScriptMVC GitHub Repository](https://github.com/bitovi/javascriptmvc)
+- [CanJS](http://canjs.com)
