@@ -5,6 +5,7 @@ description: ""
 show_img_in_detail: false
 category: 
 tags: [ Unit Testing ]
+reposts: ["http://architects.dzone.com/articles/unit-testing-tip-create"]
 ---
 
 Your unit tests should be as descriptive as possible. The feedback they give you should be so clear you don't even need to fire up the debugger and step one by one through the code to inspect your local variables. Why? Because that takes time and we're lazy, right?
