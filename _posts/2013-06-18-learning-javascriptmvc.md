@@ -6,6 +6,7 @@ postimg: "/blog/assets/imgs/learning-jmvc-cover.png"
 show_img_in_detail: true
 category: 
 tags: [book review, JavaScript, WebDev]
+reposts: ["http://css.dzone.com/articles/learning-javascriptmvc"]
 ---
 
 About half a year ago, Packt Publishing approached me for a technical review of a new book about JavaScriptMVC they were about to publish. I agreed and started to participate in the review process. Now, after a bit of a delay the book was successfully published and last week I also got my copy of the book delivery at home: "Learning JavaScriptMVC".
