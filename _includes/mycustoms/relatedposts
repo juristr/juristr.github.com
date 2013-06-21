@@ -1,10 +1,8 @@
-<div id="related-posts">
-	<div class="title">Other Recent Posts</div>
-	<ul>
-	  {% for post in site.related_posts limit:3 %}
-	    <li>
-	      <div>{{ post.date | date_to_string }} - <a href="{{ post.url }}">{{ post.title }}</a></div>
-	    </li>
-	  {% endfor %}
-	</ul>
+<div id="related-posts" class="container-fluid">
+	<h3>Other Recent Posts</h3>
+	{% for post in site.related_posts limit:3 %}
+		<p>
+			<strong>{{ post.date | date_to_string }}&nbsp;-</strong>&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>
+		</p>
+	{% endfor %}
 </div>

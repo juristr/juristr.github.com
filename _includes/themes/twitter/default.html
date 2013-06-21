@@ -42,7 +42,7 @@
     <link href='/assets/js/scrolltop/jquery.scrolltop.css' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="/assets/js/scrolltop/jquery.scrolltop.js"></script>
     <link href='/assets/js/tocify/jquery.tocify.css' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="/assets/js/tocify/jquery.tocify.min.js"></script>
+    <script type="text/javascript" src="/assets/js/tocify/jquery.tocify.js"></script>
 
     <script type="text/javascript" src="/assets/js/moment.min.js"></script>
     <script type="text/javascript" src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
@@ -51,15 +51,39 @@
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <link href="{{ ASSET_PATH }}/css/print.css" rel="stylesheet" type="text/css" media="print">
+
+    <script type="text/javascript">
+      /* hide/show navbar when scrolling */
+      $(function(){
+        var $nav = $('.js-navbar'),
+            _hideShowOffset = 20,
+            _lastScroll = 0,
+            _detachPoint = 50;
+
+        $(window).scroll(function(){
+          var t = $(window).scrollTop(),
+              e = t > _lastScroll ? "down" : "up",
+              i = Math.abs(t - _lastScroll);
+
+          if(t >= _detachPoint || 0 >= t || t > -1){
+            if('down' === e && i >= _hideShowOffset){
+              $nav.slideUp();
+            }else if('up' === e && i >= _hideShowOffset){
+              $nav.slideDown();
+            }
+          }
+
+          _lastScroll = t;
+        });
+      });
+    </script>
   </head>
 
   <body>
-    {% include mycustoms/navbar %}
-    <div class="container">
-      <div class="row-fluid">
-        {{ content }}
-      </div>
-    </div>
+    {% include mycustoms/navbar %} 
+
+    {{ content }}
+
     <script>
       // $(function(){
       //   $(".js-tweets").juristr_tweets();

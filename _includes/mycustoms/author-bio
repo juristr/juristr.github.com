@@ -1,0 +1,25 @@
+<div class="row-fluid author-inline-bio">
+  <div class="author-image">
+    <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=80&amp;d=identicon&amp;r=PG" class="img-rounded">
+  </div>
+  <div class="bio-container">
+    <span class="bio-author">
+      <a href="/about">Juri Strumpflohner</a>
+    </span>
+    <!--<p>Juri Strumpflohner currently works as a software architect focusing mainly on creating rich client web applications with JavaScript and the Microsoft technology stack. You can find him on <a href="http://twitter.com/juristr">Twitter</a>, <a href="http://github.com/juristr">GitHub</a> and <a href="http://stackoverflow.com/users/50109/juri">Stackoverflow</a>.</p>-->
+    <p class="bio-content">
+      Coaching architect, JavaScript, .Net, Android Developer, Blogger, DZone MVB, Martial Arts Practitioner.
+    <p>
+  </div>
+  {% unless page.tags == empty %}
+    <hr />
+    <div class="tag-list">
+      <strong>Tags</strong>
+      <div class="tags">
+        {% for tag in page.tags %}
+          <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endunless %}
+</div>
