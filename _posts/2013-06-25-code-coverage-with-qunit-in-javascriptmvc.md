@@ -2,9 +2,10 @@
 layout: post
 title: "Code Coverage with QUnit in JavaScriptMVC"
 description: ""
+postimg: "/blog/assets/imgs/funcunit_coverage_overview.png"
 show_img_in_detail: false
 category: 
-tags: []
+tags: [Unit Testing, JavaScript]
 ---
 
 Beside giving you an immediate feedback, unit tests are extremely useful as a regression test suite. They basically build a safety net around your code, giving you the freedom to apply changes without breaking anything existing. The only question to remain is on how much you can actually trust them.
