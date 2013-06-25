@@ -236,7 +236,7 @@ Jumping to a certain commit is quite easy and can be done by using the **Browse*
 
 ![](/blog/assets/imgs/vsgit/gscm_checkoutrevision.png)
 
-From there you can use the context menu and click on **Checkout a selected revision".
+From there you can use the context menu and click on **Checkout a selected revision**.
 
 <figure>
     <img src="/blog/assets/imgs/vsgit/gscm_checkoutrevision_detachedhead.png" />

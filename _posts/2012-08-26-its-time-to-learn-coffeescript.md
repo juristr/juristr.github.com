@@ -80,7 +80,7 @@ A variant is to write the string concatenation as follows
 > **Note**
 > 
 > - No variable declaration needed
-> - parenthesis are optional; `confirm("Ready...")` is equal to `confirm "Ready..."
+> - parenthesis are optional; `confirm("Ready...")` is equal to `confirm "Ready..."`
 
 ### Calling functions
 

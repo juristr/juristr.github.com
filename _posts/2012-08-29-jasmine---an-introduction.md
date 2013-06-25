@@ -47,7 +47,7 @@ A first example of a Jasmine test:
         });
     });
 
-The according `Ball.js´ looks like this
+The according `Ball.js` looks like this
 
     function Ball() {
       var self = this;

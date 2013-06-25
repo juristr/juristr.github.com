@@ -100,7 +100,7 @@ end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --server"
+  system "jekyll serve --watch"
 end # task :preview
 
 # Changes the codepage to allow running jekyll on win as well

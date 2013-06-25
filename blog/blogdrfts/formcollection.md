@@ -24,7 +24,7 @@ So having
 
 **didn't work** while deactivating the module or by directly invoking `Default.aspx` **it worked** instead.
 
-I was able to break the problem down to the following line in the `HttpModule:
+I was able to break the problem down to the following line in the `HttpModule`:
 
     var argument = httpRequest.Form["__EVENTARGUMENT"];
 
