@@ -1,16 +1,16 @@
-﻿module Jekyll
-    class SpeakerDeck < Liquid::Tag
-  
-        def initialize(name, id, tokens)
-            super
-            @id = id
-        end
+﻿# module Jekyll
+#     class SpeakerDeck < Liquid::Tag
 
-        def render(context)
-            %(<script async="true" class="speakerdeck-embed" data-id="#{@id.strip}" src="//speakerdeck.com/assets/embed.js"> </script>)
-        end
+#         def initialize(name, id, tokens)
+#             super
+#             @id = id
+#         end
 
-    end
-end
+#         def render(context)
+#             %(<script async="true" class="speakerdeck-embed" data-id="#{@id.strip}" src="//speakerdeck.com/assets/embed.js"> </script>)
+#         end
 
-Liquid::Template.register_tag('speakerdeck', Jekyll::SpeakerDeck)
+#     end
+# end
+
+# Liquid::Template.register_tag('speakerdeck', Jekyll::SpeakerDeck)
