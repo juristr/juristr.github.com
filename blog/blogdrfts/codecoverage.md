@@ -9,21 +9,23 @@ tags: []
 
 Beside giving you an immediate feedback, unit tests are extremely useful as a regression test suite. They basically build a safety net around your code, giving you the freedom to apply changes without breaking anything existing. The only question to remain is on how much you can actually trust them.
 
-Here is where code coverage analysis comes in handy. It is quite obvious that if your tests cover 20% of your code, you should also only trust them 20%. You definitely cannot rely that you didn't break anything if after your refactoring all of the tests still pass. There a couple of tools out there which get you the percentage of code that is being covered by your tests. [Eclemma](http://www.eclemma.org/) is one example that nicely integrates into Eclipse. I've already written a post about that a couple of years ago about ["Can You Trust Your Tests"](http://localhost:4000/blog/2010/05/can-you-trust-your-tests/).
+It is quite obvious that if your tests cover 20% of your code, you should also only trust them 20%. With such a percentage you definitely cannot have confidence that you didn't break anything if after your refactoring all of the tests still pass. 
 
-Similar tools do also exist for JavaScript, but it's a little more complicated as your code runs directly in the browser.
+Here is where code coverage analysis comes in handy. There a couple of tools out there, which get you the percentage of code that is being covered by your tests. [Eclemma](http://www.eclemma.org/) is one example that nicely integrates into Eclipse for Java. I've already written a post about that a couple of years ago about ["Can You Trust Your Tests"](http://localhost:4000/blog/2010/05/can-you-trust-your-tests/).
+
+Similar tools do also exist for JavaScript, but it's a little more complicated as your code runs directly in a browser.
 
 ## Code Coverage Analysis with FuncUnit
 
-FuncUnit is the automated testing "module" of JavaScriptMVC.
+With FuncUnit it turns out to be quite simple, though. FuncUnit is the automated testing "module" of JavaScriptMVC.
 
 > FuncUnit is a free, open source, web application testing framework that focuses on making tests fun and enjoyable.<cite><a href="http://funcunit.com/">funcunit.com</a></cite>
 
-It is based on QUnit adding further functionalities such as functional (UI) testing (i.e. drag & drop) based on Selenium, just to mention one. One of those functionalities is to allow for code coverage analysis by using [Cobertura](http://cobertura.sourceforge.net/).
+It is based on QUnit, adding further functionalities such as functional (UI) testing (i.e. drag & drop) based on Selenium, just to mention one. Among these, FuncUnit is also capable to perform code coverage analysis, using [Cobertura](http://cobertura.sourceforge.net/).
 
-## Writing a QUnit Test Using FuncUnit
+## How does it work?
 
-Assume we just created a JavaScriptMVC widget called "user" which we want to unit test. Create a folder "tests" within the widget's folder with two files in it:
+It is quite simple. Frankly, you just have to write a plain normal QUnit test case. Assume we just created a JavaScriptMVC widget called "user" which we want to unit test. Create a folder "tests" within the widget's folder with the following files in it:
 
 - index.html
 - tests.js
@@ -91,9 +93,16 @@ Finally, the `user_test.js` contains the actual QUnit test code. I'm not going i
         ...
     });
 
-
+Open `index.html` in your browser. You should see your tests running in the typical QUnit interface. But notice the small **coverage** checkbox in the QUnit title. This has been added by FuncUnit.
 
 ![](/blog/assets/imgs/funcunit_coverage_setting.png)
 
+If you check it and re-run your tests, you should get a tabbed page, the first containing (just as normally) the QUnit tests and the second a nicely formatted report with the corresponding code coverages:
+
 ![](/blog/assets/imgs/funcunit_coverage_overview.png)
+
+Even better, if you click on one of the files, you get its source code visualized and (just like Eclemma does) the covered and uncovered parts are highlighted corrispondingly.
+
 ![](/blog/assets/imgs/funcunit_coverage_detailed.png)
+
+Awesome and extremely easy.
