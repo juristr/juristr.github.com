@@ -111,6 +111,13 @@ task :runwin do
     `jekyll serve --watch`
 end
 
+task :runwindrafts do
+    puts '* Changing the codepage'
+    `chcp 65001`
+    puts '* Running Jekyll'
+    `jekyll serve --drafts --watch`
+end
+
 # Public: Alias - Maintains backwards compatability for theme switching.
 task :switch_theme => "theme:switch"
 
