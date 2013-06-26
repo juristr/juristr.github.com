@@ -6,8 +6,7 @@ category: ""
 tags: [".Net", "WPF"]
 ---
 
-This post briefly functions as a documentation for myself on how to setup a WPF client to use PRISM.
-Just a short intro. PRISM emerged from Microsoft's Patterns and Practices team and is the successor of the Composite UI Application Block.
+This post mainly functions as a documentation for myself on how to setup a WPF client to use PRISM which emerged from Microsoft's Patterns and Practices team and is the successor of the Composite UI Application Block.
 
 > Prism provides guidance designed to help you more easily design and build rich, flexible, and easy-to-maintain Windows Presentation Foundation (WPF) desktop applications. [...]. Using design patterns that embody important architectural design principles, such as separation of concerns and loose coupling, Prism helps you to design and build applications using loosely coupled components that can evolve independently but that can be easily and seamlessly integrated into the overall application.<cite><a href="http://compositewpf.codeplex.com/">Official PRISM site</a></cite>
 
@@ -15,7 +14,7 @@ I've experimented with PRISM already a couple of years ago when it was still in 
 
 ## Step 1: Create a new WPF Client
 
-Just create a new plain WPF project. You'll get an `App.xaml` and `MainWindow.xaml`.
+Just create a new plain WPF project using the Visual Studio build-in project template. You'll get an `App.xaml` and `MainWindow.xaml`.
 
 ## Step 2: Install the PRISM Dependencies Over NuGet
 
