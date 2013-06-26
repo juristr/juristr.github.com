@@ -1,5 +1,0 @@
-<ul>
-	<% for(var i=0; i<this.length; i++){ %>
-		<li><%= this[i].commit.message %> <span class="versionhistory-date">(<%= (moment(this[i].commit.committer.date).fromNow()) %>)</span></li>
-	<% } %>
-</ul>

@@ -1,8 +1,0 @@
-
-
-cd ..
-sh js juristr/scripts/build.js
-
-cp -rfv ../steal/steal.production.js ../../assets/js
-mv -v ./production.js ../assets/js
-mv -v ./production.css ../
