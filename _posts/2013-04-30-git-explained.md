@@ -476,12 +476,20 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [http://gitready.com/](http://gitready.com/)
 - [Book: Pro Git by Scott Chacon](http://git-scm.com/book)
 - [Visual Git Cheat-Sheet](http://ndpsoftware.com/git-cheatsheet.html)
-- [Try Git in 15 minutes](http://try.github.io/)
-- [Introduction to Git with Scott Chacon of GitHub](http://www.youtube.com/watch?v=ZDR433b0HJY&feature=youtu.be&t=21m4s)
 - [My personal Git Cheat Sheet where I continuously add stuff I want to remember](https://gist.github.com/juristr/5280366)
 - [Git Immersion](http://gitimmersion.com/index.html)
 - [Git Branching Model](http://www.slideshare.net/lemiorhan/git-branching-model)
 - [DZone Refcard: Getting Started with Git](http://refcardz.dzone.com/refcardz/getting-started-git)
 - [DZone Refcard: Git Patterns and Antipatterns](http://refcardz.dzone.com/refcardz/git-patterns-and-anti-patterns)
+
+### Videos
+
+- [Introduction to Git with Scott Chacon of GitHub](http://www.youtube.com/watch?v=ZDR433b0HJY&feature=youtu.be&t=21m4s)
+
+### Interactive Tutorials
+
+- [Try Git in 15 minutes](http://try.github.io/)
+- [Learning Git - Interactive Online Tutorial](http://pcottle.github.io/learnGitBranching/index.html)
+
 
 If you have to add more, just let me know in the comments!
