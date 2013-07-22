@@ -20,13 +20,16 @@
     var displayReadingTime = function(){
       Countable.once($('.article-body')[0], function (counter) {
         //counter.words
-        var wpm = 200;
-        var estimatedRaw = counter.words / wpm,
-            remainder = estimatedRaw % 1,
-            minutes = estimatedRaw - remainder,
-            seconds = Math.round(estimatedRaw % 1);
+        // var estimatedRaw = counter.words / wpm,
+        //     remainder = estimatedRaw % 1,
+        //     minutes = estimatedRaw - remainder,
+        //     seconds = Math.round(estimatedRaw % 1);
 
-        var effectiveTime = minutes + " min read";
+        var wpm = 200,
+            estimatedRaw = counter.words / wpm,
+            minutes = Math.round(estimatedRaw);
+
+        var effectiveTime = (minutes < 1) ? "a couple of secs" : minutes + " min read";
 
         $('.reading-time').html(effectiveTime);
         $('.reading-time').tooltip({ title: "Based on an avg reading speed of " + wpm + " wpm (words per minute)"});
