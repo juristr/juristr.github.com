@@ -2,8 +2,9 @@
 layout: post
 title: "How to Add a Reading Time Indicator To Your Blog in Ten Minutes"
 description: ""
-postimg: "/blog/assets/imgs/typescript_beachcover_adj.jpg"
+postimg: "http://www.whiletrue.it/wp-content/uploads/2013/01/reading-time_banner.png"
 show_img_in_detail: true
+coverimage: true
 category: 
 tags: [JavaScript, Blogging]
 ---
