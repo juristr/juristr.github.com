@@ -17,6 +17,28 @@
 </div>
 <script type="text/javascript">
   $(function(){
+    var displayReadingTime = function(){
+      Countable.once($('.article-body')[0], function (counter) {
+        //counter.words
+        // var estimatedRaw = counter.words / wpm,
+        //     remainder = estimatedRaw % 1,
+        //     minutes = estimatedRaw - remainder,
+        //     seconds = Math.round(estimatedRaw % 1);
+
+        var wpm = 200,
+            estimatedRaw = counter.words / wpm,
+            minutes = Math.round(estimatedRaw);
+
+        var effectiveTime = (minutes < 1) ? "a couple of secs" : minutes + " min read";
+
+        $('.reading-time').html(effectiveTime);
+        $('.reading-time').tooltip({ title: "Based on an avg reading speed of " + wpm + " wpm (words per minute)"});
+      });
+    };
+
+    displayReadingTime();
+
+
     {% if page.categories[0] == "bliki" %}
       //$(".toc-container").show();
       //$("#toc").tocify({ context: '.main-content', scrollTo: 40 });
@@ -83,6 +105,7 @@
               <a href="/blog/tags#{{tag}}" style="margin-right:10px;">{{ tag }}</a>
             {% endfor %}
           {% endunless %}
+          <span class="reading-time"></span>
         </div>
         <h1>
           {{ page.title }}
@@ -160,3 +183,4 @@
     {% include JB/comments %}
   </div>
 </section>
+<script type="text/javascript" src="/assets/js/countable.min.js"></script>

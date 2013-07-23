@@ -266,6 +266,10 @@
       margin: 0 5px
   }
 
+  .post-meta .reading-time {
+    float:right;
+  }
+
   .post-headerline {
     display:table !important;
     margin-bottom:15px;
