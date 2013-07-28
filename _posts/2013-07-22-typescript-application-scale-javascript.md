@@ -6,6 +6,7 @@ postimg: "/blog/assets/imgs/typescript_beachcover_adj.jpg"
 show_img_in_detail: true
 category: 
 tags: [JavaScript, WebDev]
+reposts: ["http://architects.dzone.com/articles/typescript-application-scale"]
 ---
 
 I took this cover pic from my holiday (I just returned) at Menorca (Spain) from [Cala Talaier](https://www.google.com/maps?ll=39.926536,3.902724&spn=0.001351,0.002575&t=h&dg=opt&z=19). Awesome place, but sorry for the way too much blue-saturation of the pic. I accidentally didn't configure my Nexus 4's camera properly and only recognized it later at the hotel. That said, this post isn't about my holidays, but about Hejlsberg's talk about TypeScript at this year's Build conference. Having some time while being at this beach I listened to the talk on my tablet and put down some notes.

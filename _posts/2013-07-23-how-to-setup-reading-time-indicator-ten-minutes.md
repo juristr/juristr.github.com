@@ -7,6 +7,7 @@ show_img_in_detail: true
 coverimage: true
 category: 
 tags: [JavaScript, Blogging]
+reposts: ["http://css.dzone.com/articles/how-add-reading-time-indicator"]
 ---
 
 Time is money, right, and given that nowadays we are continuously being flooded with an enormous amount of information, we need to be fast in consuming it and particularly good at filtering what's worth and what isn't. "Read it later" services such as [Instapaper](http://www.instapaper.com/) or [Pocket](http://getpocket.com/) are flourishing, but when do you decide to read something immediately or later? Often depending on how long it takes to read and how much time you have right now. Therefore, many popular blogging platforms (i.e. Medium for instance) have added a reading time indicator on top of each post. I just had a couple of minutes of time and tried to add it to my blog here and was surprised how simple it is.
