@@ -4,7 +4,41 @@ published: false
 
 Intro bla bla bla...
 
-## Export your existing TFS project
+Originally we had a library containing all of the helper utilities divided into technology agnostic stuff into a `Siag.Base` and web specific into a `Siag.Web`. The structure was similar to
+
+- (Dir) Siag.Base
+  - Configuration
+  - Validation
+  - Security
+  - ...
+  
+and
+
+- (Dir) Siag.Web
+  - Security
+  - Mvc
+  - Validation
+  - ...
+  
+That turned out to be not so ideal over time as you got the entire set of imports in a project even if you - for example - just required the class in the `Siag.Base.Configuration namespace`. Moreover this made it more difficult to advance the libraries and keep the versioning clean.
+
+As such...decided to extract and split as also modern package managers like NuGet....semantic versioning etc...
+
+So what I wanted to achieve is to move all of the validation utilities, that means into a file structure like:
+
+Structure:
+
+- (DIR) Siag.Validation
+  - (DIR) Siag.Validation
+    - (migrated content here..)
+    - Siag.Validation.csproj
+  - Siag.Validation.sln
+  
+## What about version history
+
+A thing you definitely don't wanna loose is your version history, especially when you have a codebase that grew over years.
+
+## Toolbox: Ho to export your existing TFS project
 
 Fortunately Microsoft released **[git tf](http://gittf.codeplex.com/)** which is of great help for this undertaking. Make sure you download the latest version for eventual bugfixes.
 
@@ -22,3 +56,12 @@ Unfortunately git-tf creates a git tag for each TFS changeset. That's quite anno
 If you accidentally already pushed them to your remote, this command might be helpful as well
 
 	$ git ls-remote --tags origin | awk '/^(.*)(\s+)(.*[0-9])$/ {print ":" $2}' | xargs git push origin
+
+
+## Step 1: Clone validation namespace
+
+The first step is to clone the `Siag.Base.Validation` namespace which resides in the `/Neptune/Siag.Base/Validation` directory
+
+	git tf clone http://ourtfsserver:8080/tfs/ourcollectionname $/Neptune/Siag.Base/Validation Siag.Validation --deep
+
+You should now have
