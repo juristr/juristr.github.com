@@ -91,6 +91,7 @@
     background: url("home_active.png") no-repeat transparent;
   }
 
+
   .post-list {
     margin-top: 25px;
     font: 19px/1.5 'Source Sans Pro', sans-serif;
@@ -151,12 +152,87 @@
     margin: auto;
   }
 
-  .post-list .carousel-caption {
-    background: rgba(255, 255, 255, 0.8);
+  .post-tile {
+    padding-bottom: 25px;
   }
 
-  .post-list .row-fluid {
-    padding-bottom: 25px;
+  .post-tile span {
+    display:block;
+  }
+
+  .post-tile .thumb {
+    height: 150px;
+    margin: 0px 0px 10px;
+    box-shadow: inset rgba(0,0,0,.25) 0px 0px 40px;
+    -moz-box-shadow: inset rgba(0,0,0,.25) 0px 0px 40px;
+    -webkit-box-shadow: inset rgba(0,0,0,.25) 0px 0px 40px;
+  }
+
+  .post-tile-img-wrap {
+    top:0;
+  }
+
+  .post-tile-img-wrap .post-tile-img {
+    max-height:300px;
+    overflow: hidden;
+  }
+
+  .post-tile-content-preview{
+    text-align: justify;
+    color: #333332;
+  }
+
+  .post-tile-content-preview a,
+  .post-tile-content-preview a:hover {
+    color: #333332;
+  }
+
+
+  .hero .post-tile-title {
+    font-size:30px;
+    text-align: left;
+    padding-top:5px;
+  }
+
+  .post-tile-title {
+    font-size:25px;
+    text-align: center;
+    font-weight:bold;
+  }
+
+
+  .post-tile-title.thumb {
+    padding: 15px;
+    margin-top:10px;
+  }
+
+  @media (max-width: 1199px) {
+
+    .post-tile-title {
+      font-size:22px;
+    }
+
+  }
+
+
+  @media (max-width: 979px) {
+
+    .post-tile-title {
+      font-size:18px;
+    }
+
+  }
+
+  @media (max-width: 767px) {
+
+    .post-tile-title {
+      font-size:40px;
+    }
+
+  }
+
+  .post-list .carousel-caption {
+    background: rgba(255, 255, 255, 0.8);
   }
 
   .post-list .post-title-large {
@@ -238,6 +314,7 @@
 
   .post-list .post-date {
     text-align: center;
+    font-size:15px;
   }
 
   .post-meta {
