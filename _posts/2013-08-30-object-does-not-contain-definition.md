@@ -7,6 +7,7 @@ show_img_in_detail: false
 coverimage: false
 category: 
 tags: [".Net", "C#", "Unit Testing"]
+reposts: ["http://dotnet.dzone.com/articles/object-does-not-contain"]
 ---
 
 
