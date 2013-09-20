@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: true
 category: 
 tags: ["JavaScript", "book review"]
+reposts: ["http://books.dzone.com/articles/developing-windows-store-apps"]
 ---
 
 After [JavaScriptMVC](/blog/2013/06/learning-javascriptmvc/), today the second book arrived where I participated in the technical review process: "Developing Windows Store Apps with HTML5 and JavaScript".
