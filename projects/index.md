@@ -10,11 +10,16 @@ This pages shows some of my works I'm currently involved in or which I completed
 ## Books
 
 ### [JavaScriptMVC](/blog/2013/06/learning-javascriptmvc/)
-Introductory book about creating JavaScript SPAs with [JavaScriptMVC](http://javascript.com). My role was to do the technical review on the chapters.
 
-### Windows 8 Metro applications with HTML5 and JavaScript
+**Technical Reviewer**
 
-This book is currently in the works. It is about creating Windws 8 applications with JavaScript and HTML5. My roles is to perform the technical review.
+Introductory book about creating JavaScript SPAs with [JavaScriptMVC](http://javascript.com).
+
+### [Windows 8 Metro applications with HTML5 and JavaScript](/blog/2013/09/developing-win-store-apps-with-html5-and-javascript/)
+
+**Technical Reviewer**
+
+A book about creating Windws 8 applications with JavaScript and HTML5.
 
 ## Coding
 
