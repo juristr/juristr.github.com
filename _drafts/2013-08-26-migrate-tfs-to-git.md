@@ -57,6 +57,9 @@ If you accidentally already pushed them to your remote, this command might be he
 
 	$ git ls-remote --tags origin | awk '/^(.*)(\s+)(.*[0-9])$/ {print ":" $2}' | xargs git push origin
 
+For removing TFS once only:
+
+  $ git ls-remote --tags origin | awk '/^(.*)(\s+)(.*TFS.*[0-9])$/ {print ":" $2}' | xargs git push origin
 
 ## Step 1: Clone validation namespace
 
