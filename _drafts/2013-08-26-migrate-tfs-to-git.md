@@ -51,20 +51,20 @@ You can find this command on the [Codeplex docs](http://gittf.codeplex.com/wikip
 
 Unfortunately git-tf creates a git tag for each TFS changeset. That's quite annoying and not very useful..basically something you don't wanna have in a clean git repo. To remove all of them locally execute
 
-	git tag -l | xargs git tag -d
-    
+    git tag -l | xargs git tag -d
+
 If you accidentally already pushed them to your remote, this command might be helpful as well
 
-	$ git ls-remote --tags origin | awk '/^(.*)(\s+)(.*[0-9])$/ {print ":" $2}' | xargs git push origin
+	 $ git ls-remote --tags origin | awk '/^(.*)(\s+)(.*[0-9])$/ {print ":" $2}' | xargs git push origin
 
 For removing TFS once only:
 
-  $ git ls-remote --tags origin | awk '/^(.*)(\s+)(.*TFS.*[0-9])$/ {print ":" $2}' | xargs git push origin
+    $ git ls-remote --tags origin | awk '/^(.*)(\s+)(.*TFS.*[0-9])$/ {print ":" $2}' | xargs git push origin
 
 ## Step 1: Clone validation namespace
 
 The first step is to clone the `Siag.Base.Validation` namespace which resides in the `/Neptune/Siag.Base/Validation` directory
 
-	git tf clone http://ourtfsserver:8080/tfs/ourcollectionname $/Neptune/Siag.Base/Validation Siag.Validation --deep
+    git tf clone http://ourtfsserver:8080/tfs/ourcollectionname $/Neptune/Siag.Base/Validation Siag.Validation --deep
 
 You should now have
