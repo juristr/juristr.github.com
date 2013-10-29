@@ -48,6 +48,8 @@ Unfortunately - due to time constraints - I wasn't yet able to create some setup
 But apart from this specific book, I always again enjoy to leave my "comfort zone" to learn about new technologies and compare them with what I have already seen in other areas (like .Net, NodeJS) and so should you! Keep yourself open-minded for new stuff!  
 Interestingly, for instance, I found lots of similarities between some concepts in Weld CDI and .Net's Managed Extensibility Framework (MEF) and PRISM.
 
+### Links
 
+- [JBoss Weld CDI for Java Platform, Packt Publishing](http://bit.ly/187WCnL)
 
 
