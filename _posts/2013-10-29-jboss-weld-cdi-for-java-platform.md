@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "jBoss Weld CDI for Java Platform"
+title: "JBoss Weld CDI for Java Platform"
 postimg: "/blog/assets/imgs/jboss-weld-book-cover.png"
 show_img_in_detail: true
 coverimage: true
