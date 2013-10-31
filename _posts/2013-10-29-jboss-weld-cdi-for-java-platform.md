@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: true
 category: 
 tags: ["Java", "book review"]
+reposts: ["http://java.dzone.com/articles/jboss-weld-cdi-java-platform"]
 ---
 
 CDI stands for Context and Dependency Injection and is the standardization of the process of dependency injection for Java EE. This article presents some of my comments and observations when reading "JBoss Weld CDI for Java Platform" which covers everything you need to successfully implement the new standard in your Java EE application.
