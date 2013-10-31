@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "When Best Practices go into your way"
-postimg: "http://reggiestake.files.wordpress.com/2012/06/darth-vader-3.jpeg"
+postimg: "/blog/assets/imgs/darth-vader.jpeg"
 show_img_in_detail: true
 coverimage: true
 category: 
@@ -37,10 +37,12 @@ As he writes: this difference is clear:
 
 ## What we should do then??
 
-I'm working as - what they call - architect, but I like to see myself more as a "[coaching architect](/blog/2013/02/the-coaching-architect/)" because that's what we (architects) should really be here for. From my point of view we are here to help devs solve tough technical problems or discuss architectural decisions, trying to help them avoid deadlock situations and we share knowledge among different projects as we jump around between different projects: _Hey..as far as I know that other guy had a similar problem in his project. Connect with him to find out whether his solution might suit your situation as well._
+I'm working as - what they call - architect, but I like to see myself more as a "[coaching architect](/blog/2013/02/the-coaching-architect/)" because that's what we (architects) should really be here for. From my point of view we are here to help devs solve tough technical problems or discuss architectural decisions, trying to help them avoid deadlock situations and we share knowledge among different projects as we jump around between different projects: _Hey..as far as I know that other guy had a similar problem in his project. Connect with him to find out whether his solution might suit your situation as well._  
+An architect should be more of a lead dev..
 
-And still, I have to see how complex frameworks are being created that try to enforce a given architectural style for being able to control the "stupid" programmer. Don't, just don't do it. Not only does such an approach go against all of the above mentioned points, but you should instead coach your devs and help them get be
+So for the architects: don't create huge, bloated frameworks, trying to impose your architecture of dreams. Instead help your audience **understand** how to build and implement the architecture. This will help enourmously to keep the pace with technological innovation.  
+For the devs: keep curious and try to **understand** what you're using and implementing.
 
 **References**
 
-http://www.petrikainulainen.net/software-development/processes/the-dark-side-of-best-practices/
+- [The dark side of best practices](http://www.petrikainulainen.net/software-development/processes/the-dark-side-of-best-practices/)
