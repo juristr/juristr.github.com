@@ -14,8 +14,6 @@ The **entire team** was involved, especially also the tester of the application.
 
 **Speed control** by having fixed two-week iterations with a potentially deployable product. We deployed daily on a development server and after each iteration on another preproduction server instance where testers and end-customers started to perform tests.
 
-
-
 ## What didn't go so well?
 
 
@@ -26,6 +24,7 @@ The **entire team** was involved, especially also the tester of the application.
 
 ## What still puzzles me/us?
 
+- Changing teams (due to other projects, bugfixes/maintenance requests,...) -> Agostino krank, Pirmin muss Redas warten..
 
 
 Practices to be potentially applied:
