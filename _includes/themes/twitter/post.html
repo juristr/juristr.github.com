@@ -81,9 +81,6 @@
     {% else %}
     <section class="main-content post">
     {% endif %}
-      <div class="author-bio-sidebar">
-        {% include mycustoms/author-bio %}
-      </div>
       <article class="row-fluid">
         {% if page.postimg != nil and page.show_img_in_detail == true and (page.coverimage == false or page.coverimage == nil) %}
           <div class="span12 post-image" style="margin-bottom:15px; text-align:center">
@@ -96,15 +93,6 @@
           </div>
         {% endif %}
         <div class="post-meta">
-          <span class="post-meta-author">
-            <a href="/about" class="post-author">Juri</a>
-            <span class="divider-word">on</span>
-          </span>
-          {% unless page.tags == empty %}
-            {% for tag in page.tags %}
-              <a href="/blog/tags#{{tag}}" style="margin-right:10px;">{{ tag }}</a>
-            {% endfor %}
-          {% endunless %}
           <span class="reading-time"></span>
         </div>
         <h1>
@@ -116,10 +104,26 @@
             {% include JB/tags_list %}
         {% endunless %}
         -->
+        <div class="post-author-headline">
+          <div>
+          <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=30&amp;d=identicon&amp;r=PG" class="img-circle">
+          <a href="/about" class="post-author">Juri</a>
+          wrote this on {{ page.date | date: "%B %d, %Y" }}
+          </div>
+          <!--
+          <div>
+          {% unless page.tags == empty %}
+            {% for tag in page.tags %}
+              <a href="/blog/tags#{{tag}}" style="margin-right:10px;">{{ tag }}</a>
+            {% endfor %}
+          {% endunless %}
+          </div>
+          -->
+        </div>
         <div class="row-fluid article-body">
-          <time class="post-date">
+          <!-- <time class="post-date">
             {{ page.date | date: "%B %d, %Y" }}&nbsp;-&nbsp;
-          </time>
+          </time> -->
           {{ content }}
           <div class="row-fluid">
             <a href="https://twitter.com/share" class="twitter-share-button" data-via="juristr" data-size="large">Tweet</a>
