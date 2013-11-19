@@ -45,7 +45,7 @@ We should know best practices, their pros and cons and from case to case decide 
 
 We need to keep innovating which is only possible when we allow ourselfs to **exit our usual scheme of taking decisions** by trying to look at our solution from a more distant, objective point of view. From now and then, challenge your usual approach; is there a better one? How do others solve similar situations, learn from them? **Innovation needs to emerge from the team**, from where production takes place and cannot be done in a separate, independent lab. There is too much risk of waste.
 
-Finally, architects should be more of a leader, a lead dev, a "[coaching architect](/blog/2013/02/the-coaching-architect/)" supporting the team in such decision making, in the process of innovating and for keeping them productive and efficient. Moreover they should create connections and facilitate the knowledge sharing process among different projects and teams: _Hey..as far as I know that other guy had a similar problem in his project. Connect with him to find out whether his solution might suit your situation as well._
+Finally, architects should be more of a leader, a lead dev, a "[coaching architect](/blog/2013/02/the-coaching-architect/)" supporting the team in such decision making, in the process of innovating and for keeping them productive and efficient. Moreover they should create connections and facilitate the knowledge sharing process among different projects and teams.
 
 **References**
 
