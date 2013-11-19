@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When Best Practices go into your way"
+title: "The narrow path between best practices and over-engineering"
 postimg: "/blog/assets/imgs/darth-vader.jpeg"
 show_img_in_detail: true
 coverimage: true
@@ -8,7 +8,7 @@ category:
 tags: ["Software Design", "Software Architecture", "Best Practices"]
 ---
 
-Today I read a post by Petri Kainulainen about [The Dark Side of Best Practices](http://www.petrikainulainen.net/software-development/processes/the-dark-side-of-best-practices/). He really hit what - IMHO - on the one side should be totally obvious and common sense, but sadly, too often is not the case at all..
+A couple of days ago I read a post by Petri Kainulainen about [The Dark Side of Best Practices](http://www.petrikainulainen.net/software-development/processes/the-dark-side-of-best-practices/). He really hit what - IMHO - on the one side should be totally obvious and common sense, but sadly, too often is not the case at all..
 
 Don't get me wrong. **Best practices are a vital part of software development** and I am a big proponent of them. Every developer should have read books like the Design Patterns from the Gang of Four, Fowlers Refactoring or Patterns of Enterprise Architecture. I am a big believer in automated testing and TDD approach as they give you flexibility to change over time.  
 But the key is that you **really have to understand** them. Just as Petri writes, there is a dark side as well, especially when they are being treated as a **silver bullet**.
@@ -36,13 +36,16 @@ As he writes: this difference is clear:
 
 > It makes no sense to over engineer a piece of code which might never be reused. And yet, this is what happens if we think that we should use the same design principles in every situation.
 
+I can already hear some people out there: well, but if we design everything to be reused from the very beginning, then we're much more flexible. Fair enough, but designing something to be reused out of the box means to have increased costs during production. But is that justifiable?? Is it fair to have the customer pay for something that may never actually happen? Methods like Agile, TDD approaches and Lean Software Development on the other side opt for implementing just enough.  
+Obviously you do follow common sense in application design like separating business logic from data access or presentation code and you do separate and isolate dependencies to make it easier to exchange and test them etc..
+
 ## So what should we do then?
 
-I'm working as - what they call - architect, but I like to see myself more as a "[coaching architect](/blog/2013/02/the-coaching-architect/)" because that's what we (architects) should really be here for. From my point of view we are here to help devs solve tough technical problems or discuss architectural decisions, trying to help them avoid deadlock situations and we share knowledge among different projects as we jump around between different projects: _Hey..as far as I know that other guy had a similar problem in his project. Connect with him to find out whether his solution might suit your situation as well._  
-An architect should be more of a lead dev..
+We should know best practices, their pros and cons and from case to case decide on whether to apply them and/or understand when when we (and the customer) is better served to take another road. There simply is no **one to rule them all** approach, it doesn't exist, in particular not in a that extremely moving and changing sector like the IT one is.
 
-So for the architects: don't create huge, bloated frameworks, trying to impose your architecture of dreams. Instead help your audience **understand** how to build and implement the architecture. This will help enourmously to keep the pace with technological innovation.  
-For the devs: keep curious and try to **understand** what you're using and implementing.
+We need to keep innovating which is only possible when we allow ourselfs to **exit our usual scheme of taking decisions** by trying to look at our solution from a more distant, objective point of view. From now and then, challenge your usual approach; is there a better one? How do others solve similar situations, learn from them? **Innovation needs to emerge from the team**, from where production takes place and cannot be done in a separate, independent lab. There is too much risk of waste.
+
+Finally, architects should be more of a leader, a lead dev, a "[coaching architect](/blog/2013/02/the-coaching-architect/)" supporting the team in such decision making, in the process of innovating and for keeping them productive and efficient. Moreover they should create connections and facilitate the knowledge sharing process among different projects and teams: _Hey..as far as I know that other guy had a similar problem in his project. Connect with him to find out whether his solution might suit your situation as well._
 
 **References**
 
