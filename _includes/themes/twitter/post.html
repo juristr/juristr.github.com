@@ -77,9 +77,9 @@
 <div class="container">
   <div class="row-fluid">
     {% if page.postimg != nil and page.show_img_in_detail == true and page.coverimage == true %}
-    <section class="main-content post" style="margin-top:20px">
+    <section class="main-content post instapaper_body" style="margin-top:20px">
     {% else %}
-    <section class="main-content post">
+    <section class="main-content post instapaper_body">
     {% endif %}
       <article class="row-fluid">
         {% if page.postimg != nil and page.show_img_in_detail == true and (page.coverimage == false or page.coverimage == nil) %}
@@ -92,10 +92,10 @@
             <p class="title">{{ page.postheadline }}</p>
           </div>
         {% endif %}
-        <div class="post-meta">
+        <div class="post-meta kindle-ignore">
           <span class="reading-time"></span>
         </div>
-        <h1>
+        <h1 class="article-title">
           {{ page.title }}
         </h1>
         <!--
@@ -104,11 +104,11 @@
             {% include JB/tags_list %}
         {% endunless %}
         -->
-        <div class="post-author-headline">
+        <div class="post-author-headline kindle-ignore">
           <div>
           <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=30&amp;d=identicon&amp;r=PG" class="img-circle">
           <a href="/about" class="post-author">Juri</a>
-          wrote this on {{ page.date | date: "%B %d, %Y" }}
+          wrote this on <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
           </div>
           <!--
           <div>
@@ -142,6 +142,8 @@
               })();
             </script>
 
+            <div class="kindleWidget" style="display:inline-block;padding:3px;cursor:pointer;font-size:11px;font-family:Verdana;white-space:nowrap;line-height:1;border-radius:3px;border:#ccc thin solid;color:black;background:transparent url('https://d1xnn692s7u6t6.cloudfront.net/button-gradient.png') repeat-x;background-size:contain;"><img style="vertical-align:middle;margin:0;padding:0;border:none;" src="https://d1xnn692s7u6t6.cloudfront.net/white-15.png" /><span style="vertical-align:middle;margin-left:3px;">Kindle</span></div>
+
           </div>
           <div class="row-fluid">
             {% if page.reposts && page.reposts.length > 0 %}
@@ -155,7 +157,7 @@
             {% endif %}
           </div>
         </div>
-        <div class="author-bio-footer">
+        <div class="author-bio-footer kindle-ignore">
           {% include mycustoms/author-bio %}
         </div>
         <!--
@@ -187,4 +189,6 @@
     {% include JB/comments %}
   </div>
 </section>
+<script type="text/javascript" src="https://d1xnn692s7u6t6.cloudfront.net/widget.js"></script>
+<script type="text/javascript">(function k(){window.$SendToKindle&&window.$SendToKindle.Widget?$SendToKindle.Widget.init({"content":".instapaper_body","exclude":".kindle-ignore","title":".article-title","author":".post-author","published":".post-date"}):setTimeout(k,500);})();</script>
 <script type="text/javascript" src="/assets/js/countable.min.js"></script>
