@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: true
 category: 
 tags: ["Software Design", "Software Architecture", "Best Practices"]
+reposts: ["http://java.dzone.com/articles/narrow-path-between-best"]
 ---
 
 A couple of days ago I read a post by Petri Kainulainen about [The Dark Side of Best Practices](http://www.petrikainulainen.net/software-development/processes/the-dark-side-of-best-practices/). He really hit what - IMHO - on the one side should be totally obvious and common sense, but sadly, too often is not the case at all..
