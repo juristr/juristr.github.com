@@ -62,7 +62,7 @@ As such I quickly hacked down the following prototype. I basically came up with 
         template: splashHtml
     });
 
-`splashHtml` is a variable that holds the HTML code shown above. Ideally this comes from some templating engine, otherwise simple inline the HTML in your JS code. Some CSS to make it pretty...
+`splashHtml` is a variable that holds the HTML code shown above. Ideally this comes from some templating engine, otherwise simple inline the HTML in your JS code. Some CSS to make it pretty (and obviously include Bootstrap for some more awesomeness)...
 
       .splash {
         position:absolute;
@@ -116,9 +116,10 @@ _(Don't take that too serious...I'm not a designer, nor did I optimize it)_
   <figcaption>Splash screen demo</figcaption>
 </figure>
 
-Obviously feel free to exchange the img with your application logo..this one is just a placeholder I quickly grabbed from the Google Login window.
+Obviously feel free to exchange the img with your application logo..this one is just a placeholder I quickly grabbed from the Google Login window.  
+Also note that I used Bootstrap which adds some nicer font-style and moreover handles the progress bar position using the `.progress` class. If you want to avoid that, simply add the missing CSS styles by yourself.
 
-You can find the entire code in this JsFiddle: [http://jsfiddle.net/juristr/PmLCM/1/](http://jsfiddle.net/juristr/PmLCM/1/)
+You can **find the entire code** in this JsFiddle: [http://jsfiddle.net/juristr/PmLCM/1/](http://jsfiddle.net/juristr/PmLCM/1/)
 
 ## How do I wait for all ajax requests to terminate??
 
