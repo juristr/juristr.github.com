@@ -29,6 +29,9 @@
 
     <link rel="shortcut icon" href="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=16&d=favicon&r=PG">
 
+
+    <link rel="stylesheet" href="/assets/sidr/stylesheets/jquery.sidr.dark.css">
+
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -83,6 +86,12 @@
   <body>
     {% include mycustoms/navbar %}
 
+    <a id="sidebar-button" href="#sidr">J</a>
+
+    <nav id="sidr" tabindex="-1">
+      <p>My side bar content</p>
+    </nav>
+
     {{ content }}
 
     <script>
@@ -102,8 +111,13 @@
         }
       });
 
+      $(function(){
+        $('#sidebar-button').sidr();
+      });
+
       prettyPrint();
     </script>
+    <script src="/assets/sidr/jquery.sidr.min.js"></script>    
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
     var sc_project=8306995;
