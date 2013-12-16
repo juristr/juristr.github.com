@@ -79,20 +79,20 @@ current: blog
   });
 </script>
 <div class="container">
-  <div class="row-fluid">
+  <div class="row">
     {% if page.postimg != nil and page.show_img_in_detail == true and page.coverimage == true %}
     <section class="main-content post instapaper_body" style="margin-top:20px">
     {% else %}
     <section class="main-content post instapaper_body">
     {% endif %}
-      <article class="row-fluid">
+      <article class="row">
         {% if page.postimg != nil and page.show_img_in_detail == true and (page.coverimage == false or page.coverimage == nil) %}
-          <div class="span12 post-image" style="margin-bottom:15px; text-align:center">
+          <div class="col-sm-12 col-lg-12 post-image" style="margin-bottom:15px; text-align:center">
               <img src="{{page.postimg}}" style="width:100%" />
           </div>
         {% endif %}
         {% if page.postheadline != nil %}
-          <div class="span12 post-headerline">
+          <div class="col-sm-12 col-lg-12 post-headerline">
             <p class="title">{{ page.postheadline }}</p>
           </div>
         {% endif %}
@@ -126,12 +126,12 @@ current: blog
           </div>
           -->
         </div>
-        <div class="row-fluid article-body">
+        <div class="row article-body">
           <!-- <time class="post-date">
             {{ page.date | date: "%B %d, %Y" }}&nbsp;-&nbsp;
           </time> -->
           {{ content }}
-          <div class="row-fluid">
+          <div class="row">
             <a href="https://twitter.com/share" class="twitter-share-button" data-via="juristr" data-size="large">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -151,7 +151,7 @@ current: blog
             <div class="kindleWidget" style="display:inline-block;padding:3px;cursor:pointer;font-size:11px;font-family:Verdana;white-space:nowrap;line-height:1;border-radius:3px;border:#ccc thin solid;color:black;background:transparent url('https://d1xnn692s7u6t6.cloudfront.net/button-gradient.png') repeat-x;background-size:contain;"><img style="vertical-align:middle;margin:0;padding:0;border:none;" src="https://d1xnn692s7u6t6.cloudfront.net/white-15.png" /><span style="vertical-align:middle;margin-left:3px;">Kindle</span></div>
 
           </div>
-          <div class="row-fluid">
+          <div class="row">
             {% if page.reposts && page.reposts.length > 0 %}
               <hr />
               <p><strong>This article has been re-published by</strong></p>
@@ -190,7 +190,7 @@ current: blog
 </div>
 <section class="article-footer">
   {% include mycustoms/relatedposts %}
-  <div class="row-fluid article-comments">
+  <div class="row article-comments">
     <hr>
     {% include disqus_comments %}
   </div>
