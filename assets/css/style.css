@@ -17,6 +17,40 @@
     /*color: #57534A !important;*/
   }
 
+  .site-nav {
+    
+  }
+
+  .sidr {
+    background-color: #191918;
+  }
+
+  .sidr ul li:hover{
+    line-height:48px;
+  }
+
+  .sidr ul {
+    border-bottom:0;
+    border-top: 0;
+  }
+
+  .sidr ul li a {
+    color: #b3b3b1;
+  }
+
+  .sidr ul li:hover>a{
+    -webkit-box-shadow: none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+    color: #fff;
+  }
+
+  .sidr ul li {
+    border-bottom: 0;
+    border-top: 0;
+  }
+
+
 #sidebar-button {
   position: absolute;
   top: 10px;
@@ -34,6 +68,12 @@
   font-size:28px;
   color:white;
 }  
+
+a#sidebar-button:hover {
+  text-decoration:none;
+}
+
+
 
   .front-bg {
     top: 0;

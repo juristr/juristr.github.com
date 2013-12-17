@@ -88,10 +88,33 @@
 
     <a id="sidebar-button" href="#sidr">J</a>
 
-    <nav id="sidr" tabindex="-1">
-      <p>My side bar content</p>
-    </nav>
+    <div id="sidr">
+      <ul class="site-nav">
+        <li>
+          <a href="/">
+            <i class="glyphicon glyphicon-home"></i> Blog Home
+          </a>
+        </li>
+        <li>
+          <a href="/blog/all">
+            <i class="glyphicon glyphicon-th-list"></i> Archive
+          </a>
+        </li>
+        <li>
+          <a href="/about">
+            <i class="glyphicon glyphicon-user"></i> About me
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="glyphicon glyphicon-eye-open"></i> RSS
+          </a>
+        </li>
+      </ul>
 
+    </div>
+
+    
     {{ content }}
 
     <script>
