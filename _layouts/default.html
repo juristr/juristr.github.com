@@ -156,6 +156,11 @@
       $(function(){
         $('#sidebar-button').sidr();
 
+        $('#sidebar-button').tooltip({
+          title: "Click me",
+          placement: 'right'
+        });
+
         $('body').click(function(){
           $.sidr('close');
         });
