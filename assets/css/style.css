@@ -17,13 +17,29 @@
     /*color: #57534A !important;*/
   }
 
+  /* Blog archive */
+  .meta .date {
+    display:none;
+  }
+
+  h2.year {
+    border-bottom: 1px solid #ddd;
+  }
+
+  h3.title {
+    padding-top:0;
+    margin:0;
+  }
+
+  /* End blog archive */
+
   .nav-button{
     position:fixed;
     top:5px;
   }
 
   .site-nav {
-    
+
   }
 
   .sidr {
@@ -43,7 +59,7 @@
   .sidr ul li a {
     color: #b3b3b1;
   }
-  
+
   .sidr a:hover,
   .sidr ul li:hover>a{
     -webkit-box-shadow: none;
@@ -93,7 +109,7 @@
   opacity: 1;
   font-size:28px;
   color:white;
-}  
+}
 
 a#sidebar-button:hover {
   text-decoration:none;
