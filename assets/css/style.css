@@ -20,7 +20,7 @@
   /* metabar */
   .metabar {
     display: block;
-    z-index: 500;
+    /*z-index: 500;*/
     position: fixed;
     top: 0;
     -webkit-box-sizing: border-box;
