@@ -17,6 +17,15 @@
     /*color: #57534A !important;*/
   }
 
+  /* blog entry page */
+
+  .post-item-meta {
+    color: #b3b3b1;
+  }
+
+  /* end blog entry page */
+
+
   /* metabar */
   .metabar {
     display: block;
@@ -444,12 +453,7 @@ a#sidebar-button:hover {
     display:block;
     font-size: 20px;
     /*color: #C7C2B8;*/
-    color: #666665 !important;
-  }
-
-  .post-list .post-date {
-    text-align: center;
-    font-size:15px;
+    /*color: #666665 !important;*/
   }
 
   .post-meta {
