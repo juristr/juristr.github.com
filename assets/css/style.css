@@ -171,7 +171,7 @@ letter-spacing: -0.02em;
   .nav-button{
     position:fixed;
     top:5px;
-    z-index:100;
+    z-index:101;
   }
 
   .site-nav {
