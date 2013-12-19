@@ -21,6 +21,28 @@
 
   .post-item-meta {
     color: #b3b3b1;
+    font-size:15px;
+  }
+
+  .post-item-meta a{
+    color:#b3b3b1;
+  }
+
+  .post-item-meta-item:first-child:before {
+    content: '';
+  }
+
+  .post-item-meta span:before {
+    content: ' · ';
+  }
+
+  .post-item-title {
+    font-size:28px;
+    margin-bottom: 0;
+  }
+
+  .post-item-title a {
+    color: #423F37;
   }
 
   /* end blog entry page */
@@ -70,7 +92,7 @@
   h3.title {
     padding-top:0;
     margin:0;
-    font-weight:300;
+    font-weight:normal;
     font-size:20px;
   }
 
@@ -450,8 +472,7 @@ a#sidebar-button:hover {
   }
 
   .post-date {
-    display:block;
-    font-size: 20px;
+    /*font-size: 20px;*/
     /*color: #C7C2B8;*/
     /*color: #666665 !important;*/
   }
