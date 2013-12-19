@@ -61,6 +61,8 @@
   h3.title {
     padding-top:0;
     margin:0;
+    font-weight:300;
+    font-size:20px;
   }
 
   /* End blog archive */
