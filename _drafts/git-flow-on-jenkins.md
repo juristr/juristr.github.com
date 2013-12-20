@@ -40,28 +40,58 @@ Based on the above assumptions we currently create **one Jenkins job per environ
 
 **1. Source Code Management - Git Configuration**
 
+Before starting, make sure you **have the Jenkins [Git plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)**. Then create a new Jenkins job, and in the "Source Code Management" section configure your Git repository like in the img example below.
+
 <figure>
   <img src="/blog/assets/imgs/jenkins-gitconfig.png" />
   <figcaption>Git configuration</figcaption>
 </figure>
 
-**2. Set polling**
+In the **Branch Specifier** field, enter your desired branch, depending on which one you're going to build in this current job. For _master_ simply enter `*/master`, for building your feature/userstory branches (and given you start them with `story/<name>`), enter `*/story/*` and so on.
 
-<figure>
-  <img src="/blog/assets/imgs/jenkins-gitpolling.png" />
-  <figcaption>Git polling configuration</figcaption>
-</figure>
+**2. GitLab Webhook**
 
-**3. GitLab Webhook**
+The next step is to add a **web hook to GitLab**. This is needed s.t. GitLab is able to signal to Jenkins about new commits that have been "pushed" to the repository. This is an alternative, but much more efficient way of instead doing a continuous polling.
+
+Just go to your repository settings and then to _Web Hooks_.
 
 <figure>
   <img src="/blog/assets/imgs/gitlab-webhook.png" />
   <figcaption>Gitlab hook for communicating with Jenkins</figcaption>
 </figure>
 
+Enter an url of the form `http://myjenkins.com/git/notifyCommit?url=git@mygitlabserver.com:myrepo.git`.
 
+**3. Set polling**
 
+The final step is to setup polling. Hä? Sorry, didn't you just mention previously that we don't need polling 'cause GitLab calls Jenkins in case of new commits?? Yep, that's right, but that's part of a "security" measure the [guys creating the Git plugin introduced](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository) to make sure you (that you control the Jenkins job) and you (that you added the Web Hook) both consent to execute the build based on new commits.
 
-- http://build.services.siag.it/git/notifyCommit?url=git@git.services.siag.it:juri.strumpflohner/git-test-project.git
-- https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository
-- https://wiki.jenkins-ci.org/display/JENKINS/Gitlab+Hook+Plugin
+> This will scan all the jobs that's configured to check out the specified URL, the optional branches, and if they are also configured with polling, it'll immediately trigger the polling (and if that finds a change worth a build, a build will be triggered in turn.) We require the polling configuration on the job so that we only trigger jobs that are supposed to be kicked from changes in the source tree. <cite><a href="https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository">Source</a></cite>
+
+However, in the polling configuration you don't have to specify any kind of interval, meaning that it won't start by its own. You simply tick the checkbox "Poll SCM" to give your consent (somehow).
+
+<figure>
+  <img src="/blog/assets/imgs/jenkins-gitpolling.png" />
+  <figcaption>Git polling configuration</figcaption>
+</figure>
+
+That's it, now your Jenkins jobs should start based on the branch you configured in your job and based on the branch that gets pushed to GitLab, just as we wanted.
+
+## Alternative approaches
+
+In case you just need to trigger the build of a branch from GitLab, you can also simply configure Jenkin's **remote trigger** and add that as a Web Hook to your GitLab repo
+
+<figure>
+  <img src="/blog/assets/imgs/jenkins-gitremote-trigger.png" />
+  <figcaption>Remote trigger configuration</figcaption>
+</figure>
+
+The downside of this approach is that you're not able to selectively launch builds based on commits on certain branches.
+
+Finally, I also found a plugin called **[GitLab Hook](https://wiki.jenkins-ci.org/display/JENKINS/Gitlab+Hook+Plugin)** which I didn't try yet as the above described approach was much simpler (and didn't require the installation of a plugin). On their page they write that
+
+> For GitLab [...] For Gitlab there is an existing solution that might work for you.
+You can just use the notifyCommit hook on Git plugin like this. [...] But, with a large number of projects that are mostly polling (no hooks), the project might actually be built with a great delay (5 to 20 minutes).
+You can find more details about notifyCommit and this [issue here](http://kohsuke.org/2011/12/01/polling-must-die-triggering-jenkins-builds-from-a-git-hook/). <cite><a href="https://wiki.jenkins-ci.org/display/JENKINS/Gitlab+Hook+Plugin">GitLab Hook plugin page</a></cite>
+
+I did not experience any of such delays so far, but we'll see.
