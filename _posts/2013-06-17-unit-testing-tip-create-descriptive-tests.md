@@ -60,4 +60,4 @@ Use the `equals` instead:
     <figcaption>Oh, look there, a descriptive outcome.</figcaption>
 </figure>
 
-Now this test case's outcome is much more descriptive. It doesn't only tell you that the operation failed, but also exactly shows you the expected as well as actual value. This might give you an immediate a hint where the problem could be.
+Now this test case's **outcome is much more descriptive**. Not only it tells you which operation failed, but also exactly shows you the expected as well as actual outcome. This might give you an immediate hint where the problem could be.
