@@ -83,7 +83,7 @@
     font-size:15px;
   }
 
-  .post-item-meta .post-date:before {
+  .post-item-meta span:first-of-type:before {
     content: '';
   }
 
@@ -110,7 +110,7 @@
   /* metabar */
   .metabar {
     display: block;
-    /*z-index: 500;*/
+    z-index: 101;
     position: fixed;
     top: 0;
     -webkit-box-sizing: border-box;
@@ -157,10 +157,19 @@
 
   /* End blog archive */
 
+  /* Bootstrap fixes */
+
+  .btn-transparent {
+    background:transparent;
+  }
+
+  /* End Bootstrap fixes */
+
+
   .nav-button{
     position:fixed;
     top:5px;
-    z-index:101;
+    z-index:102;
   }
 
   .site-nav {

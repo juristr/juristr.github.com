@@ -48,8 +48,11 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
 
+    <!--
     <link href='/assets/js/scrolltop/jquery.scrolltop.css' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="/assets/js/scrolltop/jquery.scrolltop.js"></script>
+    -->
+
     <link href='/assets/js/tocify/jquery.tocify.css' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="/assets/js/tocify/jquery.tocify.js"></script>
 
@@ -60,32 +63,6 @@
     <link href="/assets/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <link href="/assets/css/print.css" rel="stylesheet" type="text/css" media="print">
-
-    <script type="text/javascript">
-      /* hide/show navbar when scrolling */
-      $(function(){
-        var $nav = $('.js-navbar'),
-            _hideShowOffset = 20,
-            _lastScroll = 0,
-            _detachPoint = 50;
-
-        $(window).scroll(function(){
-          var t = $(window).scrollTop(),
-              e = t > _lastScroll ? "down" : "up",
-              i = Math.abs(t - _lastScroll);
-
-          if(t >= _detachPoint || 0 >= t || t > -1){
-            if('down' === e && i >= _hideShowOffset){
-              $nav.slideUp();
-            }else if('up' === e && i >= _hideShowOffset){
-              $nav.slideDown();
-            }
-          }
-
-          _lastScroll = t;
-        });
-      });
-    </script>
   </head>
 
   <body>
@@ -94,7 +71,7 @@
     <div class="metabar">
       <div class="metabar-block pull-right">
         <div class="metabar-text">
-          <a href="http://feeds.feedburner.com/juristrumpflohner">
+          <a href="http://feeds.feedburner.com/juristrumpflohner" class="btn btn-default btn-transparent" style="color:#b3b3b1">
             <i class="fa fa-rss"></i> RSS
           </a>
         </div>
@@ -178,7 +155,7 @@
 
         $('.js-tooltip').tooltip();
 
-        $('.container:first').click(function(){
+        $('.container').click(function(){
           $.sidr('close');
         });
       });
@@ -186,6 +163,7 @@
       prettyPrint();
     </script>
     <script src="/assets/sidr/jquery.sidr.min.js"></script>
+    
     <!-- Start of StatCounter Code for Default Guide -->
     <script type="text/javascript">
     var sc_project=8306995;
