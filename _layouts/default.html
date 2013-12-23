@@ -9,6 +9,7 @@
     <meta name="author" content="{{ site.author.name }}">
     <link rel="me" href="https://profiles.google.com/104904743888756261987" />
     <link rel="publisher" href='https://plus.google.com/104904743888756261987'/>
+
     <meta content='Juri&quot;s website.' name='description'/>
     <meta content='.Net, JavaScript, Microsoft Technologies, Google, Tips and Tricks, Software Development, Programming' name='keywords'/>
     <meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
@@ -20,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="/assets/js/github-timeline/github-timeline-widget.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300' rel='stylesheet' type='text/css'>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -172,6 +175,8 @@
           title: "Click me",
           placement: 'right'
         });
+
+        $('.js-tooltip').tooltip();
 
         $('.container:first').click(function(){
           $.sidr('close');

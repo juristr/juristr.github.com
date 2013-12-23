@@ -33,9 +33,6 @@ current: blog
             <a href="{{post.url}}">{{ post.title | truncatewords:30 }}</a>
           </h3>
           <div class="post-item-meta">
-            {% if post.reposts && post.reposts.length > 0 %}
-              <b><i class="fa fa-star"></i>&nbsp;Featured on partner sites</b><br/>
-            {% endif %}
             <span>
               <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>      
             </span>
@@ -49,6 +46,11 @@ current: blog
               {% endfor %}
               </span>
             {% endunless %}
+            {% if post.reposts && post.reposts.length > 0 %}
+            <span class="js-tooltip" data-toggle="tooltip" data-placement="top" data-title="This article has been published on partner sites">
+              <i class="fa fa-star"></i>&nbsp;Featured
+            </span>
+            {% endif %}
           </div>
         </div>
 
