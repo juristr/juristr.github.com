@@ -4,19 +4,28 @@ title: Tags
 header: Posts By Tag
 group: navigation
 ---
-{% include JB/setup %}
 
-<!--ul class="tag_box inline">
-  
-</ul-->
-{% assign tags_list = site.tags %}  
-{% include JB/tags_list %}
+<h1 class="article-title">
+    Tags and Categories
+</h1>
+<h2 class="post-subtitle">
+    My articles grouped by category
+</h2>
 
-<div style="clear:both"/>
+<hr />
+
+<div class="row">
+    {% for tag in site.tags %}
+        <a href="#{{ tag[0] }}" class="btn btn-default">{{ tag[0] }} ({{ tag[1].size }})</a>
+    {% endfor %}
+</div>
+
+<hr />
+
 {% for tag in site.tags %} 
   <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
   <ul>
     {% assign pages_list = tag[1] %}  
-    {% include JB/pages_list %}
+    {% include pages_list %}
   </ul>
 {% endfor %}

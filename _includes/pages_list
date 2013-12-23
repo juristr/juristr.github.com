@@ -1,0 +1,10 @@
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if group == null or group == node.group %}
+        <li>
+            {% assign post-entry = node %}  
+            {% include article-small-listentry %}
+        </li>
+    {% endif %}
+  {% endif %}
+{% endfor %} 
