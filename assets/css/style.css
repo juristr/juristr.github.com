@@ -104,6 +104,16 @@
     color: #423F37;
   }
 
+  .post-item-lead {
+    letter-spacing: -0.02em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #666665;
+    margin-bottom: 4px;
+  }
+
   /* end blog entry page */
 
 

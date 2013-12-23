@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Boot your ajax app: Creating a splash screen with NProgress"
+lead: "Make your app look awesome"
 postimg: "/blog/assets/imgs/ajax-splash.png"
 show_img_in_detail: true
 coverimage: false
