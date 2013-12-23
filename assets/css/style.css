@@ -327,8 +327,8 @@ a#sidebar-button:hover {
     /*border-left: 1px solid #E3E3E3;
     padding-left:50px;*/
     background-color: white;
-    padding: 20px;
-    margin: 45px auto 0 auto;
+    padding: 0 20px 20px 20px;
+    margin: 0 auto 0 auto;
     max-width: 850px;
   }
 
