@@ -131,7 +131,9 @@
     </div>
 
 
-    {{ content }}
+    <div class="js-click-region">
+      {{ content }}
+    </div>
 
     <script>
       // $(function(){
@@ -160,7 +162,7 @@
 
         $('.js-tooltip').tooltip();
 
-        $('.container').click(function(){
+        $('.js-click-region').click(function(){
           $.sidr('close');
         });
       });
