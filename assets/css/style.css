@@ -17,6 +17,40 @@
     /*color: #57534A !important;*/
   }
 
+  /* site entry page */
+
+  .home-cover .social-icons {
+    text-align:center;
+    font-size:36px;
+  }
+
+  .home-cover-image, .home-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .read-blog-button{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-top:40px;
+  }
+
+  .read-blog-button a {
+    font-weight: 300;
+    font-size: 25px;
+  }
+
+  /* end site entry page */
+
   /* hero home */
   .hero-home {
     height: 380px;
@@ -30,6 +64,11 @@
   .layout-foreground {
     position: relative;
     z-index: 100;
+    color:#fff;
+  }
+
+  .layout-foreground a {
+    color:#fff;
   }
 
   .hero-home .align-block {
