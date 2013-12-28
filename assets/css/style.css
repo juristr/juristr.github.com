@@ -1496,13 +1496,22 @@ ol.linenums li {
 
 
 @media (max-width: 979px) {
+
+  .nav-button {
+    position: absolute;
+  }
+
+  .metabar {
+    position: absolute;
+  }
+
   .ads-container {
     display:none;
   }
 
   .main-content {
     border-left:0;
-    padding-left:0;
+    /*padding-left:0;*/
   }
 
   article {
