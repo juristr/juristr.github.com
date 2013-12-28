@@ -290,27 +290,27 @@
   }
 
 
-#sidebar-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 44px;
-  height: 44px;
-  z-index: 700;
-  background-color: #333332;
-  text-align: center;
-  border: 0;
-  filter: alpha(opacity=100);
-  -khtml-opacity: 1;
-  -moz-opacity: 1;
-  opacity: 1;
-  font-size:28px;
-  color:white;
-}
+  #sidebar-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 44px;
+    height: 44px;
+    z-index: 700;
+    background-color: #333332;
+    text-align: center;
+    border: 0;
+    filter: alpha(opacity=100);
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    font-size:28px;
+    color:white;
+  }
 
-a#sidebar-button:hover {
-  text-decoration:none;
-}
+  a#sidebar-button:hover {
+    text-decoration:none;
+  }
 
 
 
@@ -320,7 +320,7 @@ a#sidebar-button:hover {
 
   .image-cover-wrap {
     width:100%;
-    max-height:450px;
+    max-height:350px;
     overflow: hidden;
   }
 
@@ -332,6 +332,7 @@ a#sidebar-button:hover {
     bottom: 0;
     vertical-align: middle;
     /*max-height:450px;*/
+    min-height:350px;
     width:100%;
   }
 
