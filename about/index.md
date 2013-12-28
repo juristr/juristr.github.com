@@ -45,7 +45,9 @@ current: about
 
 <a href="http://stackoverflow.com/users/50109/juri">
     <img src="http://stackoverflow.com/users/flair/50109.png" width="208" height="58" alt="profile for Juri at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Juri at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-</a> <a href="http://www.dzone.com/users/juristr"><img src="http://www.dzone.com/sites/all/files/big-mvbbutton.png"></a>
+</a>
+
+<a href="http://www.dzone.com/users/juristr"><img src="http://www.dzone.com/sites/all/files/big-mvbbutton.png"></a>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/it/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Italy License</a>.
 

@@ -1,6 +1,204 @@
----
-theme :
-  name : twitter
----
-{% include JB/setup %}
-{% include themes/twitter/default.html %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <link rel="me" href="https://profiles.google.com/104904743888756261987" />
+    <link rel="publisher" href='https://plus.google.com/104904743888756261987'/>
+
+    <meta content='Juri&quot;s website.' name='description'/>
+    <meta content='.Net, JavaScript, Microsoft Technologies, Google, Tips and Tricks, Software Development, Programming' name='keywords'/>
+    <meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" type="text/css"> -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="/assets/js/github-timeline/github-timeline-widget.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300' rel='stylesheet' type='text/css'>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=16&d=favicon&r=PG">
+
+
+    <link rel="stylesheet" href="/assets/sidr/stylesheets/jquery.sidr.dark.css">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+
+    <!--
+    <link href='/assets/js/scrolltop/jquery.scrolltop.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/assets/js/scrolltop/jquery.scrolltop.js"></script>
+    -->
+
+    <link href='/assets/js/tocify/jquery.tocify.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/assets/js/tocify/jquery.tocify.js"></script>
+
+    <script type="text/javascript" src="/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/prettify.js"></script>
+
+    <link href="/assets/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <link href="/assets/css/print.css" rel="stylesheet" type="text/css" media="print">
+  </head>
+
+  <body>
+  
+    <div class="metabar">
+      <div class="metabar-block pull-right">
+        <div class="metabar-text">
+          <a href="http://feeds.feedburner.com/juristrumpflohner" class="btn btn-default btn-transparent" style="color:#b3b3b1">
+            <i class="fa fa-rss"></i> RSS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-button">
+      <a id="sidebar-button" href="#sidr"><i class="fa fa-bars"></i></a>
+    </div>
+
+    <div id="sidr" style="display:none">
+      <p class="profile">
+        <span>
+          <a href="/">
+            <img class="img-circle col-lg-12 col-sm-12" src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"/>
+          </a>
+        </span>
+        <span class="bio">
+          Coaching architect, JavaScript, .Net, Android Developer, Blogger, DZone MVB, Martial Arts Practitioner.
+        </span>
+        <span class="social-icons">
+          {% include social_icons %}
+        </span>
+      </p>
+      <ul class="site-nav">
+        <li>
+          <a href="/blog">
+            <i class="glyphicon glyphicon-home"></i> Blog Home
+          </a>
+        </li>
+        <li>
+          <a href="/blog/tags">
+            <i class="fa fa-tags"></i> Tags
+          </a>
+        </li>
+        <li>
+          <a href="/blog/archive">
+            <i class="glyphicon glyphicon-th-list"></i> Archive
+          </a>
+        </li>
+        <li>
+          <a href="/works">
+            <i class="fa fa-picture-o"></i> My Works
+          </a>
+        </li>        
+        <li>
+          <a href="/about">
+            <i class="glyphicon glyphicon-user"></i> About me
+          </a>
+        </li>
+        <li>
+          <a href="http://feeds.feedburner.com/juristrumpflohner">
+            <i class="fa fa-rss"></i> Subscribe
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+
+    <div class="js-click-region">
+      {{ content }}
+    </div>
+
+    <script>
+      // $(function(){
+      //   $(".js-tweets").juristr_tweets();
+      //   $(".js-stackoverflow-top").juristr_stackexchange({ showLatest: true });
+      //   $(".js-stackoverflow-latest").juristr_stackexchange();
+      //   new Juristr.Github($(".js-github-latest")).loadFeedData();
+      // });
+      //
+
+      $("pre").each(function(){
+        var el = $(this);
+        if(el.hasClass("nohighlight") === false){
+          el.addClass("prettyprint");
+          //el.addClas("linenums");
+        }
+      });
+
+      $(function(){
+        $('#sidebar-button').sidr();
+
+        $('#sidebar-button').tooltip({
+          title: "Click me",
+          placement: 'right'
+        });
+
+        $('.js-tooltip').tooltip();
+
+        $('.js-click-region').click(function(){
+          $.sidr('close');
+        });
+      });
+
+      prettyPrint();
+    </script>
+    <script src="/assets/sidr/jquery.sidr.min.js"></script>
+    
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+    var sc_project=8306995;
+    var sc_invisible=1;
+    var sc_security="104455ea";
+    </script>
+    <script type="text/javascript"
+    src="http://www.statcounter.com/counter/counter.js"></script>
+    <noscript><div class="statcounter"><a title="free web stats"
+    href="http://statcounter.com/free-web-stats/"
+    target="_blank"><img class="statcounter"
+    src="http://c.statcounter.com/8306995/0/104455ea/1/"
+    alt="free web stats"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-416229-12']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  </body>
+</html>
