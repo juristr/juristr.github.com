@@ -7,7 +7,7 @@ postimg: /blog/assets/imgs/buildnotificationtool.png
 tags: [ "Visual Studio", "HowTo"]
 reposts: ["http://dotnet.dzone.com/articles/howto-subscribe-failed-tfs"]
 ---
-{% include JB/setup %}
+
 
 When you use a build server it is a must to get notified in case of build failures. Microsoft's Team Foundation server has different possibilities to achieve this: using the Build Notification Tool or through so-called Alerts.
 

@@ -4,7 +4,7 @@ title: "Finishing my Blog Relocation"
 description: ""
 tags: []
 ---
-{% include JB/setup %}
+
 About six years ago I decided to create a Blogger account and start blogging. That worked perfectly and it was a good way to start. However, now I think it's time to change.
 
 ## Changing the Domain

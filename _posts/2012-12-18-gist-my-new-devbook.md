@@ -7,7 +7,7 @@ postimg: https://f.cloud.github.com/assets/2/4907/259773c0-432e-11e2-869a-1da894
 tags: [Projects]
 reposts: ["http://java.dzone.com/articles/gist-my-new-devbook"]
 ---
-{% include JB/setup %}
+
 
 I always had the idea of having some kind of organized store, some kind of very simple knowledge base where I could memorize interesting stuff around software development which I encounter i my day-to-day business. A wiki wasn't suitable as it should be centered mainly around code, but still you should have the possiblity to add your text-based notes or a collection of links.
 

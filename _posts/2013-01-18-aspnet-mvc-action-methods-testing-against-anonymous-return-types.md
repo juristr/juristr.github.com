@@ -6,7 +6,7 @@ category:
 tags: [Unit Testing, C#]
 reposts: ["http://dotnet.dzone.com/articles/aspnet-mvc-action-methods"]
 ---
-{% include JB/setup %}
+
 
 
 I don't use dynamic types regularly, but there are always again situations when they come in quite handy. Here is one example of testing an MVC controller's return value.

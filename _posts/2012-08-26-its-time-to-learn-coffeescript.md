@@ -7,7 +7,7 @@ tags: [JavaScript, CoffeeScript, WebDev]
 reposts: ["http://css.dzone.com/articles/its-time-learn-coffeescript"]
 comments: true
 ---
-{% include JB/setup %}
+
 
 Seing and reading all the stuff about CoffeeScript, I thought it might be useful to get into that "language" as well in order to get a better understanding. There is a lot of material already online on http://coffeescript.org but still, I learn a lot better and faster if I write my own notes and examples.
 

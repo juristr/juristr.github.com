@@ -6,7 +6,7 @@ category:
 tags: [JavaScript, lessons learned, C#, .Net, ASP.net MVC, Web dev]
 reposts: ["http://dotnet.dzone.com/articles/lessions-learned-dont-expose"]
 ---
-{% include JB/setup %}
+
 
 When we refactored our main application architecture, moving from an ASP.net WebForms app to a rich client JavaScript application with an ASP.net MVC REST backend, one of our main goals was to keep things as simple as possible.
 

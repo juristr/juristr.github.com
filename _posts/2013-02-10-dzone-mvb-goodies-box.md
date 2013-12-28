@@ -7,7 +7,7 @@ postimg: /blog/assets/imgs/dzonebox.jpg
 show_img_in_detail: true
 tags: []
 ---
-{% include JB/setup %}
+
 
 Yesterday morning I received a nice little box with a DZone label on it. Seems like they sent it to me as part of the [MVB program](/blog/2012/04/joining-dzone-mvb-program/) I recently joined. What a surprise! Opening the package...
 

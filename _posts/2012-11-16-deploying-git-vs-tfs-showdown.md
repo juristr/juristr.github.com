@@ -7,7 +7,7 @@ tags: [tooling]
 postimg: /blog/assets/imgs/repo_deploy_git.png
 reposts: ["http://agile.dzone.com/articles/deploying-git-vs-tfs-showdown", "http://www.dotnetcodegeeks.com/2012/11/deploying-git-vs-tfs-showdown.html"]
 ---
-{% include JB/setup %}
+
 
 I think everyone agrees deployment should be as simple as possible. Seems like everyone talks about continuous integration/deployment/delivery. More and more people (and cloud providers) start using the source control mgmt system as their deployment solution. Especially Git seems to be quite suitable for that, i.e. you push to a dedicated "deploy" branch which is being automatically fetched, build and deployed by some robot. Git's distributed approach makes this easy, but would that be possible with TFS as well?
 

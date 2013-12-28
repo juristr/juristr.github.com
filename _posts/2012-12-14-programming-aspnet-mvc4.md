@@ -6,7 +6,7 @@ category:
 postimg: /blog/assets/imgs/coverprogrammingaspnet.gif
 tags: ["book review", "ASP.net MVC", "C#", ".Net"]
 ---
-{% include JB/setup %}
+
 
 This is one of the recent books I got from O'Reilly. It is probably the most comprehensive and detailed one I've encountered so far regarding ASP.net MVC development. More than 400 pages, from the very basics of the MVC pattern, client-side JavaScript and Mobile web development, application architecture to successfully deploying an ASP.net MVC application in production.
 

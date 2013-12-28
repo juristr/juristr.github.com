@@ -6,7 +6,7 @@ category:
 tags: [ASP.net MVC, C#, WebDev]
 reposts: ["http://dotnet.dzone.com/articles/output-caching-aspnet-mvc", "http://www.dotnetcodegeeks.com/2012/11/output-caching-in-asp-net-mvc.html"]
 ---
-{% include JB/setup %}
+
 
 Although nowadays most of us have broadband connections, resource caching is important as loading a resource from your local HD is (by now) still faster than fetching it remotely. In this post I'd like to explore how to control the ASP.net MVC caching behavior and its effects when using ajax requests for retrieving data.
 

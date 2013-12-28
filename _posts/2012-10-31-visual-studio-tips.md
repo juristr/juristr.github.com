@@ -7,7 +7,7 @@ postimg: /blog/assets/imgs/vs2012-logo.png
 tags: [ Visual Studio, tooling]
 reposts: ["http://dotnet.dzone.com/articles/visual-studio-tips"]
 ---
-{% include JB/setup %}
+
 
 At work, I spend a huge amount of my time working with Microsoft Technologies. As such, I also use Visual Studio. Here are some of the tipps and tricks to efficiently work with it.
 

@@ -6,7 +6,7 @@ category:
 postimg: /blog/assets/imgs/HRT.png
 tags: [book review]
 ---
-{% include JB/setup %}
+
 
 About a year ago someone told me: the hardest problems you'll face won't be of technical nature but rather they'll deal with interpersonal relationships. People are different (fortunately), different personalities, different capabilities, all mixed together.
 

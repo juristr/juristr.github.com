@@ -7,7 +7,7 @@ postimg: /blog/assets/imgs/howtostayuptodate.png
 tags: []
 reposts: ["http://css.dzone.com/articles/how-stay-date-web-technology"]
 ---
-{% include JB/setup %}
+
 
 The web is evolving extremely fast, especially in the recent years I have the feeling that it really got up to speed. Just think about JavaScript two years ago compared to today. The same holds for the browser vendors. Hence as a web developer you have to keep yourself up to date on the current web technologies. This is important for being able to make your evaluations on what is just trendy and what has future.
 

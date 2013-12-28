@@ -6,7 +6,7 @@ category:
 postimg: /blog/assets/imgs/vs2012_unshelve_menu.png
 tags: ["Visual Studio"]
 ---
-{% include JB/setup %}
+
 
 Do you use the TFS shelvesets?? I do, not regularly, but from now and then they're quite useful for staging or even for sharing some unfinished work with others. Well it seems like the VS engineers cannot decided where to put the menu item for the "unshelve" option.
 

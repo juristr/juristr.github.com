@@ -6,7 +6,7 @@ category:
 postimg: /blog/assets/imgs/vs2012_testview.png
 tags: []
 ---
-{% include JB/setup %}
+
 
 In Visual Studio 2012 the team invested a lot in order to improve the testing experience. Sooner or later also the MS guys found the extreme value into having an automated test suite. One of the additions I particularly like is the ability to automatically execute the tests after each build. Actually I even implemented a working prototype for this in VS2010, but never had the time to finilize and publish it. The problem however with the VS2012 Test Explorer is on how to instruct it to only execute the unit tests within your solution and not the coded UI or integration tests.
 

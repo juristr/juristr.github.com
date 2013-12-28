@@ -6,7 +6,7 @@ category:
 postimg: /blog/assets/imgs/automapper.png
 tags: [C#]
 ---
-{% include JB/setup %}
+
 
 Mapping is a common task when integrating different systems with each other. Although it might often seem an unnecessary overhead, it's highly suggested (even when you communicate within your own systems) as you don't want to depend on the internal structure of another service. I'm talking about DTOs basically. But please, don't create your own mapper, there are tools out there which solve this task probably better than you might.
 
