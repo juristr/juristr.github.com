@@ -19,7 +19,7 @@ Introductory book about creating JavaScript SPAs with [JavaScriptMVC](http://jav
 
 **Technical Reviewer**
 
-A book about creating Windws 8 applications with JavaScript and HTML5.
+A book about creating Windows 8 applications with JavaScript and HTML5.
 
 ## Coding
 
