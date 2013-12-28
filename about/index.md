@@ -50,19 +50,3 @@ current: about
 <a href="http://www.dzone.com/users/juristr"><img src="http://www.dzone.com/sites/all/files/big-mvbbutton.png"></a>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/it/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Italy License</a>.
-
-
-<script type="text/javascript" src="/assets/js/github-timeline/github-timeline-widget.min.js"></script>
-<script type="text/javascript">
-//Call this after the DOM is loaded (see note following snippet)
-  GitHubTimeline({
-    username: 'juristr',
-    limit: 5,
-    header: 'octocat',
-    id: 'github-timeline-widget',
-    exclude: ['gist'],
-    callback: function () {
-        //code to run once widget is inserted into DOM
-    }
-  });
-</script>
