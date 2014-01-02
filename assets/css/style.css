@@ -709,14 +709,6 @@
     font-smoothing: antialiased;
   }
 
-  article .tags{
-    /*background: url(/assets/images/icon_tags.gif) 0 3px no-repeat;
-    padding-left: 22px;*/
-  }
-
-  article .tags a{
-    /*font-size: 12px !important;*/
-  }
 
   article img {
     padding:3px;
@@ -963,11 +955,6 @@
 
   .sidebar .widget {
     padding-left: 5px;
-  }
-
-
-  .post-tag {
-    display: block;
   }
 
   #related-posts {
@@ -1444,6 +1431,7 @@ ol.linenums li {
     display:block;
     max-width: 700px;
     margin: 0 auto;
+    border-top: 1px solid #dededc;
   }
 
   .author-image {
@@ -1453,7 +1441,6 @@ ol.linenums li {
 
   .author-inline-bio {
     /*border-top: 4px solid #008CCC;*/
-    border-top: 1px solid #dededc;
     line-height: 1.4;
     color: #666665;
     width: 100%;
@@ -1475,20 +1462,12 @@ ol.linenums li {
     border: 0;
   }
 
-  .bio-container {
-    float: left;
-    width: 65%;
-    padding-right: 15px;
-  }
-
   .author-bio-footer hr {
     display: none;
   }
 
   .tag-list {
     padding-top: 10px;
-    text-align: right;
-    padding-right: 10px;
     font-size:18px;
   }
 

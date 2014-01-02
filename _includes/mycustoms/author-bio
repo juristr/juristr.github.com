@@ -1,4 +1,4 @@
-<div class="row-fluid author-inline-bio">
+<div class="author-inline-bio">
   <div class="author-image">
     <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=80&amp;d=identicon&amp;r=PG" class="img-rounded">
   </div>
@@ -10,15 +10,4 @@
       Coaching architect, JavaScript, .Net, Android Developer, Blogger, DZone MVB, Martial Arts Practitioner.
     <p>
   </div>
-  {% unless page.tags == empty %}
-    <hr />
-    <div class="tag-list">
-      <strong>Tags</strong>
-      <div class="tags">
-        {% for tag in page.tags %}
-          <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
-        {% endfor %}
-      </div>
-    </div>
-  {% endunless %}
 </div>
