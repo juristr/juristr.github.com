@@ -8,7 +8,8 @@ div.opening{
 	border-radius:50%;
 	margin:0 auto;
 	border:5px solid #000;
-	position:relative}
+	position:relative
+}
 div.opening div.circle{
 	background-color:#000;
 	width:50px;
