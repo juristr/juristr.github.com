@@ -1084,7 +1084,7 @@ body.locked.article .content-wrapper:after {
 
 .article .content-wrapper section {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px;
 }
 
 .article .content-wrapper a {
