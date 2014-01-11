@@ -21,7 +21,11 @@ title: Articles overview
         {% endunless %}
         <h2>
           <span class="small">{{ post.subtitle }}</span>
-          <span class="large">{{ post.headline }}</span>
+          {% if post.headline == null %} 
+            <span class="large">{{ post.title }}</span>
+          {% else %}
+            <span class="large">{{ post.headline }}</span>
+          {% endif %}
           <span class="learnmore">Learn more</span>
         </h2>
       </div>

@@ -88,6 +88,15 @@ type: article
 
         {{ content }}
 
+        {% if page.reposts && page.reposts.length > 0 %}
+          <hr />
+          <p><strong>This article has been re-published on the following partner sites:</strong></p>
+          <ul>
+            {% for repostUrl in page.reposts %}
+              <li><a href="{{repostUrl}}" rel="nofollow">{{ repostUrl }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </div>
     </section>
   </article>
