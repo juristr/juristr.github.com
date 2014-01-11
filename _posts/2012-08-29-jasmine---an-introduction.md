@@ -3,7 +3,7 @@ layout: articles-post
 title: "Jasmine - An Introduction"
 subtitle: "BDD style testing for your JavaScript code"
 description: "A step by step introduction on using Jasmine"
-category: bliki
+category: article
 tags: ["JavaScript", "Unit Testing"]
 reposts: ["http://css.dzone.com/articles/jasmine-introduction"]
 ---

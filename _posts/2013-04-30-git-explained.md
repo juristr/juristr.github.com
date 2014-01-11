@@ -6,7 +6,7 @@ subtitle: "For beginners"
 description: "Introduces Git for those who want to get started and really have no experience at all so far. It's a step by step guide basically."
 postimg: "/blog/assets/imgs/gitlogo.png"
 show_img_in_detail: true
-category: bliki
+category: article
 tags: [Git]
 reposts: ["http://dotnet.dzone.com/articles/intro-git", "http://www.javacodegeeks.com/2013/05/git-explained-for-beginners.html"]
 ---

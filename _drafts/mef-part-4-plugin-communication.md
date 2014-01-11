@@ -2,7 +2,7 @@
 layout: post
 title: "MEF Part 4: Loosely Coupled Plugin Communication"
 description: ""
-category: bliki
+category: article
 tags: []
 ---
 

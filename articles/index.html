@@ -11,7 +11,7 @@ title: Articles overview
 </header>
 
 <div class="body-content">
-  {% for post in site.categories.bliki limit:1 %}
+  {% for post in site.categories.article limit:1 %}
     <section class="masthead">
       <a href="{{ post.url }}">
       <div class="container">
@@ -46,7 +46,7 @@ title: Articles overview
 <a class="rss-feed" alt="RSS" href="/articles/atom.xml"><i class="fa fa-rss"></i></a>
 <ul>
 
-  {% for post in site.categories.bliki limit:20 offset: 1 %}
+  {% for post in site.categories.article limit:20 offset: 1 %}
     <li>
       <a href="{{ post.url }}">
         <!-- <span class="left">

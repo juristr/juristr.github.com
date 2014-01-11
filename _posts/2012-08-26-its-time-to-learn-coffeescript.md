@@ -4,7 +4,7 @@ title: "It's time to learn CoffeeScript"
 headline: "Learn CoffeeScript"
 subtitle: "Taking a deeper look"
 description: "A guide taking a deeper look at CoffeeScript."
-category: bliki
+category: article
 tags: [JavaScript, CoffeeScript, WebDev]
 reposts: ["http://css.dzone.com/articles/its-time-learn-coffeescript"]
 comments: true

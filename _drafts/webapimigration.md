@@ -2,7 +2,7 @@
 layout: post
 title: "Asp.net WebApi Migration"
 description: ""
-category: bliki
+category: article
 tags: []
 ---
 
