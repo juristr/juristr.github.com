@@ -218,16 +218,15 @@ html, body {
 .masthead .container span.large {
   font-weight: 700;
   text-transform: uppercase;
-  width: 65%;
-  left: 44%;
-  top: 55px;
-  font-size: 32px;
+  width: 100%;
+  top: 48px;
+  font-size: 26px;
 }
 
 .masthead .container span.small {
   font-style: italic;
   font-weight: 100;
-  left: 45%;
+  left: 15px;
   width: 45%;
   top: 20px;
   font-size: 13px;
@@ -324,16 +323,12 @@ html, body {
 
 .latest-articles .rss-feed,
 .articles-list .rss-feed {
-  width: 28px;
-  height: 28px;
   position: absolute;
   right: 2%;
   top: 1%;
   text-indent: 30px;
-  font-size: 0;
+  font-size: 30px;
   overflow: hidden;
-  background: url(/static/images/rss.png);
-  background-size: 28px 28px;
 }
 
 .latest-articles h2 {
@@ -384,7 +379,7 @@ html, body {
   display: block;
   float: left;
   width: 70%;
-  margin: 0 0 0 1%;
+  margin: 0 0 0 4%;
 }
 
 .latest-articles .author img {
@@ -523,7 +518,9 @@ kbd, .kbd {
   }
 
   .masthead .container span.large {
-    font-size: 36px;
+    left:15px;
+    font-size: 32px;
+    top:48px;
   }
 
   .masthead .container span.small {
@@ -553,7 +550,7 @@ kbd, .kbd {
 
   .masthead .container span.large {
     top: 75px;
-    font-size: 48px;
+    font-size: 44px;
   }
 
   .masthead .container span.learnmore {
@@ -594,6 +591,7 @@ kbd, .kbd {
   }
 
   .latest-articles .right {
+    margin: 0 0 0 1%;
     width: 71%;
   }
 
@@ -673,14 +671,14 @@ kbd, .kbd {
   }
 
   .masthead .container span.large {
-    left: 45%;
+    /*left: 45%;
+    */
     top: 50px;
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .masthead .container span.small {
     width: 55%;
-    left: 38%;
     top: 32px;
     font-size: 20px;
   }
@@ -706,16 +704,16 @@ kbd, .kbd {
   }
 
   .masthead .container span.large {
-    font-size: 69px;
+    font-size: 59px;
     top: 148px;
-    left: 43%;
+    /*
+    left: 43%;*/
   }
 
   .masthead .container span.small {
     font-size: 26px;
     top: 80px;
     width: 50%;
-    left: 43%;
   }
 
   .masthead .container span.learnmore {
@@ -762,10 +760,10 @@ kbd, .kbd {
   }
 
   .masthead .container span.large {
-    font-size: 101px;
+    font-size: 70px;
     top: 128px;
-    left: 44%;
-    width: 64%;
+    /*left: 44%;
+    width: 64%;*/
     line-height: 1.05;
     letter-spacing: -3px;
   }
@@ -773,7 +771,6 @@ kbd, .kbd {
   .masthead .container span.small {
     font-size: 28px;
     top: 100px;
-    left: 34%;
     width: 60%;
   }
 
@@ -863,6 +860,8 @@ kbd, .kbd {
   margin: 0 auto;
   width: 70%;
   position: relative;
+
+  text-align: center;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;

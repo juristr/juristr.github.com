@@ -1,6 +1,7 @@
 ---
 layout: articles-post
 title: "Getting Started with Git and Visual Studio"
+subtitle: "for newbies"
 headline: "Git meets Visual Studio"
 description: "Step by step guid on how to use Git within Visual Studio."
 postimg: "/blog/assets/imgs/vsgit/gitmeetsvs.png"

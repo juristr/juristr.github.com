@@ -1,0 +1,132 @@
+---
+layout: articles-default
+type: article
+---
+<header class="main" id="siteheader">
+    <h1 id="title">
+      <a href="/en/" title="{{ page.title }}">{{ page.title }}</a>
+    </h1>
+    <a href="#sitenav" id="navtoggle">Show navigation</a>
+
+    {% include site-nav.html %}
+</header>
+
+<div class="body-content">
+  <section class="title">
+    <section class="title-text container">
+      <h1>{{ page.title }}</h1>
+      <h2>{{ page.subtitle }}</h2>
+    </section>
+  </section>
+
+  <article class="content-wrapper">
+
+    <section class="container">
+      
+      <div class="content" id="article-content" style="margin:0 auto">
+
+        {{ content }}
+
+      </div>
+    </section>
+  </article>
+
+  <footer>
+    <div class="container">
+
+        <h1>Next steps</h2>
+
+        <aside class="panel share">
+          <h2>Share</h2>
+
+            <a href="https://twitter.com/share?url=http://juristr.com/articles&text={{page.title}}&lang=en&via=juristr" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://juristr.com/articles" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+
+            <a href="https://plus.google.com/share?url=http://juristr.com/articles" class="gplus" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i></a>
+
+        </aside>
+
+        <aside class="panel rss">
+          <h2><i class="fa fa-rss"></i> Subscribe</h2>
+          <p>Enjoyed this article? Grab the <a href="http://feeds.feedburner.com/html5rocks">RSS feed</a> and stay up-to-date.</p>
+        </aside>
+
+
+
+      <p class="licensing">
+
+        Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>.
+
+      </p>
+
+    </div>
+  </footer>
+  <script>
+    window.isCompatible = function() {
+
+      return null;
+
+    };
+
+    if (isCompatible() === false) {
+      document.getElementById('notcompatible').className = '';
+    }
+  </script>
+
+  <script>
+  (function() {
+
+    // Kill feedburner and marketing tracking arguments, but let them register
+    // before we do it.
+    setTimeout(function() {
+      if (/^\?utm_/.test(document.location.search) &&
+          window.history.replaceState) {
+        window.history.replaceState(
+            {}, '', document.location.href.replace(/\?utm_.*/, ''));
+      }
+    }, 2000);
+
+    var siteHeader = document.getElementById('siteheader');
+    var navToggle = document.getElementById('navtoggle');
+    var siteNav = document.getElementById('sitenav');
+
+    function toggle(target, forceActive) {
+
+      if (typeof toc !== 'undefined') {
+        // Switch off whichever one is not the
+        // current target
+        if (target === toc)
+          siteNav.classList.remove('active');
+        else
+          toc.classList.remove('active');
+      }
+
+      // Toggle if no force parameter is set
+      if (typeof forceActive === 'undefined') {
+        target.classList.toggle('active');
+      } else {
+        if (forceActive)
+          target.classList.add('active');
+        else
+          target.classList.remove('active');
+      }
+
+      // now find out what the set state ended up being
+      var isActive = target.classList.contains('active');
+
+      if (isActive)
+        siteHeader.classList.add('expanded');
+      else
+        siteHeader.classList.remove('expanded');
+
+    }
+
+    navToggle.addEventListener('click', function(e) {
+      toggle(siteNav);
+      e.preventDefault();
+    });
+
+
+  })();
+  </script>

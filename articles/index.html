@@ -3,6 +3,9 @@ layout: articles-default
 title: Articles overview
 ---
 
+<style>
+</style>
+
 <header class="main" id="siteheader">
   {% include site-nav.html %}
 </header>
@@ -12,7 +15,10 @@ title: Articles overview
     <section class="masthead">
       <a href="{{ post.url }}">
       <div class="container">
-        <!-- <div id="image"></div> -->
+        {% unless post.postimg == empty %}
+          <!-- <div id="image" style="background: url({{ post.postimg }}) center top no-repeat;">
+          </div> -->
+        {% endunless %}
         <h2>
           <span class="small">{{ post.subtitle }}</span>
           <span class="large">{{ post.headline }}</span>
@@ -37,7 +43,7 @@ title: Articles overview
 <section class="latest-articles">
 <div class="container">
 <h2>Latest Articles</h2>
-<a class="rss-feed" alt="RSS" href="http://feeds.feedburner.com/html5rocks">RSS Feed</a>
+<a class="rss-feed" alt="RSS" href="http://feeds.feedburner.com/html5rocks"><i class="fa fa-rss"></i></a>
 <ul>
 
   {% for post in site.categories.bliki limit:20 offset: 1 %}
@@ -59,6 +65,8 @@ title: Articles overview
       </a>
     </li>
   {% endfor %}
+
+ 
 </ul>
 <div class="clear"></div>
 </div>
