@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: articles-post
 title: "Getting Started with Git and Visual Studio"
-description: ""
+headline: "Git meets Visual Studio"
+description: "Step by step guid on how to use Git within Visual Studio."
 postimg: "/blog/assets/imgs/vsgit/gitmeetsvs.png"
 show_img_in_detail: true
 category: bliki

@@ -1,7 +1,9 @@
 ---
-layout: post
+layout: articles-post
 title: "It's time to learn CoffeeScript"
-description: ""
+headline: "Learn CoffeeScript"
+subtitle: "Taking a deeper look"
+description: "A guide taking a deeper look at CoffeeScript."
 category: bliki
 tags: [JavaScript, CoffeeScript, WebDev]
 reposts: ["http://css.dzone.com/articles/its-time-learn-coffeescript"]

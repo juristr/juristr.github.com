@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article">
+<head>
+  <meta charset="utf-8">
+  <meta property="twitter:account_id" content="1593210261" />
+  <!--
+    Adapted from html5rocks.com; Licensed under Apache 2 license.
+  -->
+  <title>{{ page.title }} - A resource for web developers</title>
+  {% if page.description == "" %}
+    <meta name="description" content="A resource for web developers">
+  {% else %}
+    <meta name="description" content="{{ page.description }}">
+  {% endif %}
+  <meta name="keywords" content="html5,html 5,html5 demos,html5 examples,javascript,.net,c#,microsoft">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+  <!-- <link rel="alternate" type="application/rss+xml" title="HTML5 Rocks RSS" href="http://feeds.feedburner.com/html5rocks"> -->
+
+  <meta itemprop="name" content=" - Juri Strumpflohner">
+  
+
+  {% if page.description == "" %}
+    <meta itemprop="description" content="A resource for web developers.">
+  {% else %}
+    <meta itemprop="description" content="{{ page.description }}">
+  {% endif %}
+  <meta itemprop="description" content="A resource for web developers.">
+
+  <!-- <meta itemprop="image" content="http://www.html5rocks.com/static/images/html5rocks-logo-wings.png"> -->
+
+  <!-- <link rel="publisher" href="https://plus.google.com/111395306401981598462"> -->
+
+  <link rel="stylesheet" media="all" href="/static/css/v2-combined.css">
+  <link rel="stylesheet" media="all" href="/static/css/main.css">
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,800" rel="stylesheet">
+
+  <!-- <link rel="apple-touch-icon" href="/static/images/identity/HTML5_Badge_64.png">
+  <link rel="apple-touch-icon-precomposed" href="/static/images/identity/HTML5_Badge_64.png"> -->
+
+
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="/static/js/modernizr.custom.82437.js"></script>
+
+  {% if page.type == "article" %}
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/jquery-ui-1.9.1.custom.min.js"></script>
+    <script src="/static/js/jquery.tocify.min.js"></script>    
+  {% endif %}
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5-els.js"></script>
+  <![endif]-->
+
+  <style>
+    .get-example {
+      display: none;
+    }
+    dt {
+      display: block;
+      margin: 0;
+      font-weight: bold;
+      color: #333;
+    }
+    dd {
+      margin: 0 0 0.8em;
+    }
+
+    dl.inline dt {
+      display: inline;
+    }
+    dl.inline dd {
+      display: inline;
+    }
+    dl.inline dd::before {
+      content:" - ";
+    }
+    dl.inline dd::after {
+      content:"\A";
+      white-space:pre;
+    }
+  </style>
+
+</head>
+<body data-href="home" onload="" {% if page.type == "article" %}class="article tutorial" {% endif %}>
+
+    {{ content }}
+
+    <div class="padder google-project">
+      <div class="container">
+
+        {% include site-footer.html %}
+
+        Credits:<br/>
+        Portions of this page's HTML and design are modifications based on work created and shared by Google for their <a href="http://www.html5rocks.com">HTML5 Rocks</a></strong> site (see <a href="https://github.com/html5rocks">GitHub</a>) and used according to terms described in the Creative Commons 3.0 Attribution License.
+      </div>
+    </div>
+
+
+  </div>
+
+  <script>
+  (function() {
+
+    // Kill feedburner and marketing tracking arguments, but let them register
+    // before we do it.
+    setTimeout(function() {
+      if (/^\?utm_/.test(document.location.search) &&
+          window.history.replaceState) {
+        window.history.replaceState(
+            {}, '', document.location.href.replace(/\?utm_.*/, ''));
+      }
+    }, 2000);
+
+    var siteHeader = document.getElementById('siteheader');
+    var navToggle = document.getElementById('navtoggle');
+    var siteNav = document.getElementById('sitenav');
+
+    function toggle(target, forceActive) {
+
+      if (typeof toc !== 'undefined') {
+        // Switch off whichever one is not the
+        // current target
+        if (target === toc)
+          siteNav.classList.remove('active');
+        else
+          toc.classList.remove('active');
+      }
+
+      // Toggle if no force parameter is set
+      if (typeof forceActive === 'undefined') {
+        target.classList.toggle('active');
+      } else {
+        if (forceActive)
+          target.classList.add('active');
+        else
+          target.classList.remove('active');
+      }
+
+      // now find out what the set state ended up being
+      var isActive = target.classList.contains('active');
+
+      if (isActive)
+        siteHeader.classList.add('expanded');
+      else
+        siteHeader.classList.remove('expanded');
+
+    }
+
+    navToggle.addEventListener('click', function(e) {
+      toggle(siteNav);
+      e.preventDefault();
+    });
+
+
+  })();
+  </script>
+</body>
+</html>

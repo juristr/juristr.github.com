@@ -1,0 +1,103 @@
+---
+layout: articles-default
+title: Articles overview
+---
+
+<header class="main" id="siteheader">
+  {% include site-nav.html %}
+</header>
+
+<div class="body-content">
+  {% for post in site.categories.bliki limit:1 %}
+    <section class="masthead">
+      <a href="{{ post.url }}">
+      <div class="container">
+        <!-- <div id="image"></div> -->
+        <h2>
+          <span class="small">{{ post.subtitle }}</span>
+          <span class="large">{{ post.headline }}</span>
+          <span class="learnmore">Learn more</span>
+        </h2>
+      </div>
+      </a>
+    </section>
+  {% endfor %}
+<!-- <section class="search">
+<div class="container">
+<form action="/en/search" role="search">
+  <legend>Search</legend>
+  <label for="q">Search:</label>
+  <input type="search" name="q" id="q" autocomplete="off" placeholder="Search" />
+  <input type="submit" id="search-button" value="Search">
+</form>
+</div>
+</section> -->
+
+<div class="divider"></div>
+<section class="latest-articles">
+<div class="container">
+<h2>Latest Articles</h2>
+<a class="rss-feed" alt="RSS" href="http://feeds.feedburner.com/html5rocks">RSS Feed</a>
+<ul>
+
+  {% for post in site.categories.bliki limit:20 offset: 1 %}
+    <li>
+      <a href="{{ post.url }}">
+        <!-- <span class="left">
+          <span class="author" data-author_id="{{ post.author }}"><img src="/static/images/profiles/75/paulkinlan.75.png" alt="Paul Kinlan" title="Paul Kinlan" width="60" height="60"></span>
+        </span> -->
+
+        <span class="right">
+          <span class="title">
+            {{ post.title }}
+          </span>
+          <!--span class="date">1/6</span -->
+          <span class="description">{{ post.description }}</span>
+        </span>
+
+        <span class="clear"></span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<div class="clear"></div>
+</div>
+</section>
+
+<!-- <section class="landing-pages">
+<div class="panel mobile">
+<a href="/en/mobile/">
+  <div class="left">
+    <div class="icon"></div>
+  </div>
+  <div class="right">
+    <h2>Mobile</h2>
+    <p>
+      
+      Web developers can use the same set of technologies they know and love
+      to build rich web applications that work across different device
+      types.
+      
+    </p>
+  </div>
+</a>
+<div class="clear"></div>
+</div>
+<div class="panel performance">
+<a href="/en/features/performance">
+  <div class="left">
+    <div class="icon"></div>
+  </div>
+  <div class="right">
+    <h2>Performance</h2>
+    <p>
+      
+      Performance is a critical to your user experience. Learn how to accelerate your sites network, rendering and JavaScript performance.
+      
+    </p>
+  </div>
+</a>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+</section> -->

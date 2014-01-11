@@ -1,6 +1,9 @@
 ---
-layout: post
+layout: articles-post
 title: "Git Explained: For Beginners"
+headline: "Get started with Git"
+subtitle: "For beginners"
+description: "Introduces Git for those who want to get started and really have no experience at all so far. It's a step by step guide basically."
 postimg: "/blog/assets/imgs/gitlogo.png"
 show_img_in_detail: true
 category: bliki

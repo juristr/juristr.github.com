@@ -1,0 +1,34 @@
+
+{% for p in site.pages %}
+    {% if p.type == "profile" and p.author == "juristr" %}
+        {% assign currentAuthor = p %}
+    {% endif %}
+{% endfor %}
+
+
+<section class="author-images">
+    <!-- <a href="/profiles/{{ currentAuthor.author }}"> -->
+    <a href="/about">
+        <img src="{{currentAuthor.profilepic}}" itemprop="photo" alt="{{ currentAuthor.title }}" title="{{ currentAuthor.title }}">
+    </a>
+</section>
+
+<section class="meta">
+  <div class="authors">
+    <strong>By</strong> <a href="/profiles/{{ currentAuthor.author }}">{{ currentAuthor.title }}</a>
+  </div>
+  <div class="date">
+    <time pubdate><strong>Published:</strong> {% assign d = page.date | date: "%-d"  %}
+{{ page.date | date: "%B" }}
+{% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+{{ page.date | date: "%Y" }}</time>
+
+    {% if page.lastupdate != null %}
+        <time class="updated"><strong>Updated:</strong> {% assign d = page.lastupdate | date: "%-d"  %}
+{{ page.lastupdate | date: "%B" }}
+{% case d %}{% when '1' or '21' or '31' %}{{ d }}st{% when '2' or '22' %}{{ d }}nd{% when '3' or '23' %}{{ d }}rd{% else %}{{ d }}th{% endcase %},
+{{ page.lastupdate | date: "%Y" }}</time>
+    {% endif %}
+    <span><strong>Comments:</strong> <a href="#disqus_thread" class="load-comments" data-disqus-identifier="{{ page.url }}">0</a></span>
+  </div>
+</section>
