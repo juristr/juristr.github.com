@@ -20,19 +20,6 @@ type: article
 
       <div class="js-tocify"></div>
 
-      <!-- <ul><li><a href='#toc-async'>What's all the fuss about?</a></li><li><a href='#toc-events-not-always-best'>Events aren't always the best way</a></li><li><a href='#toc-promise-terminology'>Promise terminology</a></li><li><a href='#toc-javascript-promises'>Promises arrive in JavaScript!</a></li><li><a href='#toc-browser-support'>Browser support &amp; polyfill</a></li><li><a href='#toc-lib-compatibility'>Compatibility with other libraries</a></li><li><a href='#toc-coding-with-promises'>Complex async code made easier</a></li><li><a href='#toc-promisifying-xmlhttprequest'>Promisifying XMLHttpRequest</a></li><li><a href='#toc-chaining'>Chaining</a></li><li><a href='#toc-error-handling'>Error handling</a></li><li><a href='#toc-parallelism-sequencing'>Parallelism and sequencing - Getting the best of both</a></li><li><a href='#toc-api'>Promise API Reference</a></li></ul> -->
-
-      <!-- <h1 class="visible-title">Localizations:</h1>
-      <ul>
-
-
-          <li><a href="/fr/tutorials/es6/promises/">Français</a></li>
-
-          <li><a href="/ko/tutorials/es6/promises/">한국어</a></li>
-
-          <li><a href="https://github.com/html5rocks/www.html5rocks.com/blob/master/CONTRIBUTING.md">Contribute another</a></li>
-
-      </ul> -->
     </nav>
 
 </header>
@@ -211,34 +198,7 @@ type: article
   </section>
 
 
-  <footer>
-    <div class="container">
-        <aside class="panel share">
-          <h2>Share</h2>
-
-            <a href="https://twitter.com/share?url={{ page.url }}&text={{page.title}}&lang=en&via=juristr" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{page.url}}" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-
-            <a href="https://plus.google.com/share?url={{page.url}}" class="gplus" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i></a>
-
-        </aside>
-
-        <aside class="panel rss">
-          <h2><i class="fa fa-rss"></i> Subscribe</h2>
-          <p>Enjoyed this article? Grab the <a href="http://feeds.feedburner.com/html5rocks">RSS feed</a> and stay up-to-date.</p>
-        </aside>
-
-
-
-      <p class="licensing">
-
-        Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>.
-
-      </p>
-
-    </div>
-  </footer>
+  {% include articles-footer.html %}
 
   <script>
     $(function(){
