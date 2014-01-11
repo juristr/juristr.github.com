@@ -5,15 +5,16 @@ description: ""
 postimg: "/blog/assets/imgs/jenkins-logo.png"
 show_img_in_detail: true
 category: 
-tags: []
+tags: ["git"]
 ---
 
+At work I recently transitioned from TFS to using Git as our source control management. After introducing the team to [Git](/blog/2013/04/git-explained/) we also established a common workflow on how we wanted to have Git integrate with Jenkins and GitLab. Below is our current implementation.
 
 ## Git branching strategies
 
 Git branching strategies are guidelines on how to use git's branching mechanism for your development. Establishing such a shared convention is especially useful for having a common vision in the team, in order to have everyone steer in the right direction.
 
-There are a couple of git branching strategies around which I'd not like to go into the very details right now. Anyway, for the interested among you, here are some good links
+There are a couple of git branching strategies around which I'd not like to go into the very details right now. The interested among you might want to consider some of these links
 
 - [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
 - [Git Flow](http://nvie.com/posts/a-successful-git-branching-model/)
@@ -95,4 +96,3 @@ You can just use the notifyCommit hook on Git plugin like this. [...] But, with 
 You can find more details about notifyCommit and this [issue here](http://kohsuke.org/2011/12/01/polling-must-die-triggering-jenkins-builds-from-a-git-hook/). <cite><a href="https://wiki.jenkins-ci.org/display/JENKINS/Gitlab+Hook+Plugin">GitLab Hook plugin page</a></cite>
 
 I did not experience any of such delays so far, but we'll see.
->>>>>>> c4827850a1de5c6d9477e1fafd2ae13d9ff16c4b
