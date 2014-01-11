@@ -171,6 +171,13 @@
         $('.js-click-region').click(function(){
           $.sidr('close');
         });
+
+        $('#sidebar-button').click(function(){
+          try {
+            _gaq.push(['_trackEvent', 'sidebar-menu-clicked' , url]);
+          } catch(err){}
+        });
+
       });
 
       prettyPrint();
