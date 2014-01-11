@@ -1,13 +1,12 @@
 ---
-layout: post
+layout: articles-post
 title: "Jasmine - An Introduction"
-description: ""
+subtitle: "BDD style testing for your JavaScript code"
+description: "A step by step introduction on using Jasmine"
 category: bliki
-tags: []
+tags: ["JavaScript", "Unit Testing"]
 reposts: ["http://css.dzone.com/articles/jasmine-introduction"]
-comments: true
 ---
-
 
 This page is the result of taking notes from the session about Jasmine by [Davis W. Frank](http://twitter.com/dwfrank) at this years Fluent Conference in San Francisco. Unfortunately I wasn't there, but O'Reilly was so kind to give me access to the [amazing video compilation of the sessions](http://blog.js-development.com/2012/08/fluent-conference-javascript-beyond_29.html).
 
