@@ -419,7 +419,7 @@ html, body {
 
 .landing-pages .panel {
   margin: 0 0 20px 0;
-  padding: 0 0 20px 0;
+  padding: 20px;
   border-bottom: 1px solid #DDD;
 }
 
@@ -429,7 +429,7 @@ html, body {
 }
 
 .landing-pages .panel .left {
-  width: 13%;
+  width: 100%;
   min-width: 75px;
   min-height: 50px;
   padding-left: 4%;
@@ -450,14 +450,10 @@ html, body {
 }
 
 .landing-pages .panel .right {
-  width: 70%;
+  width: 100%;
   float: left;
   display: block;
   margin: 0 0 0 1%;
-}
-
-.landing-pages .panel a {
-  display: block;
 }
 
 .landing-pages .panel h2 {
@@ -621,12 +617,12 @@ kbd, .kbd {
   }
 
   .landing-pages .panel .left {
-    width: 20%;
+    width: 49%;
     padding: 0;
   }
 
   .landing-pages .panel .right {
-    width: 71%;
+    width: 50%;
   }
 }
 

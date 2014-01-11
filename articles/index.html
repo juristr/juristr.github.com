@@ -43,7 +43,7 @@ title: Articles overview
 <section class="latest-articles">
 <div class="container">
 <h2>Latest Articles</h2>
-<a class="rss-feed" alt="RSS" href="http://feeds.feedburner.com/html5rocks"><i class="fa fa-rss"></i></a>
+<a class="rss-feed" alt="RSS" href="/articles/atom.xml"><i class="fa fa-rss"></i></a>
 <ul>
 
   {% for post in site.categories.bliki limit:20 offset: 1 %}
@@ -72,40 +72,40 @@ title: Articles overview
 </div>
 </section>
 
-<!-- <section class="landing-pages">
-<div class="panel mobile">
-<a href="/en/mobile/">
-  <div class="left">
-    <div class="icon"></div>
-  </div>
-  <div class="right">
-    <h2>Mobile</h2>
+<section class="landing-pages">
+  <div class="panel">
+    <h2>About</h2>
     <p>
-      
-      Web developers can use the same set of technologies they know and love
-      to build rich web applications that work across different device
-      types.
-      
+      This page is my place to share articles about topics computer science topics. It completements <a href="/blog">my blog</a>.
     </p>
-  </div>
-</a>
-<div class="clear"></div>
-</div>
-<div class="panel performance">
-<a href="/en/features/performance">
-  <div class="left">
-    <div class="icon"></div>
-  </div>
-  <div class="right">
-    <h2>Performance</h2>
-    <p>
-      
-      Performance is a critical to your user experience. Learn how to accelerate your sites network, rendering and JavaScript performance.
-      
+    <p style="text-align:right">
+      <a href="/articles/about">Read more &raquo;</a>
     </p>
-  </div>
-</a>
   <div class="clear"></div>
 </div>
-<div class="clear"></div>
-</section> -->
+  <div class="panel performance">
+    <div class="left">
+      <h2>Subscribe</h2>
+      <ul>
+        <li>
+          <a href="/articles/atom.xml" class="btn btn-default btn-transparent">
+            <i class="fa fa-rss"></i> Articles only
+          </a>
+        </li>
+        <li>
+          <a href="http://feeds.feedburner.com/juristrumpflohner" class="btn btn-default btn-transparent">
+            <i class="fa fa-rss"></i> Articles + Blog posts
+          </a>
+        </li>        
+      </ul>
+    </div>
+    <div class="right">
+    <h2>Follow me</h2>
+      <p style="font-size:25px">
+        {% include social_icons %}
+      </p>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</section>
