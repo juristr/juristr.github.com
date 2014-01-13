@@ -13,7 +13,9 @@ I recently saw more and more people, especially developers, to move away from po
 
 About a month ago, the popular blogger and now GitHub employee [Phil Haack](http://twitter.com/haacked) migrated to [Jekyll and GitHub hosting](http://haacked.com/archive/2013/12/02/dr-jekyll-and-mr-haack/).
 
-## Jekyll because..
+## Why it's so cool!
+
+Jekyll
 
 ..of GitHub hosting. Yes, really. I actually didn't try lots of static site generators and hence, I cannot evaluate whether there are better alternatives than Jekyll. However, one of the great things about it is that you can simply push it to GitHub and they'll generate the static sites and care about the publishing.
 
