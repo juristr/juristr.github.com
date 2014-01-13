@@ -18,8 +18,6 @@
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="/assets/js/github-timeline/github-timeline-widget.min.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300' rel='stylesheet' type='text/css'>
@@ -46,7 +44,7 @@
   -->
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>    
 
     <!--
     <link href='/assets/js/scrolltop/jquery.scrolltop.css' rel='stylesheet' type='text/css'>
@@ -59,6 +57,14 @@
     <script type="text/javascript" src="/assets/js/moment.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/prettify.js"></script>
+
+    <!-- Kudos script -->
+    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script type="text/javascript" src="/assets/kudos/jstorage.min.js"></script>
+    <script type="text/javascript" src="/assets/kudos/kudos.min.js"></script>
+    <script type="text/javascript" src="/assets/kudos/kudos.firebase.js"></script>
+    <link rel="stylesheet" href="/assets/kudos/kudos.min.css">
+
 
     <link href="/assets/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
@@ -165,6 +171,13 @@
         $('.js-click-region').click(function(){
           $.sidr('close');
         });
+
+        $('#sidebar-button').click(function(){
+          try {
+            _gaq.push(['_trackEvent', 'sidebar-menu-clicked' , url]);
+          } catch(err){}
+        });
+
       });
 
       prettyPrint();

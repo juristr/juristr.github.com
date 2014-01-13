@@ -21,6 +21,9 @@ current: blog
 </div>
 <script type="text/javascript">
   $(function(){
+
+    $('figure.kudo').kudoable();
+
     var displayReadingTime = function(){
       Countable.once($('.article-body')[0], function (counter) {
         //counter.words
@@ -158,8 +161,22 @@ current: blog
             {% endif %}
           </div>
         </div>
-        <div class="author-bio-footer kindle-ignore">
-          {% include mycustoms/author-bio %}
+        <div class="row author-bio-footer kindle-ignore">
+          {% unless page.tags == empty %}
+            <div class="tag-list">
+              <strong>Tags:</strong>
+              {% for tag in page.tags %}
+                <a href="/blog/tags#{{tag}}" class="post-tag">{{ tag }}</a>
+              {% endfor %}
+            </div>
+          {% endunless %}
+          <div class="col-lg-10 col-md-10">
+            {% include mycustoms/author-bio %}  
+          </div>
+          <div class="col-lg-2 col-md-2">
+            <figure class="kudo">
+            </figure>
+          </div>
         </div>
         <!--
         <hr>
