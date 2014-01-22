@@ -6,6 +6,7 @@ postimg: "/blog/assets/imgs/jenkins-logo.png"
 show_img_in_detail: true
 category: 
 tags: ["git"]
+reposts: ["http://www.javacodegeeks.com/2014/01/git-flow-with-jenkins-and-gitlab.html"]
 ---
 
 At work I recently helped a team to transition from TFS to using Git as their source control management. After introducing the members to [Git](/blog/2013/04/git-explained/), we also established a common workflow on how we wanted to have Git integrate with Jenkins and GitLab. Below is our current implementation.
