@@ -27,6 +27,18 @@ Cons:
 
 Having a local service exposing a REST api at a given port and have the web application POST/GET to localhost for printing
 
+## Kerberos Authentication
+
+- Apparently it doesn't work: https://github.com/rogerwang/node-webkit/issues/590
+- Chromium Http Auth: http://www.chromium.org/developers/design-documents/http-authentication
+
+### Node Libraries supporting kerberos:
+
+**kerberos**
+
+For building: http://stackoverflow.com/questions/17333821/npm-kicks-off-msbuild-and-fails
+
+
 
 ## Links
 
