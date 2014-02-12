@@ -39,7 +39,7 @@ current: about
 
 ## Links
 
-- [My Careers 2.0 CV](http://careers.stackoverflow.com/juristr)
+- [My Careers 2.0 CV](http://careers.stackoverflow.com/juri)
 - [My Open Source Card](http://osrc.dfm.io/juristr)
 
 
