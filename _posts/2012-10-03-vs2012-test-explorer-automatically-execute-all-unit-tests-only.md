@@ -19,12 +19,11 @@ My usual solution setup looks like the following:
   - ProjectB
   - ...
 
-## In VS2010 ...
-... I usually opened the Test View and added a grouping for the projects which then already gave me a nice view about the Unittest and Integrationtest projects and moreover I then added a filter by the project name.
+## In VS2013...
 
-![](/blog/assets/imgs/vs2010_testview.png)
+...given that you follow the project structure mentioned above you can simply type **Project:".UnitTests"**.
 
-An alternative would be to use the `[TestCategory]` attributes and to filter against those.
+![](/blog/assets/imgs/vs2012_testview.png)
 
 ## In VS2012 ...
 ... there is no such filter any more. Instead the newly created Test Explorer provides you with an "intelligent" filter textbox where you can set filters like `FilePath: ""`, `Result: ""`. The key there is to use the filter "FullName" and set it to "UnitTests". 
@@ -34,4 +33,11 @@ An alternative would be to use the `[TestCategory]` attributes and to filter aga
 FullName searches the fully qualified name of your test case, that is, if your namespace reflects the name of your Assembly (which it should) then according to the example above, a test within the `ProjectA.UnitTests` would have a namespace like `ProjectA.UnitTests.Utils.SomeUtilTest` and hence be hit by the filter. 
 
 Just as a side-note: apparently the filter is not as intelligent to support regular expressions which is really bad...
+
+## In VS2010 ...
+... I usually opened the Test View and added a grouping for the projects which then already gave me a nice view about the Unittest and Integrationtest projects and moreover I then added a filter by the project name.
+
+![](/blog/assets/imgs/vs2010_testview.png)
+
+An alternative would be to use the `[TestCategory]` attributes and to filter against those.
 
