@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "VS2012 Test Explorer: Automatically Execute All Unit Tests Only"
+title: "Visual Studio Test Explorer: Automatically Execute All Unit Tests Only"
 description: ""
 category: 
 postimg: /blog/assets/imgs/vs2012_testview.png
