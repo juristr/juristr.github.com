@@ -80,7 +80,16 @@ You basically define your tests within a Node module:
     }
 
 Nightwatch then invokes that test methods, passing you a "browser" object which you can then control by invoking some Nightwatch [commands](http://nightwatchjs.org/api#commands) or [assertions](http://nightwatchjs.org/api#assertions). That's pretty much it.  
-The `egovLogin(...)` you see in my tests is simply our login process I factored out into a separate Node module as it is always the same for all of our services. It simply goes to the login page, fills in the user and pwd (for the tests) and submits the form.
+The `egovLogin(...)` you see in my tests is simply our login process I factored out into a separate Node module, as it is always the same for all of our services. The logic is nothing more than filling in the username and password and submitting the form to the backend.
+
+    module.exports = function(browser, url){
+        return browser
+            .url(url)
+            .waitForElementVisible('body', 1000)
+            .setValue('input[name="ctl00$plhContentMain$txbUserName"]', 'myusername')
+            .setValue('input[name="ctl00$plhContentMain$txbPassword"]', 'mypwd')
+            .click('input[name="ctl00$plhContentMain$btnLogin"]');
+    };
 
 Under the hood, the [Nightwatch test runner](http://nightwatchjs.org/guide#test-runner) communicates with the Selenium server over the [Selenium WebDriver Wire protocol](https://code.google.com/p/selenium/wiki/JsonWireProtocol).
 
