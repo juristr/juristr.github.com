@@ -40,7 +40,7 @@ Once you have everything, you can start creating your test specs. The setup you 
     module.exports = {
       "Egov Login Page Loads" : function (browser) {
         browser
-          .url("https://https://myendpoint.it/Login.aspx")
+          .url("https://myendpoint.it/Login.aspx")
           .waitForElementVisible('body', 5000)
           .assert.elementPresent('input[name="ctl00$plhContentMain$btnLogin"]')
           .end();
