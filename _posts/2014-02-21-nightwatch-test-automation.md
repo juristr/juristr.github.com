@@ -40,14 +40,14 @@ Once you have everything, you can start creating your test specs. The setup you 
     module.exports = {
       "Egov Login Page Loads" : function (browser) {
         browser
-          .url("https://account.egov.bz.it/auth/Login.aspx?t=C&l=2&c=0&b=https%3A%2F%2Faccount.egov.bz.it%2Fadmin")
+          .url("https://https://myendpoint.it/Login.aspx")
           .waitForElementVisible('body', 5000)
           .assert.elementPresent('input[name="ctl00$plhContentMain$btnLogin"]')
           .end();
       },
 
       "Admin page loads": function(browser){
-        egovLogin(browser, 'https://account.egov.bz.it/admin/index.html')
+        egovLogin(browser, 'https://myendpoint.it/to-test/index.html')
           .waitForElementVisible('.basic-form', 5000)
           .assert.containsText('#header', 'iam perf tests jmeter')
           .assert.elementPresent('.js-sidebarmenu-title')
@@ -56,17 +56,17 @@ Once you have everything, you can start creating your test specs. The setup you 
       },
 
       "IAM Management App": function(browser){
-        egovLogin(browser, 'https://account.egov.bz.it/management/index.html')
+        egovLogin(browser, 'https://myendpoint.it/another-app/index.html')
           .waitForElementVisible('#main', 5000)
           .assert.containsText('#header', 'iam perf tests jmeter')
-          .url('https://account.egov.bz.it/management/index.html#account/filter')
+          .url('https://myendpoint.it/another-app/index.html#account/filter')
           .waitForElementVisible('input[name=username]', 1000)
           .setValue('input[name=id]', '141684')
           .submitForm('form#accountFilter')
           .pause(1000)
           .assert.elementPresent('table.list')
           .assert.containsText("table.list", "EGOV-PERF-TEST")
-          .url('https://account.egov.bz.it/auth/logout.aspx')
+          .url('https://myendpoint.it/logout.aspx')
           .end();
       }
     };
