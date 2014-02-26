@@ -61,6 +61,10 @@ Once downloaded, open the package and install the "Network Link Conditioner.pref
 
 Just select the desired speed option and activate it. The nice thing about this tool is that you have already a bunch of configurations at hand.
 
+### Links to similar articles
+
+- [Chrome Developer tools - Mobile Emulation: Network Bandwidth Throttling](https://developers.google.com/chrome-developer-tools/docs/mobile-emulation#network-throttling)
+
 ### Other tools
 I have to admit that I did not perform an in-depth research about other possible tools. Here are just some other potentially interesting ones I encountered.
 
