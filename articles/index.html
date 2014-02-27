@@ -47,7 +47,7 @@ title: Articles overview
 <section class="latest-articles">
 <div class="container">
 <h2>Latest Articles</h2>
-<a class="rss-feed" alt="RSS" href="/articles/atom.xml"><i class="fa fa-rss"></i></a>
+<a class="rss-feed" alt="RSS" href="#subscribe"><i class="fa fa-rss"></i></a>
 <ul>
 
   {% for post in site.categories.article offset: 1 %}
@@ -89,7 +89,7 @@ title: Articles overview
 </div>
   <div class="panel performance">
     <div class="left">
-      <h2>Subscribe</h2>
+      <h2 id="subscribe">Subscribe</h2>
       <ul>
         <li>
           <a href="/articles/atom.xml" class="btn btn-default btn-transparent">
@@ -100,6 +100,9 @@ title: Articles overview
           <a href="http://feeds.feedburner.com/juristrumpflohner" class="btn btn-default btn-transparent">
             <i class="fa fa-rss"></i> Articles + Blog posts
           </a>
+        </li>
+        <li>
+          <i class="fa fa-rss"></i> Articles updates (coming soon)
         </li>        
       </ul>
     </div>
