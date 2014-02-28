@@ -17,15 +17,15 @@ Atom is powered by probably the most modern web browser engine Chromium and Node
 
 > Another great thing about writing code for Atom is the guarantee that it's running on the newest version of Chromium. That means we can ignore issues like browser compatibility and polyfills. We can use all the web's shiny features of tomorrow, today.
 
-What could a (web) developer desire more??
+Such sentences make (web) developer's dreams come true ;)
 
 <div style="text-align:center">
   <img src="http://blog.atom.io/img/under-the-hood.gif" />
 </div>
 
-## Do we still need desktop apps?
+## So..do we still need desktop apps?
 
-No, not really. The tech-stack Atom - for instance - is running on is capable of handling most of the scenarios I can think of.
+No, not really! The tech-stack Atom - for instance - is running on is capable of handling most of the scenarios I can think of.
 
 - **Build great UIs** ...well today's modern web apps have much nicer and appealing UIs anyway. Moreover HTML and CSS3 are extremely suitable to build good UIs, the easiest I've worked so far (among Swing, SWT, WinForms designer and even WPF XAML language). It is just more intuitive (not only 'cause I'm a web developer). Microsoft developed XAML as a language for decoupling the UI from the logic, s.t. designers could style the app without having to know anything about programming; the web has this already, for free.
 - **Access to the FS or ability to spawn processes??** Node.js does [the](http://nodejs.org/api/fs.html) [job](http://nodejs.org/api/process.html).
@@ -46,7 +46,11 @@ A good point to start is [Node-webkit](https://github.com/rogerwang/node-webkit)
 
 > node-webkit is an app runtime based on Chromium and node.js. You can write native apps in HTML and Javascript with node-webkit. It also lets you call Node.js modules directly from the DOM and enables a new way of writing native applications with all Web technologies.
 
-You definitely have to take a look at the [list of apps and companies using Node-webkit](https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit).
+You should definitely have a closer look at the [list of apps and companies using Node-webkit](https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit). There are some quite impressive examples and use cases like [remote collaboration tools](https://www.sqwiggle.com/), Markdown editors, time trackers and also [Lighttable](http://www.lighttable.com/), another popular text editor.
+
+### How does it work
+
+The simplest approach of developing a node-webkit application is to simply wrap your existing webapp.
 
 ## Conclusion
 
