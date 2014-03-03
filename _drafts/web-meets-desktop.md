@@ -48,9 +48,9 @@ A good point to start is [Node-webkit](https://github.com/rogerwang/node-webkit)
 
 You should definitely have a closer look at the [list of apps and companies using Node-webkit](https://github.com/rogerwang/node-webkit/wiki/List-of-apps-and-companies-using-node-webkit). There are some quite impressive examples and use cases like [remote collaboration tools](https://www.sqwiggle.com/), Markdown editors, time trackers and also [Lighttable](http://www.lighttable.com/), another popular text editor.
 
-### How does it work
+## How does it work?
 
-The simplest approach of developing a node-webkit application is to simply wrap your existing webapp.
+To get started with node-webkit, you have to simply download the package for your platform of interest, either Linux, OSX or Windows.
 
 ## Conclusion
 
