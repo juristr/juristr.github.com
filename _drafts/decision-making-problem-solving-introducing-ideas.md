@@ -2,7 +2,7 @@
 layout: post
 title: "Decision making, problem solving, introducing ideas, being influencial"
 lead: "The often undervalued activities in software development"
-postimg: "/blog/assets/imgs/westminsterabbey.jpg"
+postimg: "/blog/assets/imgs/sherlockholmes.jpg"
 show_img_in_detail: true
 coverimage: true
 category:
@@ -79,4 +79,6 @@ This is something I guess we have all experienced by ourselves. By establishing 
 
 Many of these points might sound quite obvious, like common sense. And still, pay attention on how often we simply ignore them.
 
-[lindaTwitterProfile]: http://twitter.com/RisingLinda
+Some related links:
+
+- [Your Most Important Skill: Empathy](http://chadfowler.com/blog/2014/01/19/empathy/)
