@@ -7,6 +7,7 @@ show_img_in_detail: true
 coverimage: true
 category:
 tags: ["soft skills"]
+reposts: ["http://java.dzone.com/articles/decision-making-problem"]
 ---
 
 Usually when people think about software development, they just have the typical nerds in mind, shy but smart, introvert people sitting in (often) dark rooms hammering down obscure instruction sets on their keyboards. Instead, software development has to do a lot more with people than many would expect. In fact at this year's QCon London there are entire tracks and tutorials focusing on the people aspect in software development.
