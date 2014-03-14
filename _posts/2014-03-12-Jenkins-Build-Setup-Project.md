@@ -4,6 +4,7 @@ title: "Automating the build of MSI setup packages on Jenkins"
 show_img_in_detail: false
 coverimage: false
 tags: [".Net"]
+reposts: ["http://java.dzone.com/articles/automating-build-msi-setup"]
 ---
 
 A short "how-to" based on an issue one of my work mates recently faced when trying to automate the creation of an MSI package on Jenkins.
