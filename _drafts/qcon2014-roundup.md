@@ -48,5 +48,55 @@ Sounds horrible, doesn't it? But that was exactly the message Linda tried to bri
 
 These are just some of a series of [fearless change patterns](http://fearlesschangepatterns.com/).
 
+## Embracing Change: Building Adaptable Software with Events
+
+On Tuesday, Russell Miles ([@russmiles](https://twitter.com/russmiles)) talked about building [#antifragilesoftware](https://twitter.com/search?q=%23antifragilesoftware&src=typd). According to Russ it's not that people are creating bad software because they are not intelligent enough to build good one, it's because **they do not know what they have to think about at certain points during development**, where they have to be cautions and what are potentially critical points. What usually struggles people most during development are..
+
+- people & skills
+- to deliver value
+- reinventing the wheels (no reuse)
+- maintainable code
+- overengineering
+- bored with business problem and instead want fun, trying something new (-> reinventing the wheels ;) )
+- integration with other software
+- ...
+
+It basically can be distilled into
+
+- building the right software (or not)
+- building the right software right
+
+> **The elephant in the standup:** [...] in an agile project, ...usually in sprint 10 the product owner enters the room with an apparently "small" change that'll screw up your entire code base. <cite>Russ Miles</cite>
+
+The problem is that all the decisions that have been taken in previous sprint planning and/or stand-ups are the enemy of future modifications and thus allocate to the "elephant".
+
+![](/blog/assets/imgs/elephant-standup.png)
+
+Thus, you need to embrace changes, you need to find strategies for building a system that is able to react and adapt and which is _antifragile_ to such problems that usually come along.
+
+> Simplicity is a balancing effect. You can run into oversimplification as well, which you get when your "simple" code doesn't deliver any value to the customer.
+
+When talking about simplicity, Russ points out that you should be able to read and understand the codebase by scanning the class hierarchy and by reading/executing the tests as they show the intention of the software developer: **you cannot have simple code without tests**.
+
+If you're about to build a robust system, the first thing you're looking for is coupling of different nature:
+
+- interface/contract sharing
+- inheritance
+- method names and return types
+- method parameters and ordering
+- programming language
+- exceptions that are being thrown and caught
+- annotations (which are currently quite popular in modern programming languages)
+- ...
+
+The key is to understand the pace with with the different parts of the software need to evolve. As such it is important to gain a view on the architectural design that helps to group things together that are intended to change together and usually have similar responsibilities. On the other side we need to decouple such areas from each other if the rate of change differs.
+
+But watch out, **nothing can increase complexity faster than by decoupling it (by means of events) if you do not know what you're doing**. Therefore don't use events as a starting point but instead, start with the lowest possible decoupling if two areas evolve at the same speed, like a simple "interface" (in the sense of a C#/Java programming construct). Then evolve the decoupling when needed. Possible levels could be:
+
+- Programming interface
+- Events
+- Message Bus
+- Microservices
+- ...
 
 
