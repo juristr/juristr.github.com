@@ -99,4 +99,11 @@ But watch out, **nothing can increase complexity faster than by decoupling it (b
 - Microservices
 - ...
 
+From an architectural point of view you basically start with (what Russ called) a "pizza-box architecture":
 
+**(pizza-box-diagram here)**
+
+This is the lowest level of decoupling that you can achieve and it might be perfectly fine as long as the different layers evolve at the same rate. Note that you always develop against interfaces as otherwise you won't be able to properly unit test your code.
+
+In order to be able to switch the next level of decoupling you first have to identify the problematic spots of our pizza-box architecture. Assuming you already separate the layers through interfaces, then normally the **transversal parts of the classical three layer architecture are the most problematic one**, namely the domain objects. Usually they are simple POCOs or POJOs (call 'em as you want), probably even having some ORM related Hibernate/JPA or Entity Framework annotations on them.  
+What happens if you change the database table?? You need to change the entities which impacts on your data access layer (probably), your business layer and even your frontend layer where you (most probably) directly use the domain objects for the UI logic.
