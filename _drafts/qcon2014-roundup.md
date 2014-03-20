@@ -89,7 +89,9 @@ If you're about to build a robust system, the first thing you're looking for is 
 - annotations (which are currently quite popular in modern programming languages)
 - ...
 
-The key is to understand the pace with with the different parts of the software need to evolve. As such it is important to gain a view on the architectural design that helps to group things together that are intended to change together and usually have similar responsibilities. On the other side we need to decouple such areas from each other if the rate of change differs.
+> The key is to understand the pace with with the different parts of the software need to evolve. 
+
+As such it is important to gain a view on the architectural design that helps to group things together that are intended to change together and usually have similar responsibilities. On the other side we need to decouple such areas from each other if the rate of change differs.
 
 But watch out, **nothing can increase complexity faster than by decoupling it (by means of events) if you do not know what you're doing**. Therefore don't use events as a starting point but instead, start with the lowest possible decoupling if two areas evolve at the same speed, like a simple "interface" (in the sense of a C#/Java programming construct). Then evolve the decoupling when needed. Possible levels could be:
 
@@ -99,11 +101,58 @@ But watch out, **nothing can increase complexity faster than by decoupling it (b
 - Microservices
 - ...
 
-From an architectural point of view you basically start with (what Russ called) a "pizza-box architecture":
+From an architectural point of view you basically start with (what Russ called) a "pizza-box architecture" _(forgive the colors, but I'm currently trying out Evernote's hand drawing feature and Skitch)_:
 
-**(pizza-box-diagram here)**
+<figure>
+  <img src="/blog/assets/imgs/pizzabox-architecture.png" />
+  <figcaption>The classical three-layer diagram</figcaption>
+</figure>
 
-This is the lowest level of decoupling that you can achieve and it might be perfectly fine as long as the different layers evolve at the same rate. Note that you always develop against interfaces as otherwise you won't be able to properly unit test your code.
+Each area is nicely separated and decoupled through interfaces, probably with some dependency injection mechanism which automagically wires the implementation and the interfaces together. That usually makes testing easier as well.
 
-In order to be able to switch the next level of decoupling you first have to identify the problematic spots of our pizza-box architecture. Assuming you already separate the layers through interfaces, then normally the **transversal parts of the classical three layer architecture are the most problematic one**, namely the domain objects. Usually they are simple POCOs or POJOs (call 'em as you want), probably even having some ORM related Hibernate/JPA or Entity Framework annotations on them.  
-What happens if you change the database table?? You need to change the entities which impacts on your data access layer (probably), your business layer and even your frontend layer where you (most probably) directly use the domain objects for the UI logic.
+In order to be able to switch the next level of decoupling you first have to identify the problematic spots of our pizza-box architecture. Assuming you already separate the layers through interfaces, then normally the **transversal parts of the classical three layer architecture are the most problematic one**, namely the domain objects. Usually they are simple POCOs or POJOs (call 'em as you want), probably even having some ORM related Hibernate/JPA or Entity Framework annotations on them.
+
+<figure>
+  <img src="/blog/assets/imgs/pizzabox-architecture-coupling.png" />
+  <figcaption>Entities create a strong coupling</figcaption>
+</figure>
+
+What happens if you change the database table?? You need to change the entities which impacts on your data access layer (probably), your business layer and even your frontend layer where you (most probably) directly use the domain objects for the UI logic. I experienced these problems by myself when we switched to creating rich client JavaScript apps with a REST layer at the backend. Our initial "naive" to expose the [the Entity Framework entities directly to the JavaScript client](/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/) isn't so ideal in the end. So we ended up with some DTOs on the REST interface side
+
+<figure>
+  <img src="/blog/assets/imgs/pizzabox-architecture-dtos.png" />
+  <figcaption>Slight decoupling of the REST entities with DTOs</figcaption>
+</figure>
+
+When you go further, Russel suggested to change the visual approach of drawing the architecture diagram from boxes to a circle, where the real **BL** is in the **core** of the circle. All of the components that interact with the core are **integrations with the outside world** which are drawn in a second outer circle. So our diagram from before might look like this:
+
+<figure>
+  <img src="/blog/assets/imgs/pie-architecture.png" />
+  <figcaption>Further decoupling</figcaption>
+</figure>
+
+Even the DB is seen as an integration point because it _happens to be_ the interface where we (currently) store and read the application data (a challenging view for many of us which might see the DB in the center of an application). Tomorrow it might not be a local DB but some remote service, who knows.., the scope is to remain flexible and open to changes, remember, the elephant!
+
+<span class="label label-default">Q:</span> But where are the entities now??
+
+<span class="label label-primary">A:</span> They're are literally duplicated!
+
+<span class="label label-default">Q:</span> You do what?? Duplication is evil!
+
+<span class="label label-primary">A:</span> Coupling as well...What's worse?? Depends on your situation.
+
+
+---
+
+
+This kind of architectural proposal is (btw) nothing new at all, they're called hexagonal architectures and you find plenty explanations on the web:
+
+- [http://alistair.cockburn.us/Hexagonal+architecture]()
+- [http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html]()
+
+<blockquote class="twitter-tweet" lang="en"><p>seems like <a href="https://twitter.com/russmiles">@russmiles</a> goes in the direction of an &quot;onion arch&quot; I was trying to get around a couple of month ago <a href="https://t.co/O1GlUrQn0q">https://t.co/O1GlUrQn0q</a></p>&mdash; Juri Strumpflohner (@juristr) <a href="https://twitter.com/juristr/statuses/440801487065579520">March 4, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Again, to emphasize, **you only go as far with the decoupling as you need**. Don't use the "decoupling hammer" on all of your projects, just know your options and apply them when you need to.
+
+  
