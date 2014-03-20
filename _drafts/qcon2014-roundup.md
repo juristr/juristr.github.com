@@ -110,37 +110,56 @@ From an architectural point of view you basically start with (what Russ called) 
 
 Each area is nicely separated and decoupled through interfaces, probably with some dependency injection mechanism which automagically wires the implementation and the interfaces together. That usually makes testing easier as well.
 
-In order to be able to switch the next level of decoupling you first have to identify the problematic spots of our pizza-box architecture. Assuming you already separate the layers through interfaces, then normally the **transversal parts of the classical three layer architecture are the most problematic one**, namely the domain objects. Usually they are simple POCOs or POJOs (call 'em as you want), probably even having some ORM related Hibernate/JPA or Entity Framework annotations on them.
+> The audience of your code is both, the machine and the human. <cite>Russ Miles</cite>
+
+In order to be able to switch the next level of decoupling you first have to identify the problematic spots of our pizza-box architecture. Assuming you already separate the layers through interfaces, then normally the **transversal parts of the classical three layer architecture are the most problematic ones**, as for instance the domain objects. Domain objects touching every area blur the boundaries between layers, which is usually bad. Often they have more annotations than actual code and are tightly connected to the used ORM mapper or framework being used.
 
 <figure>
   <img src="/blog/assets/imgs/pizzabox-architecture-coupling.png" />
   <figcaption>Entities create a strong coupling</figcaption>
 </figure>
 
-What happens if you change the database table?? You need to change the entities which impacts on your data access layer (probably), your business layer and even your frontend layer where you (most probably) directly use the domain objects for the UI logic. I experienced these problems by myself when we switched to creating rich client JavaScript apps with a REST layer at the backend. Our initial "naive" to expose the [the Entity Framework entities directly to the JavaScript client](/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/) isn't so ideal in the end. So we ended up with some DTOs on the REST interface side
+What happens if you change the database table?? You need to change the entities which impacts on your data access layer (probably), your business layer and even your frontend layer where you (most probably) directly use the domain objects for the UI logic. I experienced these problems by myself when we switched to creating rich client JavaScript apps with a REST layer at the backend. Our initial "naive" to expose the [the Entity Framework entities directly to the JavaScript client](/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/) isn't so ideal in the end. So we ended up with some DTOs on the REST interface side which decouples it from changes on the DB and domain entities.
 
 <figure>
   <img src="/blog/assets/imgs/pizzabox-architecture-dtos.png" />
   <figcaption>Slight decoupling of the REST entities with DTOs</figcaption>
 </figure>
 
-When you go further, Russel suggested to change the visual approach of drawing the architecture diagram from boxes to a circle, where the real **BL** is in the **core** of the circle. All of the components that interact with the core are **integrations with the outside world** which are drawn in a second outer circle. So our diagram from before might look like this:
+When you go further, Russell suggested to change the visual approach of drawing the architecture diagram from boxes to a circle, where the real **BL** is in the **core** of the circle. All of the components that interact with the core are **integrations with the outside world** which are drawn in a second outer circle. So our diagram from before might look like this:
 
 <figure>
   <img src="/blog/assets/imgs/pie-architecture.png" />
   <figcaption>Further decoupling</figcaption>
 </figure>
 
-Even the DB is seen as an integration point because it _happens to be_ the interface where we (currently) store and read the application data (a challenging view for many of us which might see the DB in the center of an application). Tomorrow it might not be a local DB but some remote service, who knows.., the scope is to remain flexible and open to changes, remember, the elephant!
+Even the DB is seen as an integration point because it _happens to be_ the interface where we (currently) store and read the application data (a challenging view for many of us which might see the DB in the center of an application). Tomorrow it might not be a local DB but some remote service, who knows.., the scope is to remain flexible and open to changes. Remember, the elephant!
 
-<span class="label label-default">Q:</span> But where are the entities now??
+<div class="interview">
+<p>
+	<span class="label label-default">Q:</span> But where are the entities now??
+</p>
+<p>
+	<span class="label label-primary">A:</span> They're are being replicated among the different areas.
+</p>
+<p>
+<span class="label label-default">Q:</span> You do what?? Duplication is evil! You should know about the DRY principle, don't you?
+</p>
+<p>
+<span class="label label-primary">A:</span> High coupling is evil as well...what's worse?? Depends mostly on your situation..
+</p>
+<p>
+<span class="label label-default">Q:</span> So you're saying I should duplicate the code among the areas rather than sharing it?
+</p>
+<p>
+<span class="label label-primary">A:</span> If you need to decouple areas from each other, then yes! Duplication among areas is fine whereas it is definitely evil when being done within areas! 
+</p>
+</div>
 
-<span class="label label-primary">A:</span> They're are literally duplicated!
+For integrating the different areas we have to have some mechanism that allows our data to flow across them.
 
-<span class="label label-default">Q:</span> You do what?? Duplication is evil!
-
-<span class="label label-primary">A:</span> Coupling as well...What's worse?? Depends on your situation.
-
+- **Event Bus** - ... (http://stackoverflow.com/questions/368265/a-simple-event-bus-for-net)
+- **strings** - ..which are probably the loosest coupling we can create, right? A string can contain anything from a simple value, a CSV series to a fully structured object graph serialized in JSON (for instance).
 
 ---
 
