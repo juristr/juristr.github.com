@@ -504,6 +504,10 @@
     margin-top:10px;
   }
 
+  .interview {
+    color: #999;
+  }
+
   @media (max-width: 1199px) {
 
     .post-tile-title {
@@ -813,7 +817,7 @@
     margin: 0 auto;
   }
 
-  .article-body p:nth-child(4) {
+  .article-body > p:nth-child(4) {
     font-size:24px;
     display: inline;
   }
@@ -822,9 +826,9 @@
     font-size:18px;
   }
 
-  .article-body p:nth-child(5),
-  .article-body div:nth-child(5),
-  .article-body img:nth-child(5) {
+  .article-body > p:nth-child(5),
+  .article-body > div:nth-child(5),
+  .article-body > img:nth-child(5) {
     clear:both;
     padding-top:20px;
   }
