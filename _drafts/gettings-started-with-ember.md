@@ -267,6 +267,45 @@ Instead, if I declared the `link-to` helper using `this.id` instead of passing t
 
 then the `App.FavlinksDetailsRoute` would have been invoked each time, even when not performing a full reload.
 
+## Models and Data
+
+Ember data handling is build upon the following concepts:
+
+- Records
+- Models
+- Store
+- Adapters
+- Serializers
+- Automatic caching
+
+
+In Ember every route has an associated model. We have already seen that before when I implemented the `App.FavlinksDetailsRoute`'s model function. Ember's models don't really hold the data itself but rather implement the properties and behavior of how that data is presented to the user.  
+Other than that, there are no big differences to other frameworks. You can defined attributes, computed attributes, defaults, relationships etc...An example from the official Ember docs:
+
+    var attr = DS.attr;
+
+    App.User = DS.Model.extend({
+      username: attr('string'),
+      email: attr('string'),
+      verified: attr('boolean', {defaultValue: false}),
+      createdAt: DS.attr('string', {
+          defaultValue: function() { return new Date(); }
+      }),
+      person: DS.belongsTo('person')
+    });
+
+The data is contained in **records** which are instances of a model. They are identified by the _model type_ and a _global unique id_.
+
+Records are being retrieved from a **store** which acts as a central repository, a cache of all available records. An instance of the store is created automatically and made available throughout the controllers and routes.
+
+    this.store.find('person', 5);
+
+For retrieving and storing data Ember uses **adapters**. It is basically an abstraction layer for the store, hiding the concrete persisting/retrieving of the data, which - for instance -might be over WebSockets, localStorage or HTTP.
+
+**Serializers** simply define how the raw JSON data is transformed into a proper record object. This may include normalization procedures such as converting to camel case but also for representing relationships among models.
+
+**Caching**....
+
 ## Open Questions
 
 - How to fetch views dynamically?? Do I need to include all of them in the index.html from the very beginning??
