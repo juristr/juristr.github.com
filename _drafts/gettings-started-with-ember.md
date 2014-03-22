@@ -6,6 +6,11 @@ coverimage: false
 tags: ["JavaScript"]
 ---
 
+I've been developing rich JavaScript applications now for about 2 years. At that time I tried Backbone, Spine and finally opted for [JavaScriptMVC](http://javascriptmvc.com). Ember wasn't ready at that time, but now, given the huge community interest I'm taking a deeper look at it.
+
+JavaScriptMVC was the right choice at that time. It is a full stack framework containing everything you need from code generators, documentation engine, build system, dependency injection, a templating engine to even a more advanced testing library based on QUnit. Being heavily based on jQuery it was the easiest way of getting classical ASP.net Webforms webdevs up to speed in developing JavaScript RIA apps.
+
+At that time I heard about Ember at a conference session. But it wasn't really ready. Compared to JMVC it seemed complicated and missed fundamental features. Recently however Ember got a huge boost and lots of interest from the community. Seeing [big state of the art projects like Discourse](http://www.discourse.org/) join the Ember community is for sure favorable as well.
 
 ## Basic concepts
 
@@ -74,7 +79,7 @@ Routing is inevitable in a professional SPA as it enables bookmarking and proper
   - ...
 
 Everything after the `#` is only interpreted by the client-side and won't even be sent to the server. As such it is ideal for defining client-side routes.  
-What I found is that Ember doesn't just provide routing as another concept like data binding but everything is literally build around it. Routing is a first class member of the framework.
+What I found is that Ember doesn't just provide routing as another concept like data binding, but instead everything is literally build around it. Routing is a first class member of the framework.
 
 In the section before I created a template named `about` which I'd like to display when the user navigates to `index.html#/about`. This is done by simply registering a route in Ember:
 
@@ -153,18 +158,14 @@ The latter seems to be the case for Ember.
         }
     });
 
-Since we set the `title` property in the controller, the view can use it
+Since I set the `title` property in the controller, the view can use it
 
     <script type="text/x-handlebars">
       <h1>{{ title }}</h1>
       ...
     </script>
 
-Btw, **note the route proposals** Ember made when I missed my route definition. There are some routes I didn't explicitly specify like
-
-- loading
-- error
-
+Btw, **note the route proposals** Ember made when I missed my route definition. There are some routes I didn't explicitly specify like "loading" and "error".  
 Is the `loading` route invoked when the application/data is being loaded and can be used for showing some progress indicator?? And the `error` route for when you have unhandled exceptions?? Yes, [seems so](http://emberjs.com/guides/routing/loading-and-error-substates/). You can use the `loading` route or substate for when the retrieval of some model through the according promise takes too long. What's particularly interesting is that you can have specific loading routes for your models by either subclassing proper routes `App.FooLoadingRoute` or by defining a corresponding template `foo/loading`.
 
 ### Resources
@@ -173,23 +174,98 @@ Normally your application naturally designs around (data)"resources" of some kin
 
 - `/favlinks` to see a list of all of 'em
 - `/favlinks/edit/{:id}` to create a new one if the id is not being passed, to edit otherwise
-- `favlinks/{:id}` for viewing the detail of a single one
+- `favlinks/details/{:id}` for viewing the detail of a single one
 - ...
 
-To make things a little simpler, let me quickly refactor my favorite links template name from `favorite-links` -> `favlinks`. We can then proceed to group the routes as follows:
+To make things a bit simpler, let me quickly refactor my favorite links template name from `favorite-links` -> `favlinks`. We can then proceed to group the routes as follows:
 
     App.Router.map(function(){
-      this.resource('favorite-links',)
+        this.route('about');
+        this.resource('favlinks', { path: '/favlinks' }, function(){
+          this.route('details', { path: '/details/:id' });
+          this.route('edit', { path: '/edit/:id' });
+        });
     });
 
-App.Router.map(function(){
-    this.route('about');
-    this.resource('favlinks', { path: '/favlinks/:id', function(){
-        this.route('edit', { path: '/edit/:id' });
-        this.route('view', { path: '/:id' });
-    });
-});
+**favlinks.index** view
 
+    <script type="text/x-handlebars" data-template-name="favlinks/index">
+      <h2>All my saved links</h2>
+      <table class="table table-hover">
+        ...
+        {{#each links}}
+          <tr>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>{{#link-to 'favlinks.details' this class="btn btn-default"}}Details{{/link-to}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </script>
+
+The according **favlinks.details** view then displays the data:
+
+    <script type="text/x-handlebars" data-template-name="favlinks/details">
+      <h2>{{ title }}</h2>
+      <p>
+        {{ description }}
+      </p>
+      {{#link-to 'favlinks.edit' this class="btn btn-primary" }}Edit{{/link-to}}
+    </script>
+
+..which in turn has a link to the **favlinks.edit** view
+
+    <script type="text/x-handlebars" data-template-name="favlinks/edit">
+      <h2>Editing {{ title }}</h2>
+      <form role="form">
+        <div class="form-group">
+          <label>Title</label>
+          {{input type="text" value=title class="form-control" placeholder="Enter title"}}
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          {{input type="text" value=description class="form-control" placeholder="Enter description"}}
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </script>
+
+The interesting part here is how we transition between the views, which is through the `link-to` helpers. In the table row I create such a helper, passing it the entire object `this` (which points to the current element in the `each` loop):
+
+{% raw %}
+    {{#link-to 'favlinks.details' this class="btn btn-default"}}Details{{/link-to}}
+{% endraw %}
+
+There's an interesting effect though I discovered:
+
+<figure>
+  <img src="/blog/assets/imgs/emberjs/view-data-transition.gif" />
+  <figcaption>Effect when passing the entire object in the link-to</figcaption>
+</figure>
+
+Note how the detail correctly displays the object's data, but once we execute a refresh, the actual code for retrieving this object through our route is being executed...
+
+    App.FavlinksDetailsRoute = Ember.Route.extend({
+        model: function(params){
+          return {
+            id: params.id,
+            title: 'Title ' + params.id,
+            description: 'Description ' + params.id
+          };
+        }
+    });
+
+..which in this implementation returns a dummy object instead of the correct one, thus displaying "Title 1" instead of "StackOverflow".
+
+Given this effect, I deduced that Ember seems to pass on directly the object of the list instead of invoking the route definition's `model` function for retrieving the data. If we perform a refresh it is obviously invoked then.
+
+Instead, if I declared the `link-to` helper using `this.id` instead of passing the entire object,
+
+{% raw %}
+    {{#link-to 'favlinks.details' this.id class="btn btn-default"}}Details{{/link-to}}
+{% endraw %}
+
+then the `App.FavlinksDetailsRoute` would have been invoked each time, even when not performing a full reload.
 
 ## Open Questions
 
