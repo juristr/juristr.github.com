@@ -508,6 +508,10 @@
     color: #999;
   }
 
+  .interview p {
+    font-size: 20px;
+  }
+
   @media (max-width: 1199px) {
 
     .post-tile-title {
