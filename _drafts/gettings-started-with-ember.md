@@ -267,6 +267,87 @@ Instead, if I declared the `link-to` helper using `this.id` instead of passing t
 
 then the `App.FavlinksDetailsRoute` would have been invoked each time, even when not performing a full reload.
 
+## Templating
+
+Implicitly I've already come across the Handlebars templates (see sections before). But let's take a deeper look at them. The following two links are for sure useful:
+
+- [Handlebarsjs official site](http://handlebarsjs.com/)
+- [Try Handlebars in your browser](http://tryhandlebarsjs.com/)
+
+Just to let everyone know upfront:
+
+> [Mustache templates](http://mustache.github.io/) are compatible with Handlebars, so you can take a Mustache template, import it into Handlebars, and start taking advantage of the extra Handlebars features.
+
+Databinding is done with curly braces`{{ .. }}`. Here's a quick overview of some features:
+
+    <h1>Editing Person</h1>
+    <label>Name:</label> {{ name }}
+    <label>Marital status:</label> {{ name }} is {{#if isMarried }}married {{else}}not married {{/if}}.
+
+    <p>{{name}} has {{#if children.length }}got {{children.length}} children:</p>
+    <ul>
+    {{#each children}}
+      <li>{{name}}</li>
+    {{/each}}
+    </ul>
+    {{else}}
+    no children.</p>
+    {{/if}}
+
+and given the following JSON structure..
+
+    { 
+      "name" : "Juri",
+      "age": 28,
+      "isMarried": false,
+      "children": [
+         {
+           "name": "Jim"
+         },
+         {
+           "name": "Tess"
+         }
+      ]
+    }
+
+..renders this HTML structure:
+
+    <h1>Editing Person</h1>
+    <label>Name:</label> Juri
+    <label>Marital status:</label> Juri is not married .
+
+    <p>Juri has got 2 children:</p>
+    <ul>
+      <li>Jim</li>
+      <li>Tess</li>
+    </ul>
+
+_(I don't have any children btw, this is just for the sake of this demo ;))_
+
+The `{{#each .. }}` expressions above is called a **block expressions** as it changes the context of the section in surrounds. Note that the context of the whole template above is the JSON structure representing a person, while within the `each` loop, the context is the child.
+
+Similarly you can force a "context switch" by using `#with`:
+
+    <h1>{{ title }}</h1>
+    ...
+    {{#with author}}
+      by {{firstname}}
+    {{/with}}
+
+Another interesting concept (which most serious templating engines support) is to register custom helpers. Like
+
+    Handlebars.registerHelper('fullname', function(person){
+      return person.firstname + ' ' + person.lastname;
+    });
+
+Inside your template simply invoke it
+
+    {{fullName person}}
+
+Obviously everything is HTML encoded by default. If you want to prevent that, use three curly braces instead: `{{{ non_encoded_HTML }}}`.
+
+## Controllers
+
 ## Models and Data
 
 Ember data handling is build upon the following concepts:
@@ -306,11 +387,17 @@ For retrieving and storing data Ember uses **adapters**. It is basically an abst
 
 **Caching**....
 
-## Open Questions
+## Conclusion
+
+### How does it compare to JavaScriptMVC (v3.2)
+
+- less boilerplate code for hooking up controllers etc?
+
+### Open Questions
 
 - How to fetch views dynamically?? Do I need to include all of them in the index.html from the very beginning??
 
-## Links and Credits
+### Links and Credits
 
 - [This demo on JSFiddle](http://jsfiddle.net/juristr/S3R2B/13/)
 - [Ember Inspector](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi?hl=en)
