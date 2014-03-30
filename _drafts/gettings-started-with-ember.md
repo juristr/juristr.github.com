@@ -278,8 +278,9 @@ Just to let everyone know upfront:
 
 > [Mustache templates](http://mustache.github.io/) are compatible with Handlebars, so you can take a Mustache template, import it into Handlebars, and start taking advantage of the extra Handlebars features.
 
-Databinding is done with curly braces`{{ .. }}`. Here's a quick overview of some features:
+Databinding is done with curly braces {% raw %}`{{ .. }}`{% endraw %}. Here's a quick overview of some features:
 
+{% raw %}
     <h1>Editing Person</h1>
     <label>Name:</label> {{ name }}
     <label>Marital status:</label> {{ name }} is {{#if isMarried }}married {{else}}not married {{/if}}.
@@ -293,6 +294,7 @@ Databinding is done with curly braces`{{ .. }}`. Here's a quick overview of some
     {{else}}
     no children.</p>
     {{/if}}
+{% endraw %}
 
 and given the following JSON structure..
 
@@ -324,15 +326,17 @@ and given the following JSON structure..
 
 _(I don't have any children btw, this is just for the sake of this demo ;))_
 
-The `{{#each .. }}` expressions above is called a **block expressions** as it changes the context of the section in surrounds. Note that the context of the whole template above is the JSON structure representing a person, while within the `each` loop, the context is the child.
+The {% raw %}`{{#each .. }}`{% endraw %} expressions above is called a **block expressions** as it changes the context of the section in surrounds. Note that the context of the whole template above is the JSON structure representing a person, while within the `each` loop, the context is the child.
 
 Similarly you can force a "context switch" by using `#with`:
 
+{% raw %}
     <h1>{{ title }}</h1>
     ...
     {{#with author}}
       by {{firstname}}
     {{/with}}
+{% endraw %}
 
 Another interesting concept (which most serious templating engines support) is to register custom helpers. Like
 
@@ -342,9 +346,136 @@ Another interesting concept (which most serious templating engines support) is t
 
 Inside your template simply invoke it
 
+{% raw %}
     {{fullName person}}
+{% endraw %}
 
-Obviously everything is HTML encoded by default. If you want to prevent that, use three curly braces instead: `{{{ non_encoded_HTML }}}`.
+Obviously everything is HTML encoded by default. If you want to prevent that, use three curly braces instead: {% raw %}`{{{ non_encoded_HTML }}}`.{% endraw %}
+
+If you need to bind **DOM attributes**, there is a suitable helper as well:
+
+{% raw %}
+    <input type="checkbox" {{bind-attr disabled=isAdministrator}}>
+{% endraw %}
+
+If `isAdministrator` returns false, the disabled attribute is not added to the DOM element. This is quite handy, the only downside is with `data-*` attributes.
+
+{% raw %}
+    {{#link-to "photos" data-toggle="dropdown"}}Photos{{/link-to}}
+{% endraw %}
+
+By default they will not be added, hence the `data-toggle` from this example won't be rendered. You have to allow it explicitly:
+
+    Ember.LinkView.reopen({
+      attributeBindings: ['data-toggle']
+    });
+
+On the Ember page they also propose a generic version that allows all of them:
+
+    Ember.View.reopen({
+      init: function() {
+        this._super();
+        var self = this;
+
+        // bind attributes beginning with 'data-'
+        Em.keys(this).forEach(function(key) {
+          if (key.substr(0, 5) === 'data-') {
+            self.get('attributeBindings').pushObject(key);
+          }
+        });
+      }
+    });
+
+Still, I didn't quite get why this is the default behavior.
+
+### Actions
+
+Before we've already seen the `#link-to` helper for generating route-links to other templates. Instead, if you'd like to fire an action back to your controller, you can specify it as follows:
+
+{% raw %}
+    <button type="submit" {{action 'save'}}>Save</button>
+{% endraw %}
+
+Back on your controller or route (I come back later to this) you specify the action
+
+    Ember.MyEditController = Ember.ObjectController.extend({
+      actions: {
+        save: function(){
+          console.log('action called');
+        }
+      }
+    });
+
+What's neat is that you can also pass data-bound objects directly on these actions:
+
+{% raw %}
+    <button type="submit" {{action 'save' person}}>Save</button>
+{% endraw %}
+
+In your action implementation:
+
+    ...
+    actions: {
+      save: function(person){
+        // save the person somewhere
+      }
+    }
+
+These actions are **bubbled up** through a well defined chain.
+
+<figure>
+  <img src="/blog/assets/imgs/emberjs/action-bubbling.png" />
+  <figcaption>Source: Offical Ember.js site</figcaption>
+</figure>
+
+### partials, view helper and render
+
+You can also render another "partial view" within your current one. They have to be prefixed with `_` like
+
+    <script type="text/x-handlebars" data-template-name="_mypartial">
+      ...
+    </script>
+
+in order to be able to reference them in your main view as follows:
+
+{% raw %}
+    ...
+    {{partial "mypartial"}}
+{% endraw %}
+
+You can also name it according to your resource grouping as discussed before. For instance in my example of the "favlinks" views I might want to have a partial named `favlinks/_linkentry`
+
+{% raw %}
+    <script type="text/x-handlebars" data-template-name="favlinks/_linkentry">
+      <tr>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        <td>{{#link-to 'favlinks.details' this class="btn btn-default"}}Details{{/link-to}}</td>
+      </tr>
+    </script>
+{% endraw %}
+
+..which is then called as follows:
+
+    {{#each links}}
+      {{partial "favlinks/linkentry"}}
+    {{/each}}
+
+When you use the {% raw %}`{{view}}`{% endraw %} helper instead, you don't provide a template name but rather a "view class" (more about that later).
+
+{% raw %}
+    {{view App.AuthorView}}
+{% endraw %}
+
+The **render** helper can do even more advanced stuff like _(from the official docs)_
+
+- retrieving the corresponding singleton instance of the controller if no model is provided
+- when a model is provided it fetches the corresponding unique instance for it
+- renders the template using that found controller
+- sets the model of the corresponding controller
+
+
+## Views
 
 ## Controllers
 
