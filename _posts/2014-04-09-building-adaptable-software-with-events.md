@@ -34,7 +34,7 @@ These points can basically can be distilled into
 
 The problem is that all the decisions that have been taken in previous sprint plannings and/or stand-ups, are the enemy of future modifications and thus allocate to the so-called "elephant".
 
-<<figure>
+<figure>
   <img src="/blog/assets/imgs/elephant-standup.png" />
   <figcaption>Russ presenting the "elephant" during his talk</figcaption>
 </figure>
