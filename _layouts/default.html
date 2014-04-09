@@ -178,6 +178,12 @@
           } catch(err){}
         });
 
+        $('.js-social-links').click(function(){
+            try{
+              ga('send', 'event', 'link', 'click', 'social-networks');
+            }catch(e){}
+        });
+
       });
 
       prettyPrint();
