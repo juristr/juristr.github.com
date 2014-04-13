@@ -76,7 +76,7 @@
     <div class="metabar">
       <div class="metabar-block pull-right">
         <div class="metabar-text">
-          <a href="http://feeds.feedburner.com/juristrumpflohner" class="btn btn-default btn-transparent" style="color:#b3b3b1">
+          <a href="http://feeds.feedburner.com/juristrumpflohner" class="btn btn-default btn-transparent js-rss-btn" style="color:#b3b3b1">
             <i class="fa fa-rss"></i> RSS
           </a>
         </div>
@@ -175,6 +175,12 @@
         $('#sidebar-button').click(function(){
           try {
             ga('send', 'event', 'button', 'click', 'menu-button');
+          } catch(err){}
+        });
+
+        $('.js-rss-btn').click(function(){
+          try {
+            ga('send', 'event', 'button', 'click', 'rss-button');
           } catch(err){}
         });
 
