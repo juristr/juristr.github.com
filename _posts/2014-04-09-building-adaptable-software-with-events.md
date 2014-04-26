@@ -7,6 +7,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["Software Architecture"]
+reposts: ["http://java.dzone.com/articles/qcon-london-2014-embracing"]
 ---
 
 Building adaptable software is what we continuously aim at achieving during our day to day work. However, at the same time, it's probably the hardest part in software development. Everybody of us already had that moment when your customer/project manager proposes you that new "easy" feature, that makes your hackles get up because you know it's gonna be a nightmare to implement add it. Simply because your previous (apparently reasonable and well-thought) decisions hinder you. At this year's [QCon london](http://qconlondon.com/london-2014/presentations/show_presentation.jsp?oid=5900), [@russmiles](https://twitter.com/russmiles) aimed to address this problem. This post summarizes what I got from his tutorial.
