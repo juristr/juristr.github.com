@@ -37,18 +37,6 @@
     background-position: center;
   }
 
-  .read-blog-button{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    padding-top:40px;
-  }
-
-  .read-blog-button a {
-    font-weight: 300;
-    font-size: 25px;
-  }
-
   /* end site entry page */
 
   /* hero home */
@@ -89,10 +77,12 @@
   }
 
   .hero-title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 50px;
+/*    font-family: 'Open Sans', sans-serif;*/
+/*    font-weight: 700;*/
+/*    font-style: normal;*/
+    font-family: Lato, 'Helvetica Neue';
+    font-weight:300;
+    font-size: 80px;
     line-height: 1;
     color: #333332;
     margin-bottom: 8px;
@@ -101,9 +91,10 @@
   }
 
   .hero-home .hero-description {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Lato, 'Helvetica Neue';
+    font-weight:300;
+/*    font-family: 'Open Sans', sans-serif;*/
     letter-spacing: .01rem;
-    font-weight: 300;
     font-style: normal;
     font-size: 22px;
     margin: 0 0 10px 0;
@@ -112,6 +103,19 @@
     word-break: break-word;
     padding-top:20px;
   }
+
+  .read-blog-button{
+    font-family: Lato, 'Helvetica Neue';
+    font-weight:300;
+    font-style: normal;
+    padding-top:40px;
+  }
+
+  .read-blog-button a {
+    font-weight: 300;
+    font-size: 25px;
+  }
+
 
   /* end hero home */
 
