@@ -300,11 +300,48 @@ Records are being retrieved from a **store** which acts as a central repository,
 
     this.store.find('person', 5);
 
-For retrieving and storing data Ember uses **adapters**. It is basically an abstraction layer for the store, hiding the concrete persisting/retrieving of the data, which - for instance -might be over WebSockets, localStorage or HTTP.
+For retrieving and storing data, Ember uses **adapters**. It is basically an abstraction layer for the store, hiding the concrete persisting/retrieving of the data, which - for instance -might be over WebSockets, localStorage or HTTP.
 
 **Serializers** simply define how the raw JSON data is transformed into a proper record object. This may include normalization procedures such as converting to camel case but also for representing relationships among models.
 
-**Caching**....
+**Caching** is done automatically. If a record is already loaded, then whenever you ask for it a second time the same instance will be returned, thus minimizing the round-trips to the server.
+
+<figure>
+  <img src="http://emberjs.com/images/guides/models/finding-unloaded-record-step1-diagram.png" />
+  <figcaption>Overview diagram (from the <a href="http://emberjs.com/guides/models/">official docs</a>)</figcaption>
+</figure>
+
+### Defining your models
+
+You can define models (as already shown quickly before) by defining the allowed set of attributes, their data types or computed properties. Here's an example from the docs:
+
+    var attr = DS.attr;
+
+    App.Person = DS.Model.extend({
+      firstName: attr(),
+      lastName: attr(),
+
+      fullName: function() {
+        return this.get('firstName') + ' ' + this.get('lastName');
+      }.property('firstName', 'lastName')
+    });
+
+`fullName` would be a so-called **computed property**. This is done by calling `.property(...)` and passing the other properties that `fullName` depends on. This probably to allow live-binding, s.t. when either `firstname` or `lastName` changes, `fullName` needs to be updated as well. This stuff works on `Ember.Object` and is just inherited from `DS.Model`: [http://emberjs.com/guides/object-model/computed-properties/](http://emberjs.com/guides/object-model/computed-properties/).
+
+Setting and/or getting attributes is done through the `get(..)` and `set(..)` functions.
+
+    var aPerson = App.Person.create();
+    aPerson.set('firstName', 'Juri');
+    console.log('My name is ' + aPerson.get('firstName'));
+
+## Client - Server Communication
+
+- supports versioned endpoints
+
+
+## Testing
+
+There is an ongoing pull request: [https://github.com/emberjs/website/pull/1401](https://github.com/emberjs/website/pull/1401).
 
 ## Open Questions
 
