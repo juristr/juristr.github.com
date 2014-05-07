@@ -7,6 +7,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["testing"]
+reposts: ["http://java.dzone.com/articles/see-always-told-you-testing"]
 ---
 
 Automated testing has become something people don't speak about any more. It matured to being a standard in software development, everyone is and should be practicing. No more talks at conferences, only a few blog posts and online articles from now and then. That radically changed recently, again becoming a hotly debated topic, at least after some of [@dhh's](https://twitter.com/dhh) quite provocative posts and his [RailsConf keynote](https://www.youtube.com/watch?v=9LfmrkyP81M).
