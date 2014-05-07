@@ -6,7 +6,7 @@ postimg: "/blog/assets/imgs/RIPTDD.png"
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["Software testing", "Unit Testing"]
+tags: ["testing"]
 ---
 
 Automated testing has become something people don't speak about any more. It matured to being a standard in software development, everyone is and should be practicing. No more talks at conferences, only a few blog posts and online articles from now and then. That radically changed recently, again becoming a hotly debated topic, at least after some of [@dhh's](https://twitter.com/dhh) quite provocative posts and his [RailsConf keynote](https://www.youtube.com/watch?v=9LfmrkyP81M).

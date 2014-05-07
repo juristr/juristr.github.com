@@ -6,7 +6,7 @@ postimg: "/blog/assets/imgs/inspect_dynamic_return_type.png"
 show_img_in_detail: false
 coverimage: false
 category: 
-tags: [".Net", "C#", "Unit Testing"]
+tags: [".Net", "C#", "testing"]
 reposts: ["http://dotnet.dzone.com/articles/object-does-not-contain"]
 ---
 

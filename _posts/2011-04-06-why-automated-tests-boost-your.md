@@ -3,7 +3,7 @@ layout: post
 title: "Why Automated Tests Boost Your Development Speed"
 date: 2011-04-06
 comments: true
-tags: [  Unit Testing, Best Practices, Software testing ]
+tags: [  Best Practices, testing ]
 reposts: ["http://www.javacodegeeks.com/2011/04/automated-tests-boost-development-speed.html"]
 ---
 

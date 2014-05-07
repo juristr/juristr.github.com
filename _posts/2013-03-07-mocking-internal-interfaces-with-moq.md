@@ -3,7 +3,7 @@ layout: post
 title: "Mocking Internal Interfaces with Moq"
 description: ""
 category:
-tags: [Unit Testing]
+tags: [testing]
 reposts: ["http://dotnet.dzone.com/articles/mocking-internal-interfaces"]
 ---
 

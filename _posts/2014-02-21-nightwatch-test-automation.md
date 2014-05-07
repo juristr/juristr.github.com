@@ -6,7 +6,7 @@ postimg: "/blog/assets/imgs/logo-nightwatch.png"
 show_img_in_detail: true
 coverimage: true
 category: 
-tags: ["Software testing", "JavaScript", "Node"]
+tags: ["testing", "JavaScript", "Node"]
 ---
 
 Although I feel like I'm repeating myself, automate **everything**. We're here to automate the processes and work of our clients. Why don't we do the same for our own stuff as well? This article quickly outlines how you can use Nightwatch.js for automating your UI testing.

@@ -6,7 +6,7 @@ postimg: "/blog/assets/imgs/logo-nightwatch.png"
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["Software testing", "JavaScript", "Node"]
+tags: ["testing", "JavaScript", "Node"]
 ---
 
 Yesterday [Atom.io](http://atom.io) has been launched, GitHub's latest effort in the market of text editors. What's most remarkable is the approach that is being taken: **the native web**, web applications running on the desktop.

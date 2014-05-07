@@ -3,7 +3,7 @@ layout: post
 title: "Unit testing asynchronous code"
 date: 2010-04-04
 comments: true
-tags: [  Unit Testing, Java, Software testing, Software Design ]
+tags: [  Java, testing, Software Design ]
 ---
 
 <p>Today I wrote on a first prototype for my current thesis research. I started coding just ahead however - at the same time - trying to find a good design which has a high potential to be reused for the final system. <a href="http://blog.js-development.com/2010/03/tackle-software-dependencies-with-ioc.html">Modularity, decoupling</a> etc. are main goals of course and since the prototype interacts with the Bluetooth API one of my main aims was to try to separate the logic dealing with it as much as possible from the rest of the application. This separation gives several benefits: for accessing the device's bluetooth stack, access to native libraries is necessary. So depending on whether your app runs on Linux, Windows or OSX you may have to rely on different libraries.</p>

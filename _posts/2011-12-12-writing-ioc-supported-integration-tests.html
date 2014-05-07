@@ -3,7 +3,7 @@ layout: post
 title: "Writing IoC Supported Integration Tests using AutoFac"
 date: 2011-12-12
 comments: true
-tags: [  Unit Testing, Best Practices, C#, Software testing, .Net ]
+tags: [  Best Practices, C#, testing, .Net ]
 ---
 
 <p>Using a dependency injection framework can <a href="http://blog.js-development.com/2010/12/smelly-code-direct-object-instantiation.html" target="_blank">greatly facilitate</a> your <a href="http://blog.js-development.com/2010/03/tackle-software-dependencies-with-ioc.html" target="_blank">code's testability</a>&nbsp;in that you don't have any "glue" code for managing a classes' dependency that needs to be mocked (if even possible) when writing unit tests. But what about when writing <b>integration tests</b>? In such case you'd probably want to use your IoC container's configuration for resolving types in order to also verify the proper <i>integration </i>of your components, frankly your dependency injection configuration, right?

@@ -4,7 +4,7 @@ title: "Unit Testing Tip: Create Descriptive Tests"
 description: ""
 show_img_in_detail: false
 category: 
-tags: [ Unit Testing ]
+tags: [ testing ]
 reposts: ["http://architects.dzone.com/articles/unit-testing-tip-create"]
 ---
 

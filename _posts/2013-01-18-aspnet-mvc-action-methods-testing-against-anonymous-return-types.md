@@ -3,7 +3,7 @@ layout: post
 title: "ASP.net MVC Action Methods: Testing Against Anonymous Return Types"
 description: ""
 category: 
-tags: [Unit Testing, C#]
+tags: [ testing, C#]
 reposts: ["http://dotnet.dzone.com/articles/aspnet-mvc-action-methods"]
 ---
 
