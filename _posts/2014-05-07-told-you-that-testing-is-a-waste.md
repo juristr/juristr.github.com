@@ -114,3 +114,17 @@ Martin Fowler announced yesterday that ThoughtWorks will be hosting a debate bet
 
 <blockquote class="twitter-tweet" lang="en"><p>Watch myself, <a href="https://twitter.com/KentBeck">@KentBeck</a> and <a href="https://twitter.com/dhh">@dhh</a> discuss TDD in a hangout on Friday at 11am EST [corrected time]&#10;<a href="https://t.co/mV4gVYAh6D">https://t.co/mV4gVYAh6D</a> …</p>&mdash; Martin Fowler (@martinfowler) <a href="https://twitter.com/martinfowler/statuses/463778573589823488">May 6, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## Link collection
+
+All relevant links together (will be updated if new ones emerge):
+
+- ["Why Most Unit Testing is Waste"](http://www.rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf) ([Summary](http://rodolfograve.blogspot.it/2014/03/are-unit-tests-waste.html))
+- [TDD is dead. Long live testing.](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html)
+- [David Heinemeier Hansson's RailsConf keynote](https://www.youtube.com/watch?v=9LfmrkyP81M)
+- [Test-induced design damage](http://david.heinemeierhansson.com/2014/test-induced-design-damage.html)
+- [Uncle Bob: Professionalism and TDD (Reprise)](http://blog.8thlight.com/uncle-bob/2014/05/02/ProfessionalismAndTDD.html)
+- [Uncle Bob: Test Induced Design Damage?](http://blog.8thlight.com/uncle-bob/2014/05/01/Design-Damage.html)
+- [TDD, Straw Men, and Rhetoric](https://www.destroyallsoftware.com/blog/2014/tdd-straw-men-and-rhetoric)
+- [Martin Fowler, attempting to better define "Unit test"](http://martinfowler.com/bliki/UnitTest.html)
+- [ThoughtWorks Event: Is TDD dead?](https://plus.google.com/events/ci2g23mk0lh9too9bgbp3rbut0k)
