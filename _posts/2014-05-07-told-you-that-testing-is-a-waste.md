@@ -116,6 +116,13 @@ Martin Fowler announced yesterday that ThoughtWorks will be hosting a debate bet
 <blockquote class="twitter-tweet" lang="en"><p>Watch myself, <a href="https://twitter.com/KentBeck">@KentBeck</a> and <a href="https://twitter.com/dhh">@dhh</a> discuss TDD in a hangout on Friday at 11am EST [corrected time]&#10;<a href="https://t.co/mV4gVYAh6D">https://t.co/mV4gVYAh6D</a> …</p>&mdash; Martin Fowler (@martinfowler) <a href="https://twitter.com/martinfowler/statuses/463778573589823488">May 6, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+### Update
+
+Here's the recorded session of the debate.
+
+<iframe width="853" height="480" src="//www.youtube.com/embed/z9quxZsLcfo" frameborder="0" allowfullscreen="true"> </iframe>
+
+
 ## Relevant links
 
 All relevant links together (will be updated if new ones emerge):
