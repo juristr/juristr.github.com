@@ -8,7 +8,7 @@ category:
 tags: ["JavaScript"]
 ---
 
-This article outlines some of my notes of a webinar about Angular.js I recently participated at. These are really just "baby steps" in that it covers the very basics that might help to get started. Since these are really my first steps with Angular, I might have misunderstood some of the stuff. So feel free to [help me improve this article]({{ site.github_repo_url }}edit/master/{{ page.path }}) ;)
+This article outlines some of my notes of a webinar about Angular.js I recently participated at. These are really just "baby steps" in that it covers the very basics that might help to get started. Since these are really my first steps with Angular, I might have misunderstood some of the stuff. So feel free to [help me improve this article](https://github.com/juristr/juristr.github.com/edit/master/{{ page.path }}) ;)
 
 > **Info:** the source code of some of the examples described here can be found on [the GitHub repo](http://github.com/juristr/angularjs-webinar).
 
