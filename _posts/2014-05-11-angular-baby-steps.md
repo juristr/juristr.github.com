@@ -176,6 +176,8 @@ The rendered template can be either specified inline using the `template` proper
 
 > **Note:** HTML isn't case sensitive and as such also custom HTML tags should not be written in camel case but rather be separated by a dash.
 
+If you want to get a deep-dive into how directives work I absolutely suggest you [Misko Hevery's meetup video](http://youtu.be/WqmeI5fZcho).
+
 ## Structuring and Modules
 
 An Angular module is defined like
@@ -184,7 +186,21 @@ An Angular module is defined like
 angular.module('myApp', []);
 ```
 
-This example code shows the definition of the application in `myApp.js`. While there is no restriction on how an Angular application should be structured, a module/widget structure is suggested. Hence, rather than organizing your app in `controllers`, `models` and `views` folder, structure it according to the functionalities or modules, like `calculator`, `contacts` etc., depending on the kind of application you're creating. I did already write about such [modularity in JavaScript MVC applications](/blog/2013/04/modularity-in-javascript-frameworks/).
+This example code shows the definition of the application in `myApp.js`. While there is no restriction on how an Angular application should be structured, a module/widget structure is suggested. Hence, rather than organizing your app in `controllers`, `models` and `views` folder...
+
+<figure>
+  <img src="/blog/assets/imgs/angular-bad-organization.png" />
+  <figcaption>Bad organization. <a href="http://trochette.github.io/Angular-Design-Patterns-Best-Practices/#/socks_drawer">Source</a></figcaption>
+</figure>
+
+..structure it according to the functionalities or modules, like `calculator`, `contacts` etc., depending on the kind of application you're creating. 
+
+<figure>
+  <img src="/blog/assets/imgs/angular-suggested-organization.png" />
+  <figcaption>Suggested organization. Source: <a href="http://trochette.github.io/Angular-Design-Patterns-Best-Practices/#/socks_drawer">Source</a></figcaption>
+</figure>
+
+I did already write about such [modularity in JavaScript MVC applications](/blog/2013/04/modularity-in-javascript-frameworks/).
 
 In [my example code](https://github.com/juristr/angularjs-webinar) I have an app that contains a "calculator" module. The folder structure looks like
 
@@ -227,8 +243,6 @@ Wait, this might get tricky and lead to potential name clashes when including mu
 > As of today AngularJS doesn't handle namespace collisions for services so if you've got 2 different modules with the service named the same way and you include both modules in your app, only one service will be available.  
 > For the moment the best option is to prefix service names with a custom prefix... <cite><a href="http://stackoverflow.com/a/14909537/50109">StackOverflow</a></cite>
 
-
-
 ## Where's jQuery?
 
 Can I use it? Angular uses a lite version of jQuery. The suggested approach is to avoid using jQuery directly and go as far as you can by using directives, controllers and live binding. However, jQuery can obviously be included. If so, you need to include it **before the angular.js** script include.
@@ -242,6 +256,8 @@ Can I use it? Angular uses a lite version of jQuery. The suggested approach is t
 ```
 
 Angular will detect it and use the included jQuery version rather than its own lite version of it.
+
+Generally speaking **the use of jQuery should dramatically decrease due to live binding and Angular directives**.
 
 ## There's a lot more...
 
@@ -273,7 +289,9 @@ Angular uses more a MVVM variation of the classic MVC.
 - [https://docs.angularjs.org/guide](https://docs.angularjs.org/guide)
 - [http://angularjs.de/](http://angularjs.de/)
 - [StackOverflow obviously ;)](http://stackoverflow.com)
-
+- [Angular Design Patterns best practices](http://trochette.github.io/Angular-Design-Patterns-Best-Practices/)
+  - [GitHub repo](https://github.com/trochette/Angular-Design-Patterns-Best-Practices)
+- [Angular.js in Patterns](https://github.com/mgechev/angularjs-in-patterns)
 ---
 
 > **Info:** the source code of some of the examples described here can be found on [the GitHub repo](http://github.com/juristr/angularjs-webinar).
