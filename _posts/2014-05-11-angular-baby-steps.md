@@ -292,6 +292,7 @@ Angular uses more a MVVM variation of the classic MVC.
 - [Angular Design Patterns best practices](http://trochette.github.io/Angular-Design-Patterns-Best-Practices/)
   - [GitHub repo](https://github.com/trochette/Angular-Design-Patterns-Best-Practices)
 - [Angular.js in Patterns](https://github.com/mgechev/angularjs-in-patterns)
+
 ---
 
 > **Info:** the source code of some of the examples described here can be found on [the GitHub repo](http://github.com/juristr/angularjs-webinar).
