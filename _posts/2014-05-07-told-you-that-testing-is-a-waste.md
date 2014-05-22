@@ -136,3 +136,5 @@ All relevant links together (will be updated if new ones emerge):
 - [TDD, Straw Men, and Rhetoric](https://www.destroyallsoftware.com/blog/2014/tdd-straw-men-and-rhetoric)
 - [Martin Fowler, attempting to better define "Unit test"](http://martinfowler.com/bliki/UnitTest.html)
 - [ThoughtWorks Event: Is TDD dead?](https://plus.google.com/events/ci2g23mk0lh9too9bgbp3rbut0k)
+
+**Update:** You should definitely take a look at Martin Fowler's site he recently published which summarizes the entire debate: [http://martinfowler.com/articles/is-tdd-dead/](http://martinfowler.com/articles/is-tdd-dead/)
