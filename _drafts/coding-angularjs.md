@@ -8,6 +8,12 @@ tags: ["JavaScript"]
 
 This article is built incrementally by processing, internalizing and documenting all the stuff I encounter while learning Angular.js. So keep an eye on it.
 
+## Databinding
+
+- {%raw%}`{{}}`{%endraw%}
+- `ng-model`
+- `ng-bind="::foo"` - lazy, one-time binding (more [here](https://github.com/angular/angular.js/commit/cee429f0aaebf32ef1c9aedd8447a48f163dd0a4))
+
 ## ng-cloak
 
 - when loading app you may see lots of unprocessed tags
@@ -231,9 +237,41 @@ Apparently there is a template caching service
 - $rootScope -> broadcast event to everybody
 - use databinding in most cases; inject services
 
+
+## Testing in Angular
+
+- Types of tests
+  - Unit tests
+  - End-to-end, scenario tests ([Protractor](https://github.com/angular/protractor))
+
+### Karma
+
+- generate config file: `karma init`
+  - grunt plugin for karma, so there is no need for config file
+- `karma start`
+  - starts a real browser that listens
+  - watches source file of project
+  - automatically executes tests on save
+- karma is agnostic of testing frameworks; there are adapters
+- `describe`: define a test suite
+- to fasten the execution of tests we can scope them
+  - `ddescribe`: prefix with a `d` to scope test to this module
+  - `iit`: to execute just that test
+- use `debugger;` statements to stop and debug in the Karma live execution
+- Other features
+  - code coverage
+
+
+### Links
+
+- [GTAC 2013: Karma - Test Runner for JavaScript](https://www.youtube.com/watch?v=YG5DEzaQBIc)
+- [Protractor](https://github.com/angular/protractor)
+
+
 ## Useful links
 
 - [Official Angular Blog](http://blog.angularjs.org/)
+- [CodeAcademy tutorial](http://www.codecademy.com/courses/javascript-advanced-en-2hJ3J/0/1)
 
 ### Videos
 
