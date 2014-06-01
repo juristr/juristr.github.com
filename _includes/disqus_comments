@@ -1,14 +1,95 @@
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    
-    var disqus_shortname = 'juristr'; // required: replace example with your forum shortname
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  <section class="disqus pattern-bg-lighter">
+
+    <div id="disqus" class="">
+
+      <h2>Comments</h2>
+
+      <div id="disqus_thread">
+
+        <a href="#disqus_thread" class="load-comments" data-disqus-identifier="{{ page.url }}">0</a>
+
+      </div>
+    </div>
+
+    <noscript>
+      <p class="center">
+        <strong>
+          <a href="http://disqus.com/?ref_noscript">Please enable JavaScript to view the comments powered by Disqus.</a>
+        </strong>
+      </p>
+    </noscript>
+
+    <script>
+
+        var disqus_shortname = 'juristr';
+        // var disqus_identifier = '{{ page.url }}';
+        // var disqus_url = '{{ page.url }}';
+        var disqus_developer = 0;
+
+        var disqus_config = function () {
+            var funky_language_code_mapping = {
+              'de': 'de_inf',
+              'es': 'es_ES',
+              'pt': 'pt_EU',
+              'sr': 'sr_CYRL',
+              'sv': 'sv_SE',
+              'zh': 'zh_HANT'
+            };
+            this.language = funky_language_code_mapping['en'] ||
+                            'en';
+
+            this.callbacks.onReady = [ function () {
+                                          try {
+                                            // _gaq.push(['_trackEvent', 'View comments']);
+                                          } catch(err){}
+                                       } ];
+            this.callbacks.onNewComment = [ function (comment) {
+                                              try {
+                                                // _gaq.push(['_trackEvent', 'Commented']);
+                                              } catch(err){}
+                                            } ];
+        };
+
+        window.addEventListener('load', function(e) {
+
+            var c = document.createElement('script');
+            c.type = 'text/javascript';
+            c.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            c.async = true;
+
+            var s = document.getElementsByTagName('script')[0], sp = s.parentNode;
+            sp.insertBefore(c, s);
+
+            if (window.location.hash === '#disqus_thread'){
+                loadComments();
+            }
+
+        }, false);
+
+        var disqus_loaded = false;
+        function loadComments() {
+            if (disqus_loaded)
+              return;
+
+            disqus_loaded = true;
+
+            //_gaq.push(['_trackEvent', 'Interactions', 'Comments', 'Comments Loaded']);
+
+            var s = document.getElementsByTagName('script')[0], sp = s.parentNode;
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+
+            var disqusContainer = document.getElementById('disqus');
+            disqusContainer.classList.add('active');
+
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            sp.insertBefore(dsq, s);
+        }
+
+        var loadCommentsButtons = document.querySelectorAll('.load-comments');
+        for(var l = 0; l < loadCommentsButtons.length; l++){
+            loadCommentsButtons[l].addEventListener('click', loadComments);
+        }
+    </script>
+</section>
