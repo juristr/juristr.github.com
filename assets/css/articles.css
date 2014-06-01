@@ -1,0 +1,112 @@
+
+
+.article {
+    max-width: 970px;
+    position: relative;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    word-wrap: break-word;
+    background: #FFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
+.article figcaption {
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+    margin: 1em auto 2em auto;
+    width: 80%;
+}
+
+.article .title-text {
+    padding: 55px 0;
+}
+
+.article .title h1 {
+    font-size: 56px;
+}
+
+.article .title h2 {
+    width: 80%;
+    font-size: 16px;
+    bottom: 45px;
+    z-index: 2;
+    color: #666;
+    border: none;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+    font-weight: 300;
+    padding: 7px 14px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.article-meta {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 0.999999;
+}
+
+.article-meta .affix {
+    top: 20px;
+}
+
+
+.article-meta h1 {
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 1px solid #DDD;
+    margin: 0 0 0.6em 0;
+    padding: 0 0 5px 0;
+    text-align: left;
+}
+
+.article-meta .toc {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.article-meta .toc a {
+    color: #666;
+    text-decoration: none;
+}
+
+.article-meta ul, 
+.article-meta li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.article-meta li {
+    padding-left: 20px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxuc…V2ZW5vZGQiIGZpbGw9IiM1RkE0OUYiIHdpZHRoPSIzIiBoZWlnaHQ9IjkiLz4NCjwvc3ZnPg0K);
+    background-repeat: no-repeat;
+    background-position: 3px 5px;
+    line-height: 1.4;
+    padding-bottom: 0.4em;
+}
+
+.article-meta.sticky {
+    -webkit-backface-visibility: hidden;
+    position: fixed !important;
+    top: 22px;
+    bottom: 22px;
+    left: 50%;
+    margin-left: -467px;
+    opacity: 0.3;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-transition: opacity 5s ease-in-out;
+    -moz-transition: opacity 5s ease-in-out;
+    -ms-transition: opacity 5s ease-in-out;
+    -o-transition: opacity 5s ease-in-out;
+    transition: opacity 5s ease-in-out;
+}
+

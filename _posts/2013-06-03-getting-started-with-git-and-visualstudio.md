@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: post-article
 title: "Getting Started with Git and Visual Studio"
+lead: "For newbies"
 description: ""
 postimg: "/blog/assets/imgs/vsgit/gitmeetsvs.png"
 show_img_in_detail: true
