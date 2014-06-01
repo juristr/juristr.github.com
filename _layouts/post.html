@@ -9,16 +9,6 @@ current: blog
     </div>
   </div>
 {% endif %}
-<div class="sidebar">
-  <div class="toc-container" style="display:none">
-    <div class="toc-button toc-border" style="left:0">T</div>
-    <div id="toc" class="toc-border" style="left:-400px">
-      <div class="toc-control">
-        <div>TOC</div>
-      </div>
-    </div>
-  </div>
-</div>
 <script type="text/javascript">
   $(function(){
 
@@ -44,7 +34,6 @@ current: blog
     };
 
     displayReadingTime();
-
 
     {% if page.categories[0] == "bliki" %}
       //$(".toc-container").show();

@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: articles-post
 title: "Visual Studio Tips"
-description: "asdf asd fasdf "
-category: bliki
+description: "Tips and tricks around using Visual Studio efficiently."
+category: article
 postimg: /blog/assets/imgs/vs2012-logo.png
 tags: [ Visual Studio, tooling]
 reposts: ["http://dotnet.dzone.com/articles/visual-studio-tips"]

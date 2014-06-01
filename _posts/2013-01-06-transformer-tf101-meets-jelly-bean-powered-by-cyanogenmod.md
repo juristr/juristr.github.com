@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: articles-post
 title: "Transformer TF101 meets Jelly Bean powered by CyanogenMod"
-description: ""
-category: bliki
+description: "Instructions for installing CynogenMod on the TF101."
 tags: [Android]
 postimg: /blog/assets/imgs/cmjellybean.png
 show_img_in_detail: true

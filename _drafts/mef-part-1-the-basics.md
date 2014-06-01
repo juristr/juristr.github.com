@@ -2,7 +2,7 @@
 layout: post
 title: "MEF Part 1: The Basics"
 description: ""
-category: bliki
+category: article
 tags: []
 ---
 

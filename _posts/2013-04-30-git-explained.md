@@ -1,9 +1,12 @@
 ---
-layout: post
+layout: articles-post
 title: "Git Explained: For Beginners"
+headline: "Get started with Git"
+subtitle: "For beginners"
+description: "Introduces Git for those who want to get started and really have no experience at all so far. It's a step by step guide basically."
 postimg: "/blog/assets/imgs/gitlogo.png"
 show_img_in_detail: true
-category: bliki
+category: article
 tags: [Git]
 reposts: ["http://dotnet.dzone.com/articles/intro-git", "http://www.javacodegeeks.com/2013/05/git-explained-for-beginners.html"]
 ---
@@ -34,15 +37,15 @@ Before starting here, I highly recommend to first go through the initial pages o
 
 Here's the git terminology:
 
-- **master - ** the repository's main branch. Depending on the work flow it is the one people work on or the one where the integration happens
-- **clone - ** copies an existing git repository, normally from some remote location to your local environment.
-- **commit - ** submitting files to the repository (the local one); in other VCS it is often referred to as "checkin"
-- **fetch or pull - ** is like "update" or "get latest" in other VCS. The difference between fetch and pull is that pull combines both, fetching the latest code from a remote repo as well as performs the merging.
-- **push - ** is used to submit the code to a remote repository
-- **remote - ** these are "remote" locations of your repository, normally on some central server.
-- **SHA - ** every commit or node in the Git tree is identified by a unique SHA key. You can use them in various commands in order to manipulate a specific node.
-- **head - ** is a reference to the node to which our working space of the repository currently points.
-- **branch - ** is just like in other VCS with the difference that a branch in Git is actually nothing more special than a particular label on a given node. It is not a physical copy of the files as in other popular VCS.
+- **master -** the repository's main branch. Depending on the work flow it is the one people work on or the one where the integration happens
+- **clone -** copies an existing git repository, normally from some remote location to your local environment.
+- **commit -** submitting files to the repository (the local one); in other VCS it is often referred to as "checkin"
+- **fetch or pull -** is like "update" or "get latest" in other VCS. The difference between fetch and pull is that pull combines both, fetching the latest code from a remote repo as well as performs the merging.
+- **push -** is used to submit the code to a remote repository
+- **remote -** these are "remote" locations of your repository, normally on some central server.
+- **SHA -** every commit or node in the Git tree is identified by a unique SHA key. You can use them in various commands in order to manipulate a specific node.
+- **head -** is a reference to the node to which our working space of the repository currently points.
+- **branch -** is just like in other VCS with the difference that a branch in Git is actually nothing more special than a particular label on a given node. It is not a physical copy of the files as in other popular VCS.
 
 ## Workstation Setup
 

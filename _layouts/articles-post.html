@@ -1,0 +1,359 @@
+---
+layout: articles-default
+type: article
+---
+<header class="main" id="siteheader">
+    <h1 id="title">
+      <a href="/en/" title="{{ page.title }}">{{ page.title }}</a>
+    </h1>
+    <a href="#sitenav" id="navtoggle">Show navigation</a>
+
+
+    <a id="toctoggle" href="#toc">Table of Contents</a>
+
+
+    {% include site-nav.html %}
+
+
+    <nav class="toc" id="toc">
+      <h1>Table of Contents</h1>
+
+      <div class="js-tocify"></div>
+
+    </nav>
+
+</header>
+
+<div class="body-content">
+  <section class="title">
+    <section class="title-text container">
+      <h1>{{ page.title }}</h1>
+      <h2>{{ page.subtitle }}</h2>
+    </section>
+  </section>
+
+  <article class="content-wrapper">
+
+    <section class="container">
+      <div class="article-meta" id="article-meta">
+        <nav class="toc">
+          <h1>Table of Contents</h1>
+
+          <div class="js-tocify"></div>
+        </nav>
+      </div>
+
+
+      <div class="content" id="article-content">
+
+        <section class="byline">
+
+          <div class="byline-content">
+
+            {% include article-header.html %}
+
+
+            <div class="clear"></div>
+          </div>
+        </section>
+
+        {{ content }}
+
+        {% if page.reposts && page.reposts.length > 0 %}
+          <hr />
+          <p><strong>This article has been re-published on the following partner sites:</strong></p>
+          <ul>
+            {% for repostUrl in page.reposts %}
+              <li><a href="{{repostUrl}}" rel="nofollow">{{ repostUrl }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </section>
+  </article>
+
+
+  <section class="disqus pattern-bg-lighter">
+
+    <div id="disqus" class="container">
+
+      <h2>Comments</h2>
+
+      <div id="disqus_thread">
+
+        <a href="#disqus_thread" class="load-comments" data-disqus-identifier="{{ page.url }}">0</a>
+
+      </div>
+    </div>
+
+    <noscript>
+      <p class="center">
+        <strong>
+          <a href="http://disqus.com/?ref_noscript">Please enable JavaScript to view the comments powered by Disqus.</a>
+        </strong>
+      </p>
+    </noscript>
+
+    <script>
+
+      var disqus_shortname = 'juristr';
+      // var disqus_identifier = '{{ page.url }}';
+      // var disqus_url = '{{ page.url }}';
+      var disqus_developer = 0;
+
+      var disqus_config = function () {
+        var funky_language_code_mapping = {
+          'de': 'de_inf',
+          'es': 'es_ES',
+          'pt': 'pt_EU',
+          'sr': 'sr_CYRL',
+          'sv': 'sv_SE',
+          'zh': 'zh_HANT'
+        };
+        this.language = funky_language_code_mapping['en'] ||
+                        'en';
+
+        this.callbacks.onReady = [ function () {
+                                      try {
+                                        // _gaq.push(['_trackEvent', 'View comments']);
+                                      } catch(err){}
+                                   } ];
+        this.callbacks.onNewComment = [ function (comment) {
+                                          try {
+                                            // _gaq.push(['_trackEvent', 'Commented']);
+                                          } catch(err){}
+                                        } ];
+      };
+
+      window.addEventListener('load', function(e) {
+
+        var c = document.createElement('script');
+        c.type = 'text/javascript';
+        c.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        c.async = true;
+
+        var s = document.getElementsByTagName('script')[0], sp = s.parentNode;
+        sp.insertBefore(c, s);
+
+        if (window.location.hash === '#disqus_thread')
+          loadComments();
+
+      }, false);
+
+      var disqus_loaded = false;
+      function loadComments() {
+
+        if (disqus_loaded)
+          return;
+
+        disqus_loaded = true;
+
+        //_gaq.push(['_trackEvent', 'Interactions', 'Comments', 'Comments Loaded']);
+
+        var s = document.getElementsByTagName('script')[0], sp = s.parentNode;
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+
+        var disqusContainer = document.getElementById('disqus');
+        disqusContainer.classList.add('active');
+
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        sp.insertBefore(dsq, s);
+      }
+
+      function outgoing(url) {
+        try {
+          _gaq.push(['_trackEvent', 'Outbound Links' , url]);
+        } catch(err){}
+      }
+      // Open external links (also that don't have a target defined) in a new tab.
+      var externLinks = document.querySelectorAll('article.tutorial a[href^="http"]:not([target])');
+      for(var i = 0, a; a = externLinks[i]; ++i) {
+        a.target = '_blank';
+        a.addEventListener('click', new Function('outgoing(' + '"' + a.href.replace(/.*?:\/\//g, "") + '"' + ');'));
+      }
+
+      var loadCommentsButtons = document.querySelectorAll('.load-comments');
+      for(var l = 0; l < loadCommentsButtons.length; l++)
+        loadCommentsButtons[l].addEventListener('click', loadComments);
+
+    </script>
+  </section>
+
+
+  {% include articles-footer.html %}
+
+  <script>
+    $(function(){
+      $(".js-tocify").tocify({ 
+        context: '#article-content',
+        selectors: 'h2',
+        extendPage: false
+      });
+    });
+  </script>
+
+  <script async src="/static/js/prettify.min.js" onload="_prettyPrint()"></script>
+  <script>
+    window.isCompatible = function() {
+
+      return null;
+
+    };
+
+    if (isCompatible() === false) {
+      document.getElementById('notcompatible').className = '';
+    }
+
+    function _prettyPrint() {
+      $("pre").each(function(){
+        var el = $(this);
+        if(el.hasClass("nohighlight") === false){
+          el.addClass("prettyprint");
+          //el.addClas("linenums");
+        }
+      });
+
+      if (typeof customPrettyPrintLanguage != 'undefined') {
+        customPrettyPrintLanguage();
+      }
+      prettyPrint();
+    }
+  </script>
+ <script>(function() {with (this[2]) {with (this[1]) {with (this[0]) {return function(event) {_prettyPrint()
+};}}}})</script>
+
+  <script>
+  (function() {
+
+    // Kill feedburner and marketing tracking arguments, but let them register
+    // before we do it.
+    setTimeout(function() {
+      if (/^\?utm_/.test(document.location.search) &&
+          window.history.replaceState) {
+        window.history.replaceState(
+            {}, '', document.location.href.replace(/\?utm_.*/, ''));
+      }
+    }, 2000);
+
+    var siteHeader = document.getElementById('siteheader');
+    var navToggle = document.getElementById('navtoggle');
+    var siteNav = document.getElementById('sitenav');
+
+    function toggle(target, forceActive) {
+
+      if (typeof toc !== 'undefined') {
+        // Switch off whichever one is not the
+        // current target
+        if (target === toc)
+          siteNav.classList.remove('active');
+        else
+          toc.classList.remove('active');
+      }
+
+      // Toggle if no force parameter is set
+      if (typeof forceActive === 'undefined') {
+        target.classList.toggle('active');
+      } else {
+        if (forceActive)
+          target.classList.add('active');
+        else
+          target.classList.remove('active');
+      }
+
+      // now find out what the set state ended up being
+      var isActive = target.classList.contains('active');
+
+      if (isActive)
+        siteHeader.classList.add('expanded');
+      else
+        siteHeader.classList.remove('expanded');
+
+    }
+
+    navToggle.addEventListener('click', function(e) {
+      toggle(siteNav);
+      e.preventDefault();
+    });
+
+
+
+    var tocToggle = document.getElementById('toctoggle');
+    var toc = document.getElementById('toc');
+    var articleMeta = document.getElementById('article-meta');
+    var articleContent = document.getElementById('article-content');
+    var articleMetaHeight = 0;
+    var articleMetaMaxY = 0;
+    var articleMetaMinY = 0;
+    var articleContentPadding = 200;
+
+    var tocLinks = document.querySelectorAll('.toc a');
+    for (var t = 0; t < tocLinks.length; t++)
+      tocLinks[t].addEventListener('click', onTocLinkClick);
+
+    tocToggle.addEventListener('click', function(e) {
+      toggle(toc);
+      e.preventDefault();
+    });
+
+    toc.addEventListener('click', function(e) {
+      if (e.target !== siteNav)
+        toggle(toc, false);
+    });
+
+    function onTocLinkClick() {
+      _gaq.push(['_trackEvent', 'Interactions', 'TOC', 'TOC Clicked']);
+    }
+
+    function setMinScrollYFromMetaY() {
+      var scrollPosition = window.scrollY;
+
+      var articleMetaBounds = articleMeta.getBoundingClientRect();
+      var articleMetaTop = Math.max(352,
+          articleMetaBounds.top - 20 + scrollPosition);
+
+      articleMetaHeight = articleMetaBounds.bottom - articleMetaBounds.top;
+      articleMetaMinY = articleMetaTop;
+    }
+
+    function setMaxScrollYFromContentHeight() {
+
+      var scrollPosition = window.scrollY;
+
+      var articleContentBounds = articleContent.getBoundingClientRect();
+      var articleContentTop = articleContentBounds.top + scrollPosition;
+      var articleContentHeight = articleContentBounds.bottom - articleContentBounds.top;
+
+      articleMetaMaxY = articleContentTop +
+          articleContentHeight -
+          articleMetaHeight -
+          articleContentPadding;
+
+    }
+
+    function onScroll(e) {
+
+      if (window.scrollY >= articleMetaMinY) {
+
+        articleMeta.classList.add('sticky');
+
+        var articleMetaTop = 22 - Math.max(0, window.scrollY - articleMetaMaxY);
+        articleMeta.style.top = articleMetaTop + 'px';
+
+      } else {
+        articleMeta.classList.remove('sticky');
+        articleMeta.style.top = 'auto';
+      }
+    }
+
+    if (articleMeta.getBoundingClientRect) {
+      setMinScrollYFromMetaY();
+      setMaxScrollYFromContentHeight();
+      document.addEventListener('scroll', onScroll);
+      window.addEventListener('load', setMaxScrollYFromContentHeight, false);
+    }
+
+
+  })();
+  </script>
