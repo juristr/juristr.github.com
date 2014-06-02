@@ -1,0 +1,36 @@
+body {
+    background: #EEE;
+}
+
+.title {
+    background: #fff;
+}
+
+.article .title-text:after {
+    display: inherit;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: radial-gradient(circle farthest-side at top, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 100%);
+}
+
+
+.article-meta .toc a{
+    padding: 0;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    background: none;
+}
+
+.panel {
+    background-color: inherit;
+}
+
+blockquote {
+    border-left: 0;
+}

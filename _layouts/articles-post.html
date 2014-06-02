@@ -2,6 +2,7 @@
 layout: default
 type: article
 ---
+<!--
 <header class="main" id="siteheader">
     <h1 id="title">
       <a href="/en/" title="{{ page.title }}">{{ page.title }}</a>
@@ -23,6 +24,7 @@ type: article
     </nav>
 
 </header>
+-->
 
 <div class="body-content">
   <section class="title">
@@ -73,13 +75,13 @@ type: article
   </article>
 
 
-  <section class="article-footer">
-    {% include mycustoms/relatedposts %}
+  <section class="article-footer container">
     <div class="row article-comments">
-      <hr>
       {% include disqus_comments %}
     </div>
   </section>
+
+  {% include articles-footer.html %}
 
 
   <script>
