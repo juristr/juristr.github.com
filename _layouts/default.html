@@ -40,7 +40,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
+    <!-- Stylesheets -->
     <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=16&d=favicon&r=PG">
@@ -64,12 +64,16 @@
     <script type="text/javascript" src="/assets/js/scrolltop/jquery.scrolltop.js"></script>
     -->
 
+  <!--
     <link href='/assets/js/tocify/jquery.tocify.css' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="/assets/js/tocify/jquery.tocify.js"></script>
+    -->
 
     <script type="text/javascript" src="/assets/js/moment.min.js"></script>
     <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/assets/js/prettify.js"></script>
+
+    <script src="/static/js/modernizr.custom.82437.js"></script>
 
     <!-- Kudos script -->
     <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
@@ -79,15 +83,27 @@
     <link rel="stylesheet" href="/assets/kudos/kudos.min.css">
 
 
-    <link href="/assets/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css" media="all">
+    {% if page.type == "article" %}
+      <link rel="stylesheet" media="all" href="/static/css/v2-combined.css">
+      <link href="/assets/css/articles-new.css" rel="stylesheet" type="text/css" media="all">
 
-    <link href="/assets/css/articles.css" rel="stylesheet" type="text/css" media="all">
-    <link href='/assets/js/tocify/jquery.tocify.css' rel='stylesheet' type='text/css'>
+      <script src="/static/js/jquery-1.8.3.min.js"></script>
+      <script src="/static/js/jquery-ui-1.9.1.custom.min.js"></script>
+      <script src="/static/js/jquery.tocify.min.js"></script>    
+    {% else %}
+      <link href="/assets/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    {% endif %}
+
+
+  
+    <!-- <link href="/assets/css/articles.css" rel="stylesheet" type="text/css" media="all"> -->
+  
 
     <link href="/assets/css/print.css" rel="stylesheet" type="text/css" media="print">
   </head>
 
-  <body>
+  <body class="article tutorial">
 
     <div class="metabar">
       <div class="metabar-block pull-right">
@@ -205,6 +221,24 @@
         });
 
       });
+
+      function outgoing(url) {
+        try {
+          ga('send', {
+            'hitType': 'event',          // Required.
+            'eventCategory': 'links',   // Required.
+            'eventAction': 'click',      // Required.
+            'eventLabel': 'Outbound links',
+            'eventValue': url
+          });
+        } catch(err){}
+      }
+      // Open external links (also that don't have a target defined) in a new tab.
+      var externLinks = document.querySelectorAll('article.tutorial a[href^="http"]:not([target])');
+      for(var i = 0, a; a = externLinks[i]; ++i) {
+        a.target = '_blank';
+        a.addEventListener('click', new Function('outgoing(' + '"' + a.href.replace(/.*?:\/\//g, "") + '"' + ');'));
+      }
 
       prettyPrint();
     </script>
