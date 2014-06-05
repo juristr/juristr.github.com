@@ -115,7 +115,7 @@
       </div>
     </div>
 
-    <div class="nav-button">
+    <div class="nav-button js-menu-button">
       <a id="sidebar-button" href="#sidr"><i class="fa fa-bars"></i></a>
     </div>
 
@@ -199,10 +199,12 @@
         $('.js-tooltip').tooltip();
 
         $('.js-click-region').click(function(){
+          $('.toc').fadeIn();
           $.sidr('close');
         });
 
         $('#sidebar-button').click(function(){
+          $('.toc').fadeOut();
           try {
             ga('send', 'event', 'button', 'click', 'menu-button');
           } catch(err){}

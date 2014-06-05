@@ -2,29 +2,6 @@
 layout: default
 type: article
 ---
-<!--
-<header class="main" id="siteheader">
-    <h1 id="title">
-      <a href="/en/" title="{{ page.title }}">{{ page.title }}</a>
-    </h1>
-    <a href="#sitenav" id="navtoggle">Show navigation</a>
-
-
-    <a id="toctoggle" href="#toc">Table of Contents</a>
-
-
-    {% include site-nav.html %}
-
-
-    <nav class="toc" id="toc">
-      <h1>Table of Contents</h1>
-
-      <div class="js-tocify"></div>
-
-    </nav>
-
-</header>
--->
 
 <div class="body-content">
   <section class="title">
@@ -45,7 +22,6 @@ type: article
         </nav>
       </div>
 
-
       <div class="content" id="article-content">
 
         <section class="byline">
@@ -53,7 +29,6 @@ type: article
           <div class="byline-content">
 
             {% include article-header.html %}
-
 
             <div class="clear"></div>
           </div>
@@ -137,47 +112,6 @@ type: article
       }
     }, 2000);
 
-    var siteHeader = document.getElementById('siteheader');
-    var navToggle = document.getElementById('navtoggle');
-    var siteNav = document.getElementById('sitenav');
-
-    function toggle(target, forceActive) {
-
-      if (typeof toc !== 'undefined') {
-        // Switch off whichever one is not the
-        // current target
-        if (target === toc)
-          siteNav.classList.remove('active');
-        else
-          toc.classList.remove('active');
-      }
-
-      // Toggle if no force parameter is set
-      if (typeof forceActive === 'undefined') {
-        target.classList.toggle('active');
-      } else {
-        if (forceActive)
-          target.classList.add('active');
-        else
-          target.classList.remove('active');
-      }
-
-      // now find out what the set state ended up being
-      var isActive = target.classList.contains('active');
-
-      if (isActive)
-        siteHeader.classList.add('expanded');
-      else
-        siteHeader.classList.remove('expanded');
-
-    }
-
-    navToggle.addEventListener('click', function(e) {
-      toggle(siteNav);
-      e.preventDefault();
-    });
-
-
 
     var tocToggle = document.getElementById('toctoggle');
     var toc = document.getElementById('toc');
@@ -189,21 +123,13 @@ type: article
     var articleContentPadding = 200;
 
     var tocLinks = document.querySelectorAll('.toc a');
-    for (var t = 0; t < tocLinks.length; t++)
+    for (var t = 0; t < tocLinks.length; t++){
       tocLinks[t].addEventListener('click', onTocLinkClick);
+    }
 
-    tocToggle.addEventListener('click', function(e) {
-      toggle(toc);
-      e.preventDefault();
-    });
-
-    toc.addEventListener('click', function(e) {
-      if (e.target !== siteNav)
-        toggle(toc, false);
-    });
 
     function onTocLinkClick() {
-      _gaq.push(['_trackEvent', 'Interactions', 'TOC', 'TOC Clicked']);
+      ga('send', 'event', 'button', 'click', 'TOC clicked');
     }
 
     function setMinScrollYFromMetaY() {
