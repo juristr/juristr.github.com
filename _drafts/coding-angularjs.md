@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Coding with Angular.js"
+lead: "Documenting my learning experience with Angular.js"
 show_img_in_detail: false
 coverimage: false
 tags: ["JavaScript"]
