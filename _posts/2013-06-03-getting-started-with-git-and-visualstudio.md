@@ -112,7 +112,8 @@ Out of the box Git SCP already creates one that is suitable for Visual Studio. O
 
 Simply add a new file to your Visual Studio project. I added `Person.cs` with some dummy content. You should immediately see the changes listed in the Pending Changes window.
 
-> **Note:** You can open the _Pending Changes_ window by right-clicking the Visual Studio project or solution file and then choosing "Git (master)" followed by "Pending Changes".
+<p class="notice tip">You can open the <i>Pending Changes</i> window by right-clicking the Visual Studio project or solution file and then choosing "Git (master)" followed by "Pending Changes".
+</p>
 
 Again, just like before, select the files you want to include, add a meaningful comment and commit them.
 
