@@ -21,13 +21,11 @@ group: navigation
       
       {% if tag[1].size <= low %}
         <a href="#{{ tag[0] }}" class="btn btn-default">{{ tag[0] }} ({{ tag[1].size }})</a>
-      {% endif %}
 
-      {% if tag[1].size > low && tag[1].size <= mid %}
+      {% else if tag[1].size > low && tag[1].size <= mid %}
         <a href="#{{ tag[0] }}" class="btn btn-default" style="font-weight:bold; font-size:20px">{{ tag[0] }} ({{ tag[1].size }})</a>
-      {% endif %}
-
-      {% if tag[1].size > mid %}
+      
+      {% else if tag[1].size > mid %}
         <a href="#{{ tag[0] }}" class="btn btn-default" style="font-weight:bold; font-size:35px">{{ tag[0] }} ({{ tag[1].size }})</a>
       {% endif %}
     {% endfor %}
