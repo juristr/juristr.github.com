@@ -236,6 +236,10 @@ body.locked.article .content-wrapper:after {
   position: relative;
 }
 
+#article-content > p:first-of-type{
+  font-size: 1.2em;
+}
+
 .article header .toc,
 .article .article-meta {
   display: none;
@@ -247,6 +251,10 @@ body.locked.article .content-wrapper:after {
   display: block;
   z-index: 10;
   padding-bottom: 100px;
+}
+
+.article .toc li.active a {
+  font-weight: bold;
 }
 
 .article header .toc.active h1 {
@@ -1154,4 +1162,13 @@ body {
 
 blockquote {
     border-left: 0;
+}
+
+.ads {
+  background: #fff;
+  text-align: center;
+}
+
+.adsbygoogle {
+  background: #fff;
 }
