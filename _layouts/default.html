@@ -82,6 +82,8 @@
     <script type="text/javascript" src="/assets/kudos/kudos.firebase.js"></script>
     <link rel="stylesheet" href="/assets/kudos/kudos.min.css">
 
+    <script type="text/javascript" src="/assets/js/countable.min.js"></script>
+
 
     <link href="/assets/css/base.css" rel="stylesheet" type="text/css" media="all">
     {% if page.type == "article" %}
@@ -149,11 +151,6 @@
           </a>
         </li>
         <li>
-          <a href="/articles">
-            <i class="fa fa-book"></i> Articles
-          </a>
-        </li>        
-        <li>
           <a href="/works">
             <i class="fa fa-picture-o"></i> My Works
           </a>
@@ -188,6 +185,26 @@
       });
 
       $(function(){
+
+        (function(){
+          Countable.once($('.article-body')[0], function (counter) {
+            //counter.words
+            // var estimatedRaw = counter.words / wpm,
+            //     remainder = estimatedRaw % 1,
+            //     minutes = estimatedRaw - remainder,
+            //     seconds = Math.round(estimatedRaw % 1);
+
+            var wpm = 200,
+                estimatedRaw = counter.words / wpm,
+                minutes = Math.round(estimatedRaw);
+
+            var effectiveTime = counter.words + " words - " + ((minutes < 1) ? "a couple of secs" : minutes + " min read");
+
+            $('.reading-time').html(effectiveTime);
+            $('.reading-time').tooltip({ title: "Based on an avg reading speed of " + wpm + " wpm (words per minute)"});
+          });
+        })();
+
         $('#sidebar-button').sidr();
 
         $('#sidebar-button').tooltip({
