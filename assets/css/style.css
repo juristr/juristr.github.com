@@ -833,6 +833,17 @@
     padding-top: 10px;
   }
 
+  .article-footer {
+    background: #f9f9f7;
+    border-top: 1px solid #e0e0df;
+    height: 100%;
+    padding: 0 20px 0 20px;
+  }
+
+  .article-comments {
+    max-width: 850px;
+  }
+
   .sidebar {
     /*border-left: solid 1px #d3d3d3;*/
     margin-top: 15px;
