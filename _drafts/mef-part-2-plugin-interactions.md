@@ -2,7 +2,7 @@
 layout: post
 title: "MEF Part 2: Plugin Interactions"
 description: ""
-category: bliki
+category: article
 tags: []
 ---
 

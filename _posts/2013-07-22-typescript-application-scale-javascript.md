@@ -1,18 +1,18 @@
 ---
-layout: post
+layout: articles-post
 title: "TypeScript: Application scale JavaScript"
-description: ""
+description: "This articles provides a very rough introduction to the TypeScript basics like syntax and common use cases."
+lastupdated: 2014-01-11
 postimg: "/blog/assets/imgs/typescript_beachcover_adj.jpg"
 show_img_in_detail: true
-category: 
+category: article
 tags: [JavaScript, WebDev]
 reposts: ["http://architects.dzone.com/articles/typescript-application-scale"]
 ---
 
-I took this cover pic from my holiday (I just returned) at Menorca (Spain) from [Cala Talaier](https://www.google.com/maps?ll=39.926536,3.902724&spn=0.001351,0.002575&t=h&dg=opt&z=19). Awesome place, but sorry for the way too much blue-saturation of the pic. I accidentally didn't configure my Nexus 4's camera properly and only recognized it later at the hotel. That said, this post isn't about my holidays, but about Hejlsberg's talk about TypeScript at this year's Build conference. Having some time while being at this beach I listened to the talk on my tablet and put down some notes.
+This article is about Hejlsberg's talk about TypeScript at the Build 2013 conference. TypeScript is now already around for about 9 months or so and I like the concept behind of being something to improve the tooling around JavaScript but not really re-inventing a(nother) new language that compiles to it.
 
-The post really isn't intended to reflect all the details of the talk, but rather some key points that sound interesting to me. TypeScript is now already around for about 9 months or so and I like the concept behind of being something to improve the tooling around JavaScript but not really re-inventing a new language that compiles to it.
-Anyway, if you want grab all the details of the talk, just head over to [listen to the it in its full length]( http://channel9.msdn.com/Events/Build/2013/3-314).  
+Talk: [http://channel9.msdn.com/Events/Build/2013/3-314](http://channel9.msdn.com/Events/Build/2013/3-314).  
 
 <iframe style="height:540px;width:100%" src="http://channel9.msdn.com/Events/Build/2013/3-314/player" frameBorder="0" scrolling="no"> </iframe>
 

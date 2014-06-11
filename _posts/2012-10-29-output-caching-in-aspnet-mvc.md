@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: articles-post
 title: "Output Caching in ASP.net MVC"
-description: ""
-category: 
+description: "What are the different alternatives for caching in ASP.net MVC? The articles explains the differences between server-side, client-side and mixed cache and approaches on how to implement them."
+category: article
 tags: [ASP.net MVC, C#, WebDev]
 reposts: ["http://dotnet.dzone.com/articles/output-caching-aspnet-mvc", "http://www.dotnetcodegeeks.com/2012/11/output-caching-in-asp-net-mvc.html"]
 ---

@@ -1,0 +1,9 @@
+{% for p in site.pages %}
+    {% if p.type == "authorpage" and p.author == "juristr" %}
+        {% if p.profilepic != empty %}
+            <img src="{{p.profilepic}}" class="img-thumbnail" />
+        {% endif %}
+        <h3><a href="/authors/{{ p.author }}.html">{{ p.author }}</a></h3>
+        <p class="post-author-info">{{ p.lead }}</p>
+    {% endif %}
+{% endfor %}

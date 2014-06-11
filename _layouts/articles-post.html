@@ -1,0 +1,197 @@
+---
+layout: default
+type: article
+---
+
+<div class="body-content">
+  <section class="title">
+    <section class="title-text container">
+      <h1>{{ page.title }}</h1>
+      <h2>{{ page.subtitle }}</h2>
+    </section>
+  </section>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Inline Ads in Posts -->
+  <div class="ads">
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:670px;height:90px"
+         data-ad-client="ca-pub-9669473064376287"
+         data-ad-slot="9502690484"></ins>
+  </div>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <article class="content-wrapper">
+
+    <section class="container">
+      <div class="article-meta" id="article-meta">
+        <nav class="toc">
+          <h1>Table of Contents</h1>
+
+          <div class="js-tocify"></div>
+        </nav>
+      </div>
+
+      <div class="content article-body" id="article-content">
+
+        <section class="byline">
+
+          <div class="byline-content">
+
+            {% include article-header.html %}
+
+            <div class="clear"></div>
+          </div>
+        </section>
+
+        {{ content }}
+
+        {% if page.reposts && page.reposts.length > 0 %}
+          <hr />
+          <p><strong>This article has been re-published on the following partner sites:</strong></p>
+          <ul>
+            {% for repostUrl in page.reposts %}
+              <li><a href="{{repostUrl}}" rel="nofollow">{{ repostUrl }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </section>
+  </article>
+
+
+  <section class="article-footer container">
+    <div class="row article-comments">
+      {% include disqus_comments %}
+    </div>
+  </section>
+
+  {% include articles-footer.html %}
+
+
+  <script>
+    $(function(){
+      $(".js-tocify").tocify({ 
+        context: '#article-content',
+        selectors: 'h2',
+        extendPage: false
+      });
+    });
+  </script>
+
+  <script async src="/static/js/prettify.min.js" onload="_prettyPrint()"></script>
+  <script>
+    window.isCompatible = function() {
+
+      return null;
+
+    };
+
+    if (isCompatible() === false) {
+      document.getElementById('notcompatible').className = '';
+    }
+
+    function _prettyPrint() {
+      $("pre").each(function(){
+        var el = $(this);
+        if(el.hasClass("nohighlight") === false){
+          el.addClass("prettyprint");
+          //el.addClas("linenums");
+        }
+      });
+
+      if (typeof customPrettyPrintLanguage != 'undefined') {
+        customPrettyPrintLanguage();
+      }
+      prettyPrint();
+    }
+  </script>
+ <script>(function() {with (this[2]) {with (this[1]) {with (this[0]) {return function(event) {_prettyPrint()
+};}}}})</script>
+
+  <script>
+  (function() {
+
+    // Kill feedburner and marketing tracking arguments, but let them register
+    // before we do it.
+    setTimeout(function() {
+      if (/^\?utm_/.test(document.location.search) &&
+          window.history.replaceState) {
+        window.history.replaceState(
+            {}, '', document.location.href.replace(/\?utm_.*/, ''));
+      }
+    }, 2000);
+
+
+    var tocToggle = document.getElementById('toctoggle');
+    var toc = document.getElementById('toc');
+    var articleMeta = document.getElementById('article-meta');
+    var articleContent = document.getElementById('article-content');
+    var articleMetaHeight = 0;
+    var articleMetaMaxY = 0;
+    var articleMetaMinY = 0;
+    var articleContentPadding = 200;
+
+    var tocLinks = document.querySelectorAll('.toc a');
+    for (var t = 0; t < tocLinks.length; t++){
+      tocLinks[t].addEventListener('click', onTocLinkClick);
+    }
+
+
+    function onTocLinkClick() {
+      ga('send', 'event', 'button', 'click', 'TOC clicked');
+    }
+
+    function setMinScrollYFromMetaY() {
+      var scrollPosition = window.scrollY;
+
+      var articleMetaBounds = articleMeta.getBoundingClientRect();
+      var articleMetaTop = Math.max(352,
+          articleMetaBounds.top - 20 + scrollPosition);
+
+      articleMetaHeight = articleMetaBounds.bottom - articleMetaBounds.top;
+      articleMetaMinY = articleMetaTop;
+    }
+
+    function setMaxScrollYFromContentHeight() {
+
+      var scrollPosition = window.scrollY;
+
+      var articleContentBounds = articleContent.getBoundingClientRect();
+      var articleContentTop = articleContentBounds.top + scrollPosition;
+      var articleContentHeight = articleContentBounds.bottom - articleContentBounds.top;
+
+      articleMetaMaxY = articleContentTop +
+          articleContentHeight -
+          articleMetaHeight -
+          articleContentPadding;
+
+    }
+
+    function onScroll(e) {
+
+      if (window.scrollY >= articleMetaMinY) {
+
+        articleMeta.classList.add('sticky');
+
+        var articleMetaTop = 22 - Math.max(0, window.scrollY - articleMetaMaxY);
+        articleMeta.style.top = articleMetaTop + 'px';
+
+      } else {
+        articleMeta.classList.remove('sticky');
+        articleMeta.style.top = 'auto';
+      }
+    }
+
+    if (articleMeta.getBoundingClientRect) {
+      setMinScrollYFromMetaY();
+      setMaxScrollYFromContentHeight();
+      document.addEventListener('scroll', onScroll);
+      window.addEventListener('load', setMaxScrollYFromContentHeight, false);
+    }
+
+
+  })();
+  </script>

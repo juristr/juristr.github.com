@@ -9,42 +9,10 @@ current: blog
     </div>
   </div>
 {% endif %}
-<div class="sidebar">
-  <div class="toc-container" style="display:none">
-    <div class="toc-button toc-border" style="left:0">T</div>
-    <div id="toc" class="toc-border" style="left:-400px">
-      <div class="toc-control">
-        <div>TOC</div>
-      </div>
-    </div>
-  </div>
-</div>
 <script type="text/javascript">
   $(function(){
 
     $('figure.kudo').kudoable();
-
-    var displayReadingTime = function(){
-      Countable.once($('.article-body')[0], function (counter) {
-        //counter.words
-        // var estimatedRaw = counter.words / wpm,
-        //     remainder = estimatedRaw % 1,
-        //     minutes = estimatedRaw - remainder,
-        //     seconds = Math.round(estimatedRaw % 1);
-
-        var wpm = 200,
-            estimatedRaw = counter.words / wpm,
-            minutes = Math.round(estimatedRaw);
-
-        var effectiveTime = (minutes < 1) ? "a couple of secs" : minutes + " min read";
-
-        $('.reading-time').html(effectiveTime);
-        $('.reading-time').tooltip({ title: "Based on an avg reading speed of " + wpm + " wpm (words per minute)"});
-      });
-    };
-
-    displayReadingTime();
-
 
     {% if page.categories[0] == "bliki" %}
       //$(".toc-container").show();
@@ -223,7 +191,6 @@ current: blog
 </section>
 <script type="text/javascript" src="https://d1xnn692s7u6t6.cloudfront.net/widget.js"></script>
 <script type="text/javascript">(function k(){window.$SendToKindle&&window.$SendToKindle.Widget?$SendToKindle.Widget.init({"content":".instapaper_body","exclude":".kindle-ignore","title":".article-title","author":".post-author","published":".post-date"}):setTimeout(k,500);})();</script>
-<script type="text/javascript" src="/assets/js/countable.min.js"></script>
 
 <div class="ads-container" id="fusion_ad">
     <p class="muted" style="text-align: center;">
