@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: articles-post
 title: "Coding with Angular.js"
 lead: "Documenting my learning experience with Angular.js"
 show_img_in_detail: false
@@ -7,13 +7,169 @@ coverimage: false
 tags: ["JavaScript"]
 ---
 
-This article is built incrementally by processing, internalizing and documenting all the stuff I encounter while learning Angular.js. So keep an eye on it.
+This article is built incrementally by processing, internalizing and documenting all the stuff I encounter while learning Angular.js. So keep an eye on it. I'll update it frequently.
 
-## Databinding
 
-- {%raw%}`{{}}`{%endraw%}
+## Warming up..
+
+Right at the very beginning, here's a simple Angular example.
+
+```html
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/ angular.js"></script>
+</head>
+<body ng-app ng-init="name = 'World'">
+  <h1>Hello, {{name}}!</h1>
+</body>
+</html>
+```
+
+What you might immediately notice there is no definition of a template (like EJS, Mustache, ...) which gets filled in, but instead the HTML code is being annotated directly using **element attributes** and placeholders {%raw%}`{{name}}`{%endraw%}. This is a core concept in Angular that distinguishes it from other popular JavaScript frameworks where you usually have some templating engine which is used to dynamically generate HTML which is added to the DOM.
+
+Specifically, in the example above we have
+
+- `ng-app` - which is used to attach the Angular application. You can only have one of them. Normally it is attached to the `<body>` or even `<html>` tag of the page.
+- `ng-init` - is a way to initialize a variable which is visible within the element's scope it has been declared on. In this example within `<body>`
+- {%raw%}`{{name}}`{%endraw%} - is used for outputting some value, in this case of the just previously defined `name` variable. It's a one-way databinding mechanism basically.
+
+## MVC in Angular
+
+Angular has a very pragmatic approach to the MVC pattern and declares itself to follow the MVW (Model View Whatever) pattern.
+
+### Scope
+
+The scope is a fundamental concept in Angular. It is the **mechanism with which we can expose a domain model to the view**. The scope can have pure data in the form of objects but also dynamic behavior in the form of functions attached to it.
+
+```javascript
+var MyController = function($scope){
+  $scope.age = 29;
+  $scope.getName = function(){
+    return "Juri Strumpflohner";
+  };
+}
+```
+
+Don't bother where the `$scope` comes from (for now). The corresponding HTML template might look like this:
+
+```html
+<p>
+  Hi, my name is {%raw%}{{getName()}}{%endraw%} and I'm {%raw%}{{age}}{%endraw%} years old.
+</p>
+```
+
+More details about scopes later.
+
+### Controller
+
+The controller's main responsibility is to initialize the scope with objects by providing the initial values and/or by adding view specific functions for implementing some dynamic behavior. Frankly, the controller does the same job as the `ng-init` from the above example. By specifying the initialization code in a JavaScript function we don't have to clutter the HTML code.
+
+<p class="notice fact">
+  The controller in Angular is a regular JavaScript function. There is no need to inherit from some base class.
+</p>
+
+### Models
+
+Similar as the controller, models are regular JavaScript objects. To expose them, simply add them to the suitable scope object.
+
+```javascript
+$scope.person = {
+  name: 'Juri',
+  age: 29
+};
+```
+
+<p class="notice tip">
+  It is suggested to assign an entire object to the <code>$scope</code> rather than single, primitive JavaScript values (i.e. strings, number, booleans). This is due to how the binding mechanism works in Angular. More about it later.
+</p>
+
+### View
+
+The view part in Angular is covered by the HTML itself, augmented with some application specific, custom HTML vocabolary. This allows us to build nearly a domain-specific language (DSL) for our application.
+
+Once the browser has finished rendering the DOM, Angular parses it and processes any custom defined HTML tags and attributes and turns them into dynamic parts by executing the logic you programmed into your Angular application. Such custom elements are called **directives** (more later).
+
+Angular itself is actually build on top of directives, which are usually prefixed with `ng-`. Here's an example:
+
+```html
+<div ng-controller="HelloWorldCtrl">
+  <input type="text" ng-model="message" />
+  <button ng-click="send(message)">Send</button>
+</div>
+```
+
+### Databinding
+
+Values can be databound to the view in the following ways.
+
+- {%raw%}`{{...}}`{%endraw%}
+- `ng-bind`
 - `ng-model`
 - `ng-bind="::foo"` - lazy, one-time binding (more [here](https://github.com/angular/angular.js/commit/cee429f0aaebf32ef1c9aedd8447a48f163dd0a4))
+
+The data is always provided through the `$scope` object. By using {%raw%}`{{ ... }}`{%endraw%} a **one-way binding** between the scope and the HTML is established. This means that your DOM will be refreshed whenever the databound value changes, but the scope won't be refreshed in response to changes in the view. `ng-bind` is an alternative to the curly braces syntax.
+
+```html
+Hi {%raw%}{{name}}{%endraw%}.
+Hi <span ng-bind="name" />.
+```
+
+In order to esablish a **two-way or bidirectional binding** (usually on input fields) you can use `ng-model`.
+
+```javascript
+$scope.person = {
+  name: 'Juri'
+};
+```
+
+```html
+<input type="text" ng-model="person.name" />
+```
+
+In this way, when we type into the textbox, `person.name` will be updated automatically and all other corresponding bindings will get refreshed.
+
+There is a rule with bidirectional bindings (`ng-model`) which I didn't quite get initially:
+
+<p class="notice tip">
+  When doing bidirectional binding make sure you don't bind directly to the scope properties. Otherwise it may lead to unexpected behavior in child scopes.
+</p>
+
+Or said differently, **"if you don't have a dot (.) in your `ng-bind` expression you're doing it wrong"**. The problem is demonstrated in [this jsfiddle](http://jsfiddle.net/r4RKW/1/).
+
+```html
+<div ng:app>
+    <form name="myForm" ng-controller="Ctrl">
+        Inputs inside switch:
+        <span data-ng-switch="show">
+            <input data-ng-switch-when="true" type="text" data-ng-model="theField" />
+        </span>
+        <br/>
+        Inputs outside of switch:
+        <input type="text" data-ng-model="theField" />
+        <br/>
+        Values: {{theField}}
+ </form>
+</div>
+```
+
+While both input fields as well as the output one bind to `theField`, once you type on the field that lives inside the `ng-switch` clause, they get out of sync.
+
+<figure>
+  <img src="/blog/assets/imgs/learning_angular/angular-bidirectionalbinding-issue.gif" />
+</figure>
+
+The reason is that `ng-switch` creates a client-scope that inherits (through prototypal inheritance) from the parent scope. By typing into the textfield you write to `theField` (due to the `ng-bind`) which overwrites the property and thus changes the object instance wherefore the instances of the client and parent scope diverge. Obviously by having something like `myObj.theField` such an issue would have been avoided as the bound object is `myObj` which won't get overwritten. Miško explains it [here](http://www.youtube.com/watch?v=ZhfUv0spHCY&feature=share&t=31m).
+
+Finally, `ng-bind="::name"` establishes a **one time, lazy binding**, meaning that the DOM won't get updated for subsequent changes of the data. More [about this here](https://github.com/angular/angular.js/commit/cee429f0aaebf32ef1c9aedd8447a48f163dd0a4).
+
+---
+---
+
+## The scope
+
+- scope in controller should be write only; collect data and place in scope
+- scope in view should be readonly -> only read, don't write
+- scope is **not the model**, it should refer to the model (you create) instead
 
 ## ng-cloak
 
@@ -131,44 +287,6 @@ More can be found under [https://docs.angularjs.org/guide/ie](https://docs.angul
 
 - DOM manipulation is done here
 
-## Scope
-
-- scope in controller should be write only; collect data and place in scope
-- scope in view should be readonly -> only read, don't write
-- scope is **not the model**, it should refer to the model (you create) instead
-
-
-## Bidirectional bindings
-
-There is a rule with bidirectional bindings (`ng-model`) which I didn't quite get initially:
-
-> When doing bidirectional binding make sure you don't bind directly to the scope properties. Otherwise it may lead to unexpected behavior in child scopes.
-
-Or said differently, "if you don't have a dot (.) in your `ng-bind` expression you're doing it wrong". The problem is demonstrated in [this jsfiddle](http://jsfiddle.net/r4RKW/1/).
-
-```html
-<div ng:app>
-    <form name="myForm" ng-controller="Ctrl">
-        Inputs inside switch:
-        <span data-ng-switch="show">
-            <input data-ng-switch-when="true" type="text" data-ng-model="theField" />
-        </span>
-        <br/>
-        Inputs outside of switch:
-        <input type="text" data-ng-model="theField" />
-        <br/>
-        Values: {{theField}}
- </form>
-</div>
-```
-
-While both input fields as well as the output one bind to `theField`, once you type on the field that lives inside the `ng-switch` clause, they get out of sync.
-
-<figure>
-  <img src="/blog/assets/imgs/learning_angular/angular-bidirectionalbinding-issue.gif" />
-</figure>
-
-The reason is that `ng-switch` creates a client-scope that inherits (through prototypal inheritance) from the parent scope. By typing into the textfield you write to `theField` (due to the `ng-bind`) which overwrites the property and thus changes the object instance wherefore the instances of the client and parent scope diverge. Obviously by having something like `myObj.theField` such an issue would have been avoided as the bound object is `myObj` which won't get overwritten. Miško explains it [here](http://www.youtube.com/watch?v=ZhfUv0spHCY&feature=share&t=31m).
 
 ## $watch
 
