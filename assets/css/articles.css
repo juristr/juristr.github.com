@@ -317,6 +317,14 @@ body.locked.article .content-wrapper:after {
   opacity: 1;
 }
 
+.toc ul ul {
+  margin-left: 10px !important;
+}
+
+.toc ul ul li {
+  font-size: 13px;
+}
+
 .article #toctoggle {
   position: absolute;
   top: 6px;
