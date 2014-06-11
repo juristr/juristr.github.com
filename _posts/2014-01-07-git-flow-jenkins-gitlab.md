@@ -5,6 +5,7 @@ description: ""
 postimg: "/blog/assets/imgs/jenkins-logo.png"
 show_img_in_detail: true
 category: 
+lastupdated: '2014-06-11'
 tags: ["git"]
 reposts: ["http://www.javacodegeeks.com/2014/01/git-flow-with-jenkins-and-gitlab.html"]
 ---
@@ -36,11 +37,9 @@ These branches get published onto our internal Git server powered by [GitLab](ht
 - each checkin to a `story/` branch to be build and verified against the .Net and JavaScript unit tests (and in the future integration tests as well, hopefully)
 - each checkin to `production/` to be build, tested and automatically deployed in a "production-like" environment which is currently only visible to the client, but in the future intended to be accessed by all users
 
-### Jenkins jobs
-
 Based on the above assumptions we currently create **one Jenkins job per environment**, one for master, one for the user story branches and one for production (although I have the feeling Jenkin's build parameterization could help out here to avoid redundancy between the build configurations...but didn't look into that, yet). Let's take a look at the `master` configuration as the others can be easily deduced starting from that one.
 
-**1. Source Code Management - Git Configuration**
+### 1. Source Code Management - Git Configuration
 
 Before starting, make sure you **have the Jenkins [Git plugin](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin)**. Then create a new Jenkins job, and in the "Source Code Management" section configure your Git repository like in the img example below.
 
@@ -51,7 +50,7 @@ Before starting, make sure you **have the Jenkins [Git plugin](https://wiki.jenk
 
 In the **Branch Specifier** field, enter your desired branch, depending on which one you're going to build in this current job. For _master_ simply enter `*/master`, for building your feature/userstory branches (and given you start them with `story/<name>`), enter `*/story/*` and so on.
 
-**2. GitLab Webhook**
+### 2. GitLab Webhook
 
 The next step is to add a **web hook to GitLab**. This is needed s.t. GitLab is able to signal to Jenkins about new commits that have been "pushed" to the repository. This is an alternative, but much more efficient way of instead doing a continuous polling.
 
@@ -64,7 +63,7 @@ Just go to your repository settings and then to _Web Hooks_.
 
 Enter an url of the form `http://myjenkins.com/git/notifyCommit?url=git@mygitlabserver.com:myrepo.git`.
 
-**3. Set polling**
+### 3. Activate polling
 
 The final step is to setup polling. Hä? Sorry, didn't you just mention previously that we don't need polling 'cause GitLab calls Jenkins in case of new commits?? Yep, that's right, but that's part of a "security" measure the [guys creating the Git plugin introduced](https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin#GitPlugin-Pushnotificationfromrepository) to make sure you (that you control the Jenkins job) and you (that you added the Web Hook) both consent to execute the build based on new commits.
 
