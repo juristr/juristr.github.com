@@ -186,6 +186,15 @@ td { vertical-align: top; }
   -moz-osx-font-smoothing: antialiased;
 }
 
+.article .meta .kudo {
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
+.article .meta .kudo a {
+  text-decoration: none;
+}
+
 .article .meta strong {
   font-weight: 800;
 }

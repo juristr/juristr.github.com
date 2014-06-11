@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: articles-post
 title: "Git flow with Jenkins and GitLab"
 description: ""
 postimg: "/blog/assets/imgs/jenkins-logo.png"
