@@ -80,18 +80,20 @@
 /*    font-family: 'Open Sans', sans-serif;*/
 /*    font-weight: 700;*/
 /*    font-style: normal;*/
-    font-family: Lato, 'Helvetica Neue';
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Nunito', sans-serif;
     font-weight:300;
-    font-size: 80px;
+    font-size: 50px;
     line-height: 1;
     color: #333332;
     margin-bottom: 8px;
     outline: 0;
     word-break: break-word;
+    text-transform: uppercase;
   }
 
   .hero-home .hero-description {
-    font-family: Lato, 'Helvetica Neue';
+    font-family: 'Lato', sans-serif;
     font-weight:300;
 /*    font-family: 'Open Sans', sans-serif;*/
     letter-spacing: .01rem;
@@ -105,7 +107,7 @@
   }
 
   .read-blog-button{
-    font-family: Lato, 'Helvetica Neue';
+    font-family: 'Lato', sans-serif;
     font-weight:300;
     font-style: normal;
     padding-top:40px;
