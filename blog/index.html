@@ -4,6 +4,9 @@ title: Juri's TechBlog
 current: blog
 ---
 
+
+
+
 <div class="front-bg">
   <div class="image-cover-wrap" style="position:absolute;">
     <img class="front-image" src="/assets/images/codebg-blurred-trans.png">
@@ -20,19 +23,27 @@ current: blog
   </div>
 </div>
 
-<div class="container" style="max-width:640px; margin: 0 auto;">
-  <section class="row main-content">
-    <article class="col-md-12 col-lg-12 col-sm-12">
+<div class="container">
+  <section class="row" style="max-width:1050px; margin: 0 auto;">
+    <article class="col-md-6 col-lg-6 col-sm-6">
 
       <div class="post-list">
 
       {% for post in site.posts limit:20 %}
         <div class="row post-item">
           <h3 class="post-item-title">
-            <a href="{{post.url}}">{{ post.title | truncatewords:30 }}</a>
+            {% if post.type != 'update-notice' %}
+              <a href="{{post.url}}">{{ post.title | truncatewords:30 }}</a>
+            {% else %}
+              <a href="{{post.target-url}}">{{ post.title | truncatewords:30 }}</a>
+            {% endif %}
           </h3>
-          <p class="post-item-lead">
-            {{ post.lead | truncatewords:30 }}
+          <p>
+            {% if post.type != 'update-notice' %}
+              {{ post.lead | truncatewords:30 }}
+            {% else %}
+              {{ post.content | truncatewords:30 }}
+            {% endif %}
           </p>
           <div class="post-item-meta">
             <span>
@@ -60,9 +71,18 @@ current: blog
       <hr/>
 
       <div class="row">
-        <a href="/blog/archive" class="btn btn-default pull-right">Archive · All Posts</a>
+        <a href="/blog/archive" class="btn btn-default pull-right">Archives · All Posts</a>
       </div>
 
     </article>
+
+
+    <article class="col-md-6 col-lg-6 col-sm-6">
+      <div style="margin-top: 30px; width: 380px" class="pull-right">
+        <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/juristr" data-widget-id="477582558465515520">Tweets by @juristr</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+    </article>
+
   </section>
 </div>
