@@ -484,6 +484,7 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [Git Branching Model](http://www.slideshare.net/lemiorhan/git-branching-model)
 - [DZone Refcard: Getting Started with Git](http://refcardz.dzone.com/refcardz/getting-started-git)
 - [DZone Refcard: Git Patterns and Antipatterns](http://refcardz.dzone.com/refcardz/git-patterns-and-anti-patterns)
+- [Git Man-Page generator](http://git-man-page-generator.lokaltog.net/)
 
 ### Videos
 
