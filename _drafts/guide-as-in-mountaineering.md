@@ -12,7 +12,11 @@ Yes, I happen to deal with architecture, software design and technology. And yes
 
 Nevertheless, software architecture is important. Simon Brown says that you should be able to positively answer these questions.
 
-- Does your software system have a well defined structure?- Is everybody on the team implementing features in a consistent way?- Is there a consistent level of quality across the codebase?- Is there a shared vision for how the software will be built across the team?- Does everybody on the team have the necessary amount of technical guidance?
+- Does your software system have a well defined structure?
+- Is everybody on the team implementing features in a consistent way?
+- Is there a consistent level of quality across the codebase?
+- Is there a shared vision for how the software will be built across the team?
+- Does everybody on the team have the necessary amount of technical guidance?
 - Is there an appropriate amount of technical leadership?
 
 Software architecture shouldn't be something **one person decides on all the others**. However, there needs to be one person that takes care about it, one who points out potential problems, brings critical aspects into discussion and reminds the team to respect the established guidelines.  
@@ -43,3 +47,4 @@ And yes, as an architect, **I do write code, lots of it, in a variety of technol
 ## Links
 
 - [Martin Fowler - Who needs an Architect](http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
+- [Your most important Skill: Empathy](http://chadfowler.com/blog/2014/01/19/empathy/)
