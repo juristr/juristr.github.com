@@ -149,7 +149,7 @@
     color: #423F37;
   }
 
-  .post-item-lead {
+  .post-item > p{
     letter-spacing: -0.02em;
     font-weight: 300;
     font-style: normal;

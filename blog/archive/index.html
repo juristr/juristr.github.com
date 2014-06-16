@@ -13,6 +13,7 @@ current: blog
 
 <div class="archives" itemscope itemtype="http://schema.org/Blog">
 {% for post in site.posts reverse %}
+    {% if post.type != "update-notice" %}
     {% capture date %}{{ post.date }}{% endcapture %}
 {% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
 {% unless year == this_year %}
@@ -31,6 +32,7 @@ current: blog
                 </span>
             </div>
         </li>
+    {% endif %}
 {% endfor %}
   </ul>
 </div>
