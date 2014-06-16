@@ -346,7 +346,79 @@ This video explains it all: [https://www.youtube.com/watch?v=tTihyXaz4Bo](https:
 
 - DOM manipulation is done here
 
+## Data flow scenarios
 
+Let's examine an example data flow scenario in an Angular application. I take the example from [John Papa's ng-demos project on GitHub](https://github.com/johnpapa/ng-demos). Specifically we take a look at the [Avengers module](https://github.com/johnpapa/ng-demos/blob/master/modular/app/avengers).
+
+What we have there is the `avengers.js` controller which has a function `activate()` that calls the `getMMA()` function. I'd like to take a look at that one. 
+
+```javascript
+(function () {
+    'use strict';
+    var controllerId = 'avengers';
+    angular.module('app.avengers')
+        .controller(controllerId,
+            ['common', 'controllerActivator', 'dataservice', avengers]);
+
+    function avengers(common, controllerActivator, dataservice) {
+
+        var vm = this;
+        ...
+        activate();
+
+        function activate() {
+            var promises = [getAvengersCast(), getMAA()];
+            controllerActivator.activate(promises, controllerId)
+                .then(function () {
+                    log('Activated Avengers View');
+                });
+        }
+
+        function getMAA() {
+            dataservice.getMAA()
+                .then(function (data) {
+                    vm.maa = data;
+                    return vm.maa;
+                });
+        }
+        ...
+    }
+})();
+```
+
+That function calls a service named `dataservice` which apparently returns a promise. Hence, the author invokes the `then(..)` function to get access to the returned data and binds it to the view.
+
+```javascript
+function getMAA() {
+    dataservice.getMAA()
+        .then(function (data) {
+            vm.maa = data;
+            return vm.maa;
+        });
+}
+```
+
+<p class="notice tip">
+  <b>Note</b> that the controller uses the "controller as" syntax. At the beginning of the controller definition function the author wrote <code>var vm = this;</code>.
+</p>
+
+The [dataservice](https://github.com/johnpapa/ng-demos/blob/master/modular/app/core/dataservice.js) has a corresponding function `getMAA()` which uses `$http` for contacting the backend. Obviously `$http` returns a promise object.
+
+```javascript
+...
+function getMAA() {
+    return $http.get('/api/maa')
+        .then(function(data, status, headers, config) {
+            return data.data[0].data.results;
+        }, function(error){
+            console.log(error);
+            return error;
+        });
+}
+...
+```
+
+The key here is to use promises for simplifying the code rather than passing in callback functions.
 
 ## $watch
 
