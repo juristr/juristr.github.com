@@ -275,6 +275,65 @@ More can be found under [https://docs.angularjs.org/guide/ie](https://docs.angul
 - should not reference DOM
 - should have view behavior like what happens when the user does X
 
+**"Controller as" syntax**
+
+Normally you have a controller defined like this:
+
+```javascript
+angular.module('myApp')
+  .controller('MyCtrl', ['$scope', function($scope){
+    $scope.name = 'Juri';
+    $scope.sayHello = function(){
+      alert('Hi');
+    };
+  }]);
+```
+
+You ask to get `$scope` injected which you use for giving the data to the view. `$scope` in this case could be seen as the "View Model".
+
+Since version v1.1.5 Angular supports the "controller as" syntax that allows you to define the controller in a way to expose the scope implicitly:
+
+```javascript
+angular.module('myApp')
+  .controller('MyCtrl', function(){
+    this.name = 'Juri';
+    this.sayHello = function(){
+      alert('Hi');
+    }
+  });
+```
+
+There is no `$scope` involved here, rather the controller itself represents the scope. In the HTML template you then have to write it as follows:
+
+```html
+<div ng-controller="MyCtrl as greeter">
+  Hi, I'm {%raw%}{{ greeter.name }}{%endraw%}.
+  <button ng-click="greeter.sayHello()">
+    Say hello
+  </button>
+</div>
+```
+
+There are a few downsides here (also [discussed over there](https://groups.google.com/forum/#!topic/angular/84selECbp1I)). I like the `$scope` as it clearly communicates in a "viewmodel" style which data/functions get exposed to the view. On the other side when you have nested controllers the HTML gets a lot more clear with the "as syntax":
+
+```html
+<div ng-controller="MyCtrl as greeter">
+  Hi, I'm {%raw%}{{ greeter.name }}{%endraw%}.
+  <button ng-click="greeter.sayHello()">
+    Say hello
+  </button>
+
+  <div ng-controller="OtherCtrl as other">
+    {%raw%}{{ room.foo }}{%endraw%}
+  </div>
+
+</div>
+```
+
+It is much clearer how the inheritance works and which variable/function is fetched/invoked on which controller. Another nice side effect is that it avoids the "dot problem".
+
+This video explains it all: [https://www.youtube.com/watch?v=tTihyXaz4Bo](https://www.youtube.com/watch?v=tTihyXaz4Bo);
+
 ### Services
 
 - should not reference DOM (mostly)
@@ -288,6 +347,7 @@ More can be found under [https://docs.angularjs.org/guide/ie](https://docs.angul
 - DOM manipulation is done here
 
 
+
 ## $watch
 
 - the `$watch` getter function must always be fast, have no side-effects & idempotent
@@ -298,6 +358,8 @@ More can be found under [https://docs.angularjs.org/guide/ie](https://docs.angul
 - one module per third-party reusable library
 - incremental code loading
   - split modules by view
+
+### 
 
 ## Minification and Compilation
 
