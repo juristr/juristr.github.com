@@ -420,6 +420,27 @@ function getMAA() {
 
 The key here is to use promises for simplifying the code rather than passing in callback functions.
 
+## Exception handling
+
+It is often comfortable to be able to handle exceptions in a central place for logging, showing a feedback to the user about what was going wrong etc. Angular has already a service called `$exceptionHandler` which can be [decorated](https://docs.angularjs.org/api/auto/object/$provide#decorator) to provide your own behavior. John Papa has a [nice example on his repo](https://github.com/johnpapa/ng-demos/blob/master/modular/app/blocks/exception/exceptionHandler.js).
+
+```javascript
+exceptionModule.config(['$provide', function ($provide) {
+    $provide.decorator('$exceptionHandler',
+        ['$delegate', 'exceptionConfig', 'logger',
+            extendExceptionHandler]);
+}]);
+
+function extendExceptionHandler($delegate, exceptionConfig, logger){
+  var appErrorPrefix = exceptionConfig.config.appErrorPrefix || '';
+  return function (exception, cause) {
+      $delegate(exception, cause);
+      // your logic here
+  };
+}
+```
+`$delegate` is required for performing the decoration, `exceptionConfig` and `logger` is something the author does for adding a configurable prefix and for sending the info to a logger.
+
 ## $watch
 
 - the `$watch` getter function must always be fast, have no side-effects & idempotent
