@@ -334,6 +334,8 @@ It is much clearer how the inheritance works and which variable/function is fetc
 
 This video explains it all: [https://www.youtube.com/watch?v=tTihyXaz4Bo](https://www.youtube.com/watch?v=tTihyXaz4Bo);
 
+Personally I nearly prefer the "controller as" syntax because it leads to much cleaner code in the template.
+
 ### Services
 
 - should not reference DOM (mostly)
@@ -451,6 +453,10 @@ function extendExceptionHandler($delegate, exceptionConfig, logger){
 - one module per third-party reusable library
 - incremental code loading
   - split modules by view
+
+### Lifecycle
+
+
 
 ### 
 
