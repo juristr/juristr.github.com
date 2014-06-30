@@ -173,28 +173,6 @@ Finally, `ng-bind="::name"` establishes a **one time, lazy binding**, meaning th
 
 ## Dependency injection
 
-### You cannot inject services during configuration time!
-
-Assume you have an Angular service and you'd like to inject it into the module config phase like
-
-```javascript
-var app = angular.module('myModule', []);
-app.config([
-  '$routeProvider',
-  '...',
-  'myService',
-  function($routeProvider, ..., myService){
-    ...
-  }
-]);
-```
-This code **won't work** because you cannot inject services during the config time. You can only inject Angular providers.
-
-<p class="notice fact">
-  <strong>Configuration blocks</strong> - get executed during the provider registrations and configuration phase. Only providers and constants can be injected into configuration blocks. This is to prevent accidental instantiation of services before they have been fully configured. <br/>
-  <i><a href="https://docs.angularjs.org/guide/module">Source</a></i>
-</p>
-
 ### $injector
 
 The [injector](https://docs.angularjs.org/api/auto/service/$injector) is used to retrieve object instances defined by some provider.
@@ -273,6 +251,89 @@ As such, given that your object has a unique key, you can rewrite the above `ng-
     ...
 </div>
 ```
+
+## Service vs. Provider vs. Factory
+
+When you start to code with Angular you most immediately hear about services and the concept seems quite intuitive. But then you read about providers and factories and they somehow get used interchangeably. What's the difference?? [This articles](http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/) explains it quite well (as many others, just google for it).
+
+Frankyl, the difference lies..
+
+- in the kind of creation
+- in the availability during the Angular bootstrap lifecycle
+
+Services can be created either with
+
+```javascript
+angular.module('myModule')
+  .service('myService', function(){
+    // implementation
+  });
+```
+
+or through a factory
+
+```javascript
+angular.module('myModule')
+  .factory('myService', function(){
+    // implementation
+  });
+```
+
+The only difference really is the `//implementation` part here. The `.service(..)` will be instantiated using the `new` keyword which means the function passed is a **constructor function**.
+
+```javascript
+  .service('myService', function() {
+    //this is the constructor function
+    this.sayHello = function(){
+      console.log('Hi');
+    };
+  })
+```
+Thus, everything you want to expose has to be attached to the function context `this`.
+
+Instead, when **you use a factory** (which is by far more common) you instantiate the object by yourself and return it.
+
+```javascript
+  .factory('myService', function(){
+    var myService = {
+      sayHello = function(){
+        console.log('Hi');
+      }
+    };
+
+    return myService;
+  });
+```
+
+**Providers are a little different** in that they are the only ones that can be injected into **config cycle**. When defining a provider the part you you attach to its instance `this` will be available during `config(..)` while everything returned by the `$get` callback will be injected as a normal service (in a controller for instance).
+
+```javascript
+angular.module('myModule')
+  .provider('myProvider', function(){
+    // available during config time
+    this.someConfigTimeFunction = function(){
+      // some details
+    };
+    this.someVariable = 'Hi';
+
+    // exposed service
+    this.$get = ['$q', function($q){
+        var service = {
+          sayHello = function(){
+            console.log('Hi');
+          }
+        };
+
+        return service;
+      }];
+  });
+```
+
+<p class="notice fact">
+  <strong>Configuration blocks</strong> - get executed during the provider registrations and configuration phase. Only providers and constants can be injected into configuration blocks. This is to prevent accidental instantiation of services before they have been fully configured. <cite><a href="https://docs.angularjs.org/guide/module">Angular docs</a></cite>
+</p>
+
+There's more to discover about providers. Take a look at the ["value" and "constant" recipes on the official docs](https://docs.angularjs.org/guide/providers).
 
 ## Components
 
