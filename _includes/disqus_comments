@@ -6,7 +6,7 @@
 
       <div id="disqus_thread">
 
-        <a href="{{ page.url }}#disqus_thread" class="load-comments">0</a>
+        <a href="http://juristr.com{{ page.url }}#disqus_thread" class="load-comments">0</a>
 
       </div>
     </div>
