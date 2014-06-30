@@ -171,6 +171,26 @@ Finally, `ng-bind="::name"` establishes a **one time, lazy binding**, meaning th
 - scope in view should be readonly -> only read, don't write
 - scope is **not the model**, it should refer to the model (you create) instead
 
+## $injector
+
+The [injector](https://docs.angularjs.org/api/auto/service/$injector) is used to retrieve object instances defined by some provider.
+
+```javascript
+var instance = $injector.get('myService');
+```
+
+What's particularly interesting is that you can use the `invoke` method for executing a function with parameters that have to be provided through Angular's dependency injection mechanism.
+
+```
+var myFunction = ['$q', '$rootScope', function($q, $rootScope){
+    ...
+  }];
+
+$injector.invoke(myFunction);
+```
+
+In this way, `$q` and the other params will be automatically resolved and injected into the function.
+
 ## ng-cloak
 
 - when loading app you may see lots of unprocessed tags
@@ -517,6 +537,15 @@ Apparently there is a template caching service
 - $rootScope -> broadcast event to everybody
 - use databinding in most cases; inject services
 
+## Useful tags
+
+### ng-href
+
+<p class="notice tip">
+  Official docs: <a href="https://docs.angularjs.org/api/ng/directive/ngHref">https://docs.angularjs.org/api/ng/directive/ngHref</a>
+</p>
+
+Prevents the user from going to a specified url when it contains data-binding expressions that have not yet been resolved by Angular. Otherwise the user would most probably get a 404.
 
 ## Testing in Angular
 
