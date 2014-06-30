@@ -171,7 +171,31 @@ Finally, `ng-bind="::name"` establishes a **one time, lazy binding**, meaning th
 - scope in view should be readonly -> only read, don't write
 - scope is **not the model**, it should refer to the model (you create) instead
 
-## $injector
+## Dependency injection
+
+### You cannot inject services during configuration time!
+
+Assume you have an Angular service and you'd like to inject it into the module config phase like
+
+```javascript
+var app = angular.module('myModule', []);
+app.config([
+  '$routeProvider',
+  '...',
+  'myService',
+  function($routeProvider, ..., myService){
+    ...
+  }
+]);
+```
+This code **won't work** because you cannot inject services during the config time. You can only inject Angular providers.
+
+<p class="notice fact">
+  <strong>Configuration blocks</strong> - get executed during the provider registrations and configuration phase. Only providers and constants can be injected into configuration blocks. This is to prevent accidental instantiation of services before they have been fully configured. <br/>
+  <i><a href="https://docs.angularjs.org/guide/module">Source</a></i>
+</p>
+
+### $injector
 
 The [injector](https://docs.angularjs.org/api/auto/service/$injector) is used to retrieve object instances defined by some provider.
 
@@ -580,6 +604,20 @@ Prevents the user from going to a specified url when it contains data-binding ex
 
 - [GTAC 2013: Karma - Test Runner for JavaScript](https://www.youtube.com/watch?v=YG5DEzaQBIc)
 - [Protractor](https://github.com/angular/protractor)
+
+## Debugging
+
+Normally Angular prints out a nice stack trace with lots of details to track down the actual bug. However, often the amount of information that might greatly differ based on the browser you're using.
+
+<figure>
+  <img src="/blog/assets/imgs/coding-angular/angular_stack_chrome.png" />
+  <figcaption>Stacktrace in Chrome Devtools</figcaption>
+</figure>
+
+<figure>
+  <img src="/blog/assets/imgs/coding-angular/angular_stack_ff.png" />
+  <figcaption>Stacktrace in Firebug (Firefox)</figcaption>
+</figure>
 
 
 ## Useful links
