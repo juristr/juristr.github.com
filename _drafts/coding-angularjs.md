@@ -474,6 +474,11 @@ function extendExceptionHandler($delegate, exceptionConfig, logger){
 - incremental code loading
   - split modules by view
 
+## Links
+
+- [Best practices](https://github.com/angular/angular.js/wiki/Best-Practices)
+- [Antipatterns](https://github.com/angular/angular.js/wiki/Anti-Patterns)
+
 ### Lifecycle
 
 
