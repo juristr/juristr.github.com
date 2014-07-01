@@ -333,6 +333,24 @@ angular.module('myModule')
   <strong>Configuration blocks</strong> - get executed during the provider registrations and configuration phase. Only providers and constants can be injected into configuration blocks. This is to prevent accidental instantiation of services before they have been fully configured. <cite><a href="https://docs.angularjs.org/guide/module">Angular docs</a></cite>
 </p>
 
+**Attention,** during dependency injection you have to **suffix your provider name**.
+
+```javascript
+// definition
+app.provider('lazyLoading', function(){
+  ...
+})
+
+// during dependency injection
+app.config([
+  ...
+  'lazyLoadingProvider',
+  function(...,lazyLoadingProvider){
+    ...
+  }
+])
+```
+
 There's more to discover about providers. Take a look at the ["value" and "constant" recipes on the official docs](https://docs.angularjs.org/guide/providers).
 
 ## Components
