@@ -119,6 +119,14 @@
     text-decoration:none;
   }
 
+  .next-up {
+    /* Credits go to martinfowler.com */
+    background-color: #fee0c9;
+    color: #11aa58;
+    padding: 10px;
+    font-style: italic;
+  }
+
     /*
     .article-footer {
         background: #f9f9f7;
@@ -187,7 +195,7 @@
     #disqus .load-comments:after {
       content: ' comments. Want to add yours?';
     }
-  
+
 
     #related-posts {
       font: 18px/1.5 'Source Sans Pro', sans-serif;
