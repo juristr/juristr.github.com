@@ -618,6 +618,12 @@ var MyController = someModule.controller('MyController', ['$scope', 'greeter', f
   - images
   - css
 
+## Best practices
+
+- From the GitHub wiki entry
+- Organizing your code (feature-based cut) -> see own blog post
+- Thoughtworks article: http://www.thoughtworks.com/insights/blog/good-practices-build-your-angularjs-application
+
 ## To look at
 
 ### Template cache
