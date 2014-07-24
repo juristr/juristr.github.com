@@ -709,6 +709,7 @@ Normally Angular prints out a nice stack trace with lots of details to track dow
 
 - [Official Angular Blog](http://blog.angularjs.org/)
 - [CodeAcademy tutorial](http://www.codecademy.com/courses/javascript-advanced-en-2hJ3J/0/1)
+- [Ben Nadel JavaScript demos on GitHub](http://bennadel.github.io/JavaScript-Demos/)
 
 ### Videos
 
