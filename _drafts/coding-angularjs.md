@@ -256,7 +256,7 @@ As such, given that your object has a unique key, you can rewrite the above `ng-
 
 When you start to code with Angular you most immediately hear about services and the concept seems quite intuitive. But then you read about providers and factories and they somehow get used interchangeably. What's the difference?? [This articles](http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/) explains it quite well (as many others, just google for it).
 
-Frankyl, the difference lies..
+Basically, the difference lies..
 
 - in the kind of creation
 - in the availability during the Angular bootstrap lifecycle
@@ -435,6 +435,23 @@ There is no `$scope` involved here, rather the controller itself represents the 
     Say hello
   </button>
 </div>
+```
+
+To use the "controller as" syntax for **directive controllers** you have to specify the `controllerAs` property:
+
+```javascript
+angular.module('myApp')
+  .directive('toolbar', function(){
+    return {
+        ...
+        controller: function(){
+            var vm = this;
+            ...
+            return this;
+        },
+        controllerAs: 'data'
+    };
+  });
 ```
 
 There are a few downsides here (also [discussed over there](https://groups.google.com/forum/#!topic/angular/84selECbp1I)). I like the `$scope` as it clearly communicates in a "viewmodel" style which data/functions get exposed to the view. On the other side when you have nested controllers the HTML gets a lot more clear with the "as syntax":
@@ -710,6 +727,8 @@ Normally Angular prints out a nice stack trace with lots of details to track dow
 - [Official Angular Blog](http://blog.angularjs.org/)
 - [CodeAcademy tutorial](http://www.codecademy.com/courses/javascript-advanced-en-2hJ3J/0/1)
 - [Ben Nadel JavaScript demos on GitHub](http://bennadel.github.io/JavaScript-Demos/)
+- [Style guide](https://github.com/mgechev/angularjs-style-guide)
+- [Speeding up AngularJS with simple optimizations](http://www.binpress.com/tutorial/speeding-up-angular-js-with-simple-optimizations/135)
 
 ### Videos
 
