@@ -42,6 +42,26 @@ Besides creating server applications with Node, it has also become the **VM** fo
 
 More on [nodejs.org](http://nodejs.org/) and [npmjs.org](http://www.npmjs.org).
 
+### Installing node packages
+
+Installing a node package is as simple as executing
+
+```
+$ npm install grunt
+```
+
+Node packages are installed into a folder called `node_modules`.
+
+![Demo: installation of a node  module](/blog/assets/imgs/node-grunt-yeoman/node-module-install-demo.gif)
+
+The best practices approach though is to create a `package.json` file. Since the suggested approach is to not commit the content of your `node_modules` folder to your VCS, but rather to automatically reinstall them during the build process, you need a place to keep track about the installed package and its according version: `package.json`.
+
+To create a new one, execute `npm init` inside a clean folder. This will guide you through the creation of a new file.
+
+![](/blog/assets/imgs/node-grunt-yeoman/package-json.png)
+
+
+
 ## Yeoman
 
 Yeoman has become the standard scaffolding toolkit for creating modern JavaScript applications.
@@ -86,13 +106,47 @@ That's all regarding Yeoman's usage. More advanced topics are about creating you
 
 ## Grunt
 
-Grunt is: **automation**. 
+Grunt is **automation**. It is a task-based command line build tool for JavaScript projects. The official headline: "The JavaScript Task Runner".
 
 ![](/blog/assets/imgs/node-grunt-yeoman/grunt-logo.jpeg)
 
-There's a great book [Getting Started with Grunt - The JavaScript Task Runner](http://www.packtpub.com/web-development/getting-started-grunt-javascript-task-runner) published by PacktPub.
+To get started, simply follow the [online guide on the official site](http://gruntjs.com/getting-started). There's also a great book [Getting Started with Grunt - The JavaScript Task Runner](http://www.packtpub.com/web-development/getting-started-grunt-javascript-task-runner) published by PacktPub which is ideal for beginners.
 
-http://gruntjs.com/getting-started
+
+### Installation
+
+Grunt runs on top of Node.js platform and is distributed through the npm repository. It comes as two different tools
+
+- `grunt-cli` which is the **Grunt Command-line interface**
+- `grunt` module
+
+The reason for having two components is to make sure we can run different grunt versions side-by-side (i.e. legacy versions in older projects). Hence, `grunt-cli` is installed globally while `grunt` is installed on a per-project basis.
+
+```
+$ npm install -g grunt-cli
+```
+
+Then enter the project where you wish to use Grunt and execute
+
+```
+$ npm install grunt
+```
+
+### Grunt modules
+
+Grunt modules are distributed through Node's NPM directory. Normally, Grunt specific modules are prefixed with `grunt-` and official grunt plugins are prefixed `grunt-contrib`. Example: `grunt-contrib-uglify`.
+
+Hence, Grunt modules are node modules and thus you install them just as you normally would
+
+```
+$ npm install --save-dev grunt-contrib-uglify
+```
+
+### Gruntfile.js
+
+The `Gruntfile.js` is the place where you configure the Grunt tasks for your project.
+
+
 
 
 
