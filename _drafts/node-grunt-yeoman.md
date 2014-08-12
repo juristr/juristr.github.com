@@ -287,8 +287,62 @@ File globbing or wildcard matching is a way to capture a large group of files wi
 
 `All` most people need to know is that `foo/*.js` will match all files ending with `.js` in the `foo/` subdirectory, but `foo/**/*.js` will match all files ending with `.js` in the `foo/` _subdirectory and all of its subdirectories_.
 
-Since many Grunt tasks ultimately interact with the file system, Grunt already predisposes a structure to standardize such accesses and make the interaction easier for task developers.
+Since most of the tasks ultimately interact with the file system, Grunt already predisposes a structure to make task devs' life easier. If a globbing expession is specified, Grunt tries to match it against the file system and places all matches in the `this.files` array.  
+Hence, you will see a lot of tasks having a syntax like
 
+```javascript
+target1: {
+  src: ['src/a.js', 'src/b.js']
+}
+```
+
+or
+
+```javascript
+target1: {
+  src: `src/{a,b}.js`,
+  dest: `dest/ab.js`
+}
+```
+
+It is also possible to define multiple source sets with according destination. For this purpose the `files` array is used.
+
+```javascript
+target1: {
+  files: [
+    { src: 'src/{a,b,c}.js', dest: 'dest/abc.js' },
+    { src: 'src/{x,y,z}.js', dest: 'dest/xyz.js' }
+  ]
+}
+```
+
+The following, more compact, object notation is equivalent
+
+```javascript
+target1: {
+  files: {
+    'dest/abc.js': 'src/{a,b,c}.js',
+    'dest/xyz.js': 'src/{x,y,z}.js'
+  }
+}
+```
+Another common task is to copy a set of files to a given directory (for example with preprocessors like SASS or CoffeeScript compilers). Instead of providing the single src and dest instructions we can use the following syntax:
+
+```javascript
+target2: {
+  files: [
+    {
+      expand: true,
+      cwd: 'lib/',
+      src: '**/*.js',
+      dest: 'build/',
+      ext: '.min.js'
+    }, 
+  ],
+}
+```
+
+The expand property tells Grunt to generate a corresponding destination for each matched file. `cwd` stands for the current working directory, `src` and `dest` are self explanatory and `ext` is the extension to be used for the destination files. More options can be found [in the official docs](http://gruntjs.com/configuring-tasks).
 
 
 
