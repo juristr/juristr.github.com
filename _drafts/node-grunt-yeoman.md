@@ -203,8 +203,91 @@ $ npm install --save-dev grunt-contrib-uglify
 
 ### Gruntfile.js
 
-The `Gruntfile.js` is the place where you configure the Grunt tasks for your project.
+The `Gruntfile.js` is the place where you configure the Grunt tasks for your project. It starts as simple as this file:
 
+```javascript
+module.exports = function(grunt) {
+  // Do grunt-related things in here
+};
+```
+
+The `grunt` object is Grunt's **API**: [http://gruntjs.com/api/grunt](http://gruntjs.com/api/grunt).
+
+### Anatomy of Grunt tasks
+
+You normally start by defining the build tasks like this example of a `stringCheck` task taken from the Grunt book I mentioned before.
+
+```javascript
+module.exports = function(grunt){
+  ...
+  grunt.initConfig({
+    stringCheck: {
+      file: './src/somefile.js',
+      string: 'console.log('
+    }
+  });
+}
+```
+
+In the end, a Grunt task is simply a function that you register with Grunt.
+
+```javascript
+module.exports = function(grunt){
+  grunt.registerTask('stringCheck', function() {
+    //fail if configuration is not provided
+    grunt.config.requires('stringCheck.file');
+    grunt.config.requires('stringCheck.string');
+    
+    //retrieve filename and load it
+    var file = grunt.config('stringCheck.file');
+    var contents = grunt.file.read(file);
+    
+    //retrieve string to search for
+    var string = grunt.config('stringCheck.string');
+    
+    if(contents.indexOf(string >= 0))
+      grunt.fail.warn('"' + string + '" found in "' + file + '"');
+    });
+}
+```
+
+### Multitasks
+
+Grunt also allows you to group a task execution.
+
+```javascript
+module.exports = function(grunt){
+  ...
+  grunt.initConfig({
+    stringCheck: {
+      target1: {
+        file: './src/somefile.js',
+        string: 'console.log('
+      },
+      target2: {
+        file: './src/somefile.js',
+        string: 'eval('
+      }      
+    }
+  });
+}
+```
+
+These can then be executed with `grunt stringCheck:target1` and `runt stringCheck:target2`. `target1` and `target2` can obviously be named differently.
+
+### Globbing
+
+File globbing or wildcard matching is a way to capture a large group of files with a single expression rather than listing all of them individually which is often not even possible. From [the official docs](http://gruntjs.com/configuring-tasks#globbing-patterns):
+
+- `*` matches any number of characters, but not `/`
+- `?` matches a single character, but not `/`
+- `**` matches any number of characters, including `/`, as long as it's the only thing in a path part
+- `{}` allows for a comma-separated list of "or" expressions 
+- `!` at the beginning of a pattern will negate the match
+
+`All` most people need to know is that `foo/*.js` will match all files ending with `.js` in the `foo/` subdirectory, but `foo/**/*.js` will match all files ending with `.js` in the `foo/` _subdirectory and all of its subdirectories_.
+
+Since many Grunt tasks ultimately interact with the file system, Grunt already predisposes a structure to standardize such accesses and make the interaction easier for task developers.
 
 
 
