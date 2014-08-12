@@ -146,19 +146,7 @@ require(['./myModule.js'], function(myModule){
 });
 ```
 
-The asynch and potentially even parallel loading of the necessary files is completely managed by RequireJS. Obviously you can also programmatically "require" some further resources inside your code dynamically:
-
-```javascript
-function someFunction(param){
-    if(param > 40){
-        require(['./myModule.js'], function(){
-            // this callback will be invoked once the dependency has been loaded.
-        });
-    }
-}
-```
-
-This turns out to be quite useful for our lazy Angular loading implementation.
+The asynch and potentially even parallel loading of the necessary files is completely managed by RequireJS.
 
 ## Lazy loading and dependency injection
 
@@ -199,9 +187,102 @@ When I researched for a proper appraoch on implementing lazy loading in Angular,
 - Bennadel on [his approach to using RequireJS for lazy loading][bennadel_requirejs].
 - [angularAMD](http://marcoslin.github.io/angularAMD/#/home) - a project that combines AngularJS+RequireJS in a library for better reusability.
 
+All of them differ only sightly from each other.
+
+
+
+### Implementation
+
+In my implementation I started by using Isitor's implementation using RequireJS, combined John Papa's ng-demo code and the suggestions from the Angular book (I referenced) for the feature-based modularization as well as Avi Haiat's suggestions to reduce hardcoded Angular module names.
+
+<p class="notice tip">
+    The source code can be found at <a href="https://github.com/juristr/lazy-angular" target="_blank">my GitHub repository</a>.
+</p>
+
+So, where to start..? I pre-generated the initial project scaffold by using the [Yeoman Angular generator for RequireJS](https://github.com/aaronallport/generator-angular-require). Basically to have an initial setup with RequireJS and everything already in place.
+
+When you use RequireJS you have to use [Angular's deferred bootstrap](https://code.angularjs.org/1.2.1/docs/guide/bootstrap#overview_deferred-bootstrap) approach because Angular has to wait for Require to load all of the necessary files before booting up. As a consequence, in the index.html you have a single line that starts RequireJS and instructs it to load `main.js`.
+
+```html
+<body>
+    ...
+    <script src="bower_components/requirejs/require.js" data-main="scripts/main.js"></script>
+</body>
+```
+
+`main.js` loads loads all of the Angular files you need, like `angular-route`, `angular-resource` and so on. Then it calls `angular.resumeBootstrap(..)`. The more important file is `app.js` as that's where the application code really appears. But before going ahead with that, let's first take a look at how the lazy loading is actually implemented.
+
+To lazy load parts of the application we need two steps
+
+1. load the required JavaScript files
+1. dynamically register them with the Angular dependency injection mechanism
+
+**Step 1)** is done with RequireJS and it is pretty straightforward
+
+```javascript
+...
+require(dependencies, function(){
+    // do something with 'em
+});
+...
+```
+
+At this point we have the JavaScript files loaded and interpreted in the browser. Being an async call "outside the Angular world" we need to make Angular aware of the changes by calling the $digest loop.
+
+```javascript
+require(dependencies, function() {
+    $rootScope.$apply(function() {
+        deferred.resolve();
+    });
+});
+```
+
+**Step 2)** involves more trickery because Angular needs to know upfront about all of the available resources in order to have its DI mechanism work properly. We can make use of various `register` methods made available by some Angular providers to dynamically register new artifacts like controllers, services, directives etc.  
+More specifically...
+
+- `$controllerProvider.register` for registering new controllers ([see docs](https://docs.angularjs.org/api/ng/provider/$controllerProvider#register))
+- `$compileProvider.directive` for registering new directives ([see docs](https://docs.angularjs.org/api/ng/provider/$compileProvider))
+- `$filterProvider.register`; ([see docs](https://docs.angularjs.org/api/ng/provider/$filterProvider))
+- `$provide.factory` and `$provide.service` for registering new factories and services ([see docs](https://docs.angularjs.org/api/auto/service/$provide))
+
+Since these functions are only available at [configuration time](https://docs.angularjs.org/guide/module), we need to keep a reference for later usage.
+
+```javascript
+app.config([
+    ...
+    '$controllerProvider',
+    '$compileProvider',
+    '$filterProvider',
+    '$provide',
+    ...
+    function(..., $controllerProvider, $compileProvider, $filterProvider, $provide, ...) {
+      app.controller = $controllerProvider.register;
+      app.directive = $compileProvider.directive;
+      app.filter = $filterProvider.register;
+      app.factory = $provide.factory;
+      app.service = $provide.service;
+      ...
+    }
+]);
+```
+
+Due to this overwriting of the standard functions, all subsequent controller, service, directive...registrations now use the modified ones, allowing to register artifacts later in the application's lifecycle, thus being essential for a lazy loading approach.
+
+```javascript
+app.controller('MyController', ['$scope', function($scope){
+    ...
+}]);
+```
+
+`app.controller` points to the `$controllerProvider.register` function which is completely transparent during development.
+
 {% comment %}
 
-## Implementation
+### Weaknesses, open points
+
+- having a dedicate `namespace.js` just for the purpose of not hardcoding the Angular mdoule name.
+- scripts folder rather than an app folder that contains everything
+- Spread route definitions across multiple module .config() methods
 
 ## Conclusion
 
