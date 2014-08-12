@@ -191,16 +191,6 @@ Then enter the project where you wish to use Grunt and execute
 $ npm install grunt
 ```
 
-### Grunt modules
-
-Grunt modules are distributed through Node's NPM directory. Normally, Grunt specific modules are prefixed with `grunt-` and official grunt plugins are prefixed `grunt-contrib`. Example: `grunt-contrib-uglify`.
-
-Hence, Grunt modules are node modules and thus you install them just as you normally would
-
-```
-$ npm install --save-dev grunt-contrib-uglify
-```
-
 ### Gruntfile.js
 
 The `Gruntfile.js` is the place where you configure the Grunt tasks for your project. It starts as simple as this file:
@@ -212,6 +202,29 @@ module.exports = function(grunt) {
 ```
 
 The `grunt` object is Grunt's **API**: [http://gruntjs.com/api/grunt](http://gruntjs.com/api/grunt).
+
+### Grunt modules
+
+Grunt modules are distributed through Node's NPM directory. Normally, Grunt specific modules are prefixed with `grunt-` and official grunt plugins are prefixed `grunt-contrib`. Example: `grunt-contrib-uglify`.
+
+Hence, Grunt modules are node modules and thus you install them just as you normally would
+
+```
+$ npm install --save-dev grunt-contrib-uglify
+```
+
+To use external Grunt tasks in your `Gruntfile` you first have to load them. This is done by using the `loadNpmTasks` on the `grunt` object.
+
+```javascript
+module.exports = function(grunt){
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  ...
+}
+```
+
+<p class="notice tip">
+  In order not having to do this for every single task you use (which can be quite a lot), you may want to use the <code>load-grunt-tasks</code> plugin and execute <code>require('load-grunt-tasks')(grunt)</code> at the beginning of your Gruntfile.js. This will autoload all grunt modules, ready to be used.
+</p>
 
 ### Anatomy of Grunt tasks
 
@@ -344,6 +357,36 @@ target2: {
 
 The expand property tells Grunt to generate a corresponding destination for each matched file. `cwd` stands for the current working directory, `src` and `dest` are self explanatory and `ext` is the extension to be used for the destination files. More options can be found [in the official docs](http://gruntjs.com/configuring-tasks).
 
+### Running tasks
 
+Ultimately your goal is to execute the Grunt tasks you defined. If you remember, you previously installed the `grunt-cli` tool globally which you can now use to run a task.
+
+```
+$ grunt task1 task2
+```
+
+If you have a multitarget task, then use `:` to specify it.
+
+```
+$ grunt task:target1
+```
+
+If you run `$ grunt` instead, the **default task** will be executed which you can configure as follows:
+
+```javascript
+module.exports = function(grunt) {
+  grunt.registerTask('build', function() {
+    console.log('building...');
+  });
+
+  grunt.registerTask('test', function() {
+    console.log('testing...');
+  });
+  
+  grunt.registerTask('default', ['build', 'test']);
+};
+```
+
+Having this `Gruntfile.js` configuration executes `build` and `test` when you type `grunt` into your console.
 
 
