@@ -44,23 +44,82 @@ More on [nodejs.org](http://nodejs.org/) and [npmjs.org](http://www.npmjs.org).
 
 ### Installing node packages
 
-Installing a node package is as simple as executing
+Installing a node package is as simple as executing:
 
 ```
 $ npm install grunt
 ```
 
-Node packages are installed into a folder called `node_modules`.
+This installs the grunt node package into a folder called `node_modules`.
 
 ![Demo: installation of a node  module](/blog/assets/imgs/node-grunt-yeoman/node-module-install-demo.gif)
 
 The best practices approach though is to create a `package.json` file. Since the suggested approach is to not commit the content of your `node_modules` folder to your VCS, but rather to automatically reinstall them during the build process, you need a place to keep track about the installed package and its according version: `package.json`.
 
-To create a new one, execute `npm init` inside a clean folder. This will guide you through the creation of a new file.
+To create a new `package.json`, simply execute `npm init` inside a clean folder. You'll have to answer a few questions but ultimately ou will get a nice new package config file.
 
-![](/blog/assets/imgs/node-grunt-yeoman/package-json.png)
+![Example of a package.json file](/blog/assets/imgs/node-grunt-yeoman/package-json.png)
 
+Whenever you install new packages use the `--save` or `--save-dev` option to persist the package into the `package.json` file.
 
+```
+$ npm install --save-dev grunt
+```
+
+This automatically adds `grunt` to the `devDependencies` section of the package config file:
+
+```json
+{
+  ...
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
+```
+
+Similarly, if you add `--save` it'll be added to the `dependencies` section. The difference is mainly that `dependencies` are actively used by your appliation and should be deployed together with it. `devDependencies` are tools you use during the development of the application but they normally do not require to be deployed (i.e. code minifier scripts etc.).  
+To **uninstall** use..
+
+```
+$ npm uninstall --save-dev grunt
+```
+
+..which uninstalls `grunt` and removes it from the `package.json` as well.
+
+### Restoring packages
+
+As I mentioned, you normally don't commit the `node_modules` folder to your VCS. Thus, when you as a dev or the buildserver retrieves the source code, the packages need to be restored somehow. By having a `package.json` file this is simply done executing
+
+```
+$ npm init
+```
+
+NPM takes the dependencies stored in package config file and retrieves them in the exact version you specified.
+
+### Versioning
+
+NPM packages use [Semantic Versioning](http://semver.org/). 
+
+<blockquote>
+  <p>Given a version number MAJOR.MINOR.PATCH, increment the:</p>
+  <ul>
+    <li>MAJOR version when you make incompatible API changes,</li>
+    <li>MINOR version when you add functionality in a backwards-compatible manner, and</li>
+    <li>PATCH version when you make backwards-compatible bug fixes.</li>
+  </ul>
+  <cite><a href="http://semver.org/">http://semver.org/</a></cite>
+</blockquote>
+
+Each package inside `package.json` is listed with its according version and upgrade behavior. You can have the following schemes:
+
+- `1.3.5`:  
+tells npm to just use the given version (most restrictive).
+- `~1.3.5` or `1.3.x`:  
+tells npm to only upgrade the given package for increments of the patch version (normally just bugfixes). NPM defines it as `~1.2.3 := >=1.2.3-0 <1.3.0-0`.
+- `^1.3.5`:  
+tells npm it can upgrade to any version < `2.0.0`. This is the new default behavior when you install node packages (before it was `~`). NPM defines it as `1.2.3 := >=1.2.3-0 <2.0.0-0`.
+- `latest` or `*`:  
+tells npm to always update to the latest version (not recommended)
 
 ## Yeoman
 
