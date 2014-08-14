@@ -7,6 +7,7 @@ coverimage: false
 tags: ["JavaScript"]
 ---
 
+This article aims at introducing you to some of the currently most popular tools when developing modern web applications with JavaScript. These are totally not new at all and have been around for a couple of years now. Still, if you didn't get into them already, this post might help you get started.
 
 ## Node and NPM
 
