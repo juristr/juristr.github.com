@@ -43,6 +43,22 @@ Besides creating server applications with Node, it has also become the **VM** fo
 
 More on [nodejs.org](http://nodejs.org/) and [npmjs.org](http://www.npmjs.org).
 
+### Installing Node
+
+The best way to install Node.js is to download the desired package from the [official site](http://nodejs.org/). This will also automatically install NPM.
+
+Once that's done, typing..
+
+```
+$ node -v
+```
+
+..into your terminal should output the installed version of node.
+
+![](/blog/assets/imgs/node-grunt-yeoman/node-install.png)
+
+You're now ready to go.
+
 ### Installing node packages
 
 Installing a node package is as simple as executing:
