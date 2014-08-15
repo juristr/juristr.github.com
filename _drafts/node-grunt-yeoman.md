@@ -1,13 +1,13 @@
 ---
 layout: articles-post
 title: "Node, Grunt, Bower and Yeoman - A Modern web dev's Toolkit"
-lead: "An introduction to todays"
+lead: "An introduction for ambitious newbies"
 show_img_in_detail: false
 coverimage: false
 tags: ["JavaScript"]
 ---
 
-This article aims at introducing you to some of the currently most popular tools when developing modern web applications with JavaScript. These are totally not new at all and have been around for a couple of years now. Still, if you didn't get into them already, this post might help you get started.
+This article aims at introducing you to some of the currently most popular tools when developing modern web applications with JavaScript. These are totally not new at all and have been around for a couple of years now. Still, I found many devs still don't use or know about them (as you might), wherefore this article tries to give you a quick, concise intro to get you started.
 
 ## Node and NPM
 
@@ -17,7 +17,7 @@ Node.js brings JavaScript to the server and the desktop. While initially JavaScr
 
 ![](/blog/assets/imgs/node-grunt-yeoman/nodejs.png)
 
-A simple webserver
+Creating a web server is as simple as these couple of lines of code.
 
 ```javascript
 var http = require('http');
@@ -28,24 +28,24 @@ http.createServer(function (req, res) {
 console.log('Server running at http://127.0.0.1:1337/');
 ```
 
-To run the server:
+To run it, execute:
 
 ```javascript
 $ node start
 Server running at http://172.0.0.1:1337/
 ```
 
-One of the great things about node is its enourmous community which creates and publishes so-called **node modules** on the [NPM directory](https://www.npmjs.org/) (currently ~90.000 modules and ~390.000 downloads last month).
+One of the great things about node is its enourmous community which creates and publishes so-called **node modules** on the [NPM directory](https://www.npmjs.org/), Node's package manager. Currently there are about ~90.000 modules and there have been around ~390.000 downloads last month.
 
 ![](/blog/assets/imgs/node-grunt-yeoman/npm.png)
 
-Besides creating server applications with Node, it has also become the **VM** for JavaScript development tools like minifiers, code linters etc. Both, Grunt and Yeoman (described in this article) are based upon Node's infrastructure.
+Besides creating server-side applications with Node, it has also become the **VM** for JavaScript development tools like minifiers, code linters etc. Both, Grunt and Yeoman (described in this article) are based upon Node's infrastructure.
 
 More on [nodejs.org](http://nodejs.org/) and [npmjs.org](http://www.npmjs.org).
 
 ### Installing Node
 
-The best way to install Node.js is to download the desired package from the [official site](http://nodejs.org/). This will also automatically install NPM.
+So, to get started, you have to first install the Node runtime. The best way to do so is to download the desired package from the [official site](http://nodejs.org/). This will also automatically install NPM on your machine.
 
 Once that's done, typing..
 
@@ -53,11 +53,9 @@ Once that's done, typing..
 $ node -v
 ```
 
-..into your terminal should output the installed version of node.
+..into your terminal should output the installed version of node and thus confirm you're ready to go.
 
 ![](/blog/assets/imgs/node-grunt-yeoman/node-install.png)
-
-You're now ready to go.
 
 ### Installing node packages
 
@@ -73,17 +71,17 @@ This installs the grunt node package into a folder called `node_modules`.
 
 The best practices approach though is to create a `package.json` file. Since the suggested approach is to not commit the content of your `node_modules` folder to your VCS, but rather to automatically reinstall them during the build process, you need a place to keep track about the installed package and its according version: `package.json`.
 
-To create a new `package.json`, simply execute `npm init` inside a clean folder. You'll have to answer a few questions but ultimately ou will get a nice new package config file.
+To create a new `package.json` file, simply execute `npm init` inside a clean folder. You'll have to answer a few questions but ultimately you will get a nice new package config file.
 
 ![Example of a package.json file](/blog/assets/imgs/node-grunt-yeoman/package-json.png)
 
-Whenever you install new packages use the `--save` or `--save-dev` option to persist the package into the `package.json` file.
+Whenever you install new packages you then use the `--save` or `--save-dev` option to persist the package into the `package.json` file. For instance, executing...
 
 ```
 $ npm install --save-dev grunt
 ```
 
-This automatically adds `grunt` to the `devDependencies` section of the package config file:
+...will automatically add `grunt` to the `devDependencies` section of the package config file:
 
 ```json
 {
@@ -94,24 +92,25 @@ This automatically adds `grunt` to the `devDependencies` section of the package 
 }
 ```
 
-Similarly, if you add `--save` it'll be added to the `dependencies` section. The difference is mainly that `dependencies` are actively used by your appliation and should be deployed together with it. `devDependencies` are tools you use during the development of the application but they normally do not require to be deployed (i.e. code minifier scripts etc.).  
-To **uninstall** use..
+Similarly, if you add `--save` it'll be added to the `dependencies` section. The difference is mainly that `dependencies` are actively used by your appliation and should be deployed together with it. On the other side, `devDependencies` are tools you use during the development of the application, which normally do not require to be deployed together with it. Examples are code minifier scripts, test runners etc.
+
+To **uninstall** a package, use..
 
 ```
 $ npm uninstall --save-dev grunt
 ```
 
-..which uninstalls `grunt` and removes it from the `package.json` as well.
+..which uninstalls `grunt` and removes it from `package.json`.
 
 ### Restoring packages
 
-As I mentioned, you normally don't commit the `node_modules` folder to your VCS. Thus, when you as a dev or the buildserver retrieves the source code, the packages need to be restored somehow. By having a `package.json` file this is simply done executing
+As I mentioned, you normally don't commit the `node_modules` folder to your VCS. Thus, when a you as a developer, or the buildserver retrieves the source code from your VCS, somehow, the packages need to be restored. This is where the `package.json` file comes into play again. By having it in the root directory, executing..
 
 ```
 $ npm init
 ```
 
-NPM takes the dependencies stored in package config file and retrieves them in the exact version you specified.
+..instructs NPM to read the dependencies in the config file and to restore them using the specified version.
 
 ### Versioning
 
@@ -130,13 +129,13 @@ NPM packages use [Semantic Versioning](http://semver.org/).
 Each package inside `package.json` is listed with its according version and upgrade behavior. You can have the following schemes:
 
 - `1.3.5`:  
-tells npm to just use the given version (most restrictive).
+tells npm to use exactly this given version of the package (most restrictive).
 - `~1.3.5` or `1.3.x`:  
-tells npm to only upgrade the given package for increments of the patch version (normally just bugfixes). NPM defines it as `~1.2.3 := >=1.2.3-0 <1.3.0-0`.
+tells npm to only upgrade the given package for increments of the patch version (normally just bugfixes). NPM defines it as `~1.3.5 := >=1.3.5-0 <1.4.0-0`.
 - `^1.3.5`:  
-tells npm it can upgrade to any version < `2.0.0`. This is the new default behavior when you install node packages (before it was `~`). NPM defines it as `1.2.3 := >=1.2.3-0 <2.0.0-0`.
+tells npm it can upgrade to any version smaller than the next major release: `<2.0.0`. This is the new default behavior when you install node packages (before it was `~`). NPM defines it as `1.3.5 := >=1.3.5-0 <2.0.0-0`.
 - `latest` or `*`:  
-tells npm to always update to the latest version (not recommended)
+tells npm to always update to the latest version (not recommended).
 
 ## Bower
 
@@ -150,9 +149,12 @@ You install Bower as a global package through NPM (obviously)
 $ npm install -g bower
 ```
 
-Then, similarly as you did with NPM, you execute `bower init` on your terminal to create a new `bower.json` configuration file (the equivalent to `package.json`).
+Then, similarly as you did with NPM, you execute `bower init` on your terminal to create a new `bower.json` configuration file (the equivalent of `package.json` for NPM).
 
-![Example of a bower.json file](/blog/assets/imgs/node-grunt-yeoman/bowerjson.png)
+<figure>
+  <img src="/blog/assets/imgs/node-grunt-yeoman/bowerjson.png" />
+  <figcaption>Example of a bower.json file</figcaption>
+</figure>
 
 Installing packages is identical to NPM.
 
@@ -160,7 +162,7 @@ Installing packages is identical to NPM.
 $ bower install --save jquery
 ```
 
-You can also download a specific version by appending `jquery#1.9.1`. Note, the `--save` (or `-S`) option adds the dependencie to your `bower.json` config file. Installed packages will be placed in the `bower_components` directory. It is suggested to not commit that one to your VCS (just as with the `node_modules` directory).
+You can also download a specific version by appending `jquery#1.9.1`. Note, the `--save` (or `-S`) option adds the dependency to your `bower.json` config file. Installed packages will be placed in the `bower_components` directory. It is suggested to not commit that one to your VCS (just as with the `node_modules` directory).
 
 To uninstall a package simply use
 
@@ -168,7 +170,7 @@ To uninstall a package simply use
 $ bower uninstall --save jquery
 ```
 
-What's particularly interesting is that Bower allows you to install packages from git repositories or even URLs.
+What's particularly interesting is that Bower allows you to install packages from any git repository or even a plain URL.
 
 ```
 $ bower install git:/github.com/user/package.git
@@ -180,13 +182,13 @@ or
 $ bower install http://example.com/script.js
 ```
 
-If you require some more advanced configuration like changing the name of the dependencies directory or its location, you may want to use a `.bowerrc` configuration file placed at the root of your project. More about the available configuraiton options can be found [at the official site](http://bower.io/docs/config/).
+If you require some more advanced configuration, like changing the name of the dependencies directory or its location, you may want to use a `.bowerrc` configuration file placed at the root of your project directory structure. More about the available configuration options can be found [at the official site](http://bower.io/docs/config/).
 
-There's another nice article I found on Medium which quickly [introduces bower](https://medium.com/@ZaidHanania/bower-101-c0b57322df8).
+There's another nice article I found on Medium that gives [ a quick introduction to Bower](https://medium.com/@ZaidHanania/bower-101-c0b57322df8) which you might want to take a look at as well.
 
 ## Yeoman
 
-Yeoman has become the standard scaffolding toolkit for creating modern JavaScript applications.
+Yeoman has become the de-facto standard scaffolding toolkit for creating modern JavaScript applications.
 
 ![](/blog/assets/imgs/node-grunt-yeoman/yeoman-logo.png)
 
@@ -197,34 +199,34 @@ Yeoman is build around **generators** which are either developed by the Yeoman t
 What's nice about such approach is
 
 - that you can quickly get up to speed. Creating a project setup with proper tools and dev support can cost you lots of time and requires expert knowledge.
-- that you don't necessarly have to know all the best practices tools that are currently available on the market. Yeoman assembles them for you to get started. Then once you get more expert you can adjust them to your project needs
-- that you learn lots and lots of new tools.
+- that you don't necessarly have to know all the best practices tools that are currently available on the market. Yeoman assembles them for you, s.t. you can get started immediately. Then once you get more expertise, you can adjust Yeoman's configuration to make it fit even more to your project needs.
+- a great way for you to learn lots and lots of new tools.
 
-Yeoman is distributed as a node module. Simply install it globally
+Yeoman as well as its generators are distributed as a node modules. Simply install it globally
 
 ```
 $ npm install -g yo
 ```
 
-Then find your generator (i.e. [for angular](https://github.com/yeoman/generator-angular)), install it...
+Then find your generator (i.e. [for angular](https://github.com/yeoman/generator-angular)) and install it using the following command.
 
 ```
 $ npm install -g generator-angular
 ```
 
-and then execute it within your project directory to create a new app.
+Finally, execute the generator within your project directory to create a new app.
 
 ```
 $ yo angular [app-name]
 ```
 
-This will create the initial scaffold from which you can then start building your app. But Yeoman goes futher, based on the generator you use, you may also generate single components, like Angular controllers, directives etc. while you develop.
+This will create the initial scaffold from which you can then start building your application. But Yeoman goes even further, based on the generator you use, you may also generate single components, like Angular controllers, directives etc. while you develop.
 
 ```
 $ yo angular:controller user
 ```
 
-That's all regarding Yeoman's usage. More advanced topics are about creating your own custom generator. Simply [study the docs](http://yeoman.io/authoring/), they're quite detailed.
+That's all regarding Yeoman's usage. More advanced topics are about creating your own custom generators. Simply [study the docs](http://yeoman.io/authoring/) as they're quite detailed.
 
 ## Grunt
 
@@ -232,12 +234,12 @@ Grunt is **automation**. It is a task-based command line build tool for JavaScri
 
 ![](/blog/assets/imgs/node-grunt-yeoman/grunt-logo.jpeg)
 
-To get started, simply follow the [online guide on the official site](http://gruntjs.com/getting-started). There's also a great book [Getting Started with Grunt - The JavaScript Task Runner](http://www.packtpub.com/web-development/getting-started-grunt-javascript-task-runner) published by PacktPub which is ideal for beginners.
+To get started, simply follow the [online guide on the official site](http://gruntjs.com/getting-started). There's also a great book [Getting Started with Grunt - The JavaScript Task Runner](http://www.packtpub.com/web-development/getting-started-grunt-javascript-task-runner) published by PacktPub, which is ideal for beginners.
 
 
 ### Installation
 
-Grunt runs on top of Node.js platform and is distributed through the npm repository. It comes as two different tools
+Grunt runs on top of the Node.js platform and is distributed through the npm repository. It comes as two different tools
 
 - `grunt-cli` which is the **Grunt Command-line interface**
 - `grunt` module
@@ -264,30 +266,17 @@ module.exports = function(grunt) {
 };
 ```
 
-The `grunt` object is Grunt's **API**: [http://gruntjs.com/api/grunt](http://gruntjs.com/api/grunt).
+The `grunt` object is Grunt's **API**: [http://gruntjs.com/api/grunt](http://gruntjs.com/api/grunt). It allows you to interact with Grunt, to register your tasks and adjust its configuration.
 
 ### Grunt modules
 
-Grunt modules are distributed through Node's NPM directory. Normally, Grunt specific modules are prefixed with `grunt-` and official grunt plugins are prefixed `grunt-contrib`. Example: `grunt-contrib-uglify`.
+Grunt modules are distributed through Node's NPM directory. Normally, they are prefixed with `grunt-` and official grunt plugins are prefixed with `grunt-contrib`. Example: `grunt-contrib-uglify`.
 
-Hence, Grunt modules are node modules and thus you install them just as you normally would
+Hence, Grunt modules are node modules and thus you install them just as I've shown before.
 
 ```
 $ npm install --save-dev grunt-contrib-uglify
 ```
-
-To use external Grunt tasks in your `Gruntfile` you first have to load them. This is done by using the `loadNpmTasks` on the `grunt` object.
-
-```javascript
-module.exports = function(grunt){
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  ...
-}
-```
-
-<p class="notice tip">
-  In order not having to do this for every single task you use (which can be quite a lot), you may want to use the <code>load-grunt-tasks</code> plugin and execute <code>require('load-grunt-tasks')(grunt)</code> at the beginning of your Gruntfile.js. This will autoload all grunt modules, ready to be used.
-</p>
 
 ### Anatomy of Grunt tasks
 
@@ -305,7 +294,7 @@ module.exports = function(grunt){
 }
 ```
 
-In the end, a Grunt task is simply a function that you register with Grunt.
+As you can see, a task is simply a function that you register with Grunt.
 
 ```javascript
 module.exports = function(grunt){
@@ -327,9 +316,22 @@ module.exports = function(grunt){
 }
 ```
 
+Note, externally downloaded tasks through NPM have to be loaded first, in order to be used in your `Gruntfile.js`. This is done by using the `loadNpmTasks` on the `grunt` object.
+
+```javascript
+module.exports = function(grunt){
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  ...
+}
+```
+
+<p class="notice tip">
+  In order not having to do this for every single task you use (which can be quite a lot), you may want to use the <code>load-grunt-tasks</code> plugin and execute <code>require('load-grunt-tasks')(grunt)</code> at the beginning of your Gruntfile.js. This will autoload all grunt modules, ready to be used.
+</p>
+
 ### Multitasks
 
-Grunt also allows you to group a task execution.
+Grunt also allows you to group a task execution as follows:
 
 ```javascript
 module.exports = function(grunt){
@@ -349,7 +351,7 @@ module.exports = function(grunt){
 }
 ```
 
-These can then be executed with `grunt stringCheck:target1` and `runt stringCheck:target2`. `target1` and `target2` can obviously be named differently.
+You can then execute them with `grunt stringCheck:target1` and `runt stringCheck:target2`. `target1` and `target2` can (and should) obviously be named differently.
 
 ### Globbing
 
@@ -361,9 +363,9 @@ File globbing or wildcard matching is a way to capture a large group of files wi
 - `{}` allows for a comma-separated list of "or" expressions 
 - `!` at the beginning of a pattern will negate the match
 
-`All` most people need to know is that `foo/*.js` will match all files ending with `.js` in the `foo/` subdirectory, but `foo/**/*.js` will match all files ending with `.js` in the `foo/` _subdirectory and all of its subdirectories_.
+All most people need to know is that `foo/*.js` will match all files ending with `.js` in the `foo/` subdirectory, but `foo/**/*.js` will match all files ending with `.js` in the `foo/` _subdirectory and all of its subdirectories_.
 
-Since most of the tasks ultimately interact with the file system, Grunt already predisposes a structure to make task devs' life easier. If a globbing expession is specified, Grunt tries to match it against the file system and places all matches in the `this.files` array.  
+Since most of the tasks ultimately interact with the file system, Grunt already predisposes a structure to make task devs' life easier. If a globbing expession is specified, Grunt tries to match it against the file system and places all matches in the `this.files` array within your Grunt task function.  
 Hence, you will see a lot of tasks having a syntax like
 
 ```javascript
@@ -402,6 +404,7 @@ target1: {
   }
 }
 ```
+
 Another common task is to copy a set of files to a given directory (for example with preprocessors like SASS or CoffeeScript compilers). Instead of providing the single src and dest instructions we can use the following syntax:
 
 ```javascript
@@ -451,5 +454,4 @@ module.exports = function(grunt) {
 ```
 
 Having this `Gruntfile.js` configuration executes `build` and `test` when you type `grunt` into your console.
-
 
