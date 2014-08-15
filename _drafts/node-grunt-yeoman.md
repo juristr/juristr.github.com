@@ -1,7 +1,7 @@
 ---
 layout: articles-post
-title: "Node, Grunt and Yeoman - A Modern web dev's Toolkit"
-lead: "Documenting my learning experience with Angular.js"
+title: "Node, Grunt, Bower and Yeoman - A Modern web dev's Toolkit"
+lead: "An introduction to todays"
 show_img_in_detail: false
 coverimage: false
 tags: ["JavaScript"]
@@ -121,6 +121,52 @@ tells npm to only upgrade the given package for increments of the patch version 
 tells npm it can upgrade to any version < `2.0.0`. This is the new default behavior when you install node packages (before it was `~`). NPM defines it as `1.2.3 := >=1.2.3-0 <2.0.0-0`.
 - `latest` or `*`:  
 tells npm to always update to the latest version (not recommended)
+
+## Bower
+
+[Bower](http://bower.io/) is to the web browser what NPM is to Node.js. It is a package manager for your front-end development libraries like jQuery, Bootstrap and so on.
+
+![](/blog/assets/imgs/node-grunt-yeoman/bower-logo.png)
+
+You install Bower as a global package through NPM (obviously)
+
+```
+$ npm install -g bower
+```
+
+Then, similarly as you did with NPM, you execute `bower init` on your terminal to create a new `bower.json` configuration file (the equivalent to `package.json`).
+
+![Example of a bower.json file](/blog/assets/imgs/node-grunt-yeoman/bowerjson.png)
+
+Installing packages is identical to NPM.
+
+```
+$ bower install --save jquery
+```
+
+You can also download a specific version by appending `jquery#1.9.1`. Note, the `--save` (or `-S`) option adds the dependencie to your `bower.json` config file. Installed packages will be placed in the `bower_components` directory. It is suggested to not commit that one to your VCS (just as with the `node_modules` directory).
+
+To uninstall a package simply use
+
+```
+$ bower uninstall --save jquery
+```
+
+What's particularly interesting is that Bower allows you to install packages from git repositories or even URLs.
+
+```
+$ bower install git:/github.com/user/package.git
+```
+
+or
+
+```
+$ bower install http://example.com/script.js
+```
+
+If you require some more advanced configuration like changing the name of the dependencies directory or its location, you may want to use a `.bowerrc` configuration file placed at the root of your project. More about the available configuraiton options can be found [at the official site](http://bower.io/docs/config/).
+
+There's another nice article I found on Medium which quickly [introduces bower](https://medium.com/@ZaidHanania/bower-101-c0b57322df8).
 
 ## Yeoman
 
