@@ -4,7 +4,7 @@ title: "Node, Grunt, Bower and Yeoman - A Modern web dev's Toolkit"
 lead: "An introduction for ambitious newbies"
 show_img_in_detail: false
 coverimage: false
-tags: ["JavaScript"]
+tags: ["JavaScript", "Node.js"]
 ---
 
 This article aims at introducing you to some of the currently most popular tools when developing modern web applications with JavaScript. These are totally not new at all and have been around for a couple of years now. Still, I found many devs still don't use or know about them (as you might), wherefore this article tries to give you a quick, concise intro to get you started.
@@ -453,5 +453,16 @@ module.exports = function(grunt) {
 };
 ```
 
-Having this `Gruntfile.js` configuration executes `build` and `test` when you type `grunt` into your console.
+Having this `Gruntfile.js` configuration executes `build` and `test` when you type `grunt` into your console.gulp
+
+## Gulp
+
+This intro wouldn't be complete if it doesn't mention [Gulp](http://gulpjs.com/). Gulp is the JavaScript task runner newcomer build on top of [Node.js streams](https://github.com/substack/stream-handbook). It aims at making build scripts easier to use by "preferring code over configuration" (unlike Grunt which is based on configuration).
+
+![](/blog/assets/imgs/node-grunt-yeoman/gulp-logo.png)
+
+> gulp's use of streams and code-over-configuratin makes for a simpler and more intuitive build. <cite>gulpjs.com</cite>
+
+I didn't study it in detail yet, but you should definitely keep an eye on it as it is fastly growing and gaining in popularity.  
+For now I won't include more details, but I definitely will update this article once I've taken a closer look at it.
 
