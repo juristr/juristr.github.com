@@ -67,13 +67,19 @@ $ npm install grunt
 
 This installs the grunt node package into a folder called `node_modules`.
 
-![Demo: installation of a node  module](/blog/assets/imgs/node-grunt-yeoman/node-module-install-demo.gif)
+<figure>
+  <img src="/blog/assets/imgs/node-grunt-yeoman/node-module-install-demo.gif" />
+  <figcaption>Demo: installation of a node  module</figcaption>
+</figure>
 
 The best practices approach though is to create a `package.json` file. Since the suggested approach is to not commit the content of your `node_modules` folder to your VCS, but rather to automatically reinstall them during the build process, you need a place to keep track about the installed package and its according version: `package.json`.
 
 To create a new `package.json` file, simply execute `npm init` inside a clean folder. You'll have to answer a few questions but ultimately you will get a nice new package config file.
 
-![Example of a package.json file](/blog/assets/imgs/node-grunt-yeoman/package-json.png)
+<figure>
+  <img src="/blog/assets/imgs/node-grunt-yeoman/package-json.png"/>
+  <figcaption>Example of a package.json file</figcaption>
+</figure>
 
 Whenever you install new packages you then use the `--save` or `--save-dev` option to persist the package into the `package.json` file. For instance, executing...
 
