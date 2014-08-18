@@ -207,10 +207,13 @@ td { vertical-align: top; }
 
 .article .content-wrapper {
   position: relative;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Helvetica", "Arial";
   font-size: 16px;
+  font-weight: 300;
+  text-align: justify;
   line-height: 1.5;
-  color: #555;
+  /*color: #555;*/
+  color: #000;
   word-wrap: break-word;
   background: #FFF;
   box-shadow: 0 2px 2px rgba(0,0,0,0.25);
@@ -1056,7 +1059,6 @@ pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
     display: none;
   }
 
-  .article .content-wrapper,
   .article .content-wrapper .notice {
     font-size: 18px;
   }
