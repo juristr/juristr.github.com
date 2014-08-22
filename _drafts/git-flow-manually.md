@@ -49,16 +49,16 @@ Source: [http://www.slideshare.net/lemiorhan/git-branching-model](http://www.sli
 
 ## Usage
 
-Zuerst muss ein leeres Repository initialisiert und eventuell mit einem remote repo verbunden werden
+First of all you have to initialize an empty repository and eventually connect it immediately to your remote one.
 
 ```
 $ git init
-$ git remote add origin git@git.services.siag.it/....
+$ git remote add origin git@.....
 ```
 
-Füge eine `.gitignore` Datei vom [Github repo](https://github.com/github/gitignore/) dazu (wenn nicht vorhanden).
+Furthermore I'd suggest to also add a `.gitignore` file. You may start from an existing one based on your project type: [Github .gitignore repository](https://github.com/github/gitignore/).
 
-"Push" alles auf das remote Repository
+"push" everything up to your remote repo.
 
 ```
 $ git push --set-upstream origin master
@@ -81,7 +81,7 @@ $ git push origin userstory/login
 
 ### Update feature from master
 
-Frequently update from origin/master to get the latest changes that have been pushed to the repo
+Frequently update from origin/master to get the latest changes that have been pushed to the repo by your peers.
 
 ```
 $ git fetch origin master
@@ -170,7 +170,9 @@ And then delete the hotfix branch
 $ git branch -d hotfix/login-does-not-work
 ```
 
-### Git flow
+## Ok..I'm a Jedi..give me some tools
+
+### Git flow CLI tool
 
 Git Flow ist eine "Git command line extension" welche die Implementierung des "git flow" erleichtern soll.
 
@@ -178,6 +180,10 @@ Git Flow ist eine "Git command line extension" welche die Implementierung des "g
 - http://danielkummer.github.io/git-flow-cheatsheet/
 
 > Es ist ratsam zuerst den Workflow manuell zu implementieren um ihn besser zu verstehen und erst dann evtl. ein Tool verwenden.
+
+### Haacked's Git Aliases
+
+
 
 ### Configuring Jenkins
 
