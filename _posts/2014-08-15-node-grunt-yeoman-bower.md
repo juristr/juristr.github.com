@@ -242,6 +242,8 @@ Grunt is **automation**. It is a task-based command line build tool for JavaScri
 
 To get started, simply follow the [online guide on the official site](http://gruntjs.com/getting-started). There's also a great book [Getting Started with Grunt - The JavaScript Task Runner](http://www.packtpub.com/web-development/getting-started-grunt-javascript-task-runner) published by PacktPub, which is ideal for beginners.
 
+Another good presentation is the one by "Cowboy" Ben Alman Bocoup about [The State of Grunt (Aug 2014)](http://cowboy.github.io/state-of-grunt-fe-summit-2014-talk/).
+
 
 ### Installation
 
