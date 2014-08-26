@@ -198,7 +198,7 @@ Yeoman has become the de-facto standard scaffolding toolkit for creating modern 
 
 ![](/blog/assets/imgs/node-grunt-yeoman/yeoman-logo.png)
 
-Yeoman is build around **generators** which are either developed by the Yeoman team ([official generators](http://yeoman.io/generators/official.html)) or by the [open source community](http://yeoman.io/generators/community.html). Yeoman itself basically just provides the infrastructure for building and running those generators.
+Yeoman is build around **[generators](http://yeoman.io/generators/)** which are either developed by the Yeoman team official generators or by the open source community. Yeoman itself basically just provides the infrastructure for building and running those generators.
 
 > Yeoman helps you kickstart new projects, prescribing best practices and tools to help you stay productive. <cite>From the <a href="http://yeoman.io/">official site</a></cite>
 
