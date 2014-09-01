@@ -7,9 +7,11 @@ coverimage: false
 tags: ["Git"]
 ---
 
+Git can be used in a variety of ways which is cool. But still, when working within a team, it is good to have a consensus on a common, shared approach in order to avoid conflicts. This article quickly explains how we implemented the "git flow" pattern in on of our projects.
+
 ## Git-flow... 
 
-...is another popular strategy which works around the master branch as well, but in a less "aggressive" way. You have two main branches
+...is a popular strategy which works around the master branch, but in a less "aggressive" way (than the [GitHub flow pattern](https://guides.github.com/introduction/flow/index.html) for instance). You have two main branches
 
 **master branch** contains the latest production code that has been deployed, and versioned with appropriate tags for each release.
 
@@ -174,40 +176,37 @@ $ git branch -d hotfix/login-does-not-work
 
 ### Git flow CLI tool
 
-Git Flow ist eine "Git command line extension" welche die Implementierung des "git flow" erleichtern soll.
+**Git Flow** is a git command line extension to facilitate the usage of the "git flow" pattern.
 
-- https://github.com/nvie/gitflow
-- http://danielkummer.github.io/git-flow-cheatsheet/
+- [Download & install](https://github.com/nvie/gitflow)
+- [Git flow cheatsheet](http://danielkummer.github.io/git-flow-cheatsheet/)
 
-> Es ist ratsam zuerst den Workflow manuell zu implementieren um ihn besser zu verstehen und erst dann evtl. ein Tool verwenden.
+The tool is really nice, nevertheless I'd recommend you to first manually try the flow pattern in order to fully understand it. (that holds for most productivity tools, btw).
 
 ### Haacked's Git Aliases
 
+[Phil Haack](http://haacked.com/about/) (former Microsoft employee and now working on [GitHub for Windows](windows.github.com) @ GitHub) published an interesting set of **13 git aliases** to boost your productivity. You might want to take a look at them:
 
+[http://haacked.com/archive/2014/07/28/github-flow-aliases/](http://haacked.com/archive/2014/07/28/github-flow-aliases/)
+
+To install them, simply copy&paste the aliases into your `.gitconfig` file.  You should find it in your user profile directory (`~` on unix systems; `C:\users\<yourname>\` on Windows).
 
 ### Configuring Jenkins
 
-Um Jenkins nach dem "git flow" Modell zu konfigurieren müssen entsprechende Builds erstellt werden:
+Please refer to my recent blog post **["Git flow with Jenkins and GitLab"](/blog/2014/01/git-flow-jenkins-gitlab/)** for further details on how to configure your build environment.
 
-- continuous
-  - master (od. develop)
-  - production (should also archive successful build)
-  - `*/story/*`
-- deploy
-  - master (od. develop) welches auf dev deployed
-  - `*/release/*` welches auf demo/staging deployed?
+## How we use it - our pipeline
 
-## Links
+We adopted the git flow pattern in one of our projects with a team getting in touch with git for the first time (they used TFS before). I [introduced them to the Git basics](/blog/2013/04/git-explained/) and then they started straight ahead and surprisingly the switch was really easy. By using git flow we minimized the conflicting merges and thus potential problems in the development flow.
 
-- [Offical Git site](http://git-scm.com/)
+**So how did we use it?**. The team applied some kind of Scrum (we're new to it, thus "some kind of" :)). We have two weeks iterations with an initial planning phase (usually on thursday morning) and we have the tester on the team (yay!).
 
-### Tutorials
-- [Interactive Tutorial](http://ndpsoftware.com/git-cheatsheet.html#loc=local_repo;)
-- [Learn Git branching](http://pcottle.github.io/learnGitBranching/index.html)
-- [My Git cheat sheet](https://gist.github.com/juristr/5280366)
-- [Git for Visual Studio](http://juristr.com/blog/2013/06/getting-started-with-git-and-visualstudio/)
+1. At the start of the sprint cycle, our devs take their user stories (on Trello) and create corresponding feature branches having the pattern `userstory/<trello-card-#>-userstory-title` for userstories, `task/<trello-card-#>-title` for tasks and `bug/<trello-card-#>-title` for bugs.
+2. The develop on the feature branches and fequently update them with master (see git flow usage above). If the story/task/bug's implementation takes longer than a day or two, the branch gets pushed to the remote GitLab server (for backup reasons). Each of these pushes gets automatically [build and tested by our Jenkins](/blog/2014/01/git-flow-jenkins-gitlab/).
+3. Once finished with the implementation, the developer either merges it with `master` or creates a merge request on GitLab assigned to another developer for code reviewing. When `master` gets pushed to GitLab, Jenkins automatically takes it and publishes it to our _dev server instance_.
+4. Once every night, the `master` branch gets automatically published to our _test server instance_ s.t. the tester in our team can continue to test the implemented stories and either mark them as done or reject them within our spring cycle. Furthermore a series of automated jMeter tests get executed that verify the correct functioning of our REST api as well as the performance of our endpoints.
+5. After the 2-weeks-cycle one of our devs prepares a release (see the kind of commands to execute in the "git flow usage" above) by merging `master` onto `production`. This is automatically detected by Jenkins which - again - publishes to our _preproduction server instance_ which is also accessible by our customer.
 
-### Other useful Tools
+---
 
-- [GitHub Windows Client](http://windows.github.com/)
-- [TortoiseGit](https://code.google.com/p/tortoisegit/)
+That's the flow we came up with after a few iterations and dicussions within the team and with our tester. What's your approach?? I'd be interested to hear in the comments.
