@@ -198,7 +198,7 @@ Yeoman has become the de-facto standard scaffolding toolkit for creating modern 
 
 ![](/blog/assets/imgs/node-grunt-yeoman/yeoman-logo.png)
 
-Yeoman is build around **generators** which are either developed by the Yeoman team ([official generators](http://yeoman.io/generators/official.html)) or by the [open source community](http://yeoman.io/generators/community.html). Yeoman itself basically just provides the infrastructure for building and running those generators.
+Yeoman is build around **[generators](http://yeoman.io/generators/)** which are either developed by the Yeoman team official generators or by the open source community. Yeoman itself basically just provides the infrastructure for building and running those generators.
 
 > Yeoman helps you kickstart new projects, prescribing best practices and tools to help you stay productive. <cite>From the <a href="http://yeoman.io/">official site</a></cite>
 
@@ -241,6 +241,8 @@ Grunt is **automation**. It is a task-based command line build tool for JavaScri
 ![](/blog/assets/imgs/node-grunt-yeoman/grunt-logo.jpeg)
 
 To get started, simply follow the [online guide on the official site](http://gruntjs.com/getting-started). There's also a great book [Getting Started with Grunt - The JavaScript Task Runner](http://www.packtpub.com/web-development/getting-started-grunt-javascript-task-runner) published by PacktPub, which is ideal for beginners.
+
+Another good presentation is the one by "Cowboy" Ben Alman Bocoup about [The State of Grunt (Aug 2014)](http://cowboy.github.io/state-of-grunt-fe-summit-2014-talk/).
 
 
 ### Installation
