@@ -1,45 +1,50 @@
 ---
 layout: articles-post
-title: "Getting started with the 'Git flow'"
-lead: ""
+title: "Implementing the 'Git flow'"
+lead: "How we use 'git flow' in one of our projects"
 show_img_in_detail: false
 coverimage: false
 tags: ["Git"]
 ---
 
-Git can be used in a variety of ways which is cool. But still, when working within a team, it is good to have a consensus on a common, shared approach in order to avoid conflicts. This article quickly explains how we implemented the "git flow" pattern in on of our projects.
+Git can be used in a variety of ways which is cool. But still, when working within a team, it is good to have a consensus on a common, shared approach in order to avoid conflicts. This article quickly explains how we implemented the "git flow" pattern in one of our projects.
 
 ## Git-flow... 
 
-...is a popular strategy which works around the master branch, but in a less "aggressive" way (than the [GitHub flow pattern](https://guides.github.com/introduction/flow/index.html) for instance). You have two main branches
+...is a popular strategy which works around the master branch, but in a less "aggressive" way (than the [GitHub flow pattern](https://guides.github.com/introduction/flow/index.html) for instance). You have two main branches:
 
-**master branch** contains the latest production code that has been deployed, and versioned with appropriate tags for each release.
+- **master branch** contains the latest production code that has been deployed, and versioned with appropriate tags for each release.
 
-**develop branch** that gets branched off master and contains the latest code for the next feature that is being developed. For each new feature there might be lots of feature branches (always branched off the "develop" branch).  
+- **develop branch** that gets branched off master and contains the latest code for the next feature that is being developed. For each new feature there might be lots of feature branches (always branched off the "develop" branch).  
 Beside the main branches, there are so-called supporting branches:
 
-**feature branches** are simple feature oriented branches
+Beside those, there are supporting branches:
 
-**hotfix branches** are branches for quick and severe bugfixes. they are usually branched off the master branch, fixed in the hotfix branch and then merged  back in master and develop as well.
+- **feature branches** contain the development state for a single feature of the overall product (i.e. a user story). They are merged off the `develop` branch.
 
-**release branch** is a branch for preparing the next release. No new features will be developed on this branch but rather it contains some last fixes (also bugfixes) and adjustments for going into production. 
+- **hotfix branches** are branches for quick and severe bugfixes. they are usually branched off the master branch, fixed in the hotfix branch and then merged  back in master and develop as well.
+
+- **release branch** is a branch for preparing the next release. No new features will be developed on this branch but rather it contains some last fixes (also bugfixes) and adjustments for going into production. 
  
-![](http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png)
-
-- [http://nvie.com/posts/a-successful-git-branching-model/](http://nvie.com/posts/a-successful-git-branching-model/)
+<figure>
+    <img src="http://nvie.com/img/2009/12/Screen-shot-2009-12-24-at-11.32.03.png" />
+    <figcaption>Source: <a href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model/</a></figcaption>
+</figure>
 
 ### Production branch oriented
 
-The production oriented branch strategy has
+Many people prefer to see `master` as their development branch and instead have a dedicated one for the production environment.
+
+Such a production oriented branching strategy has
 
 - **master branch** which contains the actual development code (corresponds to the "develop" branch in the git-flow model)
 - **production branch** contains the deployed code.
 
-Supporting branches are the following:
+Supporting branches are:
 
 - **feature branches** which contain the development of specific features and are branched off master and merged back into master
-- **hotfix branches** (works like in the git-flow model)
-- **release branch** (works like in the git-flow model)
+- **hotfix branches** (works like in the standard git-flow model)
+- **release branch** (works like in the standard git-flow model)
 
 <figure>
   <img src="/blog/assets/imgs/git-flow/git_prodoriented_flow.png"/>
@@ -48,16 +53,16 @@ Supporting branches are the following:
 
 Source: [http://www.slideshare.net/lemiorhan/git-branching-model](http://www.slideshare.net/lemiorhan/git-branching-model)
 
-
 ## Usage
 
-First of all you have to initialize an empty repository and eventually connect it immediately to your remote one.
+In my opinion tools are great as they (mostly) give you some productivity boost. Nevetheless you should always understand what they do behind the scenes. This section lists the commands you'll need to manually implement the production-oriented "git flow" pattern shown above.
+
+First of all you have to initialize an empty repository and eventually connect it immediately to your remote one. Obviously, feel free to skip this step if you already have one.
 
 ```
 $ git init
 $ git remote add origin git@.....
 ```
-
 Furthermore I'd suggest to also add a `.gitignore` file. You may start from an existing one based on your project type: [Github .gitignore repository](https://github.com/github/gitignore/).
 
 "push" everything up to your remote repo.
@@ -181,7 +186,7 @@ $ git branch -d hotfix/login-does-not-work
 - [Download & install](https://github.com/nvie/gitflow)
 - [Git flow cheatsheet](http://danielkummer.github.io/git-flow-cheatsheet/)
 
-The tool is really nice, nevertheless I'd recommend you to first manually try the flow pattern in order to fully understand it. (that holds for most productivity tools, btw).
+So, if you mastered to use the git flow pattern manually, you're ready to go with it.
 
 ### Haacked's Git Aliases
 
@@ -206,6 +211,8 @@ We adopted the git flow pattern in one of our projects with a team getting in to
 3. Once finished with the implementation, the developer either merges it with `master` or creates a merge request on GitLab assigned to another developer for code reviewing. When `master` gets pushed to GitLab, Jenkins automatically takes it and publishes it to our _dev server instance_.
 4. Once every night, the `master` branch gets automatically published to our _test server instance_ s.t. the tester in our team can continue to test the implemented stories and either mark them as done or reject them within our spring cycle. Furthermore a series of automated jMeter tests get executed that verify the correct functioning of our REST api as well as the performance of our endpoints.
 5. After the 2-weeks-cycle one of our devs prepares a release (see the kind of commands to execute in the "git flow usage" above) by merging `master` onto `production`. This is automatically detected by Jenkins which - again - publishes to our _preproduction server instance_ which is also accessible by our customer.
+
+We do not use _release branches_ as we don't need them so far. There is no preparatory work to be done, although that might eventually change in the future.
 
 ---
 
