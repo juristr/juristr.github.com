@@ -12,6 +12,10 @@ reposts: ["http://www.javacodegeeks.com/2014/01/git-flow-with-jenkins-and-gitlab
 
 At work I recently helped a team to transition from TFS to using Git as their source control management. After introducing the members to [Git](/blog/2013/04/git-explained/), we also established a common workflow on how we wanted to have Git integrate with Jenkins and GitLab. Below is our current implementation.
 
+<p class="notice tip">
+    You might be interested in my latest <a href="/blog/2014/09/implementing-the-git-flow/">"Implementing the git flow" article</a> as well.
+</p>
+
 ## Git branching strategies
 
 Git branching strategies are guidelines on how to use git's branching mechanism for your development. Establishing such a shared convention is especially useful for having a common vision in the team, in order to have everyone steer in the right direction.
