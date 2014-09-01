@@ -204,7 +204,7 @@ Please refer to my recent blog post **["Git flow with Jenkins and GitLab"](/blog
 
 We adopted the git flow pattern in one of our projects with a team getting in touch with git for the first time (they used TFS before). I [introduced them to the Git basics](/blog/2013/04/git-explained/) and then they started straight ahead and surprisingly the switch was really easy. By using git flow we minimized the conflicting merges and thus potential problems in the development flow.
 
-**So how did we use it?**. The team applied some kind of Scrum (we're new to it, thus "some kind of" :)). We have two weeks iterations with an initial planning phase (usually on thursday morning) and we have the tester on the team (yay!).
+**So how did we use it?** The team applied some kind of Scrum (we're new to it, thus "some kind of" :)). We have two weeks iterations with an initial planning phase (usually on thursday morning) and we have the tester on the team (yay!).
 
 1. At the start of the sprint cycle, our devs take their user stories (on Trello) and create corresponding feature branches having the pattern `userstory/<trello-card-#>-userstory-title` for userstories, `task/<trello-card-#>-title` for tasks and `bug/<trello-card-#>-title` for bugs.
 2. The develop on the feature branches and fequently update them with master (see git flow usage above). If the story/task/bug's implementation takes longer than a day or two, the branch gets pushed to the remote GitLab server (for backup reasons). Each of these pushes gets automatically [build and tested by our Jenkins](/blog/2014/01/git-flow-jenkins-gitlab/).
