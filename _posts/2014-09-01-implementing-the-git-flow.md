@@ -5,6 +5,7 @@ lead: "How we use 'git flow' in one of our projects"
 show_img_in_detail: false
 coverimage: false
 tags: ["Git"]
+reposts: ["http://www.javacodegeeks.com/2014/09/implementing-the-git-flow.html"]
 ---
 
 Git can be used in a variety of ways which is cool. But still, when working within a team, it is good to have a consensus on a common, shared approach in order to avoid conflicts. This article quickly explains how we implemented the "git flow" pattern in one of our projects.
