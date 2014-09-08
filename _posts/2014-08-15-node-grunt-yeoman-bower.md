@@ -9,6 +9,10 @@ tags: ["JavaScript", "Node.js"]
 
 This article aims at introducing you to some of the currently most popular tools when developing modern web applications with JavaScript. These are totally not new at all and have been around for a couple of years now. Still, I found many devs still don't use or know about them (as you might), wherefore this article tries to give you a quick, concise intro to get you started.
 
+<p class="notice tip">
+  It's always nice when people contribute to your articles through comments or by resharing it with their mates. That said, I'm happy to announce that <strong>Philippe Poumaroux translated this article into French</strong>. So, if you're interested, you can find it <a href="http://philippe.poumaroux.free.fr/index.php?post/2014/09/06/Node%2C-Grunt%2C-Bower-et-Yeoman-Une-bo%C3%AEte-%C3%A0-outils-pour-le-d%C3%A9veloppeur-web-moderne" target="blank">here</a>.
+</p>
+
 ## Node and NPM
 
 Node.js brings JavaScript to the server and the desktop. While initially JavaScript was mainly used as a browser based language, with Node you can now also create your server-side backend or even a [desktop application](http://strongloop.com/strongblog/creating-desktop-applications-with-node-webkit/) with [node-webkit](https://github.com/rogerwang/node-webkit) (for the crazy ones among you).
