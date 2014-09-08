@@ -284,6 +284,11 @@ app.controller('MyController', ['$scope', function($scope){
 - scripts folder rather than an app folder that contains everything
 - Spread route definitions across multiple module .config() methods
 
+## Links to check out
+
+- http://developer.telerik.com/featured/requiring-vs-browerifying-angular/
+- https://github.com/systemjs/systemjs
+
 ## Conclusion
 
 {% endcomment %}
@@ -296,6 +301,7 @@ app.controller('MyController', ['$scope', function($scope){
 - [RequireJS homepage][require_js]
 - [Google Groups post on lazy loading][googlegroups_lazyloading]
 - [Ifeanyi Isitor's lazy loading using $scriptjs][isitor_scriptjs]
+- [Video: Thomas Burleson on Angular and RequireJS][video_angular_requirejs]
 
 
 [angular_book]: http://www.packtpub.com/angularjs-web-application-development/book
@@ -309,3 +315,4 @@ app.controller('MyController', ['$scope', function($scope){
 [isitor_requirejs]: https://github.com/ifyio/angularjs-lazy-loading-with-requirejs
 [bennadel_requirejs]: http://www.bennadel.com/blog/2554-loading-angularjs-components-with-requirejs-after-application-bootstrap.htm
 [official_bestpractices]: https://github.com/angular/angular.js/wiki/Best-Practices
+[video_angular_requirejs]: https://www.youtube.com/watch?v=4yulGISBF8w

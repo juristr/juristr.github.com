@@ -729,6 +729,7 @@ Normally Angular prints out a nice stack trace with lots of details to track dow
 - [Ben Nadel JavaScript demos on GitHub](http://bennadel.github.io/JavaScript-Demos/)
 - [Style guide](https://github.com/mgechev/angularjs-style-guide)
 - [Speeding up AngularJS with simple optimizations](http://www.binpress.com/tutorial/speeding-up-angular-js-with-simple-optimizations/135)
+- [Podcast: The AngularJS learning curve](http://www.funnyant.com/learning-angularjs-the-angularjs-learning-curve/)
 
 ### Videos
 
