@@ -26,7 +26,7 @@ What usually struggles people most when developing a piece of software are..
 - where to place which application logic
 - ...
 
-These points can basically can be distilled into
+These points can basically be distilled into
 
 - building the right software (or not)
 - building the right software right
