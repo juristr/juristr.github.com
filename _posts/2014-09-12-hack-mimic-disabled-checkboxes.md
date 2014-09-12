@@ -8,7 +8,7 @@ category:
 tags: ["ASP.net", "JavaScript", "HowTo"]
 ---
 
-The world is not always as we want it to be :). So from now and then you have to place a nice hack here and there.
+The world is not always as we want it to be :). So from now and then you have to place a nice hack here and there. Years ago [I've already written about a similar issue](/blog/2008/09/revised-changed-values-of-readonly-and/) with input fields.
 
 Today I got a flashback to my good old ASP.net WebForms days. A colleague of mine had an issue in that he applied various JavaScript "scripts" to bring some life into his WebForms page. One of those dynamic JS parts included some disabling/enabling of checkboxes based on the values set by the user. The issue: HTML forms won't include disabled fields into the POST body and as such, you cannot process them properly on the server-side.
 
