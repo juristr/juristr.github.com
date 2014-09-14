@@ -1,3 +1,4 @@
+@import "compass/css3";
 
 // $article-title-color: #423F37;
 $article-title-color: rgba(0,0,0,0.8);
@@ -20,6 +21,9 @@ article {
   padding: 0 25px 20px 25px;
   margin: 10px auto 0 auto;
   max-width: 850px;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
 
   .article-title {
     font-family: $article-title-font;
@@ -47,9 +51,6 @@ article {
   }
 
   .article-body {
-    font-size:22px;
-    line-height: 1.5;
-    letter-spacing: 0.01rem;
     font-family: "Source Sans Pro", sans-serif;
     font-smoothing: antialiased;
     max-width: 700px;
@@ -100,4 +101,29 @@ article {
     }
 
   }
+
+  .article-footer {
+    max-width: 700px;
+    margin: 0 auto;
+
+    .article-sharing {
+
+      .article-sharing-socialmedia {
+        text-align: right;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+          color: rgba(0,0,0,0.3);
+        }
+
+        a:hover {
+          color: rgba(0,0,0,0.6);
+        }
+      }
+
+    }
+
+  }
+
 }
