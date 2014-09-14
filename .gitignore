@@ -1,2 +1,4 @@
 development/juristr/production/
 _site
+.tmp
+.sass-cache

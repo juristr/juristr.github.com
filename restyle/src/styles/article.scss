@@ -12,6 +12,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $article-body-color;
 }
 
 article {
@@ -49,10 +50,9 @@ article {
     font-size:22px;
     line-height: 1.5;
     letter-spacing: 0.01rem;
-    color: $article-body-color;
     font-family: "Source Sans Pro", sans-serif;
     font-smoothing: antialiased;
-    max-width: 780px;
+    max-width: 700px;
     margin: 0 auto;
 
     p {
@@ -60,7 +60,7 @@ article {
       margin-bottom: 30px;
     }
 
-    blockquote {
+    blockquote .emphasized {
       line-height: 1.4;
       text-align: center;
       font-size: 32px;
@@ -76,5 +76,20 @@ article {
       -o-transition: margin .1s;
       transition: margin .1s;
     }
+
+    blockquote {
+      letter-spacing: 0.01rem;
+      font-weight: 400;
+      font-style: italic;
+      border-left: 3px solid rgba(0,0,0,0.8);
+      padding-left: 20px;
+      margin-left: -23px;
+      padding-bottom: 3px;
+    }
+
+    .article-intro {
+      font-size: 25px;
+    }
+
   }
 }
