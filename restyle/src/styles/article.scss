@@ -126,4 +126,54 @@ article {
 
   }
 
+  .author {
+    border-top: 1px solid rgba(0,0,0,0.15);
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 35px;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+
+    .author-image{
+      float:left;
+
+      img {
+        width: 80px;
+        height: 80px;
+        border: 3px solid #FFF;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+        border-radius: 100%;
+        position: relative;
+        max-width: 100%;
+        box-sizing: border-box;
+        vertical-align:middle;
+      }
+
+    }
+
+    .author-content {
+      padding-left: 100px;
+
+      .author-name {
+        font-size: 18px;
+        color: rgba(0,0,0,0.8);
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      .author-description {
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
 }
