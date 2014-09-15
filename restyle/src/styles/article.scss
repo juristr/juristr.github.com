@@ -128,7 +128,7 @@ article {
 
   .author {
     border-top: 1px solid rgba(0,0,0,0.15);
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 20px;
 
     display: inline-block;
@@ -142,6 +142,7 @@ article {
 
     .author-image{
       float:left;
+      padding-top: 20px;
 
       img {
         width: 80px;
@@ -165,13 +166,28 @@ article {
         color: rgba(0,0,0,0.8);
         margin-top: 0;
         margin-bottom: 5px;
+        padding-top: 20px;
       }
 
       .author-description {
         margin-top: 0;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.3;
         margin-bottom: 4px;
+      }
+
+      .author-social {
+        margin-top: 0;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+          color: rgba(0,0,0,0.3);
+        }
+
+        a:hover {
+          color: rgba(0,0,0,0.6);
+        }
       }
     }
   }
