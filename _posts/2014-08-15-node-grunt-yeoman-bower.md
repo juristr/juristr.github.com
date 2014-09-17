@@ -5,6 +5,7 @@ lead: "An introduction for ambitious newbies"
 show_img_in_detail: false
 coverimage: false
 tags: ["JavaScript", "Node.js"]
+reposts: ["http://java.dzone.com/articles/node-grunt-bower-and-yeoman"]
 ---
 
 This article aims at introducing you to some of the currently most popular tools when developing modern web applications with JavaScript. These are totally not new at all and have been around for a couple of years now. Still, I found many devs still don't use or know about them (as you might), wherefore this article tries to give you a quick, concise intro to get you started.
