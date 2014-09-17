@@ -148,6 +148,26 @@ article {
       margin-bottom: 2px;
     }
 
+    pre {
+      // font: 100%/1.5 "Source Code Pro", Consolas, Menlo, Courier, monospace;
+      font-family: 'Source Code Pro';
+      overflow-x: auto;
+      margin-bottom: 2.5em;
+      margin-top: 2.5em;
+      padding: 1.25em;
+      border-radius: 2px;
+      box-sizing: border-box;
+      display: block;
+      font-size: 16px;
+    }
+
+    pre,
+    code {
+      background: whitesmoke;
+      border: 0;
+      box-shadow: none;
+    }
+
   }
 
   .article-footer {
