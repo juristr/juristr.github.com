@@ -197,12 +197,12 @@ article {
 
     }
 
-    .comments-button {
+    .comments-button,
+    button.paypal-button {
       display: inline-block;
       font-size: 20px;
       font-weight: 300;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      text-decoration: underline;
+      text-decoration: none;
       padding: 5px 40px 5px 40px;
       border: 1px solid #a9d8b2;
       color: #57ad68;
@@ -212,6 +212,18 @@ article {
       background-position: 97% center;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: antialiased;
+    }
+
+    .paypal-button {
+      position: inherit;
+      font-weight: inherit;
+      font-style: inherit;
+      font-family: inherit;
+    }
+
+    form.paypal-button {
+      display: inline-block;
+      float:left;
     }
 
   }
