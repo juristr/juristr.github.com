@@ -215,10 +215,16 @@ article {
     }
 
     .paypal-button {
-      position: inherit;
+      height: 42px;
+      // position: inherit;
       font-weight: inherit;
       font-style: inherit;
       font-family: inherit;
+    }
+
+    .paypal-button button:before,
+    .paypal-button button:after {
+      background:none;
     }
 
     form.paypal-button {
