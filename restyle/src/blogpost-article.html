@@ -73,13 +73,12 @@
         <div id="disqus">
           <a href="#disqus_thread" class="comments-button js-load-comments"></a>
         </div>
-        <script async="async" src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=juri.strumpflohner@gmail.com"
+        <script src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=juri.strumpflohner@gmail.com"
             data-button="donate"
             data-name="Buy me a coffee"
             data-currency="EUR"
             data-callback="http://juristr.com/blog"
-            data-env="sandbox"
-        ></script>
+            data-env="sandbox"></script>
 
         <div class="article-sharing-socialmedia">
           <a href="#" class="button">
@@ -117,6 +116,11 @@
     </div>
   </article>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+    $(function(){
+      $('button.paypal-button').html('Useful? Buy me a coffee!')
+    });
+  </script>
   <script type="text/javascript">
       $(function(){
         $('.js-load-comments').click(function(){
