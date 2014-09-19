@@ -103,6 +103,29 @@ article {
       text-align: right;
     }
 
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      font-size: 14px;
+      text-align: left;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      font-style: normal;
+      color: rgba(0,0,0,0.6);
+    }
+
+    figure.wideimage {
+      width: 800px;
+      margin-left: -40px;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
     blockquote.emphasized {
       line-height: 1.4;
       text-align: center;
