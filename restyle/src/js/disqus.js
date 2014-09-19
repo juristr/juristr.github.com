@@ -12,7 +12,8 @@ var disqus_shortname = 'juristr';
 (function(exports, undefined){
   "use strict";
 
-  exports.disqus = {
+  exports.Site = exports.Site || {};
+  exports.Site.Disqus = {
     loadDisqus: function(){
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
@@ -23,4 +24,4 @@ var disqus_shortname = 'juristr';
     }
   };
 
-})(window);
+}(window));
