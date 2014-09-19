@@ -214,6 +214,13 @@ article {
       -moz-osx-font-smoothing: antialiased;
     }
 
+    .comments-button:hover,
+    button.paypal-button:hover {
+      background: rgba(87,173,104,0.8);
+      border-color: rgba(0,0,0,0);
+      color: #fff;
+    }
+
     .paypal-button {
       height: 42px;
       // position: inherit;

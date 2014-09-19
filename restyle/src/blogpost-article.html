@@ -116,16 +116,13 @@
     </div>
   </article>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script>
-    $(function(){
-      $('button.paypal-button').html('Useful? Buy me a coffee!')
-    });
-  </script>
   <script type="text/javascript">
       $(function(){
         $('.js-load-comments').click(function(){
           loadDisqus();
         });
+
+        $('button.paypal-button').html('Useful? Buy me a coffee!');
       });
 
       function loadDisqus(){
