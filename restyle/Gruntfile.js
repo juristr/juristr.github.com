@@ -81,6 +81,34 @@ module.exports = function (grunt) {
       }
     },
 
+    cssmin: {
+      dist: {
+        files: {
+          'dist/styles/main.css': [
+            'src/.tmp/styles/{,*/}*.css'
+          ]
+        }
+      }
+    },
+    uglify: {
+      options: {
+        compress: {
+          global_defs: {
+            "DEBUG": false
+          },
+          dead_code: true
+        },
+        mangle: true
+      },
+      dist: {
+        files: {
+          'dist/scripts.js': [
+            'src/js/{,*/}*.js'
+          ]
+        }
+      }
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
@@ -102,11 +130,10 @@ module.exports = function (grunt) {
         files: [{
           dot: true,
           src: [
-            './src/.tmp'
+            './dist'
           ]
         }]
-      },
-      server: './src/.tmp'
+      }
     },
 
     // Add vendor prefixed styles
@@ -169,6 +196,26 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
+
+  grunt.registerTask('build', [
+    // 'ug',
+    // 'bower-install',
+    // 'bower:app',
+    // TODO: deactivated for now...needs to be fixed to sync to karmaBoot.js
+    // 'replace:test',
+    // 'useminPrepare',
+    // 'concurrent:dist',
+    // 'autoprefixer',
+    // 'concat',
+    'clean:dist',
+    'cssmin',
+    // Below task commented out as r.js (via grunt-contrib-requirejs) will take care of this
+    'uglify',
+    // 'rev',
+    // 'usemin',
+    // 'requirejs:dist',
+    // 'htmlmin'
+  ]);
 
   grunt.registerTask('default', [
     'build'

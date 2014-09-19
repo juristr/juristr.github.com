@@ -123,9 +123,7 @@
   <script type="text/javascript" src="./js/disqus.js"></script>
   <script type="text/javascript">
     $(function(){
-      $('.js-load-comments').click(function(){
-        window.disqus.loadDisqus();
-      });
+      $('.js-load-comments').click(window.Site.Disqus.loadDisqus);
 
       $('button.paypal-button').html('Useful? Buy me a coffee!');
     });
