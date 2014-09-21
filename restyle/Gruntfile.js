@@ -133,7 +133,8 @@ module.exports = function (grunt) {
             './dist'
           ]
         }]
-      }
+      },
+      server: {}
     },
 
     // Add vendor prefixed styles
