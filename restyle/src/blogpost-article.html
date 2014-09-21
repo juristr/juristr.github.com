@@ -8,8 +8,16 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 
   <link rel="stylesheet" href=".tmp/styles/article.css">
+  <link rel="stylesheet" href=".tmp/styles/navbar.css">
 </head>
 <body>
+  <div class="metabar metabar--top">
+    <div>
+      <a href="javascript:;">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
   <article>
     <h1 class="article-title">
       Hack: How to mimic a disabled checkbox
@@ -121,6 +129,7 @@
   </article>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="./js/disqus.js"></script>
+  <script type="text/javascript" src="./js/navbar.js"></script>
   <script type="text/javascript">
     $(function(){
       $('.js-load-comments').click(window.Site.Disqus.loadDisqus);
