@@ -20,7 +20,7 @@ Doing something like the following..
 
 ..won't work. Existing jQuery listeners still fire. What you have to do instead is:
 
-*when disabling:**
+**when disabling:**
 
 - temporarily store all existing handlers registered on the element
 - remove all of them once you have them safely stored somewhere
