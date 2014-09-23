@@ -105,6 +105,10 @@ $ npm install --save-dev grunt
 
 Similarly, if you add `--save` it'll be added to the `dependencies` section. The difference is mainly that `dependencies` are actively used by your appliation and should be deployed together with it. On the other side, `devDependencies` are tools you use during the development of the application, which normally do not require to be deployed together with it. Examples are code minifier scripts, test runners etc.
 
+<p class="notice fact">
+  When another Node package depends on yours, then it will automatically install all <code>runtime dependencies</code> of your package, but not your development dependencies. This is an important difference between <code>dependencies</code> and <code>devDependencies</code> that should be taken into account.
+</p>
+
 To **uninstall** a package, use..
 
 ```
@@ -112,6 +116,16 @@ $ npm uninstall --save-dev grunt
 ```
 
 ..which uninstalls `grunt` and removes it from `package.json`.
+
+### Global packages
+
+Beside simply installing packages either as dev or runtime dependencies, there is also the concept of **global modules**. They are installed by using the `-g` flag..
+
+```
+$ npm install grunt -g
+```
+
+..and are then directly available on your `PATH` and thus executable independent of your current project. You should normally **prefer local, project specific packages** if possible, mainly because global packages are not included in the project dependencies and you might run into problems when requiring different versions of the same package between projects.
 
 ### Restoring packages
 
