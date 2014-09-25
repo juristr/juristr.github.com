@@ -493,3 +493,9 @@ This intro wouldn't be complete if it doesn't mention [Gulp](http://gulpjs.com/)
 I didn't study it in detail yet, but you should definitely keep an eye on it as it is fastly growing and gaining in popularity.  
 For now I won't include more details, but I definitely will update this article once I've taken a closer look at it.
 
+
+## References
+
+Here are some links to related articles.
+
+- [Choose: Grunt, Gulp or npm?](http://blog.ponyfoo.com/2014/07/04/choose-grunt-gulp-or-npm)
