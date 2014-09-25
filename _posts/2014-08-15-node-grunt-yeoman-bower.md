@@ -2,6 +2,7 @@
 layout: articles-post
 title: "Node, Grunt, Bower and Yeoman - A Modern web dev's Toolkit"
 lead: "An introduction for ambitious newbies"
+lastupdated: '2014-09-25'
 show_img_in_detail: false
 coverimage: false
 tags: ["JavaScript", "Node.js"]
