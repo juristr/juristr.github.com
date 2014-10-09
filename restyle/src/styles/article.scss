@@ -1,4 +1,5 @@
 @import "compass/css3";
+@import "_navbar";
 
 // $article-title-color: #423F37;
 $article-title-color: rgba(0,0,0,0.8);
@@ -18,7 +19,7 @@ body {
 
 article {
   background-color: white;
-  padding: 0 25px 20px 25px;
+  padding: 140px 25px 20px 25px;
   margin: 10px auto 0 auto;
   max-width: 850px;
   font-size: 22px;
