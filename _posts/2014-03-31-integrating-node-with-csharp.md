@@ -4,7 +4,7 @@ title: "Integrating Node.js with a C# dll"
 show_img_in_detail: false
 coverimage: false
 tags: [".Net", "Node.js", "JavaScript"]
-reposts: ["http://java.dzone.com/articles/integrating-nodejs-c-dll"]
+reposts: ["http://java.dzone.com/articles/integrating-nodejs-c-dll", "http://www.webcodegeeks.com/javascript/node-js/integrating-node-js-with-a-c-dll/"]
 ---
 
 Recently I had to integrate a Node.js based server application with a C# DLL. Our software (a web-app) offers the possibility to execute payments over a POS terminal. This latter one is controllable through a dedicated DLL which exposes interfaces like `ExecutePayment(operation, amount)` and so on. As I mentioned, there is the Node.js server that somehow exposes the functionality of the POS (and some more) as a REST api. (The choice for using Node.js had specific reasons which I wouldn't want to outline right now).
