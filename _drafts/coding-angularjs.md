@@ -587,6 +587,30 @@ function extendExceptionHandler($delegate, exceptionConfig, logger){
 
 - the `$watch` getter function must always be fast, have no side-effects & idempotent
 
+### $watchGroup
+
+https://egghead.io/lessons/angularjs-new-in-angular-1-3-scope-watchgroup
+
+Starting with Angular v1.3, it's possible to define watch groups which allows to listen to multiple properties at once.
+
+```javascript
+$scope.val1 = 'val1';
+$scope.val1 = 'val2';
+$scope.val1 = 'val3';
+$scope.val1 = 'val4';
+
+$scope.$watchGroup([
+  'val1',
+  'val2',
+  'val3',
+  'val4'
+], function(newVal, oldVal){
+  $scope.newVal = newVal;
+  $scope.oldVal = oldVal;
+});
+```
+
+
 ## Modules
 
 - usually one module for application
