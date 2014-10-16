@@ -12,7 +12,7 @@ tags: [lessons learned, agile]
 
 ### Tester in the team
 
-This was an uterly new and not a commonly taken approach at our company.
+This was an uterly new and not a commonly taken approach at our company so far.
 
 The **entire team** was involved, especially also the tester of the application. In our more traditional projects, testers were only involved at a dedicated time slot before releases or customer tests. Often they didn't have the domain knowledge and needed to be instructed with a set of dedicated tests, usually formalized in a so-called "test cases document". In this project instead, the tester was involved from the very beginning as an active member of the team, playing also quite the role of the customer and end-user. As such, he validated the user stories and acceptance criterias which did not only bring a lot of valuable discussion and feedback upfront (before starting the implementation) but at the same time he was able to acquire the domain knowledge for afterwards testing those implemented user stories he previously already verified. I really appreciated the shift of the tester's role and also the change in how the devs perceived him.
 
@@ -29,7 +29,9 @@ The **entire team** was involved, especially also the tester of the application.
 ## What still puzzles me/us?
 
 - Changing teams (due to other projects, bugfixes/maintenance requests,...) -> Agostino krank, Pirmin muss Redas warten..
-
+- responsibility within the team
+- practices like "Collective code ownership"
+- respect and trust
 
 Practices to be potentially applied:
 

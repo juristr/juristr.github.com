@@ -184,4 +184,9 @@ Continue at: http://youtu.be/BA3sL783_Co?t=20m9s
 - Null Propagation (`somePerson?.Address?.Street?.Name`)
 
 
+## Links
+
+- http://msdn.microsoft.com/en-us/dn683793.aspx
+- http://blogs.msdn.com/b/csharpfaq/archive/2014/06/03/visual-studio-14-ctp-now-available.aspx
+
 
