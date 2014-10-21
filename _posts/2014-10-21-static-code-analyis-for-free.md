@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Static code analysis for free
-lead: Plato gives you static code analysis for free. Now it’s on you to use the data to your advantage
+lead: Plato gives you static code analysis for free. Now it’s your turn to use the data to your advantage
 show_img_in_detail: true
 coverimage: false
 category:
@@ -24,7 +24,7 @@ $ npm install plato
 and then executing it on your codebase.
 
 ```
-$ node_modules/.bin/plato -r -d plato-report -t “My app title” -x .json ./src
+$ node_modules/.bin/plato -r -d plato-report -t "My report title" -x .json ./src
 ```
 
 As a result you’ll get an amazing report with dozens of different visualizations of your data, generated directly into your specified output folder `plato-report`. Below is an example screenshot from the [official Plato website](https://github.com/es-analysis/plato) of the result of running it on the jQuery codebase.
@@ -33,8 +33,8 @@ As a result you’ll get an amazing report with dozens of different visualizatio
 
 ## Conclusion
 
-Give it a try and see whether it makes sense for you. The job of a good developer is not only to implement the feature the customer requested, but to implement it in the best of his knowledge. As part of my daily job I have to care about the design of the application, about the “beauty of the codebase” as I like it to define.
+Give it a try and see whether it makes sense for you. The job of a good developer is not only to implement the feature the customer requested, but to implement it in the best of his knowledge. As part of my daily job I have to care about the design of the application, about the "beauty of the codebase" as I like it to define.
 
-Plato makes it extremely easy to generate a report, so the real challenge is to interpret the results, identify potential weaknesses and sanitize them accordingly. 
+Plato makes it extremely easy to generate a report, so the **real challenge is to interpret the results**, identify potential weaknesses and sanitize them accordingly. 
 
-As always, automate it; creating a Jenkins job that generates and publishes reports on a daily basis only takes you a couple of minutes but is extremely useful.
+So what I did is to create a Jenkins job which generates and publishes the reports on a webserver where all of our devs have access to. Takes you a couple of minutes but it's extremely useful.
