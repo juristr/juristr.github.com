@@ -139,6 +139,12 @@ testFunction : function(param1, param2) {
         <td><a href="https://github.com/revolunet/sublimetext-markdown-preview">MarkdownPreview</a></td>
         <td>Although I use this less often, it is quite useful for quickly previewing your created markdown document in a browser.</td>
     </tr>
+    <tr>
+        <td><a href="https://github.com/SublimeText/Tag">Tag</a></td>
+        <td>
+            "Tag" plugin is a collection of packages about tags, mixed together in an effort to provide a single package with utilities to work with tags.
+        </td>
+    </tr>
   </tbody>
 </table>
 
