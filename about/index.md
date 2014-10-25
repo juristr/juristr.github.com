@@ -49,4 +49,6 @@ current: about
 
 <a href="http://www.dzone.com/users/juristr"><img src="http://www.dzone.com/sites/all/files/big-mvbbutton.png"></a>
 
+<a href="http://www.javacodegeeks.com/" imageanchor="1"><img alt="Java Code Geeks" src="http://cdn.javacodegeeks.com/wp-content/uploads/2012/12/JavaCodeGeek_Badge.png" title="Java Code Geeks" /></a>
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/it/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Italy License</a>.
