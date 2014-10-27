@@ -5,7 +5,7 @@ lead: "The devil is in the detail...or in the attribute's casing"
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["JavaScript", "Angular.js"]
+tags: ["JavaScript", "Angular.js", "learning-ng"]
 ---
 
 

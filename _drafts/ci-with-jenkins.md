@@ -5,7 +5,7 @@ description: ""
 postimg: "/blog/assets/imgs/jenkins-logo.png"
 show_img_in_detail: true
 category: 
-tags: [ javascript ]
+tags: [ "JavaScript" ]
 ---
 Bla bla bla intro
 

@@ -5,21 +5,23 @@ lead: ""
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["JavaScript", "Angular.js"]
+tags: ["JavaScript", "Angular.js", "learning-ng"]
 ---
 
-The scenario: You have a sidebar with the application menu which you wrap into a separate directive. Furthermore there is a button somewhere else on the page which - when clicked - should toggle the sidebar (hide/show it).
+The scenario: A sidebar with the application menu which is wrapped into its own directive. Furthermore there is a button somewhere else on the page which - when clicked - should toggle the sidebar (hide/show it).
 
-There are different possibilities:
+{% include ng-series.html %}
+
+There are different implementation possibilities:
 
 1. Directly set the state of the sidebar by keeping a reference to it from the button
 1. Have a publisher/subscriber mechanism where the sidebar registers to an event, say "sidebar.toggle" and based on that hides/shows itself
 1. Establish a 2-way data binding with a common object that is known by the sidebar as well as by the button.
 
-**Option 1** is good for simple situations (like the menu of my blog here), but I don't like it in a more large-scale app. You quickly run into situations where you have to interact with the menu from multiple parts of your application. Keeping "hard references" quickly complicates the codebase and makes it more fragile. **Option 2** solves this by decoupling through events. This works nicely and is a cleaner solution. In Angular you have a **3rd option**, namely to use a _service_ as the common object that holds the state. Being a singleton it is an ideal candidate  to hook on a 2-way-binding like:
+**Option 1** is good for simple situations (like the menu of my blog here), but I don't really like it in a more large-scale app. It quickly gets messy as you soon run into the situation where interaction with the menu is needed from multiple parts of the application. Keeping lots of "hard references" quickly complicates the codebase and makes it more fragile. **Option 2** solves this by decoupling through events. This works nicely and is a cleaner solution. There's a **3rd option**, namely to use some shared object which in Angular can be nicely represented by a _service_. Being a singleton it is an ideal candidate to hook on a 2-way-binding like:
 
 - sidebar directive binds to `isVisible` property defined on the service
-- button toggles on the `isVisible` property
+- button switches on the `isVisible` property on the `service`
 
 That's exactly what I did. The service is quite simple in that it exposes an object containing the current state.
 
@@ -40,7 +42,7 @@ A corresponding directive reacts based on that state information:
 .directive('container', function() {
     return {
       restrict: 'E',
-      template: '<div ng-show="{{ vm.isVisible }}">Hi there!</div>',
+      template: '<div ng-show="{%raw%}{{ vm.isVisible }}{%endraw%}">Hi there!</div>',
       controller: function(service) {
         var vm = this;
         // directly bound
@@ -65,22 +67,46 @@ Finally, a controller sets the property based on some user interaction.
 })
 ```
 
-<iframe src="http://embed.plnkr.co/Hz0Ooz/preview" widt="100%" height="400px"> </iframe>
+The result:
 
-As you can see it doesn't really work as expected. What's going on here? Even though there's a lot of "magic" involved in how Angular realizes 2-way binding you have to give it a chance to listen
+<iframe src="http://embed.plnkr.co/Hz0Ooz/preview" width="100%" height="400px"> </iframe>
+
+As you can see it doesn't really work as expected. What's going on here? Even though there's a lot of "magic" involved in how Angular realizes 2-way data binding, you have to give it a minimum chance keep track of what happens.
+
+If you take a look at my code above, you can see that **I directly bind the boolean property of the service to my `$scope`**:
+
+```javascript
+.controller('MyCtrl', function(service) {
+  ...
+  vm.isVisible = service.obj.isVisible;
+  ...
+}
+```
+
+The problem here is that the `isVisible` property on the `$scope` obviously won't get updated as there is no connection to the one defined on the `service` object. Since booleans are a values types, simply the value is copied over. 
+
+Thus, what I have to do instead, is to **bind an object instance** onto the `$scope`.
+
+```javascript
+.controller('MyCtrl', function(service, $scope) {
+  ...
+
+  vm.data = service.obj;
+
+})
+```
+
+..and then obviously also update the binding in the HTML:
+
+```html
+<div class="widget" ng-controller="MyCtrl as vm">
+  <h3>MyCtrl</h3>
+  ...
+  {%raw%}{{ vm.data.isVisible }}{%endraw%}
+  ...
+</div>
+```
+
+In this way, `$scope` and `service` point to the same object instance and hence the digest loop can watch the object to update the HTML accordingly:
 
 <iframe src="http://embed.plnkr.co/ptMHJ0/preview" width="100%" height="400px"> </iframe>
-
-That said, we need some common place where to store that state s.t. all the interested areas can "watch/bind" on it. In Angular, most commonly this is a **service** somewhere.
-
-
-That given, for the purpose of this post I have
-
-- `MyCtrl` - which sets the state based on some interaction of the user
-- `myDirective` - which is another place updating the same state
-
-- `container` - another directive
-
-
-
-Plunkr: http://plnkr.co/edit/LfW6uEYX2xHdMUGUr5Av?p=preview
