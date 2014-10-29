@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Want to invite your friend to Inbox by Google but have no invites left?"
+title: "Want to invite your friend to Inbox by Gmail but have no invites left?"
 lead: "Here's how. A hidden way to invite your friends even if you don't have any invites left"
 show_img_in_detail: true
 coverimage: true
