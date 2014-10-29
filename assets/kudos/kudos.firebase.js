@@ -1,42 +1,96 @@
-(function($, undefined){
+(function(exports, undefined){
 
     // replace this url with yours!!
-    var firebaseUrl = 'https://juristr.firebaseio.com/kudos',
-        key = document.location.pathname.replace(/[\/-]/g,''),
-        kudoStore = new Firebase(firebaseUrl);
+    var firebase = new Firebase('https://juristr.firebaseio.com/'),
+        firebaseKudos = firebase.child('kudos'),
+        key = document.location.pathname.replace(/[\/-]/g,'');
 
-    // slightly hacky way of updating the count
-    var updateKudoCount = function(count){
-        $('.count .num').html(count);
+    var getAuthData = function(){
+        var deferred = $.Deferred();
+
+        var authData = firebase.getAuth();
+        if(authData == null){
+            // authenticate the user
+            firebase.authAnonymously(function(err, authenticationData) {
+                //authData = authenticationData
+                deferred.resolve(authenticationData);
+            });
+        }else{
+            deferred.resolve(authData);
+        }
+
+        return deferred.promise();
     };
 
-    // fix for locla debugging
+    // fix for local debugging
     if(key === ''){
         key = 'localhost'
     }
 
-    //retrieve the current kudo count
-    $.getJSON(firebaseUrl + '/' + key + ".json", function(result){
-        if(result){
-            result.count = result.count || 0;
-            updateKudoCount(result.count);
-        }
-    });
+    var hasVoted = function(){
+        var deferred = $.Deferred();
 
-    $(document).on('kudo.added', function(e, data){
-        kudoStore.child(key).set({ count: data.count });
-    });
+        getAuthData().then(function(authData){
+            firebaseKudos.child(key).child('likes').child(authData.uid).once('value', function(snap){
+                deferred.resolve(snap.val() !== null);
+            });
+        });
+        return deferred.promise();
+    };
 
-    $(document).on('kudo.removed', function(e, data){
-       kudoStore.child(key).set({ count: data.count }); 
-    });
+
+    var addKudo = function(){
+        getAuthData().then(function(authData){
+            firebaseKudos
+                .child(key)
+                .child('likes')
+                .child(authData.uid)
+                .set({
+                    count: 1
+                });
+        });
+    };
+
+    var removeKudo = function(){
+        getAuthData().then(function(authData){
+            firebaseKudos
+                .child(key)
+                .child('likes')
+                .child(authData.uid)
+                .remove();
+        });
+    };
 
     // listening for updates
-    var kudoEntry = new Firebase(firebaseUrl + '/' + key);
-    kudoEntry.on('value', function(snapshot){
-        if(snapshot && snapshot.val()){
-            updateKudoCount(snapshot.val().count);
-        }
-    });
 
-})(jQuery);
+    var onKudoUpdates = function(cb){
+        firebaseKudos.child(key).on('value', function(snapshot){
+            if(snapshot){
+                var article = snapshot.val();
+                var likeCount = 0;
+                if(article){
+                    for(var prop in article.likes){
+                        likeCount++;
+                    }
+
+                    // old counts for backwards compatibility
+                    if(article.count){
+                        likeCount += article.count;
+                    }
+
+                }
+                cb(likeCount);
+            }
+        });
+    }
+
+    var firebaseStorage = {
+        hasVoted: hasVoted,
+        addKudo: addKudo,
+        removeKudo: removeKudo,
+        onKudoUpdates: onKudoUpdates
+    };
+
+    exports.firebaseStorage = firebaseStorage;
+
+})(window);

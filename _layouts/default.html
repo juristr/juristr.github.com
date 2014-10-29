@@ -77,8 +77,7 @@
     <script src="/assets/js/modernizr.custom.js"></script>
 
     <!-- Kudos script -->
-    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
-    <script type="text/javascript" src="/assets/kudos/jstorage.min.js"></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.1.2/firebase.js'></script>
     <script type="text/javascript" src="/assets/kudos/kudos.min.js"></script>
     <script type="text/javascript" src="/assets/kudos/kudos.firebase.js"></script>
     <link rel="stylesheet" href="/assets/kudos/kudos.min.css">
@@ -187,7 +186,9 @@
 
       $(function(){
 
-        $('figure.kudo').kudoable();
+        $('figure.kudo').kudoable({
+            dataStore: window.firebaseStorage
+        });
 
         (function(){
           Countable.once($('.article-body')[0], function (counter) {
