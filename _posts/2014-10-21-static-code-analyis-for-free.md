@@ -5,6 +5,7 @@ lead: Plato gives you static code analysis for free. Now it’s your turn to use
 show_img_in_detail: true
 coverimage: false
 category:
+reposts: ["http://architects.dzone.com/articles/static-code-analysis-free"]
 tags: ["JavaScript"]
 ---
 
