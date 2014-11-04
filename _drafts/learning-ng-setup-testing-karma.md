@@ -5,7 +5,7 @@ lead: ""
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["JavaScript", "testing", "Angular.js"]
+tags: ["JavaScript", "testing", "Angular.js", "learning-ng"]
 ---
 
 Intro bla bla...
