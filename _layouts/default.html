@@ -27,6 +27,20 @@
 
     <meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
 
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@juristr" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    {% if page.description %}
+      <meta name="twitter:description" content="{{ page.description }}" />
+    {% else %}
+      <meta name="twitter:description" content="{{ page.lead }}" />
+    {% endif %}
+    {% if page.postimg != nil %}
+      <meta name="twitter:image" content="{{ page.postimg }}" />
+      <meta name="twitter:url" content="{{ page.url }}" />
+    {% endif %}
+
     <link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="http://feeds.feedburner.com/juristrumpflohner">
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
