@@ -8,6 +8,9 @@ category:
 tags: ["JavaScript", "Angular.js", "learning-ng"]
 ---
 
+Intro bla bla...
+
+{% include ng-series.html %}
 
 I have two directives, `<my-menu-item>` and `<another-dir>` define as follows:
 

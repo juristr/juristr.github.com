@@ -8,6 +8,10 @@ category:
 tags: ["JavaScript", "Angular.js"]
 ---
 
+Intro bla bla...
+
+{% include ng-series.html %}
+
 ## Problem:
 
 ```html
