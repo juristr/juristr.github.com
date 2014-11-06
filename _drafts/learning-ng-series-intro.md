@@ -9,13 +9,19 @@ category:
 tags: ["JavaScript", "Angular.js"]
 ---
 
-With this post I'd like to introduce to you the - what I'd like to call - **learning-ng series**, a number of short and concise posts that describe issues and solutions on my journey of learning Angular.js. I'll update this post, by linking all of the articles that are about to come.
+With this post I'd like to introduce to you the - what I'd like to call - **learning-ng series**; a number of short and concise posts that describe issues and solutions on my journey of climbing up the Angular.js learning curve. I'll update this post to linking all of the articles that are about to come. So come back later.
 
-I got in touch with Angular a couple of years ago, but it remained at the level of playing around in a JSFiddle. About half a year ago now we decided to adopt it for one of our projects. Since then, I'm crawling books, blogs, news feeds, forums, IRC chats etc. As part of my job I want/have to understand how things work s.t. I can then coach/share/discuss that knowledge with my work mates.
+After years of using JavaScriptMVC, about half a year ago we (at work) decided to adopt Angular for one of our next projects. Since then, I'm crawling books, blogs, news feeds, forums, IRC chats etc. As part of my job I want/have to understand how things work s.t. I can then coach/share/discuss that knowledge with my work mates.
 
-There's already an enormous amount of Angular resources around on the web. Hence, this isn't going to be another Angular tutorial. Instead, I'd like to **document my learning experience, issues I face and applied solutions in a series of posts**. Hopefully that might turn out to be useful for some of you and maybe I'm lucky enough to even get some feedback from some more expert developers than me.
+So, another Angular tutorial? No, there's already lots and lots of material around. This is (hopefully) going to be different. Despite having quite some experience in building large JavaScript SPAs, I'm still a newbie in the Angular world. That might get interesting as you often see things differently than an expert. So I'm going to **share some of my findings, the issues I face and solutions I come up with**.
+
+Hopefully that might turn out to be useful for some of you and maybe I'm lucky enough to even get some feedback from some more expert developers than me.
+
+To keep track of new articles either [subscribe to my RSS feed](http://feeds.feedburner.com/juristrumpflohner) or simply [follow me on Twitter](https://twitter.com/juristr).
 
 Enjoy!
+
+<!--
 
 ## Articles in the series
 
@@ -28,3 +34,4 @@ Enjoy!
 {% endif %}
 {% endfor %}
 
+-->
