@@ -21,8 +21,6 @@ To keep track of new articles either [subscribe to my RSS feed](http://feeds.fee
 
 Enjoy!
 
-<!--
-
 ## Articles in the series
 
 {% for tag in site.tags %}
@@ -33,5 +31,3 @@ Enjoy!
 </ul>
 {% endif %}
 {% endfor %}
-
--->
