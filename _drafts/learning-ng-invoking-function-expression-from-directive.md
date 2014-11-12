@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Learning Angular: Conflicting scope variable names with directive controllers"
+title: "Learning Angular: Invoking function expression from directive"
 lead: ""
 show_img_in_detail: true
 coverimage: false
