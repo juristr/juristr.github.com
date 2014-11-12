@@ -1,23 +1,27 @@
 ---
 layout: post
-title: "Learning Angular: Conflicting scope variable names with directive controllers"
-lead: ""
+title: "Learning Angular: What is the scope of your directive??"
+lead: "Watch out: Directive controllers do not necessarily behave like normal controllers"
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["JavaScript", "Angular.js", "learning-ng"]
+tags: ["JavaScript", "Angular.js", "learning-ng", "angular-directives"]
 ---
 
-Intro bla bla...
+This might create quite some debugging headaches, especially in a larger application. Things don't bind properly, have different data on the scope than you'd expect etc.. When you define your directives, you have to be really careful about their scope.
 
 {% include ng-series.html %}
 
-## Problem:
+## The issue
+
+Take the following two directives defined in your HTML as follows:
 
 ```html
 <first-directive></first-directive>
 <second-directive></second-directive>
 ```
+
+Here's how they look internally.
 
 ```javascript
 .directive('firstDirective', function() {
@@ -34,7 +38,7 @@ Intro bla bla...
   .directive('secondDirective', function() {
     return {
       restrict: 'E',
-      template: '<div>Second diretive: {%raw%}{{ vm.msg }}{%endraw%}</div>',
+      template: '<div>Second directive: {%raw%}{{ vm.msg }}{%endraw%}</div>',
       controller: function() {
         var vm = this;
         vm.msg = 'Hello World';
@@ -44,8 +48,87 @@ Intro bla bla...
   });
 ```
 
-## Output
-
-Clearly you would expect to get two different messages, "Hi" and "Hello World".
+Nothing strange, right? Each of them defines a directive controller which sets a variable `msg`. **What do you think is the expected output?**
 
 <iframe src="http://embed.plnkr.co/ODtRkv/preview" width="100%" height="400px"> </iframe>
+
+Hmm..not really, right? Clearly you would expect to get two different messages, "Hi" and "Hello World". If you open the inspector (of your Chrome Devtools) you might understand why:
+
+<figure>
+  <img src="/blog/assets/imgs/learning_angular/directives-nonisolated-scopes.png" />
+  <figcaption>There's just one scope (ng-scope) defined</figcaption>
+</figure>
+
+As you can see, there's only one scope defined. Take a look at the `<html>` tag at the very top: Angular nicely marks the scope with the `ng-scope` class. You can also visualize it with [Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en), the Angular.js Chrome Devtools extension.
+ 
+<figure>
+  <img src="/blog/assets/imgs/learning_angular/batarang-scopes-directives.png" />
+  <figcaption>Scopes being highlighted by Batarang</figcaption>
+</figure>
+
+To do so, simply activate the according "Show scope" option.
+
+<figure>
+  <img src="/blog/assets/imgs/learning_angular/batarang-showscopes.png" />
+  <figcaption>Activate the "Show scope" property on Batarang</figcaption>
+</figure>
+
+So the **issue is quite clear**, the directives don't create a separate, isolated scope and thus, the `vm` variable of the directive controller on `<second-directive>` overwrites the `vm` variable of the directive controller on `<first-directive>`. Thus, two times "Hello World".
+
+> **Directive controllers** don't create a separate scope out of the box!
+
+Interestingly, while a normal controller creates a scope, the directive controller doesn't do so. It makes sense, but you might easily fall into this trap.
+
+## The solution
+
+Directives **can be forced to create an isolated scope**. This is done by using the `scope` property, in the simplest case by simply **setting it to true**.
+
+```javascript
+.directive('secondDirective', function() {
+  return {
+    ...
+    scope: true,
+    ...
+  };
+});
+```
+
+And voilá..
+
+<iframe src="http://embed.plnkr.co/jo3zeF/preview" width="100%" height="400px"> </iframe>
+
+Also the HTML reflects the change, now having three different scopes.
+
+<figure>
+  <img src="/blog/assets/imgs/learning_angular/directives-isolated-scopes.png" />
+  <figcaption>Directives are now isolated, having their own scope</figcaption>
+</figure>
+
+## Background
+
+Some more background around scopes in directives.
+
+The `scope` variable can either have `true` or `false` (default) as we've just seen, or you pass an object explicitly specifying which properties should be passed from outside into the directive (basically for configuring it).
+
+```javascript
+angular.directive('myDirective', function(){
+  return {
+    ...
+    scope: {
+      obj1: '=',
+      obj2: '@',
+      obj3: '&'
+    }
+    ...
+  };
+});
+```
+
+
+
+## Conclusion
+
+Now, this example is obviously an extremely simplified version of an issue I encountered in a real world app. While here it is quite easy to track down the problem, believe me, I invested some time in understanding why the data in the sidebar didn't properly display. Only after I realized that the `<sidebar>`directive scope contained the data of the `<header>` directive I started to get suspicious.
+
+The conclusion really is that you should think twice when creating a directive on whether you should isolate it or not. Intuitively I'd say that in most cases having an isolated directive is what one would expect, but it might really depend on what kind of directive you're creating.
+
