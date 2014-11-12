@@ -77,11 +77,11 @@ So the **issue is quite clear**, the directives don't create a separate, isolate
 
 > **Directive controllers** don't create a separate scope out of the box!
 
-Interestingly, while a normal controller creates a scope, the directive controller doesn't do so. It makes sense, but you might easily fall into this trap.
+Interestingly, while a normal controller creates a scope, the directive controller doesn't do so. It totally makes sense, but you might easily fall into this trap.
 
 ## The solution
 
-Directives **can be forced to create an isolated scope**. This is done by using the `scope` property, in the simplest case by simply **setting it to true**.
+Directives **can be forced to create an isolated scope**. This is done by using the `scope` property, in the simplest case by **setting it to true**.
 
 ```javascript
 .directive('secondDirective', function() {
@@ -124,11 +124,19 @@ angular.directive('myDirective', function(){
 });
 ```
 
+`=` stands for data binding, it passes a reference to an object inside your directive. It keeps the expression in the attribute in sync with the isolated scope, thus allows for 2-way bindings.
 
+```html
+<my-directive obj1="vm.someObject"></my-directive>
+```
+
+`@` stands for interpolation. It is used with `{%raw%}{{}}{%endraw%}` and will always return a string. So, if you pass in an object reference, you won't be able to access its properties. Rather, in the best case you'd get a JSON string representing your object.
+
+`&` stands for expression. Within the directive it will be made available as a function, that, when called, executes the passed expression.
 
 ## Conclusion
 
-Now, this example is obviously an extremely simplified version of an issue I encountered in a real world app. While here it is quite easy to track down the problem, believe me, I invested some time in understanding why the data in the sidebar didn't properly display. Only after I realized that the `<sidebar>`directive scope contained the data of the `<header>` directive I started to get suspicious.
+This example is obviously a simplified version of an issue I encountered in a real world app. While here it is quite easy to track down the problem, believe me, I invested some time in understanding why the data in the sidebar didn't properly display. Only after I realized that the `<sidebar>` directive scope contained the data of the `<header>` directive I started to get suspicious.
 
-The conclusion really is that you should think twice when creating a directive on whether you should isolate it or not. Intuitively I'd say that in most cases having an isolated directive is what one would expect, but it might really depend on what kind of directive you're creating.
+The learning from this is to think about the scope of your directive, whether it should use the parent scope directly or whether you should isolate it. An "attribute directive", augmenting an existing element like a button or input box with additional features might not necessarily need to have an isolated scope but rather rely on its parent's one. Instead, you might expect an isolated scope when using more closed, complete widgets. Just think about it.
 
