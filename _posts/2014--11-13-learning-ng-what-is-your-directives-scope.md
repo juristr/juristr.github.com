@@ -130,13 +130,46 @@ angular.directive('myDirective', function(){
 <my-directive obj1="vm.someObject"></my-directive>
 ```
 
-`@` stands for interpolation. It is used with `{%raw%}{{}}{%endraw%}` and will always return a string. So, if you pass in an object reference, you won't be able to access its properties. Rather, in the best case you'd get a JSON string representing your object.
+`@` stands for interpolation. It is used with `{%raw%}{{}}{%endraw%}` and will always return a string. 
 
-`&` stands for expression. Within the directive it will be made available as a function, that, when called, executes the passed expression.
+```html
+<my-directive ob1="{%raw%}{{ vm.msg }}{%endraw%}"></my-directive>
+```
+
+`&` stands for expression. Within the directive it will be made available as a function, that, when called, executes the passed expression. Use it like
+
+```html
+<my directive callback="vm.showAlert('Hi')"></my-directive>
+```
+
+..with your directive configuration object being defined for instance like this:
+
+```javascript
+return {
+	...
+	scope: {
+		callback: '&'
+	},
+	template: '<button ng-click="callback()">Click</button>'
+	...
+}
+```
+
+You can also have different names for the scope properties that are used internally or passed externally:
+
+```javascript
+scope: {
+	obj1: '=object1',
+	obj2: '&object2',
+	obj3: '@object3'
+}
+```
+
+You would use `obj1` in your directive template, while the user of your directive would use `object1` on the HTML.
 
 ## Conclusion
 
-This example is obviously a simplified version of an issue I encountered in a real world app. While here it is quite easy to track down the problem, believe me, I invested some time in understanding why the data in the sidebar didn't properly display. Only after I realized that the `<sidebar>` directive scope contained the data of the `<header>` directive I started to get suspicious.
+While this example is obviously a simplified version where it's quite easy to track to the problem, believe me, I invested some good time in understanding why suddenly my sidebar suddenly didn't display any data. Only after I realized that the it's directive scope contained the data of the `<header>` directive's scope I started to get suspicious.
 
-The learning from this is to think about the scope of your directive, whether it should use the parent scope directly or whether you should isolate it. An "attribute directive", augmenting an existing element like a button or input box with additional features might not necessarily need to have an isolated scope but rather rely on its parent's one. Instead, you might expect an isolated scope when using more closed, complete widgets. Just think about it.
+The learning from this is that you should pay attention to the scope of your directive. Whether you should isolate it or rather rely on the parents scope. An "attribute directive", augmenting an existing element like a button or input box with additional features might not necessarily need to be isolated. Instead, you might expect an isolated scope when using more closed, complete widgets. Just think about it.
 
