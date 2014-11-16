@@ -1,14 +1,6 @@
 @import "compass/css3";
+@import "_variables";
 @import "_navbar";
-
-// $article-title-color: #423F37;
-$article-title-color: rgba(0,0,0,0.8);
-$article-title-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
-$article-subtitle-font: $article-title-font;
-// $article-subtitle-color: #666665;
-$article-subtitle-color: rgba(0,0,0,0.44);
-// $article-body-color: #333332;
-$article-body-color: rgba(0,0,0,0.8);
 
 body {
   text-rendering: optimizeLegibility;
@@ -114,7 +106,7 @@ article {
       letter-spacing: -0.02em;
       font-weight: 400;
       font-style: normal;
-      color: rgba(0,0,0,0.6);
+      color: $lightgray;
     }
 
     figure.wideimage {
@@ -215,7 +207,7 @@ article {
         }
 
         a:hover {
-          color: rgba(0,0,0,0.6);
+          color: $lightgray;
         }
       }
 
@@ -273,7 +265,7 @@ article {
     display: inline-block;
     vertical-align: top;
     padding: 0;
-    color: rgba(0,0,0,0.6);
+    color: $lightgray;
     margin-bottom: 35px;
     font-weight: 400;
     font-style: normal;
@@ -325,7 +317,7 @@ article {
         }
 
         a:hover {
-          color: rgba(0,0,0,0.6);
+          color: $lightgray;
         }
       }
     }
