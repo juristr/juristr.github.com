@@ -9,6 +9,7 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 
   <link rel="stylesheet" href=".tmp/styles/article.css">
+  <link rel="stylesheet" href="./assets/kudos/kudos.min.css">
 </head>
 <body>
   <div class="metabar">
@@ -173,6 +174,10 @@
     <div id="disqus_thread"></div>
   </div>
 </article>
+<div class="fixed-container">
+  <figure class="kudo">
+  </figure>
+</div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="./js/disqus.js"></script>
 <script type="text/javascript" src="./js/navbar.js"></script>
@@ -184,7 +189,17 @@
     });
 
     hljs.initHighlightingOnLoad();
-  </script>
+</script>
+
+<!-- Kudos script -->
+<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+<script type="text/javascript" src="./assets/kudos/jstorage.min.js"></script>
+<script type="text/javascript" src="./assets/kudos/kudos.min.js"></script>
+<script type="text/javascript" src="./assets/kudos/kudos.firebase.js"></script>
+<script type="text/javascript">
+  $('figure.kudo').kudoable();
+</script>
+
 <noscript>
   Please enable JavaScript to view the
   <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>

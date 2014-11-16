@@ -1,0 +1,9 @@
+@import "_variables";
+
+.fixed-container {
+  border: 1px solid black;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 125px;
+}
