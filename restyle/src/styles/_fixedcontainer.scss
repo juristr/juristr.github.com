@@ -1,9 +1,22 @@
 @import "_variables";
 
 .fixed-container {
-  border: 1px solid black;
   position: fixed;
   bottom: 5px;
   right: 5px;
   width: 125px;
+
+  .kudo {
+    .opening {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (max-width:1050px) {
+  .fixed-container {
+    position: relative;
+    margin: 0 auto;
+  }
 }

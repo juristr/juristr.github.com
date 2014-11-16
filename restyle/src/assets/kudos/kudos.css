@@ -1,131 +1,132 @@
 p.count{
-        display: block;
+	display: block;
 }
 div.opening{
-        background-color:#fff;
-        width:50px;
-        height:50px;
-        border-radius:50%;
-        margin:0 auto;
-        border:5px solid #000;
-        position:relative
+	background-color:#fff;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	margin:0 auto;
+	border:5px solid #000;
+	position:relative
 }
 div.opening div.circle{
-        background-color:#000;
-        width:50px;
-        height:50px;
-        margin-left:-25px;
-        margin-top:-25px;
-        border-radius:50%;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transition-property: transform,background-color;
-        transition-duration: 1s;
-        transition-timing-function: ease-out;
-        transform: scale(0.3);
-        transition-style: preserve-3d;
-        -webkit-transition-property: -webkit-transform,background-color;
-        -webkit-transition-duration:1s;
-        -webkit-transition-timing-function:ease-out;
-        -webkit-transform: scale(0.3);
-        -webkit-transform-style: preserve-3d;
-        -moz-transition-property: -moz-transform,color;
-        -moz-transition-duration:1s;
-        -moz-transition-timing-function:ease-out;
-        -moz-transform: scale(0.3);
-        -moz-transform-style: preserve-3d;
-        backface-visibility: visible;
-        -webkit-backface-visibility: visible;
-        -moz-backface-visibility: visible;
+	background-color:#000;
+	width:50px;
+	height:50px;
+	margin-left:-25px;
+	margin-top:-25px;
+	border-radius:50%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transition-property: transform,background-color;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+	transform: scale(0.3);
+	transition-style: preserve-3d;
+	-webkit-transition-property: -webkit-transform,background-color;
+	-webkit-transition-duration:1s;
+	-webkit-transition-timing-function:ease-out;
+	-webkit-transform: scale(0.3);
+	-webkit-transform-style: preserve-3d;
+	-moz-transition-property: -moz-transform,color;
+	-moz-transition-duration:1s;
+	-moz-transition-timing-function:ease-out;
+	-moz-transform: scale(0.3);	
+	-moz-transform-style: preserve-3d;
+	backface-visibility: visible;
+	-webkit-backface-visibility: visible;
+	-moz-backface-visibility: visible;
 }
 
 figure{
-        display:block;
-        position:relative;
-        margin:0 auto;
-        left:auto;
-        top:auto;
-        margin-top:20px;
+	display:block;
+	position:relative;
+	margin:0 auto;
+	left:auto;
+	top:auto;
+	margin-top:20px;
 }
+
 figure.kudo{
-        #position: absolute;
+	#position: absolute;
     margin-left: 90%;
-        right: 50%;
-        margin-right: -30px;
+	right: 50%;
+	margin-right: -30px;
     margin-bottom: 5px;
-        top: 3px;
-        text-align:center;
+	top: 3px;
+	text-align:center;
 }
 /*figure.kudo article a.kudobject p{text-align:center;display:block;margin:0;padding:0;line-height:50px;width:auto;height:auto}*/
 
 .kudo.complete a.kudobject div.opening div.circle{
-        background-image: url(heart_60x60.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: #000;
-        background-size:80%;
-        -moz-background-size:80%;
+	background-image: url(heart_60x60.png);
+	background-position: center; 
+	background-repeat: no-repeat;
+	background-color: #000;
+	background-size:80%;
+	-moz-background-size:80%;
 }
 a.count {
-        text-decoration: none;
+	text-decoration: none;
 }
 a.count span {
-        width:auto;
-        text-transform:uppercase;
-        font-family:"freight-sans-pro",sans-serif;
-        margin-top:5px;
-        color:#000;
-        font-weight:800;
-        display:block;
-        line-height: 13px;
-        margin-top:5px;
+	width:auto;
+	text-transform:uppercase;
+	font-family:"freight-sans-pro",sans-serif;
+	margin-top:5px;
+	color:#000;
+	font-weight:800;
+	display:block;
+	line-height: 13px;
+	margin-top:5px;
 }
 a.count span.num {
-        font-size: 18px;
+	font-size: 18px;
 }
 a.count span.txt {
-        font-size: 11px;
+	font-size: 11px;
 }
 a.count p span.dont-move{
-        font-size:18px;
-        text-transform:none;
-        line-height:22px;
-        width:200px;
-        margin-left:-50px;
-        margin-top:8px;
-        letter-spacing:0;
+	font-size:18px;
+	text-transform:none;
+	line-height:22px;
+	width:200px;
+	margin-left:-50px;
+	margin-top:8px;
+	letter-spacing:0;
 }
 a.kudobject{
-        display: block;
-        cursor: pointer;
+	display: block;
+	cursor: pointer;
 }
 
 a.kudobject :hover { text-decoration: none ! important; }
 
 .kudo.active a.kudobject div.opening div.circle{
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        background:rgba(0,0,0,0.7)
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);	
+	background:rgba(0,0,0,0.7)
 }
 
 .kudo.complete a.kudobject div.opening div.circle{
-        transition-property: none;
-        animation: bounce 1s;
-        animation-iteration-count: 1;
-        transform: scale(0.85);
-        -webkit-transition-property: none;
-        -webkit-animation: bounce 1s;
-        -webkit-animation-iteration-count: 1;
-        -webkit-transform: scale(0.85);
-        -moz-transition-property: none;
-        -moz-animation: bounce 1s;
-        -moz-animation-iteration-count: 1;
-        -moz-transform: scale(0.85);
+	transition-property: none;
+	animation: bounce 1s;
+	animation-iteration-count: 1;
+	transform: scale(0.85);
+	-webkit-transition-property: none;
+	-webkit-animation: bounce 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-transform: scale(0.85);
+	-moz-transition-property: none;
+	-moz-animation: bounce 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-transform: scale(0.85);
 }
 
-@keyframes bounce {
+@keyframes bounce { 
   0% {
     transform: scale(1.1);
     background-color: #000;
@@ -143,7 +144,7 @@ a.kudobject :hover { text-decoration: none ! important; }
   80% { transform: scale(0.95) }
   100% { transform: scale(0.85) }
 }
-@-webkit-keyframes bounce {
+@-webkit-keyframes bounce { 
   0% {
     -webkit-transform: scale(1.1);
     background-color: #000;
@@ -157,11 +158,11 @@ a.kudobject :hover { text-decoration: none ! important; }
   60% {
     -webkit-transform: scale(0.6);
     opacity: 1;
-        }
+	}
   80% { -webkit-transform: scale(0.95) }
   100% { -webkit-transform: scale(0.85) }
 }
-@-moz-keyframes bounce {
+@-moz-keyframes bounce { 
   0% {
     -moz-transform: scale(1.1);
     background-color: #000;

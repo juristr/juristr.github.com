@@ -8,8 +8,10 @@
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 
-  <link rel="stylesheet" href=".tmp/styles/article.css">
   <link rel="stylesheet" href="./assets/kudos/kudos.min.css">
+
+  <link rel="stylesheet" href=".tmp/styles/article.css">
+
 </head>
 <body>
   <div class="metabar">
@@ -192,12 +194,15 @@
 </script>
 
 <!-- Kudos script -->
-<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
-<script type="text/javascript" src="./assets/kudos/jstorage.min.js"></script>
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.1.2/firebase.js'></script>
 <script type="text/javascript" src="./assets/kudos/kudos.min.js"></script>
-<script type="text/javascript" src="./assets/kudos/kudos.firebase.js"></script>
+<script type="text/javascript" src="./assets/kudos/kudos.firebase.min.js"></script>
 <script type="text/javascript">
-  $('figure.kudo').kudoable();
+  $(function(){
+    $('figure.kudo').kudoable({
+        dataStore: window.firebaseStorage
+    });
+  });
 </script>
 
 <noscript>
