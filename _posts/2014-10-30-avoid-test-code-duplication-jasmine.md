@@ -176,17 +176,6 @@ So, the whole refactored code now looks like this:
 describe("The Menu's", function(){
 
     describe('provider interface', function(){
-        var provider;
-
-        beforeEach(function(){
-            provider = /* Angular code to inject the provider */;
-        });
-
-        // this is the line of interest!
-        executeSharedTests(provider);
-    });
-
-    describe('provider interface', function(){
         function createInstance(){
             return /* Angular code to inject the provider */
         }
