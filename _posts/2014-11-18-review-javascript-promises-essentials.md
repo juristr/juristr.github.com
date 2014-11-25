@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category: 
 tags: ["JavaScript", "book review"]
+reposts: ["http://java.dzone.com/articles/javascript-promises-essentials"]
 ---
 
 JavaScript is asynchronous by definition which is what makes many server-side developers struggle initially. Many even try to avoid asynchronism as much as they can rather than to embrace it. Others end up in a callback mess. That's where promises come into play!
