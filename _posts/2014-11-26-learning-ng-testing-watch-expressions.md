@@ -5,10 +5,10 @@ lead: "There's a difference in writing unit tests for controllers using the $sco
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["JavaScript", "Angular.js", "testing"]
+tags: ["JavaScript", "learning-ng", "Angular.js", "testing"]
 ---
 
-Intro bla bla...
+Today I wanted to write a unit test for a watch expression on my controller. What seemed quite obvious initially, turned out to be quite nasty. Anyway, thx to a nice community member on the Angular IRC, I was able to quickly resolve the issue. So, here's the story.
 
 {% include ng-series.html %}
 
@@ -63,7 +63,8 @@ app.controller('MainCtrl', function($scope) {
 });
 ```
 
-The above is a simple demo, which, slightly modified, can be useful for reverting a user selection on a dropdown for instance, using `ng-change`.
+Note that I'm injecting `$scope` which might make it appear like I'm using the $scope controller syntax. In reality it's for being able to register the `$watch`.  
+Also, the above is a simple demo, which, slightly modified, can be useful for reverting a user selection on a dropdown for instance, using `ng-change`.
 
 Anyway, if we want to the the above, we could write the following test scenario.
 
