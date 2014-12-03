@@ -133,7 +133,7 @@ $ npm install grunt -g
 As I mentioned, you normally don't commit the `node_modules` folder to your VCS. Thus, when a you as a developer, or the buildserver retrieves the source code from your VCS, somehow, the packages need to be restored. This is where the `package.json` file comes into play again. By having it in the root directory, executing..
 
 ```
-$ npm init
+$ npm install
 ```
 
 ..instructs NPM to read the dependencies in the config file and to restore them using the specified version.
