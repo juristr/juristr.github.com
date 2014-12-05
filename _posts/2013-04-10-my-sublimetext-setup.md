@@ -15,13 +15,31 @@ Actually, I'm a bit late now, as a couple of days ago [Alex MacCaw posted publis
 
 ## Sublime Configuration
 
-I usually have the following customizations:
+My Sublime user settings:
 
-    {
-        "font_size": 16,
-        "tab_size": 4,
-        "translate_tabs_to_spaces": true
-    }
+```json
+{
+    "caret_extra_width": 3,
+    "color_scheme": "Packages/Seti_UI/Seti.tmTheme",
+    "font_face": "Source Code Pro",
+    "font_size": 13,
+    "ignored_packages":
+    [
+        "Markdown",
+        "ScopeHunter",
+        "Dracula Color Scheme",
+        "DocBlockr",
+        "TrailingSpaces",
+        "Vintage"
+    ],
+    "soda_folder_icons": true,
+    "tab_size": 4,
+    "theme": "Seti.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
+}
+```
+
 
 The large font for being able to focus better on a smaller context which I found quite useful. Moreover it's more relaxing for my eyes.
 
@@ -48,15 +66,7 @@ Sublime wouldn't be that rich and useful without its packages (extensions basica
 
 Url: [http://wbond.net/sublime_packages/package_control](http://wbond.net/sublime_packages/package_control)
 
-Package Control is simply a package manager for Sublime Text packages and extensions.
-
-Package Control can be **installed** using Git. Navigate to the "Packages" folder (you can use your menu to find it `Preferences > Browse packages...`). Then execute the following commands
-
-<pre class="nohighlight">
-git clone https://github.com/wbond/sublime_package_control.git "Package Control"
-cd "Package Control"
-git checkout python3
-</pre>
+Package Control is simply a package manager for Sublime Text packages and extensions. **Installation** is super simple, just [go to their website](https://sublime.wbond.net/installation) and follow the "manual installation" instructions. They're the simplest ones.
 
 Restart Sublime and you're done.
 
@@ -68,85 +78,26 @@ Restart Sublime and you're done.
 
 ## My Packages
 
-Here's a list of packages I'm currently using with Sublime Text. I'll add/remove this list over time as I find new interesting and useful ones. The installation instructions as well as the packages I listed should work on both, Sublime Text 2 as well as Sublime Text 3 (which is currently in private beta). But since I'm using the latter, you might experience some trouble in using some of them with v2.
+Here's a list of packages I'm currently using with Sublime Text. I'll add/remove this list over time as I find new interesting and useful ones.
 
-> **Note**, if there is no hint about the installation of a package, you can simply use Package Control for adding the extension to Sublime Text.
+> **Note**, most of them are installable through Package Control. Simply google for them to find the installation instructions.
 
-<table class="table table-striped">
-  <thead>
-    <th>Package Name</th>
-    <th>Description</th>
-  </thead>
-  <tbody>
-    <tr>
-        <td><a href="https://github.com/sergeche/emmet-sublime">Emmet</a></td>
-        <td>Adds Zen-coding capabilities to Sublime Text. See the <a href="https://github.com/sergeche/emmet-sublime#available-actions">docs</a> for a list of available commands and usage instructions.</td>
-    </tr>
-    <tr>
-        <td><a href="https://bitbucket.org/CDuke/sublime-tfs/wiki/Home">Sublime TFS</a></td>
-        <td>A must have package if you have TFS as your version control system. After installation you should see a "TFS" menu which illustrates the major commands.</td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/titoBouzout/SideBarEnhancements">SideBar Enhancements</a></td>
-        <td>Adds a bunch of useful functionalities to your Sublime's sidebar context menu like copy path, duplicate file, move, copy etc...</td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/SublimeLinter/SublimeLinter">SublimeLinter</a></td>
-        <td>Linting support for Sublime</td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/spadgos/sublime-jsdocs">DocBlockr</a></td>
-        <td>
-            Augments Sublime for easy commenting of your JavaScript code. Adds comment blocks like:
-            <pre>
-/**
- * [testFunction description]
- * @param  {[type]} param1
- * @param  {[type]} param2
- * @return {[type]}
- */
-testFunction : function(param1, param2) {
-}
-</pre>
-        </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/alienhard/SublimeAllAutocomplete">AllAutocomplete</a></td>
-        <td>This package extends Sublime's amazing autocomplete support over multiple files.</td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/SublimeText/TrailingSpaces">TrailingSpaces</a></td>
-        <td>Allows to configure Sublime to highlight or even automatically remove all trailing spaces. Take a look at the <a href="https://github.com/SublimeText/TrailingSpaces">docs</a> for instructions on how to configure it.<br/>
-            My current setup adds the following to the user preferences:
-            <pre>
-{ "trailing_spaces_trim_on_save": true }</pre>
-            and this to the package's preferences
-            <pre>
-{
-    "trailing_spaces_include_current_line": false
-}</pre>
-        </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/dzhibas/SublimePrettyJson">SublimePrettyJson</a></td>
-        <td>Prettifies a compressed JSON string in the editor.</td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/ttscoff/MarkdownEditing">MarkdownEditing</a></td>
-        <td>If you love markdown teh same way as I do, this plugin is definitely a must have.</td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/revolunet/sublimetext-markdown-preview">MarkdownPreview</a></td>
-        <td>Although I use this less often, it is quite useful for quickly previewing your created markdown document in a browser.</td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/SublimeText/Tag">Tag</a></td>
-        <td>
-            "Tag" plugin is a collection of packages about tags, mixed together in an effort to provide a single package with utilities to work with tags.
-        </td>
-    </tr>
-  </tbody>
-</table>
+- **All Autocomplete -** Provides auto-completion across all open Sublime files.
+- **BracketHighlighter -** As the name tells...highlights brackets in HTML or code.
+- **DocBlockr -** For easily adding code comments and JSDoc compliant documentation.
+- **Emmet -** Adds Zen-coding capabilities to Sublime Text. See the <a href="https://github.com/sergeche/emmet-sublime#available-actions">docs</a> for a list of available commands and usage instructions.
+- **FixMyJS -** Experimental plugin to fix JavaScript code based on JSHint suggestions.
+- **JSHint Gutter -** For visualizing JSHint suggestions directly within the Sublime Editor.
+- **MarkdownEditing -** For Markdown editing support within Sublime. [Check out my post about how to enable spell-checking](/blog/2014/11/enable-spell-check-sublime-markdown/)!
+- **Pretty JSON -** For working with JSON (compression, expansion, formatting etc...)
+- **Sass -** Enables syntax highlighting for SASS files
+- **Seti_UI -** UI Theme I'm currently using
+- **Tag -** For auto-formatting HTML documents
+- **TrailingSpaces -** Allows to automatically remove (useless) trailing spaces on lines on each save.
+
+## UI Theme
+
+I currently use [Seti_UI](https://sublime.wbond.net/packages/Seti_UI) a Sublime port of the popular UI theme for [Atom](https://atom.io/). You can simply install it through Package Control and follow the installation instructions.
 
 ## Related Posts
 
