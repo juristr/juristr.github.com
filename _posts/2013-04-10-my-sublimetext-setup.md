@@ -9,7 +9,7 @@ tags: [tooling]
 reposts: ["http://architects.dzone.com/articles/my-sublime-text-setup"]
 ---
 
-I absolutely love this editor. A ridiculously fast editor which has everything you'd love to have from a simple notepad to an advanced, extensible IDE with auto-completion, highlighting to whatever you'd like to have. This post aims at mainly being a setup reference for myself.
+I absolutely love this editor. A ridiculously fast editor which has everything you'd love to have, from a simple notepad to an advanced, extensible IDE with auto-completion and highlighting. This post aims at mainly being a setup reference for myself.
 
 Actually, I'm a bit late now, as a couple of days ago [Alex MacCaw posted published exactly a similar post](http://blog.alexmaccaw.com/sublime-text) to this one here. So go and check that out as well, it contains a bunch of valuable information.
 
