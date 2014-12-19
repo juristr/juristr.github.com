@@ -100,8 +100,20 @@ Alternatively checkout your master branch and execute
 
 ```
 $ git pull master
-$ git checkout <yourfeaturebranche>
+$ git checkout <yourfeaturebranch>
 $ git rebase master
+```
+
+Note, when you rebase with master, your branch might not be easily updateable with its remote counterpart (given you synched it up to a central repo). In such case you can use the `--force` flag.
+
+<p class="notice warning">
+<strong>Caution!</strong> Inform yourself on the Git docs about the potential dangerous side effects when using the <code>--force</code> flag!
+</p>
+
+**Only use the force flag** if you haven't shared the branch with anyone and it is simply your central backup. Force overwrites the history with your local repository state inside your current branch.
+
+```
+$ git push --force origin <yourfeaturebranch>
 ```
 
 ### Finish a feature
