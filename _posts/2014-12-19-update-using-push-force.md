@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: articles-post
 title: "Update: using push --force to update remote branch"
 type: update-notice
 target-url: /blog/2014/09/implementing-the-git-flow/#Updatefeaturefrommaster

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: articles-post
 title: "Updated my Sublime Text Setup"
 type: update-notice
 target-url: /blog/2013/04/my-sublimetext-setup/

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: articles-post
 title: "French translation for my Webdev toolkit article"
 type: update-notice
 target-url: /blog/2014/08/node-grunt-yeoman-bower/
