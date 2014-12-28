@@ -29,3 +29,7 @@ Intro bla bla...
 - http://stackoverflow.com/questions/16168355/angularjs-server-side-validation-and-client-side-forms
 - http://code.realcrowd.com/on-the-bleeding-edge-advanced-angularjs-form-validation/
 - http://plnkr.co/edit/8vCSPw
+
+### Libraries
+
+- https://github.com/turinggroup/angular-validator
