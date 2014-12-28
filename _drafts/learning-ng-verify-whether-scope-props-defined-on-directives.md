@@ -5,7 +5,7 @@ lead: ""
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["JavaScript", "Angular.js", "angular-directives"]
+tags: ["JavaScript", "Angular.js", "angular-directives", "learning-ng"]
 ---
 
 Intro bla bla...
@@ -14,7 +14,11 @@ Intro bla bla...
 
 ## Problem
 
-You have an arbitrary directive and you'd like to verify whether the properties you defined on your directive's `scope`, have actually been assigned by the developer or not.
+You have an arbitrary directive and you'd like to verify whether the properties you defined on your directive's `scope`, have actually been assigned by the developer or not. The usual approach is to check for null and undefined
+
+```javasccript
+
+```
 
 Even when nothing is defined, apparently the function expression always gets the following function assigned:
 
@@ -24,7 +28,7 @@ function (locals) {
 }
 ```
 
-You can verify this by yourself, by adding a `check` function to your directive's scope and then by invoking it withe obj/func you'd like to verify.
+You can verify this by yourself, by adding a `check` function to your directive's scope and then by invoking it with the obj/func you'd like to verify.
 
 ```javascript
 link: function($scope){
@@ -80,6 +84,8 @@ function mapscMenuItem(directiveRecursion){
     };
 }
 ```
+
+http://plnkr.co/edit/MJFqNv?p=preview
 
 ## Links
 
