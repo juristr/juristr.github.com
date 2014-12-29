@@ -2,7 +2,7 @@
 layout: post
 title: "Kudos for your site - powered by Firebase"
 lead: "Learn how to add your own kudos to your blog or website"
-postimg: "/blog/assets/imgs/learning-ng/angular-image-bg.png"
+postimg: "/blog/assets/imgs/firebase-cover.png"
 show_img_in_detail: true
 coverimage: true
 category:
@@ -11,7 +11,9 @@ tags: ["JavaScript", "blogging"]
 
 I don't quite remember, guess it was about more than a year ago when I came across a Svtle-hosted blog where I noticed a small little circle, bouncing when you hover it and showing a number followed by "Kudos". What are Kudos? Read ahead and see how I created my own version using Firebase as the backend storage.
 
-So, **what are Kudos**? Wikipedia tries to explain like this:
+> **Note**, if you're here because you simply want to use the Kudos script on your own site, jump to the section about "Code and Usage". Otherwise read ahead.
+
+So, **what are Kudos**? Wikipedia explains them as follows:
 
 > Kudos (from the Ancient Greek: κῦδος) is acclaim or praise for exceptional achievement. <cite><a href="http://en.wikipedia.org/wiki/Kudos">Wikipedia</a></cite>
 
@@ -25,19 +27,15 @@ After some googling I found [Amit Upadhyay's](http://amitu.com/2013/04/kudos-usi
 
 Modern JavaScript tools and libraries give you plenty of possibilities to create rich user interfaces in a fairly fast and easy way. However, **once you need some backend service for persistent storage, things get complex**. Don't get me wrong, I love to code on the server and I regularly do it. But when I want to create some quick tool, some nice app, then the frontend is setup quite quickly. All you need is some JavaScript knowledge, a code/text editor and a browser. When it comes to the backend you...
 
-- have to decided which language/server: Node, .Net, Java, Ruby...
+- have to decide which language/server: Node, .Net, Java, Ruby...
 - how to handle authentication: OAuth? Facebook, Twitter, Google,...
 - which database? relational, non-releational? MongoDb, PostgreSQL
 - hosting? some cloud service, self-hosted? a VPS?
 - ...
 
-Lots of decisions you don't really want to face for a simple webapp like this kudo script here. Still, I need a backend storage and some form of authentication to prevent multiple "kudo likes".
+Lots of decisions you don't really want to face for a simple webapp like this kudo script here. Still, I obviously required some kind of backend for storing the kudos and even some minimal security policies to prevent - for instance - multiple kudos from a single person.
 
-**Firebase** is great here.
-
-![](/blog/assets/imgs/firebase.png)
-
-It presents itself as the "Realtime App Platform":
+**Firebase** is great here. It presents itself as the "Realtime App Platform":
 
 > Store & Sync Data Instantly: Build realtime mobile and web apps in minutes using client-side code and our powerful API. Save time. Delight your users.
 
@@ -122,43 +120,13 @@ var getAuthData = function(){
 
 The function returns a promise which either resolves with the authData when the user has already been authenticated or executes the anonymous login.
 
-I then use the `uid` from the authData to identify a user's kudo entry. This is how the data for a given page looks like:
+I then use the `uid` from the authData to identify a user's Kudo entry. This is how the data for a given page looks like:
 
-```json
-"blog200903umlusecaseextendandinclude": {
-    "likes": {
-        "anonymous:-J_2ASDdTldkmD": {
-            "count": 1
-        },
-        "anonymous:-K_dkasdKdd....": {
-            "count": 1
-        },
-        ...
-    }
-}
-```
+![](/blog/assets/imgs/firebase-data-entry-structure.png)
 
-This allows me to restrict the user in such a way that it can only add new kudos or remove its own entry. This is enforced through the Firebase security rules which can be configured on its website. The rule for the kudo DB looks as follows:
+This allows me to restrict the user in such a way that it can only add new kudos or remove its own entry. This is enforced by the **Firebase security rules** which can be configured on its website. The rule for the kudo DB looks as follows:
 
-```json
-{
-    "rules": {
-        
-        "kudos": {
-          "$url": {
-            ".read": true,
-            ".write": "data.child('likes').val().length === 0",
-            "likes": {
-              "$userid": {
-                ".read": true,
-                ".write": "auth.uid === $userid"
-              }
-            }
-          }
-        }
-    }
-}
-```
+![](/blog/assets/imgs/firebase-kudo-rules.png)
 
 Again, check the docs for the exact syntax. What the above definition does is to allow all users to read all likes, but only modify (write) those created by themselves.
 
@@ -186,7 +154,7 @@ getAuthData().then(function(authData){
 });
 ```
 
-`key` is the page url (cleaned from special symbols like slashes etc).
+`key` is the page url (cleaned from special symbols like slashes etc). Then I create/or update a subnode "likes" before creating an entry for the current user, with its authentication UID.
 
 **Removing** an existing Kudo simply removes the according node:
 
@@ -221,6 +189,10 @@ Every time a value is updated on the Firebase store, this callback will be invok
 
 ## Code and Usage
 
-All of the code is available at the **GitHub repository**: [https://github.com/juristr/kudos-jekyll#installation](https://github.com/juristr/kudos-jekyll#installation).
+All of the code is available on **GitHub**: [https://github.com/juristr/kudos](https://github.com/juristr/kudos).
 
-There are even the instructions on how to use it on your own page. Simply follow the instructions. As always, I'm more than happy for any comments or PRs with improvements.
+There are even detailed instructions on how to add the script to your own page as well as on how to properly create and configure your Firebase account. As always, I'm more than happy for any comments or PRs with improvements.
+
+## Conclusion
+
+Firebase is great as a backend for simple applications. Especially when it comes to real-time synchronization between different clients which you literally get for free. Another area where I could imagine to use it is on mobile devices. The vast amount of available client libraries makes it really easy to connect to Firebase. So you could have it as your integration backend with a larger environment or ecosystem of applications, just to be aligned with the latest movements Microservices ;).
