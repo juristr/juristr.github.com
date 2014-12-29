@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript", "testing", "Angular.js"]
+reposts: ["http://www.webcodegeeks.com/javascript/avoid-test-code-duplication-in-jasmine-tests/"]
 ---
 
 Test code has to be treated like production code. Obviously we cannot charge the customer for it, it's something that helps us developers to make sure we keep our codebase healthy, which ultimately is the responsibility we have towards our customers. Thus we need to apply the same best practices principles as we do for our production code, where, code duplication is evil.
