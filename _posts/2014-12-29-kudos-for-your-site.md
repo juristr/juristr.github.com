@@ -9,7 +9,7 @@ category:
 tags: ["JavaScript", "blogging"]
 ---
 
-I don't quite remember, guess it was about more than a year ago when I came across a Svtle-hosted blog where I noticed a small little circle, bouncing when you hover it and showing a number followed by "Kudos". What are Kudos? Read ahead and see how I created my own version using Firebase as the backend storage.
+I don't quite remember, guess it was about more than a year ago when I came across a Svbtle-hosted blog where I noticed a small little circle, bouncing when you hover it and showing a number followed by "Kudos". What are Kudos? Read ahead and see how I created my own version using Firebase as the backend storage.
 
 > **Note**, if you're here because you simply want to use the Kudos script on your own site, jump to the section about "Code and Usage". Otherwise read ahead.
 
@@ -17,8 +17,8 @@ So, **what are Kudos**? Wikipedia explains them as follows:
 
 > Kudos (from the Ancient Greek: κῦδος) is acclaim or praise for exceptional achievement. <cite><a href="http://en.wikipedia.org/wiki/Kudos">Wikipedia</a></cite>
 
-If I'm right, then [Dustin Curtis](http://dustincurtis.com/) came up with this idea when creating the famous blogging platform [Svtle](https://svbtle.com/). Go there to see some examples.  
-It's basically similar to a Facebook "like" or Google+ "+1" button. I first saw them on the famous [Svtle](https://svbtle.com/) blog engine. I liked it, so I decided to roll my own.
+If I'm right, then [Dustin Curtis](http://dustincurtis.com/) came up with this idea when creating the famous blogging platform [Svbtle](https://svbtle.com/). Go there to see some examples.  
+It's basically similar to a Facebook "like" or Google+ "+1" button. I first saw them on the famous [Svbtle](https://svbtle.com/) blog engine. I liked it, so I decided to roll my own.
 
 After some googling I found [Amit Upadhyay's](http://amitu.com/2013/04/kudos-using-parse-for-jekyll/) post. He already had a similar idea to create a Svbtle independent Kudo implementation by using [Parse](https://parse.com/) as the backend service.
 
