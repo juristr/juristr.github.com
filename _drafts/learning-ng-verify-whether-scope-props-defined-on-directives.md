@@ -16,7 +16,7 @@ Intro bla bla...
 
 You have an arbitrary directive and you'd like to verify whether the properties you defined on your directive's `scope`, have actually been assigned by the developer or not. The usual approach is to check for null and undefined
 
-```javasccript
+```javascript
 
 ```
 
