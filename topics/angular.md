@@ -16,6 +16,7 @@ Angular links..
 ## Tutorials and Walkthroughs
 
 - [DailyJS: Google, Twitter and AngularJS](http://dailyjs.com/2013/04/11/angularjs-1/)
+- [Unstoppable angular resources](http://www.planningforaliens.com/angular/ginormous-unstoppable-angular-resource-list/)
 
 ## Books
 
