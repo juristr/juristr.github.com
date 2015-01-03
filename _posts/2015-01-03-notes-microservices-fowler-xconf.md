@@ -2,6 +2,9 @@
 layout: post
 title: "Notes: Microservices by Martin Fowler"
 lead: "My notes and thoughts on Martin Fowler's talk about Microservices at XConf"
+postimg: "/blog/assets/imgs/monolith-microservices.png"
+show_img_in_detail: true
+coverimage: false
 category:
 tags: ["notes", "architecture"]
 ---
