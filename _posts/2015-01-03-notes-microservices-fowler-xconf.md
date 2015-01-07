@@ -100,3 +100,8 @@ The talk somehow confirms my impressions so far...
 As an architect and tech enthusiast this is the architecture of my dreams. But given the issues I regularly face when coaching teams, the difficulty at adopting good programming practices and rigid organizational structures...then adopting a Microservices architecture is **extremely difficult**.
 
 Still, even if you're not ready yet, I think you should aim for such structure, without necessarily going it the whole way. Like, structuring your application or product by following practices from the Microservices architecture but deploying it as a monolith. I'm thinking about a modular architecture, good failure handling, logging and monitoring, automated deployment pipelines and a high degree of automated testing. From there, optimize incrementally.
+
+**Related readings**
+
+- [Uncle Bob: Microservices and Jars](http://blog.cleancoder.com/uncle-bob/2014/09/19/MicroServicesAndJars.html)
+- [Microservices are not Jars](http://www.giorgiosironi.com/2014/09/microservices-are-not-jars.html)
