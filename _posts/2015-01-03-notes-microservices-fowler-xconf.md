@@ -7,6 +7,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["notes", "architecture"]
+reposts: ["http://java.dzone.com/articles/notes-microservices-martin"]
 ---
 
 I just watched Martin Fowler's talk about Microservices at XConf. Here are some of my notes and related thoughts. The talk is heavily based upon [Martin Fowler and James Lewis' article about Microservices](http://martinfowler.com/articles/microservices.html), so you can find and read most of the information there.
