@@ -5,7 +5,7 @@ lead: "Some of my notes from a recent AngularJS webinar"
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["JavaScript"]
+tags: ["JavaScript", "learning-ng", "Angular.js"]
 reposts: ["http://juristr.com/blog/2014/05/angular-baby-steps/"]
 ---
 
