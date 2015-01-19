@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript"]
+reposts: ["http://juristr.com/blog/2014/05/angular-baby-steps/"]
 ---
 
 This article outlines some of my notes of a webinar about Angular.js I recently participated at. These are really just "baby steps" in that it covers the very basics that might help to get started. Since these are really my first steps with Angular, I might have misunderstood some of the stuff. So feel free to [help me improve this article](https://github.com/juristr/juristr.github.com/edit/master/{{ page.path }}) ;)
