@@ -102,7 +102,7 @@ angular.module('plunkr', [])
         scope: {
           obj: '=menuitem'
         },
-        template: '<div>{{ obj.title }}</div>'
+        template: '<div>{%raw%}{{ obj.title }}{%endraw%}</div>'
       };
     })
     .directive('anotherDir', function(){
