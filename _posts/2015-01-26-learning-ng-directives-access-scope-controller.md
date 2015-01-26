@@ -74,7 +74,7 @@ app.directive('myDirective', function(){
 
 Here's a Plunker example that illustrates some scenarios:
 
-<iframe src="http://embed.plnkr.co/AUf5PHqy2KPCOOHAedMc/preview" width="100%" height="400px"> </iframe>
+<iframe src="http://embed.plnkr.co/BL9otk/preview" width="100%" height="400px"> </iframe>
 
 ---
 
