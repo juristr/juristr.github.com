@@ -210,7 +210,7 @@ $ bower install http://example.com/script.js
 
 If you require some more advanced configuration, like changing the name of the dependencies directory or its location, you may want to use a `.bowerrc` configuration file placed at the root of your project directory structure. More about the available configuration options can be found [at the official site](http://bower.io/docs/config/).
 
-There's another nice article I found on Medium that gives [ a quick introduction to Bower](https://medium.com/@ZaidHanania/bower-101-c0b57322df8) which you might want to take a look at as well.
+There's another nice article I found on Medium that gives [ a quick introduction to Bower](https://medium.com/@ZaidHanania/bower-101-c0b57322df8) which you might want to take a look at as well. Moreover [this article](http://bob.yexley.net/creating-and-maintaining-your-own-bower-package/) gives some useful insights into publishing and maintaining your own packages on bower.
 
 ## Yeoman
 
