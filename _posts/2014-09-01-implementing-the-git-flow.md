@@ -4,7 +4,7 @@ title: "Implementing the 'Git flow'"
 lead: "How we use 'git flow' in one of our projects"
 show_img_in_detail: false
 coverimage: false
-updated: 2015-02-24
+lastupdated: '2015-02-24'
 tags: ["Git"]
 reposts: ["http://www.javacodegeeks.com/2014/09/implementing-the-git-flow.html"]
 ---
