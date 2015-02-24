@@ -486,6 +486,7 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [DZone Refcard: Git Patterns and Antipatterns](http://refcardz.dzone.com/refcardz/git-patterns-and-anti-patterns)
 - [Git Man-Page generator](http://git-man-page-generator.lokaltog.net/)
 - [Understanding branches in Git](http://blog.thoughtram.io/git/rebase-book/2015/02/10/understanding-branches-in-git.html)
+- [8 Tips to help you work better with Git](https://about.gitlab.com/2015/02/19/8-tips-to-help-you-work-better-with-git/)
 
 ### Videos
 
