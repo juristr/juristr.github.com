@@ -4,6 +4,7 @@ title: "Implementing the 'Git flow'"
 lead: "How we use 'git flow' in one of our projects"
 show_img_in_detail: false
 coverimage: false
+updated: 2015-02-24
 tags: ["Git"]
 reposts: ["http://www.javacodegeeks.com/2014/09/implementing-the-git-flow.html"]
 ---
@@ -230,3 +231,7 @@ We do not use _release branches_ as we don't need them so far. There is no prepa
 ---
 
 That's the flow we came up with after a few iterations and dicussions within the team and with our tester. What's your approach?? I'd be interested to hear in the comments.
+
+## Links and Resources
+
+- [The GitLab Flow](https://about.gitlab.com/2014/09/29/gitlab-flow/)
