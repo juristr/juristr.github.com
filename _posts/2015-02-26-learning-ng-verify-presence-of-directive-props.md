@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Learning Angular: How to I verify whether a scope property on my directive has been defined?"
-lead: ""
+title: "Learning Angular: Verifying whether a function has been passed to my directive's isolated scope"
+lead: "How can I verify whether a function property defined on my directive's isolated scope has been specified or not?"
 show_img_in_detail: true
 coverimage: false
 category:
@@ -63,7 +63,7 @@ angular.module('someModule', [])
             '<div ng-show="isFn" style="border: 1px solid; padding:5px">',
                 '<a href="#" ng-click="clickFn()">Click me</a>',
             '</div>'
-            ].join('',
+            ].join(''),
           link: function($scope, iElem, iAttr){
             // use the iAttr to check whether the property is defined
             $scope.isFn = angular.isUndefined(iAttr.clickFn) === false;
@@ -76,4 +76,16 @@ angular.module('someModule', [])
 
 ## Background
 
-Why?? What is the printed function?
+Each function that is passed into the isolated scope of a directive is wrapped like this:
+
+<figure>
+  <img src="/blog/assets/imgs/learning-ng/directive-scope-fn-isolateBindingContext.png" />
+</figure>
+
+Here's the source of `parentGet`
+
+<figure>
+  <img src="/blog/assets/imgs/learning-ng/directive-scope-fn-parentGet.png" />
+</figure>
+
+From a bird's perspective, it seems that it is responsible for safely invoking the passed function with the local scope of the directive. But as said, I didn't go into the details.
