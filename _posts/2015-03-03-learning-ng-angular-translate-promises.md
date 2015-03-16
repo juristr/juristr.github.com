@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript", "Angular.js", "angular-translate", "learning-ng"]
+reposts: ["http://java.dzone.com/articles/learning-angular-set-your"]
 ---
 
 In this article I briefly outline an issue I had, namely to make sure that my language's locale files are loaded by angular-translate before any UI is shown. First, this prevents from any unwanted flickering and second it helps to avoid wrong displaying of localized data. But see for yourself.
