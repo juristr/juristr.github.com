@@ -233,7 +233,7 @@ The following animated GIF shows how do do it:
 
 <figure>
     <img src="/blog/assets/imgs/git-clean-history.gif" />
-    <figcaption>Demo on cleaning up your commit history ([(enlarge)](/blog/assets/imgs/git-clean-history.gif))</figcaption>
+    <figcaption>Demo on cleaning up your commit history (<a href="/blog/assets/imgs/git-clean-history.gif">enlarge</a>)</figcaption>
 </figure>
 
 ## Merge and resolve conflicts
