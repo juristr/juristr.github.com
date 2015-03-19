@@ -4,7 +4,7 @@ title: "Implementing the 'Git flow'"
 lead: "How we use 'git flow' in one of our projects"
 show_img_in_detail: false
 coverimage: false
-lastupdated: '2015-02-24'
+lastupdated: '2015-03-19'
 tags: ["Git"]
 reposts: ["http://www.javacodegeeks.com/2014/09/implementing-the-git-flow.html"]
 ---
@@ -118,6 +118,10 @@ $ git push --force origin <yourfeaturebranch>
 ```
 
 ### Finish a feature
+
+<p class="notice tip">
+Before merging back to master, make sure you polish your git history. This is something I see people often forget or don't care about. But it's really easy and leads to a much clearer and more understandable history (which helps in resolving issues as well). <a href="/blog/2013/04/git-explained/#Polishingyourfeaturebranchcommits" target="_blank">In this article I explain how do to it.</a>
+</p>
 
 Merge it back into master
 

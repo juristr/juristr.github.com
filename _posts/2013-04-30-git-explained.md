@@ -6,6 +6,7 @@ subtitle: "For beginners"
 description: "Introduces Git for those who want to get started and really have no experience at all so far. It's a step by step guide basically."
 postimg: "/blog/assets/imgs/gitlogo.png"
 show_img_in_detail: true
+lastupdated: '2015-03-19'
 category: article
 tags: [Git]
 reposts: ["http://dotnet.dzone.com/articles/intro-git", "http://www.javacodegeeks.com/2013/05/git-explained-for-beginners.html"]
@@ -220,6 +221,20 @@ Lets change and commit it on master as well (this will generate a nice _conflict
 Our tree now visualizes the branch:
 
 ![](/blog/assets/imgs/gitrepo_tree4.png)
+
+### Polishing your feature branch commits
+
+When you create your own, personal feature branch you're allowed to do as much commits as you want, even allowing kinda dirty commit messages. This is a really powerful approach as you can jump back to any point in your dev cycle. However, **once you're ready to merge back to master** you should polish your commit history by doing a rebase. This is done using 
+```
+git rebase -i HEAD~<num-commits>
+```
+
+The following animated GIF shows how do do it: [(enlarge)](/blog/assets/imgs/git-clean-history.gif)
+
+<figure>
+    <img src="/blog/assets/imgs/git-clean-history.gif" />
+    <figcaption>Demo on cleaning up your commit history</figcaption>
+</figure>
 
 ## Merge and resolve conflicts
 
