@@ -229,11 +229,11 @@ When you create your own, personal feature branch you're allowed to do as much c
 git rebase -i HEAD~<num-commits>
 ```
 
-The following animated GIF shows how do do it: [(enlarge)](/blog/assets/imgs/git-clean-history.gif)
+The following animated GIF shows how do do it:
 
 <figure>
     <img src="/blog/assets/imgs/git-clean-history.gif" />
-    <figcaption>Demo on cleaning up your commit history</figcaption>
+    <figcaption>Demo on cleaning up your commit history (<a href="/blog/assets/imgs/git-clean-history.gif">enlarge</a>)</figcaption>
 </figure>
 
 ## Merge and resolve conflicts
