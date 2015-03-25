@@ -357,23 +357,9 @@ The tree now also shows the references to the remote counterparts (origin/HEAD a
 
 ## I'd like to Migrate my TFS Project to Git
 
-If you have an existing project already hosted on TFS and you'd like to migrate it to Git, then you can use Microsoft's **[git-tf](http://gittf.codeplex.com/)** tool.
+Check out my post here which goes into the details on how to export your existing TFS repository to Git:
 
-> Git-TF is a set of cross-platform, command line tools that facilitate sharing of changes between TFS and Git. <cite><a href="http://gittf.codeplex.com/">Git-TF Codeplex</a></cite>
-
-As described on the [project's website](http://gittf.codeplex.com/wikipage?title=Clone&referringTitle=Home) you can simply perform a clone of your TFS repository like
-
-    git tf clone http://myserver:8080/tfs/collectionName $/TeamProjectA/Main --deep
-
-Don't forget the `--deep` addition to ensure you're copying the entire history. Otherwise you'll just clone the last TFS changeset. After you have successfully cloned the TFS repository you can add a remote to your new Git server repository just normally.
-
-    git remote add origin git@mygitserver.com:mygituser/myreponame.git
-
-..and then perform a
-
-    git push -u origin master
-
-> **Note:** the `-u` is needed as you're publishing the `master` branch for the first time to your remote.
+- [Migrate from TFS to Git](/blog/2015/03/migrate-tfs-to-git/)
 
 ## Resources and Links
 
