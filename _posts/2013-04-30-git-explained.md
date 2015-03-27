@@ -9,7 +9,7 @@ show_img_in_detail: true
 lastupdated: '2015-03-19'
 category: article
 tags: [Git]
-reposts: ["http://dotnet.dzone.com/articles/intro-git", "http://www.javacodegeeks.com/2013/05/git-explained-for-beginners.html"]
+reposts: ["http://dotnet.dzone.com/articles/intro-git", "http://www.javacodegeeks.com/2013/05/git-explained-for-beginners.html", "http://java.dzone.com/articles/polishing-your-feature-branch"]
 ---
 
 I'm working with Git now [for about two years](/blog/2010/11/juri-goes-git-first-steps/) but only for my personal projects and those I have on GitHub. At work we still use TFS and SVN (as of now). Recently [Paolo Perrotta](https://twitter.com/nusco) came to our company to hold a course about Agile planning and since Git was quite new to most of my mates, he also quickly explained Git in the context of refactoring. I really liked his approach of explaining it and that's why I'd like to replicate his explanation here.
