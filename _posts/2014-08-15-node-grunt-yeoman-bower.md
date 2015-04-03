@@ -2,7 +2,7 @@
 layout: articles-post
 title: "Node, Grunt, Bower and Yeoman - A Modern web dev's Toolkit"
 lead: "An introduction for ambitious newbies"
-lastupdated: '2014-12-03'
+lastupdated: '2015-04-03'
 show_img_in_detail: false
 coverimage: false
 tags: ["JavaScript", "Node.js"]
@@ -162,6 +162,8 @@ tells npm to only upgrade the given package for increments of the patch version 
 tells npm it can upgrade to any version smaller than the next major release: `<2.0.0`. This is the new default behavior when you install node packages (before it was `~`). NPM defines it as `1.3.5 := >=1.3.5-0 <2.0.0-0`.
 - `latest` or `*`:  
 tells npm to always update to the latest version (not recommended).
+
+**Not sure you understood semantic versioning??** NPMJS has created a nice page with a visual illustration of the included versions for any semver string: [http://semver.npmjs.com/](http://semver.npmjs.com/)
 
 ## Bower
 
