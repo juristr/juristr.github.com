@@ -224,7 +224,8 @@ Our tree now visualizes the branch:
 
 ### Polishing your feature branch commits
 
-When you create your own, personal feature branch you're allowed to do as much commits as you want, even allowing kinda dirty commit messages. This is a really powerful approach as you can jump back to any point in your dev cycle. However, **once you're ready to merge back to master** you should polish your commit history by doing a rebase. This is done using 
+When you create your own, personal feature branch you're allowed to do as much commits as you want, even with kinda dirty commit messages. This is a really powerful approach as you can jump back to any point in your dev cycle. However, **once you're ready to merge back to master** you should polish your commit history. This is done with the `rebase` command like this:
+
 ```
 git rebase -i HEAD~<num-commits>
 ```
