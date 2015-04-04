@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Migrate from TFS to Git"
-lead: "Your currently on TFS and would like to migrate to Git? This post shows you how, without loosing your history."
+lead: "You're currently on TFS and would like to migrate to Git? This post shows you how, without loosing your history."
 show_img_in_detail: true
 coverimage: false
 category:
