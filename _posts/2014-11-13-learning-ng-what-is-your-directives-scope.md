@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript", "Angular.js", "learning-ng", "angular-directives"]
+reposts: ["http://www.webcodegeeks.com/javascript/angular-js/learning-angular-what-is-the-scope-of-your-directive/"]
 ---
 
 This might create quite some debugging headaches, especially in a larger application. Things don't bind properly, have different data on the scope than you'd expect etc.. When you define your directives, you have to be really careful about their scope.
