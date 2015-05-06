@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript", "learning-ng", "Angular.js"]
+reposts: ["http://www.webcodegeeks.com/javascript/angular-js/learning-angular-useful-utility-functions/"]
 ---
 
 Today a very short post. Angular has a series of utility functions which you should definitely take a look at. They are not as feature rich as those of [underscore.js](http://underscorejs.org/) or [lodash.js](https://lodash.com/) but might be more than enough for your needs.

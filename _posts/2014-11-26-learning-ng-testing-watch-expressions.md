@@ -6,7 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript", "learning-ng", "Angular.js", "testing"]
-reposts: ["http://dotnet.dzone.com/articles/learning-angular-unit-testing"]
+reposts: ["http://dotnet.dzone.com/articles/learning-angular-unit-testing", "http://www.webcodegeeks.com/javascript/angular-js/learning-angular-unit-testing-watch-expressions/"]
 ---
 
 Today I wanted to write a unit test for a watch expression on my controller. What seemed quite obvious initially, turned out to be quite nasty. Anyway, thx to a nice community member on the Angular IRC, I was able to quickly resolve the issue. So, here's the story.

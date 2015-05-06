@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript", "Angular.js", "angular-directives", "learning-ng"]
+reposts: ["http://www.webcodegeeks.com/javascript/angular-js/learning-angular-verifying-whether-function-passed-directives-isolated-scope/"]
 ---
 
 When you create isolated directives, you usually use the `scope` property to define your directive's external API. Some of the APIs properties might be mandatory while others are optional and based on that state, your directive might react differently. Sounds easy, but I stumbled upon a difference when you pass in functions vs. data objects. See yourself.

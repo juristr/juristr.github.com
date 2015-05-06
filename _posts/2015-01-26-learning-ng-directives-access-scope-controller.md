@@ -6,7 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript", "Angular.js", "learning-ng"]
-reposts: ["http://java.dzone.com/articles/learning-angular-access"]
+reposts: ["http://java.dzone.com/articles/learning-angular-access", "http://www.webcodegeeks.com/javascript/angular-js/learning-angular-access-directive-scope-variables-from-directive-controllers-and-vice-versa/"]
 ---
 
 Angular directives can have a separate, isolated scope, which is even the suggested approach most of the time. And they can have directive controllers. But...how do I access the directive's scope variables from the directive controller and vice-versa?? It's quite simple, read on and see it yourself.
