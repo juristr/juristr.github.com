@@ -266,6 +266,12 @@
             }catch(e){}
         });
 
+        $('.donation').click(function(){
+            try{
+              ga('send', 'event', 'link', 'click', 'donation-nepal');
+            }catch(e){}
+        });
+
         $('#related-posts').find('a').click(function(){
             try{
               ga('send', 'event', 'link', 'click', 'related-posts');
