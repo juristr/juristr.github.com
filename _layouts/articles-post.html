@@ -46,6 +46,8 @@ type: article
           </div>
         </section>
 
+        {% include mycustoms/post-header-alert %}
+
         {{ content }}
 
         {% if page.reposts && page.reposts.length > 0 %}
