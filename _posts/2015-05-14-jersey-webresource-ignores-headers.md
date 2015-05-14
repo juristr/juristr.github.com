@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jersey WebResource - Header don't get appended"
-lead: "Nice journey with the Jersey WebResource Api"
+lead: "WTF? Why does WebResource not send my headers??"
 coverimage: false
 category:
 tags: ["java"]
