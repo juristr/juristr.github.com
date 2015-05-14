@@ -141,9 +141,8 @@ current: blog
           </div>
         </div>
         <!-- sponsored ad -->
-        <div class="row" style="text-align:center">
-          <a href="http://bit.ly/1EX4PQa" rel="nofollow" class="sponsored-ads" target="blank"><img src="/blog/assets/imgs/packt-campaign.png" height="40%"/></a>
-        </div>
+        {% include mycustoms/sponsored-ad %}
+
         <div class="row author-bio-footer kindle-ignore">
           {% unless page.tags == empty %}
             <div class="tag-list">
