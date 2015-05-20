@@ -5,6 +5,7 @@ lead: "WTF? Why does WebResource not send my headers??"
 coverimage: false
 category:
 tags: ["java"]
+reposts: ["http://java.dzone.com/articles/jersey-webresource-header-dont"]
 ---
 
 Yesterday I ran into a strange problem when using the Jersey WebResource class for doing HTTP calls: it seemed as if the headers I set, simply got ignored when executing the HTTP call. Read ahead.
