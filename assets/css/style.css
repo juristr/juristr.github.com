@@ -12,6 +12,7 @@
     color: black;
   }
 
+
   html, body, button, input, select, textarea {
     /*font-size: 20px;*/
     /*color: #57534A !important;*/
@@ -609,6 +610,13 @@
     margin-bottom:10px;
     max-width:100%;
     border:1px solid #EEE;
+  }
+
+  article img.emoji {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 6px;
+    border: 0;
   }
 
   article img.noborder {

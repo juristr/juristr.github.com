@@ -129,3 +129,6 @@ JB :
 prose:
   siteurl: "http://juristr.com"
   media: "blog/assets/imgs"
+
+gems:
+  - jemoji
