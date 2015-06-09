@@ -352,7 +352,11 @@ As you can see, the newly created node has no label on it. The only reference th
 
 And in fact, git is so kind to remind us about this fact. The tree looks now again as in figure 6.
 
-## Rollback
+## Undoing
+
+Undoing is probably the operation besides committing that's most useful about a version control system. You can quickly try out something, and if something breaks, simply dismiss your changes or jump back to a previous, working version. GitHub recently published an interesting article that might help as well: [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git).
+
+### Reset hard
 
 Jumping back is nice, but what if we want to **undo** everything back to the state before the merge of the feature branch? It is as easy as
 
@@ -374,11 +378,11 @@ In such situation you can use the `revert` command which basically creates a new
 
     git revert 41b8684
 
-## Undo Uncommitted Changes
+### Undo Uncommitted Changes
 
 Another common scenario of "undoing" stuff is to simply discard local, yet uncommitted changes.
 
-### Files Not Staged For a Commit
+#### Files Not Staged For a Commit
 
 Assume you modified a file. Executing `git status` would result in
 
@@ -404,7 +408,7 @@ performs our "undo". A further
     # On branch master
     nothing to commit, working directory clean
 
-### Files Staged for a Commit
+#### Files Staged for a Commit
 
 The other case might be when you modified a file and already staged it for being committed through a `git add` commit.
 
