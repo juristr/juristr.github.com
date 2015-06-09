@@ -7,6 +7,7 @@ show_img_in_detail: true
 coverimage: true
 category:
 tags: ["git"]
+reposts: ["http://java.dzone.com/articles/github-be-social-contribute"]
 ---
 
 GitHub revolutionised the open source world by building - IMHO - the first true social coding site. It has never been that easy to contribute to a project, whether it is to simply discuss some new features, to file a bug or in the best case to submit a bug fix or new feature patch: **a pull request (PR)**. Still, I found lots of devs don’t know how to properly create a PR, yet. With this article I hope to lower that entry barrier.
