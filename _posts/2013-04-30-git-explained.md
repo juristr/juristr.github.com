@@ -356,6 +356,15 @@ And in fact, git is so kind to remind us about this fact. The tree looks now aga
 
 Undoing is probably the operation besides committing that's most useful about a version control system. You can quickly try out something, and if something breaks, simply dismiss your changes or jump back to a previous, working version. GitHub recently published an interesting article that might help as well: [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git).
 
+Also, "emmajane" has a nice diagram illustrating the actions that need to be taken when you want to undo changes on some file(s):
+
+<figure>
+   <img src="https://raw.githubusercontent.com/emmajane/gitforteams/master/resources/workflow-undoing-changes.png">
+   <figcaption>By <a href="http://www.gitforteams.com/">emmajane (gitforteams.com)</a>. (<a href="https://raw.githubusercontent.com/emmajane/gitforteams/master/resources/workflow-undoing-changes.png">Click for large version</a>)</figcaption>
+</figure>
+
+There's more to discover on the site [gitforteams.com](http://www.gitforteams.com/).
+
 ### Reset hard
 
 Jumping back is nice, but what if we want to **undo** everything back to the state before the merge of the feature branch? It is as easy as
