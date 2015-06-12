@@ -6,7 +6,7 @@ subtitle: "For beginners"
 description: "Introduces Git for those who want to get started and really have no experience at all so far. It's a step by step guide basically."
 postimg: "/blog/assets/imgs/gitlogo.png"
 show_img_in_detail: true
-lastupdated: '2015-03-19'
+lastupdated: '2015-06-12'
 category: article
 tags: [Git]
 reposts: ["http://dotnet.dzone.com/articles/intro-git", "http://www.javacodegeeks.com/2013/05/git-explained-for-beginners.html", "http://java.dzone.com/articles/polishing-your-feature-branch"]
@@ -507,6 +507,10 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [Git Man-Page generator](http://git-man-page-generator.lokaltog.net/)
 - [Understanding branches in Git](http://blog.thoughtram.io/git/rebase-book/2015/02/10/understanding-branches-in-git.html)
 - [8 Tips to help you work better with Git](https://about.gitlab.com/2015/02/19/8-tips-to-help-you-work-better-with-git/)
+
+### Presentations
+
+- [Atlassian: Power routines of experienced Git users](http://www.slideshare.net/durdn/power-routines-of-experienced-git-users)
 
 ### Videos
 
