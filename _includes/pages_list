@@ -1,10 +1,11 @@
-{% for node in pages_list %}
+{% assign pagelist = pages_list | sort: 'date' | reversed %}
+{% for node in pagelist %}
   {% if node.title != null %}
     {% if group == null or group == node.group %}
         <li>
-            {% assign post-entry = node %}  
+            {% assign post-entry = node %}
             {% include article-small-listentry %}
         </li>
     {% endif %}
   {% endif %}
-{% endfor %} 
+{% endfor %}
