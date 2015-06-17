@@ -23,7 +23,7 @@ Enjoy!
 
 ## Articles in the series
 
-{% for tag in site.tags reversed %}
+{% for tag in site.tags %}
 {% if tag[0] == "learning-ng" %}
 <ul>
 {% assign pages_list = tag[1] %}
