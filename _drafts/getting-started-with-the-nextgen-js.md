@@ -252,3 +252,162 @@ function myFunction(a, b, ...args){
 
 I'm not even going to detail how to do this in ES5 (let's forget about the past :wink:). It had to do with "slicing" from the `arguments` value the number of args passed to the current function.
 
+## Destructuring assignment
+
+Destructuring assignment is the process of assigning the values of an iterable to variables.
+
+### Array Destructuring
+
+```javascript
+let juri, thomas;
+let myArray = ['Juri', 'Thomas'];
+
+// destructuring
+[juri, thomas] = myArray;
+```
+
+Executing this code, `juri` and `thomas` will get the according values from `myArray` assigned.
+
+<a href="https://jsbin.com/ripifek/3/edit?js,console" class="btn btn-danger">Try it!</a>
+
+By **combining the destructuring with the ... operator** you get even more interesting use cases (also commonly known from functional programming languages). Extracting the head or tail of a list gets extremely easy.
+
+```javascript
+let head, tail;
+let names = ['Juri', 'Steffi', 'Thomas', 'Susi'];
+
+[head, ...tail] = names;
+// Output:
+// head = ['Juri']
+// tail = ['Steffi', 'Thomas', 'Susi'];
+```
+
+Try it: https://jsbin.com/megotu/3/edit?js,console.
+
+Having this, and with a bit of recursion, a sum function could be defined like this:
+
+```javascript
+function sum(numbers){
+  let head, tail;
+  [head, ...tail] = numbers;
+
+  if(numbers.length > 0){
+    return head + sum(tail);
+  } else {
+    return 0;
+  }
+}
+```
+
+Try it: https://jsbin.com/roniyu/2/edit?js,console
+
+There's more, you can **also ignore values when applying** the destructuring operator.
+
+```javascript
+let head, tailMinusOne;
+let names = ['Juri', 'Steffi', 'Thomas', 'Susi'];
+
+[head, , tailMinusOne] = names;
+```
+
+### Object destructuring
+
+Similar as with arrays, destructuring works with objects as well. Even the syntax is similar:
+
+```javascript
+let name, age;
+let person = {
+  name: 'Juri',
+  age: 30 //damn...I'm not yet accustomed to write a 3 in :/
+};
+
+({name, age} = person);
+```
+
+The only thing that might seems strange is the fact you have to wrap the expression with braces.
+
+Try it: https://jsbin.com/sudofa/3/edit?js,console
+
+Now, in the example above **the variable names have to match the ones from the object**. That might not always be the case. But ES6 has a solution.
+
+```javascript
+let x, y;
+({name:x, age:y} = { name: 'Juri', age: 30 });
+```
+
+You can make it even shorter (not sure that's what you'd want):
+
+```javascript
+let {name: x, age: y} = { name: 'Juri', age: 30 };
+```
+
+### Default values
+
+What if a given value is not present while destructuring? Apply a default!
+
+```javascript
+let a, b;
+var numbers = [1];
+
+[a,b=0] = numbers;
+
+// Result: b doesn't have a corresponding value, so it'll be set to 0;
+```
+
+I'm even more excited about default values for function arguments:
+
+```javascript
+function myFunction(a = 0, b = 1, c = 2){
+  //...
+}
+```
+
+Currently you had to write it like
+
+```javascript
+function myFunction(a, b, c){
+  a = a || 0;
+  b = b || 1;
+  c = c || 2;
+
+  // ...
+}
+```
+
+Another interesting use case is to use **default values together with object destructuring**.
+
+```javascript
+// ES5
+function printPersonInfo(person){
+  var name = (person && person.name) || '(not defined)';
+  var age =  (person && person.name) || 18;
+
+  console.log(name, age);
+}
+printPersonInfo({
+  name: 'Juri',
+  age: 30
+  });
+```
+
+This checking is cumbersome, and gets even more cumbersome when having nested objects.
+
+```javascript
+// ES6
+function printPersonInfo({name = '(not defined)', age = 18 } = {}) {
+  console.log(name, age);
+}
+
+printPersonInfo({
+  name: 'Juri',
+  age: 30
+});
+```
+
+https://jsbin.com/nedumu/5/edit?js,console
+
+
+### Links
+
+- [MDN: Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
