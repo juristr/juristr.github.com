@@ -171,3 +171,84 @@ myObjConst = { name: 'Thomas' };
 <a href="https://jsbin.com/xanede/2/edit?js,console" class="btn btn-danger">Try it!</a>
 
 The **scope of const variables is block scope**, which totally makes sense.
+
+## `...` operator: spread and rest
+
+### spread
+
+Do you remember about `Function.prototype.apply` and `Function.prototype.call`. Not sure how many times I googled for the "apply vs. call" article as I couldn't remember which of the two accepts the array and which one the param series.
+
+`apply` was commonly used to forward an unknown number of function arguments to another function.
+
+```javascript
+var wrapper = function(){
+  return anotherFunction.apply(null, arguments);
+}
+```
+
+There are different reasons why one would do this which I wouldn't want to detail right now. What's imporant here is that the above code is everything else than readable. One immediately things "what does this apply do?" and "where does 'arguments' come from?". Overall, it's hard to understand by a non-JavaScript experienced developer.
+
+The spread operator allows to write this in a much more elegant way:
+
+```javascript
+var wrapper = function(...args){
+  return anotherFunction(...args);
+}
+```
+
+Now it's clear that we're invoking function `anotherFunction` and that we pass along a variable number of arguments that has been passed in by someone else.
+
+Spread is not only useful for function calls, but also when **manipulating arrays**. Here's a simple scenario: do you know how to concat two arrays in JavaScript?? Like, having one array and pushing the elements of another one?
+
+```javascript
+// ES5 code
+var names = [
+  'Juri',
+  'Steffi',
+  'Thomas'
+];
+
+var anotherSetOfNames = ['Tom', 'Jack'];
+names.push.apply(names, anotherSetOfNames);
+
+// you get
+// [ 'Juri',  'Steffi',  'Thomas', 'Tom', 'Jack' ];
+```
+
+The ES6 code:
+
+```javascript
+let names = [
+  'Juri',
+  'Steffi',
+  'Thomas'
+];
+
+//adding values
+let anotherSetOfNames = ['Tom', 'Jack'];
+names.push(...anotherSetOfNames);
+```
+
+So much more readable, isn't it?
+
+<a href="https://jsbin.com/hagoku/6/edit?js,console" class="btn btn-danger">Try it!</a>
+
+You could even do this:
+
+```javascript
+let a1 = [1, 4, 5, 2, 3];
+let a2 = [1, 2, ...a1, 3, 44, 2]
+```
+
+### rest
+
+No, it has nothing to do with REST (Representational State Transfer). The rest parameter is the last one in a sequence of function arguments that captures the "rest of the args".
+
+```javascript
+function myFunction(a, b, ...args){
+  //...
+}
+```
+
+I'm not even going to detail how to do this in ES5 (let's forget about the past :wink:). It had to do with "slicing" from the `arguments` value the number of args passed to the current function.
+
