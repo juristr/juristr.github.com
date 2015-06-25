@@ -394,7 +394,7 @@ This checking is cumbersome, and gets even more cumbersome when having nested ob
 
 ```javascript
 // ES6
-function printPersonInfo({name = '(not defined)', age = 18 } = {}) {
+function printPersonInfo({name = "(not defined)", age = 18 } = {}) {
   console.log(name, age);
 }
 
@@ -411,3 +411,76 @@ https://jsbin.com/nedumu/5/edit?js,console
 
 - [MDN: Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
+## Arrow functions
+
+(to be written)
+
+## Symbols
+
+Symbols are a fundamental concept introduced in ES6 with the main purpose of using them as object property keys to prevent naming collisions. Read ahead and you'll understand why.
+
+```javascript
+let s = Symbol();
+```
+
+<p class="notice fact">
+ The main purpose of Symbol is to serve as property keys for objects to prevent naming collisions.
+</p>
+
+What you need to know
+
+```javascript
+let a = Symbol('some key');
+let b = Symbol('some key');
+
+console.log(a === b); // prints false
+
+// throws exception; cannot use "new" operator
+let c = new Symbol();
+
+// logs "symbol"
+console.log(typeof(a));
+```
+
+So when are we going to use symbols? Apparently, they have mainly been introduced as keys for object properties and thus to avoid collisions.
+
+```javascript
+let x = Symbol();
+let obj = {
+  [x]: 'Juri'
+}
+
+console.log(obj[x]);
+```
+
+As you can see, I make use of the concept of **computed properties** mentioned before. To access the property value again, the square brackets `[]` have to be used. It would not work if you write it like `obj.x`.
+
+Try it: https://jsbin.com/rinima/1/edit?js,console
+
+Another nice feature is the `Symbol.for(..)` function. See yourself
+
+```javascript
+let x = Symbol.for('test');
+
+// logs true
+console.log(x === Symbol.for('test'));
+```
+
+What is this good for you may ask. Well, if you want to use Symbols as keys, you somehow have to make them globally available. `Symbol.for` does that for you as it keeps a registry of key/value pairs.
+
+```javascript
+let obj = {};
+
+(function(){
+  let s2 = Symbol.for('propName');
+  console.log(s2 === Symbol.for('propName'));
+  obj[s2] = 'Juri';
+})();
+
+// logs "Juri"
+console.log(obj[Symbol.for("propName")]);
+```
+
+Try it: https://jsbin.com/qopupe/2/edit?js,console
+
+What might be important to know as well is that you won't get symbols when using `Object.getOwnPropertyNames()` but instead you have to use `Object.getOwnPropertySymbols()` to retrieve an array of symbols defined on the given object.
