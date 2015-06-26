@@ -402,6 +402,7 @@ printPersonInfo({
   name: 'Juri',
   age: 30
 });
+//"
 ```
 
 https://jsbin.com/nedumu/5/edit?js,console
@@ -484,3 +485,89 @@ console.log(obj[Symbol.for("propName")]);
 Try it: https://jsbin.com/qopupe/2/edit?js,console
 
 What might be important to know as well is that you won't get symbols when using `Object.getOwnPropertyNames()` but instead you have to use `Object.getOwnPropertySymbols()` to retrieve an array of symbols defined on the given object.
+
+<p class="notice tip">
+  Symbols are commonly referred to as <code>@@&lt;symbolname&gt;</code>, i.e. <code>@@iterator</code> refers to <code>Symbol.iterator</code>.
+</p>
+
+## Iterating Protocol
+
+An **iterator** is an object that implements the iterator protocol.
+
+<div class="notice fact">
+  <p>An object is an iterator when it implements a <code>next()</code> method returning an object with the following properties:</p>
+  <ul>
+    <li><code>done(boolean)</code> - has a value <code>true</code> when the iterator is past the end of the iterated sequence. Otherwise it has the value <code>false</code>.</li>
+    <li>
+      <code>value</code> - any JavaScript value that represents the value extracted from the iterated sequence. This value my be omitted when <code>done</code> is <code>true</code>.
+    </li>
+  </ul>
+</div>
+
+Let's create such an iterator object:
+
+```javascript
+let people = {
+  list: ['Juri', 'Steffi', 'Thomas', 'Jack'],
+  nextIdx: 0,
+  next: function(){
+    if(this.nextIdx < this.list.length){
+      return {
+        value: this.list[this.nextIdx++],
+        done: false
+      };
+    }else{
+      return { done: true };
+    }
+  }
+}
+```
+
+Try it: https://jsbin.com/sigilu/1/edit?js,console
+
+An **iterable object** needs to implement such an iterator object by exposing it through the **@@iterator** (`Symbol.iterator`) method. Applying this to our previous object:
+
+```javascript
+let people = {
+  list: ['Juri', 'Steffi', 'Thomas', 'Jack'],
+  nextIdx: 0,
+  [Symbol.iterator]: function(){
+    return {
+      list: this.list,
+      nextIdx: this.nextIdx,
+      next: function(){
+        if(this.nextIdx < this.list.length){
+          return {
+            value: this.list[this.nextIdx++],
+            done: false
+          };
+        }else{
+          return { done: true };
+        }
+      }
+    };
+  }
+};
+```
+
+Try it: https://jsbin.com/doriwi/2/edit?js,console
+
+What we can now do is to use the new `for...of` loop introduced in ES6:
+
+```javascript
+let people = {
+  list: ['Juri', 'Steffi', 'Thomas', 'Jack'],
+  nextIdx: 0,
+  [Symbol.iterator]: function(){
+    ...
+  }
+};
+
+for(let val of people){
+  console.log(val);
+}
+```
+
+Try it: https://jsbin.com/vidugu/2/edit?js,console
+
+
