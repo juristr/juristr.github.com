@@ -5,7 +5,7 @@ description: ""
 postimg: "/blog/assets/imgs/jenkins-logo.png"
 show_img_in_detail: true
 category: 
-lastupdated: '2014-06-11'
+lastupdated: '2015-06-24'
 tags: ["git"]
 reposts: ["http://www.javacodegeeks.com/2014/01/git-flow-with-jenkins-and-gitlab.html"]
 ---
@@ -82,7 +82,7 @@ However, in the polling configuration you don't have to specify any kind of inte
 
 That's it, now your Jenkins jobs should start based on the branch you configured in your job and based on the branch that gets pushed to GitLab, just as we wanted.
 
-## Alternative approaches
+### Alternative approaches
 
 In case you just need to trigger the build of a branch from GitLab, you can also simply configure Jenkin's **remote trigger** and add that as a Web Hook to your GitLab repo
 
@@ -100,3 +100,24 @@ You can just use the notifyCommit hook on Git plugin like this. [...] But, with 
 You can find more details about notifyCommit and this [issue here](http://kohsuke.org/2011/12/01/polling-must-die-triggering-jenkins-builds-from-a-git-hook/). <cite><a href="https://wiki.jenkins-ci.org/display/JENKINS/Gitlab+Hook+Plugin">GitLab Hook plugin page</a></cite>
 
 I did not experience any of such delays so far, but we'll see.
+
+## Automatically build all feature branches
+
+Not only with Git flow, but in general when you work with feature branches and Merge/Pull requests it makes a lot of sense to automatically build those on your build server and execute the tests in order to make sure those branches would pass the build pipeline. There are different strategies for doing so.
+
+One possibility is to **establish a naming convention** for feature branches like a common prefix, i.e. `feat-<name>` or `fix-<name>`. In that way it is possible to selectively create Jenkins build jobs that monitor those branches:
+
+<figure>
+    <img src="/blog/assets/imgs/jenkins-build-dedicatedbranch.png" />
+    <figcaption>Only build branches that have the prefix "userstory/&lt;name&gt;"</figcaption>
+</figure>
+
+The other strategy is to **simply build all branches other than master** (probably a more naive approach).
+
+1. Under "Source Code Management" choose Git
+2. Click the "Add" button towards the end of the plugin section and choose "Strategy for choosing what to build"
+
+<figure>
+    <img src="/blog/assets/imgs/jenkins-build-otherthanmaster.png" />
+    <figcaption>build all branches other than master</figcaption>
+</figure>
