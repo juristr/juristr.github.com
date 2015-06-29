@@ -570,4 +570,10 @@ for(let val of people){
 
 Try it: https://jsbin.com/vidugu/2/edit?js,console
 
+## Generators
 
+(to be written)
+
+## Tail call optimization
+
+(to be written)
