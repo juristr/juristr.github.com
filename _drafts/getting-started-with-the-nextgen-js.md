@@ -1,7 +1,7 @@
 ---
 layout: articles-post
-title: "Getting Started with the Next Generation JavaScript"
-lead: "..."
+title: "ES6 - Jump Start"
+lead: "Get introduced to the next generation JavaScript"
 show_img_in_detail: false
 coverimage: false
 tags: ["JavaScript", "ES6"]
@@ -577,3 +577,54 @@ Try it: https://jsbin.com/vidugu/2/edit?js,console
 ## Tail call optimization
 
 (to be written)
+
+## Reflect API
+
+ES6 introduces a new `Reflect` object with a set of new methods for object reflection. This new API is intended to be a more easier and concise version of the partly already existing ES5 reflection API. Therefore you might encounter some methods that sound similar :smile:.
+
+A good reference is also the [MDN page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect). In the following I quickly outline them.
+
+### Reflect.apply(fn, obj, args)
+
+Just like `Function.apply`.
+
+### Reflect.construct(target, args)
+
+### Reflect.defineProperty(target, name, desc)
+
+### Reflect.deleteProperty(target, name)
+
+### Reflect.enumerate(target)
+
+### Reflect.get(target, name, [receiver])
+
+Proxy traps:
+
+```javascript
+var loggedObj = new Proxy(obj, {
+  get: function(target, name) {
+    console.log("get", target, name);
+    return Reflect.get(target, name);
+  }
+});
+```
+
+## Reflect.set(target, name, value, [receiver])
+
+### Reflect.getOwnPropertyDescriptor(target, name)
+
+### Reflect.getPrototypeOf(target)
+
+### Reflect.setPrototypeOf(target, newProto)
+
+### Reflect.has(target, name)
+
+### Reflect.isExtensible(target)
+
+### Reflect.preventExtension(target)
+
+### Reflect.ownKeys(target)
+
+### Reflect.getPrototypeOf(target)
+
+http://h3manth.com/new/blog/2015/es6-reflect-api/
