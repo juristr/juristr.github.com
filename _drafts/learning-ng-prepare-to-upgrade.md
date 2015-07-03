@@ -15,7 +15,54 @@ I'm sure you heard about Angular 2 and that it will be **totally** different :op
 
 {% include ng-series.html %}
 
-## controller-as syntax
+## Use directive controllers where possible
+
+When you create new Angular directives you actually have different possibilities to define your logic:
+
+```javascript
+angular
+    .module('demo', [])
+    .directive('personDisplay', PersonDisplayDirective);
+
+function PersonDisplayDirective(){
+    return {
+        compile: function(element, attrs){
+            // implement logic
+        },
+        link: function($scope, iElement, iAttrs){
+            // implement logic
+        },
+        controller: function(){
+            // implement logic
+        }
+    }
+}
+```
+
+When should we use which?? That's a common question among Angular devs. **Angular 2 removes all of these**, you'll have a component (directive) and a controller class associated to it. As an obvious result, **people suggest to use controller directives wherever possible**.
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">True to say we should avoid the compile/link fns and use directive controllers with bindToController etc. ? <a href="https://twitter.com/hashtag/angular?src=hash">#angular</a> //cc <a href="https://twitter.com/PascalPrecht">@PascalPrecht</a></p>&mdash; Juri Strumpflohner (@juristr) <a href="https://twitter.com/juristr/status/616859925193576450">July 3, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Pascal Precht - Angular expert @ [Thoughtram](http://thoughtram.io) - answered:
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/juristr">@juristr</a> In addition, it&#39;s much more aligned with the philosophy behind Angular 2 components. I recommend using controllers where possible</p>&mdash; Pascal Precht ʕ•̫͡•ʔ (@PascalPrecht) <a href="https://twitter.com/PascalPrecht/status/616877259895504896">July 3, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+From his perspective (answering my tweet):
+
+- No you shouldn't avoid them per se. The point is, as long as you do stuff that hasn't to be in compile/pre/postlink, put it in ctrl
+- In other words, in most of the cases you actually don't need to deal with compile/link. Controller gives you everything you need
+- Except for cases like ngModelController, which registers itself at ngFormController during preLink
+- However, when controller is enough, use that. You don't have to deal with rather complicated compile/link things.
+- In addition, it's much more aligned with the philosophy behind Angular 2 components. I recommend using controllers where possible
+- Also easier to test!
+
+### Links
+
+- - [Exploring Angular 1.3: Binding to Directive Controllers](http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html)
+
+## Get rid of $scope: controller-as syntax
 
 Definitely switch over to the [controller-as syntax](https://github.com/johnpapa/angular-styleguide#controllers) and get rid of `$scope` in your controller files as well as in the templates.
 
@@ -44,6 +91,11 @@ function PersonController(){
     ];
 };
 ```
+
+### Links
+
+- [Angular StyleGuide]((https://github.com/johnpapa/angular-styleguide#controllers)
+- [Exploring Angular 1.3: Binding to Directive Controllers](http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html)
 
 ## Prefer Components over Controllers
 
