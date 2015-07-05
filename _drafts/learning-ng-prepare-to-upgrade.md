@@ -166,56 +166,67 @@ function peopleListDirective(){
 
 ## Use Observables instead of $watch
 
-using Rx.js
+David East [recently spoke at Angular U](https://www.youtube.com/watch?v=KWz7IAm35UM) on how to prepare for upgrading to NG 2. What's particularly interesting is his usage of [Rx.js](https://github.com/Reactive-Extensions/RxJS) to avoid `$watch`.
 
 ```javascript
 angular.module('demo', [])
-    .service('peopleService', peopleService);
+    .service('peopleService', PeopleService);
 
-function peopleService(){
-    this.people = [];
-    this.peopleSubject = new Rx.ReplaySubject();
+function PeopleService() {
+  var peopleSubject = new Rx.ReplaySubject();
 
-    this.add = function(){
-        this.people.push( { name: 'Name ' + this.people.length + 1 });
-        // broadcast change
-        this.peopleSubject.onNext(this.people);
+  var service = {
+    subscribe: function(subscription) {
+      peopleSubject.subscribe(subscription);
+    },
+    add: function(people) {
+      people.push({
+        name: 'Name ' + (people.length + 1)
+      });
+
+      // broadcast
+      peopleSubject.onNext(people);
     }
+  };
+  return service;
 }
 ```
 
 At this point, on the `PeopleController` one can subscribe to the changes
 
 ```javascript
-function PeopleController(peopleService){
-    ...
-    peopleService.peopleSubject.subscribe(function(people){
-        this.people = people;
-    }).bind(this);
+function PersonController(peopleService) {
+  var vm = this;
+  vm.people = [];
+
+  peopleService.subscribe(function(people) {
+    vm.people = people;
+  });
 }
 ```
 
 In the `people-list` directive, that same people service can be used to broadcast new changes
 
 ```javascript
-function peopleListDirective(){
-    return {
-        ...
-        controller: function($scope, $attrs, peopleService){
-            this.peopleList = $scope.eval($attrs.people);
+function peopleListDirective() {
+  return {
+    controllerAs: 'peopleListCtrl',
+    controller: function($scope, $attrs, peopleService) {
+      this.people = $scope.$eval($attrs.people);
 
-            this.add = function(){
-                boxService.add();
-            };
-        }
+      this.add = function() {
+        peopleService.add(this.people);
+      }.bind(this);
     }
+  }
 }
 ```
 
-Plunkr: http://plnkr.co/edit/bLTZhfhL4eaYYjsLG9oZ?p=preview
+<iframe src="http://embed.plnkr.co/bLTZhfhL4eaYYjsLG9oZ/preview" width="100%" height="400px"> </iframe>
 
-## Links
+### Links
 
 - Presentation by David East on preparing for Angular 2
   - Video: [https://www.youtube.com/watch?v=KWz7IAm35UM](https://www.youtube.com/watch?v=KWz7IAm35UM)
   - Source Code: [https://github.com/davideast/angularu-a2-migration](https://github.com/davideast/angularu-a2-migration)
+- [Reactive Extensions - Rx.js](https://github.com/Reactive-Extensions/RxJS)
