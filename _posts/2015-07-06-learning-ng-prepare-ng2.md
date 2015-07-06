@@ -47,7 +47,7 @@ function PersonController(){
 };
 ```
 
-First of all, Angular 2 won't have any concept of `$scope` and then - especially in the HTML - using the controller as syntax avoids a lot of headache when it comes to nested controllers.
+First of all, Angular 2 won't have any concept of `$scope` and then - especially in the HTML - using the controller-as syntax avoids a lot of headache when it comes to nested controllers.
 
 ### Links
 
@@ -115,6 +115,25 @@ From his perspective:
 - However, when controller is enough, use that. You don't have to deal with rather complicated compile/link things.
 - In addition, it's much more aligned with the philosophy behind Angular 2 components. I recommend using controllers where possible
 - Also easier to test!
+
+Note that one issue when you use directive controllers is often on how to reference the directive scope properties from within the controller - since we should possibly avoid `$scope`. Since Angular v1.3 there is the boolean `bindToController` property and recently in v1.4 they've even improved it s.t. you can write things like
+
+```javascript
+return {
+  restrict: '...',
+  bindToController: {
+    val1: '=',
+    val2: '@'
+    ...
+  },
+  controller: function($log){
+    // access them with
+    $log.debug(this.val1);
+  }
+}
+```
+
+There's a nice article on Thoughtram about that. Follow the link below.
 
 ### Links
 
