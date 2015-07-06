@@ -625,6 +625,8 @@ var loggedObj = new Proxy(obj, {
 
 ### Reflect.ownKeys(target)
 
-### Reflect.getPrototypeOf(target)
-
 http://h3manth.com/new/blog/2015/es6-reflect-api/
+
+## Proxies
+
+ 
