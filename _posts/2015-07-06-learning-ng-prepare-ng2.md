@@ -187,6 +187,8 @@ function peopleListDirective(){
 
 David East [recently spoke at Angular U](https://www.youtube.com/watch?v=KWz7IAm35UM) on how to prepare for upgrading to NG 2. What's particularly interesting is his usage of [Rx.js](https://github.com/Reactive-Extensions/RxJS) to avoid `$watch`.
 
+Here's an example of a `peopleService` in the form of an Angular factory. Note, in the `subscribe` method, external listeners can register themselves on the Rx `ReplaySubject` for getting updates. The actual broadcasting happens in the `add` method which first performs the actual "business" logic (obviously quite simple in this demo service) and then broadcasts the changes.
+
 ```javascript
 angular.module('demo', [])
     .service('peopleService', PeopleService);
@@ -211,7 +213,7 @@ function PeopleService() {
 }
 ```
 
-At this point, on the `PeopleController` one can subscribe to the changes
+At this point, on the `PeopleController` (or any other interested party) we can subscribe to those changes:
 
 ```javascript
 function PersonController(peopleService) {
@@ -224,7 +226,7 @@ function PersonController(peopleService) {
 }
 ```
 
-In the `people-list` directive, that same people service can be used to broadcast new changes
+In the `people-list` directive, when the button is clicked and the `add` method invoked, we forward the action to our service, which - as we've seen - will broadcast the changes.
 
 ```javascript
 function peopleListDirective() {
