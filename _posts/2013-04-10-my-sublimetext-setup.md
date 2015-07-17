@@ -19,24 +19,33 @@ My Sublime user settings:
 
 ```json
 {
-    "caret_extra_width": 3,
-    "color_scheme": "Packages/Seti_UI/Seti.tmTheme",
-    "font_face": "Source Code Pro",
-    "font_size": 13,
-    "ignored_packages":
-    [
-        "Markdown",
-        "ScopeHunter",
-        "Dracula Color Scheme",
-        "DocBlockr",
-        "TrailingSpaces",
-        "Vintage"
-    ],
-    "soda_folder_icons": true,
-    "tab_size": 4,
-    "theme": "Seti.sublime-theme",
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"caret_extra_width": 3,
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"font_face": "Source Code Pro",
+	"font_options":
+	[
+		"gray_antialias"
+	],
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Markdown",
+		"ScopeHunter",
+		"Dracula Color Scheme",
+		"DocBlockr",
+		"TrailingSpaces",
+		"Vintage"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"overlay_scroll_bars": "enabled",
+	"soda_folder_icons": true,
+	"tab_size": 4,
+	"theme": "Material-Theme.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }
 ```
 
