@@ -54,6 +54,15 @@ The large font for being able to focus better on a smaller context which I found
 
 I usually leave the tab-size on "4" as that's what my other colleagues are accustomed to have in their IDEs. But note you might want to set it to "2", especially when using CoffeeScript as it is more handy there.
 
+### Sublime User Keybindings
+
+```
+[
+   { "keys": ["ctrl+shift+r"], "command": "reveal_in_side_bar" },
+   { "keys": ["ctrl+k", "ctrl+d"], "command": "reindent" , "args": { "single_line": false } }
+]
+```
+
 ### Access from the Shell
 
 In order to use sublime productively, one of the first steps is to make it accessible from your shell.
