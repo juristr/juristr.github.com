@@ -114,6 +114,7 @@ Here's a list of packages I'm currently using with Sublime Text. I'll add/remove
 - **TrailingSpaces -** Allows to automatically remove (useless) trailing spaces on lines on each save.
 - **EditorConfig -** To make sure you have a consistent coding style.
 - **JSFormat -** For automatically indenting your JS code.
+- **Modific -** Highlights changed files on your Git repo and allows to quickly show the diffs/revert changes.
 
 ## UI Theme
 
