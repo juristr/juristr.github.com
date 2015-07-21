@@ -112,6 +112,8 @@ Here's a list of packages I'm currently using with Sublime Text. I'll add/remove
 - **Seti_UI -** UI Theme I'm currently using
 - **Tag -** For auto-formatting HTML documents
 - **TrailingSpaces -** Allows to automatically remove (useless) trailing spaces on lines on each save.
+- **EditorConfig -** To make sure you have a consistent coding style.
+- **JSFormat -** For automatically indenting your JS code.
 
 ## UI Theme
 
