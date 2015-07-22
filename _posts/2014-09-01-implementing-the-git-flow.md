@@ -240,4 +240,5 @@ That's the flow we came up with after a few iterations and dicussions within the
 
 - [The GitLab Flow](https://about.gitlab.com/2014/09/29/gitlab-flow/)
 - [Git Workflows for Pros: A good Guide](http://www.toptal.com/git/git-workflows-for-pros-a-good-git-guide)
+- [GitHub Flow like a Pro with these 13 Aliases](http://haacked.com/archive/2014/07/28/github-flow-aliases/)
 - [Git Alias to migrate commits to a branch](http://haacked.com/archive/2015/06/29/git-migrate/)
