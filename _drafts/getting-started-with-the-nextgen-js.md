@@ -629,4 +629,6 @@ http://h3manth.com/new/blog/2015/es6-reflect-api/
 
 ## Proxies
 
- 
+### Links
+
+- [ES6 In Depth: Proxies](https://hacks.mozilla.org/2015/07/es6-in-depth-proxies-and-reflect/)
