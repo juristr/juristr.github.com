@@ -516,6 +516,8 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [Git Man-Page generator](http://git-man-page-generator.lokaltog.net/)
 - [Understanding branches in Git](http://blog.thoughtram.io/git/rebase-book/2015/02/10/understanding-branches-in-git.html)
 - [8 Tips to help you work better with Git](https://about.gitlab.com/2015/02/19/8-tips-to-help-you-work-better-with-git/)
+- [Git Alias to migrate commits to a branch](http://haacked.com/archive/2015/06/29/git-migrate/)
+- [GitHub Flow like a Pro with these 13 Aliases](http://haacked.com/archive/2014/07/28/github-flow-aliases/)
 
 ### Presentations
 
