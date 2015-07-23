@@ -7,6 +7,7 @@ show_img_in_detail: true
 coverimage: false
 category:
 tags: ["JavaScript", "Angular.js", "learning-ng"]
+reposts: ["https://dzone.com/articles/preparing-for-angular-2"]
 ---
 
 I'm sure you heard about Angular 2 and that it will be **totally** different. Forget everything you know and start from scratch :open_mouth: . Jokes apart, if you have taken a closer look you already know that, yes, it will be new, things will be different (as it's mostly the case with new stuff), but many concepts will still be there. Well, as Angular 2 starts getting more and more concrete, articles, videos and podcasts get published that contains lots of useful information on how to get prepared an eventual migration scenario. I use this article to collect such best practices for myself and and obviously to share them with you!
