@@ -54,7 +54,7 @@ The first step is to locate your TFS server's url and the project's correspondin
 Once you have the URL, open a console where you have access to git-tf and execute this command (obviously adapting the locations):
 
 ```
-$ git tf clone http://yourtfsserver:8080/tfs/colletionname $/TeamProjectA/Main --deep
+$ git-tf clone http://yourtfsserver:8080/tfs/colletionname $/TeamProjectA/Main --deep
 ```
 
 You can find this command on the [Codeplex docs](http://gittf.codeplex.com/wikipage?title=Clone&referringTitle=Home) as well. Note, remember to include **--deep** to extract the entire version history. Otherwise only the most recent changeset will be fetched which you wouldn't want in the scenario of a full export.
