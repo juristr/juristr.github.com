@@ -32,6 +32,15 @@ So, when migrating you could naively simply copy the files and create a brand ne
 >Git-TF is a set of cross-platform, command line tools that facilitate sharing of changes between Microsoft Team Foundation Server, Visual Studio Online and Git. [...]  
 These tools make it easy to clone sources from TFS, fetch updates from TFS, and update TFS with changes committed locally in Git.
 
+<div class="alert alert-warning">
+   <p>
+        <strong>Note,</strong> meanwhile another project emerged: <a href="https://github.com/git-tfs/git-tfs">git-tfs</a>.         You might want to give it a look as it seems to have better support overall and is still maintained.
+   </p>
+   <p>
+        There are also some nice use cases: <a href="https://github.com/git-tfs/git-tfs/blob/master/doc/usecases/migrate_tfs_to_git.md">Migrate toward external git repo</a>.
+    </p>
+</div>
+
 While it is being thought for being able to use git with TFS based central repositories, I never used it that way. Tried it a couple of times, but the idea of having such a "hybrid" situation was too scary for me. Where the tool is useful though, is for our use case of migrating away from TFS to git.
 
 You can either **install** it as described on the gittf codeplex page or simply download the latest version, unzip everything and execute your commands directly from within that directory. Just make sure your system meets the minimum requirements, like having Java installed etc..
