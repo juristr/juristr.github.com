@@ -75,7 +75,42 @@ app.directive('myDirective', function(){
 
 Here's a Plunker example that illustrates some scenarios:
 
-<iframe src="http://embed.plnkr.co/BL9otk/preview" width="100%" height="400px"> </iframe>
+<iframe src="http://embed.plnkr.co/cfUpHc/preview" width="100%" height="400px"> </iframe>
+
+## Update: bindToController in Angular 1.4
+
+Angular v1.4.x introduced the `bindToController` option which allows to have variables passed to a directive to be bound directly to the corresponding directive controller instance. As such, we can get rid of `$scope`, which is the [suggested practice for moving on towards Angular 2.0](/blog/2015/07/learning-ng-prepare-ng2/).
+
+The example from before can be rewritten to:
+
+```javascript
+app.directive('myDirective', function(){
+  return {
+    restrict: 'E',
+    template: [
+        '<b>From directive scope:</b> {%raw%}{{ directivevariable }}{% endraw %}<br/>',
+        '<b>From directive controller:</b> {%raw%}{{ vm.controllerVariable }}{% endraw %}<br/>',
+        '<b>Adapted by directive controller:</b> {%raw%}{{ vm.controllerAdapted }}{% endraw %}'
+      ].join(''),
+    scope: {
+    },
+    bindToController: {
+      directivevariable: '='
+    },
+    controller: function(){
+      var vm = this;
+      vm.controllerVariable = 'Hi, I am from the controller';
+      vm.controllerAdapted = vm.directivevariable + '(ctrl adapted)';
+    },
+    controllerAs: 'vm'
+  }
+});
+
+```
+
+Here's the updated Plunker:
+
+<iframe src="http://embed.plnkr.co/44RMWO/preview" width="100%" height="400px"> </iframe>
 
 ---
 
