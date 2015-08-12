@@ -49,9 +49,9 @@ If it is a bug, create a failing test, try to reproduce it locally. Good repos a
 
 If it is a new feature proposal, I personally recommend to get in touch with the author(s). Create an issue and propose your enhancement and new feature. In that way you gain additional insights from the author or core contributors and especially you avoid to go in a wrong direction. Submitting new code that doesn’t get merged because the author thought about it differently, hurts. Believe me :wink: .
 
-### Check the README.md & referenced guidelines
+### Check the README.md, CONTRIBUTING.MD & referenced guidelines
 
-Definitely check the README.md, which is automatically rendered in a nice readable way at the root of the GitHub repo. Many repos include instructions for building the repository and especially guidelines for contributing, building etc!
+Definitely check the README.md and/or CONTRIBUTING.md, which is automatically rendered in a nice readable way at the root of the GitHub repo. Many repos include instructions for building the repository and especially guidelines for contributing, building etc!
 
 ![Angular.js README with contribution guidelines](/blog/assets/imgs/contribute-github/contribution_guidelines.png)
 
@@ -61,6 +61,8 @@ Thus, verify whether there are
 - commit messages guidelines (for example: [angular.js](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit), [atom.io](https://atom.io/docs/v0.186.0/contributing#git-commit-messages) ).
 - coding rules
 - ...
+
+Note, many repositories contain dedicated **CONTRIBUTING.md** files which have detailed guidelines for contributing. Example: [Angular CONTRIBUTING.md](https://github.com/angular/angular/blob/master/CONTRIBUTING.md).
 
 ## Ok, ready to get started!
 
