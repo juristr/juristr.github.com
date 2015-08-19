@@ -5,15 +5,15 @@ current: blog
 ---
 
 <h1 class="article-title">
-    Archive
+    Links
 </h1>
 <h2 class="post-subtitle">
-    All of the articles, of all the years..
+    Collection of links with comments
 </h2>
 
 <div class="archives" itemscope itemtype="http://schema.org/Blog">
 {% for post in site.posts reverse %}
-    {% if post.type != "update-notice" and post.type != "link" %}
+    {% if post.type == "link" %}
     {% capture date %}{{ post.date }}{% endcapture %}
 {% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
 {% unless year == this_year %}
@@ -25,12 +25,9 @@ current: blog
         <ul>
 {% endunless %}
         <li>
-            <h3 class="title"><a href="{{ post.url }}">{{post.title}}</a></h3>
-            <div class="meta">
-                <span class="date">
-                    <time datetime="{{ date | datetime | date_to_xmlschema }}" itemprop="datePublished">{{ date | date: "%b %e" }}</time>
-                </span>
-            </div>
+            <h3 class="title">
+              <a href="{{ post.url }}">{{post.title}}</a> - <a href="{{ post.link }}"><i class="icon-external-link"></i></a>
+            </h3>
         </li>
     {% endif %}
 {% endfor %}
