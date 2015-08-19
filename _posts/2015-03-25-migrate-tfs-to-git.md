@@ -67,6 +67,12 @@ git-tf creates a git tag for each TFS changeset. That might be useful for jumpin
 $ git tag -l | xargs git tag -d
 ```
 
+This command might work as well:
+
+```
+$ git tag -d $(git tag)
+```
+
 If you accidentally already pushed them to your remote Git repository, this command might turn out to be helpful
 
 ``` 
