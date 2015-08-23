@@ -11,7 +11,7 @@ Please head over to [GitHub](http://github.com/juristr) for my public coding act
 
 ## Books
 
-### [JavaScriptMVC](/blog/2013/06/learning-javascriptmvc/)
+### [Learning JavaScriptMVC](/blog/2013/06/learning-javascriptmvc/)
 
 **Technical Reviewer**
 
@@ -22,6 +22,18 @@ Introductory book about creating JavaScript SPAs with [JavaScriptMVC](http://jav
 **Technical Reviewer**
 
 A book about creating Windows 8 applications with JavaScript and HTML5.
+
+### [JavaScript Regular Expressions](https://www.packtpub.com/web-development/javascript-regular-expressions)
+
+Leverage the power of regular expressions to create an engaging user experience
+
+**Technical Reviewer**
+
+### [Learning Behavior Driven Development with JavaScript](https://www.packtpub.com/application-development/learning-behavior-driven-development-javascript)
+
+**Technical Reviewer**
+
+Learn a more agile and efficient approach to JavaScript web development, and let behaviour-driven development redefine the way you test your projects
 
 ## Talks
 
