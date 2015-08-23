@@ -265,8 +265,6 @@ let a2 = [1, 2, ...a1, 3, 44, 2]
   Try it out yourself: <a href="https://jsbin.com/hagoku/6/edit?js,console" target="blank">click here</a>
 </p>
 
-{% comment %}
-
 ### rest
 
 No, it has nothing to do with REST (Representational State Transfer). The rest parameter is the last one in a sequence of function arguments that captures the "rest of the args".
@@ -277,7 +275,7 @@ function myFunction(a, b, ...args){
 }
 ```
 
-I'm not even going to detail how to do this in ES5 (let's forget about the past :wink:). It had to do with "slicing" from the `arguments` value the number of args passed to the current function.
+I'm not even going to detail how to do this in ES5 (let's forget about the past :wink:). It had to do with "slicing" from the `arguments` value the number of args passed to the current function and so on...
 
 ## Destructuring assignment
 
@@ -299,7 +297,6 @@ Executing this code, `juri` and `thomas` will get the according values from `myA
   Try it out yourself: <a href="https://jsbin.com/ripifek/3/edit?js,console" target="blank">click here</a>
 </p>
 
-
 By **combining the destructuring with the ... operator** you get even more interesting use cases (also commonly known from functional programming languages). Extracting the head or tail of a list gets extremely easy.
 
 ```javascript
@@ -316,7 +313,7 @@ let names = ['Juri', 'Steffi', 'Thomas', 'Susi'];
   Try it out yourself: <a href="https://jsbin.com/megotu/3/edit?js,console" target="blank">click here</a>
 </p>
 
-Having this, and with a bit of recursion, a sum function could be defined like this:
+Having this, and with a bit of recursion, a sum function could be defined like..
 
 ```javascript
 function sum(numbers){
@@ -335,7 +332,7 @@ function sum(numbers){
   Try it out yourself: <a href="https://jsbin.com/roniyu/2/edit?js,console" target="blank">click here</a>
 </p>
 
-There's more, you can **also ignore values when applying** the destructuring operator.
+There's even more: you can **ignore values when applying** the destructuring operator.
 
 ```javascript
 let head, tailMinusOne;
@@ -352,7 +349,7 @@ Similar as with arrays, destructuring works with objects as well. Even the synta
 let name, age;
 let person = {
   name: 'Juri',
-  age: 30 //damn...I'm not yet accustomed to write a 3 in :/
+  age: 30
 };
 
 ({name, age} = person);
@@ -371,7 +368,7 @@ let x, y;
 ({name:x, age:y} = { name: 'Juri', age: 30 });
 ```
 
-You can make it even shorter (not sure that's what you'd want):
+You can make it even shorter (not sure that's what you'd want, though):
 
 ```javascript
 let {name: x, age: y} = { name: 'Juri', age: 30 };
@@ -379,7 +376,7 @@ let {name: x, age: y} = { name: 'Juri', age: 30 };
 
 ### Default values
 
-What if a given value is not present while destructuring? Apply a default!
+What if a given value is not present during destructuring? Apply a default!
 
 ```javascript
 let a, b;
@@ -410,7 +407,7 @@ function myFunction(a, b, c){
 }
 ```
 
-Another interesting use case is to use **default values together with object destructuring**.
+Another interesting use case is to combine **default values together with object destructuring**.
 
 ```javascript
 // ES5
@@ -426,7 +423,7 @@ printPersonInfo({
   });
 ```
 
-This checking is cumbersome, and gets even more cumbersome when having nested objects.
+This checking is cumbersome, and gets even more weird when having nested objects.
 
 ```javascript
 // ES6
@@ -451,7 +448,47 @@ printPersonInfo({
 
 ## Arrow functions
 
-(to be written)
+If you're a seasoned JavaScript developer, this should look familiar:
+
+```javascript
+var that = this;
+$('.someButton').click(function(){
+  // stupid example
+	that.someVariable = 'hi';
+});
+```
+
+Here it's an example of a jQuery click handler. Notice the `var that = this` line? This is a workaround you have to deal with - mostly when declaring callbacks - in order to adjust the value of `this`. The value of `this` inside the callback points to the function which invoked the callback, and not the outer scope of where the callback has been implemented. Normally, you want to have the latter, which is why "hacks" like `var that = this` or `var self = this` are being used.
+
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/yufoyo/edit?js,console" target="blank">click here</a>
+</p>
+
+jQuery even has a [jQuery.proxy](https://api.jquery.com/jQuery.proxy/) to help you out with this, but I've rarely seen it being used.
+
+ES2015 introduces arrow functions denoted after their operator: `=>`. They help to cope with these situations.
+
+```javascript
+// ES5 function
+var someFunction = function(name) { ... }
+
+// ES2015 arrow function
+var someFunction = (name) => { ... } 
+```
+
+Hence, the above could be rewritten as:
+
+```javascript
+$('.someButton').click(() => {
+   // this will point to the outer scope now
+});
+```
+
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/foqanu/edit?js,console" target="blank">click here</a>
+</p>
+
+{% comment %}
 
 ## Symbols
 
