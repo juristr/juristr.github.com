@@ -1,26 +1,43 @@
 ---
 layout: articles-post
-title: "ES6 - Jump Start"
-lead: "Get introduced to the next generation JavaScript"
+title: "ES2016 - Jump Start"
+lead: "ES6: Get introduced to the next generation JavaScript"
 show_img_in_detail: false
 coverimage: false
-tags: ["JavaScript", "ES6"]
+tags: ["JavaScript", "ES2015", "ES6"]
 ---
 
-This is another article about learning ES6. It's my journey of learning it as well as my personal notepad for new stuff I discover along the way. Feel free to suggest new articles or contribute to this article. It's open source and on GitHub :smirk:.
+This is another article about learning ES6 (ES2015). It's my journey of learning it as well as my personal notepad for new stuff I discover along the way. Feel free to suggest new articles or contribute to this article. It's open source and on GitHub :smirk:.
+
+## Browser compatibility
+
+ES6 or ES2015 how it's officially called now has been [released on June 2015](http://www.ecma-international.org/ecma-262/6.0/). As such browsers start implementing its features. Some are already at a good level which you can easily online. [Kangax is one example](https://kangax.github.io/compat-table/es6/) of showing the current browser support.
+
+Regardless of browser support, from now on, people will have to rely on transpilers which make sure your code runs smoothly even if the underlying browser does not fully support all of the latest language features. Why's that? Well, with the name **ES2015**, the [TC39 committee](http://www.ecma-international.org/memento/TC39.htm) clearly suggests more frequent, yearly releases. In fact, ES7 or better ES2016 is already on it's way.
+
+The most popular transpilers are for sure
+
+- **BabelJS -** formerly ES6-to-5 and used in this tutorial
+- **Traceur**
+
+Addy Osmani has a more complete [list of es6-tools on GitHub](https://github.com/addyosmani/es6-tools).
 
 ## Tooling
 
-Probably the easiest way to try ES6 now, without having to setup your local workstation is to try it on [jsbin.com](http://jsbin.com).
+Probably the easiest way to try ES6 now, without having to setup your local workstation is on [jsbin.com](http://jsbin.com).
 
 <figure>
   <img src="/blog/assets/imgs/es6-tutorial/jsbin_es6babel.png">
   <figcaption>Set ES6/Babel on jsbin.com</figcaption>
 </figure>
 
+Simply create a new "bin", and choose "ES6/Babel" as your language.
+
+Ok, so now we're setup and ready to get started.
+
 ## Block scoping with `let`
 
-The current version of JavaScript, ES5, defines scoping of variables quite different than many of the other popular languages which are currently out there. This might cause some trouble for novice programmers, but not only. ES5 has **function scope** rather than **block scope** as you'd expect.
+ES5 defines scoping of variables quite different than many of the other popular languages which are currently out there. This causes some trouble, especially for novice programmers, but not only. ES5 has so-called **function scope** rather than **block scope** as you'd expect.
 
 ```javascript
 function someFunc(){
@@ -55,7 +72,7 @@ bar();
 
 It prints: `10`.
 
-By using `let`, **ES6 allows you to block scope** your variable, just as expected. Let's adapt the above sample, exchanging `var` with `let`:
+By using `let`, **ES6 allows you to block scope** your variable, just as you would expected. Let's adapt the above example by changing `var` to `let`:
 
 ```javascript
 function someFunc(){
@@ -69,7 +86,7 @@ function someFunc(){
 someFunc();
 ```
 
-This time, we getn an error. Obviously (would the Java programmer say).
+This time, we get an error. Obviously (would the Java programmer say :wink: ).
 
 ```javascript
 "entering in someFunc"
@@ -81,11 +98,15 @@ This time, we getn an error. Obviously (would the Java programmer say).
     at https://static.jsbin.com/js/prod/runner-3.29.17.min.js:1:10524"
 ```
 
-<a href="https://jsbin.com/kurayu/1/edit?js,console" class="btn btn-danger">Try it!</a>
+While you **can still use `var`**, the new suggested approach is to switch to `let`. So...start to get accustomed :wink:.
+
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/kurayu/1/edit?js,console" target="blank">click here</a>
+</p>
 
 ## Redefining variables in your code? Not with ES6, bad boy!
 
-Currently you were able to do something like
+In ES5, this is totally legitimate:
 
 ```javascript
 var name = 'Juri';
@@ -94,7 +115,7 @@ var name = 'Thomas';
 console.log(name);
 ```
 
-Obviously, "re-using" variables is not something you'd want to do. There are better strategies for saving memory :wink:. Usually this happens by accident but can result in really nasty bugs. Luckily **ES6 will throw an error when you redefine the same variable within the same block**. You have to use `let`, however.
+Obviously, "re-using" variables is not something you'd want to do but rather there's a good chance you introduced it by accident. I guess you can imagine nasty bugs resulting from this. Luckily **ES6 will throw an error when you redefine the same variable within the same block**. You have to use `let`, however.
 
 ```javascript
 let name = 'Juri';
@@ -110,7 +131,7 @@ The result:
 	<figcaption>Error when re-defining let variables</figcaption>
 </figure>
 
-Instead, **redefining the variable within a subscope works**, and results in overriding the previously defined variable:
+Instead, **redefining the variable within a subscope works**, and results in overriding the previously defined one:
 
 ```javascript
 (function(){
@@ -122,7 +143,7 @@ Instead, **redefining the variable within a subscope works**, and results in ove
     console.log(name);
   }
   innerFunc();
-  
+
 })();
 ```
 
@@ -133,11 +154,13 @@ The output is:
 "Thomas"
 ```
 
-<a href="https://jsbin.com/dakiqu/1/edit?js,console" class="btn btn-danger">Try it!</a>
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/dakiqu/1/edit?js,console" target="blank">click here</a>
+</p>
 
 ## True constants with `const`
 
-Constants in ES5 were nothing more than simple namping conventions. For instance by prefixing a variable with `const`: `var CONST_PI = 3.141`. Nothing hindered you however to change the value at runtime.
+Constants in ES5 were nothing more than simple naming conventions, like prefixing a variable with `const`: `var CONST_PI = 3.141`. Nothing hindered you however to change the value at runtime.
 
 In ES6 finally there's a `const` keyword that does what you'd expect.
 
@@ -153,7 +176,7 @@ It throws an exception at runtime if you try to write on the variable.
   <figcaption>Error when trying to set <code>const</code> fields</figcaption>
 </figure>
 
-Watch out however, you can also assign objects to const variables. What is being assigned is the object reference, though. Hence, you cannot assign another object, but you can definitely change the object's properties.
+Watch out however, you can also assign objects to const variables. What is being assigned is the object reference, though. Hence, changing the object reference by assigning another object to the variable won't work, but you can definitely change the object's properties.
 
 ```javascript
 const myObjConst = {
@@ -168,7 +191,9 @@ myObjConst.name = 'Thomas';
 myObjConst = { name: 'Thomas' };
 ```
 
-<a href="https://jsbin.com/xanede/2/edit?js,console" class="btn btn-danger">Try it!</a>
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/xanede/2/edit?js,console" target="blank">click here</a>
+</p>
 
 The **scope of const variables is block scope**, which totally makes sense.
 
@@ -186,9 +211,9 @@ var wrapper = function(){
 }
 ```
 
-There are different reasons why one would do this which I wouldn't want to detail right now. What's imporant here is that the above code is everything else than readable. One immediately things "what does this apply do?" and "where does 'arguments' come from?". Overall, it's hard to understand by a non-JavaScript experienced developer.
+There are different reasons why one would do this, but I don't want to go into the details of it now. What's important here is that the above code is everything else than readable, right? One immediately thinks: "what does apply do?" and "where does 'arguments' come from?". Overall, it's hard to understand by a non-JavaScript experienced developer.
 
-The spread operator allows to write this in a much more elegant way:
+The spread operator allows us to write our example in a much more elegant way:
 
 ```javascript
 var wrapper = function(...args){
@@ -196,9 +221,9 @@ var wrapper = function(...args){
 }
 ```
 
-Now it's clear that we're invoking function `anotherFunction` and that we pass along a variable number of arguments that has been passed in by someone else.
+Now it's clear that we're invoking function `anotherFunction` and that we pass along a variable number of arguments that has been passed in by someone else. 
 
-Spread is not only useful for function calls, but also when **manipulating arrays**. Here's a simple scenario: do you know how to concat two arrays in JavaScript?? Like, having one array and pushing the elements of another one?
+Not only is the spread operator useful for function calls, but also when **manipulating arrays**. Here's a simple scenario: do you know how to concat two arrays in JavaScript?? Like, having one array and pushing the elements of another one into the first?
 
 ```javascript
 // ES5 code
@@ -229,16 +254,18 @@ let anotherSetOfNames = ['Tom', 'Jack'];
 names.push(...anotherSetOfNames);
 ```
 
-So much more readable, isn't it?
-
-<a href="https://jsbin.com/hagoku/6/edit?js,console" class="btn btn-danger">Try it!</a>
-
-You could even do this:
+So much more readable, isn't it? You could even do this:
 
 ```javascript
 let a1 = [1, 4, 5, 2, 3];
 let a2 = [1, 2, ...a1, 3, 44, 2]
 ```
+
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/hagoku/6/edit?js,console" target="blank">click here</a>
+</p>
+
+{% comment %}
 
 ### rest
 
@@ -268,7 +295,10 @@ let myArray = ['Juri', 'Thomas'];
 
 Executing this code, `juri` and `thomas` will get the according values from `myArray` assigned.
 
-<a href="https://jsbin.com/ripifek/3/edit?js,console" class="btn btn-danger">Try it!</a>
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/ripifek/3/edit?js,console" target="blank">click here</a>
+</p>
+
 
 By **combining the destructuring with the ... operator** you get even more interesting use cases (also commonly known from functional programming languages). Extracting the head or tail of a list gets extremely easy.
 
@@ -282,7 +312,9 @@ let names = ['Juri', 'Steffi', 'Thomas', 'Susi'];
 // tail = ['Steffi', 'Thomas', 'Susi'];
 ```
 
-Try it: https://jsbin.com/megotu/3/edit?js,console.
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/megotu/3/edit?js,console" target="blank">click here</a>
+</p>
 
 Having this, and with a bit of recursion, a sum function could be defined like this:
 
@@ -299,7 +331,9 @@ function sum(numbers){
 }
 ```
 
-Try it: https://jsbin.com/roniyu/2/edit?js,console
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/roniyu/2/edit?js,console" target="blank">click here</a>
+</p>
 
 There's more, you can **also ignore values when applying** the destructuring operator.
 
@@ -326,7 +360,9 @@ let person = {
 
 The only thing that might seems strange is the fact you have to wrap the expression with braces.
 
-Try it: https://jsbin.com/sudofa/3/edit?js,console
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/sudofa/3/edit?js,console" target="blank">click here</a>
+</p>
 
 Now, in the example above **the variable names have to match the ones from the object**. That might not always be the case. But ES6 has a solution.
 
@@ -405,8 +441,9 @@ printPersonInfo({
 //"
 ```
 
-https://jsbin.com/nedumu/5/edit?js,console
-
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/nedumu/5/edit?js,console" target="blank">click here</a>
+</p>
 
 ### Links
 
@@ -456,7 +493,9 @@ console.log(obj[x]);
 
 As you can see, I make use of the concept of **computed properties** mentioned before. To access the property value again, the square brackets `[]` have to be used. It would not work if you write it like `obj.x`.
 
-Try it: https://jsbin.com/rinima/1/edit?js,console
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/rinima/1/edit?js,console" target="blank">click here</a>
+</p>
 
 Another nice feature is the `Symbol.for(..)` function. See yourself
 
@@ -482,7 +521,9 @@ let obj = {};
 console.log(obj[Symbol.for("propName")]);
 ```
 
-Try it: https://jsbin.com/qopupe/2/edit?js,console
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/qopupe/2/edit?js,console" target="blank">click here</a>
+</p>
 
 What might be important to know as well is that you won't get symbols when using `Object.getOwnPropertyNames()` but instead you have to use `Object.getOwnPropertySymbols()` to retrieve an array of symbols defined on the given object.
 
@@ -523,7 +564,9 @@ let people = {
 }
 ```
 
-Try it: https://jsbin.com/sigilu/1/edit?js,console
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/sigilu/1/edit?js,console" target="blank">click here</a>
+</p>
 
 An **iterable object** needs to implement such an iterator object by exposing it through the **@@iterator** (`Symbol.iterator`) method. Applying this to our previous object:
 
@@ -550,7 +593,9 @@ let people = {
 };
 ```
 
-Try it: https://jsbin.com/doriwi/2/edit?js,console
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/doriwi/2/edit?js,console" target="blank">click here</a>
+</p>
 
 What we can now do is to use the new `for...of` loop introduced in ES6:
 
@@ -568,7 +613,9 @@ for(let val of people){
 }
 ```
 
-Try it: https://jsbin.com/vidugu/2/edit?js,console
+<p class="notice tip">
+  Try it out yourself: <a href="https://jsbin.com/vidugu/2/edit?js,console" target="blank">click here</a>
+</p>
 
 ## Generators
 
@@ -636,3 +683,4 @@ http://h3manth.com/new/blog/2015/es6-reflect-api/
 ## Classes
 
 (to be written)
+{% endcomment %}
