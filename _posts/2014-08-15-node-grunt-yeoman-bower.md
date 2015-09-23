@@ -487,6 +487,10 @@ Having this `Gruntfile.js` configuration executes `build` and `test` when you ty
 
 ## Gulp
 
+<p class="notice fact">
+  <strong>UPDATE:</strong> Meanwhile Gulp has become more popular and the default choice of many web developers. I'll update this section with a more detailed description of its features and example setup. Check back soon or subscribe to either my Twitter profile or RSS feed to get notified when updates are ready.
+</p>
+
 This intro wouldn't be complete if it doesn't mention [Gulp](http://gulpjs.com/). Gulp is the JavaScript task runner newcomer build on top of [Node.js streams](https://github.com/substack/stream-handbook). It aims at making build scripts easier to use by "preferring code over configuration" (unlike Grunt which is based on configuration).
 
 ![](/blog/assets/imgs/node-grunt-yeoman/gulp-logo.png)
