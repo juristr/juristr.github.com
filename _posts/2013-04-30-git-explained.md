@@ -510,6 +510,7 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [Visual Git Cheat-Sheet](http://ndpsoftware.com/git-cheatsheet.html)
 - [My personal Git Cheat Sheet where I continuously add stuff I want to remember](https://gist.github.com/juristr/5280366)
 - [Git Immersion](http://gitimmersion.com/index.html)
+- [Git Tutorial: A Comprehensive Guide](https://blog.udemy.com/git-tutorial-a-comprehensive-guide/)
 - [Git Branching Model](http://www.slideshare.net/lemiorhan/git-branching-model)
 - [DZone Refcard: Getting Started with Git](http://refcardz.dzone.com/refcardz/getting-started-git)
 - [DZone Refcard: Git Patterns and Antipatterns](http://refcardz.dzone.com/refcardz/git-patterns-and-anti-patterns)
