@@ -13,3 +13,4 @@ Nice article on Angular deferreds, promises and things you may do wrong.
 - use promise chaining whenever possible, like `return $http....`
 - `$timeout` already returns a promise, so `return $timeout`
 - use custom made deferreds when wrapping traditional callback APIs (like many of jQuerys)
+- use `return $q(function(resolve, reject){ ... })` directly (Angular 1.3+ only)
