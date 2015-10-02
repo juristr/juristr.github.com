@@ -104,7 +104,7 @@ $ npm install --save-dev grunt
 }
 ```
 
-Similarly, if you add `--save` it'll be added to the `dependencies` section. The difference is mainly that `dependencies` are actively used by your appliation and should be deployed together with it. On the other side, `devDependencies` are tools you use during the development of the application, which normally do not require to be deployed together with it. Examples are code minifier scripts, test runners etc.
+Similarly, if you add `--save` it'll be added to the `dependencies` section. The difference is mainly that `dependencies` are actively used by your application and should be deployed together with it. On the other side, `devDependencies` are tools you use during the development of the application, which normally do not require to be deployed together with it. Examples are code minifier scripts, test runners etc.
 
 <p class="notice fact">
   When another Node package depends on yours, then it will automatically install all <code>runtime dependencies</code> of your package, but not your development dependencies. This is an important difference between <code>dependencies</code> and <code>devDependencies</code> that should be taken into account.
@@ -220,7 +220,7 @@ Yeoman has become the de-facto standard scaffolding toolkit for creating modern 
 
 ![](/blog/assets/imgs/node-grunt-yeoman/yeoman-logo.png)
 
-Yeoman is build around **[generators](http://yeoman.io/generators/)** which are either developed by the Yeoman team official generators or by the open source community. Yeoman itself basically just provides the infrastructure for building and running those generators.
+Yeoman is built around **[generators](http://yeoman.io/generators/)** which are either developed by the Yeoman team official generators or by the open source community. Yeoman itself basically just provides the infrastructure for building and running those generators.
 
 > Yeoman helps you kickstart new projects, prescribing best practices and tools to help you stay productive. <cite>From the <a href="http://yeoman.io/">official site</a></cite>
 
@@ -340,7 +340,7 @@ module.exports = function(grunt){
     //retrieve string to search for
     var string = grunt.config('stringCheck.string');
     
-    if(contents.indexOf(string >= 0))
+    if(contents.indexOf(string) >= 0)
       grunt.fail.warn('"' + string + '" found in "' + file + '"');
     });
 }
@@ -381,7 +381,7 @@ module.exports = function(grunt){
 }
 ```
 
-You can then execute them with `grunt stringCheck:target1` and `runt stringCheck:target2`. `target1` and `target2` can (and should) obviously be named differently.
+You can then execute them with `grunt stringCheck:target1` and `grunt stringCheck:target2`. `target1` and `target2` can (and should) obviously be named differently.
 
 ### Globbing
 
@@ -451,7 +451,7 @@ target2: {
 }
 ```
 
-The expand property tells Grunt to generate a corresponding destination for each matched file. `cwd` stands for the current working directory, `src` and `dest` are self explanatory and `ext` is the extension to be used for the destination files. More options can be found [in the official docs](http://gruntjs.com/configuring-tasks).
+The `expand` property tells Grunt to generate a corresponding destination for each matched file. `cwd` stands for the current working directory, `src` and `dest` are self explanatory and `ext` is the extension to be used for the destination files. More options can be found [in the official docs](http://gruntjs.com/configuring-tasks).
 
 ### Running tasks
 
@@ -483,7 +483,7 @@ module.exports = function(grunt) {
 };
 ```
 
-Having this `Gruntfile.js` configuration executes `build` and `test` when you type `grunt` into your console.gulp
+Having this `Gruntfile.js` configuration executes `build` and `test` when you type `grunt` into your console.
 
 ## Gulp
 
@@ -491,7 +491,7 @@ Having this `Gruntfile.js` configuration executes `build` and `test` when you ty
   <strong>UPDATE:</strong> Meanwhile Gulp has become more popular and the default choice of many web developers. I'll update this section with a more detailed description of its features and example setup. Check back soon or subscribe to either my Twitter profile or RSS feed to get notified when updates are ready.
 </p>
 
-This intro wouldn't be complete if it doesn't mention [Gulp](http://gulpjs.com/). Gulp is the JavaScript task runner newcomer build on top of [Node.js streams](https://github.com/substack/stream-handbook). It aims at making build scripts easier to use by "preferring code over configuration" (unlike Grunt which is based on configuration).
+This intro wouldn't be complete if it doesn't mention [Gulp](http://gulpjs.com/). Gulp is the JavaScript task runner newcomer built on top of [Node.js streams](https://github.com/substack/stream-handbook). It aims at making build scripts easier to use by "preferring code over configuration" (unlike Grunt which is based on configuration).
 
 ![](/blog/assets/imgs/node-grunt-yeoman/gulp-logo.png)
 
