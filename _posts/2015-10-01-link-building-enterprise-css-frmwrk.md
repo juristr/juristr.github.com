@@ -23,4 +23,22 @@ The people from Salesforce seem to have done a really really nice job: [Lightnin
   - documentation
   - living example, you can interact with (i.e.) the button, hover it, click it..
 - Efficiency
-...
+  - audit & collect components in your different web apps and standardize them
+  - align styles: common borders, font sizes,...
+  - build inventory of components
+  - start from smallest component -> aggregate to build larger ones
+  - account for special needs: enterprise apps might have unique traits
+  - interesting decision: make all headings same size to avoid scenarios where devs take a lower/higher heading just for the purpose of having a larger/smaller font. Use semantic classes instead
+  - accessibility!
+- Consistency
+  - design tokens: basic atoms of the design system, common variables like fonts, colors,... (can be done with SASS, Less)
+  - play well with others -> prefix styles
+- Beauty
+  - SVG icons -> with sprites
+  - width controlled by parent container
+- How to make decisions
+  - work in a group, debates -> [Cap Watkins Sliding Scale](http://blog.capwatkins.com/the-sliding-scale-of-giving-a-fuck)
+  - go open source to gather feedback
+- Open Source:
+  - [https://github.com/salesforce-ux/design-system](https://github.com/salesforce-ux/design-system)
+  - [https://www.lightningdesignsystem.com](https://www.lightningdesignsystem.com)
