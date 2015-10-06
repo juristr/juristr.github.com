@@ -21,27 +21,28 @@ I [love to contribute to Open Source libraries on GitHub](/blog/2015/06/github-s
 - **have automated builds in place**
 - **released on package managers** to be easily discoverable
 - **follow the semver specs**
+- **have a changelog**
 
 The last points are the ones I'd like to address with this article as they're something I see devs often struggle with.
 
-### Issue 1: Setup automated CI server
+### Issue 1: Have automated builds
 
-You certainly already have your build scripts in place. Like Grunt, Gulp, Webpack or whatever of the currently fancy build tools you're using. I highly recommend to setup a CI server that builds & executes your tests. As we will see, it's super easy to setup and will help you validate pull requests from others, but also prevent you from releasing broken code.
+You certainly already have your build scripts in place. Like Grunt, Gulp, Webpack or whatever of the currently fancy build tools you're using. When you have that (and you definitely should), then you're only steps away from a full blown automated build. Such a continuous integration server is extremely valuable as it builds your code, maybe lints it, executes your tests, frankly, it helps you keep your code working. This becomes even more important when other devs start to contribute to your library (which is the goal after all).
 
-## Issue 2: Releasing on Bower and NPM
+As we will see, it's super easy to setup such a CI server and it's even totally free.
 
-I'm going to talk about JavaScript as it is the prevalent language on GitHub. As such, the main repos to deploy to are currently [Bower](http://bower.io/) and [NPM](https://www.npmjs.com/). There are other package managers on the way like [JSPM](http://jspm.io/) but you can treat it as Bower as it works similarly directly off the GitHub repo.
+## Issue 2: Releasing on package repositories
 
-Releasing to those package managers is important so that people can use your library the easiest possible way.
+I'm mainly talking about JavaScript here as it is currently the prevalent lagnuage on GitHub, but it can be easily generalized to other langauges as well. When you develop a library and you share it on GitHub, you want it to be used by others. Thus, installing your lib has to be as easy and straightforward as possible. This can be achieved by deploying your lib dist files to so-called package managers. Currently the most used ones are [NPM](https://www.npmjs.com/) and [Bower](http://bower.io/). There are other package managers on the way like [JSPM](http://jspm.io/) as well. Deployment is done similarly as with Bower, though.
 
 ## Issue 3: Follow the semver spec
 
-When you release a new version, it is important to communicate your changes. Did you add new features, just patched some bugs, are changes breaking? These are important things for a developer to know whether it is safe to upgrade. Package managers like Bower and NPM provide even mechanisms to perform automatic upgrades to the next "safe" version. Obviously this only works if you properly follow the [semver spec](http://semver.org/).
+When you release a new version, it is important to communicate your changes. Did you add new features, just patched some bugs, are changes breaking? These are important things for a developer in order to know whether it is safe to upgrade. Package managers like Bower and NPM provide even mechanisms to perform automatic upgrades to the next "safe" version. Obviously this only works if you properly follow the [semver spec](http://semver.org/).
 
-That's where people mostly fail. Should we increment the patch? The minor? Well, we did add some features, but hey...they aren't thaaat huge.. maybe we should only increase the patch.  
-These are the kind of thoughts going on...even worse: increase the minor even if it's a breaking change. Lot of libs do that, even popular ones like the Angular v1.x!!
+Sadly, that's where most libs fail. Should we increment the patch? The minor? Well, we did add some features, but hey...they aren't thaaat huge.. maybe we should just increase the patch.  
+These are the kind of thoughts going on...even worse: increase the minor even if it's a breaking change. Even popular libraries like Angular v1.x do that!!
 
-But it doesn't have to be like that. The semver spec is quite clear and should not leave any doubts. That's probably what [Stephan Bönnemann](https://twitter.com/boennemann) thought as well and started to automate the whole stuff. We'll shortly see how.
+But it doesn't have to be like that. The semver spec is quite clear and should not leave any doubts: machines can do it for us! That's probably what [Stephan Bönnemann](https://twitter.com/boennemann) thought as well and started to automate the whole stuff. We'll shortly see how.
 
 ## Issue 4: Changelog
 
@@ -73,9 +74,26 @@ BREAKING CHANGE:
 This is a breaking change. Before you did... now you have to ....
 ```
 
-## Automated releases, with changelog, following semver
+## Love it! Show me how to get it for my lib!
+
+Ok, nice you're interested. Let's get started.
+
+### Get your build scripts ready
+
+- best is to directly hook them on in your package.json
+- use npm
+
+### Setup Travis
+
+[Travis](https://travis-ci.org/) is THE continuous integration server for GitHub based projects. You should find everything you need in the official docs, for JavaScript it's this here: [http://docs.travis-ci.com/user/languages/javascript-with-nodejs/](http://docs.travis-ci.com/user/languages/javascript-with-nodejs/).
+
+### semantic-release to the help
 
 - semantic-release
 - publish-latest (for Bower & JSPM?)
+- link to Kent C. Dodds article on medium which he'll publish shortly
+
+### Add a CONTRIBUTING.md
+
 - CONTRIBUTING.md
 - Videos on egghead.io by Kent C. Dodds on creating a JS library
