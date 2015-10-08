@@ -227,6 +227,10 @@ He has an interesting solution: `publish-latest` creates (if it doesn't exist) a
 
 ## Conclusion
 
+You know what's best of all this. Whenever now someone sends you a PR, Travis executes the tests against the new contribution, does all the checks you've setup (linting whatever..) and if everything is fine, you are **1 click away from merging and releasing a new version with the new contribution**.
+
+![](/blog/assets/imgs/release-like-pro/githubmerge.png)
+
 Here are some of my repositories where I've already set this up, as well as others which you can use as an example to get started.
 
 - [angular-model-factory](https://github.com/Swimlane/angular-model-factory)
