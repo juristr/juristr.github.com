@@ -5,6 +5,23 @@
   font-style: normal;*/
 }
 
+/* for hackpad code pieces */
+ul.code {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 17px;
+
+  word-wrap: normal;
+  word-break: normal;
+  padding: 15px 45px 15px 25px !important;
+  margin-left: -25px;
+  width:105%;
+  border-radius:0;
+}
+
+ul.code > li {
+  list-style-type: none !important;
+}
+
 
 @media screen {
   body {
