@@ -208,7 +208,7 @@ So, if you mastered to use the git flow pattern manually, you're ready to go wit
 
 ### Haacked's Git Aliases
 
-[Phil Haack](http://haacked.com/about/) (former Microsoft employee and now working on [GitHub for Windows](windows.github.com) @ GitHub) published an interesting set of **13 git aliases** to boost your productivity. You might want to take a look at them:
+[Phil Haack](http://haacked.com/about/) (former Microsoft employee and now working on [GitHub for Windows](https://desktop.github.com) @ GitHub) published an interesting set of **13 git aliases** to boost your productivity. You might want to take a look at them:
 
 [http://haacked.com/archive/2014/07/28/github-flow-aliases/](http://haacked.com/archive/2014/07/28/github-flow-aliases/)
 

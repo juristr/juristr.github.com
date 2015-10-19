@@ -22,15 +22,19 @@ current: blog
           {% include mycustoms/post-header-alert %}
 
           <h2 style="margin-bottom:0; font-size:30px">
-            <a href="{{page.link}}">
-              {{ page.title }}&nbsp;<i class="icon-long-arrow-right"></i>
-            </a>
+            {{ page.title }}
           </h2>
           <div style="color:#999; font-size:14pt; padding-bottom:20px">
             <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
           </div>
 
           {{ content }}
+
+          <div class="alert alert-info" style="text-align:center">
+            <h3>
+              <a href="{{page.link}}">Open original resource&nbsp;<i class="icon-long-arrow-right"></i></a>
+            </h3>
+          </div>
 
         </div>
 
