@@ -185,4 +185,71 @@ What we've been all waiting for. Unfortunately we only got a
 
 What's definitely promising is that internal Google products like Google Fiber, Google AdWords are starting to migrate.
 
+## Building cross platform apps with Ionic 2
+
+Ionic is exciting technology. I was trying hybrid apps about a couple of years ago, but it didn't work out well. The main issue was performance, in animations and stuff. Meanwhile mobile browsers got a lot better, and Ionic nicely fits in with a great library.
+
+**Big announcement:** [Ionic 2 is now public alpha](http://ionic.io/2).
+
+![](/blog/assets/imgs/ngconnect/ionic2logo.png)
+
+Ionic 2 is built on top of Angular 2 and mainly focuses on the following pillars.
+
+### Simplicity
+
+You can easily define components like
+
+```html
+<button danger></button>
+<io-checkbox></io-checkbox>
+```
+
+The CSS is made s.t. it can be easily overwritten. Moreover it's like plain JavaScript with some custom annotations.
+
+```javascript
+@Page({
+    templateUrl: '...'
+})
+export class Profile {
+    ...
+}
+```
+
+### Platform continuity
+
+Theres now **one exact codebase for iOS and Android**. The same HTML and JS is automatically enhanced for the target platform. Even the icon set automatically adapts itself. Just specify them like
+
+```html
+<icon mail></icon>
+<icon home></icon>
+...
+```
+
+### UI Navigation
+
+UI navigation got a lot better. This is crucial for mobile apps which may have special needs rather than the URL tight kind of back navigation behavior. 
+Example: You don't always want to have the back-button functionality, i.e. when choosing a page from the side menu (difficult with URL route navigation)
+
+Ionic 2 features a **push/pop** kind of navigation experience.
+
+```javascript
+pushSettings() {
+    this.nav.push(...);
+}
+
+goBack() {
+    this.nav.pop();
+}
+```
+
+### Theming and Customization
+
+SASS is already build-in with dedicated themes and tools to adjust them. Ionic comes with a set of 9 colors which can be freely adapted to build a custom theme experience.
+
+Moreover it uses the new [Web Animations API](https://w3c.github.io/web-animations/) which gives the developer a lot better control other than CSS animations do. There's already native support for Chrome/Android and there are great polyfills for iOS. The demoed animations were really sleek!
+
+### Conclusion
+
+This looks really promising and is definitely something I'm going to experiment with. Native apps have their place, but they are costly, you need a dedicated team/developers for both, iOS and Android (and Windows) and that's why we're all looking towards hybrid apps that leverage web technologies.
+
 
