@@ -65,7 +65,7 @@ More on the [Angular 2 cheatsheet](https://angular.io/docs/ts/latest/guide/cheat
 
 ### Components
 
-When today you (should) have a directive with a corresponding directive controller, tomorrow with Angular 2 you'll have (or call it) a component. Everything is a component, your app simply a big "component tree" starting with a top-level component and then have lots of sub-components nested within it.
+When today you (should) have a directive with a corresponding directive controller, tomorrow with Angular 2 you'll have (or call it) a component. **Everything is a component**, your app simply a big "component tree" starting with a top-level component and then have lots of sub-components nested within it.
 
 ![](/blog/assets/imgs/ngconnect/ng2component.png)
 
@@ -103,6 +103,7 @@ class DisplayComponent {
 ```
 
 **Data flow will be unidirectional**, going from the parent down to the children. This makes it
+
 - faster
 - easier to debug (as the data always flows down the component tree)
 - works better with libraries like RxJS, Flux,...
@@ -110,6 +111,7 @@ class DisplayComponent {
 ### Languages
 
 Ultimately, Angular is designed to give you as much freedom as possible. That said, it supports
+
 - ES5 - runs in the Browser (ultimately)
 - ES6 (ES2015)
 - TypeScript (Angular 2 is written in TS)
@@ -191,7 +193,9 @@ Ionic is exciting technology. I was trying hybrid apps about a couple of years a
 
 **Big announcement:** [Ionic 2 is now public alpha](http://ionic.io/2).
 
-![](/blog/assets/imgs/ngconnect/ionic2logo.png)
+<figure>
+    <img src="/blog/assets/imgs/ngconnect/ionic2logo.png" width="50%" height="50%"/>
+</figure>
 
 Ionic 2 is built on top of Angular 2 and mainly focuses on the following pillars.
 
@@ -251,5 +255,187 @@ Moreover it uses the new [Web Animations API](https://w3c.github.io/web-animatio
 ### Conclusion
 
 This looks really promising and is definitely something I'm going to experiment with. Native apps have their place, but they are costly, you need a dedicated team/developers for both, iOS and Android (and Windows) and that's why we're all looking towards hybrid apps that leverage web technologies.
+
+## Full Stack Angular 2
+
+Angular 2 on the server-side with **angular universal**. Really cool talk with cool live coding demos by [PatrickJS](https://twitter.com/gdi2290).
+
+Nothing more to add, simply check out the [starter project](https://github.com/angular-class/angular2-universal-starter).  
+Oh, and something you definitely wanna watch out for: [http://fullstackangular2.com/](http://fullstackangular2.com/).
+
+## Routing in Eleven Dimensions with Component Router
+
+[Brian Ford](https://twitter.com/briantford) introduced the new Angular 2 component router. The new router basically incorporates the lessons learned from the native Angular 1 router and features from the more popular ui-router project. The main difference is that the **component router maps URLs to components**.
+
+The new `ui-view` is:
+
+```html
+<router-outlet></router-outlet>
+```
+
+Each component has its own router configuration, something like
+
+```javascript
+@RouteConfig({
+    { path: '/', component: IndexCmp, as: 'Index'}
+})
+```
+
+Then you can link them using `[router-link]`
+
+```html
+<a [router-link]="['/Index']">...</a>
+```
+
+Obviously using the url directly would work as well but it's usually not considered best practice as it makes refactoring more difficult.
+
+Child routes are possible as well, obviously. The cool part there is that you can have your parents' route configuration which specifies the path of the route up to a certain point and then indicates that Angular has to look for the route configurations of potential child components. This is done by using `...`:
+
+```javascript
+@RouteConfig({
+    { path: '/email/:id/...', component: EmailCmp, as: 'Index'}
+})
+```
+
+The `...` denotes that the EmailCmp component's route config has to be consulted for child routes. Child routes have their own params, so no collisions.
+
+Another quite interesting point is what Brian denoted "eleven dimensional routing" which is the capability to have multiple routes active at the same time. Imagine the UI of Google's Inbox, where you have the window for writing a new email open in the front, but you can still interact with the content in the back.
+
+### Conclusion
+
+Totally interesting and something you should start taking a look at as it seems this is going to land in Angular v1.x as well and is some of the core parts for going an incremental upgrade path. I had the feeling Brian only scratched the surface of what's possible with the new router.
+
+## Getting started with Angular 2
+
+Demo code: [https://github.com/rkirov/angular2-tour-of-heroes](https://github.com/rkirov/angular2-tour-of-heroes)
+
+Take a look at the sample application. Some takeaways:
+
+- well, everything is a component as we already heard
+- we need to bootstrap the top-level component using `bootstrap(...)`
+- you have to import services you're using within your component explicitly as well as other sub-components you're referencing.
+- there's a property `stylesUrl` or `styles` where you can reference a stylesheet that is being used/required by that component. If you wonder whether those styles are namespaced somehow, [here's the answer](https://twitter.com/radokirov/status/656467823032684544).
+- Input/output has to be declared explicitly as well
+
+```javascript
+export class StatusComponent {
+    @Input() active: boolean;
+    @Output() change: EventEmitter;
+    ...
+}
+```
+
+..and then used like
+
+```html
+<status [active]="!hero.retired" (change)="onChange(...)"></status>
+```
+
+
+## Turning the performance knob 11
+
+Example app: [http://bahmutov.calepin.co/improving-angular-web-app-performance-example.html](http://bahmutov.calepin.co/improving-angular-web-app-performance-example.html)
+
+[Gleb Bahmutov](https://twitter.com/bahmutov) demoed some of the techniques besides simply upgrading Angular, using track by and so on. Definitely take a look at his repository of Chrome Developer Tools snippets: [https://github.com/bahmutov/code-snippets](https://github.com/bahmutov/code-snippets).
+
+Takeaways
+
+- don't do premature optimizations, optimize when the browser starts freezing
+- always test in a clean browser (without extensions etc..)
+- `$timeout(...)`` has a 3rd optional boolean param. Check that out :smiley:
+
+## Protractor Style Guide
+
+Some good tips and tricks for creating more maintainable tests. Take a look at the repo for a collection of them: 
+[CarmenPopoviciu/angularConnect-protractor-styleguide](https://github.com/CarmenPopoviciu/angularConnect-protractor-styleguide/blob/master/styleguide.md)
+
+Main takeaways:
+- Never ever use xpath!
+- Use Page Objects
+
+## Testing Strategies with Angular 2
+
+Repo: [https://github.com/juliemr/ng2-test-seed](https://github.com/juliemr/ng2-test-seed)
+
+[Julie](https://twitter.com/SomeJulie) mentioned some of the rules that generally apply to testing and obviously also hold for Angular
+
+- use smallest test type possible
+- only public interfaces, don't test private ones (less stable)
+- only mock if really necessary
+- ...
+
+The tools they use: TypeScript (although not strictly necessary), karma, Jasmine. TypeScript basically compiles to JavaScript files which is being watched by Karma which then executes the unit tests. Thus Karma doesn't even have to know about the existence of TypeScript at all.
+
+When you write a test, you have to import a couple of stuff
+
+```javascript
+import {
+  it,
+  describe,
+  expect,
+  inject
+} from 'angular2/testing';
+import {
+  APP_ID
+} from 'angular2/angular2';
+
+
+describe('default test injector', () => {
+  it('should provide default id', inject([APP_ID], (id) => {
+    expect(id).toBe('a');
+  }));
+});
+```
+
+There's a `beforeEachProviders` which is like the Jasmine beforeEach but for initializing Angular services:
+
+```javascript
+describe('user service', () => {
+    beforeEachProviders(() => [LoginService, UserService])
+
+    it('should validate pins', inject([UserService], (service) => {
+        ...
+    });
+
+});
+```
+
+You can now mock by simply subclassing which is nice
+
+```javascript
+class MockLoginService extends LoginService {
+
+}
+```
+
+..and then use it
+
+```javascript
+beforeEachProviders(() => [provide(LoginService, {useClass: MockLoginService}), UserService]);
+```
+
+**TestComponentBuilder** helps when it comes to test Angular 2 components:
+[https://github.com/juliemr/ng2-test-seed/blob/master/src/test/border-component_test.ts#L23](https://github.com/juliemr/ng2-test-seed/blob/master/src/test/border-component_test.ts#L23).
+
+## Iterative Version upgrade strategies
+
+Repo: [https://github.com/bourey/circuit-workout](https://github.com/bourey/circuit-workout)
+
+Main takeaways:
+- Write upgradeable code. Don't use $$ prefixed code and/or undocumented features. They tend to change faster/disappear
+- Write abstractions and avoid code duplication (you only have to upgrade in one place)
+- Have an extensive set of automated tests
+  - produce coverage metrics as a sanity check
+  - Screenshot testing tools: [https://applitools.com/](https://applitools.com/)
+- Upgrade to Component Router
+- You can iteratively upgrade to TypeScript as well since JavaScript is valid TypeScript already
+
+## Conclusion day 1
+
+So these were the notes from the sessions I've been at. All the other ones will be soon available on Youtube. I'll update this post with the links to the videos.
+
+![](/blog/assets/imgs/ngconnect/liveband.jpg)
+
+All in all, it was a totally awesome day, lots of cool people and sessions. I'm really looking forward for tomorrow.
 
 
