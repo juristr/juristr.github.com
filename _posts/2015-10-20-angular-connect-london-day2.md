@@ -19,10 +19,7 @@ I'm lucky enough to be able to attend [AngularConnect](http://angularconnect.com
 
 ## Follow AngularConnect on YouTube
 
-Can't attend? Well then this might be of particular interest :smiley:
-
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">We&#39;re live-streaming the 2 main tracks at AngularConnect. Links on our site: <a href="http://t.co/GRBiN4lr88">http://t.co/GRBiN4lr88</a> &#10;&#10;Bookmark &amp; subscribe to follow along!</p>&mdash; AngularConnect (@AngularConnect) <a href="https://twitter.com/AngularConnect/status/656034335854866432">October 19, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ar_bnvaz3nI" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 ## Livestream - My notes from the conf
 
