@@ -189,6 +189,8 @@ What's definitely promising is that internal Google products like Google Fiber, 
 
 ## Building cross platform apps with Ionic 2
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bAlydPwFONY" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
 Ionic is exciting technology. I was trying hybrid apps about a couple of years ago, but it didn't work out well. The main issue was performance, in animations and stuff. Meanwhile mobile browsers got a lot better, and Ionic nicely fits in with a great library.
 
 **Big announcement:** [Ionic 2 is now public alpha](http://ionic.io/2).
@@ -258,6 +260,8 @@ This looks really promising and is definitely something I'm going to experiment 
 
 ## Full Stack Angular 2
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MtoHFDfi8FM" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
 Angular 2 on the server-side with **angular universal**. Really cool talk with cool live coding demos by [PatrickJS](https://twitter.com/gdi2290).
 
 Nothing more to add, simply check out the [starter project](https://github.com/angular-class/angular2-universal-starter).  
@@ -309,6 +313,8 @@ Totally interesting and something you should start taking a look at as it seems 
 
 Demo code: [https://github.com/rkirov/angular2-tour-of-heroes](https://github.com/rkirov/angular2-tour-of-heroes)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LS3aewTkfHI" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
 Take a look at the sample application. Some takeaways:
 
 - well, everything is a component as we already heard
@@ -336,6 +342,8 @@ export class StatusComponent {
 
 Example app: [http://bahmutov.calepin.co/improving-angular-web-app-performance-example.html](http://bahmutov.calepin.co/improving-angular-web-app-performance-example.html)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gxZE8SqC7as" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
 [Gleb Bahmutov](https://twitter.com/bahmutov) demoed some of the techniques besides simply upgrading Angular, using track by and so on. Definitely take a look at his repository of Chrome Developer Tools snippets: [https://github.com/bahmutov/code-snippets](https://github.com/bahmutov/code-snippets).
 
 Takeaways
@@ -345,6 +353,8 @@ Takeaways
 - `$timeout(...)`` has a 3rd optional boolean param. Check that out :smiley:
 
 ## Protractor Style Guide
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-lTGnYwnEuM" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 Some good tips and tricks for creating more maintainable tests. Take a look at the repo for a collection of them: 
 [CarmenPopoviciu/angularConnect-protractor-styleguide](https://github.com/CarmenPopoviciu/angularConnect-protractor-styleguide/blob/master/styleguide.md)
@@ -356,6 +366,8 @@ Main takeaways:
 ## Testing Strategies with Angular 2
 
 Repo: [https://github.com/juliemr/ng2-test-seed](https://github.com/juliemr/ng2-test-seed)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C0F2E-PRm44" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 [Julie](https://twitter.com/SomeJulie) mentioned some of the rules that generally apply to testing and obviously also hold for Angular
 
