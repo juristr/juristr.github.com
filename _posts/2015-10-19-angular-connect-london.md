@@ -421,6 +421,8 @@ beforeEachProviders(() => [provide(LoginService, {useClass: MockLoginService}), 
 
 Repo: [https://github.com/bourey/circuit-workout](https://github.com/bourey/circuit-workout)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8tGcdaItj0I" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
 Main takeaways:
 - Write upgradeable code. Don't use $$ prefixed code and/or undocumented features. They tend to change faster/disappear
 - Write abstractions and avoid code duplication (you only have to upgrade in one place)
