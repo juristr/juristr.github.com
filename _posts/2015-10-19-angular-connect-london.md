@@ -19,7 +19,7 @@ Here are my **notes from day 1** of the conference. Btw, **videos for track 1 ar
 
 Slides: [https://goo.gl/JJICdl](https://goo.gl/JJICdl)
 
-[Brad Green](https://twitter.com/bradlygreen), Engineering director @ Google and overall project manager of Angular (since it's beginnings in 2009) opens the show, outlining some some stats. Most interestingly about Google's products currently using Angular v1 which are products like Chromecast, Google Analytics, the Youtube Video Manager etc. Many people have been criticizing Angular for not even being used by Google itself. Therefore such announcements are kinda important for the community as it demonstrates Google's commitment and faith into Angular.
+[Brad Green](https://twitter.com/bradlygreen), Engineering director @ Google and overall project manager of Angular (since it's beginnings in 2009) opens the show, outlining some stats. Most interestingly about Google's products currently using Angular v1 which are products like Chromecast, Google Analytics, the Youtube Video Manager etc. Many people have been criticizing Angular for not even being used by Google itself. Therefore such announcements are kinda important for the community as it demonstrates Google's commitment and faith into Angular.
 
 What's not quite as surprising are the Angular v1 vs v2 usage stats:
 
