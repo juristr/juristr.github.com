@@ -17,7 +17,10 @@ Here are my **notes from day 1** of the conference. Btw, **videos for track 1 ar
 
 ## Keynote
 
+Speaker: [@bradlygreen](https://twitter.com/bradlygreen), [@igorminar](https://twitter.com/igorminar), [@jules_kremer](https://twitter.com/jules_kremer), [@UriGoldshtein](https://twitter.com/urigoldshtein), ...
 Slides: [https://goo.gl/JJICdl](https://goo.gl/JJICdl)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UxjgUjVpe24" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 [Brad Green](https://twitter.com/bradlygreen), Engineering director @ Google and overall project manager of Angular (since it's beginnings in 2009) opens the show, outlining some stats. Most interestingly about Google's products currently using Angular v1 which are products like Chromecast, Google Analytics, the Youtube Video Manager etc. Many people have been criticizing Angular for not even being used by Google itself. Therefore such announcements are kinda important for the community as it demonstrates Google's commitment and faith into Angular.
 
@@ -189,6 +192,9 @@ What's definitely promising is that internal Google products like Google Fiber, 
 
 ## Building cross platform apps with Ionic 2
 
+Speaker: [@adamdbradley](https://twitter.com/@adamdbradley)
+Slides: [http://adamdbradley.github.io/building-with-ionic2/](http://adamdbradley.github.io/building-with-ionic2/)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bAlydPwFONY" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 Ionic is exciting technology. I was trying hybrid apps about a couple of years ago, but it didn't work out well. The main issue was performance, in animations and stuff. Meanwhile mobile browsers got a lot better, and Ionic nicely fits in with a great library.
@@ -260,6 +266,8 @@ This looks really promising and is definitely something I'm going to experiment 
 
 ## Full Stack Angular 2
 
+Speaker: [PatrickJS](https://twitter.com/gdi2290), [@jeffwhelpley](https://twitter.com/@jeffwhelpley)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MtoHFDfi8FM" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 Angular 2 on the server-side with **angular universal**. Really cool talk with cool live coding demos by [PatrickJS](https://twitter.com/gdi2290).
@@ -269,7 +277,11 @@ Oh, and something you definitely wanna watch out for: [http://fullstackangular2.
 
 ## Routing in Eleven Dimensions with Component Router
 
-[Brian Ford](https://twitter.com/briantford) introduced the new Angular 2 component router. The new router basically incorporates the lessons learned from the native Angular 1 router and features from the more popular ui-router project. The main difference is that the **component router maps URLs to components**.
+Speaker: [briantford](https://twitter.com/briantford)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z1NB-HG0ZH4" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
+Brian Ford introduced the new Angular 2 component router. The new router basically incorporates the lessons learned from the native Angular 1 router and features from the more popular ui-router project. The main difference is that the **component router maps URLs to components**.
 
 The new `ui-view` is:
 
@@ -311,11 +323,12 @@ Totally interesting and something you should start taking a look at as it seems 
 
 ## Getting started with Angular 2
 
+Speaker: [@radokirov](https://twitter.com/@radokirov), [@naomitraveller](https://twitter.com/@naomitraveller)  
 Demo code: [https://github.com/rkirov/angular2-tour-of-heroes](https://github.com/rkirov/angular2-tour-of-heroes)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LS3aewTkfHI" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
-Take a look at the sample application. Some takeaways:
+Take a look at the sample application. Some takeouts:
 
 - well, everything is a component as we already heard
 - we need to bootstrap the top-level component using `bootstrap(...)`
@@ -340,36 +353,41 @@ export class StatusComponent {
 
 ## Turning the performance knob 11
 
+Speaker: [@bahmutov](https://twitter.com/@bahmutov)  
 Example app: [http://bahmutov.calepin.co/improving-angular-web-app-performance-example.html](http://bahmutov.calepin.co/improving-angular-web-app-performance-example.html)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gxZE8SqC7as" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
-[Gleb Bahmutov](https://twitter.com/bahmutov) demoed some of the techniques besides simply upgrading Angular, using track by and so on. Definitely take a look at his repository of Chrome Developer Tools snippets: [https://github.com/bahmutov/code-snippets](https://github.com/bahmutov/code-snippets).
+Gleb Bahmutov demoed some of the techniques besides simply upgrading Angular, using track by and so on. Definitely take a look at his repository of Chrome Developer Tools snippets: [https://github.com/bahmutov/code-snippets](https://github.com/bahmutov/code-snippets).
 
-Takeaways
+### Takeouts
 
 - don't do premature optimizations, optimize when the browser starts freezing
 - always test in a clean browser (without extensions etc..)
-- `$timeout(...)`` has a 3rd optional boolean param. Check that out :smiley:
+- `$timeout(...)` has a 3rd optional boolean param. Check that out :smiley:
 
 ## Protractor Style Guide
+
+Speaker: [@andresdom](https://twitter.com/@andresdom), [@CarmenPopoviciu](https://twitter.com/@CarmenPopoviciu)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-lTGnYwnEuM" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 Some good tips and tricks for creating more maintainable tests. Take a look at the repo for a collection of them: 
 [CarmenPopoviciu/angularConnect-protractor-styleguide](https://github.com/CarmenPopoviciu/angularConnect-protractor-styleguide/blob/master/styleguide.md)
 
-Main takeaways:
+### Takeouts
+
 - Never ever use xpath!
 - Use Page Objects
 
 ## Testing Strategies with Angular 2
 
+Speaker: [@SomeJulie](https://twitter.com/SomeJulie)  
 Repo: [https://github.com/juliemr/ng2-test-seed](https://github.com/juliemr/ng2-test-seed)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C0F2E-PRm44" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
-[Julie](https://twitter.com/SomeJulie) mentioned some of the rules that generally apply to testing and obviously also hold for Angular
+Julie mentioned some of the rules that generally apply to testing and obviously also hold for Angular
 
 - use smallest test type possible
 - only public interfaces, don't test private ones (less stable)
@@ -431,11 +449,13 @@ beforeEachProviders(() => [provide(LoginService, {useClass: MockLoginService}), 
 
 ## Iterative Version upgrade strategies
 
+Speaker: [@jbourey](https://twitter.com/@jbourey)  
 Repo: [https://github.com/bourey/circuit-workout](https://github.com/bourey/circuit-workout)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8tGcdaItj0I" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
-Main takeaways:
+## Takeouts
+
 - Write upgradeable code. Don't use $$ prefixed code and/or undocumented features. They tend to change faster/disappear
 - Write abstractions and avoid code duplication (you only have to upgrade in one place)
 - Have an extensive set of automated tests
