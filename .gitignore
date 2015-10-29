@@ -2,6 +2,4 @@ development/juristr/production/
 _site
 .tmp
 .sass-cache
-
 Thumbs.db
-**/Thumbs.db
