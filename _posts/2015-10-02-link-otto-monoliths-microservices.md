@@ -3,7 +3,7 @@ layout: link
 type: link
 title: "On Monoliths and Microservices"
 link: http://dev.otto.de/2015/09/30/on-monoliths-and-microservices/
-tags: [Architecture]
+tags: ["Software Architecture"]
 ---
 - Have cross-functional teams
 - vertical decomposition: create vertical slices, being as independent from each other as possible (self-contained systems)
