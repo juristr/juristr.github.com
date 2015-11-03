@@ -6,9 +6,12 @@ category:
 tags: ["Software Architecture"]
 ---
 
-Important note: **this is not something I've written up by myself**, but it's rather a summary, some highlighting of the most important quotes with according comments on my side for an awesome post on the Thoughtworks blog about API design. Their vision quite accurately reflects what I've been doing lately although I did never think about all the concepts in such detail. Read on to get more.
+Important note: **this is not something I've written up by myself**, but it's rather a summary, some highlighting of the most important quotes with some of my comments for an awesome post on the Thoughtworks blog about API design. Their vision quite accurately reflects what I've been doing lately although I did never think about all the concepts in such detail. Moreover I think this could be interesting to you as well. Hence, read on to get more :wink:.  
+_(btw, the TL;DR is at the end)_
 
-**The original article: [https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)**.
+<div class="alert alert-info">
+The original article: <a href="https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling" target="_blank">https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling</a>.
+</div>
 
 > The starting point in selection of resources is to analyze your business domain and extract the nouns that are relevant to your business needs. More importantly, focus should be given to the needs of API consumers and how to make the API relevant and useful from the perspective of API consumer interactions.
 
@@ -27,26 +30,33 @@ Another requirement: ability to "like" a post. Approach one would define a more 
 
 > If the API consumers are expected to directly manipulate the low level resources (using fine grained APIs), like CRUD, there will be two big outcomes: Firstly, the API consumer to API provider interactions will be very chatty. Secondly, business logic will start spilling over to the API consumer.
 
-We have to make sure, API clients **cannot leave the data in an inconsistent state**.
+Good point. As they also mention, the API provider has to make sure that API clients **cannot leave the data in an inconsistent state**.
 
 > For example, the blogging application might have a business logic that says that attaching tags on the content is mandatory or that picture tags can be added only when the post has a picture,...
 
-When you have a "chatty" API, the client would have to make sure that he first calls the update/creation of the POST followed by the attachment of a tag. But what about when the client doesn't? What about when failures occur between the first and second call?
+In a "chatty" API scenario the client would have to
+
+1. `POST /posts` to create a new blog post.
+1. `POST /posts/{id}/tags` with the proper tag in the request body (or similar)
+
+But what about when the client doesn't do the 2nd call? What about when failures occur between the first and second call?
 
 > In this situation, there should be a very clear agreement on what the API consumer is expected to do? Can the API consumer retry? If not, who will clean up the data?
 
 This is very difficult to handle. Also consumers may be unknown!
 
-> Essentially, the low level CRUD oriented approach puts the business logic in the client code creating tight coupling between the client (API consumer) and services (API) it shouldn't care about, and it loses the user intent by decomposing it in the client. Anytime the business logic changes, all your API consumers have to change the code and redeploy the system.
+> Essentially, the low level CRUD oriented approach puts the business logic in the client code creating tight coupling between the client (API consumer) and services (API) it shouldn't care about, and it loses the user intent by decomposing it in the client. Anytime the business logic changes, all your API consumers have to change the code and redeploy the system. [...]
+> 
+> In the case of coarse grained APIs, The business logic remains with the API provider side thus reducing the data inconsistency issues discussed earlier.
 
-Coarse grained APIs tend to keep the business logic on the API provider side, which is usually the desired approach. But keep in mind the negative side effects of a too coarse grained API. There has to be a balance.
+But keep in mind the negative side effects of a too coarse grained API. There has to be a balance.
 
 > Note: When we talk about preventing business logic migration, we are talking about the control flow business logic (for example, making all the required API requests in correct sequence) and not the functional business logic (for example, tax calculation).
 
 ## Coarse grained aggregate resources for business processes
 
 > How can we reconcile coarse grained interfaces that speak the language of a business capability with HTTP verbs against named resources? [...] And how do we avoid the low-level, CRUD-like, nature of service interaction, and speak a language more aligned with business terms? [...]
-
+> 
 > Business capabilities / processes can neatly fit the definition of resources. In other words, for complex business processes spanning multiple resources, **we can consider the business process as a resource itself**.
 
 Another important thing...
@@ -59,7 +69,7 @@ Another important thing...
 
 It's not like if you do REST you have a DB as a service (over HTTP). Or at least that shouldn't be the case.
 
-> [...]  it's as if you allow random external parties to mess around with your resource state, through PUT and DELETE, as if the service were just a low-level database. [...] The client shouldn't be manipulating internal representation; it should be a source of user intent.
+> [...] it's as if you allow random external parties to mess around with your resource state, through PUT and DELETE, as if the service were just a low-level database. [...] The client shouldn't be manipulating internal representation; it should be a source of user intent.
 
 Two ways of doing that. Example of a customer in banking domain that wants to change her address.
 
@@ -125,4 +135,19 @@ The take out of this is: Don't have the consumer coordinate, but the API provide
 
 Using POST requests to "nounified" resources also favours CQRS. More here on the Technology Radar: [REST without PUT](https://www.thoughtworks.com/radar/techniques/rest-without-put).
 
-**The original article: [https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling](https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling)**.
+<div class="alert alert-info">
+The original article: <a href="https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling" target="_blank">https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling</a>.
+</div>
+
+## My conclusion
+
+As the article properly states, it's a matter of trade offs, about whether to use a more fine-grained vs. coarse grained API and vice versa. It very much depends on the context, but the article gives some good insights that might help you to decide.
+
+### TL;DR
+
+- keep balance between coarse grained (only allow `POST /posts` for everything) and finer grained endpoints (multiple requests that have to be done for creating a single "Blog post" entity)
+- fine grained: more (control flow) business logic on the consumer; might result in issues with multiple consumers (duplicate logic); inconsistent states
+- coarse grained only: business logic on API provider; rigid, hardly reusable, complex to handle on provider as well as consumer side
+- escaping CRUD: model business processes as resources themselves: `/moneydeposit`, `/moneytransfer`, `/transaction`
+- Consumer shouldn't be manipulating the internal state representation; it should express a user intent
+- Nouns vs. verb approach: most verbs can be expressed as nouns, so...
