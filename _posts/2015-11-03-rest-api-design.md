@@ -3,6 +3,7 @@ layout: post
 title: "REST Api Design - Resource Modeling"
 lead: "A summary from a post on Thoughtworks blog"
 category: 
+reposts: ["https://dzone.com/articles/rest-api-design-resource-modeling-1"]
 tags: ["Software Architecture"]
 ---
 
