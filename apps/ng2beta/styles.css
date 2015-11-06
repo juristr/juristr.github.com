@@ -24,9 +24,16 @@ a img{
 }
 
 .chart-container {
-  height: 300;
-  width:600;
   margin: 0 auto;
+}
+
+@media (min-width: 901px) {
+
+  .chart-container {
+    height: 300px;
+    width: 600px;
+  }
+
 }
 
 ::-moz-selection {
@@ -499,7 +506,7 @@ a img{
   }
 
   .chart-container {
-    max-width: 700px;
+    height: 200px;
     margin: 0 auto;
   }
 

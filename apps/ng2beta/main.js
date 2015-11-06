@@ -40,10 +40,10 @@
 
     var currentPace = calculateAverageCurrentPace(progressData);
     var daysRemaining = calculateDaysRemaining(progressData);
-    var projectedDate = moment().add(daysRemaining, 'days').format('dddd, MMMM Do YYYY');
+    var projectedDate = moment().add(daysRemaining, 'days');
 
     // add last projected dates to chart
-    chartDataSet.labels.push(projectedDate);
+    chartDataSet.labels.push(projectedDate.format('YYYY-MM-DD'));
     chartDataSet.datasets[0].data.push(0);
     chartDataSet.datasets[1].data.push(100);
 
@@ -51,13 +51,13 @@
     var ctx = document.getElementById("myChart").getContext("2d");
     var myLineChart = new Chart(ctx).Line(chartDataSet, {
       responsive: true,
-      maintainAspectRatio: true,
+      // maintainAspectRatio: true,
       scaleBeginAtZero: true,
       scaleFontColor: "#fff",
       legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
     });
 
-    $('#releasedate').html(projectedDate);
+    $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
     $('#currentPace').html(currentPace + '%');
     $('#resolvedIssuesPercent').html(progressData[progressData.length - 1].percent + '%');
     $('#openIssues').html(progressData[progressData.length - 1].open);
