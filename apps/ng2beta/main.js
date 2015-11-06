@@ -38,21 +38,22 @@
       chartDataSet.datasets[1].data.push(progressData[i].percent || 0);
     }
 
+    var currentPace = calculateAverageCurrentPace(progressData);
+    var daysRemaining = calculateDaysRemaining(progressData);
+    var projectedDate = moment().add(daysRemaining, 'days').format('dddd, MMMM Do YYYY');
+
+    // add last projected dates to chart
+    chartDataSet.labels.push(projectedDate);
+    chartDataSet.datasets[0].data.push(0);
+    chartDataSet.datasets[1].data.push(100);
+
+    // create chart
     var ctx = document.getElementById("myChart").getContext("2d");
     var myLineChart = new Chart(ctx).Line(chartDataSet, {
       scaleBeginAtZero: true,
       scaleFontColor: "#fff",
       legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
     });
-    //then you just need to generate the legend
-    // var legend = myLineChart.generateLegend();
-    // $('#legend').html(legend);
-
-    var currentPace = calculateAverageCurrentPace(progressData);
-    var daysRemaining = calculateDaysRemaining(progressData);
-
-
-    var projectedDate = moment().add(daysRemaining, 'days').format('dddd, MMMM Do YYYY');
 
     $('#releasedate').html(projectedDate);
     $('#currentPace').html(currentPace + '%');
