@@ -272,7 +272,7 @@ Speaker: [PatrickJS](https://twitter.com/gdi2290), [@jeffwhelpley](https://twitt
 
 Angular 2 on the server-side with **angular universal**. Really cool talk with cool live coding demos by [PatrickJS](https://twitter.com/gdi2290).
 
-Nothing more to add, simply check out the [starter project](https://github.com/angular-class/angular2-universal-starter).  
+Nothing more to add, simply check out the [starter project](https://github.com/angular/universal-starter).  
 Oh, and something you definitely wanna watch out for: [http://fullstackangular2.com/](http://fullstackangular2.com/).
 
 ## Routing in Eleven Dimensions with Component Router
