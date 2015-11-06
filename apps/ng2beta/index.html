@@ -49,6 +49,9 @@
             <a href="https://github.com/angular/angular/milestones" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
               Verify by yourself!
             </a>
+            <br/>
+            <canvas id="myChart" width="600" height="300"></canvas>
+            <br/>
           </div>
           <!-- <a href="#screens">
             <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
@@ -78,10 +81,10 @@
     </div>
 
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+<script type="text/javascript" src="./node_modules/chart.js/Chart.min.js"></script>
 <script type="text/javascript" src="./node_modules/moment/min/moment.min.js"></script>
 <script type="text/javascript">
 	'use strict';
-
 	var progressData = [
 		{
 			date: '2015-10-28',
@@ -93,9 +96,32 @@
 		},
 		{
 			date: '2015-11-06',
-			percent: 42
+			percent: 42,
+      open: 68,
+      closed: 51
 		}
 	];
+  var chartDataSet = {
+    labels: ['2015-10-28', '2015-11-05', '2015-11-06'],
+    datasets: [
+      {
+        label: 'Percentage done',
+        fillColor: 'rgba(220,220,220,0.2)',
+        strokeColor: 'rgba(220,220,220,1)',
+        pointColor: 'rgba(220,220,220,1)',
+        pointStrokeColor: '#fff',
+        pointHighlightFill: '#fff',
+        pointHighlightStroke: 'rgba(220,220,220,1)',
+        data: [22,37,42]
+      }
+    ]
+  };
+
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var myLineChart = new Chart(ctx).Line(chartDataSet, {
+    scaleBeginAtZero: true,
+    scaleFontColor: "#fff"
+  });
 
 	var currentPace = calculateAverageCurrentPace();
 	var daysRemaining = calculateDaysRemaining(progressData[progressData.length - 1]);
