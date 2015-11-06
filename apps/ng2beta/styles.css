@@ -23,6 +23,12 @@ a img{
   border: 0px;
 }
 
+.chart-container {
+  height: 300;
+  width:600;
+  margin: 0 auto;
+}
+
 ::-moz-selection {
   background-color: #6ab344;
   color: #fff;
@@ -488,6 +494,11 @@ a img{
     display: none;
   }
 
+  .chart-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
   .android-title {
     display: none !important;
   }
@@ -521,9 +532,9 @@ a img{
     width: 100%;
   }
 
-  .android-be-together-section {
+  /*.android-be-together-section {
     height: 350px;
-  }
+  }*/
 
   .android-slogan {
     font-size: 26px;

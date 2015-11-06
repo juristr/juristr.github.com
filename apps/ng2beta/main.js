@@ -50,6 +50,8 @@
     // create chart
     var ctx = document.getElementById("myChart").getContext("2d");
     var myLineChart = new Chart(ctx).Line(chartDataSet, {
+      responsive: true,
+      maintainAspectRatio: true,
       scaleBeginAtZero: true,
       scaleFontColor: "#fff",
       legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
