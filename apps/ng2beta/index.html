@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Angular 2 Beta Release Burndown">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angular 2 Beta Burndown</title>
+
+  <!-- Page styles -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <!-- <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="https://angular.io/resources/images/logos/standard/logo-nav.png">
+          </span> -->
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="https://angular.io/">Angular 2</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="https://github.com/angular/angular/milestones">GitHub Milestones</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="https://github.com/angular/angular">Angular 2 GitHub</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://juristr.com/blog">My Blog</a>
+            </nav>
+          </div>
+          <!-- <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="https://angular.io/resources/images/logos/standard/logo-nav.png">
+          </span> -->
+        </div>
+      </div>
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+        <div class="android-be-together-section mdl-typography--text-center">
+          <div class="android-be-together-section-hero">
+            <div class="logo-font android-slogan"><h1 id="releasedate">Angular 2 Beta Burndown</h1></div>
+            <div class="logo-font android-sub-slogan">This is the projected release date based on the current pace of <strong><span id="currentPace"></span> per day.</strong></div>
+            <!-- Raised button with ripple -->
+            <br /><br /><br />
+            <a href="https://github.com/angular/angular/milestones" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
+              Verify by yourself!
+            </a>
+          </div>
+          <!-- <a href="#screens">
+            <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+              <i class="material-icons">expand_more</i>
+            </button>
+          </a> -->
+        </div>
+
+        <!-- <div class="android-screen-section mdl-typography--text-center">
+          <a name="screens"></a>
+          <div class="mdl-typography--display-1-color-contrast">Powering screens of all sizes</div>
+
+        </div> -->
+      </div>
+    </div>
+
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+<script type="text/javascript" src="./node_modules/moment/min/moment.min.js"></script>
+<script type="text/javascript">
+	'use strict';
+
+	var progressData = [
+		{
+			date: '2015-10-28',
+			percent: 22
+		},
+		{
+			date: '2015-11-05',
+			percent: 37
+		},
+		{
+			date: '2015-11-06',
+			percent: 42
+		}
+	];
+
+	var currentPace = calculateAverageCurrentPace();
+	var daysRemaining = calculateDaysRemaining(progressData[progressData.length - 1]);
+
+
+	var projectedDate = moment().add('days', daysRemaining).format('dddd, MMMM Do YYYY');
+
+	document.getElementById('releasedate').innerHTML = projectedDate;
+	document.getElementById('currentPace').innerHTML = currentPace + '%';
+
+	function calculateAverageCurrentPace() {
+		var paces = [];
+		var paceTotal = 0;
+		var avgPace = 0;
+
+		for(var i=1; i<=progressData.length-1; i++){
+			var day1 = moment(progressData[i-1].date);
+			var day2 = moment(progressData[i].date);
+
+			var daysDifference = moment.duration(day2.diff(day1)).get('days');
+
+			var percentage = (progressData[i].percent-progressData[i-1].percent)/daysDifference;
+			paces.push(Math.round(percentage));
+			paceTotal += Math.round(percentage);
+		}
+
+		avgPace = paceTotal/paces.length;
+		return avgPace;
+	}
+
+	function calculateDaysRemaining(lastEntry) {
+		var percentageMissing = 100-lastEntry.percent;
+		var avgPacePerDay = calculateAverageCurrentPace();
+
+		return Math.round(percentageMissing/avgPacePerDay);
+	}
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-416229-12', 'juristr.com');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
