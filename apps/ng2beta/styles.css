@@ -490,6 +490,10 @@ a img{
 
 /**** Mobile layout ****/
 @media (max-width: 900px) {
+  .android-header {
+    display: none !important;
+  }
+
   .android-navigation-container {
     display: none;
   }
