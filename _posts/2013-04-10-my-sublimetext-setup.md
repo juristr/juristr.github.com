@@ -13,6 +13,8 @@ I absolutely love this editor. A ridiculously fast editor which has everything y
 
 Actually, I'm a bit late now, as a couple of days ago [Alex MacCaw posted published exactly a similar post](http://blog.alexmaccaw.com/sublime-text) to this one here. So go and check that out as well, it contains a bunch of valuable information.
 
+Before you get started, you may also want to check out the [Unofficial Sublime Docs](http://docs.sublimetext.info/en/latest/intro.html).
+
 ## Sublime Configuration
 
 My Sublime user settings:
@@ -54,7 +56,16 @@ The large font for being able to focus better on a smaller context which I found
 
 I usually leave the tab-size on "4" as that's what my other colleagues are accustomed to have in their IDEs. But note you might want to set it to "2", especially when using CoffeeScript as it is more handy there.
 
-### Sublime User Keybindings
+## Sublime Keybindings you should know
+
+- <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> - execute menu commands
+- <kbd>Ctrl</kbd>+<kbd>p</kbd> - open a file from the sidebar
+- <kbd>Ctrl</kbd>+<kbd>r</kbd> - navigate within the file (functions, markdown sections...)
+- Select word + <kbd>Ctrl</kbd>+<kbd>d</kbd> (multiple times) - find all other matching words. Activates multiple cursors s.t. you can then start editing simultaneously.
+
+### Custom User Keybindings
+
+Some of my custom user bindings..
 
 ```
 [
@@ -65,7 +76,7 @@ I usually leave the tab-size on "4" as that's what my other colleagues are accus
 
 ### Access from the Shell
 
-In order to use sublime productively, one of the first steps is to make it accessible from your shell.
+In order to use sublime Droductively, one of the first steps is to make it accessible from your shell.
 
 **On OSX**, the best way (as already Alex mentions in his post) is to create a symlink to your Sublime installation directory like
 
