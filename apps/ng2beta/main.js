@@ -51,7 +51,7 @@
     var ctx = document.getElementById("myChart").getContext("2d");
     var myLineChart = new Chart(ctx).Line(chartDataSet, {
       responsive: true,
-      bezierCurve : true,
+      bezierCurve : false,
       bezierCurveTension : 0.2,
       // maintainAspectRatio: true,
       scaleBeginAtZero: true,
