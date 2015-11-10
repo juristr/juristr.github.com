@@ -15,3 +15,17 @@ Nothing special as of now:
 This app/page is directly integrated into my [Jekyll](https://jekyllrb.com/) powered blog post that gets
 deployed by GitHub Pages. Meaning, the source is committed to master on this repo
 and GitHub Pages will compile the Jekyll output and deploy it.
+
+## Run it locally
+
+Currently the best way is to install `http-server`
+
+```
+$ npm install http-server -g
+```
+
+and then execute it within this directory, like
+
+```
+$ http-server -p 1234
+```
