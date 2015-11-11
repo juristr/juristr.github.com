@@ -6,9 +6,7 @@ Frontend code for: [Angular 2 Beta Release Projection](http://juristr.com/apps/n
 
 ## How does it work
 
-Nothing special as of now:
-
-- jQuery mess in `main.js`
+- Made with [Angular 2](https://angular.io)! ... of course ;)
 - index.html containing the copy&paste + adjustments of [ANDROID.COM MDL SKIN](http://www.getmdl.io/templates/android-dot-com/index.html).
 - `data.json` gets automatically committed by [this guy](https://github.com/juristr/github-milestone-burndown) once changes on the Angular milestone/issues are detected. 
 
@@ -18,14 +16,16 @@ and GitHub Pages will compile the Jekyll output and deploy it.
 
 ## Run it locally
 
-Currently the best way is to install `http-server`
+```
+npm install
+gulp play
+```
 
-```
-$ npm install http-server -g
-```
+**Note**: ignore Typescript warnings when you run it. This was converted on the quick and didn't have time to get the .d.ts files all straight.
 
-and then execute it within this directory, like
+Project setup based on [ng2-play](https://github.com/pkozlowski-opensource/ng2-play)
 
-```
-$ http-server -p 1234
-```
+Converted to Angular 2 by [Nathan Walker](https://github.com/NathanWalker)
+
+[<img alt="NathanWalker" src="https://avatars.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker)
+
