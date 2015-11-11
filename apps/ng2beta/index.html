@@ -55,32 +55,7 @@
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div class="android-be-together-section mdl-typography--text-center">
-          <div class="android-be-together-section-hero">
-            <div class="logo-font android-slogan">
-              <h3>Angular 2 Beta Release Projection</h3>
-              <h1 id="releasedate"></h1>
-            </div>
-            <div class="logo-font android-sub-slogan">
-              This is the projected release date based on the current pace of <strong><span id="currentPace"></span> of the issues being resolved per day.</strong>
-              <br/>
-            </div>
-            <br />
-            <div>
-              Currently, <strong><span id="resolvedIssuesPercent"></span></strong> of the issues have been resolved with another <strong><span id="openIssues"></span></strong> open issues.<br/>(last update: <span id="lastupdate"></span>)
-            </div>
-            <div class="chart-container mdl-typography--text-center">
-              <canvas id="myChart"></canvas>
-            </div>
-            <br /><br />
-            <a href="https://github.com/angular/angular/milestones" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
-              Verify milestone progress
-            </a>
-            <a href="https://github.com/angular/angular/labels/hotlist%3A%20community-help" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #fff; color: #000">
-              Help the Angular team!
-            </a>
-            <br/>
-            <br/>
-          </div>
+          <ng2beta>Loading...</ng2beta>
         </div>
 
         <div class="mdl-typography--text-center" style="padding:15px">
@@ -100,12 +75,34 @@
         </div>
       </div>
     </div>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+<script src="/node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="/node_modules/systemjs/dist/system.src.js"></script>
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-<script type="text/javascript" src="./node_modules/chart.js/Chart.min.js"></script>
-<script type="text/javascript" src="./node_modules/moment/min/moment.min.js"></script>
-<script type="text/javascript" src="./main.js"></script>
+<script src="/node_modules/moment/min/moment.min.js"></script>
+<script src="/node_modules/chart.js/Chart.min.js"></script>
+<script src="/node_modules/angular2/bundles/angular2.min.js"></script>
+<script src="/node_modules/angular2/bundles/http.min.js"></script>
+
+<script>
+    //configure system loader
+    System.config({
+        defaultJSExtensions: true,
+        packages: {
+          "/angular2": {"defaultExtension": false},
+          "/@reactivex": {"defaultExtension": false}
+        },
+        map: {
+          "angular2-moment": "node_modules/angular2-moment/TimeAgoPipe",
+          "moment": "node_modules/moment/min/moment.min"
+        }
+    });
+</script>
+
+<script>
+    //bootstrap the Angular2 application
+    System.import('dist/ng2beta').catch(console.log.bind(console));
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
