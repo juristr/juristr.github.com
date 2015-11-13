@@ -5,7 +5,7 @@ lead: "A summary from a post on Thoughtworks blog"
 category: 
 reposts: ["https://dzone.com/articles/rest-api-design-resource-modeling-1"]
 tags: ["Software Architecture"]
-reposts: [https://dzone.com/articles/rest-api-design-resource-modeling-1?edition=101051]
+reposts: ["https://dzone.com/articles/rest-api-design-resource-modeling-1?edition=101051"]
 ---
 
 Important note: **this is not something I've written up by myself**, but it's rather a summary, some highlighting of the most important quotes with some of my comments for an awesome post on the Thoughtworks blog about API design. Their vision quite accurately reflects what I've been doing lately although I did never think about all the concepts in such detail. Moreover I think this could be interesting to you as well. Hence, read on to get more :wink:.  
