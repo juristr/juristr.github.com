@@ -23,9 +23,20 @@ gulp play
 
 **Note**: ignore Typescript warnings when you run it. This was converted on the quick and didn't have time to get the .d.ts files all straight.
 
+## Credits
+
 Project setup based on [ng2-play](https://github.com/pkozlowski-opensource/ng2-play)
 
-Converted to Angular 2 by [Nathan Walker](https://github.com/NathanWalker)
-
-[<img alt="NathanWalker" src="https://avatars.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker)
+<table>
+	<tr valign="top">
+		<td>
+			[<img alt="NathanWalker" src="https://avatars.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker)
+		</td>
+		<td>
+			Special thanks to [Nathan Walker](https://github.com/NathanWalker) for converting the original implementation
+to Angular 2 :clap:		
+		</td>
+	</tr>
+</table>
+  
 
