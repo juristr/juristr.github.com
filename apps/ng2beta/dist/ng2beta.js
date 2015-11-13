@@ -1,0 +1,64 @@
+System.register(['angular2/angular2', 'angular2/http', './services/ng2-progress.service', './directives/chart.directive', './components/open-issues.component', './components/resolved-issues.component', './components/current-pace.component', './components/release-date.component', './components/last-update.component'], function(exports_1) {
+    var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
+        switch (arguments.length) {
+            case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
+            case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
+            case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
+        }
+    };
+    var __metadata = (this && this.__metadata) || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+    };
+    var angular2_1, http_1, ng2_progress_service_1, chart_directive_1, open_issues_component_1, resolved_issues_component_1, current_pace_component_1, release_date_component_1, last_update_component_1;
+    var Ng2Beta;
+    return {
+        setters:[
+            function (angular2_1_1) {
+                angular2_1 = angular2_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
+            },
+            function (ng2_progress_service_1_1) {
+                ng2_progress_service_1 = ng2_progress_service_1_1;
+            },
+            function (chart_directive_1_1) {
+                chart_directive_1 = chart_directive_1_1;
+            },
+            function (open_issues_component_1_1) {
+                open_issues_component_1 = open_issues_component_1_1;
+            },
+            function (resolved_issues_component_1_1) {
+                resolved_issues_component_1 = resolved_issues_component_1_1;
+            },
+            function (current_pace_component_1_1) {
+                current_pace_component_1 = current_pace_component_1_1;
+            },
+            function (release_date_component_1_1) {
+                release_date_component_1 = release_date_component_1_1;
+            },
+            function (last_update_component_1_1) {
+                last_update_component_1 = last_update_component_1_1;
+            }],
+        execute: function() {
+            Ng2Beta = (function () {
+                function Ng2Beta(ng2Progress) {
+                    this.ng2Progress = ng2Progress;
+                }
+                Ng2Beta = __decorate([
+                    angular2_1.Component({
+                        selector: 'ng2beta',
+                        template: "\n      <div class=\"android-be-together-section-hero\">\n        <div class=\"logo-font android-slogan\">\n          <h3>Angular 2 Beta Release Projection</h3>\n          <h1 [release-date]=\"ng2Progress.data\"></h1>\n        </div>\n        <div class=\"logo-font android-sub-slogan\">\n          This is the projected release date based on the current pace of <strong><span [current-pace]=\"ng2Progress.data\">{{value}}</span> of the issues being resolved per day.</strong>\n          <br/>\n        </div>\n        <br />\n        <div>\n          Currently, <strong><span [resolved-issues]=\"ng2Progress.data\"></span></strong> of the issues have been resolved with another <strong><span [open-issues]=\"ng2Progress.data\">{{value}}</span></strong> open issues.<br/>(last update: <span [last-update]=\"ng2Progress.data\"></span>)\n        </div>\n        <div class=\"chart-container mdl-typography--text-center\">\n          <canvas id=\"mychart\" [chart]=\"ng2Progress.data\"></canvas>\n        </div>\n        <br /><br />\n        <a href=\"https://github.com/angular/angular/milestones\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" style=\"background-color: #ff9800; color: #fff\">\n          Verify milestone progress\n        </a>\n        <a href=\"https://github.com/angular/angular/labels/hotlist%3A%20community-help\" class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\" style=\"background-color: #fff; color: #000\">\n          Help the Angular team!\n        </a>\n        <br/>\n        <br/>\n      </div>\n    ",
+                        directives: [angular2_1.CORE_DIRECTIVES, chart_directive_1.Chart, open_issues_component_1.OpenIssuesCmp, resolved_issues_component_1.ResolvedIssuesCmp, current_pace_component_1.CurrentPaceCmp, release_date_component_1.ReleaseDateCmp, last_update_component_1.LastUpdateCmp]
+                    }), 
+                    __metadata('design:paramtypes', [ng2_progress_service_1.Ng2Progress])
+                ], Ng2Beta);
+                return Ng2Beta;
+            })();
+            exports_1("Ng2Beta", Ng2Beta);
+            // Instantiate TranslateService in the bootstrap so that we can keep it as a singleton
+            angular2_1.bootstrap(Ng2Beta, [http_1.HTTP_PROVIDERS, ng2_progress_service_1.Ng2Progress]);
+        }
+    }
+});
