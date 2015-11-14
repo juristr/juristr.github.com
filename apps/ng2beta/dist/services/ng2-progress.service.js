@@ -32,6 +32,15 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                         var progressData = _this.data.milestonedata;
                         var daysRemaining = _this.calculateDaysRemaining(progressData);
                         _this.projectedDate = moment().add(daysRemaining, 'days');
+                        var startIdx = _this.data.milestonedata.length - 5;
+                        var newOpenSum = 0;
+                        var newClosedSum = 0;
+                        for (var i = startIdx; i < _this.data.milestonedata.length; i++) {
+                            newOpenSum += _this.data.milestonedata[i].newOpen;
+                            newClosedSum += _this.data.milestonedata[i].newClosed;
+                        }
+                        _this.newOpenAvg = Math.round((newOpenSum / (_this.data.milestonedata.length - startIdx)));
+                        _this.newClosedAvg = Math.round((newClosedSum / (_this.data.milestonedata.length - startIdx)));
                         // $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
                         // $('#currentPace').html(currentPace + '%');
                         // $('#resolvedIssuesPercent').html(progressData[progressData.length - 1].percent + '%');
@@ -62,7 +71,7 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                         paceTotal += Math.round(percentage);
                     }
                     avgPace = paceTotal / paces.length;
-                    return avgPace;
+                    return Math.round(avgPace);
                 };
                 Ng2Progress.prototype.calculateDaysRemaining = function (progressData) {
                     var percentageMissing = 100 - progressData[progressData.length - 1].percent;

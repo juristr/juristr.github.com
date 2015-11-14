@@ -22,7 +22,12 @@ import {LastUpdateCmp} from './components/last-update.component';
         </div>
         <br />
         <div>
-          Currently, <strong><span [resolved-issues]="ng2Progress.data"></span></strong> of the issues have been resolved with another <strong><span [open-issues]="ng2Progress.data">{{value}}</span></strong> open issues.<br/>(last update: <span [last-update]="ng2Progress.data"></span>)
+          Currently, <strong><span [resolved-issues]="ng2Progress.data"></span></strong> of the issues have been resolved with another 
+          <strong><span [open-issues]="ng2Progress.data">{{value}}</span></strong> open issues.<br/>
+          In the last 5 days, on average per day {{ng2Progress.newOpenAvg}} new issues have been assigned and {{ng2Progress.newClosedAvg}} have been closed/removed from the milestone
+          target.
+          <br/>
+          (last update: <span [last-update]="ng2Progress.data"></span>)
         </div>
         <div class="chart-container mdl-typography--text-center">
           <canvas id="mychart" [chart]="ng2Progress.data"></canvas>

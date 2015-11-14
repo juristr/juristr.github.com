@@ -1,10 +1,29 @@
 import {Injectable, ElementRef} from 'angular2/angular2';
 import {Http} from 'angular2/http';
 
+interface MilestoneResponse {
+  date: string,
+  milestonedata: MilestoneDayStat[]
+}
+
+interface MilestoneDayStat {
+  date: string,
+  open: number,
+  closed: number,
+  percent: number,
+  pace: number,
+  newOpen: number,
+  newClosed: number
+}
+
 @Injectable()
 export class Ng2Progress {
-  public data:any;
-  public projectedDate:any;
+
+  public data: MilestoneResponse;
+  public projectedDate: any;
+  public newOpenAvg: number;
+  public newClosedAvg: number;
+
   constructor(public http: Http) {
     this.http.get('./data.json')
       .map(res => res.json())
@@ -13,27 +32,36 @@ export class Ng2Progress {
         let progressData = this.data.milestonedata;
         let daysRemaining = this.calculateDaysRemaining(progressData);
         this.projectedDate = moment().add(daysRemaining, 'days');
+
+        let startIdx = this.data.milestonedata.length - 5;
+        let newOpenSum: number = 0;
+        let newClosedSum: number = 0;
+        for (let i = startIdx; i < this.data.milestonedata.length; i++) {
+          newOpenSum += this.data.milestonedata[i].newOpen;
+          newClosedSum += this.data.milestonedata[i].newClosed;
+        }
         
-      
-    
+        this.newOpenAvg = Math.round((newOpenSum / (this.data.milestonedata.length - startIdx)));
+        this.newClosedAvg = Math.round((newClosedSum / (this.data.milestonedata.length - startIdx)));
+        
         // $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
         // $('#currentPace').html(currentPace + '%');
         // $('#resolvedIssuesPercent').html(progressData[progressData.length - 1].percent + '%');
         // $('#openIssues').html(progressData[progressData.length - 1].open);
-      });   
+      });
   }
-  generateChart(el: ElementRef, chartDataSet:any):void {
+  generateChart(el: ElementRef, chartDataSet: any): void {
     new Chart(el.nativeElement.getContext("2d")).Line(chartDataSet, {
       responsive: true,
-      bezierCurve : false,
-      bezierCurveTension : 0.2,
+      bezierCurve: false,
+      bezierCurveTension: 0.2,
       // maintainAspectRatio: true,
       scaleBeginAtZero: true,
       scaleFontColor: "#fff",
-      legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+      legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
     });
   }
-  calculateAverageCurrentPace(progressData):number {
+  calculateAverageCurrentPace(progressData): number {
     var paces = [];
     var paceTotal = 0;
     var avgPace = 0;
@@ -50,9 +78,9 @@ export class Ng2Progress {
     }
 
     avgPace = paceTotal / paces.length;
-    return avgPace;
-  }   
-  calculateDaysRemaining(progressData):number {
+    return Math.round(avgPace);
+  }
+  calculateDaysRemaining(progressData): number {
     var percentageMissing = 100 - progressData[progressData.length - 1].percent;
     var avgPacePerDay = this.calculateAverageCurrentPace(progressData);
 
