@@ -1,6 +1,7 @@
 ---
 layout: articles-post
 title: "Preparing for Angular 2"
+lastupdated: '2015-11-16'
 subtitle: "get ready!"
 lead: "Collection of best practices to be ready for Angular 2"
 show_img_in_detail: true
@@ -140,7 +141,7 @@ There's a nice article on Thoughtram about that. Follow the link below.
 
 - [Exploring Angular 1.3: Binding to Directive Controllers](http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html)
 
-## Prefer Components over Controllers
+## Get rid of ng-controller; Write Directives
 
 Angular 2 follows the current trend of web components. Thus, it won't have autonomous controllers any more, but just in conjunction with so-called **components**. An Angular 2 app is a tree of nested components, with a top-level component being the app.
 
@@ -183,6 +184,39 @@ function peopleListDirective(){
     }
 }
 ```
+
+## Start writing Components
+
+Start **writing components**:
+
+- `restrict: 'E'` - restrict to elements as they will be a lot more common in Angular 2. (there are attribute directives as well, though)
+- `bindToController: {}` - makes it a lot easier to use the controllerAs syntax ([Thoughtram article](http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html))
+- `controllerAs` - well...see the sections before about why
+
+Here's an example.
+
+```javascript
+function myAngular1ComponentDirective() {
+  return {
+    restrict: 'E',
+    scope: {},
+    bindToController: {
+      user: '='
+    },
+    controller: function() {},
+    controllerAs: 'vm',
+    template: [
+      '<p>',
+        'Hi, {{ vm.user.name }}!',
+      '</p>'
+    ].join(' ')
+  }
+}
+```
+
+Try it [yourself](http://plnkr.co/edit/PBKTITr4Hl7daSvlLicM?p=info).
+
+> **Note**, Angular v1.5 will introduce `.component()` which are even more similar to Angular 2 components. See [Todd Motto's article on that](http://toddmotto.com/exploring-the-angular-1-5-component-method/).
 
 ## Use Observables instead of $watch
 
