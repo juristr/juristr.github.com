@@ -207,7 +207,7 @@ What would have to happen is the following:
 1. Travis pushes back to master with the new dist files
 1. (that would trigger another Travis build?..)
 
-It's a mess. Mostly I don't like the idea of having an automated machine push to master. Kent C. Dodds [had the same issue](https://github.com/semantic-release/semantic-release/issues/75) and decided to solve and automate it: [publish-release](https://www.npmjs.com/package/publish-release)
+It's a mess. Mostly I don't like the idea of having an automated machine push to master. Kent C. Dodds [had the same issue](https://github.com/semantic-release/semantic-release/issues/75) and decided to solve and automate it: [publish-latest](https://www.npmjs.com/package/publish-latest)
 
 Install the library and add it as `postpublish` task in the `package.json` file:
 
