@@ -199,3 +199,7 @@ var responseStream = requestStream
 
 In this way multiple subscribers will share the same inner subscription. The "replay" is because late subscribers, i.e. coming seconds later, won't do another request, but will get the events replayed.
 
+## Links
+
+- [http://rxmarbles.com/](http://rxmarbles.com/)
+
