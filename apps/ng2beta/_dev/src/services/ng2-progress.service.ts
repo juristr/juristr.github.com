@@ -61,7 +61,7 @@ export class Ng2Progress {
       legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
     });
   }
-  calculateAverageCurrentPace(progressData): number {
+  calculateAverageCurrentPace(progressData: MilestoneDayStat[]): number {
     var paces = [];
     var paceTotal = 0;
     var avgPace = 0;
@@ -80,7 +80,7 @@ export class Ng2Progress {
     avgPace = paceTotal / paces.length;
     return Math.round(avgPace);
   }
-  calculateDaysRemaining(progressData): number {
+  calculateDaysRemaining(progressData: MilestoneDayStat[]): number {
     var percentageMissing = 100 - progressData[progressData.length - 1].percent;
     var avgPacePerDay = this.calculateAverageCurrentPace(progressData);
 
