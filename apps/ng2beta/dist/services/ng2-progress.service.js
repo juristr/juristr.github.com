@@ -62,7 +62,8 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                     var paces = [];
                     var paceTotal = 0;
                     var avgPace = 0;
-                    for (var i = 1; i <= progressData.length - 1; i++) {
+                    var startIdx = this.data.milestonedata.length - 7;
+                    for (var i = startIdx + 1; i <= progressData.length - 1; i++) {
                         var day1 = moment(progressData[i - 1].date);
                         var day2 = moment(progressData[i].date);
                         var daysDifference = moment.duration(day2.diff(day1)).get('days');
