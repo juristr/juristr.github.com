@@ -65,8 +65,11 @@ export class Ng2Progress {
     var paces = [];
     var paceTotal = 0;
     var avgPace = 0;
+    
+    let startIdx = this.data.milestonedata.length - 7;
+    
 
-    for (var i = 1; i <= progressData.length - 1; i++) {
+    for (var i = startIdx + 1; i <= progressData.length - 1; i++) {
       var day1 = moment(progressData[i - 1].date);
       var day2 = moment(progressData[i].date);
 
