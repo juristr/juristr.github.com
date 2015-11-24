@@ -6,7 +6,8 @@ current: blog
     <h1 class="article-title">{{ page.title }}</h1>
     <h2 class="article-subtitle">{{ page.lead }}</h2>
     <div class="article-body">
-        <p class="article-intro">
+        {{ content }}
+        <!-- <p class="article-intro">
             I’ve noticed how seemingly small things like font and the spacing between letters can impact how I feel when reading online.
         </p>
         <h2>2. Pick a font size bigger than 12pt</h2>
@@ -77,12 +78,12 @@ current: blog
 
         <p>
             Many designers mention that 16px font is the new 12px font. A recent study has also shown that larger font sizes can elicit a stronger emotional connection.
-        </p>
+        </p> -->
     </div>
     <div class="article-footer">
         <div class="article-sharing">
             <div id="disqus">
-                <a href="#disqus_thread" class="comments-button js-load-comments"></a>
+                <a href="{{ page.url }}#disqus_thread" class="comments-button js-load-comments"></a>
             </div>
             <script src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=juri.strumpflohner@gmail.com"
             data-button="donate"
@@ -148,7 +149,7 @@ google_ad_client = "ca-pub-9669473064376287";
 -->
 </div>
 <script type="text/javascript" src="/assets/js/new/disqus.js"></script>
-<script type="text/javascript" src="/assets/js/new/navbar.js"></script>
+<script id="dsq-count-scr" src="//juristr.disqus.com/count.js" async></script>
 <script type="text/javascript">
     $(function(){
       $('.js-load-comments').click(window.Site.Disqus.loadDisqus);

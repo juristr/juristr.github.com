@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Introduction to Reactive Programming"
 lead: "Getting started with reactive programming"
 show_img_in_detail: true
@@ -199,7 +199,11 @@ var responseStream = requestStream
 
 In this way multiple subscribers will share the same inner subscription. The "replay" is because late subscribers, i.e. coming seconds later, won't do another request, but will get the events replayed.
 
+## Error Handling
+
+
 ## Links
 
 - [http://rxmarbles.com/](http://rxmarbles.com/)
+- [RxJS online book](http://xgrommx.github.io/rx-book/WhyRx.html)
 
