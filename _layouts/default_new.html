@@ -1,157 +1,106 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ page.title }}</title>
+  <title>{{ page.title }}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  <meta itemprop="description" content="{{ page.description }}">
+  {% else %}
+  <meta itemprop="description" content="A resource for web developers.">
+  <meta name="description" content="A resource for web developers.">
+  {% endif %}
+  <meta name="author" content="{{ site.author.name }}">
+  <link rel="me" href="https://profiles.google.com/104904743888756261987" />
+  <link rel="publisher" href='https://plus.google.com/104904743888756261987'/>
+  <meta property="twitter:account_id" content="14407063" />
 
-    {% if page.description %}
-      <meta name="description" content="{{ page.description }}">
-      <meta itemprop="description" content="{{ page.description }}">
-    {% else %}
-      <meta itemprop="description" content="A resource for web developers.">
-      <meta name="description" content="A resource for web developers.">
-    {% endif %}
+  <meta content='Juri&quot;s website.' name='description'/>
+  <meta name="keywords" content="html5,html 5,javascript,.net,c#,microsoft,java,android,software architecture,testing,programming">
+  <meta itemprop="name" content=" - Juri Strumpflohner">
+  <meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
 
-
-    <meta name="author" content="{{ site.author.name }}">
-    <link rel="me" href="https://profiles.google.com/104904743888756261987" />
-    <link rel="publisher" href='https://plus.google.com/104904743888756261987'/>
-    <meta property="twitter:account_id" content="14407063" />
-
-    <meta content='Juri&quot;s website.' name='description'/>
-    <meta name="keywords" content="html5,html 5,javascript,.net,c#,microsoft,java,android,software architecture,testing,programming">
-    <meta itemprop="name" content=" - Juri Strumpflohner">
-    <meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
-
-    <!-- Twitter cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@juristr" />
-    <meta name="twitter:title" content="{{ page.title }}" />
-    {% if page.description %}
-      <meta name="twitter:description" content="{{ page.description }}" />
-    {% else %}
-      <meta name="twitter:description" content="{{ page.lead }}" />
-    {% endif %}
+  <!-- Twitter cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@juristr" />
+  <meta name="twitter:title" content="{{ page.title }}" />
+  {% if page.description %}
+  <meta name="twitter:description" content="{{ page.description }}" />
+  {% else %}
+  <meta name="twitter:description" content="{{ page.lead }}" />
+  {% endif %}
     {% if page.postimg != nil %}
-      <meta name="twitter:image:src" content="http://juristr.com{{ page.postimg }}" />
-    {% endif %}
+  <meta name="twitter:image:src" content="http://juristr.com{{ page.postimg }}" />
+  {% endif %}
+  <link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="http://feeds.feedburner.com/juristrumpflohner">
 
-    <link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="http://feeds.feedburner.com/juristrumpflohner">
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <link rel="shortcut icon" href="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=16&d=favicon&r=PG">
 
+  <!-- custom styles -->
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Lora:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=16&d=favicon&r=PG">
+  <!-- GitHub highlighting -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/github.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 
+  <link rel="stylesheet" href="/assets/kudos/kudos.min.css">
 
-    <!-- custom styles -->
-    <link href="/assets/css/post.css?body=1" rel="stylesheet" type="text/css" media="all">
-  </head>
+  <link rel="stylesheet" href="/assets/css/new/article.css" type="text/css" media="all">
 
-  <body class="article tutorial">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
 
-    <div class="metabar">
-      <div class="metabar-block pull-right">
-        <div class="metabar-text">
-          <a href="http://twitter.com/juristr" class="btn btn-default btn-transparent js-social-links" style="font-size:15px"><i class="fa fa-twitter"></i></a>
-          <a href="http://feeds.feedburner.com/juristrumpflohner" class="btn btn-default btn-transparent js-rss-btn" style="color:#b3b3b1">
-            <i class="fa fa-rss"></i> Blog
-          </a>
-          <a href="http://feeds.feedburner.com/juristr/links" class="btn btn-default btn-transparent js-rss-btn" style="color:#b3b3b1">
-            <i class="fa fa-rss"></i> Links
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="nav-button js-menu-button">
-      <a id="sidebar-button" href="#sidr"><i class="fa fa-bars"></i></a>
-    </div>
-
-    <div id="sidr" style="display:none">
-      <p class="profile">
+<body>
+  <div class="metabar">
+    <div class="metabar-block" style="float:left">
+      <a href="#" class="menu-button"> <i class="fa fa-bars"></i>
+      </a>
+      <span class="meta">
+        <a href="/about">
+          <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" itemprop="photo" alt="Juri Strumpflohner" title="Juri Strumpflohner">
+          <span>Juri Strumpflohner</span>
+        </a>
         <span>
-          <a href="/">
-            <img class="img-circle col-lg-12 col-sm-12" src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"/>
-          </a>
+          on
+          <time class="post-date">Dec 12, 2013</time>
         </span>
-        <span class="bio">
-          Coding architect, JavaScript, .Net, Android Developer, Blogger, DZone MVB, Martial Arts Practitioner.
-        </span>
-        <span class="social-icons">
-          {% include social_icons %}
-        </span>
-      </p>
-      <ul class="site-nav">
-        <li>
-          <a href="/blog">
-            <i class="glyphicon glyphicon-home"></i> Blog Home
-          </a>
-        </li>
-        <li>
-          <a href="/blog/tags">
-            <i class="fa fa-tags"></i> Tags
-          </a>
-        </li>
-        <li>
-          <a href="/blog/links">
-            <i class="fa fa-link"></i> Links
-          </a>
-        </li>
-        <li>
-          <a href="/blog/archive">
-            <i class="fa fa-archive"></i> Blog Archive
-          </a>
-        </li>
-        <li>
-          <a href="/works">
-            <i class="fa fa-picture-o"></i> My Works
-          </a>
-        </li>
-        <li>
-          <a href="/about">
-            <i class="glyphicon glyphicon-user"></i> About me
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/juristr/ama">
-            <i class="icon-comment"></i> Ask me anything
-          </a>
-        </li>
-        <li>
-          <a href="http://feeds.feedburner.com/juristrumpflohner">
-            <i class="fa fa-rss"></i> Subscribe
-          </a>
-        </li>
-      </ul>
-
+      </span>
     </div>
-
-
-    <div class="js-click-region">
-      {{ content }}
+    <div class="metabar-block" style="float:right">
+      <span class="reading-count">200 words - 15 min</span>
+      <span class="subscription">
+        <a href="#"> <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-rss"></i>
+        </a>
+      </span>
     </div>
-
-    <script src="/assets/sidr/jquery.sidr.min.js"></script>
-    <script>
-      $("pre").each(function(){
-        var el = $(this);
-        if(el.hasClass("nohighlight") === false){
-          el.addClass("prettyprint");
-          //el.addClass("linenums");
-        }
-      });
+  </div>
+  {{ content }}
+  <script src="/assets/js/new/countable.min.js"></script>
+  <script>
+      // $("pre").each(function(){
+      //   var el = $(this);
+      //   if(el.hasClass("nohighlight") === false){
+      //     el.addClass("prettyprint");
+      //     //el.addClass("linenums");
+      //   }
+      // });
 
       $(function(){
 
-        $('figure.kudo').kudoable({
-            dataStore: window.firebaseStorage
-        });
+        // $('figure.kudo').kudoable({
+        //     dataStore: window.firebaseStorage
+        // });
 
         (function(){
           Countable.once($('.article-body')[0], function (counter) {
@@ -168,35 +117,35 @@
             var effectiveTime = counter.words + " words - " + ((minutes < 1) ? "a couple of secs" : minutes + " min read");
 
             $('.reading-time').html(effectiveTime);
-            $('.reading-time').tooltip({ title: "Based on an avg reading speed of " + wpm + " wpm (words per minute)"});
+          //   $('.reading-time').tooltip({ title: "Based on an avg reading speed of " + wpm + " wpm (words per minute)"});
           });
         })();
 
-        $('#sidebar-button').sidr();
+        // $('#sidebar-button').sidr();
 
-        $('#sidebar-button').tooltip({
-          title: "Click me",
-          placement: 'right'
-        });
+        // $('#sidebar-button').tooltip({
+        //   title: "Click me",
+        //   placement: 'right'
+        // });
 
-        $('.js-tooltip').tooltip();
+        // $('.js-tooltip').tooltip();
 
-        $('.js-click-region').click(function(){
-          $('.toc').fadeIn();
-          $.sidr('close');
-        });
+        // $('.js-click-region').click(function(){
+        //   $('.toc').fadeIn();
+        //   $.sidr('close');
+        // });
 
-        $('#sidebar-button').click(function(){
-          if($('.toc').is(':visible') === true){
-            $('.toc').fadeOut();
-          }else{
-            $('.toc').fadeIn();
-          }
+        // $('#sidebar-button').click(function(){
+        //   if($('.toc').is(':visible') === true){
+        //     $('.toc').fadeOut();
+        //   }else{
+        //     $('.toc').fadeIn();
+        //   }
 
-          try {
-            ga('send', 'event', 'button', 'click', 'menu-button');
-          } catch(err){}
-        });
+        //   try {
+        //     ga('send', 'event', 'button', 'click', 'menu-button');
+        //   } catch(err){}
+        // });
 
         $('.js-rss-btn').click(function(){
           try {
@@ -241,18 +190,20 @@
           });
         } catch(err){}
       }
+
       // Open external links (also that don't have a target defined) in a new tab.
       var externLinks = document.querySelectorAll('article.tutorial a[href^="http"]:not([target])');
+
       for(var i = 0, a; a = externLinks[i]; ++i) {
         a.target = '_blank';
         a.addEventListener('click', new Function('outgoing(' + '"' + a.href.replace(/.*?:\/\//g, "") + '"' + ');'));
       }
 
-      prettyPrint();
+      // prettyPrint();
     </script>
 
-    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-    <script type="text/javascript">
+  <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+  <script type="text/javascript">
         window.cookieconsent_options = {
           "message":"This website uses cookies to ensure you get the best experience on our website",
           "dismiss":"Got it!",
@@ -261,8 +212,8 @@
           "theme":"dark-bottom"
         };
     </script>
-    <script src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
-    <!-- End Cookie Consent plugin -->
+  <script src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
+  <!-- End Cookie Consent plugin -->
 
-  </body>
+</body>
 </html>

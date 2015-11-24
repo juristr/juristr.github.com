@@ -4,9 +4,7 @@ current: blog
 ---
 <article>
     <h1 class="article-title">{{ page.title }}</h1>
-    <h2 class="article-subtitle">
-        {{ page.lead }}
-    </h2>
+    <h2 class="article-subtitle">{{ page.lead }}</h2>
     <div class="article-body">
         <p class="article-intro">
             I’ve noticed how seemingly small things like font and the spacing between letters can impact how I feel when reading online.
@@ -136,19 +134,43 @@ current: blog
     <div id="disqus_thread"></div>
 </div>
 </article>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="./js/disqus.js"></script>
-<script type="text/javascript" src="./js/navbar.js"></script>
+<div class="fixed-container">
+    <figure class="kudo"></figure>
+<!--
+  <script type="text/javascript">
+google_ad_client = "ca-pub-9669473064376287";
+    google_ad_slot = "9621561285";
+    google_ad_width = 125;
+    google_ad_height = 125;
+</script>
+<script type="text/javascript"
+    src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+-->
+</div>
+<script type="text/javascript" src="/assets/js/new/disqus.js"></script>
+<script type="text/javascript" src="/assets/js/new/navbar.js"></script>
 <script type="text/javascript">
     $(function(){
       $('.js-load-comments').click(window.Site.Disqus.loadDisqus);
 
       $('button.paypal-button').html('Useful? Buy me a coffee!');
     });
-  </script>
+</script>
 <noscript>
 Please enable JavaScript to view the
 <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
 </noscript>
+
+<!-- Kudos script -->
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.1.2/firebase.js'></script>
+<script type="text/javascript" src="/assets/kudos/kudos.min.js"></script>
+<script type="text/javascript" src="/assets/kudos/kudos.firebase.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('figure.kudo').kudoable({
+        dataStore: window.firebaseStorage
+    });
+  });
+</script>
 
 <script>hljs.initHighlightingOnLoad();</script>

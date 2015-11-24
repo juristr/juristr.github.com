@@ -101,11 +101,12 @@ module.exports = function (grunt) {
         mangle: true
       },
       dist: {
-        files: {
-          'dist/scripts.js': [
-            'src/js/{,*/}*.js'
-          ]
-        }
+        files: [{
+          expand: true,
+          cwd: 'src/js',
+          src:'**/*.js',
+          dest: '../assets/js/new'
+        }]
       }
     },
 
@@ -156,7 +157,8 @@ module.exports = function (grunt) {
     compass: {
       options: {
         sassDir: './src/styles',
-        cssDir: './src/.tmp/styles',
+        //cssDir: './src/.tmp/styles',
+        cssDir: '../assets/css/new',
         generatedImagesDir: './src/.tmp/images/generated',
         imagesDir: './src/images',
         javascriptsDir: './src/scripts',
