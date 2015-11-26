@@ -23,6 +23,7 @@ export class Ng2Progress {
   public projectedDate: any;
   public newOpenAvg: number;
   public newClosedAvg: number;
+  public evaluationRange: number = 7;
 
   constructor(public http: Http) {
     this.http.get('./data.json')
@@ -33,7 +34,7 @@ export class Ng2Progress {
         let daysRemaining = this.calculateDaysRemaining(progressData);
         this.projectedDate = moment().add(daysRemaining, 'days');
 
-        let startIdx = this.data.milestonedata.length - 5;
+        let startIdx = this.data.milestonedata.length - this.evaluationRange;
         let newOpenSum: number = 0;
         let newClosedSum: number = 0;
         for (let i = startIdx; i < this.data.milestonedata.length; i++) {
@@ -66,7 +67,7 @@ export class Ng2Progress {
     var paceTotal = 0;
     var avgPace = 0;
     
-    let startIdx = this.data.milestonedata.length - 7;
+    let startIdx = this.data.milestonedata.length - this.evaluationRange;
     
 
     for (var i = startIdx + 1; i <= progressData.length - 1; i++) {

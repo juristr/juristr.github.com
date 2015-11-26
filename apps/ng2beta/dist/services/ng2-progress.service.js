@@ -25,6 +25,7 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                 function Ng2Progress(http) {
                     var _this = this;
                     this.http = http;
+                    this.evaluationRange = 7;
                     this.http.get('./data.json')
                         .map(function (res) { return res.json(); })
                         .subscribe(function (res) {
@@ -32,7 +33,7 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                         var progressData = _this.data.milestonedata;
                         var daysRemaining = _this.calculateDaysRemaining(progressData);
                         _this.projectedDate = moment().add(daysRemaining, 'days');
-                        var startIdx = _this.data.milestonedata.length - 5;
+                        var startIdx = _this.data.milestonedata.length - _this.evaluationRange;
                         var newOpenSum = 0;
                         var newClosedSum = 0;
                         for (var i = startIdx; i < _this.data.milestonedata.length; i++) {
@@ -62,7 +63,7 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                     var paces = [];
                     var paceTotal = 0;
                     var avgPace = 0;
-                    var startIdx = this.data.milestonedata.length - 7;
+                    var startIdx = this.data.milestonedata.length - this.evaluationRange;
                     for (var i = startIdx + 1; i <= progressData.length - 1; i++) {
                         var day1 = moment(progressData[i - 1].date);
                         var day2 = moment(progressData[i].date);

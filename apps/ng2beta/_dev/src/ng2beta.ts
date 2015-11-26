@@ -19,7 +19,7 @@ import {LastUpdateCmp} from './components/last-update.component';
         <div class="logo-font android-sub-slogan">
           This is the projected release date based on the current pace of <strong><span [current-pace]="ng2Progress.data">{{value}}</span> of the issues being resolved per day.</strong>
           <br/>
-          <i>(evaluation range: last 7 days)</i>
+          <i>(evaluation range: last {{ ng2Progress.evaluationRange }} days)</i>
           <br/>
         </div>
         <br />
