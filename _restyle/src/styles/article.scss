@@ -205,10 +205,29 @@ article {
       box-shadow: none;
     }
 
+    img.emoji {
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 6px;
+      border: 0;
+    }
+
+    .video {
+
+      iframe {
+        width: 760px;
+        height: 465px
+      }
+
+    }
+
   }
 
   .article-footer {
     margin: 0 auto;
+    padding-top: 20px;
 
     .article-sharing {
 

@@ -83,11 +83,11 @@ module.exports = function (grunt) {
 
     cssmin: {
       dist: {
-        files: {
-          'dist/styles/main.css': [
-            'src/.tmp/styles/{,*/}*.css'
-          ]
-        }
+        // files: {
+        //   '../assets/css/new': [
+        //     '../assets/css/new/{,*/}*.css'
+        //   ]
+        // }
       }
     },
     uglify: {
