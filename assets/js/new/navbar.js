@@ -1,0 +1,1 @@
+$(function(){var a=$("nav"),b=10,c=0,d=50;$(window).scroll(function(){var e=$(window).scrollTop(),f=e>c?"down":"up",g=Math.abs(e-c);(e>=d||0>=e||e>-1)&&("down"===f&&g>=b?a.slideUp():"up"===f&&g>=b&&a.slideDown()),c=e})});

@@ -2,6 +2,8 @@
 @import "_variables";
 @import "_navbar";
 @import "_fixedcontainer";
+@import "_ads";
+@import "_article-author";
 
 body {
   text-rendering: optimizeLegibility;
@@ -10,12 +12,16 @@ body {
   color: $article-body-color;
 }
 
+.dot-divider::after {
+  content: "·";
+}
+
 article {
   background-color: white;
   padding: 140px 25px 20px 25px;
   margin: 10px auto 0 auto;
   max-width: $article-body-maxwidth;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.5;
   letter-spacing: 0.01rem;
 
@@ -46,11 +52,20 @@ article {
 
   .article-body {
     // font-family: "Source Sans Pro", sans-serif;
-    font-family: 'Lora', serif;
+    font-family: $article-body-font;
     // font-family: 'Karma', serif;
     font-smoothing: antialiased;
     // max-width: 700px;
     margin: 0 auto;
+
+    a {
+      color: $article-body-color;
+      text-decoration: none;
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0) 25%);
+      background-repeat: repeat-x;
+      background-size: 2px 2px;
+      background-position: 0 22px;
+    }
 
     p {
       font-weight: 400;
@@ -67,11 +82,11 @@ article {
 
     ol, ul {
       padding: 0;
-      list-style: none;
-      list-style-image: none;
     }
 
     ol {
+      list-style: none;
+      list-style-image: none;
       counter-reset: post;
       margin-top: 10px;
       margin-bottom: 30px;
@@ -149,6 +164,11 @@ article {
 
     .article-intro {
       font-size: 25px;
+
+      a {
+        background-position: 0 27px;
+      }
+
     }
 
     h4 {
@@ -257,70 +277,9 @@ article {
 
   }
 
-  .author {
+  #disqus_thread {
+    margin-top: 50px;
     border-top: 1px solid rgba(0,0,0,0.15);
-    margin-top: 40px;
-    margin-bottom: 20px;
-
-    display: inline-block;
-    vertical-align: top;
-    padding: 0;
-    color: $lightgray;
-    margin-bottom: 35px;
-    font-weight: 400;
-    font-style: normal;
-    width: 100%;
-
-    .author-image{
-      float:left;
-      padding-top: 20px;
-
-      img {
-        width: 80px;
-        height: 80px;
-        border: 3px solid #FFF;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.4);
-        border-radius: 100%;
-        position: relative;
-        max-width: 100%;
-        box-sizing: border-box;
-        vertical-align:middle;
-      }
-
-    }
-
-    .author-content {
-      padding-left: 100px;
-
-      .author-name {
-        font-size: 18px;
-        color: rgba(0,0,0,0.8);
-        margin-top: 0;
-        margin-bottom: 5px;
-        padding-top: 20px;
-      }
-
-      .author-description {
-        margin-top: 0;
-        font-size: 18px;
-        line-height: 1.3;
-        margin-bottom: 4px;
-      }
-
-      .author-social {
-        margin-top: 0;
-
-        a {
-          text-decoration: none;
-          color: inherit;
-          color: rgba(0,0,0,0.3);
-        }
-
-        a:hover {
-          color: $lightgray;
-        }
-      }
-    }
   }
 
 }

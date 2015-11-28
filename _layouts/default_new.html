@@ -59,33 +59,10 @@
 </head>
 
 <body>
-  <div class="metabar">
-    <div class="metabar-block" style="float:left">
-      <a href="#" class="menu-button"> <i class="fa fa-bars"></i>
-      </a>
-      <span class="meta">
-        <a href="/about">
-          <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" itemprop="photo" alt="Juri Strumpflohner" title="Juri Strumpflohner">
-          <span>Juri Strumpflohner</span>
-        </a>
-        <span>
-          on
-          <time class="post-date">Dec 12, 2013</time>
-        </span>
-      </span>
-    </div>
-    <div class="metabar-block" style="float:right">
-      <span class="reading-count">200 words - 15 min</span>
-      <span class="subscription">
-        <a href="#"> <i class="fa fa-twitter"></i>
-        </a>
-        <a href="#">
-          <i class="fa fa-rss"></i>
-        </a>
-      </span>
-    </div>
-  </div>
+  {% include navigationbar.html %}
+
   {{ content }}
+
   <script src="/assets/js/new/countable.min.js"></script>
   <script src="/assets/js/new/navbar.js"></script>
   <script>
@@ -132,7 +109,7 @@
         // $('.js-tooltip').tooltip();
 
         // $('.js-click-region').click(function(){
-        //   $('.toc').fadeIn();
+        //   // $('.toc').fadeIn();
         //   $.sidr('close');
         // });
 

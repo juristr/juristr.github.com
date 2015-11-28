@@ -1,0 +1,51 @@
+.author {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  color: $lightgray;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  font-family: $article-body-font;
+
+  .author-image {
+    float:left;
+    padding-top: 8px;
+
+    img {
+      width: 36px;
+      height: 36px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+      border-radius: 100%;
+      position: relative;
+      max-width: 100%;
+      box-sizing: border-box;
+      vertical-align:middle;
+    }
+  }
+
+  .meta-content {
+    padding-left: 45px;
+    line-height: 1.4;
+
+    a {
+      text-decoration: none;
+      color: $lightgray;
+
+      :hover {
+        text-decoration: underline;
+      }
+
+    }
+
+    .author-name {
+      font-size: 0.7em;
+      color: rgba(0,0,0,0.8);
+      margin-top: 0;
+    }
+
+    .date-container {
+      font-size: 0.6em;
+    }
+  }
+}
