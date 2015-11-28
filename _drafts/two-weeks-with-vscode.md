@@ -5,7 +5,7 @@ lead: "..and I'm still using it"
 show_img_in_detail: true
 coverimage: false
 category:
-tags: []
+tags: ["Tooling", "JavaScript"]
 ---
 
 <div class="article-intro">

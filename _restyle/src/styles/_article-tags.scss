@@ -1,0 +1,22 @@
+article {
+
+  .tags {
+    padding: 20px 0 20px 0;
+
+    a {
+      font-size: 15px;
+      padding: 10px;
+      text-decoration: none;
+      color: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.05);
+      border-radius: 3px;
+
+      &:hover {
+        background: rgba(0,0,0,0.1);
+      }
+
+    }
+
+  }
+
+}
