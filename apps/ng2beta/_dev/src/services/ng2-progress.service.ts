@@ -23,7 +23,7 @@ export class Ng2Progress {
   public projectedDate: any;
   public newOpenAvg: number;
   public newClosedAvg: number;
-  public evaluationRange: number = 7;
+  public evaluationRange: number = 14;
 
   constructor(public http: Http) {
     this.http.get('./data.json')

@@ -25,7 +25,7 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                 function Ng2Progress(http) {
                     var _this = this;
                     this.http = http;
-                    this.evaluationRange = 7;
+                    this.evaluationRange = 14;
                     this.http.get('./data.json')
                         .map(function (res) { return res.json(); })
                         .subscribe(function (res) {
