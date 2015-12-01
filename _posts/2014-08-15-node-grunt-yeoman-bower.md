@@ -2,7 +2,7 @@
 layout: articles-post
 title: "Node, Grunt, Bower and Yeoman - A Modern web dev's Toolkit"
 lead: "An introduction for ambitious newbies"
-lastupdated: '2015-04-03'
+lastupdated: '2015-12-01'
 show_img_in_detail: false
 coverimage: false
 tags: ["JavaScript", "Node.js"]
@@ -506,3 +506,4 @@ For now I won't include more details, but I definitely will update this article 
 Here are some links to related articles.
 
 - [Choose: Grunt, Gulp or npm?](http://blog.ponyfoo.com/2014/07/04/choose-grunt-gulp-or-npm)
+- [Modern Workflow & Tooling Talk](http://wesbos.com/modern-javascript-workflow-tooling/)
