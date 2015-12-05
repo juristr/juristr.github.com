@@ -150,3 +150,5 @@ SystemJS + JSPM seems to be more future proof, supporting ES6 modules out of the
 
 Webpack on the other side feels like it is the result of trying to solve the biggest issues people have when dealing with frontend development and bundling and trying to solve that for them. It is thus more opinionated and comes with a lot of "magic".
 
+https://twitter.com/juristr/status/672706658972356608
+
