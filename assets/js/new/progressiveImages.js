@@ -1,0 +1,1 @@
+!function(){function a(b){var c=b.find(".image--full").first(),d=c.prevUntil(".image--full"),e=c.nextAll(),f=$("<div>").addClass("article-body");f.append(d.get().reverse());var g=$("<div>").addClass("article-body");g.append(e),f.insertAfter(b),c.insertAfter(f),g.insertAfter(c),b.remove(),g.find(".image--full").length>0&&a(g)}$(".image--full").length>0&&a($(".article-body"))}();
