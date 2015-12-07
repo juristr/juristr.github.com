@@ -32,6 +32,9 @@ Grunt -> Gulp -> Webpack -> SystemJS+JSPM
 
 This is just to give an orientation, by no means completely accurate, complete (there's also Browserify), nor a hint on which direction you should go. Let's explore in more depth what people are saying about these tools.
 
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">crawling web for <a href="https://twitter.com/hashtag/webpack?src=hash">#webpack</a> vs. <a href="https://twitter.com/hashtag/systemjs?src=hash">#systemjs</a> and <a href="https://twitter.com/hashtag/jspm?src=hash">#jspm</a> .. any links good resources highly appreciated. conclusion/links will be posted on my site</p>&mdash; Juri Strumpflohner (@juristr) <a href="https://twitter.com/juristr/status/672706658972356608">December 4, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## Webpack
 
 <figure>
