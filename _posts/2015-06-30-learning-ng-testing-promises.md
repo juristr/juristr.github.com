@@ -50,9 +50,7 @@ sandbox.stub(personService, 'get', function(){
   });
 ```
 
-As you can see, the stubbed function creates a new deferred, using Angular's `$q` service and immediately resolves it.
-
-> **Note**, in this particular test we're not interested in a specific return value, otherwise you'd have to pass that desired value to the `.resolve(...)` function.
+Note, `return $q.when()` automatically creates and returns a resolved promise. [This article goes a bit deeper](http://www.codelord.net/2015/09/24/$q-dot-defer-youre-doing-it-wrong/) on promises, totally worth checking out.
 
 Then we also stub the `helloWorldService.sayHello` function to be able to listen to the number of invocations.
 
