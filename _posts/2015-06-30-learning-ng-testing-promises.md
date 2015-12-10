@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Learning Angular: Testing $q promise resolves with Sinon and Jasmine"
 lead: "See how you can stub an async call and make it return a resolved promise"
 show_img_in_detail: true
@@ -7,6 +7,8 @@ coverimage: false
 category:
 tags: ["JavaScript", "Angular.js", "learning-ng", "testing"]
 ---
+
+{% include postads %}
 
 This article shows a brief example on how to properly mock and resolve a `$q` promise from within a Jasmine unit test.
 
@@ -44,12 +46,7 @@ For stubbing, we can use [Sinon.js](http://sinonjs.org/). The first param is the
 
 ```javascript
 sandbox.stub(personService, 'get', function(){
-    var deferred = $q.defer();
-      
-    // immediately resolve it
-    deferred.resolve();
-      
-    return deferred.promise;
+    return $q.when();
   });
 ```
 
@@ -103,12 +100,7 @@ describe('using the person service', function() {
     
     it('should properly resolve the promise', inject(function($q) {
       sandbox.stub(personService, 'get', function(){
-        var deferred = $q.defer();
-        
-        // immediately resolve it
-        deferred.resolve();
-        
-        return deferred.promise;
+        return $q.when();
       });
       sandbox.stub(helloWorldService, 'sayHello');
       
