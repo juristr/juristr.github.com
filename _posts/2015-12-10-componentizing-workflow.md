@@ -5,7 +5,7 @@ lead: "A possible (mental) workflow to split up your static HTML into components
 show_img_in_detail: true
 coverimage: false
 category: angular2
-tags: [ "JavaScript", "Angular2" ]
+tags: [ "JavaScript", "Angular" ]
 ---
 
 {% include postads %}
