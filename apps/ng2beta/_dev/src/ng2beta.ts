@@ -22,7 +22,7 @@ import {LastUpdateCmp} from './components/last-update.component';
         <div class="logo-font android-slogan">
           <h3>Angular 2 Beta Release Projection</h3>
           <!--<h1 [release-date]="ng2Progress.data"></h1>-->
-          <h1>Angular 2 is in beta!</h1>
+          <h1>Angular 2 beta is out!!</h1>
         </div>
         <div class="logo-font android-sub-slogan">
           Check out the <a href="http://angularjs.blogspot.it/2015/12/angular-2-beta.html">blog post</a> or listen into the <a href="https://www.youtube.com/watch?v=WitNPCLSZr0">Angular Air broadcast with the team</a>.
