@@ -10,19 +10,27 @@ import {LastUpdateCmp} from './components/last-update.component';
 
 @Component({
     selector: 'ng2beta',
+    styles: [
+      `
+        a {
+            color: white;
+        }
+      `        
+    ],
     template: `
       <div class="android-be-together-section-hero">
         <div class="logo-font android-slogan">
           <h3>Angular 2 Beta Release Projection</h3>
-          <h1 [release-date]="ng2Progress.data"></h1>
+          <!--<h1 [release-date]="ng2Progress.data"></h1>-->
+          <h1>Angular 2 is in beta!</h1>
         </div>
         <div class="logo-font android-sub-slogan">
-          This is the projected release date based on the current pace of <strong><span [current-pace]="ng2Progress.data">{{value}}</span> of the issues being resolved per day.</strong>
-          <br/>
-          <i>(evaluation range: last {{ ng2Progress.evaluationRange }} days)</i>
-          <br/>
+          Check out the <a href="http://angularjs.blogspot.it/2015/12/angular-2-beta.html">blog post</a> or listen into the <a href="https://www.youtube.com/watch?v=WitNPCLSZr0">Angular Air broadcast with the team</a>.
+          <br /></br />
+          <i>I'll update this site to monitor progress towards the 1st RC soon ;) </i>
         </div>
         <br />
+        <!--
         <div>
           Currently, <strong><span [resolved-issues]="ng2Progress.data"></span></strong> of the issues have been resolved with another 
           <strong><span [open-issues]="ng2Progress.data">{{value}}</span></strong> open issues.<br/>
@@ -31,6 +39,7 @@ import {LastUpdateCmp} from './components/last-update.component';
           <br/>
           (last update: <span [last-update]="ng2Progress.data"></span>)
         </div>
+        -->
         <div class="chart-container mdl-typography--text-center">
           <canvas id="mychart" [chart]="ng2Progress.data"></canvas>
         </div>
