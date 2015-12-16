@@ -15,7 +15,7 @@ import {LastUpdateCmp} from './components/last-update.component';
         a {
             color: white;
         }
-      `        
+      `
     ],
     template: `
       <div class="android-be-together-section-hero">
@@ -32,17 +32,21 @@ import {LastUpdateCmp} from './components/last-update.component';
         <br />
         <!--
         <div>
-          Currently, <strong><span [resolved-issues]="ng2Progress.data"></span></strong> of the issues have been resolved with another 
+          Currently, <strong><span [resolved-issues]="ng2Progress.data"></span></strong> of the issues have been resolved with another
           <strong><span [open-issues]="ng2Progress.data">{{value}}</span></strong> open issues.<br/>
           In the last 5 days, on average per day {{ng2Progress.newOpenAvg}} new issues have been assigned and {{ng2Progress.newClosedAvg}} have been closed/removed from the milestone
           target.
           <br/>
           (last update: <span [last-update]="ng2Progress.data"></span>)
         </div>
-        -->
         <div class="chart-container mdl-typography--text-center">
           <canvas id="mychart" [chart]="ng2Progress.data"></canvas>
         </div>
+        -->
+        <p>
+        Meanwhile, feel free to check out <a href="/blog/tags/#Angular.js">some of my articles on Angular 1.x</a> and <a href="/blog/tags/#Angular">Angular 2</a> and/or <a href="https://twitter.com/juristr">follow me on Twitter</a> for getting notified about new articles I'm releasing.<br/>
+          I'm also working on a screencast series on Angular 2, so stay tuned ;)
+        </p>
         <br /><br />
         <a href="https://github.com/angular/angular/milestones" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
           Verify milestone progress
@@ -57,9 +61,9 @@ import {LastUpdateCmp} from './components/last-update.component';
     directives: [CORE_DIRECTIVES, Chart, OpenIssuesCmp, ResolvedIssuesCmp, CurrentPaceCmp, ReleaseDateCmp, LastUpdateCmp]
 })
 export class Ng2Beta {
-  
+
     constructor(public ng2Progress: Ng2Progress) {
-      
+
     }
 }
 
