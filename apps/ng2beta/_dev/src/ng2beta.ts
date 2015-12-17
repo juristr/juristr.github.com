@@ -20,33 +20,30 @@ import {LastUpdateCmp} from './components/last-update.component';
     template: `
       <div class="android-be-together-section-hero">
         <div class="logo-font android-slogan">
-          <h3>Angular 2 Beta Release Projection</h3>
+          <h3>Angular 2 Final Release Burndown</h3>
           <!--<h1 [release-date]="ng2Progress.data"></h1>-->
           <h1>Angular 2 beta is out!!</h1>
         </div>
+        <p>Check out the <a href="http://angularjs.blogspot.it/2015/12/angular-2-beta.html">blog post</a> or listen into the <a href="https://www.youtube.com/watch?v=WitNPCLSZr0">Angular Air broadcast with the team</a>.</p>
         <div class="logo-font android-sub-slogan">
-          Check out the <a href="http://angularjs.blogspot.it/2015/12/angular-2-beta.html">blog post</a> or listen into the <a href="https://www.youtube.com/watch?v=WitNPCLSZr0">Angular Air broadcast with the team</a>.
-          <br /></br />
-          <i>I'll update this site to monitor progress towards the 1st RC soon ;) </i>
+          Progress monitor towards final release.
         </div>
         <br />
-        <!--
         <div>
           Currently, <strong><span [resolved-issues]="ng2Progress.data"></span></strong> of the issues have been resolved with another
-          <strong><span [open-issues]="ng2Progress.data">{{value}}</span></strong> open issues.<br/>
-          In the last 5 days, on average per day {{ng2Progress.newOpenAvg}} new issues have been assigned and {{ng2Progress.newClosedAvg}} have been closed/removed from the milestone
-          target.
+          <strong><span [open-issues]="ng2Progress.data">{{value}}</span></strong> open issues.
+          <!--In the last 5 days, on average per day {{ng2Progress.newOpenAvg}} new issues have been assigned and {{ng2Progress.newClosedAvg}} have been closed/removed from the milestone
+          target.-->
           <br/>
           (last update: <span [last-update]="ng2Progress.data"></span>)
         </div>
         <div class="chart-container mdl-typography--text-center">
           <canvas id="mychart" [chart]="ng2Progress.data"></canvas>
         </div>
-        -->
-        <p>
-        Meanwhile, feel free to check out <a href="/blog/tags/#Angular.js">some of my articles on Angular 1.x</a> and <a href="/blog/tags/#Angular">Angular 2</a> and/or <a href="https://twitter.com/juristr">follow me on Twitter</a> for getting notified about new articles I'm releasing.<br/>
+        <!--<p>
+          Also, check out <a href="/blog/tags/#Angular.js">some of my articles on Angular 1.x</a> and <a href="/blog/tags/#Angular">Angular 2</a> and/or <a href="https://twitter.com/juristr">follow me on Twitter</a> for getting notified about new articles I'm releasing.<br/>
           I'm also working on a screencast series on Angular 2, so stay tuned ;)
-        </p>
+        </p>-->
         <br /><br />
         <a href="https://github.com/angular/angular/milestones" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
           Verify milestone progress

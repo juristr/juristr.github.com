@@ -26,13 +26,13 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                     var _this = this;
                     this.http = http;
                     this.evaluationRange = 14;
-                    this.http.get('./data.json')
+                    this.http.get('./data-final.json')
                         .map(function (res) { return res.json(); })
                         .subscribe(function (res) {
                         _this.data = res;
                         var progressData = _this.data.milestonedata;
-                        var daysRemaining = _this.calculateDaysRemaining(progressData);
-                        _this.projectedDate = moment().add(daysRemaining, 'days');
+                        // let daysRemaining = this.calculateDaysRemaining(progressData);
+                        // this.projectedDate = moment().add(daysRemaining, 'days');
                         var startIdx = _this.data.milestonedata.length - _this.evaluationRange;
                         var newOpenSum = 0;
                         var newClosedSum = 0;

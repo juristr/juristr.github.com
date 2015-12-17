@@ -40,17 +40,8 @@ System.register(['angular2/angular2', '../services/ng2-progress.service'], funct
                                     pointHighlightFill: '#fff',
                                     pointHighlightStroke: 'rgba(220,220,220,1)',
                                     data: []
-                                },
-                                {
-                                    label: 'Percentage done',
-                                    fillColor: 'rgba(151,187,205,0.2)',
-                                    strokeColor: 'rgba(151,187,205,1)',
-                                    pointColor: 'rgba(151,187,205,1)',
-                                    pointStrokeColor: '#fff',
-                                    pointHighlightFill: '#fff',
-                                    pointHighlightStroke: 'rgba(151,187,205,1)',
-                                    data: []
-                                }]
+                                }
+                            ]
                         };
                         // build up the dataset for the chart
                         for (var _i = 0; _i < progressData.length; _i++) {
@@ -58,13 +49,11 @@ System.register(['angular2/angular2', '../services/ng2-progress.service'], funct
                             chartDataSet.labels.push(d.date);
                             // open issues
                             chartDataSet.datasets[0].data.push(d.open || 0);
-                            // percentage done
-                            chartDataSet.datasets[1].data.push(d.percent || 0);
                         }
                         // add last projected dates to chart
-                        chartDataSet.labels.push(this.ng2Progress.projectedDate.format('YYYY-MM-DD'));
+                        // chartDataSet.labels.push(this.ng2Progress.projectedDate.format('YYYY-MM-DD'));
                         chartDataSet.datasets[0].data.push(0);
-                        chartDataSet.datasets[1].data.push(100);
+                        //chartDataSet.datasets[1].data.push(100);
                         // pass out of this context to generate chart
                         // see below notes...
                         this.ng2Progress.generateChart(this.el, chartDataSet);

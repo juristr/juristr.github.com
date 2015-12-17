@@ -26,13 +26,14 @@ export class Ng2Progress {
   public evaluationRange: number = 14;
 
   constructor(public http: Http) {
-    this.http.get('./data.json')
+    this.http.get('./data-final.json')
       .map(res => res.json())
       .subscribe(res => {
         this.data = res;
         let progressData = this.data.milestonedata;
-        let daysRemaining = this.calculateDaysRemaining(progressData);
-        this.projectedDate = moment().add(daysRemaining, 'days');
+
+        // let daysRemaining = this.calculateDaysRemaining(progressData);
+        // this.projectedDate = moment().add(daysRemaining, 'days');
 
         let startIdx = this.data.milestonedata.length - this.evaluationRange;
         let newOpenSum: number = 0;
@@ -41,10 +42,10 @@ export class Ng2Progress {
           newOpenSum += this.data.milestonedata[i].newOpen;
           newClosedSum += this.data.milestonedata[i].newClosed;
         }
-        
+
         this.newOpenAvg = Math.round((newOpenSum / (this.data.milestonedata.length - startIdx)));
         this.newClosedAvg = Math.round((newClosedSum / (this.data.milestonedata.length - startIdx)));
-        
+
         // $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
         // $('#currentPace').html(currentPace + '%');
         // $('#resolvedIssuesPercent').html(progressData[progressData.length - 1].percent + '%');
@@ -66,9 +67,9 @@ export class Ng2Progress {
     var paces = [];
     var paceTotal = 0;
     var avgPace = 0;
-    
+
     let startIdx = this.data.milestonedata.length - this.evaluationRange;
-    
+
 
     for (var i = startIdx + 1; i <= progressData.length - 1; i++) {
       var day1 = moment(progressData[i - 1].date);

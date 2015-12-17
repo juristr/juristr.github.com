@@ -1,6 +1,6 @@
   'use strict';
 
-  $.get('./data.json', function(data) {
+  $.get('./data-final.json', function(data) {
     $('#lastupdate').html(data.lastupdated);
     var progressData = data.milestonedata;
     var chartDataSet = {
