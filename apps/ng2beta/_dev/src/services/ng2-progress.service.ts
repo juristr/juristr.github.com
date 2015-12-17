@@ -35,16 +35,16 @@ export class Ng2Progress {
         // let daysRemaining = this.calculateDaysRemaining(progressData);
         // this.projectedDate = moment().add(daysRemaining, 'days');
 
-        let startIdx = this.data.milestonedata.length - this.evaluationRange;
-        let newOpenSum: number = 0;
-        let newClosedSum: number = 0;
-        for (let i = startIdx; i < this.data.milestonedata.length; i++) {
-          newOpenSum += this.data.milestonedata[i].newOpen;
-          newClosedSum += this.data.milestonedata[i].newClosed;
-        }
+        // let startIdx = this.data.milestonedata.length - this.evaluationRange;
+        // let newOpenSum: number = 0;
+        // let newClosedSum: number = 0;
+        // for (let i = startIdx; i < this.data.milestonedata.length; i++) {
+        //   newOpenSum += this.data.milestonedata[i].newOpen;
+        //   newClosedSum += this.data.milestonedata[i].newClosed;
+        // }
 
-        this.newOpenAvg = Math.round((newOpenSum / (this.data.milestonedata.length - startIdx)));
-        this.newClosedAvg = Math.round((newClosedSum / (this.data.milestonedata.length - startIdx)));
+        // this.newOpenAvg = Math.round((newOpenSum / (this.data.milestonedata.length - startIdx)));
+        // this.newClosedAvg = Math.round((newClosedSum / (this.data.milestonedata.length - startIdx)));
 
         // $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
         // $('#currentPace').html(currentPace + '%');
