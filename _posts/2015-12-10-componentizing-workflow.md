@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category: angular2
 tags: [ "JavaScript", "Angular" ]
+reposts: [ "https://dzone.com/articles/componentizing-workflow-for-angular-2" ]
 ---
 
 {% include postads %}
