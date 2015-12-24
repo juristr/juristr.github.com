@@ -112,16 +112,9 @@ document.addEventListener('click', () => {
 });
 ```
 
----
+## Links
 
-Per Ortschaft getrennt
+Here are some further links
 
-Nals
-...
-...
-
-Lana
-...
-
-wo am meisten zuerst und dann absteigend
+- [Egghead Redux Course Notes on GitHub](https://github.com/tayiorbeii/egghead.io_redux_course_notes)
 
