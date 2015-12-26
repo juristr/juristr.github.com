@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Release your libs like a pro!"
 lead: "Fully automated semantic releases to npm and bower"
 show_img_in_detail: true
@@ -8,7 +8,11 @@ category:
 tags: ["JavaScript"]
 ---
 
+<p class="article-intro">
 Automate, automate, automate. That's what ultimately is our job, right? We automate the tedious processes of our end-users. So why don't we do it for ourselves as well? This guide quickly illustrates how to setup fully automated releases to Bower and NPM. And they're even automatically semantic versioned.
+</p>
+
+{% include postads %}
 
 > Bower, NPM, semantic versioning?? Sounds strange? Check out my article [Node, Grunt, Bower and Yeoman - A Modern web dev's Toolkit](/blog/2014/08/node-grunt-yeoman-bower/).
 
@@ -25,7 +29,7 @@ I [love to contribute to Open Source libraries on GitHub](/blog/2015/06/github-s
 
 The last points are the ones I'd like to address with this article as they're something I see devs and library publishers often struggle with.
 
-### Issue 1: Have automated builds
+## Issue 1: Have automated builds
 
 You certainly already have your build scripts in place. Like a Grunt, Gulp, Webpack script or whatever of the currently fancy build tools you're using. When you have that (and you definitely should), then you're only steps away from a full blown automated build. Such a continuous integration server is extremely valuable as it builds your code, maybe lints it, executes your tests, frankly, it helps you keep your code working. This becomes even more important when other developers start to contribute to your library (which is the goal after all).
 
