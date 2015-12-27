@@ -117,4 +117,5 @@ document.addEventListener('click', () => {
 Here are some further links
 
 - [Egghead Redux Course Notes on GitHub](https://github.com/tayiorbeii/egghead.io_redux_course_notes)
+- [Immutable.js practical guide](http://www.triplet.fi/blog/immutable-js-practical-guide/)
 
