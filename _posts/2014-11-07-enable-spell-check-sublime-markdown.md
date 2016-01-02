@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Sublime Tip: Enable spell checking when you write Markdown"
 lead: "You write lots of documents in Markdown, maybe your blog or documentation? This is going to be a lifesaver!"
 show_img_in_detail: true
@@ -8,7 +8,11 @@ category:
 tags: []
 ---
 
-This is a **huge lifesaver** and I don't know how I couldn't come up with this before. Check out this post to learn how you can enable spell checking when writing Markdown documents with sublime.
+<p class="article-intro">
+This is a <strong>huge lifesaver</strong> and I don't know how I couldn't come up with this before. Check out this post to learn how you can enable spell checking when writing Markdown documents with sublime.
+</p>
+
+{% include postads %}
 
 Since I switched to Jekyll and GitHub Pages I'm writing all of my blogs posts in Markdown. Best thing I could do! Being a developer, I spend most of my time in my text editor which happens to be Sublime Text. Given its great plugin and packages ecosystem it obviously also has one for writing Markdown: [MarkdownEditing](https://sublime.wbond.net/packages/MarkdownEditing).
 
