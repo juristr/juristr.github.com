@@ -71,4 +71,20 @@ Try it out yourself:
 
 <iframe src="https://embed.plnkr.co/2UuSqSQt2CCRyhul1aNr/" width="100%" height="400px"> </iframe>
 
+---
+
+#### Important Note!
+
+Currently there is an issue if you try to project some content that is controlled by one of the `*`-prefixed directives like `*ngIf`, `*ngFor` etc. As such, using our example above in the following way:
+
+```html
+<multi-content>
+  <span header>This is projected to the header region</span>
+  <div body *ngIf="isVisible">
+    This goes to the body instead.
+  </div>
+</multi-content>
+```
+
+..wouldn't work, more specifically, the `body` region wouldn't be projected. See [issue 6303](https://github.com/angular/angular/issues/6303) for more details on this.
 
