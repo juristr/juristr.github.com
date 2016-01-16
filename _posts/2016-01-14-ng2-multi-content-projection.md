@@ -1,7 +1,7 @@
 ---
 layout: post_new
 title: "Multi Content Projection aka Multiple Transclusion"
-lead: "How to do multiple slot transclusion in Angular 2"
+lead: "How named/multi-slot transclusion works in Angular 2"
 show_img_in_detail: true
 coverimage: false
 category: angular2
