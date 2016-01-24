@@ -80,15 +80,15 @@ So mostly the issue is that I'm overestimating what I can achieve within a week 
 
 Todo lists don't work so well for me here. Trello is fine for structuring a project, like splitting things up into smaller chunks, documenting them, adding notes and tasks to those pieces. But it fails (at least for me) to properly prioritise and schedule time for those tasks.
 
-## Plan everything
+## Schedule everything
 
 It's really about that I think, about scheduling and allocating time for my tasks. That's what I'm currently missing and that's what the podcast from the Freelancer's show inspired me to do.
 
 <blockquote class="emphasized">
-Plan everything!
+Schedule everything!
 </blockquote>
 
-Starting with my personal projects, I'm going to use Google Calendar for **planning everything**, like scheduling and allocating time for
+Starting with my personal projects, I'm going to use Google Calendar to **schedule everything**, like allocating time for
 
 - my free time activities
 - tasks for my after work side projects
