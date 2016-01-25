@@ -14,6 +14,8 @@ tags: []
 	Thinking aloud about productivity, what I'm currently doing about it and where I think I need to improve a lot.
 </div>
 
+{% include postads %}
+
 I listen to a lot of podcasts (usually while doing the housekeeping once a week :smiley:), most recently I started listening to the [Freelancer's Show from DevChat.tv](https://devchat.tv/freelancers) as I got more interested in that kind of area. In a recent show they were all about [**goals and productivity**](https://devchat.tv/freelancers/184-fs-goals-and-productivity) which was really interesting.
 
 Here are some productivity tips they gave which I want to quickly note down here to not loose them.
