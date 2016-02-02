@@ -26,7 +26,7 @@ import {LastUpdateCmp} from './components/last-update.component';
         </div>
         <p>Check out the <a href="http://angularjs.blogspot.it/2015/12/angular-2-beta.html">blog post</a> or listen into the <a href="https://www.youtube.com/watch?v=WitNPCLSZr0">Angular Air broadcast with the team</a>.</p>
         <div class="logo-font android-sub-slogan">
-          Progress monitor towards final release.
+          Progress monitor towards final release. Tracking <strong>beta.02</strong>.
         </div>
         <br />
         <div>

@@ -6,6 +6,7 @@ show_img_in_detail: true
 coverimage: false
 category: angular2
 tags: [ "JavaScript", "Angular" ]
+reposts: ["https://dzone.com/articles/multi-content-projection-aka-multiple-transclusion"]
 ---
 
 {% include postads %}
