@@ -1,7 +1,7 @@
 ---
 layout: post_new
 title: "Learning Angular 2: Creating a tabs component"
-lead: "A follow up on thoughtram's excellent article on creating a tabs components"
+lead: "A follow up on thoughtram's excellent article"
 category: angular2
 tags: [ "JavaScript", "Angular" ]
 ---
