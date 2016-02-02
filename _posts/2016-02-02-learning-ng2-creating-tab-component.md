@@ -1,13 +1,13 @@
 ---
 layout: post_new
 title: "Learning Angular 2: Creating a tabs component"
-lead: "A follow up on thoughtram's excellent article"
+lead: "A follow up on thoughtram's excellent article on creating a tabs components with Angular 2"
 category: angular2
 tags: [ "JavaScript", "Angular" ]
 ---
 
 <div class="article-intro">
-	This is a follow-up article of <a href="http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html" target="blank">thoughtram's excellent article on developing a tabs component in Angular 2</a>, where we're going to explore an alternative way of creating a tab component by learning about <code>@ContentChildren</code>.
+	This is a follow-up article of <a href="http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html" target="blank">thoughtram's excellent article on developing a tabs component with Angular 2</a>, where we're going to explore an alternative way of creating a tab component by learning about <code>@ContentChildren</code> and <code>AfterContentInit</code>.
 </div>
 
 {% include postads %}
