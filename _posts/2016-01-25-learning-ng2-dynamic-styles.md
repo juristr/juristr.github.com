@@ -174,14 +174,14 @@ import {Directive, ElementRef, Renderer} from 'angular2/core';
 export class StyledDirective {
   constructor(public el: ElementRef, public renderer: Renderer) {
     // el.nativeElement.style.backgroundColor = 'yellow';
-    renderer.setElementStyle(el, 'backgroundColor', 'yellow');
+    renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
   }
 }
 ```
 
 The important part here is the `ElementRef` and the `Renderer` which I import in the constructor.
 
-The `ElementRef` allows us to gain access to the `nativeElement` via
+The `ElementRef` allows us to gain access to the `nativeElement` API via
 
 ```javascript
 el.nativeElement.style.backgroundColor = 'yellow';
