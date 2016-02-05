@@ -519,6 +519,7 @@ The scenarios above were the simples, but at the same time probably also the mos
 - [8 Tips to help you work better with Git](https://about.gitlab.com/2015/02/19/8-tips-to-help-you-work-better-with-git/)
 - [Git Alias to migrate commits to a branch](http://haacked.com/archive/2015/06/29/git-migrate/)
 - [GitHub Flow like a Pro with these 13 Aliases](http://haacked.com/archive/2014/07/28/github-flow-aliases/)
+- [Learn Enough Git to Be Dangerous](http://www.learnenough.com/git-tutorial)
 
 ### Presentations
 
