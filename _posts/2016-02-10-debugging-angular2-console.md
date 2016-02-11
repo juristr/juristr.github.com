@@ -4,6 +4,7 @@ title: "Debugging Angular 2 Applications from the Console"
 lead: "Learn how to access useful information from your Angular 2 components right from your browser's console"
 category: angular2
 tags: [ "JavaScript", "Angular" ]
+reposts: ["https://dzone.com/articles/learning-angular-2-creating-a-tabs-component"]
 ---
 
 <div class="article-intro">
