@@ -105,7 +105,17 @@ article {
       width: 100px;
       margin: 51px auto 41px auto;
       border: 0;
-      border-top: 1px solid rgba(0,0,0,0.15);
+      letter-spacing: 18px;
+      // border-top: 1px solid rgba(0,0,0,0.15);
+    }
+
+    hr::before {
+      content: '...';
+      display: inline-block;
+      margin-left: .6em;
+      color: rgba(0,0,0,.6);
+      position: relative;
+      top: -30px;
     }
 
     ol, ul {
