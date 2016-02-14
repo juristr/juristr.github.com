@@ -12,6 +12,36 @@
       height: 40px;
     }
   }
+
+  .donate--fixed {
+    text-align:center;
+    font-weight: 300;
+    opacity: 0.6;
+
+    span {
+      visibility: hidden;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      span {
+        visibility: visible;
+      }
+    }
+
+    a {
+      color: #726a6c;
+      font-size: 15px;
+      text-decoration: none;
+
+      i {
+        display: block;
+        font-size: 35px;
+      }
+    }
+  }
+
 }
 
 @media (max-width:1050px) {
