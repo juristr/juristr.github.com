@@ -130,6 +130,12 @@
           } catch(err){}
         });
 
+        $('.js-paypal-donate').click(function(){
+            try{
+              ga('send', 'event', 'sidebar-link', 'click', 'donate-paypal');
+            }catch(e){}
+        });
+
         $('.js-social-links').click(function(){
             try{
               ga('send', 'event', 'link', 'click', 'social-networks');
