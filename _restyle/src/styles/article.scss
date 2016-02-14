@@ -322,3 +322,45 @@ article {
   }
 
 }
+
+@media screen and (max-width: $article-body-maxwidth) {
+  article {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    figure,
+    .author,
+    .article-title,
+    .article-subtitle,
+    .tags,
+    .article-footer,
+    #disqus_thread,
+    .article-body {
+      margin: 0 auto;
+      max-width: 550px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 450px) {
+  article {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    figure,
+    .author,
+    .article-title,
+    .article-subtitle,
+    .tags,
+    .article-footer,
+    #disqus_thread,
+    .article-body {
+      margin: 0 auto;
+      max-width: 350px;
+    }
+
+  }
+}
+
+
