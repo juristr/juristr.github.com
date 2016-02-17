@@ -32,8 +32,8 @@ current: about
 
 <ul>
     <li><a href='http://www.dzone.com/users/juristr'>DZone</a></li>
-    <li><a href='http://www.javacodegeeks.com/'>Java Code Geeks</a></li>
-    <li><a href='http://www.dotnetcodegeeks.com/'>.Net Code Geeks</a></li>
+    <li><a href='http://www.javacodegeeks.com/'>Java Code Geeks (no more starting from Feb 2016)</a></li>
+    <li><a href='http://www.dotnetcodegeeks.com/'>.Net Code Geeks  (no more starting from Feb 2016)</a></li>
 </ul>
 
 
@@ -48,9 +48,5 @@ current: about
 </a>
 
 <a href="http://www.dzone.com/users/juristr"><img src="http://www.dzone.com/sites/all/files/big-mvbbutton.png"></a>
-
-<a href="http://www.javacodegeeks.com/" rel="nofollow" imageanchor="1"><img alt="Java Code Geeks" src="http://cdn.javacodegeeks.com/wp-content/uploads/2012/12/JavaCodeGeek_Badge.png" title="Java Code Geeks" /></a>
-
-<a href="http://www.webcodegeeks.com/" rel="nofollow" imageanchor="1"><img alt="Web Code Geeks" src="http://www.webcodegeeks.com/wp-content/uploads/2014/10/WebCodeGeeks-Badge.png" title="Web Code Geeks" /></a>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/it/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/it/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Italy License</a>.
