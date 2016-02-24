@@ -108,3 +108,4 @@ Btw, you can use my [Angular 2 playground setup](https://github.com/juristr/angu
 
 - [Change detection in Angular 2](http://victorsavkin.com/post/110170125256/change-detection-in-angular-2)
 - [Change and its detection in JavaScript frameworks](http://teropa.info/blog/2015/03/02/change-and-its-detection-in-javascript-frameworks.html)
+- [Angular 2 Change Detection Explained](http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html)
