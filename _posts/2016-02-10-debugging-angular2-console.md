@@ -37,7 +37,7 @@ By default debugging is enabled in Angular 2 applications. In fact when you run 
 
 _"Angular 2 is running in the development mode. Call enableProdMode() to enable the production mode."_
 
-In fact, whenever you deploy your application you should **disable debugging information** and switch into **production mode**. You can do that like this:
+Hence, whenever you deploy your application in a production environment you should **disable debugging information** and switch into **production mode**. You can do it like this:
 
 ```
 ...
