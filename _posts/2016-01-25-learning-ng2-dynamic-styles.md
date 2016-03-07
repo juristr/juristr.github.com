@@ -97,31 +97,11 @@ export class App {
 
 Theres another way of adding a class. Especially Angular 1 developers may immediately recognize this. The good [old NgClass](https://angular.io/docs/ts/latest/api/common/NgClass-directive.html).
 
-It is made available under the `angular2/common` module which we need to import:
-
-```javascript
-...
-import {NgClass} from 'angular2/common';
-...
-```
-
-..and obviously reference it in the `directives` property of our component.
-
-```javascript
-@Component({
-  selector: 'my-app',
-  providers: [],
-  ...
-  directives: [NgClass]
-})
-```
-
-Then we can use it just as we did in Angular 1. Here's the full code example.
+It is made available under the `angular2/common` module which is imported already for you, so there's no need to do it manually. Then we can use it just as we did in Angular 1. Here's the full code example.
 
 ```javascript
 //our root app component
 import {Component} from 'angular2/core';
-import {NgClass} from 'angular2/common';
 
 @Component({
   selector: 'my-app',
@@ -141,7 +121,6 @@ import {NgClass} from 'angular2/common';
   }
   `
   ]
-  directives: [NgClass]
 })
 export class App {
   isClassVisible: false;
