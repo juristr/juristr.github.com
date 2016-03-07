@@ -2,6 +2,7 @@
 layout: post_new
 title: "Learning Angular 2: Conditionally add styles to an element"
 lead: "Learn how to conditionally add styles to a DOM element in Angular 2"
+lastupdated: '2016-03-07'
 category: angular2
 tags: [ "JavaScript", "Angular" ]
 ---
@@ -203,5 +204,17 @@ So in this article you learned about three possibilities to style your DOM eleme
 - by directly accessing the native DOM element
 
 You even quickly saw how to create a Directive and how to embed styles within a Component :smiley:.
+
+---
+
+## Further reading
+
+Angular 2 components are not just like plain Angular 1 directives with a different syntax. There's much more. They give you true encapsulation at the CSS as well as JavaScript level, just like web components do. Components have an `encapsulation` property which expects either
+
+- `ViewEncapsulation.None`
+- `ViewEncapsulation.Emulated` (default),
+- `ViewEncapsulation.Native`
+
+By default it emulates, but if you set it to `ViewEncapsulation.Native` you'll get **native shadow DOM** support. Check out [@toddmotto's](https://twitter.com/toddmotto) article on **[Emulated or Native Shadow DOM in Angular 2 with ViewEncapsulation](https://toddmotto.com/emulated-native-shadow-dom-angular-2-view-encapsulation)** for an in depth guide on this :thumbsup:.
 
 
