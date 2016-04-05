@@ -24,13 +24,13 @@ import {LastUpdateCmp} from './components/last-update.component';
     template: `
       <div class="android-be-together-section-hero">
         <div class="logo-font android-slogan">
-          <h3>Angular 2 Final Release Burndown</h3>
+          <h3>Angular 2 Release Candidate Burndown</h3>
 		<span class="subtitle">Estimated date based on current speed</span>
           <h1 [release-date]="ng2Progress.data"></h1>
         </div>
         <!--<p>Check out the <a href="http://angularjs.blogspot.it/2015/12/angular-2-beta.html">blog post</a> or listen into the <a href="https://www.youtube.com/watch?v=WitNPCLSZr0">Angular Air broadcast with the team</a>.</p>-->
         <div class="logo-font android-sub-slogan">
-          Progress monitor towards final release.
+          Progress monitor towards release candidate.
         </div>
         <br />
         <div>

@@ -46,7 +46,7 @@ export class Ng2Progress {
         // this.newOpenAvg = Math.round((newOpenSum / (this.data.milestonedata.length - startIdx)));
         // this.newClosedAvg = Math.round((newClosedSum / (this.data.milestonedata.length - startIdx)));
 
-        $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
+        // $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
         // $('#currentPace').html(currentPace + '%');
         // $('#resolvedIssuesPercent').html(progressData[progressData.length - 1].percent + '%');
         // $('#openIssues').html(progressData[progressData.length - 1].open);
