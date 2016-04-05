@@ -32,8 +32,8 @@ export class Ng2Progress {
         this.data = res;
         let progressData = this.data.milestonedata;
 
-        // let daysRemaining = this.calculateDaysRemaining(progressData);
-        // this.projectedDate = moment().add(daysRemaining, 'days');
+        let daysRemaining = this.calculateDaysRemaining(progressData);
+        this.projectedDate = moment().add(daysRemaining, 'days');
 
         // let startIdx = this.data.milestonedata.length - this.evaluationRange;
         // let newOpenSum: number = 0;
@@ -46,7 +46,7 @@ export class Ng2Progress {
         // this.newOpenAvg = Math.round((newOpenSum / (this.data.milestonedata.length - startIdx)));
         // this.newClosedAvg = Math.round((newClosedSum / (this.data.milestonedata.length - startIdx)));
 
-        // $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
+        $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
         // $('#currentPace').html(currentPace + '%');
         // $('#resolvedIssuesPercent').html(progressData[progressData.length - 1].percent + '%');
         // $('#openIssues').html(progressData[progressData.length - 1].open);
@@ -76,6 +76,11 @@ export class Ng2Progress {
       var day2 = moment(progressData[i].date);
 
       var daysDifference = moment.duration(day2.diff(day1)).get('days');
+
+	  // hack for daylight saving time issue
+	  if(daysDifference < 1) {
+		  daysDifference = 1;
+	  }
 
       var percentage = (progressData[i].percent - progressData[i - 1].percent) / daysDifference;
       paces.push(Math.round(percentage));

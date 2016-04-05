@@ -31,14 +31,25 @@ System.register(['angular2/angular2', '../services/ng2-progress.service'], funct
                         var progressData = this.data.milestonedata;
                         var chartDataSet = {
                             labels: [],
-                            datasets: [{
-                                    label: 'Issues open',
+                            datasets: [
+                                // {
+                                //   label: 'Issues open',
+                                //   fillColor: 'rgba(151,187,205,0.2)',
+                                //   strokeColor: 'rgba(221, 62, 42, 1)',
+                                //   pointColor: 'rgba(221, 62, 42, 1); ',
+                                //   pointStrokeColor: '#fff',
+                                //   pointHighlightFill: '#fff',
+                                //   pointHighlightStroke: 'rgba(220,220,220,1)',
+                                //   data: []
+                                // },
+                                {
+                                    label: 'Percentage done',
                                     fillColor: 'rgba(151,187,205,0.2)',
-                                    strokeColor: 'rgba(221, 62, 42, 1)',
-                                    pointColor: 'rgba(221, 62, 42, 1); ',
+                                    strokeColor: 'rgba(151,187,205,1)',
+                                    pointColor: 'rgba(151,187,205,1)',
                                     pointStrokeColor: '#fff',
                                     pointHighlightFill: '#fff',
-                                    pointHighlightStroke: 'rgba(220,220,220,1)',
+                                    pointHighlightStroke: 'rgba(151,187,205,1)',
                                     data: []
                                 }
                             ]
@@ -48,12 +59,14 @@ System.register(['angular2/angular2', '../services/ng2-progress.service'], funct
                             var d = progressData[_i];
                             chartDataSet.labels.push(d.date);
                             // open issues
-                            chartDataSet.datasets[0].data.push(d.open || 0);
+                            // chartDataSet.datasets[0].data.push(d.open || 0);
+                            // percentage done
+                            chartDataSet.datasets[0].data.push(100 - d.percent || 0);
                         }
                         // add last projected dates to chart
-                        // chartDataSet.labels.push(this.ng2Progress.projectedDate.format('YYYY-MM-DD'));
+                        chartDataSet.labels.push(this.ng2Progress.projectedDate.format('YYYY-MM-DD'));
+                        //   chartDataSet.datasets[0].data.push(0);
                         chartDataSet.datasets[0].data.push(0);
-                        //chartDataSet.datasets[1].data.push(100);
                         // pass out of this context to generate chart
                         // see below notes...
                         this.ng2Progress.generateChart(this.el, chartDataSet);

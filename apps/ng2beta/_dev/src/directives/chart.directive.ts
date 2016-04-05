@@ -15,26 +15,27 @@ export class Chart {
       let progressData = this.data.milestonedata;
       let chartDataSet:any = {
         labels: [],
-        datasets: [{
-          label: 'Issues open',
-          fillColor: 'rgba(151,187,205,0.2)',
-          strokeColor: 'rgba(221, 62, 42, 1)',
-          pointColor: 'rgba(221, 62, 42, 1); ',
-          pointStrokeColor: '#fff',
-          pointHighlightFill: '#fff',
-          pointHighlightStroke: 'rgba(220,220,220,1)',
-          data: []
-        }
-        // {
-        //   label: 'Percentage done',
+        datasets: [
+		// {
+        //   label: 'Issues open',
         //   fillColor: 'rgba(151,187,205,0.2)',
-        //   strokeColor: 'rgba(151,187,205,1)',
-        //   pointColor: 'rgba(151,187,205,1)',
+        //   strokeColor: 'rgba(221, 62, 42, 1)',
+        //   pointColor: 'rgba(221, 62, 42, 1); ',
         //   pointStrokeColor: '#fff',
         //   pointHighlightFill: '#fff',
-        //   pointHighlightStroke: 'rgba(151,187,205,1)',
+        //   pointHighlightStroke: 'rgba(220,220,220,1)',
         //   data: []
-        // }
+        // },
+        {
+          label: 'Percentage done',
+          fillColor: 'rgba(151,187,205,0.2)',
+          strokeColor: 'rgba(151,187,205,1)',
+          pointColor: 'rgba(151,187,205,1)',
+          pointStrokeColor: '#fff',
+          pointHighlightFill: '#fff',
+          pointHighlightStroke: 'rgba(151,187,205,1)',
+          data: []
+        }
         ]
       };
 
@@ -43,16 +44,16 @@ export class Chart {
         chartDataSet.labels.push(d.date);
 
         // open issues
-        chartDataSet.datasets[0].data.push(d.open || 0);
+        // chartDataSet.datasets[0].data.push(d.open || 0);
 
         // percentage done
-        //chartDataSet.datasets[1].data.push(d.percent || 0);
+        chartDataSet.datasets[0].data.push(100-d.percent || 0);
       }
 
       // add last projected dates to chart
-      // chartDataSet.labels.push(this.ng2Progress.projectedDate.format('YYYY-MM-DD'));
+      chartDataSet.labels.push(this.ng2Progress.projectedDate.format('YYYY-MM-DD'));
+    //   chartDataSet.datasets[0].data.push(0);
       chartDataSet.datasets[0].data.push(0);
-      //chartDataSet.datasets[1].data.push(100);
 
       // pass out of this context to generate chart
       // see below notes...
