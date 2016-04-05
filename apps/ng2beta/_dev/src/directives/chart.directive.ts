@@ -51,7 +51,7 @@ export class Chart {
       }
 
       // add last projected dates to chart
-      // chartDataSet.labels.push(this.ng2Progress.projectedDate.format('YYYY-MM-DD'));
+      chartDataSet.labels.push(this.ng2Progress.projectedDate.format('YYYY-MM-DD'));
     //   chartDataSet.datasets[0].data.push(0);
       chartDataSet.datasets[0].data.push(0);
 
