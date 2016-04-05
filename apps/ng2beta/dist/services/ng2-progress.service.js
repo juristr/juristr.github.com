@@ -31,8 +31,8 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                         .subscribe(function (res) {
                         _this.data = res;
                         var progressData = _this.data.milestonedata;
-                        // let daysRemaining = this.calculateDaysRemaining(progressData);
-                        // this.projectedDate = moment().add(daysRemaining, 'days');
+                        var daysRemaining = _this.calculateDaysRemaining(progressData);
+                        _this.projectedDate = moment().add(daysRemaining, 'days');
                         // let startIdx = this.data.milestonedata.length - this.evaluationRange;
                         // let newOpenSum: number = 0;
                         // let newClosedSum: number = 0;
@@ -42,7 +42,7 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                         // }
                         // this.newOpenAvg = Math.round((newOpenSum / (this.data.milestonedata.length - startIdx)));
                         // this.newClosedAvg = Math.round((newClosedSum / (this.data.milestonedata.length - startIdx)));
-                        // $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
+                        $('#releasedate').html(projectedDate.format('dddd, MMMM Do YYYY'));
                         // $('#currentPace').html(currentPace + '%');
                         // $('#resolvedIssuesPercent').html(progressData[progressData.length - 1].percent + '%');
                         // $('#openIssues').html(progressData[progressData.length - 1].open);
@@ -68,6 +68,10 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
                         var day1 = moment(progressData[i - 1].date);
                         var day2 = moment(progressData[i].date);
                         var daysDifference = moment.duration(day2.diff(day1)).get('days');
+                        // hack for daylight saving time issue
+                        if (daysDifference < 1) {
+                            daysDifference = 1;
+                        }
                         var percentage = (progressData[i].percent - progressData[i - 1].percent) / daysDifference;
                         paces.push(Math.round(percentage));
                         paceTotal += Math.round(percentage);
