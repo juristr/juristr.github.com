@@ -203,3 +203,4 @@ Nice, so we learned..
 - Also, we've seen that we can use `ngDoCheck` for such scenarios, that allows us to do a very fine-grained check of which property on our object changed.
 
 Hope that was helpful :smiley:. As always, if you liked what you've read, leave me some feedback in the comments, [subscribe to my RSS](http://feeds.feedburner.com/juristrumpflohner) or [follow me on Twitter](https://twitter.com/juristr) :wink:.
+
