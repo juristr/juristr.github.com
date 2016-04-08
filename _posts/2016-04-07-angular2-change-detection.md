@@ -12,7 +12,6 @@ tags: [ "JavaScript", "Angular" ]
 
 {% include postads %}
 
-
 Before starting, Angular 2 has implemented an awesome and very refined mechanism for detecting changes. As always, Thoughtram has an interesting article on their blog ["Angular 2 Change Detection Explained"](http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html) which goes deep into this topic and is definitely worth reading.
 
 ## The Setup
@@ -152,7 +151,7 @@ class ChildComponent implements DoCheck {
 	@Input() person: any;
 	...
 	ngDoCheck() {
-		// called on each change of @Input
+		// called whenever Angular runs change detection
 	}
 }
 {%endraw%}
