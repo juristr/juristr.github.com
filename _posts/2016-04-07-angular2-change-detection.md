@@ -158,7 +158,9 @@ class ChildComponent implements DoCheck {
 {%endraw%}
 ```
 
-`ngDoCheck()` is called whenever `@Input() person` changes. That allows us to implement some logic there, like remembering the old values and comparing them against new ones. There's a smarter way, though, by using the [KeyValueDiffers](https://angular.io/docs/ts/latest/api/core/KeyValueDiffers-class.html) class.
+> **ngDoCheck()** is invoked whenever change detection is run
+
+That allows us to implement some logic there, like remembering the old values and comparing them against new ones. There's a smarter way, though, by using the [KeyValueDiffers](https://angular.io/docs/ts/latest/api/core/KeyValueDiffers-class.html) class.
 
 ```javascript
 {%raw%}
