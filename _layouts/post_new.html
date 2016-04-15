@@ -21,6 +21,7 @@ current: blog
     <h2 class="article-subtitle">{{ page.lead }}</h2>
     <div class="article-body">
         {{ content }}
+        {% include postfooter %}
     </div>
     {% unless page.tags == empty %}
     <div class="tags">
