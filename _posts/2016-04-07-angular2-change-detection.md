@@ -202,6 +202,3 @@ Nice, so we learned..
 
 - that `ngOnChanges` won't be triggered when we mutate a (non-immutable) JavaScript object. Instead it triggers only when **we reference-change the data-bound input property**.
 - Also, we've seen that we can use `ngDoCheck` for such scenarios, that allows us to do a very fine-grained check of which property on our object changed.
-
-Hope that was helpful :smiley:. As always, if you liked what you've read, leave me some feedback in the comments, [subscribe to my RSS](http://feeds.feedburner.com/juristrumpflohner) or [follow me on Twitter](https://twitter.com/juristr) :wink:.
-
