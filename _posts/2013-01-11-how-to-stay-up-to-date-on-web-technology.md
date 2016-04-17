@@ -1,21 +1,23 @@
 ---
-layout: post
+layout: post_new
 title: "How to Stay Up To Date On Web Technology"
-description: ""
+lead: "Keeping pace with the latest stuff around web technology is tough"
 category:
 postimg: /blog/assets/imgs/howtostayuptodate.png 
 tags: []
 reposts: ["http://css.dzone.com/articles/how-stay-date-web-technology"]
 ---
 
-
+<div class="article-intro">
 The web is evolving extremely fast, especially in the recent years I have the feeling that it really got up to speed. Just think about JavaScript two years ago compared to today. The same holds for the browser vendors. Hence as a web developer you have to keep yourself up to date on the current web technologies. This is important for being able to make your evaluations on what is just trendy and what has future.
+</div>
 
 Here's a nice slideshow from Chris Coyier about how to stay up to date on web technology.
 
 <script async="true" class="speakerdeck-embed" data-id="5112451026bf013092b722000a1d8877" src="//speakerdeck.com/assets/embed.js"> </script>
 
 ## My personal suggestions
+
 Here are some of my experiences:
 
 - **be social -** yep, also on the web, so ["don't rant, become social and contribute"](/blog/2012/02/dont-rant-become-social-and-contribute/). There are so many nice places, like [StackOverflow](http://stackoverflow.com), [Hackernews](http://news.ycombinator.com/), GitHub,... Participate &rarr; discuss &rarr; contribute &rarr; learn
@@ -79,4 +81,4 @@ Here are some starting points mentioned in the presentation and updated with som
 - [statuscode.org](http://statuscode.org/)
 - [responsivedesignweekly.com](http://responsivedesignweekly.com)
 
-Obviously, feel free to follow me as well :)
+Obviously, feel free to [follow me as well](https://twitter.com/juristr) :wink:.
