@@ -4,6 +4,7 @@ title: "Debugging Angular 2 Applications from the Console"
 lead: "Learn how to access useful information from your Angular 2 components right from your browser's console"
 postimg: "/blog/assets/imgs/ng2-console-debugging/debugging-ng2-apps.png"
 category: angular2
+lastupdated: '2016-04-17'
 tags: [ "JavaScript", "Angular" ]
 reposts: ["https://dzone.com/articles/learning-angular-2-creating-a-tabs-component"]
 ---
@@ -93,9 +94,9 @@ Here's the result of executing the change detector:
     </a>
 </figure>
 
-## Batarangle
+## Augury (formerly: Batarangle)
 
-If you're not the console type of guy, you may appreciate the visual debugging tool [Batarangle from Rangle.io](https://github.com/rangle/batarangle) :smiley:.
+If you're not the console type of guy, you may appreciate the visual debugging tool [Augury from Rangle.io](https://github.com/rangle/augury) :smiley:.
 
 ## Conclusion
 
