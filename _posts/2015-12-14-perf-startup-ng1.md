@@ -3,6 +3,7 @@ layout: post_new
 title: "Improve your Angular 1.x startup time"
 lead: "A neat and simple trick to give your app some boost"
 show_img_in_detail: true
+postimg: "/blog/assets/imgs/ng1-improve-startup.png"
 coverimage: false
 category:
 tags: [ "JavaScript", "Angular.js" ]
