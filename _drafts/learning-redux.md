@@ -5,7 +5,7 @@ lead: "Notes from watching the Egghead.io lessions"
 show_img_in_detail: true
 coverimage: false
 category: angular2
-tags: []
+tags: ["Angular"]
 ---
 
 Nice intro to Redux by Redux creator [Dan Abramov](https://twitter.com/dan_abramov).

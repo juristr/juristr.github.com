@@ -1,0 +1,129 @@
+---
+layout: default
+title: Juri's TechBlog
+permalink: /blog/categories/angular-1/
+postimg: /blog/assets/imgs/angular1-index-bg.png
+---
+
+<style>
+    .front-bg {
+        background-color: #0143A3;
+        background: -webkit-linear-gradient(#0143A3,#0273D4);
+        background: linear-gradient(#0143A3,#0273D4);
+        color: #fff;
+    }
+
+    .front-bg h1 {
+        content: '';
+        background: url("/blog/assets/imgs/angular1logo.png") top center no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 0;
+        top: 40px;
+        right: 0;
+        height: 224px;
+    }
+
+    h1.hero-title {
+        padding-top: 160px;
+        width: 450px;
+        margin:0 auto;
+    }
+
+    p.hero-description {
+        padding-top: 180px !important;
+    }
+
+    .categories-list {
+      font-family: 'Lato', sans-serif;
+      font-size: 23px;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+</style>
+
+<div class="front-bg">
+  <div class="image-cover-wrap" style="position:absolute;">
+    <!-- <img class="front-image" src="/assets/images/macbg.jpg"> -->
+  </div>
+  <div class="layout-foreground">
+    <header class="hero hero-home layout-single-column">
+      <div class="align-middle layout-single-column layout-foreground layout-fill-height">
+        <div class="align-block">
+          <h1 class="hero-title">Angular 1.x</h1>
+          <p class="hero-description hero-description-tagline">
+            The finest articles on Angular 1.x straight from this blog
+          </p>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+
+<div class="container">
+  <section class="row" style="max-width:1050px; margin: 0 auto;">
+
+    <div class="col-md-12 col-lg12 col-sm-12 categories-list">
+      <a href="/blog/">All</a> · <a href="/blog/categories/angular-1/">Angular 1.x</a> · <a href="/blog/categories/angular-2/">Angular 2</a>
+      <hr />
+    </div>
+
+
+    <article class="col-md-12 col-lg-12 col-sm-12">
+
+      <div class="post-list">
+
+      {% for post in site.posts %}
+        {% if post.tags contains 'Angular.js' %}
+            {% if post.type != "link" %}
+              <div class="row post-item">
+                <h3 class="post-item-title">
+                  {% if post.type != 'update-notice' %}
+                    <a href="{{post.url}}">{{ post.title | truncatewords:30 }}</a>
+                  {% else %}
+                    <a href="{{post.target-url}}">{{ post.title | truncatewords:30 }}</a>
+                  {% endif %}
+                </h3>
+                <p>
+                  {% if post.type != 'update-notice' %}
+                    {{ post.lead | truncatewords:30 }}
+                  {% else %}
+                    {{ post.content | truncatewords:30 }}
+                  {% endif %}
+                </p>
+                <div class="post-item-meta">
+                  <span>
+                    <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+                  </span>
+                  {% unless post.tags == empty %}
+                    <span>
+                    {% for tag in post.tags %}
+                      <a href="/blog/tags#{{tag}}">
+                        {{tag}}
+                      </a>
+                      &nbsp;
+                    {% endfor %}
+                    </span>
+                  {% endunless %}
+                  {% if post.reposts && post.reposts.length > 0 %}
+                    <span class="js-tooltip" data-toggle="tooltip" data-placement="top" data-title="This article has been published on partner sites.">
+                      <i class="fa fa-star"></i>&nbsp;Featured
+                    </span>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <hr/>
+
+      <div class="row">
+        <a href="/blog/archive" class="btn btn-default pull-right">Archives · All Posts</a>
+      </div>
+
+    </article>
+
+  </section>
+</div>
