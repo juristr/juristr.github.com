@@ -1,16 +1,20 @@
 ---
-layout: post
+layout: post_new
 title: "GitHub: be Social, Contribute, Learn"
 lead: "How to properly contribute to a GitHub based open source project"
 postimg: "/blog/assets/imgs/contribute-github/githubslogan.png"
 show_img_in_detail: true
 coverimage: true
 category:
-tags: ["git"]
+tags: ["Git"]
 reposts: ["http://java.dzone.com/articles/github-be-social-contribute"]
 ---
 
-GitHub revolutionised the open source world by building - IMHO - the first true social coding site. It has never been that easy to contribute to a project, whether it is to simply discuss some new features, to file a bug or in the best case to submit a bug fix or new feature patch: **a pull request (PR)**. Still, I found lots of devs don’t know how to properly create a PR, yet. With this article I hope to lower that entry barrier.
+<div class="article-intro">
+    GitHub revolutionised the open source world by building - IMHO - the first true social coding site. It has never been that easy to contribute to a project, whether it is to simply discuss some new features, to file a bug or in the best case to submit a bug fix or new feature patch: <strong>a pull request (PR)</strong>. Still, I found lots of devs don’t know how to properly create a PR, yet. With this article I hope to lower that entry barrier.
+</div>
+
+{% include postads %}
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">OSS tip: If you want a bug fixed faster, submit a PR with a failing test rather than an issue.</p>&mdash; Sindre Sorhus (@sindresorhus) <a href="https://twitter.com/sindresorhus/status/579306280495357953">March 21, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"> </script>

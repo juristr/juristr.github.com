@@ -6,7 +6,7 @@ postimg: "/blog/assets/imgs/jenkins-logo.png"
 show_img_in_detail: true
 category: 
 lastupdated: '2015-06-24'
-tags: ["git"]
+tags: ["Git"]
 reposts: ["http://www.javacodegeeks.com/2014/01/git-flow-with-jenkins-and-gitlab.html"]
 ---
 

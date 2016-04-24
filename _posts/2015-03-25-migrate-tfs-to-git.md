@@ -5,7 +5,7 @@ lead: "You're currently on TFS and would like to migrate to Git? This post shows
 show_img_in_detail: true
 coverimage: false
 category:
-tags: ["git"]
+tags: ["Git"]
 ---
 
 Are you using TFS and would like to switch to a distributed VCS like Git? Well then this article might be of help. I quickly wrote down the required steps and some hints for exporting an existing TFS repository to Git.
