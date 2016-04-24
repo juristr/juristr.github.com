@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "REST Api Design - Resource Modeling"
 lead: "A summary from a post on Thoughtworks blog"
 category: 
@@ -8,8 +8,12 @@ tags: ["Software Architecture"]
 reposts: ["https://dzone.com/articles/rest-api-design-resource-modeling-1?edition=101051"]
 ---
 
-Important note: **this is not something I've written up by myself**, but it's rather a summary, some highlighting of the most important quotes with some of my comments for an awesome post on the Thoughtworks blog about API design. Their vision quite accurately reflects what I've been doing lately although I did never think about all the concepts in such detail. Moreover I think this could be interesting to you as well. Hence, read on to get more :wink:.  
-_(btw, the TL;DR is at the end)_
+<div class="article-intro">
+    Important note: <strong>this is not something I've written up by myself</strong>, but it's rather a summary, some highlighting of the most important quotes with some of my comments for an awesome post on the Thoughtworks blog about API design. Their vision quite accurately reflects what I've been doing lately although I did never think about all the concepts in such detail. Moreover I think this could be interesting to you as well. Hence, read on to get more :wink:.  
+    <i>(btw, the TL;DR is at the end)</i>
+</div>
+
+{% include postads %}
 
 <div class="alert alert-info">
 The original article: <a href="https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling" target="_blank">https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling</a>.
