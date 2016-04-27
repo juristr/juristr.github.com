@@ -48,7 +48,7 @@ import {LastUpdateCmp} from './components/last-update.component';
           Also, check out <a href="/blog/tags/#Angular.js">some of my articles on Angular 1.x</a> and <a href="/blog/tags/#Angular">Angular 2</a> and/or <a href="https://twitter.com/juristr">follow me on Twitter</a> for getting notified about new articles I'm releasing.<br/>
           I'm also working on a screencast series on Angular 2, so stay tuned ;)
         </p>-->
-        <p style="font-size:19px">Remember to <strong>follow me <a href="https://twitter.com/juristr">on Twitter</a></strong> for getting updates around Angular 2!</p>
+        <p style="font-size:19px">Check out my new <a href="/blog/2016/04/learning-angular2-directives-course/"><strong>video course on "Learning Angular 2 Directives"!</strong></p>
         <br />
         <a href="https://github.com/angular/angular/milestones" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
           Verify milestone progress
