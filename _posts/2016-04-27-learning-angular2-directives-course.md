@@ -16,7 +16,7 @@ tags: [ "JavaScript", "Angular" ]
 Well, as the title says, this video course **focuses on the core part of Angular 2, directives and components**, the latter actually being a specialization of a directive. Ya, that's also something you'll learn in the course :wink:).  
 During the entire course we will basically like pair program a sample application, which we'll use to discover and learn the new concepts behind Angular 2.
 
-<em><strong>TL;DR:</strong> head over [to the official page](https://goo.gl/iJKPUi)</em>
+<em><strong>TL;DR:</strong> head over [to the official page](https://goo.gl/iJKPUi) to get more details and buy a copy :thumbsup:</em>
 
 <figure class="image--small">
     <a href="https://goo.gl/iJKPUi" class="learning-ng2-course">
@@ -39,12 +39,14 @@ The course basically starts of by **giving you an introduction to the modern too
 - Embed external libraries such as d3 
 - Run Angular 2 components on mobile devices and on the server
 
-#### Motivated?
+#### How can I get it?
 
-Great :smiley:. So head over to Packt Pub and grab your copy :wink:
+Great :smiley:. This video has been created by me in collaboration with [PacktPub](https://www.packtpub.com/). While I did a couple of technical reviews with PacktPub already, this was my first video I produced on my own. Lots of sweat, but totally worth it and I'm glad it's out now.
+
+That said, it also means this is a paid course, currently sold by PacktPub for a discounted entry price of ~ $27USD. Still interested? Then go ahead :smiley:
 
 <p style="text-align:center">
-    <a href="https://goo.gl/iJKPUi" class="learning-ng2-course" style="font-size:24px;font-weight: bold;background-image:none">:point_right: click to get the video :point_left:</a>
+    <a href="https://goo.gl/iJKPUi" class="learning-ng2-course" style="font-size:24px;font-weight: bold;background-image:none">:point_right: grab your copy :point_left:</a>
 </p>
 
 #### Thanks!
