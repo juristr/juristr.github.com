@@ -33,6 +33,9 @@ export class Ng2Progress {
         let progressData = this.data.milestonedata;
 
         let daysRemaining = this.calculateDaysRemaining(progressData);
+        if (daysRemaining === Infinity) {
+          daysRemaining = 30;
+        }
         this.projectedDate = moment().add(daysRemaining, 'days');
 
         // let startIdx = this.data.milestonedata.length - this.evaluationRange;
@@ -88,7 +91,7 @@ export class Ng2Progress {
     }
 
     avgPace = paceTotal / paces.length;
-    return Math.round(avgPace);
+    return Math.round(avgPace * 100) / 100;
   }
   calculateDaysRemaining(progressData: MilestoneDayStat[]): number {
     var percentageMissing = 100 - progressData[progressData.length - 1].percent;

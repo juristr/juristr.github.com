@@ -1,11 +1,11 @@
-System.register(['angular2/angular2', 'angular2/http', './services/ng2-progress.service', './directives/chart.directive', './components/open-issues.component', './components/resolved-issues.component', './components/current-pace.component', './components/release-date.component', './components/last-update.component'], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register(['angular2/angular2', 'angular2/http', './services/ng2-progress.service', './directives/chart.directive', './components/open-issues.component', './components/resolved-issues.component', './components/current-pace.component', './components/release-date.component', './components/last-update.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
+        switch (arguments.length) {
+            case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
+            case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
+            case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
+        }
     };
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
@@ -58,7 +58,7 @@ System.register(['angular2/angular2', 'angular2/http', './services/ng2-progress.
                     __metadata('design:paramtypes', [ng2_progress_service_1.Ng2Progress])
                 ], Ng2Beta);
                 return Ng2Beta;
-            }());
+            })();
             exports_1("Ng2Beta", Ng2Beta);
             // Instantiate TranslateService in the bootstrap so that we can keep it as a singleton
             angular2_1.bootstrap(Ng2Beta, [http_1.HTTP_PROVIDERS, ng2_progress_service_1.Ng2Progress]);

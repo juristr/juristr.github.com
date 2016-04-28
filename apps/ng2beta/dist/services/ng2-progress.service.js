@@ -1,11 +1,11 @@
-System.register(['angular2/angular2', 'angular2/http'], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register(['angular2/angular2', 'angular2/http'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
+        switch (arguments.length) {
+            case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
+            case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
+            case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
+        }
     };
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
@@ -32,6 +32,9 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1, cont
                         _this.data = res;
                         var progressData = _this.data.milestonedata;
                         var daysRemaining = _this.calculateDaysRemaining(progressData);
+                        if (daysRemaining === Infinity) {
+                            daysRemaining = 30;
+                        }
                         _this.projectedDate = moment().add(daysRemaining, 'days');
                         // let startIdx = this.data.milestonedata.length - this.evaluationRange;
                         // let newOpenSum: number = 0;
@@ -77,7 +80,7 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1, cont
                         paceTotal += Math.round(percentage);
                     }
                     avgPace = paceTotal / paces.length;
-                    return Math.round(avgPace);
+                    return Math.round(avgPace * 100) / 100;
                 };
                 Ng2Progress.prototype.calculateDaysRemaining = function (progressData) {
                     var percentageMissing = 100 - progressData[progressData.length - 1].percent;
@@ -90,7 +93,7 @@ System.register(['angular2/angular2', 'angular2/http'], function(exports_1, cont
                 ], Ng2Progress);
                 return Ng2Progress;
                 var _a;
-            }());
+            })();
             exports_1("Ng2Progress", Ng2Progress);
         }
     }
