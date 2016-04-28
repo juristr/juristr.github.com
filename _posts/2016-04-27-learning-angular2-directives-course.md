@@ -4,7 +4,7 @@ title: "Learning Angular 2 Directives"
 lead: "Learn how to build efficient Angular 2 directives with this fast and interactive video course"
 postimg: "/blog/assets/imgs/learning-angular2-directives/cover.jpg"
 category: angular2
-tags: [ "JavaScript", "Angular" ]
+tags: [ "JavaScript", "Angular.js", "Angular" ]
 ---
 
 <div class="article-intro">
