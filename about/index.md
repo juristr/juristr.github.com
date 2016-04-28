@@ -6,7 +6,7 @@ current: about
 
 ## Juri Strumpflohner
 
-<p>Juri currently works as a <a href='http://careers.stackoverflow.com/juri'>"coding architect"</a> at a local, south-tyrolean e-government company. Beside being a coding geek, he is always in search for new interesting technologies with a major interest in rich web client development with JavaScript and mobile applications. He&#8217;s also an active <a href='http://blog.js-development'>blogger</a> and participates in online communities such as <a href='http://stackoverflow.com/users/50109/juri'>StackOverflow</a>. Well, that&#8217;s it. For more detailed information keep an eye on his <a href='http://careers.stackoverflow.com/juri'>CV</a>.</p>
+<p>Juri currently works as a <a href='http://careers.stackoverflow.com/juri'>"coding architect"</a> at a local, south-tyrolean e-government company. Beside being a coding geek, he is always in search for new interesting technologies with a major interest in rich web client development with JavaScript and mobile applications. He&#8217;s also an active <a href='/blog'>blogger</a> and participates in online communities such as <a href='http://stackoverflow.com/users/50109/juri'>StackOverflow</a>. Well, that&#8217;s it. For more detailed information keep an eye on his <a href='http://careers.stackoverflow.com/juri'>CV</a>.</p>
 
 <p>In his free time, Juri is a passionate martial arts practitioner. He&#8217;s been practicing Yoseikan Budo now for roughly over 14 years and <a href="/blog/2012/10/2nd-dan-yoseikan-budo/">owns a black belt (2nd DAN).</a></p>
 
