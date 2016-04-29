@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Learning Angular: Expose an API on your directives"
 lead: Using shared services and "API objects" to create a directive API
 show_img_in_detail: true
@@ -8,9 +8,13 @@ category:
 tags: ["JavaScript", "Angular.js", "learning-ng"]
 ---
 
-Ever wanted to not only create a nice, visually appealing directive or web component, but to also provide a more rich programmatic API with it? Read on to learn about two potential implementation approaches.
+<div class="article-intro">
+    Ever wanted to not only create a nice, visually appealing directive or web component, but to also provide a more rich programmatic API with it? Read on to learn about two potential implementation approaches.
+</div>
 
 {% include ng-series.html %}
+
+{% include postads %}
 
 ## Problem
 
