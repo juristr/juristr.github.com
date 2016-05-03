@@ -64,6 +64,7 @@ import {LastUpdateCmp} from './components/last-update.component';
         <a href="https://twitter.com/intent/tweet?hashtags=angular2&original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&ref_src=twsrc%5Etfw&text=Angular%202%20release%20candidate%20is%20out!!&tw_p=tweetbutton&url=http%3A%2F%2Fjuristr.com%2Fapps%2Fng2beta%2F&via=juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-url="http://juristr.com/apps/ng2beta/" data-text="Angular 2 release candidate is out!!" data-via="juristr" data-size="large" data-hashtags="angular2">Tweet it!</a>
         <br/>
         <br/>
+        <i>Stand by as this site start tracking of the <a href="https://github.com/angular/angular/milestones">final release</a> as soon as development starts</i>
       </div>
     `,
     directives: [CORE_DIRECTIVES, Chart, OpenIssuesCmp, ResolvedIssuesCmp, CurrentPaceCmp, ReleaseDateCmp, LastUpdateCmp]
