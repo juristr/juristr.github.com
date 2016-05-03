@@ -3,6 +3,7 @@ layout: post_new
 title: "Learning Angular: Verifying whether a function has been passed to my directive's isolated scope"
 lead: "How can I verify whether a function property defined on my directive's isolated scope has been specified or not?"
 show_img_in_detail: true
+lastupdated: '2016-05-03'
 coverimage: false
 category:
 tags: ["JavaScript", "Angular.js", "angular-directives", "learning-ng"]
@@ -52,7 +53,7 @@ function (locals) {
 
 You can verify this by yourself. Simply implement the directive's link function, debug it and inspect the `$scope` property.
 
-## Solution
+## Solution 1 - Ugly
 
 The solution here is to inspect the `iAttr` parameter of your directive's link function rather than the `$scope` object. Inspect it and then assign a variable to the scope which you can then use in your template. Something like this:
 
@@ -78,6 +79,37 @@ angular.module('someModule', [])
 ```
 
 <iframe src="http://embed.plnkr.co/MJFqNv/preview" width="100%" height="400px"> </iframe>
+
+## Solution 2
+
+Define your function to be optional: `&?`. This way the function will only be defined if it actually has been passed in the HTML.
+
+```javascript
+angular.module('someModule', [])
+    .directive('myDirective', function() {
+        return {
+          restrict: 'E',
+          scope: {
+            clickFn: '&?'
+          },
+          template: [
+            '<div ng-show="isFn" style="border: 1px solid; padding:5px">',
+                '<a href="#" ng-click="clickFn()">Click me</a>',
+            '</div>'
+            ].join(''),
+          controller: function($scope){
+            
+            if ($scope.clickFn) {
+              // safely invoke clickFn()
+            } else {
+              // clickFn is not defined -> fallback
+            }
+
+          }
+        };
+      });
+```
+
 
 ## Background
 
