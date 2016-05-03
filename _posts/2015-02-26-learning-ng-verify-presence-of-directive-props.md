@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Learning Angular: Verifying whether a function has been passed to my directive's isolated scope"
 lead: "How can I verify whether a function property defined on my directive's isolated scope has been specified or not?"
 show_img_in_detail: true
@@ -9,7 +9,11 @@ tags: ["JavaScript", "Angular.js", "angular-directives", "learning-ng"]
 reposts: ["http://www.webcodegeeks.com/javascript/angular-js/learning-angular-verifying-whether-function-passed-directives-isolated-scope/"]
 ---
 
-When you create isolated directives, you usually use the `scope` property to define your directive's external API. Some of the APIs properties might be mandatory while others are optional and based on that state, your directive might react differently. Sounds easy, but I stumbled upon a difference when you pass in functions vs. data objects. See yourself.
+<div class="article-intro">
+    When you create isolated directives, you usually use the <code>scope</code> property to define your directive's external API. Some of the APIs properties might be mandatory while others are optional and based on that state, your directive might react differently. Sounds easy, but I stumbled upon a difference when you pass in functions vs. data objects. See yourself.
+</div>
+
+{% include postads %}
 
 {% include ng-series.html %}
 
