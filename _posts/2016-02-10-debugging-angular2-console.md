@@ -96,7 +96,19 @@ Here's the result of executing the change detector:
 
 ## Augury (formerly: Batarangle)
 
-If you're not the console type of guy, you may appreciate the visual debugging tool [Augury from Rangle.io](https://github.com/rangle/augury) :smiley:.
+<figure>
+    <a href="https://augury.angular.io/">
+        <img src="/blog/assets/imgs/ng2-console-debugging/augury.png" />
+    </a>
+</figure>
+
+If you're not the console type of guy, you may appreciate the visual debugging tool [Augury from Rangle.io](https://augury.angular.io/), which is now also the officially supported Chrome devtool extension for Angular 2 :smiley:.
+
+<figure>
+    <a href="/blog/assets/imgs/ng2-console-debugging/augury-screenloop.gif" class="image--zoom">
+        <img src="/blog/assets/imgs/ng2-console-debugging/augury-screenloop.gif" />
+    </a>
+</figure>
 
 ## Conclusion
 
