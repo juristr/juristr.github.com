@@ -43,7 +43,7 @@ The course basically starts of by **giving you an introduction to the modern too
 
 Great :smiley:. This video has been created by me in collaboration with [PacktPub](https://www.packtpub.com/). While I did a couple of technical reviews with PacktPub already, this was my first video I produced on my own. Lots of sweat, but totally worth it and I'm glad it's out now.
 
-That said, it also means this is a paid course, currently sold by PacktPub for a discounted entry price of ~ $27USD. Still interested? Then go ahead :smiley:
+That said, it also means this is a paid course, currently sold by PacktPub. Still interested? Then go ahead :smiley:
 
 <p style="text-align:center">
     <a href="https://goo.gl/iJKPUi" class="learning-ng2-course" style="font-size:24px;font-weight: bold;background-image:none">:point_right: grab your copy :point_left:</a>
