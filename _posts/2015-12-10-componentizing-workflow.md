@@ -245,3 +245,8 @@ During such process you may naturally even arrive at components so generic that 
 I think you got the main idea. Obviously you'll do the extract and re-compose in a much quicker way after a while, even in your head "in-memory" :smiley:, but the concept is this basically. 
 
 Back when I was a student at the university, when they explained us the concept of recursion in algorithms, they presented the concept of "divide and conquer". From now and then I get reminded to that as it is very much the same here. You take a piece, extract it and then assemble it back into the main part.
+
+Also **check [out my video course on "Learning Angular 2 directives"](/blog/2016/04/learning-angular2-directives-course/)**. Here's a preview of a section where I applied some of the concepts demonstrated in this article here.
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/8SCZLqYTln0" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
