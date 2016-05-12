@@ -39,6 +39,10 @@ The course basically starts of by **giving you an introduction to the modern too
 - Embed external libraries such as d3 
 - Run Angular 2 components on mobile devices and on the server
 
+Here's a sneak peak :wink:
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/V_lScsDrIzM" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
 #### How can I get it?
 
 Great :smiley:. This video has been created by me in collaboration with [PacktPub](https://www.packtpub.com/). While I did a couple of technical reviews with PacktPub already, this was my first video I produced on my own. Lots of sweat, but totally worth it and I'm glad it's out now.
