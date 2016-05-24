@@ -84,9 +84,9 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         // files: {
-        //   '../assets/css/new': [
-        //     '../assets/css/new/{,*/}*.css'
-        //   ]
+        //     '../assets/css/new': [
+        //       '../assets/css/new/{,*/}*.css'
+        //     ]
         // }
       }
     },

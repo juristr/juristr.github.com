@@ -6,6 +6,7 @@
 @import "_article-author";
 @import "_article-tags";
 @import "_article-images";
+@import "_article-links";
 @import "_fluidbox";
 
 body {
@@ -178,6 +179,14 @@ article {
 
       & > p {
         margin: 0;
+      }
+
+      cite {
+        font-size: 15px;
+      }
+
+      cite:before {
+        content: '- Source: ';
       }
 
     }
