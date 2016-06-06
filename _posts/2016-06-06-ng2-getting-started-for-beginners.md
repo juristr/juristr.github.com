@@ -2,7 +2,7 @@
 layout: post_new
 title: "Angular 2 - A Getting Started Guide for Beginners"
 lead: "A gentle introduction to a local Meetup group"
-postimg: "blog/assets/imgs/meetup-intro-angular2/ng2-gettingstarted-image.png"
+postimg: "/blog/assets/imgs/meetup-intro-angular2/ng2-gettingstarted-image.png"
 category: angular2
 tags: [ "JavaScript", "Angular.js", "Angular" ]
 ---
