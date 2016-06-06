@@ -611,6 +611,8 @@ I was so kind to record a ~20 min screencast where I walk through some of these 
 
 ## Conclusion
 
-...
+Congrats, you've come to the end :wink:. So by now you probably realize there's lots of new stuff for you to learn. But the nice thing is that maybe it isn't even only Angular 2 related. Like switching to ES2015 (ES6) and/or TypeScript, or adopting the reactive programming style with RxJS, or learn new toolings like Webpack and SystemJS...these are all things you can totally reuse, even though you dont' plan to continue with Angular 2 in the end. Fortunately, the things you have to exclusively learn for Angular 2 got a lot smaller compared to Angular 1.x!
+
+So this was basically just the beginning. From here you can start go more in depth. Follow the links I provided to get started. Also, feel [free to drop me a line on Twitter](https://twitter.com/juristr). In general, try to connect with the Angular 2 community (over Twitter, GitHub, Slack,...), there are lots and lots of awesome people willing to help you with their enourmous expertise. :smiley:
 
 _Thanks to [Martin Hochel](https://twitter.com/martin_hotell) for reviewing this article :+1:_
