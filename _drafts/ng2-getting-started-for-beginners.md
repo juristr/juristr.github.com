@@ -517,6 +517,45 @@ Nice, we get a reference to `PersonService` from within our component. But wait,
 	text="Awesome introduction to how dependency injection works in Angular 2 by Pascal Precht on the Thoughtram blog."
 %}
 
+### Reactive Programming with RxJs 5 and Http
+
+<figure class="image--left">
+    <img src="https://raw.githubusercontent.com/Reactive-Extensions/RxJS/master/examples/dragndrop/logo.png">
+    <figcaption>RxJS 5</figcaption>
+</figure>
+
+Angular 2 heavily uses a paradigm called "Reactive Programming", in particular this is implemented through the [RxJS 5](https://github.com/ReactiveX/rxjs) library. Like the Angular 2 http service won't return promises, but instead RxJS Observables. 
+
+This pattern is not new at all, and gained a lot of popularity recently in modern frontend development. I'm not going into the details here now, as it would be an entire article on its own. Just know that Angular 2 will heavily rely on it and that's why you should probably go and learn more about it. 
+
+Here are some good articles to get started :smiley:
+
+{% include article-link.html
+	url="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754"
+	title="The introduction to Reactive Programming you've been missing"
+	text="André Staltz introduces the very basics of what reactive programming is all about."
+%}
+
+{% include article-link.html
+	url="https://gist.github.com/btroncone/d6cf141d6f2c00dc6b35"
+	title="RxJS 5 Operators By Example"
+	text="A complete list of RxJS 5 operators with easy to understand explanations and runnable examples."
+%}
+
+{% include article-link.html
+	url="https://medium.com/google-developer-experts/angular-introduction-to-reactive-extensions-rxjs-a86a7430a61f#.bknbea8ny"
+	title="Angular - Introduction to Reactive Extensions (RxJS)"
+	text="How to use observable sequences in AngularJS, an introduction by Gerard Sans."
+%}
+
+{% include article-link.html
+	url="https://coryrylan.com/blog/intro-to-rxjs-observables-and-angular-2"
+	title="Intro to RxJS Observables and Angular 2"
+	text="Screencast from Cory Rylan where he demoes RxJS with Angular 2."
+%}
+
+We will also briefly touch it in the screencast at the end of the article.
+
 ## Lot's of stuff, let's get started with some code
 
 In recent years, getting started quickly with frontend development got notably more difficult. Just creating some `index.html` with a couple of `<script>` tags is by far no more enough. What you need is some transpiler and a build tool that transpiles the code and serves it up, not to mention then optimizations like minification, inclusion of HTML templates, CSS compilation etc..
@@ -573,3 +612,5 @@ I was so kind to record a ~20 min screencast where I walk through some of these 
 ## Conclusion
 
 ...
+
+_Thanks to [Martin Hochel](https://twitter.com/martin_hotell) for reviewing this article :+1:_
