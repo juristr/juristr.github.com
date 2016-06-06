@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Angular 2, what it is about and why I should care"
+title: "Angular 2 - A Getting Started Guide for Beginners"
 lead: "A gentle introduction to a local Meetup group"
 postimg: "/blog/assets/imgs/learning-angular2-directives/cover.jpg"
 category: angular2
@@ -8,7 +8,7 @@ tags: [ "JavaScript", "Angular.js", "Angular" ]
 ---
 
 <div class="article-intro">
-	Since about half a year, I'm organizing a <a href="http://www.meetup.com/Software-Craftsmanship-SouthTyrol/">local Meetup group around Software Craftsmanship</a>. Since I recently published <a href="/blog/2016/04/learning-angular2-directives-course/">a video course on "Learning Angular 2 directives"</a> and given also Angular 2 finally released RC1, I decided to organize a meetup to introduce Angular 2 to our members.
+	Since about half a year, I'm organizing a <a href="http://www.meetup.com/Software-Craftsmanship-SouthTyrol/">local Meetup group around Software Craftsmanship</a>. I recently also published <a href="/blog/2016/04/learning-angular2-directives-course/">a video course on "Learning Angular 2 directives"</a> and given Angular 2 finally released RC1, I decided to organize a Meetup session to introduce Angular 2 to our members.
 </div>
 
 <br />
@@ -140,7 +140,7 @@ Now with Angular 2 this is finally built-in right from the beginning, through th
 	<figcaption>Lazy loading via routes</figcaption>
 </figure>
 
-At the moment of writing this article, the router has been rewritten and thus the docs are a bit flaky. It should be available shortly. Till then, you may want to give this video a go, where Misko Hevery explains it.
+At the moment of writing this article, the router has been rewritten and thus [there are no docs at the moment](https://angular.io/docs/ts/latest/guide/router.html). It should be available shortly. Till then, you may want to give this video a go, where Misko Hevery explains it.
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/d8yAdeshpcw?list=PLOETEcp3DkCq788xapkP_OU-78jhTf68j" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
@@ -192,7 +192,7 @@ Something I'm particularly excited about is the approach of having a unified dev
 
 You can choose among **4 different possibilities** for developing mobile applications with Angular 2.
 
-**[Angular Mobile Toolkit](https://mobile.angular.io) -** focuses mostly on a new technology called Progressive Web Apps (PWA). These are normal web applications, that facilitate modern web technologies like service workers for offline caching and a special (non-standard right now) manifest file that instructs Chrome to provide "installation like capabilities" for the app, s.t. it can be added onto your homescreen. Google I/O 2016 was all about PWA development. Just [check out some of the talks on Youtube](https://www.youtube.com/results?search_query=google+Io+2016+progressive+web+app). Also, [JavaScriptAir's latest talk on it might be relevant](https://javascriptair.com/episodes/2016-05-25/).
+**[Angular Mobile Toolkit](https://mobile.angular.io) -** focuses mostly on a new architectural approach to creating web applications: Progressive Web Apps (PWA). These are normal web applications, that facilitate modern web technologies like service workers for offline caching and a special (non-standard right now) manifest file that instructs Chrome to provide "installation like capabilities" for the app, s.t. it can be added onto your homescreen. Google I/O 2016 was all about PWA development. Just [check out some of the talks on Youtube](https://www.youtube.com/results?search_query=google+Io+2016+progressive+web+app). Also, [JavaScriptAir's latest talk on it might be relevant](https://javascriptair.com/episodes/2016-05-25/).
 
 **[Ionic 2](http://ionic.io/2) -** is a hybrid mobile application framework. That simply means you build a web application and package it in a native installable package for iOS and Android that can be installed through the corresponding app stores. The app itself is served through a WebView component, which means you're running a web application in the end. Access to underlying APIs is achieved [through Apache Cordova](https://cordova.apache.org/). Ionic specializes in providing you the tools for setup and building the native app packages. Moreover it gives you a highly tuned UI framework and mobile routing support. They recently also announced futures support for PWAs, so it'll be quite interesting to see it evolve.
 
@@ -215,9 +215,9 @@ When talking about "installed desktop" we don't mean like running an Angular 2 a
 A very important point here that's easy to miss: by running Angular 2 directly from within a Web Worker, not only you get an enormous performance boost as it runs in a separate thread, but you also get access to the underlying platform, Databases etc..
 
 {% include article-link.html
-	url="http://www.w3schools.com/html/html5_webworkers.asp"
-	title="HTML5 Web Workers"
-	text="A web worker is a JavaScript running in the background, without affecting the performance of the page."
+	url="http://www.html5rocks.com/en/tutorials/workers/basics/"
+	title="The basics of web workers"
+	text="The Web Workers specification defines an API for spawning background scripts in your web application. Web Workers allow you to do things like fire up long-running scripts to handle computationally intensive tasks, but without blocking the UI or other scripts to handle user interactions."
 %}
 
 Not convinced? Well, most probably you're already using an Electron app, like [VSCode](https://code.visualstudio.com/), or [Slack](https://slack.com/) or some of these:
@@ -495,7 +495,9 @@ import { PersonService } from './services/person.service';
 class PersonComponent {
 	people;
 	constructor(private personService: PersonService) {
-		// TypeScript will automatically add personService to this class
+		// DI in all it's beauty, just provide TS type annotation and Angular will handle the rest
+		// like adding the reference of personService to the class
+		// no need for "this.personService = personService;"
 	}
 
 	ngOnInit() {
@@ -508,6 +510,12 @@ Nice, we get a reference to `PersonService` from within our component. But wait,
 
 - add the `@Injectable` annotation
 - register `PersonService` as a provider either on the app, the top level component or from the part of the component tree (downwards) where you want to have the service injectable
+
+{% include article-link.html
+	url="http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html"
+	title="Dependency Injection in Angular 2"
+	text="Awesome introduction to how dependency injection works in Angular 2 by Pascal Precht on the Thoughtram blog."
+%}
 
 ## Lot's of stuff, let's get started with some code
 
@@ -556,7 +564,12 @@ Other popular starters you definitely also want to take a look at are these. The
 	imageurl="/blog/assets/imgs/githublogo.svg"
 %}
 
-**Okay..we're now all set up I guess.** Time to code!
+## Okay..we're now all set up I guess. Time to code!
 
-_(video demo here)_
+I was so kind to record a ~20 min screencast where I walk through some of these 7 key concepts behind Angular 2. Hope you enjoy it! :smiley:
 
+<iframe width="853" height="480" src="https://www.youtube.com/embed/p64vNY0TmDA" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
+## Conclusion
+
+...
