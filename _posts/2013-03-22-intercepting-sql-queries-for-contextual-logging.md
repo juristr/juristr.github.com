@@ -1,15 +1,18 @@
 ---
-layout: post
+layout: post_new
 title: "Entity Framework: Intercepting SQL Queries for Contextual Logging"
-description: ""
-category: 
+description: "Using MiniProfiler to extract SQL queries for logging"
 postimg: "/blog/assets/imgs/sqlquerybg.png"
 show_img_in_detail: true
 tags: [.net, Entity Framework]
 reposts: ["http://sql.dzone.com/articles/entity-framework-intercepting"]
 ---
 
+<div class="article-intro">
 Proper logging is of major importance and a must have in any serious application. Writing logs is trivial and is already done successfully by a couple of open source libraries. But that's just the first step in successful application logging. The far more difficult part is to have proper metrics in place that aggregate the relevant information in a proper way and provide the necessary contextual information for being able to reproduce problems. This is the only way to prevent you from being flooded with useless waste.
+</div>
+
+{% include postads %}
 
 While I'd like to go a bit deeper into the concept of properly log and aggregate information, this post is just meant to evidence a specific case I just had of properly including contextual information into log entries. Specifically, a work mate of mine recently had a strange problem of getting an "Insufficient Priviledges" exception in his production environment. It appeared from now and then and was not really reproducable. Being related to some query execution, in that case it would be of major help to know which kind of query was executed by Entity Framework (in our case) against the underlying Oracle database that finally resulted in the mentioned exception.
 
