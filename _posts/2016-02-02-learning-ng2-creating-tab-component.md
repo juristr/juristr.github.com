@@ -78,7 +78,7 @@ A `QueryList<T>` is simply "an unmodifiable list of items that Angular keeps up 
 Hence, as a first step, we're going to import the new constructs in our Tabs component.
 
 ```javascript
-import { ContentChildren, QueryList } from 'angular2/core';
+import { ContentChildren, QueryList } from '@angular/core';
 ```
 
 Then, inside our class we can use it like
@@ -96,7 +96,7 @@ export class Tabs {
 To access the list of `Tab` instances, we need to wait for them to be projected into our `Tabs` component. There's a dedicated component lifecycle hook for that: `ngAfterContentInit`. This hook is called after the component content is initialized (more [on the official docs](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html)).
 
 ```javascript
-import { AfterContentInit } from 'angular2/core';
+import { AfterContentInit } from '@angular/core';
 
 @Component({
   selector: 'tabs',
