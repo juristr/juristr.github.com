@@ -59,7 +59,7 @@ In practice, this would look as follows:
 
 ```javascript
 {%raw%}
-import { OnChanges } from 'angular2/core';
+import { OnChanges } from '@angular/core';
 
 @Component({
 	selector: 'child',
@@ -144,7 +144,7 @@ What we can do is to implement the `DoCheck` lifecycle hook on our child compone
 
 ```javascript
 {%raw%}
-import { DoCheck } from 'angular2/core';
+import { DoCheck } from '@angular/core';
 
 @Component({...})
 class ChildComponent implements DoCheck {
@@ -163,7 +163,7 @@ That allows us to implement some logic there, like remembering the old values an
 
 ```javascript
 {%raw%}
-import { DoCheck, KeyValueDiffers } from 'angular2/core';
+import { DoCheck, KeyValueDiffers } from '@angular/core';
 
 @Component({...})
 class ChildComponent implements DoCheck {
