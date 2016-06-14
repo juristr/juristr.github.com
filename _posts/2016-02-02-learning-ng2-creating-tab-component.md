@@ -3,6 +3,7 @@ layout: post_new
 title: "Learning Angular 2: Creating a tabs component"
 lead: "A follow up on thoughtram's excellent article on creating a tabs components with Angular 2"
 category: angular2
+postimg: "/blog/assets/imgs/ng2-tabs.png"
 tags: [ "JavaScript", "Angular" ]
 ---
 
