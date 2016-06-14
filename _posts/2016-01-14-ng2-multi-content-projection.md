@@ -3,6 +3,7 @@ layout: post_new
 title: "Multi Content Projection aka Multiple Transclusion"
 lead: "How named/multi-slot transclusion works in Angular 2"
 show_img_in_detail: true
+lastupdated: '2016-06-14'
 coverimage: false
 category: angular2
 tags: [ "JavaScript", "Angular" ]
@@ -25,7 +26,7 @@ And here we go.
 
 ```javascript
 //our root app component
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 
 @Component({
   selector: 'multi-content',
