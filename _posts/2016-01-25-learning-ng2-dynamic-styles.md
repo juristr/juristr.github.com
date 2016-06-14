@@ -2,7 +2,7 @@
 layout: post_new
 title: "Learning Angular 2: Conditionally add styles to an element"
 lead: "Learn how to conditionally add styles to a DOM element in Angular 2"
-lastupdated: '2016-03-07'
+lastupdated: '2016-06-14'
 category: angular2
 tags: [ "JavaScript", "Angular" ]
 ---
@@ -19,7 +19,7 @@ A rather unconventional way would be to return the styling property as a string 
 
 ```javascript
 //our root app component
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 
 @Component({
   selector: 'my-app',
@@ -60,7 +60,7 @@ Similarly as we did with the background-color above, we can add a class, using t
 
 ```javascript
 //our root app component
-import {Component} from 'angular2/core'
+import {Component} from '@angular/core'
 
 @Component({
   selector: 'my-app',
@@ -97,11 +97,11 @@ export class App {
 
 Theres another way of adding a class. Especially Angular 1 developers may immediately recognize this. The good [old NgClass](https://angular.io/docs/ts/latest/api/common/NgClass-directive.html).
 
-It is made available under the `angular2/common` module which is imported already for you, so there's no need to do it manually. Then we can use it just as we did in Angular 1. Here's the full code example.
+It is made available under the `@angular/common` module which is imported already for you, so there's no need to do it manually. Then we can use it just as we did in Angular 1. Here's the full code example.
 
 ```javascript
 //our root app component
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -146,7 +146,7 @@ The last possibility is by directly interacting with the underlying DOM element.
 Our directive looks like this:
 
 ```javascript
-import {Directive, ElementRef, Renderer} from 'angular2/core';
+import {Directive, ElementRef, Renderer} from '@angular/core';
 
 @Directive({
   selector: '[styled]',
