@@ -81,7 +81,7 @@ Strange enough, the UI won't reflect our changes. Well remember `$digest()` :win
 I dug through the [Angular source](https://github.com/angular/angular) and this was the best way I could come up with to activate the change detection mechanism:
 
 ```
-> ng.probe($0).injector._depProvider.componentView.changeDetector.detectChanges()
+> ng.probe($0)._debugInfo._view.changeDetectorRef.detectChanges()
 ```
 
 Not sure if you noticed, but we invoked the change detector on our selected Angular 2 component (`$0`) and not globally. This is because **change detection is hierarchical**, hence, **every Angular 2 component get its own change detector**. [Victor Savkin](https://twitter.com/victorsavkin) has written an [awesome post on this](http://victorsavkin.com/post/110170125256/change-detection-in-angular-2).
