@@ -1,7 +1,7 @@
 ---
 layout: articles-post
 title: "Preparing for Angular 2"
-lastupdated: '2015-11-16'
+lastupdated: '2016-06-16'
 subtitle: "get ready!"
 lead: "Collection of best practices to be ready for Angular 2"
 show_img_in_detail: true
@@ -241,7 +241,7 @@ function PeopleService() {
       });
 
       // broadcast
-      peopleSubject.onNext(people);
+      peopleSubject.next(people);
     }
   };
   return service;
