@@ -458,6 +458,7 @@ class HelloWorldComponent {}
 We also need some data binding mechanism to get data into this template and out of it again. Let's look at an example:
 
 ```javascript
+{% raw %}
 @Component({
 	selector: 'hello-world',
 	template: `
@@ -467,6 +468,7 @@ We also need some data binding mechanism to get data into this template and out 
 class HelloWorldComponent {
 	who: string = 'Juri'
 }
+{% endraw %}
 ```
 
 As you can see, the variable `who` inside the component's class gets bound to into the template. Whenever you change the value of `who`, the template will automatically reflect that change.
