@@ -519,6 +519,8 @@ Nice, we get a reference to `PersonService` from within our component. But wait,
 	text="Awesome introduction to how dependency injection works in Angular 2 by Pascal Precht on the Thoughtram blog."
 %}
 
+<a name="rxjs"></a>
+
 ### Reactive Programming with RxJs 5 and Http
 
 <figure class="image--left">
