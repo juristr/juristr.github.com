@@ -2,9 +2,9 @@
 layout: post_new
 title: "From ng-controller to components with Angular 1.5"
 lead: "Driving your Angular frontend architecture to a new level"
-postimg: "/blog/assets/imgs/meetup-intro-angular2/ng2-gettingstarted-image.png"
+postimg: "/blog/assets/imgs/ngctrl-to-component-postimg.png"
 category: angular1
-tags: [ "JavaScript", "Angular.js", "Angular"]
+tags: [ "JavaScript", "Angular.js"]
 ---
 
 <div class="article-intro">
@@ -102,7 +102,7 @@ $stateProvider
     ...
 ```
 
-Notice how we define a template and the corresponding controller. This is a very loose coupling. Theoretically we could use one controller for multiple HTML templates easily. That's considered bad practice, though. Also, this hinders reusability, because one has to know which template and which controller belong together in order to be able to reuse them in another situation.  
+Notice how we define a template and the corresponding controller. This is a very loose coupling. Theoretically we could use one controller for multiple HTML templates easily. That's considered bad practice, though. Also, this hinders reusability, because one has to know which template and which controller belong together in order to be able to reuse them in another situation.
 So let's change that and stick them together. How? By writing a directive and converting our controller into a directive controller. We have different options:
 
 ```javascript
@@ -203,7 +203,7 @@ We can also remove the `controllerAs` property. This is an optional one. Angular
 
 ## Was that everything?
 
-Not at all, Angular 1.5 components have to offer a lot more. 
+Not at all, Angular 1.5 components have to offer a lot more.
 
 #### `bindToController` and `bindings`
 
@@ -344,7 +344,7 @@ angular.module('plunker')
       '<p>{{ $ctrl.msg }}</p>'
     ].join('')
   });
-  
+
   function MessageController() {}
 ```
 
@@ -399,3 +399,5 @@ What we've seen in this article:
 Summarizing, try to migrate your Angular frontend architecture towards a more component oriented approach. Regardless whether you plan to upgrade to Angular 2 at some point or not, it'll help you anyway create much cleaner applications.
 
 While this article didn't deep dive into this topic, but is rather intended to give you a first overview, [Tero Parviainen](https://twitter.com/teropa) has written an in-depth version some time ago: [Refactoring Angular apps to Component Style](http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html)
+
+_Thanks to [Gerard Sans](https://twitter.com/gerardsans) for reviewing this article :+1:_
