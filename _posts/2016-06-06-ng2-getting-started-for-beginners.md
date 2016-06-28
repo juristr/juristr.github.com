@@ -8,7 +8,7 @@ tags: [ "JavaScript", "Angular.js", "Angular" ]
 ---
 
 <div class="article-intro">
-	Since about half a year, I'm organizing a <a href="http://www.meetup.com/Software-Craftsmanship-SouthTyrol/">local Meetup group around Software Craftsmanship</a>. I recently also published <a href="/blog/2016/04/learning-angular2-directives-course/">a video course on "Learning Angular 2 directives"</a> and given Angular 2 finally released RC1, I decided to organize a Meetup session to introduce Angular 2 to our members.
+	Since about half a year, I'm organizing a <a href="http://www.meetup.com/Software-Craftsmanship-SouthTyrol/">local Meetup group around Software Craftsmanship</a>. I recently also published <a href="/blog/2016/04/learning-angular2-directives-course/">a video course on "Learning Angular 2 directives"</a> and given Angular 2 finally released RC1, I decided to organize a Meetup session to introduce Angular 2 to our members. <i>Hint: check out the screencast at the end :wink:</i>
 </div>
 
 <br />
@@ -67,7 +67,7 @@ As you can see, the amount of data that is being exchanged is very optimized. Ho
 
 ### Server-side pre-rendering, isomorphic JavaScript or universal JavaScript
 
-Just some names that are currently being used for the third type of web application I'd like to show you. As you might guess, it aims at taking the best of the server-side rendered web apps and SPAs. 
+Just some names that are currently being used for the third type of web application I'd like to show you. As you might guess, it aims at taking the best of the server-side rendered web apps and SPAs.
 
 In a nutshell, what it does is the following. When the user enters the URL, the server loads the JavaScript application on the server side, boots it up and then delivers the already (by the JavaScript app) pre-rendered HTML plus the JavaScript app itself back to the client. There, the browser interprets the JS app and runs it, which has then to be intelligent enough to resume where the server has left off.
 
@@ -111,7 +111,7 @@ And that leads us to the next part.
 
 ### Small!
 
-The library gets really, really small. 
+The library gets really, really small.
 
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/John_Papa">@John_Papa</a> <a href="https://twitter.com/arhoads76">@arhoads76</a> <a href="https://twitter.com/DanWahlin">@DanWahlin</a> I believe current numbers are something like 49K via Rollup and 25K via jscompiler.</p>&mdash; Brad Green (@bradlygreen) <a href="https://twitter.com/bradlygreen/status/737700486673891328">May 31, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -250,12 +250,12 @@ Initially in web development, you most likely did something like this:
 <head>...</head>
 
 <body>
-	
+
 	<script src="./vendor/jquery.min.js"></script>
 	<script src="./vendor/super-awesome-datepicker.min.js"></script>
 	<script src="./myapp.js"></script>
 </body>
-</html>	
+</html>
 
 ```
 
@@ -363,7 +363,7 @@ The Angular team decided to go with TypeScript and has written its entire codeba
 
 **Long story short**, you should get accustomed to the new features of ES2015. Browse the web or [check out my article](/blog/2015/08/jump-start-es2015/) which gives you a quick intro and links to many other useful resources.
 
-{% include article-link.html 
+{% include article-link.html
 	url="/blog/2015/08/jump-start-es2015/"
 	title="ES2015 - Jump Start"
 	text="ES6: Get introduced to the next generation JavaScript"
@@ -383,7 +383,7 @@ It's a powerful way to express semantics, isn't it? By simply looking at this HT
 
 You may also want to check out [Polymer](https://www.polymer-project.org/1.0/) and [webcomponents.org](http://webcomponents.org/)
 
-{% include article-link.html 
+{% include article-link.html
 	title="Learning Angular 2 directives: All about Components"
 	url="https://player.oreilly.com/videos/9781785884702"
 	text="Free sample from my video course where I explain different ways of creating components"
@@ -526,9 +526,9 @@ Nice, we get a reference to `PersonService` from within our component. But wait,
     <figcaption>RxJS 5</figcaption>
 </figure>
 
-Angular 2 heavily uses a paradigm called "Reactive Programming", in particular this is implemented through the [RxJS 5](https://github.com/ReactiveX/rxjs) library. Like the Angular 2 http service won't return promises, but instead RxJS Observables. 
+Angular 2 heavily uses a paradigm called "Reactive Programming", in particular this is implemented through the [RxJS 5](https://github.com/ReactiveX/rxjs) library. Like the Angular 2 http service won't return promises, but instead RxJS Observables.
 
-This pattern is not new at all, and gained a lot of popularity recently in modern frontend development. I'm not going into the details here now, as it would be an entire article on its own. Just know that Angular 2 will heavily rely on it and that's why you should probably go and learn more about it. 
+This pattern is not new at all, and gained a lot of popularity recently in modern frontend development. I'm not going into the details here now, as it would be an entire article on its own. Just know that Angular 2 will heavily rely on it and that's why you should probably go and learn more about it.
 
 Here are some good articles to get started :smiley:
 
