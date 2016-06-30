@@ -2,7 +2,6 @@
 layout: post_new
 title: "RxJS first steps - Subject and ReplaySubject"
 lead: "Let's get started with reactive programming"
-postimg: "/blog/assets/imgs/meetup-intro-angular2/ng2-gettingstarted-image.png"
 category: angular2
 tags: [ "JavaScript", "Angular.js", "Angular" ]
 ---
