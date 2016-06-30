@@ -61,6 +61,9 @@ Also, **Twitter is an awesome source of information** (at least for me). So if y
 - **[Andre Staltz](https://twitter.com/andrestaltz) -** A reactive programming and functional programming expert which has written THE introduction to reactive programming (see link at end of this article)
 - **[Michel Weststrate](https://twitter.com/mweststrate) -** Creator of MobX, a state management library that embraces reactive programming like no other lib
 - **[Rob Wormald](https://twitter.com/robwormald) -** Developer advocate at Google on the Angular team and big proponent of reactive programming. He also created [ngrx](https://github.com/ngrx), a project that started as [a Redux inspired library built with RxJS](https://github.com/ngrx/store) and evolved to a collection of reactive extensions for Angular 2.
+- **[Victor Savkin](https://twitter.com/victorsavkin) -** Developer advocate at Google on the Angular team. On his blog he writes interesting articles, also on reactive programming, in particular [this one](http://victorsavkin.com/post/146359880996/the-taxonomy-of-reactive-programming).
+- _and probably many others. Let me know and I'll list them here :smiley:_
+
 
 ## Subject and ReplaySubject
 
@@ -110,8 +113,8 @@ Also the subscribers are registered when the corresponding button is clicked:
 ```javascript
 addClickListener('subs1', function() {
   broadcast.subscribe(function(value) {
-    print('Subs1 got ' + value);  
-  });  
+    print('Subs1 got ' + value);
+  });
 });
 ```
 
@@ -134,7 +137,7 @@ subscriber.unsubscribe();
 
 <a class="jsbin-embed" href="http://jsbin.com/tanaboc/6/embed?js,output">RxJS First Steps - Subject and ReplaySubject on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.35.13"></script>
 
-Nice :+1:. 
+Nice :+1:.
 
 #### What if I want to subscribe only to specific events?
 
@@ -143,20 +146,20 @@ In a publish/subscribe environment my modules in the application might only be i
 Like, we want subscriber 1 to only get values < 50.
 
 ```javascript
-sub1Subscription = 
+sub1Subscription =
     broadcast
         .filter(function(value){
           return value < 50;
         })
         .subscribe(function(value) {
-          print('Subs1 got ' + value);  
-        });  
+          print('Subs1 got ' + value);
+        });
 ```
 
 If you're using ES6, it looks even cleaner:
 
 ```javascript
-sub1Subscription = 
+sub1Subscription =
     broadcast
         .filter(x => x < 50)
         .subscribe(x => print('Subs1 got ' + value));
@@ -185,7 +188,7 @@ Besides `Subject` which is the most basic one and `ReplaySubject`, there exist a
 
 ## Screencast
 
-_(Screencast will be embedded here)_
+<iframe width="853" height="480" src="https://www.youtube.com/embed/xMaskTop88E" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 ## Conclusion
 
