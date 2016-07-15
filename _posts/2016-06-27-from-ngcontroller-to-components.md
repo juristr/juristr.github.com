@@ -5,6 +5,7 @@ lead: "Driving your Angular frontend architecture to a new level"
 postimg: "/blog/assets/imgs/ngctrl-to-component-postimg.png"
 category: angular1
 tags: [ "JavaScript", "Angular.js"]
+reposts: ["https://dzone.com/articles/from-ng-controller-to-components-with-angular-15"]
 ---
 
 <div class="article-intro">
