@@ -531,6 +531,7 @@ The scenarios above were the simples, but at the same time probably also the mos
 
 ### Interactive Tutorials
 
+- [Interactive application to learn Git](https://github.com/jlord/git-it-electron)
 - [Try Git in 15 minutes](http://try.github.io/)
 - [Learning Git - Interactive Online Tutorial](http://pcottle.github.io/learnGitBranching/index.html)
 
