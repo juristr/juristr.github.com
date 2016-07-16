@@ -369,7 +369,27 @@ article {
       max-width: 350px;
     }
 
+    iframe {
+      max-width: 100%;
+    }
+
   }
+
+  .article-title {
+    font-size: 40px;
+  }
+  .article-subtitle {
+    font-size: 26px;
+  }
+
+  .article-intro {
+    font-size: 23px;
+  }
+
+  article .article-body blockquote.emphasized {
+    margin: inherit;
+  }
+
 }
 
 
