@@ -235,7 +235,7 @@ The problem is that at that point, within your directive controller, you'd have 
 {%endraw%}
 ```
 
-Much better, `message` will now be attached directly to our controller instance. Still, we have to create the **isolate scope** with `scope: {}` which isn't the most elegant way of doing it. It gets better :smiley:. The new component syntax simplifies this into a single `bindings` property, which also creates an isolate scope behind the scenes.
+Much better, `message` will now be attached directly to our controller instance. Still, we have to create the **isolate scope** with `scope: {}` which isn't the most elegant way of doing it. It gets better :smiley:. The **new component syntax** simplifies this into a single `bindings` property, which also creates an isolate scope behind the scenes. (Note we're no more using `.directive`, but instead `.component`)
 
 ```javascript
 .component('myDirective', {
