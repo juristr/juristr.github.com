@@ -43,7 +43,7 @@ Hence, whenever you deploy your application in a production environment you shou
 
 ```
 ...
-import { enableProdMode } from 'angular2/core';
+import { enableProdMode } from '@angular/core';
 
 // enable production mode and thus disable debugging information
 enableProdMode();
