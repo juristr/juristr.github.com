@@ -3,8 +3,7 @@ layout: post_new
 title: "Angular 2 Forms - a first look"
 lead: "A first quick look at the new Forms API in Angular 2"
 postimg: "/blog/assets/imgs/forms.png"
-category: angular2
-tags: [ "JavaScript", Angular"]
+tags: [ "JavaScript", "Angular"]
 ---
 
 <div class="article-intro">
