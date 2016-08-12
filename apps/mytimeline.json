@@ -1,6 +1,12 @@
 [
   {
     "date": "2016-06-26",
+    "link": "https://angular.io/news.html",
+    "title": "Angular 2 Forms - a first look gets published on the official Angular news site",
+    "description": ""
+  },
+  {
+    "date": "2016-06-26",
     "link": "https://medium.mybridge.co/top-10-angular-2-articles-for-the-past-month-v-june-37bb96b667a3#.ss9xav5jn",
     "title": "Angular 2 - A Getting Started Guide for Beginners gets ranked #1 among 1500 articles",
     "description": ""
