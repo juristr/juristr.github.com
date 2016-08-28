@@ -290,5 +290,16 @@ Great, so I hope I was able to give you a first overview of what the Forms API l
     text="Learn how to create custom form controls with Pascal Precht from Thoughtram"
 %}
 
+<!-- Hotjar Tracking Code for http://juristr.com/blog/2016/08/ng2-forms-first-look/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:274814,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 

@@ -623,3 +623,15 @@ Congrats, you've come to the end :wink:. So by now you probably realize there's 
 So this was basically just the beginning. From here you can start go more in depth. Follow the links I provided to get started. Also, feel [free to drop me a line on Twitter](https://twitter.com/juristr). In general, try to connect with the Angular 2 community (over Twitter, GitHub, Slack,...), there are lots and lots of awesome people willing to help you with their enourmous expertise. :smiley:
 
 _Thanks to [Martin Hochel](https://twitter.com/martin_hotell) for reviewing this article :+1:_
+
+<!-- Hotjar Tracking Code for http://juristr.com/blog/2016/06/ng2-getting-started-for-beginners/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:274815,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>

@@ -196,4 +196,16 @@ Angular 2 components are not just like plain Angular 1 directives with a differe
 
 By default it emulates, but if you set it to `ViewEncapsulation.Native` you'll get **native shadow DOM** support. Check out [@toddmotto's](https://twitter.com/toddmotto) article on **[Emulated or Native Shadow DOM in Angular 2 with ViewEncapsulation](https://toddmotto.com/emulated-native-shadow-dom-angular-2-view-encapsulation)** for an in depth guide on this :thumbsup:.
 
+<!-- Hotjar Tracking Code for http://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:274816,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
 
