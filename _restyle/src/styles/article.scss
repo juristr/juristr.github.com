@@ -3,7 +3,7 @@
 @import "_navbar";
 @import "_fixedcontainer";
 @import "_ads";
-@import "_article-author";
+// @import "_article-author";
 @import "_article-tags";
 @import "_article-images";
 @import "_article-links";
@@ -24,7 +24,7 @@ body {
 
 article {
   background-color: white;
-  padding: 140px 0 0 0;
+  padding: 50px 0 0 0;
   // padding: 140px 25px 20px 25px;
   // margin: 10px auto 0 auto;
   // max-width: $article-body-maxwidth;
@@ -32,6 +32,14 @@ article {
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: 0.01rem;
+
+  .date-container {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    max-width: $article-body-maxwidth;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 0.7em;
+  }
 
   // h1, h2, h3, h4,
   figure,
@@ -55,7 +63,7 @@ article {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.04em;
-    margin-top: 45px;
+    margin-top: 5px;
     margin-bottom: 8px;
   }
 
