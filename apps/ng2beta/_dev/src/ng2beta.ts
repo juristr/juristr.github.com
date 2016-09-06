@@ -58,7 +58,10 @@ import {LastUpdateCmp} from './components/last-update.component';
         </p>
         <p style="font-size:19px">Also, check out my new <a href="/blog/2016/04/learning-angular2-directives-course/"><strong>video course on "Learning Angular 2 Directives"!</strong></p>
         -->
-        <p style="font-size:19px">There's a <a href="http://www.meetup.com/AngularJS-MTV/events/233816242/">special event</a> by Google in Mountain View</p>
+        <p style="font-size:19px">
+        There's a <a href="http://www.meetup.com/AngularJS-MTV/events/233816242/">special event</a> by Google in Mountain View<br />
+        Also make sure <a href="https://twitter.com/juristr">to follow me on Twitter</a> for news and updates!
+         </p>
         <br />
         <a href="https://github.com/angular/angular/blob/master/CHANGELOG.md#200-rc0-2016-05-02" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
           View the changelog
