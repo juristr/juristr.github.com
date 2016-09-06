@@ -24,10 +24,10 @@ import {LastUpdateCmp} from './components/last-update.component';
     template: `
       <div class="android-be-together-section-hero">
         <div class="logo-font android-slogan">
-          <h3>Angular 2 Release Candidate is out!!</h3>
+          <!--<h3>Angular 2 Release Candidate is out!!</h3>-->
 		      <!--<span class="subtitle">Estimated date based on current speed</span>-->
           <!--<h1 [release-date]="ng2Progress.data"></h1>-->
-          <h1>2nd May 2016</h1>
+          <h1>14th September 2016??</h1>
         </div>
         <div>
           <img src="http://juristr.com/blog/assets/imgs/angular2logo.svg" style="width:150px;height:150px" />
@@ -55,8 +55,10 @@ import {LastUpdateCmp} from './components/last-update.component';
         <!--<p>
           Also, check out <a href="/blog/tags/#Angular.js">some of my articles on Angular 1.x</a> and <a href="/blog/tags/#Angular">Angular 2</a> and/or <a href="https://twitter.com/juristr">follow me on Twitter</a> for getting notified about new articles I'm releasing.<br/>
           I'm also working on a screencast series on Angular 2, so stay tuned ;)
-        </p>-->
+        </p>
         <p style="font-size:19px">Also, check out my new <a href="/blog/2016/04/learning-angular2-directives-course/"><strong>video course on "Learning Angular 2 Directives"!</strong></p>
+        -->
+        <p style="font-size:19px">There's a <a href="http://www.meetup.com/AngularJS-MTV/events/233816242/">special event</a> by Google in Mountain View</p>
         <br />
         <a href="https://github.com/angular/angular/blob/master/CHANGELOG.md#200-rc0-2016-05-02" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
           View the changelog
@@ -67,7 +69,7 @@ import {LastUpdateCmp} from './components/last-update.component';
         </a>
 	<br/>
         <br/>
-        <i>Stand by as this site start tracking of the <a href="https://github.com/angular/angular/milestones">final release</a> as soon as development starts</i>
+        <!--<i>Stand by as this site start tracking of the <a href="https://github.com/angular/angular/milestones">final release</a> as soon as development starts</i>-->
       </div>
     `,
     directives: [CORE_DIRECTIVES, Chart, OpenIssuesCmp, ResolvedIssuesCmp, CurrentPaceCmp, ReleaseDateCmp, LastUpdateCmp]
