@@ -1,6 +1,63 @@
---
+---
 layout: about
-title: "Hire me!"
+title: Hi!
+current: about
 ---
 
-Hi, wanna hire me! Drop me a line :smiley:
+I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work in the role as a tech lead/architect for a local e-government company [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22). I'm mainly doing full-stack development in C# and Java. Most of the time I'm on the frontend however, doing some heavy coding with JavaScript (Angular), which is also my main passion. I'm a [tech reviewer for PacktPub](https://www.packtpub.com/), [Author of a video course on Angular 2](/blog/2016/04/learning-angular2-directives-course/) and [Software Craftsmanship Meetup organizer](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/). I'm also a [DZone MVB](https://dzone.com/users/999973/juristr.html).
+
+<script>
+(function() {
+  // calculates my age
+  var date1 = new Date("5/15/1985");
+  var date2 = new Date();
+  var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+  //var diffDays = Math.ceil(timeDiff / 1000 / 60 / 24 / 365);
+
+  var diff = timeDiff / 1000;
+  var seconds = Math.round(diff % 60);
+  diff /= 60;
+  var minutes = Math.round(diff % 60);
+  diff /= 60;
+  var hours = Math.round(diff % 24);
+  diff /= 24;
+  var days = Math.round(diff % 365);
+  diff /= 365;
+  var years = Math.round(diff);
+
+  document.getElementById('age').innerHTML = years;
+})();
+</script>
+
+## Contact
+
+Feel free to [ask me any question on my AMA repo]() or simply drop me a line at <a href='mailto:&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;'>&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;</a>.
+
+I'm also available on these social networks: {% include social_icons %}
+
+
+## Current Interests
+
+I'm always learning and in search for new challenges. Here are some of my current fields of interest.
+
+{% assign interests = "Angular 1.x,Angular 2,Progressive Web Applications,Node.js,Docker,Microservices,Distributed architectures" | split: "," %}
+<div class="tags">
+  {% for tag in interests %}
+  <a href="javascript:;">{{ tag }}</a>
+  {% endfor %}
+</div>
+
+## Partnership
+
+I have a partnership with the following sites, wherefore posts might also get re-published there.
+
+- [DZone](http://www.dzone.com/users/juristr)
+
+Previously:
+
+- Java Code Geeks
+- .Net Code Geeks
+
+## Free time
+
+In my free time I'm a passionate martial arts practitioner. I've been practicing Yoseikan Budo for roughly over 17 years now. I'm the [owner of a 2nd Dan black belt](/blog/2012/10/2nd-dan-yoseikan-budo/) and I also regularly teach martial arts classes.
