@@ -6,6 +6,8 @@ current: about
 
 I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work in the role as a tech lead/architect for a local e-government company [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22). I'm mainly doing full-stack development in C# and Java. Most of the time I'm on the frontend however, doing some heavy coding with JavaScript (Angular), which is also my main passion. I'm a [tech reviewer for PacktPub](https://www.packtpub.com/), [Author of a video course on Angular 2](/blog/2016/04/learning-angular2-directives-course/) and [Software Craftsmanship Meetup organizer](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/). I'm also a [DZone MVB](https://dzone.com/users/999973/juristr.html).
 
+![](/about/imgs/about-angular2.png)
+
 <script>
 (function() {
   // calculates my age
@@ -61,3 +63,5 @@ Previously:
 ## Free time
 
 In my free time I'm a passionate martial arts practitioner. I've been practicing Yoseikan Budo for roughly over 17 years now. I'm the [owner of a 2nd Dan black belt](/blog/2012/10/2nd-dan-yoseikan-budo/) and I also regularly teach martial arts classes.
+
+![](/about/imgs/katana.jpg)
