@@ -33,7 +33,7 @@ I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. C
 
 ## Contact
 
-Feel free to [ask me any question on my AMA repo]() or simply drop me a line at <a href='mailto:&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;'>&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;</a>.
+Feel free to [ask me any question on my AMA repo]() or simply drop me a line at {% include email.html %}.
 
 I'm also available on these social networks: {% include social_icons %}
 
