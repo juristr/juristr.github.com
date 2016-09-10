@@ -4,9 +4,9 @@ $navbar-height: 175px;
 
 nav {
   font-family: $article-title-font;
-  height: $navbar-height;
+  // height: $navbar-height;
   display:block;
-  overflow:hidden;
+  // overflow:hidden;
   box-sizing: border-box;
   position: relative;
   // z-index: 1001;

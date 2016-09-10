@@ -2,9 +2,7 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/_navbar\.scss}line{font-family:\000035}}
 nav {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  height: 175px;
   display: block;
-  overflow: hidden;
   box-sizing: border-box;
   position: relative;
   width: 100%;
