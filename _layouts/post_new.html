@@ -2,8 +2,11 @@
 layout: default_new
 current: blog
 ---
+{% assign nav_type = "navbar-blog.html" %}
+{% include navigationbar.html %}
+
 <article>
-    <div class="author">
+    <!-- <div class="author">
         <div class="author-image">
             <a href="/about">
                 <img src="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" itemprop="photo" alt="Juri Strumpflohner" title="Juri Strumpflohner"></a>
@@ -16,6 +19,11 @@ current: blog
                 <span class="reading-time"></span>
             </div>
         </div>
+    </div> -->
+    <div class="date-container">
+        <span class="post-date">{{ page.date | date: "%b %d, %Y" }}</span>
+        <span class="dot-divider"></span>
+        <span class="reading-time"></span>
     </div>
     <h1 class="article-title">{{ page.title }}</h1>
     <h2 class="article-subtitle">{{ page.lead }}</h2>
@@ -117,9 +125,19 @@ Please enable JavaScript to view the
 <!-- <script type="text/javascript" src="/assets/fluidbox/imagesloaded.pkgd.min.js"></script> -->
 <script type="text/javascript" src="/assets/js/new/fluidbox.js"></script>
 <script type="text/javascript" src="/assets/js/new/progressiveImages.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/linkjuice.min.js"></script>
 <script>
     $('a.image--zoom,.gallery>a').fluidbox();
+
+    linkjuice.init('.article-body', {
+        selector: ['h2', 'h3'],
+        icon: '',
+        contentFn: function (node) {
+            return node.innerHTML;
+        }
+      });
+
 </script>
 
-
+ -->
 <script>hljs.initHighlightingOnLoad();</script>

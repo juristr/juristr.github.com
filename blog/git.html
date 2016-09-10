@@ -1,22 +1,22 @@
 ---
 layout: default
-title: "Juri's TechBlog - Angular 1 Collection"
-lead: "All of my Angular 1.x related articles grouped together"
-permalink: /blog/collections/angular-1/
-postimg: /blog/assets/imgs/angular1-index-bg.png
+title: "Juri's TechBlog - Git Collection"
+lead: "All of my Git related articles grouped together"
+permalink: /blog/collections/git/
+postimg: /blog/assets/imgs/git.png
 ---
 
 <style>
     .front-bg {
-        background-color: #0143A3;
-        background: -webkit-linear-gradient(#0143A3,#0273D4);
-        background: linear-gradient(#0143A3,#0273D4);
+        background-color: #424242;
+        background: -webkit-linear-gradient(#424242,#757575);
+        background: linear-gradient(#424242,#757575);
         color: #fff;
     }
 
     .front-bg h1 {
         content: '';
-        background: url("/blog/assets/imgs/angular1logo.png") top center no-repeat;
+        background: url("/blog/assets/imgs/git.png") top center no-repeat;
         background-size: contain;
         position: absolute;
         left: 0;
@@ -52,9 +52,9 @@ postimg: /blog/assets/imgs/angular1-index-bg.png
     <header class="hero hero-home layout-single-column">
       <div class="align-middle layout-single-column layout-foreground layout-fill-height">
         <div class="align-block">
-          <h1 class="hero-title">Angular 1.x</h1>
+          <h1 class="hero-title">Git</h1>
           <p class="hero-description hero-description-tagline">
-            The finest articles on Angular 1.x straight from this blog
+            All you need to know to get productive with Git!
           </p>
         </div>
       </div>
@@ -66,7 +66,7 @@ postimg: /blog/assets/imgs/angular1-index-bg.png
   <section class="row" style="max-width:1050px; margin: 0 auto;">
 
     <div class="col-md-12 col-lg12 col-sm-12 categories-list">
-      <a href="/blog/" alt="Blog">All</a> · <a href="/blog/collections/git/" alt="Git articles">Git</a> · Angular 1.x · <a href="/blog/collections/angular-2/" alt="Angular 2 articles">Angular 2</a>
+      <a href="/blog/" alt="Blog">All</a> · Git · <a href="/blog/collections/angular-1/" alt="Angular 1.x articles">Angular 1.x</a> · <a href="/blog/collections/angular-2/" alt="Angular 2 articles">Angular 2</a>
       <hr />
     </div>
 
@@ -76,7 +76,7 @@ postimg: /blog/assets/imgs/angular1-index-bg.png
       <div class="post-list">
 
       {% for post in site.posts %}
-        {% if post.tags contains 'Angular.js' %}
+        {% if post.tags contains 'Git' %}
             {% if post.type != "link" %}
               <div class="row post-item">
                 <h3 class="post-item-title">

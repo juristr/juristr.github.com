@@ -1,7 +1,9 @@
-article {
+// article {
 
   .tags {
     padding: 20px 0 20px 0;
+    line-height: 2;
+    letter-spacing: 0.01rem;
 
     a {
       font-size: 15px;
@@ -10,6 +12,7 @@ article {
       color: rgba(0,0,0,0.6);
       background: rgba(0,0,0,0.05);
       border-radius: 3px;
+      background-image:inherit !important;
 
       &:hover {
         background: rgba(0,0,0,0.1);
@@ -19,4 +22,4 @@ article {
 
   }
 
-}
+// }

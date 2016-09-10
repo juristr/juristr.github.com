@@ -1,0 +1,8 @@
+a.linkjuice:hover {
+    &:before {
+        content: '#';
+        position: absolute;
+        margin-left: -31px;
+    }
+
+}
