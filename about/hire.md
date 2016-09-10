@@ -5,20 +5,21 @@ title: Hire me!
 
 Yes, I'm currently looking for a new challenge in my career. Feel free to read on, or take a look at my CV or LinkedIn profile:
 
-- [StackOverflow Careers CV](http://stackoverflow.com/cv/juri)
-- [My LinkedIn Profile](https://it.linkedin.com/in/juristr)
+- <a href="http://stackoverflow.com/cv/juri" target="_blank">StackOverflow Careers CV</a>
+- <a href="https://it.linkedin.com/in/juristr" target="_blank">My LinkedIn Profile</a>
 
 Also make sure you check out [my about page](/about), [my blog posts](/blog) or my other activities on these social networks: {% include social_icons %}
 
 Obviously you can also reach out to me via mail: {% include email.html %}
 
-### What kind of job are you looking for?
+### What am I look for
 
-I'm looking for a job as a frontend or full stack developer with the possibility to eventually grow into the role as a tech lead. I'm particularly interested in JavaScript based frontends and also Node.js. That's where I'm currently most active in the community, but I'm keen to explore new fields as well which I'm happy to discuss with you.
+My current interest are based in the frontend web development area, which is why I'm currently mainly looking for a **full-time, remote position** as a tech lead with focus on frontend web development.  
+I'm [very interested backend architectures](/about#interests) as well, especially distributed systems and the whole topics around microservices and containers (Docker, ...).
 
-I'm currently mainly looking for a **full-time, remote position**.
+But I'm always keen to explore new fields. So if you think I could be a good match, then let's discuss. Just [contact me](/about#contact). I'm looking forward to hearing from you!
 
-### What are you doing right now at your current job on a day to day basis?
+### What I am doing on a day to day basis at my current job
 
 Currently I'm working as a **software architect** for an e-government company. The better description for the role is problably the one of a tech lead as I do **lots of coding** on a daily basis. I help **design software solutions**, create the **base-line architecture** and discuss it with my team. I'm usually then heavily involved in coding the most difficult/tough parts of the system myself and/or by giving support to my team members.
 
@@ -29,21 +30,21 @@ I mostly contribute on the frontend side (where usually most difficulties arise)
   <figcaption>This is what my git commit history usually looks like. Empty spots are weekends or holidays :wink:</figcaption>
 </figure>
 
-### What's important to you?
+### What's most important to me
 
 I want to work for a company...
 
 - which **values people** in the first place
-- which recognizes the value behind effective (not useless) **communication**
-- which knows about the value of **motivated employee and good company culture**
+- which knows about the value of **motivated employees and good company culture**
+- which **values quality** over quantity
 - which **helps me grow** with them, be and remain innovative at an international level
 - which doesn't care when, where or for how long I work, **but rather how I work and what I produce**
-- which **values quality** over quantity
 - which **isn't built on top of huge organizational hierarchies**
 - which embraces **open source**
 
-### What are your goals for the next few years?
+### My professional goals for the next few years
 
 - attend more conferences
 - become more active in the community (i.e. speak at conferences)
+- be more influential
 

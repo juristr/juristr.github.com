@@ -449,7 +449,7 @@ article .col-3 {
   animation: fluidboxLoading 1s 0s infinite ease-in-out forwards;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000313}}
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -459,12 +459,12 @@ body {
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000322}}
 .dot-divider::after {
   content: "·";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000326}}
 article {
   background-color: white;
   padding: 50px 0 0 0;
@@ -473,7 +473,7 @@ article {
   line-height: 1.5;
   letter-spacing: 0.01rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000337}}
 article .date-container {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 auto;
@@ -481,7 +481,7 @@ article .date-container {
   color: rgba(0, 0, 0, 0.8);
   font-size: 0.7em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000345}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000346}}
 article figure,
 article .author,
 article .article-title,
@@ -493,7 +493,7 @@ article .article-body {
   margin: 0 auto;
   max-width: 850px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000358}}
 article .article-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.8);
@@ -505,7 +505,7 @@ article .article-title {
   margin-top: 5px;
   margin-bottom: 8px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000371}}
 article .article-subtitle {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: -0.02em;
@@ -516,17 +516,23 @@ article .article-subtitle {
   color: rgba(0, 0, 0, 0.44);
   margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000384}}
 article .article-body {
   font-family: "Lora", serif;
   font-smoothing: antialiased;
   margin: 0 auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000391}}
 article .article-body h1, article .article-body h2, article .article-body h3, article .article-body h4 {
   clear: both;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\0000394}}
+article .article-body h1 a, article .article-body h2 a, article .article-body h3 a, article .article-body h4 a {
+  text-decoration: none;
+  border: 0;
+  background-image: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003102}}
 article .article-body a {
   color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
@@ -535,16 +541,16 @@ article .article-body a {
   background-size: 2px 3px;
   background-position: 0 22px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003111}}
 article .article-body p {
   font-weight: 400;
   margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003116}}
 article .article-body div.clear {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003120}}
 article .article-body hr {
   display: block;
   width: 100px;
@@ -552,7 +558,7 @@ article .article-body hr {
   border: 0;
   letter-spacing: 18px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003129}}
 article .article-body hr::before {
   content: '...';
   display: inline-block;
@@ -561,11 +567,11 @@ article .article-body hr::before {
   position: relative;
   top: -30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003138}}
 article .article-body ol, article .article-body ul {
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003142}}
 article .article-body ol {
   list-style: none;
   list-style-image: none;
@@ -573,13 +579,13 @@ article .article-body ol {
   margin-top: 10px;
   margin-bottom: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003150}}
 article .article-body li {
   margin-left: 30px;
   margin-bottom: 12px;
   padding-top: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003156}}
 article .article-body ol > li:before {
   padding-right: 12px;
   counter-increment: post;
@@ -593,7 +599,7 @@ article .article-body ol > li:before {
   margin-left: -58px;
   text-align: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003162}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003170}}
 article .article-body blockquote.emphasized {
   line-height: 1.4;
   text-align: center;
@@ -610,7 +616,7 @@ article .article-body blockquote.emphasized {
   -o-transition: margin .1s;
   transition: margin .1s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003187}}
 article .article-body blockquote {
   letter-spacing: 0.01rem;
   font-weight: 400;
@@ -620,27 +626,27 @@ article .article-body blockquote {
   margin-left: -23px;
   padding-bottom: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003188}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003196}}
 article .article-body blockquote > p {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003200}}
 article .article-body blockquote cite {
   font-size: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003196}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003204}}
 article .article-body blockquote cite:before {
   content: '- Source: ';
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003210}}
 article .article-body .article-intro {
   font-size: 25px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003205}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003213}}
 article .article-body .article-intro a {
   background-position: 0 27px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003219}}
 article .article-body h4 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: -0.02em;
@@ -653,7 +659,7 @@ article .article-body h4 {
   margin-top: 40px;
   margin-bottom: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003225}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003233}}
 article .article-body pre {
   font-family: 'Source Code Pro';
   overflow-x: auto;
@@ -665,14 +671,14 @@ article .article-body pre {
   display: block;
   font-size: 16px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003246}}
 article .article-body pre,
 article .article-body code {
   background: whitesmoke;
   border: 0;
   box-shadow: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003245}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003253}}
 article .article-body img.emoji {
   width: 20px;
   height: 20px;
@@ -681,36 +687,36 @@ article .article-body img.emoji {
   margin-bottom: 6px;
   border: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003256}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003264}}
 article .article-body .video iframe {
   width: 760px;
   height: 465px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003273}}
 article .article-footer {
   margin: 0 auto;
   padding-top: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003271}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003279}}
 article .article-footer .article-sharing #disqus {
   width: 200px;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003276}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003284}}
 article .article-footer .article-sharing .article-sharing-socialmedia {
   text-align: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003279}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003287}}
 article .article-footer .article-sharing .article-sharing-socialmedia a {
   text-decoration: none;
   color: inherit;
   color: rgba(0, 0, 0, 0.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003293}}
 article .article-footer .article-sharing .article-sharing-socialmedia a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003300}}
 article .article-footer .comments-button,
 article .article-footer button.paypal-button {
   display: inline-block;
@@ -727,43 +733,43 @@ article .article-footer button.paypal-button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003309}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003317}}
 article .article-footer .comments-button:hover,
 article .article-footer button.paypal-button:hover {
   background: rgba(87, 173, 104, 0.8);
   border-color: transparent;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003324}}
 article .article-footer .paypal-button {
   height: 42px;
   font-weight: inherit;
   font-style: inherit;
   font-family: inherit;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003332}}
 article .article-footer .paypal-button button:before,
 article .article-footer .paypal-button button:after {
   background: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003337}}
 article .article-footer form.paypal-button {
   display: inline-block;
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003344}}
 article #disqus_thread {
   margin-top: 50px;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 850px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003352}}
   article {
     padding-left: 5px;
     padding-right: 5px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003356}}
   article figure,
   article .author,
   article .article-title,
@@ -777,12 +783,12 @@ article #disqus_thread {
   }
 }
 @media screen and (max-width: 450px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003372}}
   article {
     padding-left: 5px;
     padding-right: 5px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003376}}
   article figure,
   article .author,
   article .article-title,
@@ -794,27 +800,27 @@ article #disqus_thread {
     margin: 0 auto;
     max-width: 350px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003388}}
   article iframe {
     max-width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003394}}
   .article-title {
     font-size: 40px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003397}}
   .article-subtitle {
     font-size: 26px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003401}}
   .article-intro {
     font-size: 23px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/juri\/blog\/_restyle\/src\/styles\/article\.scss}line{font-family:\00003405}}
   article .article-body blockquote.emphasized {
     margin: inherit;
   }

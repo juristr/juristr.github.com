@@ -32,6 +32,7 @@ I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. C
 </script>
 
 ## Contact
+<a name="contact"></a>
 
 Feel free to [ask me any question on my AMA repo]() or simply drop me a line at {% include email.html %}.
 
@@ -39,6 +40,7 @@ I'm also available on these social networks: {% include social_icons %}
 
 
 ## Current Interests
+<a name="interests"></a>
 
 I'm always learning and in search for new challenges. Here are some of my current fields of interest.
 
