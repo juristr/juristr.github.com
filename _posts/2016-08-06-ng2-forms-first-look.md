@@ -68,7 +68,35 @@ Let's take a look.
 
 ## Enabling the Form Api
 
-Before starting straight into form coding, we need to disable the deprecated form support (`disableDeprecatedForms()`) and enable the brand new Forms API (`provideForms()`) on our Angular 2 app. Open your main file where you bootstrap the app.
+To enable the Forms API you need to import the according `FormsModule` from `@angular/forms` and reference it within the module where you plan to use it.
+
+```
+import { FormsModule }   from '@angular/forms';
+...
+
+@NgModule({
+  imports: [ ..., FormsModule ],
+  declarations: [ ... ],
+  bootstrap: [ ... ]
+})
+export class AppModule {}
+```
+
+To learn more about `NgModule` check out [the guide on the official Angular 2 site](https://angular.io/docs/ts/latest/guide/ngmodule.html).
+
+{% include article-link.html
+    url="https://angular.io/docs/ts/latest/guide/ngmodule.html"
+    title="Angular Modules (NgModule)"
+    text="Learn how to bundle Angular modules using the NgModule API"
+%}
+
+Now we should be good to go. **Here's a runnable Plunker** which you can use to test out the various concepts as we quickly go over them.
+
+<iframe src="https://embed.plnkr.co/7451oI7vgmZnCBuDMESt/" width="100%" height="400px"> </iframe>
+
+#### Prior to Angular 2 RC5
+
+Prior to RC5 when Angular modules have been introduced, you had to explicitly disable the "old" Forms API which was already present in Angular 2. To disable it, call the `disableDeprecatedForms()` function and then enable the brand new Forms API using the `provideForms()` and by passing it along to the Angular 2 bootstrap function:
 
 ```javascript
 // main entry point
@@ -84,9 +112,7 @@ bootstrap(App, [
   .catch(err => console.error(err));
 ```
 
-Now we should be good to go. **Here's a runnable Plunker** which you can use to test out the various concepts as we quickly go over them.
-
-<iframe src="https://embed.plnkr.co/7451oI7vgmZnCBuDMESt/" width="100%" height="400px"> </iframe>
+But I highly recommend to upgrade to the latest Angular 2 release if possible.
 
 ## Template driven approach
 
@@ -211,7 +237,23 @@ We've seen the template-based approach. Let's take a look at the **reactive or m
 
 <iframe src="https://embed.plnkr.co/IYnmaA22xt59YRqE1Lk9/" width="100%" height="400px"> </iframe>
 
-Given it's model-based, we start from the JavaScript code of our component
+To **activate the reactive approach** you have to import the `ReactiveFormsModule` from `@angular/forms` rather than the `FormsModule` which we imported before:
+
+```javascript
+import { ReactiveFormsModule } from '@angular/forms';
+
+...
+
+@NgModule({
+  imports: [ ..., ReactiveFormsModule ],
+  declarations: [ ... ],
+  bootstrap: [ ... ]
+})
+export class AppModule {}
+
+```
+
+Then, given the reactive approach is model-based, we start from the JavaScript code of our component
 
 ```javascript
 ...
@@ -236,8 +278,6 @@ export class App {
 Note how we construct our controls and groups programmatically using the `FormControl` and `FormGroup` classes. Next we need to hook this `form` to our template:
 
 ```html
-import {REACTIVE_FORM_DIRECTIVES} from '@angular/forms';
-
 @Component({
   template: `
     <div>
@@ -246,13 +286,12 @@ import {REACTIVE_FORM_DIRECTIVES} from '@angular/forms';
         ...
       </form>
     </div>
-  `,
-  directives: [REACTIVE_FORM_DIRECTIVES]
+  `
 })
 export class App { ... }
 ```
 
-We do this by using the `[formGroup]` binding. Also note, that for doing so we need to add the `REACTIVE_FORM_DIRECTIVES` to the `directives` array of our component.
+We do this by using the `[formGroup]` binding.
 
 And finally, we need to map the group and form controls using `formControlName` and `formGroupName`.
 
