@@ -24,7 +24,7 @@ import {LastUpdateCmp} from './components/last-update.component';
     template: `
       <div class="android-be-together-section-hero">
         <div class="logo-font android-slogan">
-          <!--<h3>Angular 2 Release Candidate is out!!</h3>-->
+          <h3>Angular 2 Final Release Date</h3>
 		      <!--<span class="subtitle">Estimated date based on current speed</span>-->
           <!--<h1 [release-date]="ng2Progress.data"></h1>-->
           <h1>14th September 2016??</h1>
