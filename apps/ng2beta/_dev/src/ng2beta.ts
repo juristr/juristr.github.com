@@ -59,14 +59,14 @@ import {LastUpdateCmp} from './components/last-update.component';
         <p style="font-size:19px">Also, check out my new <a href="/blog/2016/04/learning-angular2-directives-course/"><strong>video course on "Learning Angular 2 Directives"!</strong></p>
         -->
         <p style="font-size:19px">
-        Full announcement <a href="https://www.youtube.com/watch?v=xTIWBXkpvDc">here</a>. <br /><br />
+        Full announcement <a href="http://juristr.com/blog/2016/09/ng2-released/">here</a>. <br /><br />
         Also make sure <a href="https://twitter.com/juristr">to follow me on Twitter</a> for news and updates!
          </p>
         <br />
         <a href="https://github.com/angular/angular/blob/master/CHANGELOG.md" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
           View the changelog
         </a>
-        <a href="https://twitter.com/intent/tweet?hashtags=angular2&original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&ref_src=twsrc%5Etfw&text=Angular%202%20final%20is%20out!!!%20Follow%20me%20for%20more%20news%20along%20the%20way%20%3A)&tw_p=tweetbutton&url=http%3A%2F%2Fjuristr.com%2Fapps%2Fng2beta%2F&via=juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-url="http://juristr.com/apps/ng2beta/" data-text="#angular2 final may be released soon!! Keep an eye on this site :)" data-via="juristr" data-size="large" data-hashtags="angular2">Tweet it!</a>
+        <a href="https://twitter.com/intent/tweet?hashtags=angular2&original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&ref_src=twsrc%5Etfw&text=After%202%20years%20of%20intense%20development%2C%20Angular%202%20has%20been%20released!!%20%20Read%20everything%20here!&tw_p=tweetbutton&url=http%3A%2F%2Fjuristr.com%2Fblog%2F2016%2F09%2Fng2-released%2F&via=juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-url="http://juristr.com/apps/ng2beta/" data-text="#angular2 final may be released soon!! Keep an eye on this site :)" data-via="juristr" data-size="large" data-hashtags="angular2">Tweet it!</a>
         <a href="https://twitter.com/juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: rgb(3, 169, 244);">
           Follow me
         </a>
