@@ -7,7 +7,7 @@ tags: [ "JavaScript", "Angular"]
 ---
 
 <div class="article-intro">
-  It was at the ng-Europe, on the 22-23 September 2014 when the Angular team came with a huge surprise: "We're going to build Angular 2." No controllers, no scope, completely different from ground-up, totally written. Oh, and no migration path. The result: grumbling among the community. Now, quite exactly two years later, we obviously know better, and finally Angular 2 has been officially released.
+  It was at the ng-Europe, on the 22-23 September 2014 when the Angular team came with a huge surprise: "We're going to build Angular 2." No controllers, no scope, completely different from ground-up, totally written. Oh, and no migration path. The result: grumbling among the community. Now, quite exactly two years later, we obviously know better, and finally Angular 2 has been officially released. <i>(And yes, there is <a href="http://ngmigrate.telerik.com/" target="_blank">a migration path</a> :wink:)</i>
 </div>
 
 {% include postads %}
