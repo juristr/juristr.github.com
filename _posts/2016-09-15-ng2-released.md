@@ -92,7 +92,7 @@ to open source tool that automatically upgrades angular
 
 ## Full Interview
 
-Here's the recording of the live announcement.
+Here's [the official announcement](http://angularjs.blogspot.com/2016/09/angular2-final.html) and the recording of the meetup.
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/xTIWBXkpvDc" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
