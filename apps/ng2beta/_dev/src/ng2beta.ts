@@ -27,7 +27,7 @@ import {LastUpdateCmp} from './components/last-update.component';
           <h3>Angular 2 Final Release Date</h3>
 		      <!--<span class="subtitle">Estimated date based on current speed</span>-->
           <!--<h1 [release-date]="ng2Progress.data"></h1>-->
-          <h1>14th September 2016??</h1>
+          <h1>Angular 2 is out!!!</h1>
         </div>
         <div>
           <img src="http://juristr.com/blog/assets/imgs/angular2logo.svg" style="width:150px;height:150px" />
@@ -59,14 +59,14 @@ import {LastUpdateCmp} from './components/last-update.component';
         <p style="font-size:19px">Also, check out my new <a href="/blog/2016/04/learning-angular2-directives-course/"><strong>video course on "Learning Angular 2 Directives"!</strong></p>
         -->
         <p style="font-size:19px">
-        There's a <a href="http://www.meetup.com/AngularJS-MTV/events/233816242/">special event</a> by Google in Mountain View<br />
+        Full announcement <a href="https://www.youtube.com/watch?v=xTIWBXkpvDc">here</a>. <br /><br />
         Also make sure <a href="https://twitter.com/juristr">to follow me on Twitter</a> for news and updates!
          </p>
         <br />
-        <a href="https://github.com/angular/angular/blob/master/CHANGELOG.md#200-rc0-2016-05-02" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
+        <a href="https://github.com/angular/angular/blob/master/CHANGELOG.md" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
           View the changelog
         </a>
-        <a href="https://twitter.com/intent/tweet?hashtags=angular2&original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&ref_src=twsrc%5Etfw&text=Angular%202%20final%20may%20be%20out%20soon!%20Keep%20an%20eye%20on%20this%20site%20for%20more%20info%20%3A)&tw_p=tweetbutton&url=http%3A%2F%2Fjuristr.com%2Fapps%2Fng2beta%2F&via=juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-url="http://juristr.com/apps/ng2beta/" data-text="#angular2 final may be released soon!! Keep an eye on this site :)" data-via="juristr" data-size="large" data-hashtags="angular2">Tweet it!</a>
+        <a href="https://twitter.com/intent/tweet?hashtags=angular2&original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&ref_src=twsrc%5Etfw&text=Angular%202%20final%20is%20out!!!%20Follow%20me%20for%20more%20news%20along%20the%20way%20%3A)&tw_p=tweetbutton&url=http%3A%2F%2Fjuristr.com%2Fapps%2Fng2beta%2F&via=juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-url="http://juristr.com/apps/ng2beta/" data-text="#angular2 final may be released soon!! Keep an eye on this site :)" data-via="juristr" data-size="large" data-hashtags="angular2">Tweet it!</a>
         <a href="https://twitter.com/juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: rgb(3, 169, 244);">
           Follow me
         </a>
