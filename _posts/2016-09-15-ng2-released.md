@@ -2,7 +2,7 @@
 layout: post_new
 title: "Angular 2 released!!"
 lead: "After two years of intense development it has now been officially released"
-postimg: "/blog/assets/imgs/ng2outanimation.mp4"
+postimg: "/blog/assets/imgs/angular2-out.jpg"
 tags: [ "JavaScript", "Angular"]
 ---
 
