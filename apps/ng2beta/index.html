@@ -27,6 +27,20 @@
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="styles.css">
+  <style type="text/css">
+     a {
+            color: white;
+        }
+
+	   .subtitle {
+		  font-size: 20px;
+	    }
+
+    .twitter-follow {
+      display:inline-block;
+      padding-bottom: 30px;
+    }
+  </style>
 </head>
 
 <body>
@@ -58,12 +72,66 @@
     <div class="android-content mdl-layout__content">
       <a name="top"></a>
       <div class="android-be-together-section mdl-typography--text-center">
-        <ng2beta>Loading...</ng2beta>
+        <div class="android-be-together-section-hero">
+        <div class="logo-font android-slogan">
+          <h3>Angular 2 Final Release Date</h3>
+		      <!--<span class="subtitle">Estimated date based on current speed</span>-->
+          <!--<h1 [release-date]="ng2Progress.data"></h1>-->
+          <h1>Angular 2 is out!!!</h1>
+        </div>
+        <div>
+          <img src="http://juristr.com/blog/assets/imgs/angular2logo.svg" style="width:150px;height:150px" />
+        </div>
+        <!--<p>Check out the <a href="http://angularjs.blogspot.it/2015/12/angular-2-beta.html">blog post</a> or listen into the <a href="https://www.youtube.com/watch?v=WitNPCLSZr0">Angular Air broadcast with the team</a>.</p>-->
+        <!--
+        <div class="logo-font android-sub-slogan">
+          Progress monitor towards release candidate.
+        </div>
+        -->
+        <br />
+        <!--
+        <div>
+          Currently, <strong><span [resolved-issues]="ng2Progress.data"></span></strong> of the issues have been resolved with another
+          <strong><span [open-issues]="ng2Progress.data">{{value}}</span></strong> open issues.
+          In the last 5 days, on average per day {{ng2Progress.newOpenAvg}} new issues have been assigned and {{ng2Progress.newClosedAvg}} have been closed/removed from the milestone
+          target.
+          <br/>
+          (last update: <span [last-update]="ng2Progress.data"></span>)
+        </div>
+        <div class="chart-container mdl-typography--text-center">
+          <canvas id="mychart" [chart]="ng2Progress.data"></canvas>
+        </div>
+        -->
+        <!--<p>
+          Also, check out <a href="/blog/tags/#Angular.js">some of my articles on Angular 1.x</a> and <a href="/blog/tags/#Angular">Angular 2</a> and/or <a href="https://twitter.com/juristr">follow me on Twitter</a> for getting notified about new articles I'm releasing.<br/>
+          I'm also working on a screencast series on Angular 2, so stay tuned ;)
+        </p>
+        <p style="font-size:19px">Also, check out my new <a href="/blog/2016/04/learning-angular2-directives-course/"><strong>video course on "Learning Angular 2 Directives"!</strong></p>
+        -->
+        <p style="font-size:19px">
+        Read everything about it <a href="http://juristr.com/blog/2016/09/ng2-released/">here</a>.
+         </p>
+          <div class="twitter-follow">
+            <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true" data-size="large">Follow me!</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        <br />
+        <a href="https://github.com/angular/angular/blob/master/CHANGELOG.md" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: #ff9800; color: #fff">
+          View the changelog
+        </a>
+        <a href="https://twitter.com/intent/tweet?hashtags=angular2&original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&ref_src=twsrc%5Etfw&text=After%202%20years%20of%20intense%20development%2C%20Angular%202%20has%20been%20released!!%20%20Read%20everything%20here!&tw_p=tweetbutton&url=http%3A%2F%2Fjuristr.com%2Fblog%2F2016%2F09%2Fng2-released%2F&via=juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-url="http://juristr.com/apps/ng2beta/" data-text="#angular2 final may be released soon!! Keep an eye on this site :)" data-via="juristr" data-size="large" data-hashtags="angular2">Tweet it!</a>
+        <a href="https://twitter.com/juristr" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="background-color: rgb(3, 169, 244);">
+          Follow me
+        </a>
+	<br/>
+        <br/>
+        <!--<i>Stand by as this site start tracking of the <a href="https://github.com/angular/angular/milestones">final release</a> as soon as development starts</i>-->
+      </div>
       </div>
 
       <div class="mdl-typography--text-center" style="padding:15px">
         <p>
-          Proudly provided to you by <a href="https://twitter.com/juristr">@juristr</a> with special thanks to <a href="https://twitter.com/wwwalkerrun">@wwwalkerrun</a>          for providing the original Angular 2 implementation.
+          Proudly provided to you by <a href="https://twitter.com/juristr">@juristr</a> with special thanks to <a href="https://twitter.com/wwwalkerrun">@wwwalkerrun</a> for providing the original Angular 2 implementation.
           <br />
           <strong>Disclaimer: </strong>I'm not affiliated with Google or the Angular team in any way.
         </p>
@@ -81,36 +149,6 @@
       </div>
     </div>
   </div>
-
-  <script src="./node_modules/es6-shim/es6-shim.min.js"></script>
-  <script src="./node_modules/systemjs/dist/system.src.js"></script>
-  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-  <script src="./node_modules/moment/min/moment.min.js"></script>
-  <script src="./node_modules/chart.js/Chart.min.js"></script>
-  <script src="./node_modules/angular2/bundles/angular2.min.js"></script>
-  <script src="./node_modules/angular2/bundles/http.min.js"></script>
-
-  <script>
-    //configure system loader
-    System.config({
-        defaultJSExtensions: true,
-        packages: {
-          "angular2": {"defaultExtension": false},
-          "@reactivex": {"defaultExtension": false}
-        },
-        map: {
-          "angular2-moment": "node_modules/angular2-moment/TimeAgoPipe",
-          "moment": "node_modules/moment/min/moment.min"
-        }
-    });
-
-  </script>
-
-  <script>
-    //bootstrap the Angular2 application
-    System.import('dist/ng2beta').catch(console.log.bind(console));
-
-  </script>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
