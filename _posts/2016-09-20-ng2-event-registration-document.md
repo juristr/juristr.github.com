@@ -2,7 +2,7 @@
 layout: post_new
 title: "Angular 2: How do I register an event listener on document?"
 lead: "Learn how to attach an event listener on the document object"
-postimg: "/blog/assets/imgs/angular2-out.jpg"
+postimg: "/blog/assets/imgs/ng2-register-event-cardimg.png"
 tags: [ "JavaScript", "Angular"]
 ---
 
