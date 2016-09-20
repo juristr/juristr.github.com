@@ -1,7 +1,7 @@
 ---
 layout: post_new
 title: "Angular 2: How do I get a reference to the window object?"
-lead: "Learn how to inject the window object into your Angular services"
+lead: "Learn how to inject the window object into your Angular components"
 postimg: "/blog/assets/imgs/ng2-window-obj-cardimage.png"
 tags: [ "JavaScript", "Angular"]
 ---
