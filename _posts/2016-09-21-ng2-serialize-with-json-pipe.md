@@ -1,18 +1,18 @@
 ---
 layout: post_new
 title: "Angular 2: Using the JSONPipe for debugging"
-lead: "Remember the JSON pipe in Angular 1? Here's how you can use it in Angular 2"
+lead: "Remember the JSON filter in Angular 1? Here's how you can use it in Angular 2"
 postimg: "/blog/assets/imgs/ng2-jsonpipe-cardimg.png"
 tags: [ "JavaScript", "Angular"]
 ---
 
 <div class="article-intro">
-	A powerful way of debugging, especially templates, in Angular 1 was the JSON pipe which could be used within a template. The pipe still natively exists in Angular 2. Here's how you can import and use it.
+	A powerful way of debugging, especially templates, in Angular 1 was the JSON pipe (or filter) which could be used within a template. The pipe still natively exists in Angular 2. Here's how you can import and use it.
 </div>
 
 {% include postads %}
 
-Especially when you have to debug your Angular templates it was particularly useful in Angular 1 to use the JSON pipe.
+Especially when you have to debug your Angular templates it was particularly useful in Angular 1 to use the JSON filter.
 
 ```html
 {% raw %}
@@ -27,7 +27,7 @@ As a result you got a nicely formatted JSON representation of your databound Jav
 
 ## Use the JSONPipe in Angular 2
 
-The very same holds for Angular 2 which has [a built-in JSONPipe object](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-pipe.html).
+The very same holds for Angular 2, which has [a built-in JSONPipe object](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-pipe.html) as well.
 
 To use it you have to import the `CommonModule` from the `@angular/common` package into your own module.
 
