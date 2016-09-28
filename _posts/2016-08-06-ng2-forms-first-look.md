@@ -14,6 +14,15 @@ tags: [ "JavaScript", "Angular"]
 
 <iframe width="750" height="500" src="https://www.youtube.com/embed/E92KS_YCSf8" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
+---
+
+Watch  Kara's talk at AngularConnect 2016 for an exhaustive Forms intro
+
+- [Slides](https://docs.google.com/presentation/d/1rufZvQabEwpinabiMRq1rAa5nWR3ZpsTvw4snePAsjM/preview?slide=id.p)
+- Video _(coming soon)_
+
+---
+
 ## Two different approaches to Forms
 
 There are basically two different approaches to Angular 2 forms:
