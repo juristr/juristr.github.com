@@ -18,8 +18,8 @@ tags: [ "JavaScript", "Angular"]
 
 Watch  Kara's talk at AngularConnect 2016 for an exhaustive Forms intro
 
+- [Kara Erickson talking about Forms at AngularConnect 2016](https://www.youtube.com/watch?v=xYv9lsrV0s4)
 - [Slides](https://docs.google.com/presentation/d/1rufZvQabEwpinabiMRq1rAa5nWR3ZpsTvw4snePAsjM/preview?slide=id.p)
-- Video _(coming soon)_
 
 ---
 
