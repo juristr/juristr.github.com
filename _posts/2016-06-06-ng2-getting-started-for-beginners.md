@@ -614,7 +614,7 @@ Other popular starters you definitely also want to take a look at are these. The
 
 I was so kind to record a ~20 min screencast where I walk through some of these 7 key concepts behind Angular 2. Hope you enjoy it! :smiley:
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/p64vNY0TmDA" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+<iframe width="853" height="480" src="https://www.youtube.com/embed/fXHyqSIIF9Q" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 ## Conclusion
 
