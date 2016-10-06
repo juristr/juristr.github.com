@@ -495,7 +495,7 @@ import { PersonService } from './services/person.service';
 
 @Component({
 	...
-	provider: [ PersonService ]
+	providers: [ PersonService ]
 })
 class PersonComponent {
 	people;
