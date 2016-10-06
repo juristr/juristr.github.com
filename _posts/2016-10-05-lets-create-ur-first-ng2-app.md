@@ -32,7 +32,15 @@ But enough talking :smiley:. Let's code!!
 You can download [the source code I use in the video from my repository](https://github.com/juristr/video-your-first-ng2-app).
 
 ---
-If you rather want to know what Angular 2 is all about and why it is so special, then you may want to check out my ["Angular 2 - A Getting Started Guide for Beginners"](/blog/2016/06/ng2-getting-started-for-beginners/).
+If you rather want to first learn what Angular 2 is all about and why it is so special, then you may want to check out my ["Angular 2 - A Getting Started Guide for Beginners"](/blog/2016/06/ng2-getting-started-for-beginners/). Also, these slides from [Gerard Sans](https://twitter.com/gerardsans) are pretty awesome:
+
+{%
+  include article-link.html
+  url="http://slides.com/gerardsans/imworld-ng2-revolution#/"
+  title="The Angular 2 revolution is here!"
+  text="Awesome intro slides to Angular 2 by Gerard Sans"
+  imageurl="/blog/assets/imgs/linkpics/gerardsans.jpg"
+%}
 
 
 ## Further Links
