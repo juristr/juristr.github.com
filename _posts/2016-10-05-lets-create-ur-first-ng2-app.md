@@ -4,6 +4,7 @@ title: "Let's create your first Angular 2 app"
 lead: "It's time to get started. In this video I will help you create your first Angular 2 app"
 postimg: "/blog/assets/imgs/videocover.png"
 tags: [ "JavaScript", "Angular"]
+reposts: ["https://dzone.com/articles/lets-create-your-first-angular-2-app"]
 ---
 
 <div class="article-intro">
