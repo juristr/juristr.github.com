@@ -11,7 +11,7 @@ tags: ["testing", "JavaScript", "Node.js"]
 
 Although I feel like I'm repeating myself, automate **everything**. We're here to automate the processes and work of our clients. Why don't we do the same for our own stuff as well? This article quickly outlines how you can use Nightwatch.js for automating your UI testing.
 
-Too often I see developers and tech people manually doing repetitive, annoying tasks. Testing is one such thing. When you deploy, do you verify it's actually running?? I hope you do and still it is a tedious task. You have to open the browser, login to the site, click around and see whether you got the expected results. Boring! Let some "robot" do it for us!
+Too often I see developers and tech people manually doing repetitive, annoying tasks. Testing is one such thing. When you deploy, do you verify it's actually running?? I hope you do and s it is a tedious task. You have to open the browser, login to the site, click around and see whether you got the expected results. Boring! Let some "robot" do it for us!
 
 A couple of month ago I automated our REST Api testing by hooking together a reusable jMeter script which can be run against an API definition, directly from our Jenkins build server after a deploy in some environment (a blog post about that is on the way). It is absolutely awesome when get a mail from Jenkins in your inbox with nice little graphs telling you how your last deploy affected overall performance.  
 Yesterday I then saw a tweet on my timeline mentioning Selenium, Node and a project called [Nightwatch](http://nightwatchjs.org/). That caught my attention and I quickly jumped in to give it a try.
@@ -156,3 +156,7 @@ So, after all, you might question yourself why to use Nightwatch instead of usin
 
 That's it!  
 Btw, Scott Hanselman posted a similar post yesterday about using [BrowserStack and Selenium](http://www.hanselman.com/blog/DistributedAutomatedBrowserTestingWithSeleniumAndBrowserStack.aspx) which you might be interested in.
+
+## Further Links
+
+- [Join the darkside: Selenium testing with Nightwatch.js](http://www.slideshare.net/sethmcl/join-the-darkside-nightwatchjs)
