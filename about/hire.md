@@ -15,7 +15,7 @@ Obviously you can also reach out to me via mail: {% include email.html %}
 ### What am I look for
 
 My current interest are based in the frontend web development area, which is why I'm currently mainly looking for a **full-time, remote position** as a tech lead with focus on frontend web development.  
-I'm [very interested backend architectures](/about#interests) as well, especially distributed systems and the whole topics around microservices and containers (Docker, ...).
+I'm [very interested in backend architectures](/about#interests) as well, especially distributed systems and the whole topics around microservices and containers (Docker, ...).
 
 But I'm always keen to explore new fields. So if you think I could be a good match, then let's discuss. Just [contact me](/about#contact). I'm looking forward to hearing from you!
 
