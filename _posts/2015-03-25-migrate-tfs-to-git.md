@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Migrate from TFS to Git"
 lead: "You're currently on TFS and would like to migrate to Git? This post shows you how, without loosing your history."
 show_img_in_detail: true
@@ -8,7 +8,11 @@ category:
 tags: ["Git"]
 ---
 
+<div class="article-intro">
 Are you using TFS and would like to switch to a distributed VCS like Git? Well then this article might be of help. I quickly wrote down the required steps and some hints for exporting an existing TFS repository to Git.
+</div>
+
+{% include postads %}
 
 I actually wrote the notes for this article a couple of years ago, when we switched to Git (with Gitlab) at work. Still, from now and then I have to migrate older projects which reside on TFS onto Git and given Microsoft recently migrated to Git as well internally (at least for their OSS projects), this article might turn out to be relevant :).  
 What I wouldn't want to outline is the the details of why we did the switch. It was something related to a more modern, web based interface offered by GitLab, the community basically living on GitHub with Git and the possibility of easy, fast (and local) branching & merging.
