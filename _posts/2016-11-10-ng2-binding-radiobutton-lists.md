@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Databind radio button lists with Angular 2"
+title: "Data bind radio button lists with Angular 2"
 lead: ""
 postimg: "/blog/assets/imgs/radiobuttonsbinding.png"
 tags: [ "JavaScript", "Angular"]
