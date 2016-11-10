@@ -1,7 +1,7 @@
 ---
 layout: post_new
 title: "Data bind radio button lists with Angular 2"
-lead: ""
+lead: "Learn how to data bind radio buttons in Angular 2 using unidirectional data flow"
 postimg: "/blog/assets/imgs/radiobuttonsbinding.png"
 tags: [ "JavaScript", "Angular"]
 ---
