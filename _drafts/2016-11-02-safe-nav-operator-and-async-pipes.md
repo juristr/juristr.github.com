@@ -47,7 +47,7 @@ We **want to create a component that displays the details of this person** by us
 import {Component, NgModule, Input} from '@angular/core'
 
 @Component({
-  selector: 'person-detail,
+  selector: 'person-detail',
   template: `
     <div>
       {% raw %}Name: {{ person.name }}<br/>
