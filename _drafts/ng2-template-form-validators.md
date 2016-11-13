@@ -12,7 +12,7 @@ tags: [ "JavaScript", "Angular"]
 
 {% include postads %}
 
-[Todd Motto]() recently published a similar article on ["Reactive FormGroup validation with AbstractControl in Angular 2"](https://toddmotto.com/reactive-formgroup-validation-angular-2), which you might definitely want to check out for the reactive kind of approach to this.
+[Todd Motto](https://twitter.com/toddmotto) recently published a similar article on ["Reactive FormGroup validation with AbstractControl in Angular 2"](https://toddmotto.com/reactive-formgroup-validation-angular-2), which you might definitely want to check out for the reactive kind of approach to this.
 
 ## A simple Angular 2 Form
 
@@ -87,7 +87,7 @@ Now that we have this reference, we can use it to check for the different kind o
     <div style="color:red" 
         *ngIf="firstname.errors && (firstname.dirty || firstname.touched || form.submitted)">
         
-        <p [hidden]="!firstname.errors.required">
+        <p *ngIf="firstname.errors.required">
             The name is required
         </p>
     </div>
@@ -110,12 +110,15 @@ function validateJuriNameFactory() : ValidatorFn {
   return (c: AbstractControl) => {
     
     let isValid = c.value === 'Juri';
-    
-    return isValid ? null : {
-      juriName: {
-        valid: false
-      }
-    }
+
+    if(isValid) {
+        return null;
+    } else {
+        return {
+            juriName: {
+                valid: false
+            }
+        };
   }
 }
 ```
@@ -176,10 +179,10 @@ Finally we're now ready to add our validator to our form which is as simple as a
         juriName />
         
     <div style="color:red" *ngIf="firstname.errors && (firstname.dirty || firstname.touched || form.submitted)">
-        <p [hidden]="!firstname.errors.required">
+        <p *ngIf="firstname.errors.required">
             The name is required
         </p>
-        <p [hidden]="!firstname.errors.juriName">
+        <p *ngIf="firstname.errors.juriName">
             Only allowed name is "Juri" ;)
         </p>
     </div>
@@ -192,3 +195,5 @@ Here's the final code in a easy to use Plunk:
 
 {% assign plunker_url = "https://embed.plnkr.co/jN8cL5mly1hMMVPlzCSw/" %}
 {% include plunker.html %}
+
+_Many thanks to [Sam Vloeberghs](https://twitter.com/samvloeberghs) for reviewing this article_
