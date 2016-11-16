@@ -2,7 +2,7 @@
 layout: post_new
 title: "Safe Navigation Operator, RxJS and Async Pipe tinkering"
 lead: "Learn how to use the async pipe to write elegant, RxJS powered async code"
-postimg: "/blog/assets/imgs/videocover.png"
+postimg: "/blog/assets/imgs/asyncpipe-bg.png"
 tags: [ "JavaScript", "Angular"]
 ---
 
@@ -12,7 +12,7 @@ tags: [ "JavaScript", "Angular"]
 
 {% include postads %}
 
-If you already played with Angular 2, I'm pretty sure you came across <a href="http://reactivex.io/rxjs/" target="window">RxJS</a>. It plays a big role in Angular 2, especially in Http, Forms, Async Pipes and Routing. 
+If you already played with Angular 2, I'm pretty sure you came across <a href="http://reactivex.io/rxjs/" target="window">RxJS</a>. It plays a big role in Angular 2, especially in Http, Forms, Async Pipes, Routing and also in application architecture patterns like [ngrx/store](https://github.com/ngrx/store). 
 
 {% include article-link.html
     url="/blog/2016/06/rxjs-1st-steps-subject/"
@@ -76,6 +76,8 @@ this.http
 And then pass the `person` into our `<person-detail>` component.
 
 ```javascript
+import { Subject } from 'rxjs/Subscription';
+
 @Component({
   selector: 'my-app',
   template: `
@@ -84,18 +86,25 @@ And then pass the `person` into our `<person-detail>` component.
     </div>
   `,
 })
-export class App {
+export class App implements OnInit, OnDestroy {
+  subscription: Subscription;
   person;
   
   constructor(private http:Http) { }
   
   ngOnInit() {
-    this.http
-      .get('person.json')
-      .map(res => res.json())
-      .subscribe(data => {
-        this.person = data
-      });
+    this.subscription = 
+            this.http
+                  .get('person.json')
+                  .map(res => res.json())
+                  .subscribe(data => {
+                    this.person = data
+                  });
+  }
+
+  ngOnDestroy() {
+    // unsubscribe to avoid memory leaks
+    this.subscription.unsubscribe();
   }
 }
 ```
@@ -121,7 +130,7 @@ TypeError: Cannot read property 'name' of undefined
     ...
 ```
 
-### Safe Navigation Operator to the help
+### Safe Navigation Operator to the rescue
 
 By using the Safe Navigation Operator (`?`) we can change our `PersonDetailComponent` template to this:
 
@@ -141,7 +150,7 @@ Simply speaking, this special operator allows us to bind data to our template th
 
 ## Option 2: Using async pipes
 
-First of all, **[Pipes](https://angular.io/docs/ts/latest/guide/pipes.html)** are what you may know as "filters" from Angular 1.x. Just as the original Unix pipes, they allow you to pass data through it and do something with it, such as transform the data for instance. Here's an example of how a pipe could look like that formats date values:
+First of all, **[Pipes](https://angular.io/docs/ts/latest/guide/pipes.html)** are what you may know as "filters" from Angular 1.x. Just as the original Unix pipes, they allow you to pass data through it and do something with it, such as transform the data for instance. Here's an example of how a pipe that formats a date value could look like:
 
 ```html
 {%raw%}{{ someDateValue | format: 'dd/MM/yyyy' }}{%endraw%}
@@ -178,6 +187,8 @@ Note how there is no more `subscribe(...)` part but instead we directly assign t
 export class App { ... }
 ```
 
+Also, note that we don't have to manage our subscription by ourself, like making sure to unsubscribe when our component is being destroyed.
+
 ### Safe Navigation Operator vs. default values
 
 Now that we have our async pipe, we can switch to our detail component and have the choice to either continue to use the safe navigation operator, or rather set default values on our `@Input` property.
@@ -208,7 +219,7 @@ export class PersonDetailComponent {
 }
 ```
 
-Note, for some (to me) unknown reason, this has to be done in the `ngOnInit` lifecycle event, otherwise it won't work.
+Note, for some (to me) unknown reason, this has to be done in the `ngOnInit` lifecycle event, otherwise it doesn't work.
 
 **Version 2:**  
 Simply continue to use the safe navigation operator.
@@ -277,3 +288,5 @@ The `async` pipe is a really powerful operator.
 Don't forget to check out Rob's talk.
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/WWR9nxVx1ec" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
+_Many thanks to [Brecht Billiet](https://twitter.com/brechtbilliet) and [Dominic Elm](https://twitter.com/elmd_) for reviewing this article._
