@@ -44,7 +44,7 @@ Let's assume we have the following data returned by some server API.
 We **want to create a component that displays the details of this person** by using the data it gets passed. Something like this:
 
 ```javaScript
-import {Component, NgModule, Input} from '@angular/core'
+import {Component, Input} from '@angular/core'
 
 @Component({
   selector: 'person-detail',
