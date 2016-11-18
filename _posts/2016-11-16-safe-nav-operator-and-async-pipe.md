@@ -156,7 +156,8 @@ First of all, **[Pipes](https://angular.io/docs/ts/latest/guide/pipes.html)** ar
 {%raw%}{{ someDateValue | format: 'dd/MM/yyyy' }}{%endraw%}
 ```
 
-There's a special, **built-in pipe**, called `async`. The async pipe accepts an RxJs `Observable` object and does the entire subscription and handling for us. So we can basically transform our original example to this:
+There's a special, **built-in pipe**, called `async`. The async pipe accepts an RxJs `Observable` object and does the entire subscription and handling for us. 
+So we can basically transform our original example to this:
 
 ```javascript
 @Component(...)
@@ -173,7 +174,38 @@ export class App {
 }
 ```
 
-Note how there is no more `subscribe(...)` part but instead we directly assign the returned `Observable` to our `person` variable. But who does the subscription then?? It's the `async` pipe:
+Note how there is no more `subscribe(...)` part but instead we directly assign the returned `Observable` to our `person` variable. But who does the subscription then?? It's the `async` pipe.
+
+### Variant 1: Async pipe in the detail component
+
+Our parent component (or smart component) remains unchanged, while our detail (or dumb component) displaying the person must be changed. Given the passed `@Input` person is an `Observable` we need to wrap it with the async pipe: `(person | async)?.name`.
+
+```html
+@Component({
+  selector: 'person-detail',
+  template: `
+    <div>
+      Name: {{ (person | async)?.name }}<br/>
+      Twitter: {{ (person | async)?.twitter.name }}
+    </div>
+  `,
+})
+export class PersonDetailComponent { 
+    @Input() person;
+    ...
+}
+```
+
+Try it out yourself.
+
+{% assign plunker_url = "https://embed.plnkr.co/QzXdWoDOlqMHU0QH9YnJ/" %}
+{% include plunker.html %}
+
+### Variant 2: Async pipe in the parent component
+
+I'm not that big of a fan of the previous variant, where our dumb component visualizing the detail of our person needs to know about the async nature of it's input. That creates coupling to the outside world. Within our dumb component I don't want to know where my data comes from; its responsibility is mainly to visualize the input. 
+
+So we can do better. Rather than using the async pipe in our dumb component, let's move it out to our parent.
 
 ```html
 @Component({
@@ -187,13 +219,35 @@ Note how there is no more `subscribe(...)` part but instead we directly assign t
 export class App { ... }
 ```
 
-Also, note that we don't have to manage our subscription by ourself, like making sure to unsubscribe when our component is being destroyed.
+Our dumb component's template can be left without the `async` wrapper.
+
+This is much nicer in my opinion. Also, note that a big advantage of using the built-in async pipe is that we don't have to deal with the Observable subscription/unsubscription any more by ourself.
 
 ### Safe Navigation Operator vs. default values
 
-Now that we have our async pipe, we can switch to our detail component and have the choice to either continue to use the safe navigation operator, or rather set default values on our `@Input` property.
+There's one thing left which we would change as well. Our dumb component still uses the "safe navigation operator":
 
-**Version 1:**  
+```javascript
+import {Component, NgModule, Input} from '@angular/core'
+
+@Component({
+  selector: 'person-detail',
+  template: `
+    <div>
+      Name: {%raw%}{{ person?.name }}<br/>{%endraw%}
+      Twitter: {%raw%}{{ person?.twitter.name }}{%endraw%}
+    </div>
+  `,
+})
+export class PersonDetailComponent {
+  
+  @Input() person;
+  
+}
+```
+Obviously we can totally live with that, but there's another options as well by setting some default values on our `@Input`. Let's explore.
+
+**Version 2:**  
 Don't use the safe navigation operator, but rather do some default initialization of your `@Input` object.
 
 ```javascript
@@ -220,28 +274,6 @@ export class PersonDetailComponent {
 ```
 
 Note, for some (to me) unknown reason, this has to be done in the `ngOnInit` lifecycle event, otherwise it doesn't work.
-
-**Version 2:**  
-Simply continue to use the safe navigation operator.
-
-```javascript
-import {Component, NgModule, Input} from '@angular/core'
-
-@Component({
-  selector: 'person-detail',
-  template: `
-    <div>
-      Name: {%raw%}{{ person?.name }}<br/>{%endraw%}
-      Twitter: {%raw%}{{ person?.twitter.name }}{%endraw%}
-    </div>
-  `,
-})
-export class PersonDetailComponent {
-  
-  @Input() person;
-  
-}
-```
 
 ### Try yourself
 
