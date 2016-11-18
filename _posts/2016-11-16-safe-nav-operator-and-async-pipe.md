@@ -203,8 +203,8 @@ import {Component, NgModule, Input} from '@angular/core'
   selector: 'person-detail',
   template: `
     <div>
-      Name: {{ person.name }}<br/>
-      Twitter: {{ person.twitter.name }}
+      Name: {%raw%}{{ person.name }}<br/>{%endraw%}
+      Twitter: {%raw%}{{ person.twitter.name }}{%endraw%}
     </div>
   `,
 })
@@ -231,8 +231,8 @@ import {Component, NgModule, Input} from '@angular/core'
   selector: 'person-detail',
   template: `
     <div>
-      Name: {{ person?.name }}<br/>
-      Twitter: {{ person?.twitter.name }}
+      Name: {%raw%}{{ person?.name }}<br/>{%endraw%}
+      Twitter: {%raw%}{{ person?.twitter.name }}{%endraw%}
     </div>
   `,
 })
