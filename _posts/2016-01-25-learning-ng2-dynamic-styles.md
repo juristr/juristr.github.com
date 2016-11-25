@@ -53,11 +53,55 @@ export class App {
 
 Note the `[style.background-color]` in the code above.
 
-<iframe src="https://embed.plnkr.co/Zt051PhE8Kd03ksiF4K9/" width="100%" height="400px"> </iframe>
+{% assign plunker_url = "https://embed.plnkr.co/Zt051PhE8Kd03ksiF4K9/" %}
+{% include plunker.html %}
 
-## Adding a class
+## The good old "ngClass"
 
-Similarly as we did with the background-color above, we can add a class, using the following notation: `[class.nameOfClass]="someCondition"`.
+Straight away, there's still the good old [NgClass](https://angular.io/docs/ts/latest/api/common/NgClass-directive.html) which might especially be known by Angular 1 developers. NgClass allows to pass in an object (key:value) where the key represents the class and the value a boolean condition which controls whether that specific class is applied to the element or not.  
+That said, it is the preferred way of adding one or more classes to an element. 
+
+It is made available under the `@angular/common` module which is imported already for you (under the `@angular/browser` module), so there's no need to do it manually. Then we can use it just as we did in Angular 1. Here's the full code example.
+
+```javascript
+//our root app component
+import {Component} from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  providers: [],
+  template: `
+    <div>
+      <div [ngClass]="{'my-class': isClassVisible }">
+        I am a div that wants to be styled
+      </div>
+      <button (click)="isClassVisible = !isClassVisible;">Toggle style</button>
+    </div>
+  `,
+  styles: [
+  `
+  .my-class {
+    background-color: yellow;
+  }
+  `
+  ]
+})
+export class App {
+  isClassVisible: false;
+  
+  constructor() {
+  }
+  
+}
+```
+
+{% assign plunker_url = "https://embed.plnkr.co/yCalvA1OsC6w2VZUAHm6/" %}
+{% include plunker.html %}
+
+## Adding a single class
+
+An alternative to the `ngClass` and especially in situations when only a single class needs to be applied is the following syntax.  
+Similarly as we did with the background-color above, we can add a single class, using the following notation: `[class.nameOfClass]="someCondition"`.
 
 ```javascript
 //our root app component
@@ -92,47 +136,8 @@ export class App {
 }
 ```
 
-<iframe src="https://embed.plnkr.co/WmrldzDHCib5ixsdL8R0/" width="100%" height="400px"> </iframe>
-
-## The good old "ngClass"
-
-Theres another way of adding a class. Especially Angular 1 developers may immediately recognize this. The good [old NgClass](https://angular.io/docs/ts/latest/api/common/NgClass-directive.html).
-
-It is made available under the `@angular/common` module which is imported already for you, so there's no need to do it manually. Then we can use it just as we did in Angular 1. Here's the full code example.
-
-```javascript
-//our root app component
-import {Component} from '@angular/core';
-
-@Component({
-  selector: 'my-app',
-  providers: [],
-  template: `
-    <div>
-      <div [ngClass]="{'my-class': isClassVisible }">
-        I am a div that wants to be styled
-      </div>
-      <button (click)="isClassVisible = !isClassVisible;">Toggle style</button>
-    </div>
-  `,
-  styles: [
-  `
-  .my-class {
-    background-color: yellow;
-  }
-  `
-  ]
-})
-export class App {
-  isClassVisible: false;
-  
-  constructor() {
-  }
-  
-}
-```
-
-<iframe src="https://embed.plnkr.co/yCalvA1OsC6w2VZUAHm6/" width="100%" height="400px"> </iframe>
+{% assign plunker_url = "https://embed.plnkr.co/WmrldzDHCib5ixsdL8R0/" %}
+{% include plunker.html %}
 
 ## Referencing the DOM element directly via ElementRef
 
@@ -172,7 +177,9 @@ This way you can deliberately modify the properties of the native DOM element. S
 
 Check out this Plunk for the full code.
 
-<iframe src="https://embed.plnkr.co/TqteblvISNtHObNbQAel/" width="100%" height="400px"> </iframe>
+{% assign plunker_url = "https://embed.plnkr.co/TqteblvISNtHObNbQAel/" %}
+{% include plunker.html %}
+
 
 ## Conclusion
 
@@ -196,5 +203,3 @@ Angular 2 components are not just like plain Angular 1 directives with a differe
 - `ViewEncapsulation.Native`
 
 By default it emulates, but if you set it to `ViewEncapsulation.Native` you'll get **native shadow DOM** support. Check out [@toddmotto's](https://twitter.com/toddmotto) article on **[Emulated or Native Shadow DOM in Angular 2 with ViewEncapsulation](https://toddmotto.com/emulated-native-shadow-dom-angular-2-view-encapsulation)** for an in depth guide on this :thumbsup:.
-
-
