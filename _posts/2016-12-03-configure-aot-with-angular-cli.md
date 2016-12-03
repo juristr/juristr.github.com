@@ -2,7 +2,7 @@
 layout: post_new
 title: "Configure Ahead of Time (AoT) for your Angular app using the Angular CLI"
 lead: "Learn how to leverage the true power of AoT compilation with the CLI"
-postimg: "/blog/assets/imgs/videocover.png"
+postimg: "/blog/assets/imgs/aot-compilation-cover.png"
 tags: [ "JavaScript", "Angular"]
 ---
 
