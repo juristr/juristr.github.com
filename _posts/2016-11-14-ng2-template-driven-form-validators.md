@@ -4,6 +4,7 @@ title: "Custom validators in template driven Angular 2 forms"
 lead: "Learn what a validation factory function is and how to implement a validation directive to be added to your form controls"
 postimg: "/blog/assets/imgs/customvalidator.png"
 tags: [ "JavaScript", "Angular"]
+reposts: [ "http://javascriptweekly.com/issues/311" ]
 ---
 
 <div class="article-intro">
