@@ -29,6 +29,8 @@ tags: [ "JavaScript", "Angular.js", "Angular" ]
 
 This article is for those of you that are new to Angular 2 or even to web development in general. Here, I'm going to give you a good overview what Angular 2 is all about, highlighting some of the main concepts behind. The idea is to give you a good starting point from where to go and do further research.
 
+> **TL;DR -** Check out the [video screencast at the end](#screencast) of this article :wink:
+
 If you did already some coding examples in Angular 2, then I'm probably going to bore you :smiley:. But maybe you want to dive deeper with my [Learning Angular 2 directives video course]() I recently published :wink:.
 
 {% include article-link.html
@@ -611,6 +613,7 @@ Other popular starters you definitely also want to take a look at are these. The
 %}
 
 ## Okay..we're now all set up I guess. Time to code!
+<a name="screencast"></a>
 
 I was so kind to record a ~20 min screencast where I walk through some of these 7 key concepts behind Angular 2. Hope you enjoy it! :smiley:
 
