@@ -101,7 +101,7 @@ There are even modules such as i18n, the router and animation that can be used f
 
 Angular 2 is designed to be extremely fast. Well, every new JS library would probably claim that, but there are some differences in the approach Angular 2 is taking.
 
-First of all, they're currently hardly working on a so-called "template compiler" or "offline compiler". Many JavaScript frontend frameworks basically render the templates dynamically into the browser's DOM at runtime, which requires a templating engine of some kind. Angular 2 templates and it's components are made in a way that Angular 2 is able "to reason about your app's templates" and is able to generate an [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) and consequently to translate them into pure JavaScript **at compile time**. This is huge IMHO :+1:.
+First of all, ~they're currently hardly working on a so-called "template compiler" or "offline compiler"~ the so-called Ahead-of-time (AoT) compilation. Many JavaScript frontend frameworks basically render the templates dynamically into the browser's DOM at runtime, which requires a templating engine of some kind. Angular 2 templates and it's components are made in a way that Angular 2 is able "to reason about your app's templates" and thus to generate an [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) and consequently to translate all of your templates into pure JavaScript code **at compile time**. This is huge IMHO :+1:.
 
 <figure>
 	<a href="/blog/assets/imgs/meetup-intro-angular2/templatecompiler.png" class="image--zoom" >
@@ -615,7 +615,7 @@ Other popular starters you definitely also want to take a look at are these. The
 ## Okay..we're now all set up I guess. Time to code!
 <a name="screencast"></a>
 
-I was so kind to record a ~20 min screencast where I walk through some of these 7 key concepts behind Angular 2. Hope you enjoy it! :smiley:
+Are you ready? Great, so let's create our first Angular 2 application, step by step :+1:.
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/fXHyqSIIF9Q" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
