@@ -98,14 +98,14 @@ The core Angular libraries live in one single GitHub repository at [github.com/a
 
 **Due to this misalignment of the router package's version**, the team decided to go straight for Angular v4. In this way again, all the core packages are aligned which will be easier to maintain and help avoid confusion in the future.
 
-Also it is important to understand how Angular is being used and integrated inside Google (Igor [speaks about this here in his keynote](https://youtu.be/aJIMoLgqU_o?t=9m10s)). Google runs GitHub’s master@HEAD from the Angular repository. So whenever a new commit lands in master, it will be integrated into Google’s single mono-repo, where also other products such as Maps, Adsense. live. As a consequence all of the projects using Angular internally at Google will run their extensive test suites against this new version. This makes the team very confident to cut a new release, since it will contain the exact combination of versions of Angular packages that have been already battle tested inside Google. Thus, having aligned versions totally makes sense and makes it easier to maintain them over time, which in turn helps the team be more productive in releasing new features.
+Also it is important to understand how Angular is being used and integrated inside Google (Igor [speaks about this here in his keynote](https://youtu.be/aJIMoLgqU_o?t=9m10s)). All Google applications use Angular version equal to the current GitHub’s master branch of the Angular repository. Whenever a new commit lands in master, it will be integrated into Google’s single, giant mono-repo, where also other products such as Maps, Adsense etc. live. As a consequence all of the projects using Angular internally at Google will run their extensive test suites against this new version. This makes the team very confident to cut a new release, since it will contain the exact combination of versions of Angular packages that have been already battle tested inside Google. Thus, having aligned versions totally makes sense and makes it easier to maintain them over time, which in turn helps the team be more productive in releasing new features.
 
 ## Tentative Release schedule
 
 The fact that breaking changes will arrive, doesn't mean they will arrive every other week. The Angular team committed to [time based releases that occur in three cycles](http://angularjs.blogspot.com/2016/10/versioning-and-releasing-angular.html#Timebased_release_cycles_18):
 
 - patch releases every week,
-- monthly minor release after each major release and
+- 3 monthly minor release after each major release and
 - a major release with easy-to-migrate-over breaking changes every 6 months.
 
 The next 3 months will be dedicated to finalizing Angular 4.0.0.
