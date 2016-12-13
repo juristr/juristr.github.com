@@ -7,7 +7,7 @@ tags: [ "JavaScript", "Angular"]
 ---
 
 <div class="article-intro">
-    I just attended <a href="https://ng-be.org/" target="_blank">Belgium's first Angular conference (NG-BE)</a>. It was one of the best conferences I've been so far. But more on  that later. <a href="" target="_blank">Igor Minar (Angular lead dev)</a> was there as well and made a couple of interesting announcements regarding Angular's release schedule. Please read <strong>the entire post</strong>, there are a couple of important things.
+    At the 8th and 9th of December 2016 was <a href="https://ng-be.org/" target="_blank">NG-BE, Belgium’s first Angular conference</a>. <a href="https://twitter.com/IgorMinar" target="_blank">Igor Minar (Angular lead dev)</a> attended as the keynote speaker with some interesting announcements regarding Angular’s release schedule. Please read the <strong>entire post</strong>, there are a couple of important things.
 </div>
 
 {% include postads %}
@@ -27,9 +27,9 @@ So here it is:
 
 ## Angular uses SEMVER
 
-Back in September when the [new Angular was finally released](/blog/2016/09/ng2-released/), the Angular team also announced they will switch to [Semantic Versioning (SEMVER)](http://semver.org/).
+Back in September when the [new Angular was finally released](/blog/2016/09/ng2-released/), the Angular team also [announced](http://angularjs.blogspot.com/2016/10/versioning-and-releasing-angular.html) they will switch to [Semantic Versioning (SEMVER)](http://semver.org/).
 
-As the name already explains, Semantic Versioning is all a about **adding meaning to version numbers**. This allows us developer not only to reason about any upgrade we do, but we can even let tools such as NPM do it in a automatic and safe manner for us.  
+As the name already explains, Semantic Versioning is all about **adding meaning to version numbers**. This allows developers to not only reason about any upgrade we do, but we can even let tools such as NPM do it in a automatic and safe manner for us.  
 A semantic version consists of **three numbers**:
 
 <figure class="image--medium">
@@ -42,21 +42,22 @@ Whenever you fix a bug and release it, you increase the last number, if a new fe
 "A <i>breaking change</i> happens whenever you as a developer and consumer of a library, have to <i>step in</i> and adjust your code after a version upgrade."
 </blockquote>
 
-So what does this mean for the Angular team? As with every evolving piece of software, breaking changes will occur at some point. Even a silly thing like to change the API for the better, such as adjusting the name of a method (just to make a stupid example), anything that will break an existing application when upgrading Angular, requires the team to bump the **major version number**. 
+So what does this mean for the Angular team? As with every evolving piece of software, breaking changes will occur at some point. For example, giving a compiler error for existing application bugs that went unnoticed with the previous compiler version, anything, that will break an existing application when upgrading Angular, requires the team to bump the **major version number**.
 
-Just to be clear, as also [Igor said in his talk](https://youtu.be/aJIMoLgqU_o?t=15m3s). Right now, even just upgrading Angular's TypeScript dependency from v1.8 to v2.1 or v2.2 and compile Angular with it, would technically cause a breaking change. So they're taking SEMVER very, very seriously.
+
+Just to be clear, as also [Igor mentioned in his talk](https://youtu.be/aJIMoLgqU_o?t=15m3s). Right now, even just upgrading Angular's TypeScript dependency from v1.8 to v2.1 or v2.2 and compile Angular with it, would technically cause a breaking change. So they're taking SEMVER very, very seriously.
 
 ## Breaking changes don't have to be painful!
 
-People that have been following the Angular community for a while, definitely know what I'm talking about. We went from Angular 1 to Angular 2, and it was a total breaking change, with new APIs, new patterns. That was obvious: ultimately Angular 2 was a complete rewrite. (Even though [there are migration options for you available](https://angular.io/docs/ts/latest/guide/upgrade.html))
+People that have been following the Angular community for a while, definitely know what I'm talking about. We went from Angular 1 to Angular 2, and it was a total breaking change, with new APIs, new patterns. That was obvious: ultimately Angular 2 was a complete rewrite. (Even though [there are upgrade options for you available](https://angular.io/docs/ts/latest/guide/upgrade.html))
 
-Changing from Angular 2 to Angular 4, 5, ... won't be like changing from Angular 1 to Angular 2. **It won't be a complete rewrite**, it will simply be a change in some core libraries that demand for a major SEMVER version change. Also, there will be proper deprecation phases to allow developers to adjust their code.
+Changing from version 2 to version 4, 5, ... won't be like changing from Angular 1. **It won't be a complete rewrite**, it will simply be a change in some core libraries that demand a major SEMVER version change. Also, there will be proper [deprecation phases](http://angularjs.blogspot.com/2016/10/versioning-and-releasing-angular.html#Deprecation_policy_31) to allow developers to adjust their code.
 
-_The team even once proposed the release of a tool to automatically upgrade projects to major releases, a tool which they use internally at Google. But there are no further notices for such tool as of now._
+Internally at Google, the Angular team uses a tool for handling automatic upgrades, even of breaking changes. This is still something that has to be planned in more detail, but the team is working hard on making this tool generally available, most probably in 2017 in time for Angular 5.
 
 ## It's just "Angular"
 
-As you might have already guessed, the term "Angular 2" is also kind of deprecated once we get to Angular 4, 5 etc. That said, we should start naming it simply "Angular" without the version suffix.
+As you might have already guessed, the term "Angular 2" is also kind of deprecated once we get to version 4, 5 etc. That said, we should start naming it simply "Angular" without the version suffix.
 
 <blockquote class="emphasized">
 It's just #angular
@@ -67,16 +68,24 @@ Also, we should start avoiding GitHub/NPM libraries prefixed with `ng2-` or `ang
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/toddmotto">@toddmotto</a> <a href="https://twitter.com/manekinekko">@manekinekko</a> <a href="https://twitter.com/jdfwarrior">@jdfwarrior</a> <a href="https://twitter.com/schwarty">@schwarty</a> but please don&#39;t call projects ng2- or angular2-, etc.</p>&mdash; Igor Minar (@IgorMinar) <a href="https://twitter.com/IgorMinar/status/807564558986514432">December 10, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-### My proposal
+### Naming guidelines
 
-Use "AngularJS" for Angular 1.x and "Angular" for Angular 2+. Also in blog articles, consider to add a header line which defines which Angular SEMVER version you're using:
+The main suggestion is to use “Angular 1” and “Angular” (for v2+). This removes any kind of ambiguity and is probably a better approach of using “AngularJS” (for v1) which might still lead to confusion especially for Angular newcomers. All the docs - even for Angular 1 - will be aligned to this in the coming weeks.
+
+Here are some guidelines related to the naming:
+
+- Use “Angular” by default (“I’m an Angular developer”, “This is an Angular meetup”, “The Angular ecosystem is growing quickly”)
+- “Angular 1”, “Angular 2”, “Angular 4” when talking about a specific release train (e.g. when talking about a newly introduced feature - “This is an introduction to feature X, introduced in Angular 4”, “We are upgrading from Angular 1 to Angular 2”, “I’m proposing this change for Angular 5”)
+- Use full semver version when reporting a bug (“This issue is present as of Angular 2.3.1”)
+
+Also in blog articles, whenever you are targeting a very specific version of Angular, consider adding a header line which states that:
 
 > This articles uses Angular **v2.3.1**.
 
 That helps avoid confusion for your readers, especially when you are writing about specific APIs.
 _(I'll update [my existing articles](/blog/collections/angular-2/) here accordingly)_
 
-## Why not Angular 3 then?
+## Why not version 3 then?
 
 The core Angular libraries live in one single GitHub repository at [github.com/angular/angular](https://github.com/angular/angular). All of them are versioned the same way, but distributed as different NPM packages:
 
@@ -89,11 +98,17 @@ The core Angular libraries live in one single GitHub repository at [github.com/a
 
 **Due to this misalignment of the router package's version**, the team decided to go straight for Angular v4. In this way again, all the core packages are aligned which will be easier to maintain and help avoid confusion in the future.
 
-## Tentantive Release schedule
+Also it is important to understand how Angular is being used and integrated inside Google (Igor [speaks about this here in his keynote](https://youtu.be/aJIMoLgqU_o?t=9m10s)). Google runs GitHub’s master@HEAD from the Angular repository. So whenever a new commit lands in master, it will be integrated into Google’s single mono-repo, where also other products such as Maps, Adsense. live. As a consequence all of the projects using Angular internally at Google will run their extensive test suites against this new version. This makes the team very confident to cut a new release, since it will contain the exact combination of versions of Angular packages that have been already battle tested inside Google. Thus, having aligned versions totally makes sense and makes it easier to maintain them over time, which in turn helps the team be more productive in releasing new features.
 
-The fact breaking changes will arrive, doesn't mean they will arrive every other week. The **Angular team tries to agree on a long-term schedule**, meaning they will try to schedule the breaking changes only every six months.
+## Tentative Release schedule
 
-The next 3 months will be dedicated to finalizing Angular 4.
+The fact that breaking changes will arrive, doesn't mean they will arrive every other week. The Angular team committed to [time based releases that occur in three cycles](http://angularjs.blogspot.com/2016/10/versioning-and-releasing-angular.html#Timebased_release_cycles_18):
+
+- patch releases every week,
+- monthly minor release after each major release and
+- a major release with easy-to-migrate-over breaking changes every 6 months.
+
+The next 3 months will be dedicated to finalizing Angular 4.0.0.
 
 <figure class="image--medium">
     <a href="/blog/assets/imgs/angular4-tentativeschedule.png" class="image--zoom">
@@ -101,7 +116,7 @@ The next 3 months will be dedicated to finalizing Angular 4.
     </a>
 </figure>
 
-After Angular 4, this will be the _tentative schedule_ for further releases:
+After Angular 4.0.0, this will be the _tentative schedule_ for further releases:
 
 <figure class="image--medium">
     <a href="/blog/assets/imgs/angular-releases.png" class="image--zoom">
@@ -118,13 +133,12 @@ So you can see that **major versions will be released approximately every 6 mont
 
 ## Conclusion
 
-There's one message I'd like to clearly give: **we need to stop worrying about version numbers**! Semver allows us to reason about them and gives us a tool for estimating the impact of a change and thus helps us decide whether to upgrade or not.
+There are two main important messages here:
 
-<blockquote class="emphasized">
-Stop worrying about version numbers!
-</blockquote>
+1. don’t worry about version numbers
+1. we do need to evolve Angular in order to avoid another Angular 1 to Angular 2 change, but we should do it **together as a community in a transparent, predictable and incremental way**.
 
-Also, I'd like to thank Igor for being so open at presenting this data, especially since he knows what a sensitive kind of topic breaking changes are and have been in the past. This means a lot and the community should be really thankful for this.
+Also, I'd like to thank Igor for being so open at presenting this data, especially since he knows what a sensitive topic breaking changes are and have been in the past. This means a lot and I hope that the community will realize why all these changes are good for everyone involved.
 
 ### Still questions?
 
