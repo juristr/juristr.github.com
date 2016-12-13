@@ -10,6 +10,8 @@ tags: [ "JavaScript", "Angular"]
     At the 8th and 9th of December 2016 was <a href="https://ng-be.org/" target="_blank">NG-BE, Belgium’s first Angular conference</a>. <a href="https://twitter.com/IgorMinar" target="_blank">Igor Minar (Angular lead dev)</a> attended as the keynote speaker with some interesting announcements regarding Angular’s release schedule. Please read the <strong>entire post</strong>, there are a couple of important things.
 </div>
 
+> This article has been cross-posted [**on the official Angular blog**](http://angularjs.blogspot.com/2016/12/ok-let-me-explain-its-going-to-be.html) :smiley:.
+
 {% include postads %}
 
 Igor was extremely open and transparent about the announcement and even about the way of presenting it. He basically created the presentation openly the day before the conference:
