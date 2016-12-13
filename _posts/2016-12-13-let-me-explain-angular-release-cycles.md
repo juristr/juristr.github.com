@@ -140,6 +140,8 @@ There are two main important messages here:
 
 Also, I'd like to thank Igor for being so open at presenting this data, especially since he knows what a sensitive topic breaking changes are and have been in the past. This means a lot and I hope that the community will realize why all these changes are good for everyone involved.
 
+_Thanks to Igor, Brad and the whole Angular team for reviewing this blog post. This once more shows how much their care about community work. :smiley:_
+
 ### Still questions?
 
 [Let me know](https://github.com/juristr/ama) :+1:.
