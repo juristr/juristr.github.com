@@ -70,15 +70,15 @@ Also, we should start avoiding GitHub/NPM libraries prefixed with `ng2-` or `ang
 
 ### Naming guidelines
 
-The main suggestion is to use “Angular 1” and “Angular” (for v2+). This removes any kind of ambiguity and is probably a better approach of using “AngularJS” (for v1) which might still lead to confusion especially for Angular newcomers. All the docs - even for Angular 1 - will be aligned to this in the coming weeks.
+Basically from now on, name all versions of Angular simply “Angular”. Try to avoid using the version number, unless it is really necessary to disambiguate.
 
-Here are some guidelines related to the naming:
+For example:
 
 - Use “Angular” by default (“I’m an Angular developer”, “This is an Angular meetup”, “The Angular ecosystem is growing quickly”)
 - “Angular 1”, “Angular 2”, “Angular 4” when talking about a specific release train (e.g. when talking about a newly introduced feature - “This is an introduction to feature X, introduced in Angular 4”, “We are upgrading from Angular 1 to Angular 2”, “I’m proposing this change for Angular 5”)
 - Use full semver version when reporting a bug (“This issue is present as of Angular 2.3.1”)
 
-Also in blog articles, whenever you are targeting a very specific version of Angular, consider adding a header line which states that:
+All the docs - even for Angular 1 - will be aligned to this in the coming weeks. Yes, they'll be dropping "JS" from AngularJS where possible. Also in blog articles, courses, books or whenever you are targeting a very specific version of Angular, consider adding a header line which states that:
 
 > This articles uses Angular **v2.3.1**.
 
