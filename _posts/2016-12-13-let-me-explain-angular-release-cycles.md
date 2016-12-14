@@ -10,7 +10,8 @@ tags: [ "JavaScript", "Angular"]
     At the 8th and 9th of December 2016 was <a href="https://ng-be.org/" target="_blank">NG-BE, Belgium’s first Angular conference</a>. <a href="https://twitter.com/IgorMinar" target="_blank">Igor Minar (Angular lead dev)</a> attended as the keynote speaker with some interesting announcements regarding Angular’s release schedule. Please read the <strong>entire post</strong>, there are a couple of important things.
 </div>
 
-> This article has been cross-posted [**on the official Angular blog**](http://angularjs.blogspot.com/2016/12/ok-let-me-explain-its-going-to-be.html) :smiley:.
+> This article has been cross-posted [**on the official Angular blog**](http://angularjs.blogspot.com/2016/12/ok-let-me-explain-its-going-to-be.html) :smiley:.  
+> Thanks to Igor, Brad, Stephen and the whole Angular team for the in depth review of this article. This once more shows how much their care about community work.
 
 {% include postads %}
 
@@ -142,7 +143,7 @@ There are two main important messages here:
 
 Also, I'd like to thank Igor for being so open at presenting this data, especially since he knows what a sensitive topic breaking changes are and have been in the past. This means a lot and I hope that the community will realize why all these changes are good for everyone involved.
 
-_Thanks to Igor, Brad and the whole Angular team for reviewing this blog post. This once more shows how much their care about community work. :smiley:_
+_Thanks to Igor, Brad, Stepehn and the whole Angular team for reviewing this blog post. This once more shows how much their care about community work. :smiley:_
 
 ### Still questions?
 
