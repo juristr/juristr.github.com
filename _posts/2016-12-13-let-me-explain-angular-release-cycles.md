@@ -101,6 +101,8 @@ The core Angular libraries live in one single GitHub repository at [github.com/a
 
 **Due to this misalignment of the router package's version**, the team decided to go straight for Angular v4. In this way again, all the core packages are aligned which will be easier to maintain and help avoid confusion in the future.
 
+> Why was the router even at version 3 already? [Here is the official announcment](http://angularjs.blogspot.com/2016/06/improvements-coming-for-routing-in.html) of the Angular team when they release v3 of the router.
+
 Also it is important to understand how Angular is being used and integrated inside Google (Igor [speaks about this here in his keynote](https://youtu.be/aJIMoLgqU_o?t=9m10s)). All Google applications use Angular version equal to the current GitHub’s master branch of the Angular repository. Whenever a new commit lands in master, it will be integrated into Google’s single, giant mono-repo, where also other products such as Maps, Adsense etc. live. As a consequence all of the projects using Angular internally at Google will run their extensive test suites against this new version. This makes the team very confident to cut a new release, since it will contain the exact combination of versions of Angular packages that have been already battle tested inside Google. Thus, having aligned versions totally makes sense and makes it easier to maintain them over time, which in turn helps the team be more productive in releasing new features.
 
 ## Tentative Release schedule
