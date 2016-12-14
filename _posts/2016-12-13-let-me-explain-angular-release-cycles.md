@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Ok.. let me explain: it's going to be Angular 4"
+title: "Ok.. let me explain: it's going to be Angular 4.0"
 lead: "And from now on we will just call it Angular"
 postimg: "/blog/assets/imgs/angular4announcement.png"
 tags: [ "JavaScript", "Angular"]
