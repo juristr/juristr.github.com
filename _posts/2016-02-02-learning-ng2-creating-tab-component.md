@@ -149,4 +149,5 @@ selectTab(tab: Tab){
 
 That's it :+1:. You did it! Here's the full code to play with:
 
-<iframe src="https://embed.plnkr.co/afhLA8wHw9LRnzwwTT3M/" width="100%" height="400px"> </iframe>
+{% assign plunker_url = "https://embed.plnkr.co/afhLA8wHw9LRnzwwTT3M/" %}
+{% include plunker.html %}
