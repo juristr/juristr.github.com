@@ -15,8 +15,6 @@ tags: [ "JavaScript", "Angular"]
 {% assign youtube_url = "https://www.youtube.com/embed/i2XloM6Q5wc" %}
 {% include youtube.html %}
 
-## AMA
-
 There have been a lot of questions and unfortunately we didn't have the time to ask them all. Below are the ones that were posed to Igor and Adam, with a link to the according position in the video. Hopefully this helps to pick those answers you're most interested in :smiley:.
 
 1. Intros ([:video_camera: 3m 20s](https://youtu.be/i2XloM6Q5wc?t=3m20s))
