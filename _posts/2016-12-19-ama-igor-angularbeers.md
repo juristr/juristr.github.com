@@ -29,6 +29,7 @@ There have been a lot of questions and unfortunately we didn't have the time to 
 1. How would such an integration look like? Would it be integrated into the Angular CLI? ([:video_camera: 27m 17s](https://youtu.be/i2XloM6Q5wc?t=27m17s))
 1. Another big thing in Angular is its AoT (Ahead of Time) compilation. Do you plan to further simplify the AoT compilation process? If so, what are some plans? ([:video_camera: 28m 50s](https://youtu.be/i2XloM6Q5wc?t=28m50s))
 1. People often ask for Hot-Module Replacement. Is this something that is on the roadmap also for Angular? ([:video_camera: 31m 18s](https://youtu.be/i2XloM6Q5wc?t=31m18s))
+1. Could we expect new members on the core time hired by Google after the leavings recently? ([:video_camera: 32m 19s](https://youtu.be/i2XloM6Q5wc?t=32m19s))
 1. What are your thoughts on the current state of the router? ([:video_camera: 33m 19s](https://youtu.be/i2XloM6Q5wc?t=33m19s))
 
 ## Related
