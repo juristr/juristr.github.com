@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Learning Angular: Gosh, my two-way binding doesn't seem to work properly!"
 lead: "MOAR dots... Watch out when binding your data. Do you pass it an object reference or a value?"
 show_img_in_detail: true
@@ -8,7 +8,11 @@ category:
 tags: ["JavaScript", "Angular.js", "learning-ng", "angular-databinding"]
 ---
 
-Angular data-binding seems magic, but obviously isn't. You have to give it a chance to do its work. As such, watch out and think about the difference "copy by value" and "copy by reference".
+<div class="article-intro">
+    Angular data-binding seems magic, but obviously isn't. You have to give it a chance to do its work. As such, watch out and think about the difference "copy by value" and "copy by reference".
+</div>
+
+{% include postads %}
 
 {% include ng-series.html %}
 
@@ -75,7 +79,10 @@ Finally, a controller sets the property based on some user interaction (i.e. the
 
 The result:
 
-<iframe src="http://embed.plnkr.co/Hz0Ooz/preview" width="100%" height="400px"> </iframe>
+{% assign plunker_url = "https://embed.plnkr.co/Hz0Ooz/" %}
+{% include plunker.html %}
+
+<iframe src="" width="100%" height="400px"> </iframe>
 
 As you can see it doesn't really work as expected. What's going on here? Even though there's a lot of "magic" involved in how Angular realizes 2-way data binding, you have to give it a minimum chance keep track of what happens.
 
@@ -117,7 +124,8 @@ Thus, what I have to do instead, is to **bind an object instance** onto the `$sc
 
 In this way, `$scope` and `service` point to the same object instance and hence the digest loop can watch the object to update the HTML accordingly:
 
-<iframe src="http://embed.plnkr.co/ptMHJ0/preview" width="100%" height="400px"> </iframe>
+{% assign plunker_url = "https://embed.plnkr.co/ptMHJ0/" %}
+{% include plunker.html %}
 
 Apparently this seems to be a common issue with Angular newbies as I encountered other devs on the IRC chat having similar problems. Response from the experts: **"MOAR dots.."** :)
 
