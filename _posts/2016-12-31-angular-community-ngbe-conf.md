@@ -135,7 +135,7 @@ But there have been a lot of other interesting talks, like the intro to GraphQL 
 
 I've been doing frontend development, even with Angular 1, for a longer time now. But it's been roughly since November last year when I started to be more active, on Twitter, by contributing to Angular open source projects, [and obviously by blogging more Angular specific stuff](/blog/collections/angular). It's been overwhelming how welcoming, friendly and open the community is.
 
-For me NG-BE was exemplary in that it embraced and reflected this kind of community experience :+1:.
+For me NG-BE was exemplary in that it embraced and reflected this kind of community experience :+1:. So make sure to watch out for the 2017 edition which is going to happen in December again :wink:.
 
 Also, given it's New Year's Eve, I'd like to thank all my visitors for the much appreciated feedback I got throughout this year. Big motivation for 2017, thx!! :muscle:
 
