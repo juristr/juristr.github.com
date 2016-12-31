@@ -143,3 +143,5 @@ Also, given it's New Year's Eve, I'd like to thank all my visitors for the much 
     <img src="/blog/assets/imgs/blog-stats-2016.png">
     <figcaption>Statistics on my blog here from 2016</figcaption>
 </figure>
+
+So I wish all of you a Happy New Year! Let's make 2017 awesome :smiley:
