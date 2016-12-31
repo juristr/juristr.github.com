@@ -1,1 +1,5 @@
+{% if youtube_url %}
 <iframe width="853" height="480" src="{{ youtube_url }}" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+{% else %}
+<iframe width="853" height="480" src="https://www.youtube.com/embed/{{ youtube_id }}" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+{% endif %}
