@@ -549,7 +549,7 @@ body.locked.article .content-wrapper:after {
 }
 
 .talkinghead:before {
-  background-image: url(http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG);
+  background-image: url(https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG);
   background-position: 0px 0px !important;
 }
 

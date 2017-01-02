@@ -18,7 +18,7 @@ If you already played with Angular 2, I'm pretty sure you came across <a href="h
     url="/blog/2016/06/rxjs-1st-steps-subject/"
     title="RxJS first steps - Subject and ReplaySubject"
     text="Get started with reactive programming with this introductory video"
-    imageurl="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
+    imageurl="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
 %}
 
 [Rob Wormald's (Angular Developer Evangelist @ Google)](https://twitter.com/robwormald) showed some impressive usage of RxJS with Angular 2 during his talk at NgEurope on ["Angular & RxJS"](https://www.youtube.com/watch?v=WWR9nxVx1ec). Some involved using the Safe Navigation Operator and how it can be replaced via async pipes.

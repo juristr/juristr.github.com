@@ -38,7 +38,7 @@ So far so good, binding works. For more details on how to setup your initial for
     url="/blog/2016/08/ng2-forms-first-look/"
     title="Angular 2 Forms - a first look"
     text="Learn about the reactive as well as template driven approach to forms in Angular 2"
-    imageurl="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
+    imageurl="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
 %}
 
 ## Adding built-in validators

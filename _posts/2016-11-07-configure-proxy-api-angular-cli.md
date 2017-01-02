@@ -31,5 +31,5 @@ You didn't yet have the chance to create an Angular 2 application, but you're ea
     url="/blog/2016/10/lets-create-ur-first-ng2-app/"
     title="Let's create your first Angular 2 app"
     text="It's time to get started. In this video I will help you create your first Angular 2 app"
-    imageurl="http://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
+    imageurl="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
 %}
