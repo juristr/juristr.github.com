@@ -71,7 +71,7 @@ return {
 
 Clearly you would expect to get two different messages, "Hi" and "Hello World".
 
-<iframe src="http://embed.plnkr.co/WVm8Wl/preview" width="100%" height="400px"> </iframe>
+<iframe src="https://embed.plnkr.co/WVm8Wl/preview" width="100%" height="400px"> </iframe>
 
 ## Links
 
