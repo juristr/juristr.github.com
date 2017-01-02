@@ -130,7 +130,7 @@ JB :
 
 
 prose:
-  siteurl: "http://juristr.com"
+  siteurl: "https://juristr.com"
   media: "blog/assets/imgs"
 
 gems:
