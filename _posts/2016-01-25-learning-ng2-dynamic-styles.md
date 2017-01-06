@@ -42,7 +42,7 @@ export class App {
   }
   
   getStyle() {
-    if(this.showStyle){
+    if(this.showStyle) {
       return "yellow";
     } else {
       return "";
@@ -55,6 +55,58 @@ Note the `[style.background-color]` in the code above.
 
 {% assign plunker_url = "https://embed.plnkr.co/Zt051PhE8Kd03ksiF4K9/" %}
 {% include plunker.html %}
+
+## Style Sanitization
+
+Assume for instance we want to dynamically add a background image of a user's profile image, using the `[style.background-image]="..."` approach. Naively, we may try the following:
+
+```javascript
+@Component({
+  selector: 'my-app',
+  providers: [],
+  template: `
+    <div [style.background-image]="getProfilePicStyle()">
+    </div>
+  `,
+  directives: []
+})
+export class App {
+  
+  getProfilePicStyle() {
+    // snip snip -> fetch the url from somewhere
+    const profilePicUrl = 'some-remote-server-url.jpg';
+    return `url(${profilePicUrl}`;
+  }
+  
+}
+```
+
+However, what we get is an error message from Angular saying:
+
+> WARNING: sanitizing unsafe style value url...
+
+This is a security warning, alerting us for a potential [XSS security vulnerability](https://angular.io/docs/ts/latest/guide/security.html#xss). **If you know that the URL is safe**, you can go around this and mark the style as safe.
+
+```javascript
+import { DomSanitizer  } from '@angular/platform-browser';
+
+@Component({...})
+export class App {
+  
+  constructor(private sanitizer: DomSanitizer) {}
+
+  getProfilePicStyle() {
+    // snip snip -> fetch the url from somewhere
+    const profilePicUrl = 'some-remote-server-url.jpg';
+
+    // sanitize the style expression
+    return this.sanitizer.bypassSecurityTrustStyle(`url(${profilePicUrl}`);
+  }
+  
+}
+```
+
+The `DomSanitizer` has other methods as well: [refer to the official docs](https://angular.io/docs/ts/latest/api/platform-browser/index/DomSanitizer-class.html).
 
 ## The good old "ngClass"
 
