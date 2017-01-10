@@ -321,4 +321,13 @@ Don't forget to check out Rob's talk.
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/WWR9nxVx1ec" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
+### Related articles
+
+{% include article-link.html
+    url="http://blog.kwintenp.com/how-share()-can-reduce-network-requests/"
+    title="How share() can reduce network requests"
+    text="Learn about hot vs cold observables and how .share() can reduce your network load."
+    imageurl="/blog/assets/imgs/linkpics/kwintenp.jpg"
+%}
+
 _Many thanks to [Brecht Billiet](https://twitter.com/brechtbilliet) and [Dominic Elm](https://twitter.com/elmd_) for reviewing this article._
