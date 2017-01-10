@@ -25,7 +25,7 @@ I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. C
   diff /= 24;
   var days = Math.round(diff % 365);
   diff /= 365;
-  var years = Math.round(diff);
+  var years = parseFloat(Math.round(diff * 100) / 100).toFixed(2);
 
   document.getElementById('age').innerHTML = years;
 })();
