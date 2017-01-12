@@ -107,6 +107,8 @@ Also it is important to understand how Angular is being used and integrated insi
 
 ## Tentative Release schedule
 
+_(Update (01/12/2017): the release schedule can now also be [found on the official Angular GitHub repo](https://github.com/angular/angular/blob/master/docs/RELEASE_SCHEDULE.md)_
+
 The fact that breaking changes will arrive, doesn't mean they will arrive every other week. The Angular team committed to [time based releases that occur in three cycles](http://angularjs.blogspot.com/2016/10/versioning-and-releasing-angular.html#Timebased_release_cycles_18):
 
 - patch releases every week,
