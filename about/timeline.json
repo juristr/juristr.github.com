@@ -1,0 +1,69 @@
+[
+    {
+        "date": "11.01.2017",
+        "title": "Talk on Testing with Angular at Angular Hamburg Meetup.",
+        "type": "talk",
+        "link": "/blog/2017/01/talk-angular-testing-recipes/"
+    },
+    {
+        "date": "19.12.2016",
+        "title": "Moderating AMA session with Igor Minar and Adam Bradley at AngularBeers",
+        "type": "talk",
+        "link": "/blog/2016/12/ama-igor-angularbeers/"
+    },
+    {
+        "date": "13.12.2016",
+        "title": "Google cross-posts my article on explaining future Angular release cycles on their official blog.",
+        "type": "article",
+        "link": "http://angularjs.blogspot.com/2016/12/ok-let-me-explain-its-going-to-be.html"
+    },
+    {
+        "date": "09.12.2016",
+        "title": "Attending NG-BE, Belgium's first Angular conference.",
+        "type": "conference",
+        "link": "/blog/2016/12/angular-community-ngbe-conf/"
+    },
+    {
+        "date": "08.11.2016",
+        "title": "Attending W-JAX Munich",
+        "type": "conference"
+    },    
+    {
+        "date": "06.08.2016",
+        "title": "Angular 2 Forms - a first look gets published on the official Angular news site.",
+        "type": "publication",
+        "link": "/blog/2016/08/ng2-forms-first-look/"
+    },
+    {
+        "date": "26.06.2016",
+        "title": "Angular 2 - A Getting Started Guide for Beginners gets ranked #1 among 1500 articles.",
+        "type": "publication",
+        "link": "/blog/2016/06/ng2-getting-started-for-beginners/) gets [ranked #1 among more than 1500 Angular 2 articles](https://medium.mybridge.co/top-10-angular-2-articles-for-the-past-month-v-june-37bb96b667a3#.ss9xav5jn) in the range of May-June 2016 by [MyBridge](https://medium.mybridge.co/"
+    },
+    {
+        "date": "10.06.2016",
+        "title": "The official Angular Twitter account starts following me!!! :)",
+        "type": "news",
+        "link": "https://twitter.com/juristr/status/741142649424515072"
+    },
+    {
+        "date": "05.05.2016",
+        "title": "I'm being mentioned by Rangle.io during their talk at NGConf 2016 for my contributions to Augury!",
+        "link": "https://twitter.com/juristr/status/728279780391522304"
+    },
+    {
+        "date": "17.05.2016",
+        "title": "Talk: Angular 2 Special. Introduction to Angular 2, what it is about and some practical hands-on.",
+        "link": "/blog/2016/06/ng2-getting-started-for-beginners/"
+    },
+    {
+        "date": "27.04.2016",
+        "title": "My video course 'Learning Angular 2 Directives' gets published.",
+        "link": "/blog/2016/04/learning-angular2-directives-course/"
+    },
+    {
+        "date": "21.12.2015",
+        "title": "Together with Christoph Piock and Peter Grader I founded a local meetup group around Software Craftsmanship. The goal is to revive the local tech community, foster communication and knowledge sharing.",
+        "link": "http://www.meetup.com/Software-Craftsmanship-SouthTyrol/"
+    }
+]

@@ -1,0 +1,90 @@
+---
+layout: about
+title: My timeline
+---
+
+<script>
+    (function() {
+        function renderItem(item) {
+            var html = "<tr>" +
+                    "<td>" + item.date + "</td>" +
+                    "<td>" + item.title ;
+                
+                if(item.link && item.link !== '') {
+                    html += '<br/><a href="' + item.link + '">more&raquo;</a>';
+                }
+                html += '</td></tr>';
+
+                return html;
+        }
+
+        function renderHTML(entries) {
+            var rowsHtml = "";
+            for(var i=0; i<entries.length; i++) {
+                rowsHtml += renderItem(entries[i]);
+            }
+
+            document.querySelector('#mytimeline').innerHTML = rowsHtml;
+        }
+
+        fetch('/about/timeline.json')
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(data) {
+                renderHTML(data);
+            });
+
+
+    })();
+</script>
+
+<style>
+    table {
+        width: 100%;
+        margin: 0 0 50px;
+        padding: 0;
+        border: none;
+        border-collapse: inherit;
+        border-spacing: 0;
+        border-color: inherit;
+        vertical-align: inherit;
+        text-align: left;
+        font-weight: inherit;
+        -webkit-border-horizontal-spacing: 0;
+        -webkit-border-vertical-spacing: 0;
+        padding-top: 30px;
+    }
+
+    table th {
+        padding: 16px 25px;
+        text-align: left;
+        background: #3a4250;
+        color: #fff;
+    }
+
+    table td {
+        padding: 8px 25px;
+        line-height: 24px;
+        font-size: 14px;
+        vertical-align: top;
+    }
+
+    table tr:nth-child(2n) {
+        background: #f4f8f9;
+    }
+</style>
+
+
+Here are some (potentially) interesting events :smiley:.
+
+<table>
+<thead>
+    <tr>
+        <th>Date</th>
+        <th>Comments</th>
+    </tr>
+</thead>
+<tbody id="mytimeline">
+</tbody>
+</table>
