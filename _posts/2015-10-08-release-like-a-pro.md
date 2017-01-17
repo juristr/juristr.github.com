@@ -4,6 +4,7 @@ title: "Release your libs like a pro!"
 lead: "Fully automated semantic releases to npm and bower"
 show_img_in_detail: true
 coverimage: true
+postimg: /blog/assets/imgs/release-like-pro/semanticrelease.png
 category:
 tags: ["JavaScript"]
 ---
