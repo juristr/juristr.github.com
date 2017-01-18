@@ -239,7 +239,7 @@ He has an interesting solution: `publish-latest` creates (if it doesn't exist) a
 
 - [**next-ver**](https://github.com/bahmutov/next-ver) is like local semantic-release; it bumps local version based on commit log from the last version.
 - [**condition-circle**](https://github.com/bahmutov/condition-circle) is a semantic-release plugin. If you use other CIs and not Travis you will need to let semantic-release know about it. For example in the case of CircleCI.
-- [*condition-node-version*](https://github.com/bahmutov/condition-node-version) is a semantic-release plugin that allows publishing from a specific NodeJS version. Otherwise it will publish from the last finished build job.
+- [**condition-node-version**](https://github.com/bahmutov/condition-node-version) is a semantic-release plugin that allows publishing from a specific NodeJS version. Otherwise it will publish from the last finished build job.
 
 ## Conclusion
 
