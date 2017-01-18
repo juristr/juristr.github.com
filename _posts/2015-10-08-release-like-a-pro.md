@@ -233,6 +233,14 @@ Install the library and add it as `postpublish` task in the `package.json` file:
 
 He has an interesting solution: `publish-latest` creates (if it doesn't exist) a new `latest` branch where the distribution files will be placed (usually in a `dist` folder). That branch will be tagged by semantic-release and then `publish-latest` pushes that branch back to your GitHub repo. Hence, you'll end up having your `master` clean with just the source code and a `latest` branch containing the latest, compiled and minified files to be distributed. Since the tag is on that branch, Bower will also find it easily and your users will be able to install it from there without any issues.
 
+## Other tools
+
+[Gleb Bahmutov](https://twitter.com/bahmutov) has published a series of useful tools which help to automate the release process around semantic versioning (some of them are even plugins for the semantic-release package).
+
+- [**next-ver**](https://github.com/bahmutov/next-ver) is like local semantic-release; it bumps local version based on commit log from the last version.
+- [**condition-circle**](https://github.com/bahmutov/condition-circle) is a semantic-release plugin. If you use other CIs and not Travis you will need to let semantic-release know about it. For example in the case of CircleCI.
+- [*condition-node-version*](https://github.com/bahmutov/condition-node-version) is a semantic-release plugin that allows publishing from a specific NodeJS version. Otherwise it will publish from the last finished build job.
+
 ## Conclusion
 
 You know what's best of all this. Whenever now someone sends you a PR, Travis executes the tests against the new contribution, does all the checks you've setup (linting whatever..) and if everything is fine, you are **1 click away from merging and releasing a new version with the new contribution**.
