@@ -51,6 +51,12 @@ I'm always learning and in search for new challenges. Here are some of my curren
   {% endfor %}
 </div>
 
+## Public Speaking
+
+- [**Testing with Angular**](https://www.youtube.com/watch?v=Uw_XomCJaGQ) (January 2017) - A talk for [Hamburg AngularJS Meetup](https://www.meetup.com/Hamburg-AngularJS-Meetup/) on recipes for testing with Angular (2+).
+- [**AngularBeers: Interviewing Igor Minar and Adam Bradley**](https://www.youtube.com/watch?v=i2XloM6Q5wc) (December 2016) - I was given the opportunity to moderate the AMA session with Igor Minar and Adam Bradley for [AngularBeers](https://angularbeers.org/).
+- [**Angular 2 Special**](https://www.meetup.com/Software-Craftsmanship-SouthTyrol/events/230807221/) (May 2016)- Introducing interested software developers to Angular 2. The event consisted of a short 20min introductory talk followed by a guided exercise where developers were given the opportunity to write their first Angular 2 apps. You couldn't attend? I later created an intro video out of the exercise which you can watch yourself: [Ready to create your first Angular app? Let's do it together. (Angular 2+) ](https://www.youtube.com/watch?v=fXHyqSIIF9Q)
+
 ## Partnership
 
 I have a partnership with the following sites, wherefore posts might also get re-published there.
