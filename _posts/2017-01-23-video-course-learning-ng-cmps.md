@@ -51,6 +51,8 @@ That said, it also means this is a paid course, currently sold by PacktPub. Stil
     imageurl="/blog/assets/imgs/learning-ng-cmps-cover.jpg"
 %}
 
+Thank you very much for your support :blush:.
+
 ## Thanks!
 
 Many thanks to my girl which gave me all the support I could imagine during this quite intense phase of producing this video course.  
