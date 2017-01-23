@@ -2,7 +2,7 @@
 layout: post_new
 title: "Video Course: Learning Angular Components"
 lead: "The 2nd edition of my video course on Learning Angular Components"
-postimg: "/blog/assets/imgs/learning-ng-cmps-cover.jpg"
+postimg: "/blog/assets/imgs/learning-ng-cmps-cover.png"
 tags: [ "Angular", "Angular.js"]
 ---
 
