@@ -73,15 +73,17 @@ Also, we should start avoiding GitHub/NPM libraries prefixed with `ng2-` or `ang
 
 ### Naming guidelines
 
-Basically from now on, name all versions of Angular simply “Angular”. Try to avoid using the version number, unless it is really necessary to disambiguate.
+_Update (28th Jan 2017): The Angular team has [released official branding guidelines](http://angularjs.blogspot.org/2017/01/branding-guidelines-for-angular-and.html) on how to name libraries, books, articles. I've updated the below section accordingly._
 
-For example:
+The short version: use **AngularJS for any 1.x release, and simply Angular for any 2+ release**. The goal is to bring as much consistency as possible especially going forward, while reducing the maintenance burden caused by past branding inconsistencies.
+
+Basically try to avoid the use of the version number, unless it is really necessary to disambiguate. For example:
 
 - Use “Angular” by default (“I’m an Angular developer”, “This is an Angular meetup”, “The Angular ecosystem is growing quickly”)
 - “Angular 1”, “Angular 2”, “Angular 4” when talking about a specific release train (e.g. when talking about a newly introduced feature - “This is an introduction to feature X, introduced in Angular 4”, “We are upgrading from Angular 1 to Angular 2”, “I’m proposing this change for Angular 5”)
 - Use full semver version when reporting a bug (“This issue is present as of Angular 2.3.1”)
 
-All the docs - even for Angular 1 - will be aligned to this in the coming weeks. Yes, they'll be dropping "JS" from AngularJS where possible. Also in blog articles, courses, books or whenever you are targeting a very specific version of Angular, consider adding a header line which states that:
+Also in blog articles, courses, books or whenever you are targeting a very specific version of Angular, consider adding a header line which states that:
 
 > This articles uses Angular **v2.3.1**.
 
@@ -140,7 +142,9 @@ So you can see that **major versions will be released approximately every 6 mont
 
 ## Conclusion
 
-There are two main important messages here:
+Again, make sure to [check out the official branding guidelines](http://angularjs.blogspot.com/2017/01/branding-guidelines-for-angular-and.html) from the Angular team.
+
+Also, there are two main important messages here:
 
 1. don’t worry about version numbers
 1. we do need to evolve Angular in order to avoid another Angular 1 to Angular 2 change, but we should do it **together as a community in a transparent, predictable and incremental way**.
