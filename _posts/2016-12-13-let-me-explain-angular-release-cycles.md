@@ -79,9 +79,10 @@ The short version: use **AngularJS for any 1.x release, and simply Angular for a
 
 Basically try to avoid the use of the version number, unless it is really necessary to disambiguate. For example:
 
-- Use “Angular” by default (“I’m an Angular developer”, “This is an Angular meetup”, “The Angular ecosystem is growing quickly”)
-- “Angular 1”, “Angular 2”, “Angular 4” when talking about a specific release train (e.g. when talking about a newly introduced feature - “This is an introduction to feature X, introduced in Angular 4”, “We are upgrading from Angular 1 to Angular 2”, “I’m proposing this change for Angular 5”)
-- Use full semver version when reporting a bug (“This issue is present as of Angular 2.3.1”)
+- Use “Angular” for versions 2.0.0 and later (e.g. “I’m an Angular developer”, “This is an Angular meetup”, “The Angular ecosystem is growing quickly”)
+- Use "AngularJS" to describe versions 1.x or earlier
+- Use the version number “Angular 4.0” "Angular 2.4" when needed to talk about a specific release (e.g. when talking about a newly introduced feature - “This is an introduction to feature X, introduced in Angular 4”, “I’m proposing this change for Angular 5”)
+- Use full semver version when reporting a bug (e.g. “This issue is present as of Angular 2.3.1”)
 
 Also in blog articles, courses, books or whenever you are targeting a very specific version of Angular, consider adding a header line which states that:
 
