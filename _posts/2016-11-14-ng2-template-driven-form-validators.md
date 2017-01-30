@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Custom validators in template driven Angular 2 forms"
+title: "Custom validators in template driven Angular forms"
 lead: "Learn what a validation factory function is and how to implement a validation directive to be added to your form controls"
 postimg: "/blog/assets/imgs/customvalidator.png"
 tags: [ "JavaScript", "Angular"]
@@ -8,16 +8,19 @@ reposts: [ "http://javascriptweekly.com/issues/311" ]
 ---
 
 <div class="article-intro">
-    Angular 2 has <a href="/blog/2016/08/ng2-forms-first-look/">two different kind of Forms API</a>, the reactive and template driven approach. In this article we will focus on the template driven approach and learn how to use it as well as how to build a custom validator with it.
+    Angular version 2+ has <a href="/blog/2016/08/ng2-forms-first-look/">two different kind of Forms API</a>, the reactive and template driven approach. In this article we will focus on the template driven approach and learn how to use it as well as how to build a custom validator with it.
 </div>
+
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
 
 {% include postads %}
 
 [Todd Motto](https://twitter.com/toddmotto) recently published a similar article on ["Reactive FormGroup validation with AbstractControl in Angular 2"](https://toddmotto.com/reactive-formgroup-validation-angular-2), which you might definitely want to check out for the reactive kind of approach to this.
 
-## A simple Angular 2 Form
+## A simple Angular Form
 
-Ok, before starting, let's take a look at our simple Angular 2, template driven form.
+Ok, before starting, let's take a look at our simple Angular, template driven form.
 
 ```html
 <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
@@ -36,14 +39,14 @@ So far so good, binding works. For more details on how to setup your initial for
 
 {% include article-link.html
     url="/blog/2016/08/ng2-forms-first-look/"
-    title="Angular 2 Forms - a first look"
-    text="Learn about the reactive as well as template driven approach to forms in Angular 2"
+    title="Angular Forms - a first look"
+    text="Learn about the reactive as well as template driven approach to forms in Angular"
     imageurl="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
 %}
 
 ## Adding built-in validators
 
-We can make use of the built-in [HTML5 validators in Angular 2](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) just as we were able already in Angular 1. Behind the scenes, Angular recognizes these validators and integrates with them.
+We can make use of the built-in [HTML5 validators in Angular](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) just as we were able already in AngularJS (Angular 1.x). Behind the scenes, Angular recognizes these validators and integrates with them.
 
 That said, as a first step we add the `novalidate` attribute onto our form. This disables the browser validation behavior and let's us do the displaying of valiation errors with Angular.
 
@@ -62,7 +65,7 @@ Next we can take a closer look at the input control and add a simple `required` 
 </div>
 ```
 
-This makes our input a required field and when it's not compiled, the according `form.valid` property will be `false`. You may be wondering where the `form` comes from? It's the template variable I've defined and associated with `ngForm`. This is the way it's done in the Angular 2 template driven approach.
+This makes our input a required field and when it's not compiled, the according `form.valid` property will be `false`. You may be wondering where the `form` comes from? It's the template variable I've defined and associated with `ngForm`. This is the way it's done in the Angular template driven approach.
 
 ```html
 <form novalidate #form="ngForm" (ngSubmit)="form.valid && onSubmit(form.value)">
@@ -124,7 +127,7 @@ function validateJuriNameFactory() : ValidatorFn {
 }
 ```
 
-Once we have our validation factory funtion, **we need to create a directive** which mainly serves to attach our validation function onto an existing HTML input control. An Angular 2 directive is mostly like a component with the main difference that it doesn't have a template.
+Once we have our validation factory funtion, **we need to create a directive** which mainly serves to attach our validation function onto an existing HTML input control. An Angular directive is mostly like a component with the main difference that it doesn't have a template.
 
 ```javascript
 @Directive({
