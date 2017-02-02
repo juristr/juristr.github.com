@@ -31,7 +31,7 @@ This article is for those of you that are new to Angular 2 or even to web develo
 
 > **TL;DR -** Check out the [video screencast at the end](#screencast) of this article :wink:
 
-If you did already some coding examples in Angular 2, then I'm probably going to bore you :smiley:. But maybe you want to dive deeper with my [Learning Angular 2 directives video course]() I recently published :wink:.
+If you did already some coding examples in Angular 2, then I'm probably going to bore you :smiley:. But maybe you want to dive deeper with my [Learning Angular components video course](/blog/2017/01/video-course-learning-ng-cmps/) I recently published :wink:.
 
 {% include article-link.html
 	url="/blog/2016/04/learning-angular2-directives-course/"
