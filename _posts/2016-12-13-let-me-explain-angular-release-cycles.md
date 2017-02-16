@@ -73,7 +73,7 @@ Also, we should start avoiding GitHub/NPM libraries prefixed with `ng2-` or `ang
 
 ### Naming guidelines
 
-_Update (28th Jan 2017): The Angular team has [released official branding guidelines](http://angularjs.blogspot.org/2017/01/branding-guidelines-for-angular-and.html) on how to name libraries, books, articles. I've updated the below section accordingly._
+_Update (28th Jan 2017): The Angular team has [released official branding guidelines](http://angularjs.blogspot.com/2017/01/branding-guidelines-for-angular-and.html) on how to name libraries, books, articles. I've updated the below section accordingly._
 
 The short version: use **AngularJS for any 1.x release, and simply Angular for any 2+ release**. The goal is to bring as much consistency as possible especially going forward, while reducing the maintenance burden caused by past branding inconsistencies.
 
