@@ -24,7 +24,6 @@ import {Component} from '@angular/core'
 
 @Component({
   selector: 'my-app',
-  providers: [],
   template: `
     <div>
       <div [style.background-color]="getStyle()">
@@ -32,8 +31,7 @@ import {Component} from '@angular/core'
       </div>
       <button (click)="showStyle = !showStyle;">Toggle style</button>
     </div>
-  `,
-  directives: []
+  `
 })
 export class App {
   showStyle: false;
@@ -63,12 +61,10 @@ Assume for instance we want to dynamically add a background image of a user's pr
 ```javascript
 @Component({
   selector: 'my-app',
-  providers: [],
   template: `
     <div [style.background-image]="getProfilePicStyle()">
     </div>
-  `,
-  directives: []
+  `
 })
 export class App {
   
@@ -121,7 +117,6 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  providers: [],
   template: `
     <div>
       <div [ngClass]="{'my-class': isClassVisible }">
@@ -161,7 +156,6 @@ import {Component} from '@angular/core'
 
 @Component({
   selector: 'my-app',
-  providers: [],
   template: `
     <div>
       <div [class.my-class]="isClassVisible">
@@ -177,7 +171,6 @@ import {Component} from '@angular/core'
   }
   `
   ]
-  directives: []
 })
 export class App {
   isClassVisible: false;
