@@ -33,7 +33,9 @@ Different roles with different very concrete responsibilities. **But no one is m
 
 This is the title of the last book I [received](/blog/2012/08/mobile-javascript-application/) [from O'Reilly](/blog/2012/08/fluent-conference-javascript-beyond_29/). 
 
-![](/blog/assets/imgs/teamgeekcover.gif)
+<figure class="image--medium">
+    <img src="/blog/assets/imgs/teamgeekcover.gif">
+</figure>
 
 Brian Fitzpatrick and Ben Collins-Sussman, both lead developers at Google, describe their experiences and lessons learned during their career as developers and team leads at Google.
 
@@ -50,7 +52,7 @@ The book is amazing and contains lots of useful information. But in the end it a
 ## HRT
 There is a key ingredient for these different team stakeholders to play together in a well manner and it is called "HRT", pronounced "heart".
 
-<figure class="image--wide">
+<figure class="image--medium">
     <img src="/blog/assets/imgs/HRT.png">
     <figcaption>From the book "Team Geek", Brian W. Fitzpatrick and Ben Collins-Sussman, O'Reilly, June 2012.</figcaption>
 </figure>
