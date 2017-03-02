@@ -1,14 +1,16 @@
 ---
-layout: post
+layout: post_new
 title: "HRT - Humility, Respect and Trust"
-description: ""
-category: 
+lead: "Software development is a team sport"
 postimg: /blog/assets/imgs/HRT.png
 tags: [book review]
 ---
 
+<div class="article-intro">
+    About a year ago someone told me: the hardest problems you'll face won't be of technical nature but rather they'll deal with interpersonal relationships. People are different (fortunately), different personalities, different capabilities, all mixed together.
+</div>
 
-About a year ago someone told me: the hardest problems you'll face won't be of technical nature but rather they'll deal with interpersonal relationships. People are different (fortunately), different personalities, different capabilities, all mixed together.
+{% include postads %}
 
 In software development we always again speak about the team, the team that meets together for planning and realizing a project, a common goal. But so many times I have the feeling that "team" is just used as a synonym for a couple of people mixed together because they have to. But that's not a team as it should be. So often I miss the spirit, the cohesion...
 
@@ -48,7 +50,7 @@ The book is amazing and contains lots of useful information. But in the end it a
 ## HRT
 There is a key ingredient for these different team stakeholders to play together in a well manner and it is called "HRT", pronounced "heart".
 
-<figure>
+<figure class="image--wide">
     <img src="/blog/assets/imgs/HRT.png">
     <figcaption>From the book "Team Geek", Brian W. Fitzpatrick and Ben Collins-Sussman, O'Reilly, June 2012.</figcaption>
 </figure>
