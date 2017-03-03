@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: post_new
 title: "Modularity in JavaScript MVC Frameworks"
-description: ""
+lead: ""
 postimg: /blog/assets/imgs/jmvc_observer.png
 show_img_in_detail: true
 category: 
@@ -9,7 +9,11 @@ tags: [JavaScript, Software Architecture]
 reposts: ["http://architects.dzone.com/articles/modularity-javascript-mvc"]
 ---
 
-JavaScript MVC architectures are a de-facto standard when you create complex single-page JavaScript applications. But it doesn't stop here. MVC helps to separate reponsibilities for coordinating the data (model) and visualization (view), but it doesn't have a concept for coordination among an application's modules or widgets as you might call them.
+<div class="article-intro">
+    JavaScript MVC architectures are a de-facto standard when you create complex single-page JavaScript applications. But it doesn't stop here. MVC helps to separate reponsibilities for coordinating the data (model) and visualization (view), but it doesn't have a concept for coordination among an application's modules or widgets as you might call them.
+</div>
+
+{% include postads %}
 
 ## Modules? I don't Have Anything Similar to that!
 
@@ -17,7 +21,7 @@ Modules is probably not the right term in JavaScript applications, better call '
 
 Consider for example GitHub's site:
 
-<figure>
+<figure class="image--small">
     <img src="/blog/assets/imgs/githubsite_modular_widgets.png" />
     <figcaption>Some potential widgets of the GitHub site</figcaption>
 </figure>
@@ -42,7 +46,9 @@ Therefore, a common practice for creating a modular architecture is to decouple 
 
 ### AuraJS - Widget Architecture for Backbone
 
-![](/blog/assets/imgs/aurajslogo.png)
+<figure class="image--small">
+    <img src="/blog/assets/imgs/aurajslogo.png" />
+</figure>
 
 [Addy Osmani](https://twitter.com/addy) - who is a big proponent of JavaScript architecture best practices - started a project called [AuraJS](https://github.com/aurajs) with the intention to bring such modular widget-like architecture to Backbone. 
 
@@ -57,7 +63,9 @@ Addy also published some good reads related to this topic. You should definitely
 
 ### MarionetteJS - Another Backbone Extension
 
-![](/blog/assets/imgs/marionettejs_logo.png)
+<figure class="image--small">
+    <img src="/blog/assets/imgs/marionettejs_logo.png" />
+</figure>
 
 Similar to AuraJS, also [MarionetteJS](http://marionettejs.com/) takes an event-driven architecture approach. 
 
@@ -77,14 +85,19 @@ JavaScriptMVC has the concept of modularization already build-in since v3.2.
 
 Already the proposed folder structure of a JavaScriptMVC project suggests such approach. A couple of days ago, Justin (one of the creators of JavaScriptMVC) published two videos where he dives into this concept again.
 
-![](/blog/assets/imgs/jmvc_justin_tweet.png)
+<figure class="image--small">
+    <img src="/blog/assets/imgs/jmvc_justin_tweet.png" />
+</figure>
 
 The videos give a preview of how the upcoming release of JavaScriptMVC v3.3 further facilitates such decoupling among widgets.
 
 ### Part 1 - MVC Architecture and the Observer Pattern
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/NZi5Ru4KVug" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+{% assign youtube_id = "NZi5Ru4KVug" %}
+{% include youtube.html %}
 
 ### Part 2 - Development process
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/yFxDY5SQQp4" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
+{% assign youtube_id = "yFxDY5SQQp4" %}
+{% include youtube.html %}
