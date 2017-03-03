@@ -6,4 +6,4 @@ category:
     - Other
 ---
 
-This article has been moved here: [https://juristr.com/coderecipes/angular2/access-window-obj/](https://juristr.com/coderecipes/angular2/access-window-obj/)
+This article has been moved here: [https://juristr.com/blog/2016/09/ng2-get-window-ref/](https://juristr.com/blog/2016/09/ng2-get-window-ref/)
