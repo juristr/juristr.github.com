@@ -14,6 +14,7 @@ tags: [ "JavaScript", "Angular"]
 
 > **TL;DW (Too long, didn't watch):** You can simply append the `--aot` to your build instruction, like `ng build --prod --aot`. Ya, it's really that damn simple :smiley: 
 
+> **UPDATE (March 1st, 2017) -** The Angular CLI now automatically builds with AoT enabled if you use the `--prod` flag. So there's no need to add it explicitly. The `--aot` flag still remains though if you wanted to use AoT in dev mode for instance.
 
 This video you will learn about...
 
