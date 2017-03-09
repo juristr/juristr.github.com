@@ -13,6 +13,11 @@ tags: [ "JavaScript", "Angular" ]
 
 {% include postads %}
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
+{% include toc.html %}
+
 That said, definitely read [thoughtram's article on how to develop a tabs component in Angular 2](http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html) first. Then come back and continue here :smiley:.
 
 Ok, to recap, the API of the tabs component looks as follows:

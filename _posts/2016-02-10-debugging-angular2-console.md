@@ -15,6 +15,11 @@ reposts: ["https://dzone.com/articles/learning-angular-2-creating-a-tabs-compone
 
 {% include postads %}
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
+{% include toc.html %}
+
 I always found it quite neat how to debug my Angular 1.x applications directly from my browser's console. Take Chrome's devtools for instance. You can open the Elements tab and click on your Angular 2 component. The nice thing about the Chrome devtools is that it'll keep a reference to the selected DOM node in the variable `$0` which you can then directly access from the console.
 
 <figure>

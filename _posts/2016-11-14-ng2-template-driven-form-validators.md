@@ -11,10 +11,12 @@ reposts: [ "http://javascriptweekly.com/issues/311" ]
     Angular version 2+ has <a href="/blog/2016/08/ng2-forms-first-look/">two different kind of Forms API</a>, the reactive and template driven approach. In this article we will focus on the template driven approach and learn how to use it as well as how to build a custom validator with it.
 </div>
 
+{% include postads %}
+
 {% assign message = "Contents are based on Angular version 2+." %}
 {% include warn-notice.html %}
 
-{% include postads %}
+{% include toc.html %}
 
 [Todd Motto](https://twitter.com/toddmotto) recently published a similar article on ["Reactive FormGroup validation with AbstractControl in Angular 2"](https://toddmotto.com/reactive-formgroup-validation-angular-2), which you might definitely want to check out for the reactive kind of approach to this.
 

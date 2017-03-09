@@ -13,6 +13,8 @@ tags: [ "JavaScript", "Angular.js", "Angular" ]
 
 {% include postads %}
 
+{% include toc.html %}
+
 <iframe width="853" height="480" src="https://www.youtube.com/embed/xMaskTop88E" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 So a couple of days ago I read this Tweet:
@@ -26,6 +28,7 @@ I totally agree, RxJS has a **"learning cliff"** :smiley:
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 But I think Cecil's answer is an awesome way to approach this initial complexity. Take what you need, learn about it, use it and move on. Don't worry to understand everything at once (it's overwhelming, I promise!). Coming from the .Net world, I remember when I first got in touch with [Linq](https://msdn.microsoft.com/en-us/library/bb308959.aspx), a querying language built into .Net, that allows to write really powerful queries over collections, even over database objects (via appropriate adapters). It seemed so odd..complex, but once you grasp it, it's just mind blowing powerful. I have the feeling the same holds for RxJS.
+
 
 ## What I needed: a broadcasting mechanism
 

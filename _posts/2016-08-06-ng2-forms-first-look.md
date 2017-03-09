@@ -12,6 +12,11 @@ tags: [ "JavaScript", "Angular"]
 
 {% include postads %}
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
+{% include toc.html %}
+
 <iframe width="750" height="500" src="https://www.youtube.com/embed/E92KS_YCSf8" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
 ---

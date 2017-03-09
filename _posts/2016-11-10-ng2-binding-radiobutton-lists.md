@@ -12,6 +12,11 @@ tags: [ "JavaScript", "Angular"]
 
 {% include postads %}
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
+{% include toc.html %}
+
 First of all, assume this is our data structure:
 
 ```javascript
@@ -53,10 +58,9 @@ For the purpose of not complicating our example more than needed, we create a si
 export class App { 
     entries = []
 }
-
 ```
 
-#### Pre-select the 1st radio button of the list 
+## Pre-select the 1st radio button of the list 
 
 Given that we specified the `name="radiogroup"` on our radio button, always only one radio button can be selected in our list. This is plain standard HTML behavior. Therefore, it's good practice to preselect the first one. How do we determine the 1st row within our `*ngFor` loop? We use the index property. Once we have that we can conditionally add the `checked` property to our radio button based on whether the current index in our iteration is equal to 0.
 
@@ -69,7 +73,7 @@ Given that we specified the `name="radiogroup"` on our radio button, always only
 </tr>
 ```
 
-#### Binding: Model -> Template
+## Binding: Model -> Template
 
 The important part is our `<input type="radio"...>` here, so let's take a closer look. First of all we want to bind in the value which is determined by the `id` property of our entry data object. We can bind the value using the `[ ]` brackets.
 
@@ -84,7 +88,7 @@ The important part is our `<input type="radio"...>` here, so let's take a closer
 </tr>
 ```
 
-#### Binding: Template -> Model
+## Binding: Template -> Model
 
 Great, so now that we've databound our model to our template by using the `[value]` attribute on our radio button list, we need however to also bind the currently selected radio button back to our component. This is important in order to understand which radio button the user ultimately selected. Our strategy here is to bind to the native "change" event on our radio button element. In Angular we can simply  do this by using the `( )` brackets.
 

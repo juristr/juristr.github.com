@@ -14,6 +14,11 @@ tags: [ "JavaScript", "Angular" ]
 
 {% include postads %}
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
+{% include toc.html %}
+
 ## Directly manipulating styles property
 
 A rather unconventional way would be to return the styling property as a string and then to directly set it on the desired element:

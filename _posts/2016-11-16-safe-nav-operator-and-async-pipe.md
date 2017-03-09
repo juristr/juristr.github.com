@@ -12,6 +12,11 @@ tags: [ "JavaScript", "Angular"]
 
 {% include postads %}
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
+{% include toc.html %}
+
 If you already played with Angular 2, I'm pretty sure you came across <a href="http://reactivex.io/rxjs/" target="window">RxJS</a>. It plays a big role in Angular 2, especially in Http, Forms, Async Pipes, Routing and also in application architecture patterns like [ngrx/store](https://github.com/ngrx/store). 
 
 {% include article-link.html

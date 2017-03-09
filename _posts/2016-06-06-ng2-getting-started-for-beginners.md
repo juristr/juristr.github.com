@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Angular 2 - A Getting Started Guide for Beginners"
+title: "Angular 2+ - A Getting Started Guide for Beginners"
 lead: "A gentle introduction to a local Meetup group"
 postimg: "/blog/assets/imgs/meetup-intro-angular2/ng2-gettingstarted-image.png"
 category: angular2
@@ -12,7 +12,8 @@ tags: [ "JavaScript", "Angular.js", "Angular" ]
 	Since about half a year, I'm organizing a <a href="http://www.meetup.com/Software-Craftsmanship-SouthTyrol/">local Meetup group around Software Craftsmanship</a>. I recently also published <a href="/blog/2016/04/learning-angular2-directives-course/">a video course on "Learning Angular 2 directives"</a> and given Angular 2 finally released RC1, I decided to organize a Meetup session to introduce Angular 2 to our members. <i>Hint: check out the screencast at the end :wink:</i>
 </div>
 
-<br />
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
 
 <figure class="image--wide">
 	<a href="https://docs.google.com/presentation/d/1sgIjSzDVrc2VDpQr6OGZ7rPGMnSV_TSvLFDVvGi3yB0/edit?usp=sharing">
@@ -25,6 +26,8 @@ tags: [ "JavaScript", "Angular.js", "Angular" ]
 
 > Wohooo! **This article earned some fame** and was chosen at **rank #1** out of ~1500 Angular 2 articles published in May-June 2016. [Read the whole story](https://medium.com/@Mybridge/top-10-angular-2-articles-for-the-past-month-v-june-37bb96b667a3#.tjs9etrwb) :blush:
 
+
+{% include toc.html %}
 ## Intro
 
 This article is for those of you that are new to Angular 2 or even to web development in general. Here, I'm going to give you a good overview what Angular 2 is all about, highlighting some of the main concepts behind. The idea is to give you a good starting point from where to go and do further research.

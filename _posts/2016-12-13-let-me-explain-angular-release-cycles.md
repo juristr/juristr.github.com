@@ -28,6 +28,8 @@ So here it is:
 
 **Why Angular 4??** Why even Angular 3?? What is going on?
 
+{% include toc.html %}
+
 ## Angular uses SEMVER
 
 Back in September when the [new Angular was finally released](/blog/2016/09/ng2-released/), the Angular team also [announced](http://angularjs.blogspot.com/2016/10/versioning-and-releasing-angular.html) they will switch to [Semantic Versioning (SEMVER)](http://semver.org/).
