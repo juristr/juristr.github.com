@@ -12,7 +12,7 @@ Also make sure you check out [my about page](/about), [my blog posts](/blog) or 
 
 Obviously you can also reach out to me via mail: {% include email.html %}
 
-### What am I look for
+### What am I looking for
 
 My current interest are based in the frontend web development area, which is why I'm currently mainly looking for a **full-time, remote position** as a tech lead with focus on frontend web development.  
 I'm [very interested in backend architectures](/about#interests) as well, especially distributed systems and the whole topics around microservices and containers (Docker, ...).
