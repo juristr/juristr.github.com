@@ -77,6 +77,19 @@ Rather, we have another module, say the `PeopleModule` , which already imports i
 
 ![](/blog/assets/imgs/angular-modules/explain-import-module.png)
 
+Using a component from another imported Angular module (i.e. the `PersonComponent` from our `PersonModule`) is as simple as using it in the template of one of the components that is part of the importing module. In our example the `ContactsModule`:
+
+```javascript
+@Component({
+    selector: 'contact-detail',
+    template: `
+        ...
+        <person [data]="somePerson"></person>
+    `
+})
+export class ContactDetailComponent { ... }
+```
+
 The following shows an example of a modular application with a “shared” and “contacts” module. Internally, the Contacts Module contains other artifacts such as person components.
 
 ![](/blog/assets/imgs/angular-modules/module-structure-example.png)
