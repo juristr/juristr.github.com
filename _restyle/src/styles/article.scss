@@ -100,12 +100,17 @@ article {
     }
 
     a {
-      color: $article-body-color;
+      color: #0366d6; //$article-body-color;
       text-decoration: none;
-      background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0) 25%);
-      background-repeat: repeat-x;
-      background-size: 2px 3px;
-      background-position: 0 22px;
+      // background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 25%, rgba(0,0,0,0) 25%);
+      // background-repeat: repeat-x;
+      // background-size: 2px 3px;
+      // background-position: 0 22px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
     }
 
     p {
