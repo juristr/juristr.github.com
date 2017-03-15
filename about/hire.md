@@ -3,18 +3,18 @@ layout: about
 title: Hire me!
 ---
 
-Yes, I'm currently looking for a new challenge in my career. Feel free to read on, or take a look at my CV or LinkedIn profile:
+I'm [currently working as a software architect and tech lead](https://github.com/juristr/juristr.github.com/blob/master/about), where my main focus is to help keep teams productive, do coaching, lots of coding and standardization work. Obviously I'm always looking for a new challenge in my career. Thus, feel free to read on, or take a look at my CV or LinkedIn profile:
 
 - <a href="http://stackoverflow.com/cv/juri" target="_blank">StackOverflow Careers CV</a>
 - <a href="https://it.linkedin.com/in/juristr" target="_blank">My LinkedIn Profile</a>
 
 Also make sure you check out [my about page](/about), [my blog posts](/blog) or my other activities on these social networks: {% include social_icons %}
 
-Obviously you can also reach out to me via mail: {% include email.html %}
+You can also reach out to me via mail: {% include email.html %}
 
 ### What am I looking for
 
-My current interest are based in the frontend web development area, which is why I'm currently mainly looking for a **full-time, remote position** as a tech lead with focus on frontend web development.  
+My current interest are based in the frontend web development area, which is why I'm currently mainly looking for a **full-time, (preferably remote) position** as a tech lead with focus on frontend web development.  
 I'm [very interested in backend architectures](/about#interests) as well, especially distributed systems and the whole topics around microservices and containers (Docker, ...).
 
 But I'm always keen to explore new fields. So if you think I could be a good match, then let's discuss. Just [contact me](/about#contact). I'm looking forward to hearing from you!
