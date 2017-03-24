@@ -7,7 +7,7 @@ tags: [ "Angular", "mobile"]
 ---
 
 <div class="article-intro">
-	I had the pleasure to bring 3 amazing speakers on board for our <a href="https://www.meetup.com/Software-Craftsmanship-SouthTyrol/events/237695704/" rel="nofollow">Software Craftsmanship South Tyrol Meetup group</a> which I'm organizing together with <a href="https://twitter.com/cpiock"  rel="nofollow">Christoph</a>. 3 speakers, <a href="https://twitter.com/saniyusuf">Sani Yusuf</a>, <a href="https://twitter.com/webmaxru">Maxim Salnikov</a> and <a href="https://twitter.com/wwwalkerrun">Nathan Walker</a>, connected to us from around the globe to share their knowledge on creating mobile apps with web technology, primarily with Angular.
+	I had the pleasure to bring 3 amazing speakers on board for our <a href="https://www.meetup.com/Software-Craftsmanship-SouthTyrol/events/237695704/" rel="nofollow">Software Craftsmanship South Tyrol Meetup group</a> which I'm organizing together with <a href="https://twitter.com/cpiock"  rel="nofollow">Christoph</a>. <a href="https://twitter.com/saniyusuf">Sani Yusuf</a>, <a href="https://twitter.com/webmaxru">Maxim Salnikov</a> and <a href="https://twitter.com/wwwalkerrun">Nathan Walker</a>, connected to us from around the globe to share their knowledge on creating mobile apps with web technology, primarily with Angular.
 </div>
 
 {% include postads %}
