@@ -19,6 +19,8 @@ To start straight away: **Angular Modules are different from ES6 Modules!**
 
 ![](/blog/assets/imgs/angular-modules/ngmodules-diff-es6mod.png)
 
+{% include toc.html %}
+
 ## JavaScript Modules Primer
 
 I don’t like to repeat the same content, so if you want to get a exhaustive introduction of what JavaScript modules are about, I highly recommend reading the article on “[A 10 minute primer to JavaScript modules, module formats, module loaders and module bundlers](http://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/)” by my friend [Jurgen Van de Moere](https://twitter.com/jvandemo).
