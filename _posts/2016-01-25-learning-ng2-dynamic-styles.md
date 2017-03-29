@@ -255,10 +255,14 @@ export class StyledComponent {
   @HostBinding('class.yellow-style') yellowStyle:boolean = false;
   @HostBinding('class.red-style') redStyle:boolean = false;
   
-  ngOnInit() {
-    if(this.style === 'yellow') {
+  ngOnChanges(changes) {
+    let newStyle = changes.style.currentValue;
+    
+    if(newStyle === 'yellow') {
       this.yellowStyle = true;
-    } else if(this.style === 'red') {
+      this.redStyle = false;
+    } else if(newStyle === 'red') {
+      this.yellowStyle = false;
       this.redStyle = true;
     } else {
       // nothing here.. (fallback?)
@@ -267,7 +271,7 @@ export class StyledComponent {
 }
 ```
 
-In the `ngOnInit` we then activate the proper style. (Note this is not the most intelligent code, but it's simple enough so you get the idea :wink:).
+In the `ngOnChanges` we the `style` input property changes, we properly adjust our style flags. (Note this is by far not the most intelligent code, but it's simple enough so you get the idea :wink:).
 
 Here's an example to play around with.
 
