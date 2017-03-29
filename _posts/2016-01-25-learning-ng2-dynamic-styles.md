@@ -189,6 +189,91 @@ export class App {
 {% assign plunker_url = "https://embed.plnkr.co/WmrldzDHCib5ixsdL8R0/" %}
 {% include plunker.html %}
 
+## Using `:host(..)` and `@HostBinding`
+
+Consider you have a component `<styled>` which you'd like have different CSS classes applied based on some setting, like `.yellow-style` in case when you specify `<styled style="yellow">` and `.red-style` when you pass in `red`: `<styled style="red">`.
+
+What's important to note here is that, different to what we did so far, we don't want the CSS class to be applied on some element that's internal to our component, but onto the component itself. Example:
+
+```html
+<styled style="red" _nghost-c0="" ng-reflect-style="red" class="red-style">
+    <div _ngcontent-c0="">
+      I'm a div that wants to be styled
+    </div>
+</styled>
+```
+
+Still, for reusability purposes, our styles should be supplied with the component itself, so again we use the `styles` property of our `StyledComponent`:
+
+```javascript
+@Component({
+  selector: 'styled',
+  template: `
+    <div>
+      I'm a div that wants to be styled
+    </div>
+  `,
+  styles: [
+    `
+      :host(.yellow-style) {
+        background-color: yellow;
+        border: 1px solid black;
+        display:block;
+      }
+      
+      :host(.red-style) {
+        background-color: red;
+        border: 1px solid black;
+        color: white;
+        display:block;
+      }
+    `
+  ]
+})
+export class StyledComponent { }
+```
+As you can see, we use the special `:host(...)` selector to target the styles on the element that hosts the component. [More info on the official docs about this](https://angular.io/docs/ts/latest/guide/component-styles.html#!#special-selectors). In this way `.yellow-style` as well as `.red-style` will be visible at the host component level while they'd be otherwise encapsulated and only applicable to elements within our `StyledComponent`.
+
+Next, we define an `@Input()` property which allows us pass in the style configuration.
+
+```javascript
+@Component({...})
+export class StyledComponent {
+    @Input() style;
+}
+```
+
+What we're still missing is to programmatically set the CSS class on our host element based on the value of the `style` input property. We use the `@HostBinding` for this:
+
+```javascript
+import { Component, Input, HostBinding } from '@angular/core';
+
+@Component({ ... })
+export class StyledComponent {
+  @Input() style;
+  
+  @HostBinding('class.yellow-style') yellowStyle:boolean = false;
+  @HostBinding('class.red-style') redStyle:boolean = false;
+  
+  ngOnInit() {
+    if(this.style === 'yellow') {
+      this.yellowStyle = true;
+    } else if(this.style === 'red') {
+      this.redStyle = true;
+    } else {
+      // nothing here.. (fallback?)
+    }
+  }
+}
+```
+
+In the `ngOnInit` we then activate the proper style. (Note this is not the most intelligent code, but it's simple enough so you get the idea :wink:).
+
+Here's an example to play around with.
+
+{% assign plunker_url = "https://embed.plnkr.co/LfjCS6DMSi8d44O4Uhkj/" %}
+{% include plunker.html %}
+
 ## Referencing the DOM element directly via ElementRef
 
 The last possibility is by directly interacting with the underlying DOM element. For that purpose we create a directive `styled` which we add to our div.
