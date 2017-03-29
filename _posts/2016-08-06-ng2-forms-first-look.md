@@ -1,13 +1,13 @@
 ---
 layout: post_new
-title: "Angular 2 Forms - a first look"
-lead: "A first quick look at the new Forms API in Angular 2"
+title: "Angular Forms - a first look"
+lead: "A first quick look at the new Forms API in Angular"
 postimg: "/blog/assets/imgs/forms.png"
 tags: [ "JavaScript", "Angular"]
 ---
 
 <div class="article-intro">
-  Angular 2 gets a brand new Forms API. It's fresh out of the compiler and since there's not much documentation around yet, <a href="https://twitter.com/angular_zone">@angular_zone</a> powered by <a href="https://twitter.com/gerardsans">Gerard Sans</a> and <a href="https://twitter.com/manekinekko">Wassim Chegham</a> organized a Google Hangout with <a href="https://twitter.com/karaforthewin">Kara Erickson</a>, core contributor to the Forms Api. Here I'm basically summarizing the main points and created a runnable Plunker for you to play with.
+  Angular gets a brand new Forms API. It's fresh out of the compiler and since there's not much documentation around yet, <a href="https://twitter.com/angular_zone">@angular_zone</a> powered by <a href="https://twitter.com/gerardsans">Gerard Sans</a> and <a href="https://twitter.com/manekinekko">Wassim Chegham</a> organized a Google Hangout with <a href="https://twitter.com/karaforthewin">Kara Erickson</a>, core contributor to the Forms Api. Here I'm basically summarizing the main points and created a runnable Plunker for you to play with.
 </div>
 
 {% include postads %}
@@ -30,7 +30,7 @@ Watch  Kara's talk at AngularConnect 2016 for an exhaustive Forms intro
 
 ## Two different approaches to Forms
 
-There are basically two different approaches to Angular 2 forms:
+There are basically two different approaches to Angular forms:
 
 - **Template driven**, Angular 1 style forms
 - **Reactive, or model-driven** forms
@@ -96,7 +96,7 @@ import { FormsModule }   from '@angular/forms';
 export class AppModule {}
 ```
 
-To learn more about `NgModule` check out [the guide on the official Angular 2 site](https://angular.io/docs/ts/latest/guide/ngmodule.html).
+To learn more about `NgModule` check out [the guide on the official Angular site](https://angular.io/docs/ts/latest/guide/ngmodule.html).
 
 {% include article-link.html
     url="https://angular.io/docs/ts/latest/guide/ngmodule.html"
@@ -110,7 +110,7 @@ Now we should be good to go. **Here's a runnable Plunker** which you can use to 
 
 #### Prior to Angular 2 RC5
 
-Prior to RC5 when Angular modules have been introduced, you had to explicitly disable the "old" Forms API which was already present in Angular 2. To disable it, call the `disableDeprecatedForms()` function and then enable the brand new Forms API using the `provideForms()` and by passing it along to the Angular 2 bootstrap function:
+Prior to RC5 when Angular modules have been introduced, you had to explicitly disable the "old" Forms API which was already present in Angular. To disable it, call the `disableDeprecatedForms()` function and then enable the brand new Forms API using the `provideForms()` and by passing it along to the Angular bootstrap function:
 
 ```javascript
 // main entry point
@@ -126,7 +126,7 @@ bootstrap(App, [
   .catch(err => console.error(err));
 ```
 
-But I highly recommend to upgrade to the latest Angular 2 release if possible.
+But I highly recommend to upgrade to the latest Angular release if possible.
 
 ## Template driven approach
 
@@ -146,7 +146,7 @@ So assume we're having this plain simple HTML form:
 </form>
 ```
 
-To hook it to Angular 2's Forms API, you first need to declare a `#form` like
+To hook it to Angular's Forms API, you first need to declare a `#form` like
 
 ```html
 <form #form="ngForm">
@@ -335,11 +335,11 @@ And finally, we need to map the group and form controls using `formControlName` 
 
 ## Wrapping up
 
-Great, so I hope I was able to give you a first overview of what the Forms API looks like in Angular 2. Obviously there's much more to explore!
+Great, so I hope I was able to give you a first overview of what the Forms API looks like in Angular. Obviously there's much more to explore!
 
 {% include article-link.html
     url="http://blog.thoughtram.io/angular/2016/07/27/custom-form-controls-in-angular-2.html"
-    title="Custom Form Controls in Angular 2"
+    title="Custom Form Controls in Angular"
     text="Learn how to create custom form controls with Pascal Precht from Thoughtram"
 %}
 

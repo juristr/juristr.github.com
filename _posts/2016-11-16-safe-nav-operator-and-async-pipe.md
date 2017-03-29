@@ -17,7 +17,7 @@ tags: [ "JavaScript", "Angular"]
 
 {% include toc.html %}
 
-If you already played with Angular 2, I'm pretty sure you came across <a href="http://reactivex.io/rxjs/" target="window">RxJS</a>. It plays a big role in Angular 2, especially in Http, Forms, Async Pipes, Routing and also in application architecture patterns like [ngrx/store](https://github.com/ngrx/store). 
+If you already played with Angular, I'm pretty sure you came across <a href="http://reactivex.io/rxjs/" target="window">RxJS</a>. It plays a big role in Angular, especially in Http, Forms, Async Pipes, Routing and also in application architecture patterns like [ngrx/store](https://github.com/ngrx/store). 
 
 {% include article-link.html
     url="/blog/2016/06/rxjs-1st-steps-subject/"
@@ -26,7 +26,7 @@ If you already played with Angular 2, I'm pretty sure you came across <a href="h
     imageurl="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
 %}
 
-[Rob Wormald's (Angular Developer Evangelist @ Google)](https://twitter.com/robwormald) showed some impressive usage of RxJS with Angular 2 during his talk at NgEurope on ["Angular & RxJS"](https://www.youtube.com/watch?v=WWR9nxVx1ec). Some involved using the Safe Navigation Operator and how it can be replaced via async pipes.
+[Rob Wormald's (Angular Developer Evangelist @ Google)](https://twitter.com/robwormald) showed some impressive usage of RxJS with Angular during his talk at NgEurope on ["Angular & RxJS"](https://www.youtube.com/watch?v=WWR9nxVx1ec). Some involved using the Safe Navigation Operator and how it can be replaced via async pipes.
 
 ## Our task
 
@@ -67,7 +67,7 @@ export class PeopleComponent {
 
 ## Option 1: Pass in a person object
 
-So our first option is to simply get the data in our parent component via the Angular 2 `http` service.
+So our first option is to simply get the data in our parent component via the Angular `http` service.
 
 ```javascript
 this.http
@@ -318,7 +318,7 @@ export class PeopleComponent {
 
 The `async` pipe is a really powerful operator.
 
-- it deeply integrates with RxJS Observables and the Angular 2 change detection mechanism.
+- it deeply integrates with RxJS Observables and the Angular change detection mechanism.
 - it handles Observable subscriptions transparently for us (in an optimized way)
 - it makes our async code look as if was synchronous
 

@@ -1,13 +1,13 @@
 ---
 layout: post_new
-title: "Data bind radio button lists with Angular 2"
-lead: "Learn how to data bind radio buttons in Angular 2 using unidirectional data flow"
+title: "Data bind radio button lists with Angular"
+lead: "Learn how to data bind radio buttons in Angular using unidirectional data flow"
 postimg: "/blog/assets/imgs/radiobuttonsbinding.png"
 tags: [ "JavaScript", "Angular"]
 ---
 
 <div class="article-intro">
-    Assume you have a simple list or table of elements, each row having a radio button. The user can select one of the rows and your task is to determine the selected row entry. We basically need to establish some data binding between our data and the radio buttons. Let's see how to do that with Angular 2.
+    Assume you have a simple list or table of elements, each row having a radio button. The user can select one of the rows and your task is to determine the selected row entry. We basically need to establish some data binding between our data and the radio buttons. Let's see how to do that with Angular.
 </div>
 
 {% include postads %}

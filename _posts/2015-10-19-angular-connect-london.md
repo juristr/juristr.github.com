@@ -11,6 +11,9 @@ tags: ["Angular", "JavaScript"]
 
 I'm lucky enough to be able to attend [AngularConnect](http://angularconnect.com/) here in London. This article is going to be my notebook while attending the conference. Also take a look at my [notes from day 2](/blog/2015/10/angular-connect-london-day2/)!
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
 Here are my **notes from day 1** of the conference. Btw, **videos for track 1 are out**: [YouTube](https://www.youtube.com/channel/UCzrskTiT_ObAk3xBkVxMz5g)
 
 ![](/blog/assets/imgs/ngconnect/ngconnect-banner.jpg)
@@ -28,9 +31,9 @@ What's not quite as surprising are the Angular v1 vs v2 usage stats:
 
 ![](/blog/assets/imgs/ngconnect/ng1-vs-ng2-usagestats.png)
 
-7% taking a look at Angular 2 is probably more surprising. These stats are being taken from the [Angular v1](https://angularjs.org/) and [Angular 2](https://angular.io/) visitor stats.
+7% taking a look at Angular is probably more surprising. These stats are being taken from the [Angular v1](https://angularjs.org/) and [Angular](https://angular.io/) visitor stats.
 
-### Angular 2..
+### Angular..
 
 ..is all about speed and a better framework that leverages the latest available technology. It's about
 - load/startup speed by using angular universal to pre-render views on the server
@@ -44,7 +47,7 @@ What impressed me both (apart from all the speed improvements in compilation and
 
 ### Collaboration with Meteor.js
 
-Other awesome news include tight collaboration with the [Meteor](https://www.meteor.com/) team to provide even better support and integration with Angular 2 (as they already have by now).
+Other awesome news include tight collaboration with the [Meteor](https://www.meteor.com/) team to provide even better support and integration with Angular (as they already have by now).
 
 The shown performance stats are huge!
 
@@ -62,13 +65,13 @@ Brad quickly outlined some changes in the templates:
 <button (click)="buy($event)">Buy it</button>
 ```
 
-These changes make the API much more clear and Angular 2 can get rid of custom directives like `ng-href`, `ng-click`, `ng-mousemove` etc. You can simply use the native properties/events, using the proper `()` or `[]` notation.
+These changes make the API much more clear and Angular can get rid of custom directives like `ng-href`, `ng-click`, `ng-mousemove` etc. You can simply use the native properties/events, using the proper `()` or `[]` notation.
 
-More on the [Angular 2 cheatsheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html).
+More on the [Angular cheatsheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html).
 
 ### Components
 
-When today you (should) have a directive with a corresponding directive controller, tomorrow with Angular 2 you'll have (or call it) a component. **Everything is a component**, your app simply a big "component tree" starting with a top-level component and then have lots of sub-components nested within it.
+When today you (should) have a directive with a corresponding directive controller, tomorrow with Angular you'll have (or call it) a component. **Everything is a component**, your app simply a big "component tree" starting with a top-level component and then have lots of sub-components nested within it.
 
 ![](/blog/assets/imgs/ngconnect/ng2component.png)
 
@@ -117,7 +120,7 @@ Ultimately, Angular is designed to give you as much freedom as possible. That sa
 
 - ES5 - runs in the Browser (ultimately)
 - ES6 (ES2015)
-- TypeScript (Angular 2 is written in TS)
+- TypeScript (Angular is written in TS)
 - Dart - No JS
 
 Even though you have all the options, as mentioned, I think **TypeScript is the way to go**. It will give you the better developer experience after all. Quite some speakers mentioned that as well, especially for reasons of Typing (and thus compile-time checking), tooling in general and finally refactoring support.
@@ -159,17 +162,17 @@ There also seems to be a huge interest in getting mobile apps with Angular. Besi
 
 ![](/blog/assets/imgs/ngconnect/mobile-native.png)
 
-Flexibility in the Angular 2's new templating engine opens up a whole set of new possibilities:
+Flexibility in the Angular's new templating engine opens up a whole set of new possibilities:
 
 ![](/blog/assets/imgs/ngconnect/ng-templating.png)
 
-### Path to Angular 2
+### Path to Angular
 
 ![](/blog/assets/imgs/ngconnect/ngUpgrade.png)
 
-Start taking a look at [ngUpgrade](https://github.com/angular/ngUpgrade), a repository describing strategies and ideas to aid upgrading to Angular 2.
+Start taking a look at [ngUpgrade](https://github.com/angular/ngUpgrade), a repository describing strategies and ideas to aid upgrading to Angular.
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Remember when <a href="https://twitter.com/mhevery">@mhevery</a> said at <a href="https://twitter.com/angularu">@angularu</a> that upgrading to Angular 2 will be boring? Well.. Lemme tell you sth. He didn&#39;t lie.</p>&mdash; Pascal Precht ʕ•̫͡•ʔ (@PascalPrecht) <a href="https://twitter.com/PascalPrecht/status/653822835312431104">October 13, 2015</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Remember when <a href="https://twitter.com/mhevery">@mhevery</a> said at <a href="https://twitter.com/angularu">@angularu</a> that upgrading to Angular will be boring? Well.. Lemme tell you sth. He didn&#39;t lie.</p>&mdash; Pascal Precht ʕ•̫͡•ʔ (@PascalPrecht) <a href="https://twitter.com/PascalPrecht/status/653822835312431104">October 13, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 [Upgrade playground](https://github.com/angular/angular/tree/master/modules/playground/src/upgrade).
@@ -205,7 +208,7 @@ Ionic is exciting technology. I was trying hybrid apps about a couple of years a
     <img src="/blog/assets/imgs/ngconnect/ionic2logo.png" width="50%" height="50%"/>
 </figure>
 
-Ionic 2 is built on top of Angular 2 and mainly focuses on the following pillars.
+Ionic 2 is built on top of Angular and mainly focuses on the following pillars.
 
 ### Simplicity
 
@@ -264,13 +267,13 @@ Moreover it uses the new [Web Animations API](https://w3c.github.io/web-animatio
 
 This looks really promising and is definitely something I'm going to experiment with. Native apps have their place, but they are costly, you need a dedicated team/developers for both, iOS and Android (and Windows) and that's why we're all looking towards hybrid apps that leverage web technologies.
 
-## Full Stack Angular 2
+## Full Stack Angular
 
 Speaker: [PatrickJS](https://twitter.com/gdi2290), [@jeffwhelpley](https://twitter.com/@jeffwhelpley)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MtoHFDfi8FM" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
-Angular 2 on the server-side with **angular universal**. Really cool talk with cool live coding demos by [PatrickJS](https://twitter.com/gdi2290).
+Angular on the server-side with **angular universal**. Really cool talk with cool live coding demos by [PatrickJS](https://twitter.com/gdi2290).
 
 Nothing more to add, simply check out the [starter project](https://github.com/angular/universal-starter).  
 Oh, and something you definitely wanna watch out for: [http://fullstackangular2.com/](http://fullstackangular2.com/).
@@ -281,7 +284,7 @@ Speaker: [briantford](https://twitter.com/briantford)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z1NB-HG0ZH4" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 
-Brian Ford introduced the new Angular 2 component router. The new router basically incorporates the lessons learned from the native Angular 1 router and features from the more popular ui-router project. The main difference is that the **component router maps URLs to components**.
+Brian Ford introduced the new Angular component router. The new router basically incorporates the lessons learned from the native Angular 1 router and features from the more popular ui-router project. The main difference is that the **component router maps URLs to components**.
 
 The new `ui-view` is:
 
@@ -321,7 +324,7 @@ Another quite interesting point is what Brian denoted "eleven dimensional routin
 
 Totally interesting and something you should start taking a look at as it seems this is going to land in Angular v1.x as well and is some of the core parts for going an incremental upgrade path. I had the feeling Brian only scratched the surface of what's possible with the new router.
 
-## Getting started with Angular 2
+## Getting started with Angular
 
 Speaker: [@radokirov](https://twitter.com/@radokirov), [@naomitraveller](https://twitter.com/@naomitraveller)  
 Demo code: [https://github.com/rkirov/angular2-tour-of-heroes](https://github.com/rkirov/angular2-tour-of-heroes)
@@ -380,7 +383,7 @@ Some good tips and tricks for creating more maintainable tests. Take a look at t
 - Never ever use xpath!
 - Use Page Objects
 
-## Testing Strategies with Angular 2
+## Testing Strategies with Angular
 
 Speaker: [@SomeJulie](https://twitter.com/SomeJulie)  
 Repo: [https://github.com/juliemr/ng2-test-seed](https://github.com/juliemr/ng2-test-seed)
@@ -444,7 +447,7 @@ class MockLoginService extends LoginService {
 beforeEachProviders(() => [provide(LoginService, {useClass: MockLoginService}), UserService]);
 ```
 
-**TestComponentBuilder** helps when it comes to test Angular 2 components:
+**TestComponentBuilder** helps when it comes to test Angular components:
 [https://github.com/juliemr/ng2-test-seed/blob/master/src/test/border-component_test.ts#L23](https://github.com/juliemr/ng2-test-seed/blob/master/src/test/border-component_test.ts#L23).
 
 ## Iterative Version upgrade strategies

@@ -22,7 +22,7 @@ I've created a series of Plunks which you can use to play around with the code b
 
 ## Step 1: Remove/Avoid `$scope`
 
-Ok, `$scope` was a central element in Angular since the beginning. It's the glue between your Angular controller and the HTML template. Unfortunately scope is going away in Angular 2. There won't be anything similar there. That's why the "controller as" syntax has been introduced a while back also in Angular 1. So let's do it. Here's what [John Papa proposes in his popular Angular 1 styleguide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
+Ok, `$scope` was a central element in Angular since the beginning. It's the glue between your Angular controller and the HTML template. Unfortunately scope is going away in Angular version 2+. There won't be anything similar there. That's why the "controller as" syntax has been introduced a while back also in Angular 1. So let's do it. Here's what [John Papa proposes in his popular Angular 1 styleguide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 
 ```javascript
 // before
@@ -370,16 +370,16 @@ And be used within our "smart components" `<home>` and `<about>` (big words here
 
 ## Interested what role components play in Angular 2?
 
-Then check out my video course with PacktPub which focuses on "Learning Angular 2 directives".
+Then check out my video course with PacktPub which focuses on "Learning Angular components".
 
 {% include article-link.html
-	url="/blog/2016/04/learning-angular2-directives-course/"
-	title="Learning Angular 2 directives"
-	text="Learn how to build efficient Angular 2 directives with this fast and interactive video course"
-	imageurl="/blog/assets/imgs/learning-angular2-directives/cover.jpg"
+	url="/blog/2017/01/video-course-learning-ng-cmps/"
+	title="Learning Angular components (2nd ed)"
+	text="The 2nd edition of my video course on Learning Angular Components"
+	imageurl="/blog/assets/imgs/learning-ng-cmps-cover.png"
 %}
 
-Also, for a quick, 20 minute intro to Angular 2 (especially for beginners), you may want to check out my other article:
+Also, for a quick, 20 minute intro to Angular 2+ (especially for beginners), you may want to check out my other article:
 
 {% include article-link.html
 	url="/blog/2016/06/ng2-getting-started-for-beginners/"

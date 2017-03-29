@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Angular 2 released!!"
+title: "Angular version 2.0.0 released!!"
 lead: "After two years of intense development it has now been officially released"
 postimg: "/blog/assets/imgs/angular2-out.jpg"
 tags: [ "JavaScript", "Angular"]
@@ -11,6 +11,9 @@ tags: [ "JavaScript", "Angular"]
 </div>
 
 {% include postads %}
+
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
 
 <video width="100%" height="100%" autoplay="autoplay" loop="loop">
   <source src="/blog/assets/imgs/ng2outanimation.mp4" type="video/mp4">

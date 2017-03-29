@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Angular 2: How do I register an event listener on document?"
+title: "Angular: How do I register an event listener on document?"
 lead: "Learn how to attach an event listener on the document object"
 postimg: "/blog/assets/imgs/ng2-register-event-cardimg.png"
 tags: [ "JavaScript", "Angular"]
@@ -8,10 +8,13 @@ reposts: ["https://dzone.com/articles/how-to-register-an-event-listener-on-a-doc
 ---
 
 <div class="article-intro">
-	I recently got asked by an Angular community member on Twitter how one can register an event on the <code>document</code> object. While it is totally possible to directly access the <code>document</code> object and hook up some listener, it is not suggested. There are better ways in Angular 2, see yourself.
+	I recently got asked by an Angular community member on Twitter how one can register an event on the <code>document</code> object. While it is totally possible to directly access the <code>document</code> object and hook up some listener, it is not suggested. There are better ways in Angular, see yourself.
 </div>
 
 {% include postads %}
+
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
 
 So, naively you could start and write something like this:
 

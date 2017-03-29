@@ -13,6 +13,9 @@ tags: [ "JavaScript", "Angular.js", "Angular" ]
 
 {% include postads %}
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
 {% include toc.html %}
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/xMaskTop88E" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
@@ -35,7 +38,7 @@ But I think Cecil's answer is an awesome way to approach this initial complexity
 So I'm having an Angular 1.x application and I needed a way for other (potentially lazy loaded) components to get notified about certain events happening within the application. Like, whenever the user executes a search through the application's search component, I want such modules to allow to subscribe to a "search event" and then get invoked with the search results.
 
 > **Angular 1? Why don't you simply use the `$rootScope.$emit(...)` as broadcasting mechanism?**
-Sure thing, that would totally work. But under the assumption that I'll upgrade sooner or later to [Angular 2](/blog/2016/06/ng2-getting-started-for-beginners/), I'm trying to avoid the `$scope` as much as possible. Also it has other side effects as well.
+Sure thing, that would totally work. But under the assumption that I'll upgrade sooner or later to [Angular](/blog/2016/06/ng2-getting-started-for-beginners/), I'm trying to avoid the `$scope` as much as possible. Also it has other side effects as well.
 
 RxJS is made for this, right? There's a stream of data (my broadcast values), and there are so-called `Observables` to which you can **subscribe** and get updated about new values. I always wanted to experiment around with RxJS on a concrete example, so it was time.
 
@@ -58,14 +61,14 @@ It has initially been popularized by Microsoft and published under the [Reactive
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/juristr">@juristr</a> 5 is a total rewrite with a focus on compatibility with the ECMAScript proposal, as well as performance improvements</p>&mdash; Ben Lesh (@BenLesh) <a href="https://twitter.com/BenLesh/status/744137153743990784">June 18, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-With Angular 2, also Google jumped onto reactive extensions.  Angular 2 makes heavy use of RxJS 5, for instance the provided **http library returns Rx Observables by default**, rather than Promises as you might expect.
+With Angular, also Google jumped onto reactive extensions.  Angular makes heavy use of RxJS 5, for instance the provided **http library returns Rx Observables by default**, rather than Promises as you might expect.
 
 Also, **Twitter is an awesome source of information** (at least for me). So if you want to get more on Reactive programming I recommend you to go and follow these guys:
 
 - **[Ben Lesh](https://twitter.com/BenLesh) -** Software Engineer at Netflix in charge of [RxJS 5](https://github.com/ReactiveX/rxjs)
 - **[Andre Staltz](https://twitter.com/andrestaltz) -** A reactive programming and functional programming expert which has written THE introduction to reactive programming (see link at end of this article)
 - **[Michel Weststrate](https://twitter.com/mweststrate) -** Creator of MobX, a state management library that embraces reactive programming like no other lib
-- **[Rob Wormald](https://twitter.com/robwormald) -** Developer advocate at Google on the Angular team and big proponent of reactive programming. He also created [ngrx](https://github.com/ngrx), a project that started as [a Redux inspired library built with RxJS](https://github.com/ngrx/store) and evolved to a collection of reactive extensions for Angular 2.
+- **[Rob Wormald](https://twitter.com/robwormald) -** Developer advocate at Google on the Angular team and big proponent of reactive programming. He also created [ngrx](https://github.com/ngrx), a project that started as [a Redux inspired library built with RxJS](https://github.com/ngrx/store) and evolved to a collection of reactive extensions for Angular.
 - **[Victor Savkin](https://twitter.com/victorsavkin) -** Developer advocate at Google on the Angular team. On his blog he writes interesting articles, also on reactive programming, in particular [this one](http://victorsavkin.com/post/146359880996/the-taxonomy-of-reactive-programming).
 - _and probably many others. Let me know and I'll list them here :smiley:_
 
@@ -195,15 +198,15 @@ Besides `Subject` which is the most basic one and `ReplaySubject`, there exist a
 
 We obviously only scratched the surface here. RxJS is extremely powerful, especially when combined with asynchronous data "flowing in from your APIs". It's hard to get started initially, but I highly recommend you to play around with it, use my JSBins above, clone them and experiment.
 
-Also, I've not yet tried it, but the above described approach could be a very valid alternative for replacing Angular 1.x's `$rootScope.$emit` and `$rootScope.$broadcast` for broadcasting. That would further help to avoid using the `$scope` and prepare for a migration to Angular 2. Idea for another post :wink:.
+Also, I've not yet tried it, but the above described approach could be a very valid alternative for replacing Angular 1.x's `$rootScope.$emit` and `$rootScope.$broadcast` for broadcasting. That would further help to avoid using the `$scope` and prepare for a migration to Angular. Idea for another post :wink:.
 
 Here are some further, related links.
 
 {% include article-link.html
     url="/blog/2016/06/ng2-getting-started-for-beginners/#rxjs"
     imageurl="/blog/assets/imgs/angular2logo.svg"
-    title="Angular 2 - A Getting Started Guide for Beginners"
-    text="Reactive Programming with RxJs 5 and Http in Angular 2"
+    title="Angular - A Getting Started Guide for Beginners"
+    text="Reactive Programming with RxJs 5 and Http in Angular"
 %}
 
 {% include article-link.html

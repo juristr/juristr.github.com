@@ -1,21 +1,24 @@
 ---
 layout: post_new
-title: "Let's create your first Angular 2 app"
-lead: "It's time to get started. In this video I will help you create your first Angular 2 app"
+title: "Let's create your first Angular app"
+lead: "It's time to get started. In this video I will help you create your first Angular app"
 postimg: "/blog/assets/imgs/videocover.png"
 tags: [ "JavaScript", "Angular"]
 reposts: ["https://dzone.com/articles/lets-create-your-first-angular-2-app"]
 ---
 
 <div class="article-intro">
-  <a href="/blog/2016/09/ng2-released/" target="_blank">Angular 2 got released</a> and so it's the perfect time to try it out. I totally understand it might be difficult to get started, but it doesn't have to. In this video I'll take you by your hand and guide you step by step through the process of creating your first Angular 2 application. :+1:
+  <a href="/blog/2016/09/ng2-released/" target="_blank">Angular got released</a> and so it's the perfect time to try it out. I totally understand it might be difficult to get started, but it doesn't have to. In this video I'll take you by your hand and guide you step by step through the process of creating your first Angular application. :+1:
 </div>
 
 {% include postads %}
 
-This video will very shortly guide you through creating a state of the art Angular 2 application. In this ~50 min screencast, you will learn..
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
 
-- how to generate a new Angular 2 project using the [Angular CLI](https://cli.angular.io)
+This video will very shortly guide you through creating a state of the art Angular application. In this ~50 min screencast, you will learn..
+
+- how to generate a new Angular project using the [Angular CLI](https://cli.angular.io)
 - about Angular Modules, what they do and what they are good for
 - about components, why everyone is talking about them and how to create them with Angular
 - about how to style a component
@@ -33,13 +36,13 @@ But enough talking :smiley:. Let's code!!
 You can download [the source code I use in the video from my repository](https://github.com/juristr/video-your-first-ng2-app).
 
 ---
-If you rather want to first learn what Angular 2 is all about and why it is so special, then you may want to check out my ["Angular 2 - A Getting Started Guide for Beginners"](/blog/2016/06/ng2-getting-started-for-beginners/). Also, these slides from [Gerard Sans](https://twitter.com/gerardsans) are pretty awesome:
+If you rather want to first learn what Angular is all about and why it is so special, then you may want to check out my ["Angular - A Getting Started Guide for Beginners"](/blog/2016/06/ng2-getting-started-for-beginners/). Also, these slides from [Gerard Sans](https://twitter.com/gerardsans) are pretty awesome:
 
 {%
   include article-link.html
   url="http://slides.com/gerardsans/imworld-ng2-revolution#/"
-  title="The Angular 2 revolution is here!"
-  text="Awesome intro slides to Angular 2 by Gerard Sans"
+  title="The Angular revolution is here!"
+  text="Awesome intro slides to Angular by Gerard Sans"
   imageurl="/blog/assets/imgs/linkpics/gerardsans.jpg"
 %}
 
@@ -48,29 +51,29 @@ If you rather want to first learn what Angular 2 is all about and why it is so s
 
 {% include article-link.html
     url="/blog/collections/angular-2/"
-    title="Collection of Angular 2 articles"
-    text="A collection of Angular 2 related articles on my blog here"
+    title="Collection of Angular articles"
+    text="A collection of Angular related articles on my blog here"
     imageurl="/blog/assets/imgs/linkpics/angular2logo.svg"
 %}
 
 {% include article-link.html
     url="/blog/2016/08/ng2-forms-first-look/"
-    title="Angular 2 Forms - A First Look"
-    text="A first quick look at the new Forms API in Angular 2"
+    title="Angular Forms - A First Look"
+    text="A first quick look at the new Forms API in Angular"
     imageurl="/blog/assets/imgs/linkpics/angular2logo.svg"
 %}
 
 {% include article-link.html
     url="https://angular.io"
-    title="Official Angular 2 site"
-    text="Check out the docs and guides on the official Angular 2 site"
+    title="Official Angular site"
+    text="Check out the docs and guides on the official Angular site"
     imageurl="/blog/assets/imgs/linkpics/angular2logo.svg"
 %}
 
 {% include article-link.html
     url="https://toddmotto.com/"
     title="Todd Motto's blog"
-    text="Todd has top of the notch articles on Angular 1 and Angular 2. Check them out!"
+    text="Todd has top of the notch articles on Angular 1 and Angular. Check them out!"
     imageurl="/blog/assets/imgs/linkpics/toddmotto.png"
 %}
 

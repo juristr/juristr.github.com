@@ -1,14 +1,14 @@
 ---
 layout: post_new
-title: "Learning Angular 2: Creating a tabs component"
-lead: "A follow up on thoughtram's excellent article on creating a tabs components with Angular 2"
+title: "Learning Angular: Creating a tabs component"
+lead: "A follow up on thoughtram's excellent article on creating a tabs components with Angular"
 category: angular2
 postimg: "/blog/assets/imgs/ng2-tabs.png"
 tags: [ "JavaScript", "Angular" ]
 ---
 
 <div class="article-intro">
-	This is a follow-up article of <a href="http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html" target="blank">thoughtram's excellent article on developing a tabs component with Angular 2</a>, where we're going to explore an alternative way of creating a tab component by learning about <code>@ContentChildren</code> and <code>AfterContentInit</code>.
+	This is a follow-up article of <a href="http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html" target="blank">thoughtram's excellent article on developing a tabs component with Angular</a>, where we're going to explore an alternative way of creating a tab component by learning about <code>@ContentChildren</code> and <code>AfterContentInit</code>.
 </div>
 
 {% include postads %}
@@ -18,7 +18,7 @@ tags: [ "JavaScript", "Angular" ]
 
 {% include toc.html %}
 
-That said, definitely read [thoughtram's article on how to develop a tabs component in Angular 2](http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html) first. Then come back and continue here :smiley:.
+That said, definitely read [thoughtram's article on how to develop a tabs component in Angular](http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html) first. Then come back and continue here :smiley:.
 
 Ok, to recap, the API of the tabs component looks as follows:
 
@@ -31,7 +31,7 @@ Ok, to recap, the API of the tabs component looks as follows:
 
 Whenever a user clicks on the tab header, the `<tabs>` component takes care of setting that specific tab to be visible and to hide all others. That's why we need to establish a communication between the parent `<tabs>` and its children `<tab>`.
 
-For establishing a communication between the two components, the thoughtram article uses Angular 2's powerful **dependency injection** which allows us to simply ask for an instance of a parent component. In the `<tab>` child component it simply asked for its parent `<tabs>` and registered itself on that parent component, using the `addTab` function:
+For establishing a communication between the two components, the thoughtram article uses Angular's powerful **dependency injection** which allows us to simply ask for an instance of a parent component. In the `<tab>` child component it simply asked for its parent `<tabs>` and registered itself on that parent component, using the `addTab` function:
 
 ```javascript
 class Tab {
@@ -43,9 +43,9 @@ class Tab {
 
 This is one way of doing it. In fact, as Pascal says:
 
-> Angular 2 is so awesome that there is not just one way how to do things!
+> Angular is so awesome that there is not just one way how to do things!
 > 
-We can take a totally different approach how to implement our simple tabs ( which isn’t so easily possible in Angular 1 ), leveraging special Angular 2 @ContentChildren property decorator with QueryList type and AfterContentInit life cycle interface. Those are more advanced concepts, which we will cover in future articles.
+We can take a totally different approach how to implement our simple tabs ( which isn’t so easily possible in Angular 1 ), leveraging special Angular @ContentChildren property decorator with QueryList type and AfterContentInit life cycle interface. Those are more advanced concepts, which we will cover in future articles.
 
 ## The alternative approach
 

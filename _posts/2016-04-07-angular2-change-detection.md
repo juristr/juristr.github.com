@@ -1,13 +1,13 @@
 ---
 layout: post_new
-title: "Fine grained change detection with Angular 2"
-lead: "Ever heard about DoCheck or OnChanges in Angular 2 components? Then read along.."
+title: "Fine grained change detection with Angular"
+lead: "Ever heard about DoCheck or OnChanges in Angular components? Then read along.."
 category: angular2
 tags: [ "JavaScript", "Angular" ]
 ---
 
 <div class="article-intro">
-	Today, while working on my Angular 2 screencast series (announcement coming soon), I discovered a strange behavior when dealing with Angular 2 change detection. Here's what I found.
+	Today, while working on my Angular screencast series (announcement coming soon), I discovered a strange behavior when dealing with Angular change detection. Here's what I found.
 </div>
 
 {% include postads %}
@@ -17,7 +17,7 @@ tags: [ "JavaScript", "Angular" ]
 
 {% include toc.html %}
 
-Before starting, Angular 2 has implemented an awesome and very refined mechanism for detecting changes. As always, Thoughtram has an interesting article on their blog ["Angular 2 Change Detection Explained"](http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html) which goes deep into this topic and is definitely worth reading.
+Before starting, Angular has implemented an awesome and very refined mechanism for detecting changes. As always, Thoughtram has an interesting article on their blog ["Angular Change Detection Explained"](http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html) which goes deep into this topic and is definitely worth reading.
 
 ## The Setup
 
@@ -58,7 +58,7 @@ class ChildComponent {
 
 ## OnChanges: detect whenever @Input changes
 
-**Our goal is to teach our `<child>` component to understand whenever it's `@Input()` property `person` changes**. Angular 2 has an event for that: [OnChanges](https://angular.io/docs/ts/latest/api/core/OnChanges-interface.html).
+**Our goal is to teach our `<child>` component to understand whenever it's `@Input()` property `person` changes**. Angular has an event for that: [OnChanges](https://angular.io/docs/ts/latest/api/core/OnChanges-interface.html).
 
 In practice, this would look as follows:
 
@@ -141,7 +141,7 @@ Try it out by yourself on the previous Plunker example! In fact, if we [look up 
 
 ## But what if I always want to get notified?
 
-So, cool, using immutable data structures definitely has some performance benefits on Angular 2 anyways. By using immutable data structures and [fine tuning Angular 2 component's change detection strategy](https://angular.io/docs/ts/latest/api/core/ChangeDetectionStrategy-enum.html), it can get insanely fast! Check out Jurgen Van de Moere's article on [How I optimized Minesweeper using Angular 2 and Immutable.js to make it insanely fast](http://www.jvandemo.com/how-i-optimized-minesweeper-using-angular-2-and-immutable-js-to-make-it-insanely-fast/).
+So, cool, using immutable data structures definitely has some performance benefits on Angular anyways. By using immutable data structures and [fine tuning Angular component's change detection strategy](https://angular.io/docs/ts/latest/api/core/ChangeDetectionStrategy-enum.html), it can get insanely fast! Check out Jurgen Van de Moere's article on [How I optimized Minesweeper using Angular and Immutable.js to make it insanely fast](http://www.jvandemo.com/how-i-optimized-minesweeper-using-angular-2-and-immutable-js-to-make-it-insanely-fast/).
 
 Ok nice, but I don't care about immutable datastructures right now, how can I get to know about changes in my objects? [**DoCheck**](https://angular.io/docs/ts/latest/api/core/DoCheck-interface.html) can be of help here. Let's have a look.
 

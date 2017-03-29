@@ -1,7 +1,7 @@
 ---
 layout: post_new
-title: "Learning Angular 2: Conditionally add styles to an element"
-lead: "Learn how to conditionally add styles to a DOM element in Angular 2"
+title: "Learning Angular: Conditionally add styles to an element"
+lead: "Learn how to conditionally add styles to a DOM element in Angular"
 lastupdated: '2016-06-14'
 postimg: "/blog/assets/imgs/conditional-add-styles.png"
 category: angular2
@@ -9,7 +9,7 @@ tags: [ "JavaScript", "Angular" ]
 ---
 
 <div class="article-intro">
-	Here we're going through a couple of ways to conditionally apply some styles to a DOM element in Angular 2.
+	Here we're going through a couple of ways to conditionally apply some styles to a DOM element in Angular.
 </div>
 
 {% include postads %}
@@ -312,7 +312,7 @@ The `ElementRef` allows us to gain access to the `nativeElement` API via
 el.nativeElement.style.backgroundColor = 'yellow';
 ```
 
-This way you can deliberately modify the properties of the native DOM element. So why would I want to use the `Renderer`. Well, Angular 2 isn't only build for the browser, but it can potentially also be rendered on the server or render native elements on a mobile device (via [NativeScript](https://www.nativescript.org/) for instance). Thus, the `Renderer` provides an abstraction over the native elements.
+This way you can deliberately modify the properties of the native DOM element. So why would I want to use the `Renderer`. Well, Angular isn't only build for the browser, but it can potentially also be rendered on the server or render native elements on a mobile device (via [NativeScript](https://www.nativescript.org/) for instance). Thus, the `Renderer` provides an abstraction over the native elements.
 
 Check out this Plunk for the full code.
 
@@ -322,7 +322,7 @@ Check out this Plunk for the full code.
 
 ## Conclusion
 
-So in this article you learned about three possibilities to style your DOM elements from within Angular 2. You got to see
+So in this article you learned about three possibilities to style your DOM elements from within Angular. You got to see
 
 - directly binding with `[style.background-color]`
 - adding a class `[class.my-class]`
@@ -335,10 +335,10 @@ You even quickly saw how to create a Directive and how to embed styles within a 
 
 ## Further reading
 
-Angular 2 components are not just like plain Angular 1 directives with a different syntax. There's much more. They give you true encapsulation at the CSS as well as JavaScript level, just like web components do. Components have an `encapsulation` property which expects either
+Angular components are not just like plain Angular 1 directives with a different syntax. There's much more. They give you true encapsulation at the CSS as well as JavaScript level, just like web components do. Components have an `encapsulation` property which expects either
 
 - `ViewEncapsulation.None`
 - `ViewEncapsulation.Emulated` (default),
 - `ViewEncapsulation.Native`
 
-By default it emulates, but if you set it to `ViewEncapsulation.Native` you'll get **native shadow DOM** support. Check out [@toddmotto's](https://twitter.com/toddmotto) article on **[Emulated or Native Shadow DOM in Angular 2 with ViewEncapsulation](https://toddmotto.com/emulated-native-shadow-dom-angular-2-view-encapsulation)** for an in depth guide on this :thumbsup:.
+By default it emulates, but if you set it to `ViewEncapsulation.Native` you'll get **native shadow DOM** support. Check out [@toddmotto's](https://twitter.com/toddmotto) article on **[Emulated or Native Shadow DOM in Angular with ViewEncapsulation](https://toddmotto.com/emulated-native-shadow-dom-angular-2-view-encapsulation)** for an in depth guide on this :thumbsup:.

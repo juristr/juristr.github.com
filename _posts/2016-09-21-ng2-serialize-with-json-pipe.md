@@ -1,17 +1,20 @@
 ---
 layout: post_new
-title: "Angular 2: Using the JSONPipe for debugging"
-lead: "Remember the JSON filter in Angular 1? Here's how you can use it in Angular 2"
+title: "Angular: Using the JSONPipe for debugging"
+lead: "Remember the JSON filter in Angular 1? Here's how you can use it in Angular"
 postimg: "/blog/assets/imgs/ng2-jsonpipe-cardimg.png"
 tags: [ "JavaScript", "Angular"]
 reposts: ["https://dzone.com/articles/angular-2-using-the-jsonpipe-for-debugging"]
 ---
 
 <div class="article-intro">
-	A powerful way of debugging, especially templates, in Angular 1 was the JSON pipe (or filter) which could be used within a template. The pipe still natively exists in Angular 2. Here's how you can import and use it.
+	A powerful way of debugging, especially templates, in Angular 1 was the JSON pipe (or filter) which could be used within a template. The pipe still natively exists in Angular. Here's how you can import and use it.
 </div>
 
 {% include postads %}
+
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
 
 Especially when you have to debug your Angular templates it was particularly useful in Angular 1 to use the JSON filter.
 
@@ -26,9 +29,9 @@ As a result you got a nicely formatted JSON representation of your databound Jav
 
 ![](/blog/assets/imgs/json-pipe-result.png)
 
-## Use the JSONPipe in Angular 2
+## Use the JSONPipe in Angular
 
-The very same holds for Angular 2, which has [a built-in JSONPipe object](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-pipe.html) as well.
+The very same holds for Angular, which has [a built-in JSONPipe object](https://angular.io/docs/ts/latest/api/common/index/JsonPipe-pipe.html) as well.
 
 To use it you have to import the `CommonModule` from the `@angular/common` package into your own module.
 

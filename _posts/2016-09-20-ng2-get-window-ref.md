@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Angular 2: How do I get a reference to the window object?"
+title: "Angular: How do I get a reference to the window object?"
 lead: "Learn how to inject the window object into your Angular components"
 postimg: "/blog/assets/imgs/ng2-window-obj-cardimage.png"
 tags: [ "JavaScript", "Angular"]
@@ -8,10 +8,13 @@ reposts: ["https://dzone.com/articles/angular-2-how-do-i-get-a-reference-to-the-
 ---
 
 <div class="article-intro">
-	Remember the <code>$window</code> object in Angular 1? Turned out to be quite useful from now and then. But what about Angular 2? <code>$window</code> doesn't exist there. What's the alternative? How can I inject the <code>Window</code> object into my Angular 2 components?
+	Remember the <code>$window</code> object in Angular 1? Turned out to be quite useful from now and then. But what about Angular? <code>$window</code> doesn't exist there. What's the alternative? How can I inject the <code>Window</code> object into my Angular components?
 </div>
 
 {% include postads %}
+
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
 
 Referencing global browser objects like `document` or `window` directly from within your code is possible, but not encouraged and considered bad practice. 
 
@@ -21,13 +24,13 @@ You want to register only events on `window` or `document`? Then  you may want t
 
 {% include article-link.html
   url="/blog/2016/09/ng2-event-registration-document/"
-  title="Angular2: How do I register an event listener on document?"
+  title="Angular: How do I register an event listener on document?"
   text="Learn about @HostListener and host binding properties to register event listeners on the document object"
 %}
 
 ---
 
-Especially Angular 2 isn't only designed to run within your browser, but also on mobiles, the server or web workers where objects like `window` may not be available.  
+Especially Angular isn't only designed to run within your browser, but also on mobiles, the server or web workers where objects like `window` may not be available.  
 Therefore the suggested approach is to **wrap such objects and inject them through the dependency injection mechanism**. This way it is possible to change the concrete runtime instance of a given object based on the environment the Angular application is running. **The result we wanna achieve** is the following:
 
 ```javascript
@@ -50,7 +53,7 @@ So let's see.
 
 ## Wrapping `window`
 
-A very straightforward and easy way to wrap `window` is by creating an Angular 2 service. That's as easy as creating an ES6 class and decorating it with `@Injectable`.
+A very straightforward and easy way to wrap `window` is by creating an Angular service. That's as easy as creating an ES6 class and decorating it with `@Injectable`.
 
 ```javascript
 import { Injectable } from '@angular/core';
@@ -87,7 +90,7 @@ export class AppModule{}
 
 ## Try it yourself
 
-Great, we're ready. You can now inject the `WindowRef` into your Angular 2 components and get access to the native `window` object.
+Great, we're ready. You can now inject the `WindowRef` into your Angular components and get access to the native `window` object.
 
 Here's a Plunker to play around with: [https://plnkr.co/edit/9qmBCVrmBZj3mPQjM0Zc?p=preview](https://plnkr.co/edit/9qmBCVrmBZj3mPQjM0Zc?p=preview)
 
@@ -98,6 +101,6 @@ You want to register only events on `window` or `document`? Then  you may want t
 
 {% include article-link.html
   url="/blog/2016/09/ng2-event-registration-document/"
-  title="Angular2: How do I register an event listener on document?"
+  title="Angular: How do I register an event listener on document?"
   text="Learn about @HostListener and host binding properties to register event listeners on the document object"
 %}

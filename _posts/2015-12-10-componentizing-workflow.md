@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Componentizing Workflow for Angular 2"
+title: "Componentizing Workflow for Angular"
 lead: "A possible (mental) workflow to split up your static HTML into components"
 show_img_in_detail: true
 coverimage: false
@@ -11,12 +11,15 @@ reposts: [ "https://dzone.com/articles/componentizing-workflow-for-angular-2" ]
 
 {% include postads %}
 
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
 Yesterday I wrote a tweet about how I usually create components.
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Great workflow for refactoring unwieldy components :-) <a href="https://t.co/each4c2cm9">https://t.co/each4c2cm9</a></p>&mdash; Kent C. Dodds (@kentcdodds) <a href="https://twitter.com/kentcdodds/status/674692800378568706">December 9, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-A tweet is quite short, so let's take a closer look at such workflow in more detail. Also, note that I'm using Angular 2 components here, but this holds in many other contexts as well, Angular 1.x, React,...
+A tweet is quite short, so let's take a closer look at such workflow in more detail. Also, note that I'm using Angular components here, but this holds in many other contexts as well, Angular 1.x, React,...
 
 When you start a new application, most often you get a static document from your UI design team, or you start from some [predefined template](http://www.getmdl.io/templates/). That said, you need to have a strategy for **decomposing that huge static HTML block** into smaller components.
 
@@ -246,7 +249,7 @@ I think you got the main idea. Obviously you'll do the extract and re-compose in
 
 Back when I was a student at the university, when they explained us the concept of recursion in algorithms, they presented the concept of "divide and conquer". From now and then I get reminded to that as it is very much the same here. You take a piece, extract it and then assemble it back into the main part.
 
-Also **check [out my video course on "Learning Angular 2 directives"](/blog/2016/04/learning-angular2-directives-course/)**. Here's a preview of a section where I applied some of the concepts demonstrated in this article here.
+Also **check [out my video course on "Learning Angular directives"](/blog/2016/04/learning-angular2-directives-course/)**. Here's a preview of a section where I applied some of the concepts demonstrated in this article here.
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/8SCZLqYTln0" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
 

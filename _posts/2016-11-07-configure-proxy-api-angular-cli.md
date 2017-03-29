@@ -12,7 +12,10 @@ tags: [ "JavaScript", "Angular"]
 
 {% include postads %}
 
-During development, you often end up in the situation where you have your backend API server running at one address (i.e. `localhost:3000`) while your frontend development server runs on another (i.e. `localhost:4200`). However, in your Angular 2 services that query the backend API, you don't obviously want to hard-code the developement server's host, but instead write your calls as follows:
+{% assign message = "Contents are based on Angular version 2+." %}
+{% include warn-notice.html %}
+
+During development, you often end up in the situation where you have your backend API server running at one address (i.e. `localhost:3000`) while your frontend development server runs on another (i.e. `localhost:4200`). However, in your Angular services that query the backend API, you don't obviously want to hard-code the developement server's host, but instead write your calls as follows:
 
 ```javascript
 this.http.get('/api/v1/people')
@@ -25,11 +28,11 @@ Clearly, this won't probably work out of the box, because the Angular CLI develo
 
 ---
 
-You didn't yet have the chance to create an Angular 2 application, but you're eager to learn it? Watch my introductory video which learns you how to build your first Angular 2 application using the Angular CLI in under one hour. 
+You didn't yet have the chance to create an Angular application, but you're eager to learn it? Watch my introductory video which learns you how to build your first Angular application using the Angular CLI in under one hour. 
 
 {% include article-link.html
     url="/blog/2016/10/lets-create-ur-first-ng2-app/"
-    title="Let's create your first Angular 2 app"
-    text="It's time to get started. In this video I will help you create your first Angular 2 app"
+    title="Let's create your first Angular app"
+    text="It's time to get started. In this video I will help you create your first Angular app"
     imageurl="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
 %}
