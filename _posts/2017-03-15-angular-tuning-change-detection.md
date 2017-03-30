@@ -20,6 +20,7 @@ I'm totally aware that there are already quite some good articles out there whic
 - [Angular Change Detection Explained by Pascal Precht](https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html)
 - [Essential Angular: Change Detection](https://blog.nrwl.io/essential-angular-change-detection-fe0e868dcc00#.8z7p6poyp)
 - [How I optimized Minesweeper using Angular 2 and Immutable.js to make it insanely fast](http://www.jvandemo.com/how-i-optimized-minesweeper-using-angular-2-and-immutable-js-to-make-it-insanely-fast/)
+- [Change detection: Seeing it in action by LucidChart](https://www.lucidchart.com/techblog/2017/01/18/angular-2-change-detection-seeing-it-in-action/)
 
 Especially Pascal gives a very good deep dive into the inner workings and some optimization strategies I was giving a look in this post here.
 
