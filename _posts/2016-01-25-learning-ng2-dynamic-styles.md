@@ -2,7 +2,7 @@
 layout: post_new
 title: "Learning Angular: Conditionally add styles to an element"
 lead: "Learn how to conditionally add styles to a DOM element in Angular"
-lastupdated: '2016-06-14'
+lastupdated: '2017-03-30'
 postimg: "/blog/assets/imgs/conditional-add-styles.png"
 category: angular2
 tags: [ "JavaScript", "Angular" ]
@@ -327,6 +327,7 @@ So in this article you learned about three possibilities to style your DOM eleme
 - directly binding with `[style.background-color]`
 - adding a class `[class.my-class]`
 - using NgClass `[ngClass]`
+- leveraging `:host(..)` and `@HostBinding`
 - by directly accessing the native DOM element
 
 You even quickly saw how to create a Directive and how to embed styles within a Component :smiley:.
