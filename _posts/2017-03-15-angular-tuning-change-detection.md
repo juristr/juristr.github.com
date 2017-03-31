@@ -130,7 +130,7 @@ export class CounterComponent {
 After this change, simply modifying our `data.counter` property, i.e. with `data.counter++`, won't trigger any change detection. We rather need to create a new instance:
 
 ```javascript
-this.data = { counter: ++this.data.counter };
+this.data = { counter: this.data.counter + 1 };
 ```
 
 ### Observables
