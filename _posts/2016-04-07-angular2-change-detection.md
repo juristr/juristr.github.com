@@ -19,6 +19,13 @@ tags: [ "JavaScript", "Angular" ]
 
 Before starting, Angular has implemented an awesome and very refined mechanism for detecting changes. As always, Thoughtram has an interesting article on their blog ["Angular Change Detection Explained"](http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html) which goes deep into this topic and is definitely worth reading.
 
+{% include article-link.html 
+   url="/blog/2017/03/angular-tuning-change-detection/" 
+   title="Tuning Angular's Change Detection" 
+   text="Videos and runnable code examples that demonstrate different tuning techniques for Angular's change detection." 
+   imageurl="/blog/assets/imgs/linkpics/angular2logo.svg" 
+%}
+
 ## The Setup
 
 We basically have two components, an app (as usual) and a child component `<child>` (I know...how brilliant :wink:). The parent component simply passes along a data object `Person`:
