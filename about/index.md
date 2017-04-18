@@ -53,6 +53,8 @@ I'm always learning and in search for new challenges. Here are some of my curren
 
 ## Public Speaking
 
+Here are some of my public speaking events. Find more details [here](/about/timeline/).
+
 - [**ngAir 110 - The TIL Episode #3**](https://www.youtube.com/watch?v=dgzgO5pB090) (April 2017) - I joined the [Angular Air](http://angularair.com/) TIL (Today I learned) episode, presenting some of new features that have been added in Angular version 4.0.0 as well as about Angular on the server side with Angular Universal.
 - [**Testing with Angular**](https://www.youtube.com/watch?v=Uw_XomCJaGQ) (January 2017) - A talk for [Hamburg AngularJS Meetup](https://www.meetup.com/Hamburg-AngularJS-Meetup/) on recipes for testing with Angular (2+).
 - [**AngularBeers: Interviewing Igor Minar and Adam Bradley**](https://www.youtube.com/watch?v=i2XloM6Q5wc) (December 2016) - I was given the opportunity to moderate the AMA session with Igor Minar and Adam Bradley for [AngularBeers](https://angularbeers.org/).
