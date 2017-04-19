@@ -11,6 +11,9 @@ tags: ["JavaScript", "CSS"]
 
 While single-page JavaScript apps tend to be more dynamic and usually more interactive from the user point of view, they also most often have a longer startup time compared to more classic, server-side rendered apps. That's usually where progress indicators and splash screens come into play.
 
+{% assign message = "IMPORTANT: I was naive. Using progress bars is an antipattern and should be avoided. Rather try to optimize startup using strategies such as code splitting, lazy loading, caching with service workers, or even pre-rendering on the server." %} 
+{% include warn-notice.html %}
+
 Obviously, the focus should clearly lie in optimizing the startup time to the maximum possible in order to avoid having the need for a splash screen at all. But as we all know that doesn't always work out.
 
 Instead, what I really hate is when you see the app loading in pieces, meaning, you see how the JS app is being constructed while starting up, seing HTML views being added and filled with data while it is being received from some server-backend. I guess we can agree upon the fact that this is not the best user experience we can possibly have.
