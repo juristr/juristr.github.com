@@ -34,7 +34,7 @@ Remember to properly initialize it for tracing Entity Framework queries (if that
             new StackExchange.Profiling.SqlFormatters.InlineFormatter();
         MiniProfilerEF.Initialize();
 
-and then to call `MiniProfiler.Start()` and `MiniProfiler.Stop()` in the begin and end request events respectively. Note that such setup should already be included in the MVC3 NuGet package and just needs to be customized.
+This is important, **as otherwise you won't get the params printed in your SQL statement**. Then to call `MiniProfiler.Start()` and `MiniProfiler.Stop()` in the begin and end request events respectively. Note that such setup should already be included in the MVC3 NuGet package and just needs to be customized.
 
 ## Querying MiniProfiler's Logs
 
