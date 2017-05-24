@@ -168,6 +168,20 @@
             }catch(e){}
         });
 
+        $('.egghead-lesson').on('click', function(ev) {
+          var lessonName = '(unknown)';
+          if(ev && ev.target) {
+            var tmp  = $(ev.target).data('lessonuid');
+            if(!tmp) {
+              lessonName = $(ev.target).parents('a').data('lessonuid');
+            }
+          }
+          try{
+            ga('send', 'event', 'promotional', 'eggheadio', lessonName);
+          }catch(e){}
+
+        });
+
         $('.donation').click(function(){
             try{
               ga('send', 'event', 'link', 'click', 'donation-nepal');

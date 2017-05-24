@@ -21,6 +21,18 @@ tags: [ "JavaScript", "Angular" ]
 
 ## Directly manipulating styles property
 
+
+{% assign lesson_url = "lessons/style-html-elements-in-angular-using-the-style-property" %}
+{% assign lesson_img = "/blog/assets/imgs/egghead-video-styleprop.png" %}
+{% include egghead.html %}
+
+<!--
+<figure class="image--medium">
+    <a href="https://egghead.io/lessons/style-html-elements-in-angular-using-the-style-property">
+        <img src="/blog/assets/imgs/egghead-video-styleprop.png">
+    </a>
+</figure>-->
+
 A rather unconventional way would be to return the styling property as a string and then to directly set it on the desired element:
 
 ```javascript
