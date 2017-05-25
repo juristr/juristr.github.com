@@ -28,7 +28,6 @@ Personally, I think this question shouldn't be made any more nowadays, but still
 Here are some useful links to get started:
 
 - Jasmine GitHub repo: [pivotal.github.com/jasmine](http://pivotal.github.com/jasmine)
-- [tryjasmine.com](http://tryjasmine.com/)
 - [Jasmine User Group](https://groups.google.com/forum/?fromgroups#!forum/jasmine-js)
 
 ## A first Jasmine Test: BallSpec.js
