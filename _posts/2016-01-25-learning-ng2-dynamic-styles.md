@@ -79,16 +79,17 @@ Assume for instance we want to dynamically add a background image of a user's pr
 @Component({
   selector: 'my-app',
   template: `
-    <div [style.background-image]="getProfilePicStyle()">
+    <div [style]="getStyle()">
     </div>
   `
 })
 export class App {
   
-  getProfilePicStyle() {
+  getStyle() {
     // snip snip -> fetch the url from somewhere
     const profilePicUrl = 'some-remote-server-url.jpg';
-    return `url(${profilePicUrl}`;
+    const style = `background-image: url(${profilePicUrl})`;
+    return style;
   }
   
 }
@@ -108,12 +109,13 @@ export class App {
   
   constructor(private sanitizer: DomSanitizer) {}
 
-  getProfilePicStyle() {
+  getStyle() {
     // snip snip -> fetch the url from somewhere
     const profilePicUrl = 'some-remote-server-url.jpg';
+    const style = `background-image: url(${profilePicUrl})`;
 
     // sanitize the style expression
-    return this.sanitizer.bypassSecurityTrustStyle(`url(${profilePicUrl}`);
+    return this.sanitizer.bypassSecurityTrustStyle(style);
   }
   
 }
