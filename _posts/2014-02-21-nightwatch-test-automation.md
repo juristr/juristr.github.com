@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_new
 title: "Automate your UI testing with Nightwatch"
 lead: "Automated UI testing awesomeness based on Node and Selenium"
 postimg: "/blog/assets/imgs/logo-nightwatch.png"
@@ -9,7 +9,13 @@ category:
 tags: ["testing", "JavaScript", "Node.js"]
 ---
 
+<div class="article-intro">
 Although I feel like I'm repeating myself, automate **everything**. We're here to automate the processes and work of our clients. Why don't we do the same for our own stuff as well? This article quickly outlines how you can use Nightwatch.js for automating your UI testing.
+</div>
+
+{% include postads %}
+
+{% include toc.html %}
 
 Too often I see developers and tech people manually doing repetitive, annoying tasks. Testing is one such thing. When you deploy, do you verify it's actually running?? I hope you do and s it is a tedious task. You have to open the browser, login to the site, click around and see whether you got the expected results. Boring! Let some "robot" do it for us!
 
