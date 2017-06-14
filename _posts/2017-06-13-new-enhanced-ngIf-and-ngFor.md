@@ -30,7 +30,7 @@ The `ngIf` directive gets a nice improvement in Angular version 4.0.0. It’s be
 </div>
 ```
 
-In Angular version 4 we now get an “else” instruction as part of the ngIf directive. When can thus transform the above template to the following:
+In Angular version 4 we now get an “else” instruction as part of the ngIf directive. We can thus transform the above template to the following:
 
 ```html
 <div *ngIf="isLoggedIn(); else notLoggedIn">
