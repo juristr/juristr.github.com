@@ -185,6 +185,12 @@ export class UserLoginComponent {
 }
 ```
 
+Check out my Egghead video lesson on how to leverage the new `else` clause in the `*ngIf` together with the `async` pipe for creating a loading indicator.
+
+{% assign lesson_url = "lessons/show-a-loading-indicator-in-angular-using-ngif-else-the-as-keyword-and-the-async-pipe" %}
+{% assign lesson_img = "/blog/assets/imgs/egghead-loading-indicator.png" %}
+{% include egghead.html %}
+
 ## Conclusion
 
 These two additions to the `ngIf` and `ngFor` directives makes working with Observables directly within the templates a lot easier and more convenient.
