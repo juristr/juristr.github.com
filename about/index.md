@@ -51,6 +51,14 @@ I'm always learning and in search for new challenges. Here are some of my curren
   {% endfor %}
 </div>
 
+<a name="egghead"></a>
+
+## Egghead Instructor
+
+Starting with May 2017 I'm now officially an [Egghead.io Instructor](https://egghead.io/). Sharing my knowledge, engaging with the community and teaching has become a passion for me. That's ultimately the reason why I created this blog or why [I co-founded a Meetup group](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/). Egghead gives me the flexibility to bring this to a completely new level, allowing me to reach an even broader audience.
+
+Check out [my video lessons](https://egghead.io/instructors/juri-strumpflohner).
+
 ## Public Speaking
 
 Here are some of my public speaking events. Find more details [here](/about/timeline/).
