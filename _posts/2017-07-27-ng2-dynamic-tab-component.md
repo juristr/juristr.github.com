@@ -168,7 +168,8 @@ export class DynamicTabsDirective {
 
 We only need this one for the purpose of getting hold of the `ViewContainerRef` later. By injecting it in the constructor of our directive and by using the `public`  modifier, we can later simply access it through that `viewContainer` variable.
 
-**Alternative: use a template variable as anchor**
+### Alternative: use a template variable as anchor
+
 Instead of creating a dedicated anchor directive there is also the possibility to use a simple template variable and get its according view container via the `@ViewChild` decorator.
 
 ```html
@@ -192,6 +193,7 @@ export class TabsComponent {
 ```
 
 `dynamicTabPlaceholder` directly references the `ViewContainerRef` instance which we can use right away.
+
 Both approaches can be used as there are no major advantages or disadvantages. In this article we will make use of a dedicated anchor directive.
 
 ## Dynamically instantiate the Tab component
