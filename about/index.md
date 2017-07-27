@@ -4,7 +4,7 @@ title: Hi!
 current: about
 ---
 
-I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work in the role as a tech lead/architect for a local e-government company [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22). I'm mainly doing full-stack development in C# and Java. Most of the time I'm on the frontend however, doing some heavy coding with JavaScript (Angular), which is also my main passion. I'm a [tech reviewer for PacktPub](https://www.packtpub.com/), [Author of a video course on Angular 2](/blog/2016/04/learning-angular2-directives-course/) and [Software Craftsmanship Meetup organizer](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/). I'm also a [DZone MVB](https://dzone.com/users/999973/juristr.html).
+I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work in the role as a tech lead/architect for a local e-government company [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22). I'm mainly doing full-stack development in C# and Java. Most of the time I'm on the frontend however, doing some heavy coding with JavaScript (Angular), which is also my main passion. I'm a [tech reviewer for PacktPub](https://www.packtpub.com/), [Author of a video course on Angular 2](/blog/2016/04/learning-angular2-directives-course/) and [Software Craftsmanship Meetup organizer](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/).
 
 ![](/about/imgs/about-angular2.png)
 
@@ -70,12 +70,9 @@ Here are some of my public speaking events. Find more details [here](/about/time
 
 ## Partnership
 
-I have a partnership with the following sites, wherefore posts might also get re-published there.
+I had a partnership with the following sites, wherefore posts might also get re-published there.
 
 - [DZone](http://www.dzone.com/users/juristr)
-
-Previously:
-
 - Java Code Geeks
 - .Net Code Geeks
 
