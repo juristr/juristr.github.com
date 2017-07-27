@@ -53,7 +53,8 @@ Whenever we click the "Add new person" or "edit" button beneath an existing reco
   <figcaption>Our setup: editing a person from the list in a dedicated tab</figcaption>
 </figure>
 
-### TL;DR
+### TL;DR - Gimme a running code example!
+
 Impatient? Here's a Plunk with the fully working example we are going to build step by step in this article. Have fun!
 
 {% assign plunker_url = "https://embed.plnkr.co/wWKnXzpm8V31wlvu64od/" %}
