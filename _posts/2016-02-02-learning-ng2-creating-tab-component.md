@@ -156,3 +156,16 @@ That's it :+1:. You did it! Here's the full code to play with:
 
 {% assign plunker_url = "https://embed.plnkr.co/afhLA8wHw9LRnzwwTT3M/" %}
 {% include plunker.html %}
+
+## Want dynamic tabs?
+
+Starting from the presented solution here, I wrote another article that explains how to add the possibility for dynamic tabs, learning about things like <code>ComponentFactoryResolver</code>, <code>ViewContainerRef</code>, <code>ngTemplateOutlet</code> and <code>ngOutletContext</code>. Check it out :+1:.
+
+{% include article-link.html
+    url="/blog/2017/07/ng2-dynamic-tab-component/"
+    title="Create a dynamic tab component with Angular"
+    text="Learn about advanced topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef, ngTemplateOutlet and much more..."
+    imageurl="/blog/assets/imgs/ng-dynamic-tabs/multi-tab-editing.png"
+%}
+
+
