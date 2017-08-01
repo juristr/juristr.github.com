@@ -1,6 +1,11 @@
-<figure class="image--medium">
-    <a href="https://egghead.io/{{ lesson_url }}" class="egghead-lesson" data-lessonuid="{{ lesson_url }}">
+{% if image_class != "" %}
+<figure class="{{ image_class }}">
+    {% else %}
+    <figure class="image--medium">
+        {% endif %}
+        <a href="https://egghead.io/{{ lesson_url }}" class="egghead-lesson" data-lessonuid="{{ lesson_url }}">
         <img src="{{ lesson_img }}">
-    </a>
-    <figcaption>Check out my corresponding Egghead.io lesson</figcaption>
-</figure>
+    </a> {% if caption != "" %}
+        <figcaption>{{ caption }}</figcaption>
+        {% endif %}
+    </figure>
