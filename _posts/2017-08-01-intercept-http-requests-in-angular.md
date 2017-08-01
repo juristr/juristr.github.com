@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Intercept HTTP Requests with Angular"
+title: "Intercept HTTP Requests in Angular"
 lead: "Learn about the new interceptors introduced in Angular 4.3.1"
 postimg: "/blog/assets/imgs/egghead-intercept-http-requests.png"
 tags: [ "Angular", "Video Lesson" ]
