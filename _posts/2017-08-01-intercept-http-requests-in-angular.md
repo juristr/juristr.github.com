@@ -119,8 +119,6 @@ export class MyHttpLogInterceptor implements HttpInterceptor {
         if (ev instanceof HttpResponse) {
           console.log('processing response', ev);
         }
-
-        return ev;
       });
   }
 }
