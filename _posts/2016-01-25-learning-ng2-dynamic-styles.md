@@ -19,19 +19,21 @@ tags: [ "JavaScript", "Angular" ]
 
 {% include toc.html %}
 
-## Directly manipulating styles property
+## Egghead.io Course: Understand How to Style Angular Components
 
+Check out [my Egghead.io course](https://egghead.io/courses/understand-how-to-style-angular-components) to get a full picture on styling Angular components. I hope you enjoy it :blush:
 
-{% assign lesson_url = "lessons/style-html-elements-in-angular-using-the-style-property" %}
-{% assign lesson_img = "/blog/assets/imgs/egghead-video-styleprop.png" %}
+{% assign lesson_url = "courses/understand-how-to-style-angular-components" %}
+{% assign lesson_img = "/blog/assets/imgs/egghead-artwork-styling-components.png" %}
+{% assign image_class="image--small" %}
 {% include egghead.html %}
 
-<!--
-<figure class="image--medium">
-    <a href="https://egghead.io/lessons/style-html-elements-in-angular-using-the-style-property">
-        <img src="/blog/assets/imgs/egghead-video-styleprop.png">
-    </a>
-</figure>-->
+## Directly manipulating styles property
+
+{% assign lesson_url = "lessons/style-html-elements-in-angular-using-the-style-property" %}
+{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-styleprop.png" %}
+{% assign image_class="image--medium" %}
+{% include egghead.html %}
 
 A rather unconventional way would be to return the styling property as a string and then to directly set it on the desired element:
 
@@ -72,6 +74,11 @@ Note the `[style.background-color]` in the code above.
 {% include plunker.html %}
 
 ## Style Sanitization
+
+{% assign lesson_url = "lessons/use-angular-style-sanitization-to-mark-dynamic-styles-as-trusted-values" %}
+{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-sanitization.png" %}
+{% assign image_class="image--medium" %}
+{% include egghead.html %}
 
 Assume for instance we want to dynamically add a background image of a user's profile image, using the `[style.background-image]="..."` approach. Naively, we may try the following:
 
@@ -125,6 +132,11 @@ The `DomSanitizer` has other methods as well: [refer to the official docs](https
 
 ## The good old "ngClass"
 
+{% assign lesson_url = "lessons/style-html-elements-in-angular-using-ngclass" %}
+{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-ngclass.png" %}
+{% assign image_class="image--medium" %}
+{% include egghead.html %}
+
 Straight away, there's still the good old [NgClass](https://angular.io/docs/ts/latest/api/common/NgClass-directive.html) which might especially be known by Angular 1 developers. NgClass allows to pass in an object (key:value) where the key represents the class and the value a boolean condition which controls whether that specific class is applied to the element or not.  
 That said, it is the preferred way of adding one or more classes to an element. 
 
@@ -166,6 +178,11 @@ export class App {
 
 ## Adding a single class
 
+{% assign lesson_url = "lessons/conditionally-add-a-single-css-class-to-a-dom-element-in-angular" %}
+{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-single-class.png" %}
+{% assign image_class="image--medium" %}
+{% include egghead.html %}
+
 An alternative to the `ngClass` and especially in situations when only a single class needs to be applied is the following syntax.  
 Similarly as we did with the background-color above, we can add a single class, using the following notation: `[class.nameOfClass]="someCondition"`.
 
@@ -204,6 +221,11 @@ export class App {
 {% include plunker.html %}
 
 ## Using `:host(..)` and `@HostBinding`
+
+{% assign lesson_url = "lessons/use-angular-s-hostbinding-and-host-to-add-styling-to-the-component-itself" %}
+{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-hostbinding.png" %}
+{% assign image_class="image--medium" %}
+{% include egghead.html %}
 
 Consider you have a component `<styled>` which you'd like have different CSS classes applied based on some setting, like `.yellow-style` in case when you specify `<styled style="yellow">` and `.red-style` when you pass in `red`: `<styled style="red">`.
 
@@ -294,6 +316,11 @@ Here's an example to play around with.
 
 ## Referencing the DOM element directly via ElementRef
 
+{% assign lesson_url = "lessons/use-the-renderer2-to-add-styles-to-an-element-in-angular" %}
+{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-renderer.png" %}
+{% assign image_class="image--medium" %}
+{% include egghead.html %}
+
 The last possibility is by directly interacting with the underlying DOM element. For that purpose we create a directive `styled` which we add to our div.
 
 ```html
@@ -333,10 +360,13 @@ Check out this Plunk for the full code.
 {% assign plunker_url = "https://embed.plnkr.co/TqteblvISNtHObNbQAel/" %}
 {% include plunker.html %}
 
+## More...
+
+There's more about styling such as style encapsulation, `ngStyle`, .... Learn about it with [my **10 lessons Egghead.io course** about "Understand How to Style Angular Components"](https://egghead.io/courses/understand-how-to-style-angular-components).
 
 ## Conclusion
 
-So in this article you learned about three possibilities to style your DOM elements from within Angular. You got to see
+So in this article you learned about 5 possibilities to style your DOM elements from within Angular. You got to see
 
 - directly binding with `[style.background-color]`
 - adding a class `[class.my-class]`
@@ -345,15 +375,3 @@ So in this article you learned about three possibilities to style your DOM eleme
 - by directly accessing the native DOM element
 
 You even quickly saw how to create a Directive and how to embed styles within a Component :smiley:.
-
----
-
-## Further reading
-
-Angular components are not just like plain Angular 1 directives with a different syntax. There's much more. They give you true encapsulation at the CSS as well as JavaScript level, just like web components do. Components have an `encapsulation` property which expects either
-
-- `ViewEncapsulation.None`
-- `ViewEncapsulation.Emulated` (default),
-- `ViewEncapsulation.Native`
-
-By default it emulates, but if you set it to `ViewEncapsulation.Native` you'll get **native shadow DOM** support. Check out [@toddmotto's](https://twitter.com/toddmotto) article on **[Emulated or Native Shadow DOM in Angular with ViewEncapsulation](https://toddmotto.com/emulated-native-shadow-dom-angular-2-view-encapsulation)** for an in depth guide on this :thumbsup:.
