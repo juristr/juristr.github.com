@@ -15,7 +15,7 @@ tags: [ "Angular", "Video Lesson" ]
 {% assign message = "Contents are based on Angular version >= 4.3.1" %}
 {% include warn-notice.html %}
 
-In the following [Egghead.io video lesson]() I implement an HTTP interceptor which intercepts the request, adding some headers, the response as well as potential HTTP errors.
+In the following [Egghead.io video lesson](https://egghead.io/lessons/intercept-http-requests-in-angular) I implement an HTTP interceptor which intercepts the request, adding some headers, the response as well as potential HTTP errors.
 
 {% assign lesson_url = "lessons/intercept-http-requests-in-angular" %}
 {% assign lesson_img = "/blog/assets/imgs/egghead-intercept-http-requests.png" %}
