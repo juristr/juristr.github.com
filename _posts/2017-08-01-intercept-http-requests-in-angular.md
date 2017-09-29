@@ -29,7 +29,7 @@ In the following [Egghead.io video lesson](https://egghead.io/lessons/intercept-
 
 The new HTTP client resides in the `@angular/common` package under the `@angular/common/http`. You need to register the `HttpClientModule` and register the interceptor on the `HTTP_INTERCEPTORS`.
 
-```javascript
+```typescript
 // app.module.ts
 ...
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
