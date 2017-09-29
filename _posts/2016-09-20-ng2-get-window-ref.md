@@ -18,6 +18,8 @@ reposts: ["https://dzone.com/articles/angular-2-how-do-i-get-a-reference-to-the-
 
 Referencing global browser objects like `document` or `window` directly from within your code is possible, but not encouraged and considered bad practice. 
 
+{% include toc.html %}
+
 ---
 
 You want to register only events on `window` or `document`? Then  you may want to read this also:
