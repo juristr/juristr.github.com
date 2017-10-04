@@ -26,7 +26,7 @@ Quite mixed results. Those who tried actually liked it, but there seem to be a l
 
 ## Template driven and reactive forms
 
-Angular has two different types of forms you can choose from, **template driven** (also called model driven) and **reactive** forms. There are a lot of articles out there already (including a [very rough intro I've written](https://juristr.com/blog/2016/08/ng2-forms-first-look/) last year) about the difference between the two.
+Angular has two different types of forms you can choose from, **template driven** and **reactive** forms (also called model driven) . There are a lot of articles out there already (including a [very rough intro I've written](https://juristr.com/blog/2016/08/ng2-forms-first-look/) last year) about the difference between the two.
 
 At a very high level, very generalized we could say that...
 
