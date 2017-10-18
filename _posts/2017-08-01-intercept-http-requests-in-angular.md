@@ -170,3 +170,35 @@ That's it. **Check out the Egghead video lesson at the beginning of this article
 
 {% assign plunker_url = "https://embed.plnkr.co/SCKXenesBaaYnYJYhWyY/" %}
 {% include plunker.html %}
+
+## Common mistakes/pitfalls
+
+Here are some common mistakes or pitfalls I came across when using interceptors in Angular.
+
+### CreateListFromArrayLike called on non-object
+
+Strange error, not very expressive. The issue occured to me when setting custom headers, especially when **not converting the header values to a string** before setting them.
+
+```
+// WRONG
+...
+intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
+   const newRequest = req.clone({ headers: req.headers.set('somekey', 11234') });
+   
+   return next.handle(newRequest);
+}
+...
+```
+
+
+```
+// CORRECT
+...
+intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
+   const newRequest = req.clone({ headers: req.headers.set('somekey', '11234') });
+   
+   return next.handle(newRequest);
+}
+...
+```
+
