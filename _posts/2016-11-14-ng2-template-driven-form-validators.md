@@ -50,27 +50,24 @@ So far so good, binding works. For more details on how to setup your initial for
 
 We can make use of the built-in [HTML5 validators in Angular](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) just as we were able already in AngularJS (Angular 1.x). Behind the scenes, Angular recognizes these validators and integrates with them.
 
-That said, as a first step we add the `novalidate` attribute onto our form. This disables the browser validation behavior and let's us do the displaying of valiation errors with Angular.
-
-```html
-<form novalidate #form="ngForm" (ngSubmit)="onSubmit(form.value)">
-    ...
-</form>
-``` 
-
 Next we can take a closer look at the input control and add a simple `required` attribute for making it a required input field.
 
 ```html
-<div>
-    Firstname: 
-    <input type="text" ngModel name="firstname" required />
-</div>
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+   <div>
+       Firstname: 
+       <input type="text" ngModel name="firstname" required />
+   </div>
+</form>
 ```
+
+> **Note,** starting with Angular v4 there is no need to even add the `novalidate` attribute on the form which normally disables the built-in HTML 5 validation. If you still want the native validation, add [the `ngNativeValidate` attribute](https://github.com/angular/angular/blob/bebedfed24d6fbfa492e97f071e1d1b41e411280/packages/forms/src/directives/ng_no_validate_directive.ts#L16). Thanks [@jbandi](https://twitter.com/jbandi) for the catch!
+
 
 This makes our input a required field and when it's not compiled, the according `form.valid` property will be `false`. You may be wondering where the `form` comes from? It's the template variable I've defined and associated with `ngForm`. This is the way it's done in the Angular template driven approach.
 
 ```html
-<form novalidate #form="ngForm" (ngSubmit)="form.valid && onSubmit(form.value)">
+<form #form="ngForm" (ngSubmit)="form.valid && onSubmit(form.value)">
     ...
 </form>
 ```
