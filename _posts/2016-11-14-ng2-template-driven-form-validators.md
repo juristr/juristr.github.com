@@ -20,6 +20,14 @@ reposts: [ "http://javascriptweekly.com/issues/311" ]
 
 [Todd Motto](https://twitter.com/toddmotto) recently published a similar article on ["Reactive FormGroup validation with AbstractControl in Angular 2"](https://toddmotto.com/reactive-formgroup-validation-angular-2), which you might definitely want to check out for the reactive kind of approach to this.
 
+**TL;DR - Egghead.io Video Lesson**  
+
+Don't wanna read through the entire article? Then lean back and watch my free Egghead lesson :wink:
+
+{% assign lesson_url = "lessons/create-a-custom-validator-for-template-driven-forms-in-angular" %}
+{% assign lesson_img = "/blog/assets/imgs/egghead-lesson-custom-validators.png" %}
+{% include egghead.html %}
+
 ## A simple Angular Form
 
 Ok, before starting, let's take a look at our simple Angular, template driven form.
