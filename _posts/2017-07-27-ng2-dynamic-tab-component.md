@@ -7,12 +7,15 @@ tags: [ "Angular" ]
 ---
 
 <div class="article-intro">
-	The purpose of this article is to learn about the concept of dynamic components and template references in Angular by building a dynamic tab component. We will learn about <code>ComponentFactoryResolver</code>, <code>ViewContainerRef</code>, <code>ngTemplateOutlet</code> and <code>ngOutletContext</code>.
+	The purpose of this article is to learn about the concept of dynamic components and template references in Angular by building a dynamic tab component. We will learn about <code>ComponentFactoryResolver</code>, <code>ViewContainerRef</code>, <code>ngTemplateOutlet</code> and <code>ngTemplateOutletContext</code>.
 </div>
 
 {% include postads %}
 
 {% assign message = "Contents are based on Angular version 4+." %}
+{% include warn-notice.html %}
+
+{% assign message = "<strong>Update for Angular version 5:</strong> I just upgraded the article to match Angular version 5. You need to change <code>ngOutletContext</code> to <code>ngTemplateOutletContext</code>. Here's a very helpful app for upgrading btw: <a href='https://angular-update-guide.firebaseapp.com/'>Angular Update Guide</a>" %}
 {% include warn-notice.html %}
 
 {% include toc.html %}
@@ -358,7 +361,7 @@ export class TabComponent {
 }
 ```
 
-## Associate data to dynamic templates with NgOutletContext
+## Associate data to dynamic templates with NgTemplateOutletContext
 
 Obviously a template without some dynamic data is quite boring. In our example, we need to be able to pass in the person object we’re editing. So let’s take a closer look at our `<ng-template>` definition:
 
@@ -399,7 +402,7 @@ First of all we need to define the variable on our template using the `let-perso
 </ng-template>
 ```
 
-Next, within our `TabComponent` we need to bind the data using `ngOutletContext`.
+Next, within our `TabComponent` we need to bind the data using `ngTemplateOutletContext`.
 
 ```javascript
 @Component({
@@ -409,7 +412,7 @@ Next, within our `TabComponent` we need to bind the data using `ngOutletContext`
           <ng-content></ng-content>
           <ng-container *ngIf="template"
             [ngTemplateOutlet]="template"
-            [ngOutletContext]="{ person: dataContext }">
+            [ngTemplateOutletContext]="{ person: dataContext }">
           </ng-container>
       </div>
   `
@@ -421,7 +424,7 @@ export class TabComponent {
 }
 ```
 
-Note, we give `ngOutletContext` an JavaScript object, which has a property `person`, which is exactly the one we previously defined: `<ng-template let-person="...">`.
+Note, we give `ngTemplateOutletContext` an JavaScript object, which has a property `person`, which is exactly the one we previously defined: `<ng-template let-person="...">`.
 The `dataContext` contains the person record that gets passed in via an `@Input` property to our `TabComponent`. Take a look at the `openTab(…)` implementation again.
 
 ## Register the dynamic component on NgModule
