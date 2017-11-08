@@ -13,7 +13,7 @@ reposts: ["https://dzone.com/articles/angular-2-using-the-jsonpipe-for-debugging
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 Especially when you have to debug your Angular templates it was particularly useful in Angular 1 to use the JSON filter.

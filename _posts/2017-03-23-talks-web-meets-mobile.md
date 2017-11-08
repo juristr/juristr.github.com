@@ -12,7 +12,7 @@ tags: [ "Angular", "mobile"]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 Oh yes, Mike totally nailed it :fire: :fire:

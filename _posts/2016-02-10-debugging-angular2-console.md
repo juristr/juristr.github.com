@@ -15,7 +15,7 @@ reposts: ["https://dzone.com/articles/learning-angular-2-creating-a-tabs-compone
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 {% include toc.html %}

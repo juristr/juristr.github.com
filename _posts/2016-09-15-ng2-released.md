@@ -12,7 +12,7 @@ tags: [ "JavaScript", "Angular"]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 <video width="100%" height="100%" autoplay="autoplay" loop="loop">

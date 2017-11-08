@@ -12,7 +12,7 @@ tags: [ "Angular" ]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 4+." %}
+{% assign message = "Contents are based on Angular version >=4" %}
 {% include warn-notice.html %}
 
 {% assign message = "<strong>Update for Angular version 5:</strong> I just upgraded the article to match Angular version 5. You need to change <code>ngOutletContext</code> to <code>ngTemplateOutletContext</code>. Here's a very helpful app for upgrading btw: <a href='https://angular-update-guide.firebaseapp.com/'>Angular Update Guide</a>" %}

@@ -12,7 +12,7 @@ tags: [ "JavaScript", "Angular"]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 During development, you often end up in the situation where you have your backend API server running at one address (i.e. `localhost:3000`) while your frontend development server runs on another (i.e. `localhost:4200`). However, in your Angular services that query the backend API, you don't obviously want to hard-code the developement server's host, but instead write your calls as follows:

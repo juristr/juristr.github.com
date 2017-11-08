@@ -12,7 +12,7 @@ tags: [ "Angular", "mobile"]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 First thing right away: the integrated Angular CLI server is **NOT MEANT FOR PRODUCTION**. Sorry for the shouting :wink:, but this needs to be clear. In other words, `ng serve` is **just for development purposes**.

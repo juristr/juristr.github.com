@@ -12,7 +12,7 @@ tags: [ "Angular"]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 I'm totally aware that there are already quite some good articles out there which go very deep into Angular's change detection. Here are some I highly recommend to go through:

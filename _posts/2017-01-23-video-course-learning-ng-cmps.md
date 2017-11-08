@@ -10,7 +10,7 @@ tags: [ "Angular", "Angular.js"]
   I just released the 2nd edition of my video course for PacktPub on "Learning Angular components".
 </div>
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 {% include postads %}

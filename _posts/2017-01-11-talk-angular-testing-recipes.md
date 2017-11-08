@@ -10,7 +10,7 @@ tags: [ "Angular", "Testing", "Talks"]
   I recently wanted to dive deeper into testing Angular applications, in specific on how to write proper unit tests for some common scenarious you might encounter. <a href="https://twitter.com/webdave_de" target="_blank">Dave</a>, the organizer of <a href="https://twitter.com/angular_hamburg" target="_blank">the Angular Hamburg Meetup group</a> asked me whether I'd be interested in doing a talk. So here we are, read on for the slides, GitHub repo and video of the talk :wink:.
 </div>
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 {% include postads %}

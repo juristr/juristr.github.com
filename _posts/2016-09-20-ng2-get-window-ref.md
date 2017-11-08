@@ -13,7 +13,7 @@ reposts: ["https://dzone.com/articles/angular-2-how-do-i-get-a-reference-to-the-
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 Referencing global browser objects like `document` or `window` directly from within your code is possible, but not encouraged and considered bad practice. 

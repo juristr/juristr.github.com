@@ -11,7 +11,7 @@ reposts: [ "https://dzone.com/articles/componentizing-workflow-for-angular-2" ]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 Yesterday I wrote a tweet about how I usually create components.

@@ -13,7 +13,7 @@ reposts: ["https://dzone.com/articles/how-to-register-an-event-listener-on-a-doc
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 So, naively you could start and write something like this:

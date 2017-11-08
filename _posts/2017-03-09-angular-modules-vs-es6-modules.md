@@ -12,7 +12,7 @@ tags: [ "Angular"]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 To start straight away: **Angular Modules are different from ES6 Modules!**

@@ -13,7 +13,7 @@ tags: [ "JavaScript", "Angular" ]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 {% include toc.html %}

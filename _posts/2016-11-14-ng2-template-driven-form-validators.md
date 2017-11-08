@@ -13,7 +13,7 @@ reposts: [ "http://javascriptweekly.com/issues/311" ]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 {% include toc.html %}

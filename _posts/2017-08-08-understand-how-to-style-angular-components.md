@@ -10,7 +10,7 @@ tags: [ "Angular" ]
 	Here it is!!! :fire: :fire: :fire: My very first <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a> course :smiley:. Learn everything you need to know about styling Angular components.
 </div>
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 Last year I wrote an in depth article on how to conditionally style Angular components:

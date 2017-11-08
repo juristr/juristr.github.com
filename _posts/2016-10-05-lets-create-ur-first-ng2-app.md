@@ -13,7 +13,7 @@ reposts: ["https://dzone.com/articles/lets-create-your-first-angular-2-app"]
 
 {% include postads %}
 
-{% assign message = "Contents are based on Angular version 2+." %}
+{% assign message = "Contents are based on Angular version >=2" %}
 {% include warn-notice.html %}
 
 This video will very shortly guide you through creating a state of the art Angular application. In this ~50 min screencast, you will learn..
