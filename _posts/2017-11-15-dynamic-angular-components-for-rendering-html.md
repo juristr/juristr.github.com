@@ -213,7 +213,9 @@ export class AppComponent implements DoCheck {
 }
 ```
 
-You can see that happen if you click the "Mutate data" button in the example.
+You can see that happen if you click the "Mutate data" button in the example. 
+
+**Note:** For performance reasons you should obviously be as cautious as possible when it comes to tricker a change detection cycle. In this simple example I just hooked up on the `ngDoCheck()` but you could alternatively also trigger it whenever new values come along from the `DataService`, or at least just trigger the CD cycle for those dynamic components which may be target of an update.
 
 ## Step 5: Make sure to clean up
 
