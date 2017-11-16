@@ -243,7 +243,7 @@ Note, although I didn't implement it in this example, make sure to **implement t
 
 Here's the final running example to play around with. Have fun :smiley:
 
-<iframe src="https://stackblitz.com/edit/angular-reactiveforms-basics-pmh1ce?embed=1&file=app/person-edit.component.ts&hideExplorer=1&ctl=1" width="100%" height="400px"> </iframe>
+<iframe src="https://stackblitz.com/edit/angular-dyn-cmp-3rd-party?ctl=1&embed=1&file=app/app.component.ts" width="100%" height="400px"> </iframe>
 
 ## Conclusion & Considerations
 
