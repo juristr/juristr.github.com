@@ -4,7 +4,9 @@ title: Hi!
 current: about
 ---
 
-I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work in the role as a tech lead/architect for a local e-government company [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22). I'm mainly doing full-stack development in C# and Java. Most of the time I'm on the frontend however, doing some heavy coding with JavaScript (Angular), which is also my main passion. I'm a [tech reviewer for PacktPub](https://www.packtpub.com/), [Author of a video course on Angular 2](/blog/2016/04/learning-angular2-directives-course/) and [Software Craftsmanship Meetup organizer](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/).
+I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work as a software architect and frontend developer at [R3-GIS](https://www.r3-gis.com/), [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22) where my main tasks are on the frontend, doing JavaScript, TypeScript, AngularJS and Angular. I'm a [Google Developer Expert in Web Technologies](https://developers.google.com/experts/), an [Egghead Instructor](https://egghead.io/instructors/juri-strumpflohner) and happen to organize the [Software Craftsmanship Meetup](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/).
+
+I'm also a freelance trainer and consultant, so feel free to <a href="#contact">contact me</a>.
 
 ![](/about/imgs/about-angular2.png)
 
