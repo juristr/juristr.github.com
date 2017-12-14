@@ -61,9 +61,9 @@ import { DataService } from './data.service';
 @Component({
   selector: 'html-marker',
   template: `
-    <h3>{{%raw%}}{{ data.name }}%{{%endraw%}}</h3>
+    <h3>{%raw%}{{ data.name }}%{%endraw%}</h3>
     <p>
-      {{%raw%}}{{ data.description }}{{%endraw%}}
+      {%raw%}{{ data.description }}{%endraw%}
     </p>
   `
 })
