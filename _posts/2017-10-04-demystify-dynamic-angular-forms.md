@@ -24,14 +24,22 @@ So a couple of months back I saw this tweet.
 
 Quite mixed results. Those who tried actually liked it, but there seem to be a lot of people who were either dissatisfied or didn't try yet. The goal of this article is to help those get started easily.
 
+## Egghead.io - Video Course
+
+If you're too lazy to read and would rather like to walk through all this stuff step by step with me, then definitely check out my **Egghead course on "Create Dynamic Forms with Angular"**.
+
+<a href="https://egghead.io/courses/create-dynamic-forms-in-angular" class="egghead-lesson" data-lessonuid="courses/create-dynamic-forms-in-angular">
+  <img src="/blog/assets/imgs/egghead-dynamic-forms-banner.png" style="width:100%" />
+</a>
+
 ## Template driven and reactive forms
 
 Angular has two different types of forms you can choose from, **template driven** and **reactive** forms (also called model driven) . There are a lot of articles out there already (including a [very rough intro I've written](https://juristr.com/blog/2016/08/ng2-forms-first-look/) last year) about the difference between the two.
 
 At a very high level, very generalized we could say that...
 
-- **template driven forms -** you start and do most of the work in the Angular template by adding bindings with custom directives; Angular creates the according form control objects behind the scenes
-- **reactive forms -** you start in your component class, by creating your form programmatically before then binding the resulting object to the template; you're in charge/control of every single step; you have observable streams on changes of the form elements etc..
+* **template driven forms -** you start and do most of the work in the Angular template by adding bindings with custom directives; Angular creates the according form control objects behind the scenes
+* **reactive forms -** you start in your component class, by creating your form programmatically before then binding the resulting object to the template; you're in charge/control of every single step; you have observable streams on changes of the form elements etc..
 
 ## Why even create Dynamic Forms
 
@@ -67,26 +75,23 @@ export const person = {
     label: 'Gender',
     value: 'M',
     type: 'radio',
-    options: [
-      { label: 'Male', value: 'M'},
-      { label: 'Female', value: 'F'}
-    ]
-  }, 
+    options: [{ label: 'Male', value: 'M' }, { label: 'Female', value: 'F' }]
+  },
   city: {
     label: 'City',
     value: '39010',
     type: 'select',
     options: [
-      { label: '(choose one)', value: ''},
-      { label: 'Bolzano', value: '39100'},
-      { label: 'Meltina', value: '39010'},
-      { label: 'Appiano', value: '39057'}
+      { label: '(choose one)', value: '' },
+      { label: 'Bolzano', value: '39100' },
+      { label: 'Meltina', value: '39010' },
+      { label: 'Appiano', value: '39057' }
     ],
     validation: {
       required: true
     }
   }
-}
+};
 ```
 
 Here I model a `Person` object where I mix the structure of the form with the actual data. Take a look at the `name` property for instance
@@ -106,11 +111,11 @@ name: {
 
 Lets take a closer look:
 
-- the `name` itself represents the property of our `Person` model. That's the property I expect the form to fill with the value the user inputs;
-- the actual `value` of the property `name` which gets databound to the form input field. This could be the data which is already present in our model/store/DB, or simply a default value;
-- then there is a `label` which is simply the one that gets rendered as the input field `<label>`;
-- the `type` which indicates which HTML input field should be rendered (text, radio, select,...);
-- and finally a set of validators to be applied to our form input field.
+* the `name` itself represents the property of our `Person` model. That's the property I expect the form to fill with the value the user inputs;
+* the actual `value` of the property `name` which gets databound to the form input field. This could be the data which is already present in our model/store/DB, or simply a default value;
+* then there is a `label` which is simply the one that gets rendered as the input field `<label>`;
+* the `type` which indicates which HTML input field should be rendered (text, radio, select,...);
+* and finally a set of validators to be applied to our form input field.
 
 ## Reactive Forms Refresher
 
@@ -167,7 +172,7 @@ export class DynamicFormComponent implements OnInit {
 }
 ```
 
-Pay attention to the **dataObject**. It is where we pass in our `person` object representing our dynamic form structure. 
+Pay attention to the **dataObject**. It is where we pass in our `person` object representing our dynamic form structure.
 
 ```
 import { person } from './person';
@@ -235,7 +240,7 @@ export class DynamicFormComponent implements OnInit {
 
   ngOnInit() {
     // remap the API to be suitable for iterating over it
-    this.objectProps = 
+    this.objectProps =
       Object.keys(this.dataObject)
         .map(prop => {
           return Object.assign({}, { key: prop} , this.dataObject[prop]);
@@ -342,7 +347,7 @@ Next we obviously have to **create the form fields**. Let's do that for our simp
 
     <div [ngSwitch]="prop.type">
 
-      <input *ngSwitchCase="'text'" 
+      <input *ngSwitchCase="'text'"
         [formControlName]="prop.key"
         [id]="prop.key" [type]="prop.type">
 
@@ -355,7 +360,7 @@ Next we obviously have to **create the form fields**. Let's do that for our simp
 Note how we use an `ngSwitch` statement on the `type` property which defines which kind of input field we need. We then specify a `ngSwitchCase="'text'"` to define the case for text inputs. By doing so we also bind the `formControlName` accordingly as well as the `type` and `id` property of the HTML input field.
 
 ```html
-<input *ngSwitchCase="'text'" 
+<input *ngSwitchCase="'text'"
     [formControlName]="prop.key"
     [id]="prop.key" [type]="prop.type">
 ```
@@ -364,7 +369,7 @@ That's it. Finally, let's also **render our validators**. For now we account jus
 
 ```html
 <div [ngSwitch]="prop.type">
-  <input *ngSwitchCase="'text'" 
+  <input *ngSwitchCase="'text'"
     [formControlName]="prop.key"
     [id]="prop.key" [type]="prop.type">
 </div>
@@ -381,7 +386,6 @@ That's it. Finally, let's also **render our validators**. For now we account jus
 Let's see how simple `name` property binding looks like.
 
 <iframe src="https://stackblitz.com/edit/angular-dynamicforms-blogarticle-simple?embed=1&file=app/dynamic-form.component.ts&hideExplorer=1" width="100%" height="400px"> </iframe>
-
 
 ## Mapping further input fields
 

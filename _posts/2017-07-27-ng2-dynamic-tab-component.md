@@ -20,15 +20,23 @@ tags: [ "Angular" ]
 
 {% include toc.html %}
 
+## Egghead.io - Video Course
+
+Learn about dynamic components in my newest **Egghead.io video course**. Check it out now:
+
+<a href="https://egghead.io/courses/create-dynamic-components-in-angular" class="egghead-lesson" data-lessonuid="courses/create-dynamic-components-in-angular">
+  <img src="/blog/assets/imgs/egghead-dynamic-cmp-banner.png" style="width:100%" />
+</a>
+
 ## The setup
 
 This article is based on a previous one I’ve written where I built a tab component by leveraging Angular’s `@ContentChildren` and content projection. For a better understanding of this article here, I suggest reading that one first:
 
 {% include article-link.html
-    url="/blog/2016/02/learning-ng2-creating-tab-component/"
-    title="Learning Angular: Creating a tabs component"
-    text="A follow up on thoughtram's excellent article on creating a tabs components with Angular"
-    imageurl="/blog/assets/imgs/ng2-tabs.png"
+url="/blog/2016/02/learning-ng2-creating-tab-component/"
+title="Learning Angular: Creating a tabs component"
+text="A follow up on thoughtram's excellent article on creating a tabs components with Angular"
+imageurl="/blog/assets/imgs/ng2-tabs.png"
 %}
 
 Great, to get a quick overview, our tab component API currently looks as follows.
@@ -49,7 +57,6 @@ We now want to extend this API in such a way that allows us to dynamically open 
 </figure>
 
 Whenever we click the "Add new person" or "edit" button beneath an existing record, we want the editing to take place in a separate tab pages that gets added dynamically.
-
 
 <figure>
   <img src="/blog/assets/imgs/ng-dynamic-tabs/people-list-edit-tab.png" />
@@ -79,7 +86,7 @@ So far so good. Remember the example we wanna build? So whenever the user clicks
 @Component({...})
 export class AppComponent {
   ...
-    
+
   onEditPerson(person) {
     this.tabsComponent.openTab(
       `Editing ${person.name}`,
@@ -118,7 +125,7 @@ import { TabsComponent } from './tabs.component';
 class AppComponent {
   @ViewChild(TabsComponent) tabsComponent;
   @ViewChild('personEdit') editPersonTemplate;
-  
+
   onEditPerson(person) {
     ...
   }
@@ -142,7 +149,6 @@ Our plan is to dynamically inject new `TabComponent` instances into the `TabsCom
 ```
 
 The static tabs get "projected" into the `<ng-content></ng-content>` section and referenced in the code via the `@ContentChildren`. For more details [read the according article I wrote a while back](/blog/2016/02/learning-ng2-creating-tab-component/).
-
 
 > Note: we cannot reuse the same `@ContentChildren` mechanism because it only works for projected content which has to happen statically. Our tabs however are created dynamically on the fly, remember?
 
@@ -170,7 +176,7 @@ export class DynamicTabsDirective {
 }
 ```
 
-We only need this one for the purpose of getting hold of the `ViewContainerRef` later. By injecting it in the constructor of our directive and by using the `public`  modifier, we can later simply access it through that `viewContainer` variable.
+We only need this one for the purpose of getting hold of the `ViewContainerRef` later. By injecting it in the constructor of our directive and by using the `public` modifier, we can later simply access it through that `viewContainer` variable.
 
 ### Alternative: use a template variable as anchor
 
@@ -210,7 +216,7 @@ Remember, each of our tab pages inside our tabs component is defined using the `
 </my-tabs>
 ```
 
-However, in our scenario we want to instantiate the `<my-tab>` in our code dynamically and set the according properties of it. More specifically we instantiate the underlying component class `TabComponent`. 
+However, in our scenario we want to instantiate the `<my-tab>` in our code dynamically and set the according properties of it. More specifically we instantiate the underlying component class `TabComponent`.
 For that purpose we need to **get hold of a component factory** matching our `TabComponent`. It’s as simple as injecting the `ComponentFactoryResolver` and then invoking its `resolveComponentFactory(…)` function passing in the type of component we want to instantiate: the `TabComponent`.
 
 ```javascript
@@ -220,7 +226,7 @@ import { TabComponent } from './tab.component';
 @Component({...})
 export class TabsComponent {
   ...
-  
+
   constructor(private _componentFactoryResolver: ComponentFactoryResolver) {}
 
   openTab(...) {
@@ -229,7 +235,7 @@ export class TabsComponent {
 }
 ```
 
-Next, we need to get a  `ViewContainerRef` which is where our dynamically instantiated component will be placed. We can get that view container from our anchor component as we just discussed (or via the alternative approach of using a template variable).
+Next, we need to get a `ViewContainerRef` which is where our dynamically instantiated component will be placed. We can get that view container from our anchor component as we just discussed (or via the alternative approach of using a template variable).
 
 ```javascript
 import { DynamicTabsDirective } from './dynamic-tabs.directive';
@@ -320,7 +326,7 @@ openTab(title, template, data, isCloseable = false) {
 }
 ```
 
-Inside there we can now **render the template into the view** of our `TabComponent`. Currently the `TabComponent`  is defined as follows:
+Inside there we can now **render the template into the view** of our `TabComponent`. Currently the `TabComponent` is defined as follows:
 
 ```javascript
 @Component({
@@ -372,8 +378,7 @@ Obviously a template without some dynamic data is quite boring. In our example, 
 </ng-template>
 ```
 
-Inside the template the `<person-edit>` component takes care of editing our person record by creating a proper form with bindings, events etc. 
-
+Inside the template the `<person-edit>` component takes care of editing our person record by creating a proper form with bindings, events etc.
 
 > Note: this is not scope of this article, but feel free to check out its implementation in the linked Plunker
 
@@ -437,7 +442,7 @@ import { TabComponent } from './tab.component';
 
 @NgModule({
   imports: [ ... ],
-  declarations: [ 
+  declarations: [
     ...,
     TabComponent,
     ...
@@ -492,6 +497,6 @@ Phew, that was quite long. Dynamic components in Angular initially seem like a m
 **Other examples**
 Although this example is fully working, it was created for an academic purpose if you want, to learn more about dynamic components, view containers and how to pass around templates rather than to create a feature blown production read tab component. Of course, you're free to use it if you want, but there are probably more feature complete ones out there already available for you. Here are some examples:
 
-- [Material design tab component](https://material.angular.io/components/tabs/overview)
-- [ngx-bootstrap by Valor Software](http://valor-software.com/ngx-bootstrap/#/tabs)
-- [ng-bootstrap](https://ng-bootstrap.github.io/#/components/tabs/api)
+* [Material design tab component](https://material.angular.io/components/tabs/overview)
+* [ngx-bootstrap by Valor Software](http://valor-software.com/ngx-bootstrap/#/tabs)
+* [ng-bootstrap](https://ng-bootstrap.github.io/#/components/tabs/api)

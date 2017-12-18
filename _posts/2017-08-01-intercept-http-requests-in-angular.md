@@ -10,18 +10,16 @@ tags: [ "Angular", "Video Lesson" ]
 	Angular version 4.3.1 introduced one important new feature: the new HTTP client. Not only did it bring optimizations in how we can execute requests to backend APIs, but it made intercepting HTTP requests extremely easy.
 </div>
 
-{% include postads %}
-
 {% assign message = "Contents are based on Angular version >= 4.3.1" %}
 {% include warn-notice.html %}
 
+Learn everything about the new Http client introduced in Angular 4.3 and now default in Angular 5 in my latest **Egghead.io video course on "Learn HTTP in Angular"**.
+
+<a href="https://egghead.io/courses/learn-http-in-angular" class="egghead-lesson" data-lessonuid="courses/learn-http-in-angular">
+  <img src="/blog/assets/imgs/egghead-learn-http-banner.png" style="width:100%" />
+</a>
+
 In the following [Egghead.io video lesson](https://egghead.io/lessons/intercept-http-requests-in-angular) I implement an HTTP interceptor which intercepts the request, adding some headers, the response as well as potential HTTP errors.
-
-{% assign lesson_url = "lessons/intercept-http-requests-in-angular" %}
-{% assign lesson_img = "/blog/assets/imgs/egghead-intercept-http-requests.png" %}
-{% include egghead.html %}
-
-{% include toc.html %}
 
 ## The new HTTP client
 
@@ -63,7 +61,10 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class MyHttpLogInterceptor implements HttpInterceptor {
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(
+    request: HttpRequest<any>,
+    next: HttpHandler
+  ): Observable<HttpEvent<any>> {
     return next.handle(request);
   }
 }
@@ -184,21 +185,19 @@ Strange error, not very expressive. The issue occured to me when setting custom 
 ...
 intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
    const newRequest = req.clone({ headers: req.headers.set('somekey', 11234') });
-   
+
    return next.handle(newRequest);
 }
 ...
 ```
-
 
 ```
 // CORRECT
 ...
 intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
    const newRequest = req.clone({ headers: req.headers.set('somekey', '11234') });
-   
+
    return next.handle(newRequest);
 }
 ...
 ```
-
