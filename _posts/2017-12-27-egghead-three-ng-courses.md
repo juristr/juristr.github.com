@@ -66,11 +66,3 @@ This is not all, it's just the beginning :smiley:. I've some more courses, blog 
 ---
 
 _\* All courses are usually free for the first 3 days and will then automatically switch to become part of the PRO course series. It basically means that you need to be a <a href="https://egghead.io/pricing">PRO subscriber</a> on Egghead.io to watch them. If you wanna support my efforts, then definitely go & get a PRO membership if you didn't already. It's totally worth it and you won't only get my courses, but tons of others in the frontend dev space, covering TypeScript, RxJS and much more :smiley:_
-
----
-
-{% include article-link.html url="/blog/2017/07/ng2-dynamic-tab-component/"
-title="Create a dynamic tab component with Angular" text="Learn about advanced
-topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef,
-ngTemplateOutlet and much more..."
-imageurl="/blog/assets/imgs/ng-dynamic-tabs/multi-tab-editing.png" %}
