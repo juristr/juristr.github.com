@@ -40,9 +40,11 @@ current: blog
             <img src="/blog/assets/imgs/banner-egghead-course-ng-styling.png" style="width:100%" />
         </a>
         -->
+        {% if page.ads == null || page.ads == "true" %}
         <a href="https://egghead.io/courses/learn-http-in-angular" class="egghead-lesson" data-lessonuid="courses/learn-http-in-angular"  style="background-image:none">
             <img src="/blog/assets/imgs/egghead-learn-http-banner.png" style="width:100%" />
-          </a>
+        </a>
+        {% endif %}
         {{ content }}
         {% include postfooter %}
         {% include mycustoms/sponsored-ad %}
