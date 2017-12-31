@@ -95,7 +95,7 @@ This was one of my major highlights this year. I feel so honored and "impostor s
 
 But it obviously highly motivates me to continue push out new content. Btw, [Aaron Frost aka @js_dev](https://twitter.com/js_dev) has written some nice posts about [what GDEs are](https://medium.com/@frosty/preparing-to-become-a-gde-752b551c88df). But I especially like his blog post about ["Become a Bridge Builder"](https://medium.com/@frosty/become-a-bridge-builder-dc45824e590e), containing lots of advices which **everyone** should follow.
 
-## Egghead.io
+## Becoming an Egghead.io Instructor
 
 I started with producing video content around 2 years ago. My 1st experience was for Packt Publishing for which [I created a course on Learning Angular Directives](/blog/2016/04/learning-angular2-directives-course/) with a [2nd edition](/blog/2017/01/video-course-learning-ng-cmps/) at the beginning of this year. I started it as an addition to my writing activities and I very much enjoyed it.
 
