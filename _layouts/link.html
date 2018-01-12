@@ -7,7 +7,7 @@ current: blog
   <div class="row">
     <section class="main-content post instapaper_body" style="max-width:650px">
       <article class="row">
-        {% if page.postimg != nil and page.show_img_in_detail == true and (page.coverimage == false or page.coverimage == nil) %}
+        {% if page.postimg != nil and page.show_img_in_detail == true and page.coverimage == false or page.coverimage == nil %}
           <div class="col-sm-12 col-lg-12 post-image" style="margin-bottom:15px; text-align:center">
               <img src="{{page.postimg}}" />
           </div>

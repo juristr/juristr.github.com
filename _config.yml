@@ -134,7 +134,7 @@ prose:
   siteurl: "https://juristr.com"
   media: "blog/assets/imgs"
 
-gems:
+plugins:
   - jemoji
 
 

@@ -118,8 +118,8 @@ But wait. This **won't work**. Look at our `PersonDetailComponent` template:
 
 ```html
 <div>
-      {% raw %}Name: {{ person.name }}<br/>
-      Twitter: {{ person.twitter.name }}{%endraw%}
+      Name: {% raw %}{{ person.name }}{%endraw%}<br/>
+      Twitter: {% raw %}{{ person.twitter.name }}{%endraw%}
 </div>
 ```
 
@@ -141,8 +141,8 @@ By using the Safe Navigation Operator (`?`) we can change our `PersonDetailCompo
 
 ```html
 <div>
-      {% raw %}Name: {{ person?.name }}<br/>
-      Twitter: {{ person?.twitter.name }}{%endraw%}
+      Name: {% raw %}{{ person?.name }}{%endraw%}<br/>
+      Twitter: {% raw %}{{ person?.twitter.name }}{%endraw%}
 </div>
 ```
 
@@ -190,8 +190,8 @@ Our parent component (or smart component) remains unchanged, while our detail (o
   selector: 'person-detail',
   template: `
     <div>
-      Name: {{ (person | async)?.name }}<br/>
-      Twitter: {{ (person | async)?.twitter.name }}
+      Name: {%raw%}{{ (person | async)?.name }}{%endraw%}<br/>
+      Twitter: {%raw%}{{ (person | async)?.twitter.name }}{%endraw%}
     </div>
   `,
 })
@@ -239,7 +239,7 @@ import {Component, NgModule, Input} from '@angular/core'
   selector: 'person-detail',
   template: `
     <div>
-      Name: {%raw%}{{ person?.name }}<br/>{%endraw%}
+      Name: {%raw%}{{ person?.name }}{%endraw%}<br/>
       Twitter: {%raw%}{{ person?.twitter.name }}{%endraw%}
     </div>
   `,
@@ -262,7 +262,7 @@ import {Component, NgModule, Input} from '@angular/core'
   selector: 'person-detail',
   template: `
     <div>
-      Name: {%raw%}{{ person.name }}<br/>{%endraw%}
+      Name: {%raw%}{{ person.name }}{%endraw%}<br/>
       Twitter: {%raw%}{{ person.twitter.name }}{%endraw%}
     </div>
   `,

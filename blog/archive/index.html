@@ -12,7 +12,7 @@ current: blog
 </h2>
 
 <div class="archives" itemscope itemtype="http://schema.org/Blog">
-{% for post in site.posts reverse %}
+{% for post in site.posts reversed %}
     {% if post.type != "update-notice" and post.type != "link" %}
     {% capture date %}{{ post.date }}{% endcapture %}
 {% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}

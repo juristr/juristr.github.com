@@ -341,8 +341,8 @@ angular.module('plunker')
     },
     controller: MessageController,
     template: [
-      '<p><strong>A message from {{ $ctrl.from }}:</strong></p>',
-      '<p>{{ $ctrl.msg }}</p>'
+      '<p><strong>A message from {%raw%}{{ $ctrl.from }}{%endraw%}:</strong></p>',
+      '<p>{%raw%}{{ $ctrl.msg }}{%endraw%}</p>'
     ].join('')
   });
 

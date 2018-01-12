@@ -107,7 +107,7 @@ postimg: /blog/assets/imgs/angular1-index-bg.png
                     {% endfor %}
                     </span>
                   {% endunless %}
-                  {% if post.reposts && post.reposts.length > 0 %}
+                  {% if post.reposts and post.reposts.length > 0 %}
                     <span class="js-tooltip" data-toggle="tooltip" data-placement="top" data-title="This article has been published on partner sites.">
                       <i class="fa fa-star"></i>&nbsp;Featured
                     </span>
