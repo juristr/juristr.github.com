@@ -67,7 +67,7 @@ current: blog
               {% if post.type != 'update-notice' %}
                 <a href="{{post.url}}">{{ post.title | truncatewords:30 }}</a>
               {% else %}
-                <a href="{{post.target-url}}">{{ post.title | truncatewords:30 }}</a>
+                Update: <a href="{{post.target-url}}">{{ post.title | truncatewords:30 }}</a>
               {% endif %}
             </h3>
             <p>
