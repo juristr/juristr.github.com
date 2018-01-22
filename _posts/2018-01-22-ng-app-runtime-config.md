@@ -19,7 +19,7 @@ include warn-notice.html %}
 
 ## Compile-time configuration
 
-{% assign lesson_url = "lessons/egghead-configure-an-angular-app-at-compile-time" %}
+{% assign lesson_url = "lessons/angular-configure-an-angular-app-at-compile-time-with-the-angular-cli" %}
 {% assign lesson_img = "/blog/assets/imgs/eggheadvid-configure-compiletime.png" %}
 {% assign image_class="image--small" %}
 {% include egghead.html %}
