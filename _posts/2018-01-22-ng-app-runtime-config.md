@@ -43,7 +43,7 @@ export const environment = {
 ```javascript
 // environment.prod.ts
 export const environment = {
-  production: false
+  production: true
 };
 ```
 
