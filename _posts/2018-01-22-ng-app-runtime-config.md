@@ -24,7 +24,7 @@ include warn-notice.html %}
 {% assign image_class="image--small" %}
 {% include egghead.html %}
 
-**What is compile-time configuration?** It basically means that you compile your configuration into your app, at the time when you compile and bundle it. If you're using the Angular there's already a preconfigured setup for having such compile-time configuration options.
+**What is compile-time configuration?** It basically means that you compile your configuration into your app, at the time when you compile and bundle it. If you're using the Angular CLI there's already a preconfigured setup for having such compile-time configuration options.
 
 <figure>
     <img src="/blog/assets/imgs/angular-cli-compiletime-config.png">
