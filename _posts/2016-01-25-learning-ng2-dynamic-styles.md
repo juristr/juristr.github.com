@@ -6,6 +6,7 @@ lastupdated: '2017-03-30'
 postimg: "/blog/assets/imgs/conditional-add-styles.png"
 category: angular2
 tags: [ "JavaScript", "Angular" ]
+ads: false
 ---
 
 <div class="article-intro">
@@ -30,10 +31,11 @@ Check out [my Egghead.io course](https://egghead.io/courses/understand-how-to-st
 
 ## Directly manipulating styles property
 
-{% assign lesson_url = "lessons/style-html-elements-in-angular-using-the-style-property" %}
-{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-styleprop.png" %}
-{% assign image_class="image--medium" %}
-{% include egghead.html %}
+{% assign video_title = "Style HTML elements in Angular using the style property" %}
+{% assign video_url = "https://egghead.io/lessons/style-html-elements-in-angular-using-the-style-property" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/style-html-elements-in-angular-using-the-style-property" %}
+{% include video-banner.html %}
 
 A rather unconventional way would be to return the styling property as a string and then to directly set it on the desired element:
 
@@ -75,10 +77,11 @@ Note the `[style.background-color]` in the code above.
 
 ## Style Sanitization
 
-{% assign lesson_url = "lessons/use-angular-style-sanitization-to-mark-dynamic-styles-as-trusted-values" %}
-{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-sanitization.png" %}
-{% assign image_class="image--medium" %}
-{% include egghead.html %}
+{% assign video_title = "Use Angular style sanitization to mark dynamic styles as trusted values" %}
+{% assign video_url = "https://egghead.io/lessons/use-angular-style-sanitization-to-mark-dynamic-styles-as-trusted-values" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/use-angular-style-sanitization-to-mark-dynamic-styles-as-trusted-values" %}
+{% include video-banner.html %}
 
 Assume for instance we want to dynamically add a background image of a user's profile image, using the `[style.background-image]="..."` approach. Naively, we may try the following:
 
@@ -132,10 +135,11 @@ The `DomSanitizer` has other methods as well: [refer to the official docs](https
 
 ## The good old "ngClass"
 
-{% assign lesson_url = "lessons/style-html-elements-in-angular-using-ngclass" %}
-{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-ngclass.png" %}
-{% assign image_class="image--medium" %}
-{% include egghead.html %}
+{% assign video_title = "Style HTML elements in Angular using ngClass" %}
+{% assign video_url = "https://egghead.io/lessons/style-html-elements-in-angular-using-ngclass" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/style-html-elements-in-angular-using-ngclass" %}
+{% include video-banner.html %}
 
 Straight away, there's still the good old [NgClass](https://angular.io/docs/ts/latest/api/common/NgClass-directive.html) which might especially be known by Angular 1 developers. NgClass allows to pass in an object (key:value) where the key represents the class and the value a boolean condition which controls whether that specific class is applied to the element or not.  
 That said, it is the preferred way of adding one or more classes to an element. 
@@ -178,10 +182,11 @@ export class App {
 
 ## Adding a single class
 
-{% assign lesson_url = "lessons/conditionally-add-a-single-css-class-to-a-dom-element-in-angular" %}
-{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-single-class.png" %}
-{% assign image_class="image--medium" %}
-{% include egghead.html %}
+{% assign video_title = "Conditionally add a single CSS class to a DOM element in Angular" %}
+{% assign video_url = "https://egghead.io/lessons/conditionally-add-a-single-css-class-to-a-dom-element-in-angular" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/conditionally-add-a-single-css-class-to-a-dom-element-in-angular" %}
+{% include video-banner.html %}
 
 An alternative to the `ngClass` and especially in situations when only a single class needs to be applied is the following syntax.  
 Similarly as we did with the background-color above, we can add a single class, using the following notation: `[class.nameOfClass]="someCondition"`.
@@ -222,10 +227,11 @@ export class App {
 
 ## Using `:host(..)` and `@HostBinding`
 
-{% assign lesson_url = "lessons/use-angular-s-hostbinding-and-host-to-add-styling-to-the-component-itself" %}
-{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-hostbinding.png" %}
-{% assign image_class="image--medium" %}
-{% include egghead.html %}
+{% assign video_title = "Use Angular’s @HostBinding and :host(...) to add styling to the component itself" %}
+{% assign video_url = "https://egghead.io/lessons/use-angular-s-hostbinding-and-host-to-add-styling-to-the-component-itself" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/use-angular-s-hostbinding-and-host-to-add-styling-to-the-component-itself" %}
+{% include video-banner.html %}
 
 Consider you have a component `<styled>` which you'd like have different CSS classes applied based on some setting, like `.yellow-style` in case when you specify `<styled style="yellow">` and `.red-style` when you pass in `red`: `<styled style="red">`.
 
@@ -316,10 +322,11 @@ Here's an example to play around with.
 
 ## Referencing the DOM element directly via ElementRef
 
-{% assign lesson_url = "lessons/use-the-renderer2-to-add-styles-to-an-element-in-angular" %}
-{% assign lesson_img = "/blog/assets/imgs/learning-dyn-styles/egghead-style-renderer.png" %}
-{% assign image_class="image--medium" %}
-{% include egghead.html %}
+{% assign video_title = "Use the Renderer2 to add styles to an element in Angular" %}
+{% assign video_url = "https://egghead.io/lessons/use-the-renderer2-to-add-styles-to-an-element-in-angular" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/use-the-renderer2-to-add-styles-to-an-element-in-angular" %}
+{% include video-banner.html %}
 
 The last possibility is by directly interacting with the underlying DOM element. For that purpose we create a directive `styled` which we add to our div.
 

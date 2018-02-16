@@ -1,19 +1,5 @@
 <div class="row" style="text-align:center">
-    <!--
-    <a href="/blog/2016/04/learning-angular2-directives-course/" rel="nofollow" class="sponsored-ads" target="blank">
-        <img src="/blog/assets/imgs/learning-angular2-directives/cover.jpg" style="height:250px; width:200px" />
-    </a>
-    <a href="https://goo.gl/zrGX8K" target="_blank" class="sponsored-ads-ngcomponents-packtpub" style="background-image:none">
-        <img src="/blog/assets/imgs/banner-learning-angular-components.jpg" style="width:100%" />
-    </a>
-    <a href="https://ultimateangular.com/?utm_source=juristr.com" target="_blank" class="sponsored-ads-ultimateangular" style="background-image:none">
-        <img src="/blog/assets/imgs/ultimate-angular-banner.png" style="width:100%" />
-    </a>
-    <a href="https://goo.gl/zrGX8K" target="_blank" class="sponsored-ads-ngcomponents-packtpub" style="background-image:none">
-        <img src="/blog/assets/imgs/banner-learning-angular-components.jpg" style="width:100%" />
-    </a>
-    -->
-    <a href="https://egghead.io/instructors/juri-strumpflohner" target="_blank" class="sponsored-ads-egghead-instructor-page" style="background-image:none">
-        <img src="/blog/assets/imgs/sponsors/egghead-banner.png" style="width:100%" />
+    <a href="https://egghead.io/instructors/juri-strumpflohner" class="affiliate-link" data-client="eggheadio" data-uid="egghead-instructor-page">
+        <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
     </a>
 </div>

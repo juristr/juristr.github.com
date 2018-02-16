@@ -1,5 +1,5 @@
+{% comment %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- postads -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-9669473064376287"
@@ -8,3 +8,4 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+{% endcomment %}

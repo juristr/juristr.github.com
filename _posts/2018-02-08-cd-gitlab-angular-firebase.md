@@ -107,8 +107,17 @@ I won’t go into too much details on how to setup Firebase as they have awesome
 
 As said, for any of these steps you should find plenty of documentation and articles 🙂. Alternatively you can check out my Egghead lessons:
 
-- [Egghead video: Build and Deploy your Angular app to Firebase hosting](https://egghead.io/lessons/build-and-deploy-your-angular-app-to-firebase-hosting)
-- [Egghead video: Setup automated deployment with Angular, Travis and Firebase](https://egghead.io/lessons/setup-automated-deployment-with-angular-travis-and-firebase)
+{% assign video_title = "Build and Deploy your Angular app to Firebase hosting" %}
+{% assign video_url = "https://egghead.io/lessons/build-and-deploy-your-angular-app-to-firebase-hosting" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/build-and-deploy-your-angular-app-to-firebase-hosting" %}
+{% include video-banner.html %}
+
+{% assign video_title = "Setup automated deployment with Angular, Travis and Firebase" %}
+{% assign video_url = "https://egghead.io/lessons/setup-automated-deployment-with-angular-travis-and-firebase" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/setup-automated-deployment-with-angular-travis-and-firebase" %}
+{% include video-banner.html %}
 
 After we’ve configured our project with Firebase, let’s add the necessary npm scripts to deploy to Firebase hosting:
 

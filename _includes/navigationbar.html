@@ -4,14 +4,23 @@
       <div class="header--avatar">
         {% include avatar.html %}
       </div>
-      <p class="header--description">
-        I'm Juri, a full stack developer and tech lead with a special passion for the web and frontend development. I'm a
-        <a href="https://developers.google.com/experts/people/juri-strumpflohner" target="_blank">Google Developer Expert in Web Tech</a>, tech writer, author,
-        <a href="https://egghead.io/instructors/juri-strumpflohner"
-          target="_blank">Egghead.io instructor</a>, Software Craftsmanship Meetup organizer.
-        <br />
-        <br />
-      </p>
+      <div class="header--description">
+        <h1>Juri Strumpflohner</h1>
+        <span style="
+            display: flex;
+            height: 30px;
+            align-items: center;
+        ">
+          <img src="/assets/images/gde.svg" style="height:23px">
+          <a href="https://developers.google.com/experts/people/juri-strumpflohner" style="
+              padding-left: 5px;
+              font-size: 15pt;
+          ">Google Developer Expert for Angular</a>
+        </span>
+        <p>
+          Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, occasionally speaks at conferences and holds training workshops.
+        </p>
+      </div>
       <div class="social-icons">
         <div class="social-icons--right">
           {% include social_icons %}
@@ -21,11 +30,11 @@
           <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
-      <!--
+      {% comment %}
       <p>
           <strong>I'm available for being hired! Interested? <a href="/about/hire">More here &raquo;</a></strong>
       </p>
-    -->
+      {% endcomment %}
     </header>
     {% include {{nav_type}} %}
   </div>

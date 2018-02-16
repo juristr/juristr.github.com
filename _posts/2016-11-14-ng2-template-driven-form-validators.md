@@ -24,9 +24,11 @@ reposts: [ "http://javascriptweekly.com/issues/311" ]
 
 Don't wanna read through the entire article? Then lean back and watch my free Egghead lesson :wink:
 
-{% assign lesson_url = "lessons/create-a-custom-validator-for-template-driven-forms-in-angular" %}
-{% assign lesson_img = "/blog/assets/imgs/egghead-lesson-custom-validators.png" %}
-{% include egghead.html %}
+{% assign video_title = "Create a custom validator for template driven forms in Angular" %}
+{% assign video_url = "https://egghead.io/lessons/create-a-custom-validator-for-template-driven-forms-in-angular" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/create-a-custom-validator-for-template-driven-forms-in-angular" %}
+{% include video-banner.html %}
 
 ## A simple Angular Form
 

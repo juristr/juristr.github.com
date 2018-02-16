@@ -182,6 +182,22 @@
 
         });
 
+        $('.affiliate-link').on('click', function(ev) {
+          var affiliateClient;
+          var affiliateUID;
+          if(ev && ev.target) {
+            affiliateClient  = $(ev.target).data('client');
+            affiliateUID = $(ev.target).parents('a').data('uid');
+            if(!affiliateClient) {
+              affiliateClient = $(ev.target).parents('a').data('client');
+              affiliateUID = $(ev.target).parents('a').data('uid');
+            }
+          }
+          try{
+            ga('send', 'event', 'promotional', affiliateClient, affiliateUID);
+          }catch(e){}
+        });
+
         $('.donation').click(function(){
             try{
               ga('send', 'event', 'link', 'click', 'donation-nepal');

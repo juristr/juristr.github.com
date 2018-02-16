@@ -28,8 +28,8 @@ Quite mixed results. Those who tried actually liked it, but there seem to be a l
 
 If you're too lazy to read and would rather like to walk through all this stuff step by step with me, then definitely check out my **Egghead course on "Create Dynamic Forms with Angular"**.
 
-<a href="https://egghead.io/courses/create-dynamic-forms-in-angular" class="egghead-lesson" data-lessonuid="courses/create-dynamic-forms-in-angular">
-  <img src="/blog/assets/imgs/egghead-dynamic-forms-banner.png" style="width:100%" />
+<a href="https://egghead.io/courses/create-dynamic-forms-in-angular" class="affiliate-link" data-client="eggheadio" data-uid="courses/create-dynamic-forms-in-angular">
+  <img src="/blog/assets/imgs/banners/egghead-banner-dynamic-forms.png" style="width:100%" />
 </a>
 
 ## Template driven and reactive forms

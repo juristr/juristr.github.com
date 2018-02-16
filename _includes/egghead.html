@@ -3,7 +3,7 @@
     {% else %}
     <figure class="image--medium">
         {% endif %}
-        <a href="https://egghead.io/{{ lesson_url }}" class="egghead-lesson" data-lessonuid="{{ lesson_url }}">
+        <a href="https://egghead.io/{{ lesson_url }}" class="affiliate-link" data-client="eggheadio" data-uid="{{ lesson_url }}">
         <img src="{{ lesson_img }}">
     </a> {% if caption != "" %}
         <figcaption>{{ caption }}</figcaption>

@@ -19,10 +19,11 @@ include warn-notice.html %}
 
 ## Compile-time configuration
 
-{% assign lesson_url = "lessons/angular-configure-an-angular-app-at-compile-time-with-the-angular-cli" %}
-{% assign lesson_img = "/blog/assets/imgs/eggheadvid-configure-compiletime.png" %}
-{% assign image_class="image--small" %}
-{% include egghead.html %}
+{% assign video_title = "Configure an Angular App at Compile Time with the Angular CLI" %}
+{% assign video_url = "https://egghead.io/lessons/angular-configure-an-angular-app-at-compile-time-with-the-angular-cli" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/angular-configure-an-angular-app-at-compile-time-with-the-angular-cli" %}
+{% include video-banner.html %}
 
 **What is compile-time configuration?** It basically means that you compile your configuration into your app, at the time when you compile and bundle it. If you're using the Angular CLI there's already a preconfigured setup for having such compile-time configuration options.
 
@@ -111,10 +112,11 @@ Note, we're passing in the `--env=<your-environment>` flag. the `--prod` is a bu
 
 ## Runtime configuration
 
-{% assign lesson_url = "lessons/angular-configure-an-angular-app-at-runtime" %}
-{% assign lesson_img = "/blog/assets/imgs/eggheadvid-configure-runtime.png" %}
-{% assign image_class="image--small" %}
-{% include egghead.html %}
+{% assign video_title = "Configure an Angular App at Runtime" %}
+{% assign video_url = "https://egghead.io/lessons/angular-configure-an-angular-app-at-runtime" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/angular-configure-an-angular-app-at-runtime" %}
+{% include video-banner.html %}
 
 If however you need to be able to change your app's configuration settings or maybe you even expose them via an API, then you need to use **a runtime configuration approach**. Normally you simply have some JSON file - say `appConfig.json` that contains the necessary configuration options which you then deploy with your app on your server. When your app runs, you execute an HTTP request to that JSON file and read the settings.
 

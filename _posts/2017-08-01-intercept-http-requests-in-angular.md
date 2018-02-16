@@ -15,8 +15,8 @@ tags: [ "Angular", "Video Lesson" ]
 
 Learn everything about the new Http client introduced in Angular 4.3 and now default in Angular 5 in my latest **Egghead.io video course on "Learn HTTP in Angular"**.
 
-<a href="https://egghead.io/courses/learn-http-in-angular" class="egghead-lesson" data-lessonuid="courses/learn-http-in-angular">
-  <img src="/blog/assets/imgs/egghead-learn-http-banner.png" style="width:100%" />
+<a href="https://egghead.io/courses/learn-http-in-angular" class="affiliate-link" data-client="eggheadio" data-uid="courses/learn-http-in-angular">
+  <img src="/blog/assets/imgs/banners/egghead-banner-learn-http.png" style="width:100%" />
 </a>
 
 In the following [Egghead.io video lesson](https://egghead.io/lessons/intercept-http-requests-in-angular) I implement an HTTP interceptor which intercepts the request, adding some headers, the response as well as potential HTTP errors.

@@ -9,6 +9,7 @@
 @import "_article-links";
 // @import "_article-linkjuice";
 @import "_fluidbox";
+@import "_video-banner";
 
 body {
   text-rendering: optimizeLegibility;
@@ -370,6 +371,11 @@ article {
       max-width: 550px;
     }
 
+  }
+
+  .container .mobile-optimized {
+    max-width: 550px;
+    margin: 0 auto;
   }
 }
 

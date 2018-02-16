@@ -25,7 +25,13 @@ This is ideal on the CI server or in those cases when you're not really interest
 
 ## Egghead.io Video Lesson
 
-Lazy? Then check out my <a href="https://egghead.io/lessons/egghead-configure-the-angular-cli-to-use-the-karma-mocha-test-reporter" class="egghead-lesson" data-lessonuid="courses/learn-http-in-angular">Egghead.io companion lesson on how to setup the Mocha reporter for your Karma tests"</a> :smiley:
+Lazy? Then check out my Egghead.io companion lesson on how to setup the Mocha reporter for your Karma tests" :smiley:
+
+{% assign video_title = "Configure the Angular CLI to use the Karma Mocha test reporter" %}
+{% assign video_url = "https://egghead.io/lessons/angular-configure-the-angular-cli-to-use-the-karma-mocha-test-reporter" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/angular-configure-the-angular-cli-to-use-the-karma-mocha-test-reporter" %}
+{% include video-banner.html %}
 
 ## Install and configure the Mocha Reporter
 

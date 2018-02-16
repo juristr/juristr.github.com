@@ -187,9 +187,11 @@ export class UserLoginComponent {
 
 Check out my Egghead video lesson on how to leverage the new `else` clause in the `*ngIf` together with the `async` pipe for creating a loading indicator.
 
-{% assign lesson_url = "lessons/show-a-loading-indicator-in-angular-using-ngif-else-the-as-keyword-and-the-async-pipe" %}
-{% assign lesson_img = "/blog/assets/imgs/egghead-loading-indicator.png" %}
-{% include egghead.html %}
+{% assign video_title = "Show a loading indicator in Angular using *ngIf/else, the as keyword and the async pipe" %}
+{% assign video_url = "https://egghead.io/lessons/show-a-loading-indicator-in-angular-using-ngif-else-the-as-keyword-and-the-async-pipe" %}
+{% assign affiliate_client = "eggheadio" %}
+{% assign affiliate_uid = "lessons/show-a-loading-indicator-in-angular-using-ngif-else-the-as-keyword-and-the-async-pipe" %}
+{% include video-banner.html %}
 
 ## Conclusion
 
