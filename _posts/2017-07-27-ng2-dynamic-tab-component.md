@@ -24,7 +24,7 @@ tags: [ "Angular" ]
 
 Learn about dynamic components in my newest **Egghead.io video course**. Check it out now:
 
-<a href="https://egghead.io/courses/create-dynamic-components-in-angular" class="affiliate-link" data-client="eggheadio" data-uid="courses/create-dynamic-components-in-angular">
+<a href="https://egghead.io/courses/create-dynamic-components-in-angular" class="external-link" data-client="eggheadio" data-uid="courses/create-dynamic-components-in-angular">
   <img src="/blog/assets/imgs/banners/egghead-banner-dynamic-cmps.png" style="width:100%" />
 </a>
 

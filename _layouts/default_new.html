@@ -182,19 +182,19 @@
 
         });
 
-        $('.affiliate-link').on('click', function(ev) {
-          var affiliateClient;
-          var affiliateUID;
+        $('.external-link').on('click', function(ev) {
+          var client;
+          var clientUid;
           if(ev && ev.target) {
-            affiliateClient  = $(ev.target).data('client');
-            affiliateUID = $(ev.target).parents('a').data('uid');
-            if(!affiliateClient) {
-              affiliateClient = $(ev.target).parents('a').data('client');
-              affiliateUID = $(ev.target).parents('a').data('uid');
+            client  = $(ev.target).data('client');
+            clientUid = $(ev.target).parents('a').data('uid');
+            if(!client) {
+              client = $(ev.target).parents('a').data('client');
+              clientUid = $(ev.target).parents('a').data('uid');
             }
           }
           try{
-            ga('send', 'event', 'promotional', affiliateClient, affiliateUID);
+            ga('send', 'event', 'promotional', client, clientUid);
           }catch(e){}
         });
 

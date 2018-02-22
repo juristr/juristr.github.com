@@ -10,19 +10,19 @@ You can see all of my video courses on my [official Egghead.io instructor page](
 
 ## Video Courses
 
-<a href="https://egghead.io/courses/understand-how-to-style-angular-components" class="affiliate-link" data-client="eggheadio" data-uid="courses/understand-how-to-style-angular-components">
+<a href="https://egghead.io/courses/understand-how-to-style-angular-components" class="external-link" data-client="eggheadio" data-uid="courses/understand-how-to-style-angular-components">
     <img src="/blog/assets/imgs/banners/egghead-banner-styling-course.png" style="width:100%" />
 </a>
 
-<a href="https://egghead.io/courses/learn-http-in-angular" class="affiliate-link" data-client="eggheadio" data-uid="courses/learn-http-in-angular">
+<a href="https://egghead.io/courses/learn-http-in-angular" class="external-link" data-client="eggheadio" data-uid="courses/learn-http-in-angular">
   <img src="/blog/assets/imgs/banners/egghead-banner-learn-http.png" style="width:100%" />
 </a>
 
-<a href="https://egghead.io/courses/create-dynamic-components-in-angular" class="affiliate-link" data-client="eggheadio" data-uid="courses/create-dynamic-components-in-angular">
+<a href="https://egghead.io/courses/create-dynamic-components-in-angular" class="external-link" data-client="eggheadio" data-uid="courses/create-dynamic-components-in-angular">
   <img src="/blog/assets/imgs/banners/egghead-banner-dynamic-cmps.png" style="width:100%" />
 </a>
 
-<a href="https://egghead.io/courses/create-dynamic-forms-in-angular" class="affiliate-link" data-client="eggheadio" data-uid="courses/create-dynamic-forms-in-angular">
+<a href="https://egghead.io/courses/create-dynamic-forms-in-angular" class="external-link" data-client="eggheadio" data-uid="courses/create-dynamic-forms-in-angular">
   <img src="/blog/assets/imgs/banners/egghead-banner-dynamic-forms.png" style="width:100%" />
 </a>
 
