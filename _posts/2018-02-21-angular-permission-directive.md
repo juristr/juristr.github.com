@@ -216,7 +216,7 @@ The only important thing is that our `@Input` internally in our `hasPermission` 
 export class HasPermissionDirective {
     ...
     @Input()
-    set myIfOperation(op) {
+    set hasPermissionOperation(op) {
         console.log('operator', op);
     }
     ...
