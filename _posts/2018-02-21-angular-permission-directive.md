@@ -225,6 +225,8 @@ export class HasPermissionDirective {
 
 That's it. So now that we know how to get our boolean operator inside our directive, we just need to adjust our permission checking algorithm to take that into account.
 
+> **Note,** in the `updateView()` function I added a flag `isHidden` that helps us keep track of whether we've already added the template into the DOM. We don't want to add it multiple times in case when the permissions update and evaluate to true.
+
 ## Conclusion and final example
 
 Here's the full running example of a potential permission directive. Note, this is just an example, nothing to copy & paste into your production code. But you can definitely take it as a starting point.
