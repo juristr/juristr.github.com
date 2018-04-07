@@ -339,20 +339,20 @@ The last possibility is by directly interacting with the underlying DOM element.
 Our directive looks like this:
 
 ```javascript
-import {Directive, ElementRef, Renderer} from '@angular/core';
+import {Directive, ElementRef, Renderer2} from '@angular/core';
 
 @Directive({
   selector: '[styled]',
 })
 export class StyledDirective {
-  constructor(public el: ElementRef, public renderer: Renderer) {
+  constructor(public el: ElementRef, public renderer: Renderer2) {
     // el.nativeElement.style.backgroundColor = 'yellow';
     renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
   }
 }
 ```
 
-The important part here is the `ElementRef` and the `Renderer` which I import in the constructor.
+The important part here is the `ElementRef` and the `Renderer2` which I import in the constructor.
 
 The `ElementRef` allows us to gain access to the `nativeElement` API via
 
@@ -360,7 +360,7 @@ The `ElementRef` allows us to gain access to the `nativeElement` API via
 el.nativeElement.style.backgroundColor = 'yellow';
 ```
 
-This way you can deliberately modify the properties of the native DOM element. So why would I want to use the `Renderer`. Well, Angular isn't only build for the browser, but it can potentially also be rendered on the server or render native elements on a mobile device (via [NativeScript](https://www.nativescript.org/) for instance). Thus, the `Renderer` provides an abstraction over the native elements.
+This way you can deliberately modify the properties of the native DOM element. So why would I want to use the `Renderer2`. Well, Angular isn't only build for the browser, but it can potentially also be rendered on the server or render native elements on a mobile device (via [NativeScript](https://www.nativescript.org/) for instance). Thus, the `Renderer2` provides an abstraction over the native elements.
 
 Check out this Plunk for the full code.
 
@@ -379,6 +379,6 @@ So in this article you learned about 5 possibilities to style your DOM elements 
 - adding a class `[class.my-class]`
 - using NgClass `[ngClass]`
 - leveraging `:host(..)` and `@HostBinding`
-- by directly accessing the native DOM element
+- by directly accessing the native DOM element using the `Renderer2`
 
 You even quickly saw how to create a Directive and how to embed styles within a Component :smiley:.
