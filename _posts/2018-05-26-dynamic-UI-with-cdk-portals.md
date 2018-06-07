@@ -49,7 +49,7 @@ Basically in our specific demo app,
 The page actions could be defined as follows within our `ContactListComponent`
 
 ```html
-<ng-template>
+<ng-template #pageActions>
 	<button type="button" class="toolbar-btn" mat-icon-button (click)="onSave()">
   		<mat-icon>add</mat-icon>
 	</button>
