@@ -73,6 +73,12 @@ Basically they help us take some piece of UI which we can dynamically render int
 
 More [on the official documentation](https://material.angular.io/cdk/portal/overview).
 
+{% include article-link.html
+    url="https://blog.angularindepth.com/working-with-dom-in-angular-unexpected-consequences-and-optimization-techniques-682ac09f6866"
+    title="Working with DOM in Angular: unexpected consequences and optimization techniques"
+    text="Deep dive into working with DOM in Angular and learn about the difference between embedded views and host views"
+    imageurl="https://cdn-images-1.medium.com/max/1600/1*vinkw-iFnRaDmoh69S530A.png"
+%}
 
 ## DomPortalHost and TemplatePortal
 
