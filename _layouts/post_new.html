@@ -63,7 +63,8 @@ current: blog
                 bottom: 10px;
             }
         </style>
-        <div class="affiliate-section">
+
+        <!-- <div class="affiliate-section">
             <a href="https://ultimateangular.com/?ref=76683_m6z8h8fa" class="external-link" data-client="ultimateangular" data-uid="post-top-banner">
                 <img src="https://ultimateangular.com/assets/img/banners/ua-leader.svg">
             </a>
@@ -71,15 +72,16 @@ current: blog
                 My friend Todd knows how to create top-notch video courses. Check out Ultimate Angular!
             </p>
             <span class="explanation"><a href="/faq#ultimate-angular">What's this?</a></span>
-        </div>
-        <!-- <a href="https://egghead.io/courses/learn-http-in-angular" class="external-link" data-client="eggheadio" data-uid="courses/learn-http-in-angular"  style="background-image:none">
-            <img src="/blog/assets/imgs/banners/egghead-banner-learn-http.png" style="width:100%" />
-        </a> -->
+        </div> -->
+        <a href="https://egghead.io/courses/angular-service-injection-with-the-dependency-injector-di" class="external-link" data-client="eggheadio" data-uid="/courses/angular-service-injection-with-the-dependency-injector-di"   style="background-image:none">
+            <img src="/blog/assets/imgs/banners/egghead-banner-course-service-di.png" style="width:100%" />
+        </a>
         {% endif %}
         {{ content }}
         {% include postfooter %}
         {% include mycustoms/sponsored-ad %}
     </div>
+
     {% unless page.tags == empty %}
     <div class="tags">
         {% for tag in page.tags %}
@@ -87,6 +89,7 @@ current: blog
         {% endfor %}
     </div>
     {% endunless %}
+
     <div class="article-footer">
         <div class="article-sharing">
             <div id="disqus">
