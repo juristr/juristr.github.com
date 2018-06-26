@@ -187,7 +187,9 @@ ngOnDestroy() {
 
 ## Demo
 
-Wrapping up, I changed the adapted [the implementation from the previous article using CDKPortals](/blog/2018/05/dynamic-UI-with-cdk-portals/) to rather use our own implementation of portals. You can find the entire source code on Stackblitz:
+Wrapping up, I changed the adapted [the implementation from the previous article using CDKPortals](/blog/2018/05/dynamic-UI-with-cdk-portals/) to rather use our own implementation of portals. You can find the entire source code on Stackblitz.
+
+_Hint: open the `src/app/shared/page-actions/page-actions.component.ts` file._
 
 {% assign uid = "github/juristr/demo-cdk-portal-mobile-pageactions/tree/self-made-portals" %}
 {% include stackblitz.html %}
