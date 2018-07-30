@@ -65,9 +65,15 @@ Check out [my video lessons](https://egghead.io/instructors/juri-strumpflohner).
 
 Here are some of my public speaking events. Find more details [here](/about/timeline/).
 
+https://devchat.tv/adv-in-angular/aia-193-angular-libraries-with-juri-strumpflohner
+
+- [**Podcast: AiA Angular Libraries with Juri Strumpflohner**](https://devchat.tv/adv-in-angular/aia-193-angular-libraries-with-juri-strumpflohner) (June 2018) - I was a guest at the Adventures in Angular Podcast where we talked about Angular Libraries.
+- [**ngVikings 2018**](https://ngvikings.org/) (March 2018) - 2nd, improved version of my talk about "Create and publish Angular libs like a PRO".  
+Slides: [GSlides](https://docs.google.com/presentation/d/1TY2wDLWvbY9hxuhXxFLMY6xfrpdmpMnsTflipEwtsiI/edit#slide=id.g2b6eab8706_0_12)   
+Talk: [Youtube](https://www.youtube.com/watch?v=Tw8TCgeqotg)
 - [**NG-BE 2017**](https://ng-be.org/) (December 2017) - I spoke about "Create and publish Angular libs like a PRO".  
 Slides: [https://t.co/IaKeBHK2nU](https://t.co/IaKeBHK2nU)   
-Talk: (published soon)
+Talk: [Youtube](https://www.youtube.com/watch?v=K4YMmwxGKjY)
 - [**ngAir 110 - The TIL Episode #3**](https://www.youtube.com/watch?v=dgzgO5pB090) (April 2017) - I joined the [Angular Air](http://angularair.com/) TIL (Today I learned) episode, presenting some of new features that have been added in Angular version 4.0.0 as well as about Angular on the server side with Angular Universal.
 - [**Testing with Angular**](https://www.youtube.com/watch?v=Uw_XomCJaGQ) (January 2017) - A talk for [Hamburg AngularJS Meetup](https://www.meetup.com/Hamburg-AngularJS-Meetup/) on recipes for testing with Angular (2+).
 - [**AngularBeers: Interviewing Igor Minar and Adam Bradley**](https://www.youtube.com/watch?v=i2XloM6Q5wc) (December 2016) - I was given the opportunity to moderate the AMA session with Igor Minar and Adam Bradley for [AngularBeers](https://angularbeers.org/).
