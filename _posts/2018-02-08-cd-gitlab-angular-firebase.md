@@ -119,7 +119,20 @@ As said, for any of these steps you should find plenty of documentation and arti
 {% assign affiliate_uid = "lessons/setup-automated-deployment-with-angular-travis-and-firebase" %}
 {% include video-banner.html %}
 
-After we’ve configured our project with Firebase, let’s add the necessary npm scripts to deploy to Firebase hosting:
+In order to have our CI server be able to deploy to firebase we need to generate a proper authentication token that can be used when running the deployment script.
+
+```
+$ firebase login:ci
+```
+
+The `$FIREBASE_TOKEN` needs to be registered on your GitLab repository’s `Settings > CI/CD Settings > Secret variables`.
+
+<figure>
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-env-vars.png">
+  <figcaption>Setting environment variables in GitLab</figcaption>
+</figure>
+
+After we’ve configured our project with Firebase, let’s add the necessary npm scripts to deploy to Firebase hosting. 
 
 ```json
 {
@@ -130,14 +143,6 @@ After we’ve configured our project with Firebase, let’s add the necessary np
   ...
 }
 ```
-
-The `$FIREBASE_TOKEN` needs to be registered on your GitLab repository’s `Settings > CI/CD Settings > Secret variables`.
-
-<figure>
-  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-env-vars.png">
-  <figcaption>Setting environment variables in GitLab</figcaption>
-</figure>
-
 
 ## Step 3: Configure GitLab pipelines
 
