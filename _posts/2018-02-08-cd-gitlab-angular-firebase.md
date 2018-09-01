@@ -4,6 +4,7 @@ title: "Create a CD pipeline with Angular, GitLab and Firebase"
 lead: "Learn to create a continuous deployment pipeline to deploy an Angular app to Firebase using Gitlab's integrated CI server"
 postimg: "/blog/assets/imgs/cd-gitlab-firebase/gitlab-pipeline-1.png"
 tags: [ "Angular", "Angular CLI", "continuous delivery" ]
+lastupdated: '2018-09-01'
 ---
 
 <div class="article-intro">
@@ -63,7 +64,7 @@ module.exports = function (config) {
     ],
     ...
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     customLaunchers: {
       ChromeHeadless: {
         base: 'Chrome',
@@ -85,12 +86,20 @@ module.exports = function (config) {
 };
 ```
 
-Note, at the end of the file I’m verifying whether a `CI_SERVER` environment variable is set, and in that case I set the `browsers` property of Karma to `ChromeHeadless`. This environment flag depends on the specific CI server you’re using. Alternatively you can also steer which browser is being used via a dedicated script entry in your `package.json`:
+Note, in the configuration above, I'm using ChromeHeadless even when running tests locally. It's just faster. But for completeness I also included the part where you can check whether you're running on a CI server (the `CI_SERVER` variable might be dependent on the concrete one you're running on).
+
+```
+if (process.env.CI_SERVER) {
+  configuration.browsers = ['ChromeHeadless'];
+}
+```
+
+Using such conditions you can eventually overwrite an existing setting. Alternatively you can also steer which browser is being used via a dedicated script entry in your `package.json`:
 
 ```json
 {
   "scripts": {
-    "test:ci": "ng test --watch=false --single-run=true --browser=ChromeHeadless",
+    "test:ci": "ng test --no-watch --single-run=true --browser=ChromeHeadless",
     ...
   },
   ...
@@ -132,6 +141,13 @@ The `$FIREBASE_TOKEN` needs to be registered on your GitLab repository’s `Sett
   <figcaption>Setting environment variables in GitLab</figcaption>
 </figure>
 
+When configuring the variable in GitLab, make sure to **not activate the "protected"** flag, otherwise you will have issues in reading these variables during the build.
+
+<figure>
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-variables-protect.png">
+  <figcaption>Adding the firebase token to GitLab</figcaption>
+</figure>
+
 After we’ve configured our project with Firebase, let’s add the necessary npm scripts to deploy to Firebase hosting. 
 
 ```json
@@ -162,7 +178,7 @@ At the root of our repository, we create a `.gitlab-ci.yml` which contains the G
 
 ```
 // .gitlab-ci.yml
-image: node:latest
+image: juristr/angular-ci-build:1.0.0
 stages:
   - build
   - test
@@ -181,7 +197,6 @@ app-build:
     - npm run build:js-training
 
 unit-tests:
-  image: avatsaev/node-chrome
   stage: test
   script:
     - npm run test:ci
@@ -230,21 +245,17 @@ app-build:
     - npm run build:js-training
 ```
 
-Similarly for our **test part**. We assign the job to the “test” stage. Note however, that this time I’m referring to another Docker image `avatsaev/node-chrome` which already contains headless Chrome installed.
+Similarly for our **test part**. We assign the job to the “test” stage. In order to be able to run our ChromeHeadless tests on CI, we need to have it installed. Make sure you use a proper Docker image which already includes it. I created one on purpose that helps building Angular on CI servers: `image: juristr/angular-ci-build:1.0.0` (sources on [GitHub](https://github.com/juristr/docker-angular-ci-build))
+
+You can either use it globally on your `.gitlab-ci.yml` (as in my case) or just for a specific task, like the testing one:
 
 ```
 unit-tests:
-  image: avatsaev/node-chrome
+  image: juristr/angular-ci-build:1.0.0
   stage: test
   script:
     - npm run test:ci
 ```
-
-Huge kudos for that to [Aslan Vatsaev](https://twitter.com/avatsaev) which provided me lots of useful links to set this up. Check out this Twitter thread as there are lots of useful infos: 
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Here is a simplified version of my gitlab CI: <a href="https://t.co/yhBkSrw6cz">https://t.co/yhBkSrw6cz</a><br><br>I&#39;ve created some custom docker images (avatsaev/*) to make the ci faster, if you want to customize them yourself, just go to dockerhub and copy the dockerfile.<br><br>If you have any questions let me know ;)</p>&mdash; Aslan Vatsaev (@avatsaev) <a href="https://twitter.com/avatsaev/status/956469923760484353?ref_src=twsrc%5Etfw">January 25, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 
 Great, last step, **deploy to Firebase hosting.** What’s particular of this step is that we don’t build our Angular app again, but rather we take in our `app-build` artifact containing the app bundle. By executing `npm run deploy` internally the firebase command we’ve prepared previously will be invoked.
 
@@ -321,21 +332,21 @@ Note the new `environment` property. Moreover in the `deploy-production` job I a
 
 **Using the environment in our Angular CLI project**  
 
-Inside our Angular CLI project we can make use of these environments. By default the Angular CLI already generates an `environment.ts` and `environment.prod.ts`, but you can add more as needed. Then in the build commands, we can tell the CLI which `environment.ts` file to take, using the `--env` flag. Check out my article on “[Compile-time vs. runtime configuration of your Angular App](https://juristr.com/blog/2018/01/ng-app-runtime-config/)” for more details.
+Inside our Angular CLI project we can make use of these environments. By default the Angular CLI already generates an `environment.ts` and `environment.prod.ts`, but you can add more as needed. Then in the build commands, we can tell the CLI which `environment.ts` file to take, using the `--env` flag. Check out my article on “[Compile-time vs. runtime configuration of your Angular App](/blog/2018/01/ng-app-runtime-config/)” for more details.
 
-When GitLab builds our project in the pipeline, it injects the name of the environment it is currently building for, via a proper variable: `$CI_ENVIRONMENT_SLUG`. We can thus configure a `environment.staging.ts` and adjust our build script in the `package.json`. For example:
+When GitLab builds our project in the pipeline, it injects the name of the environment it is currently building for, via a proper variable: `$CI_ENVIRONMENT_NAME`. We can thus configure a `environment.staging.ts` and adjust our build script in the `package.json`. For example:
 
 ```json
 {
   "scripts": {
     ...
-    "build:js-training": "ng build --env=$CI_ENVIRONMENT_SLUG --app=js-training",
+    "build:js-training": "ng build --env=$CI_ENVIRONMENT_NAME --app=js-training",
   },
   ...
 }
 ```
 
-**Heads up:** That means however, that we need to create a dedicated build for each environment! In the article I linked previously I describe the [benefits/downsides of compile-time vs. runtime configuration](https://juristr.com/blog/2018/01/ng-app-runtime-config/).
+**Heads up:** That means however, that we need to create a dedicated build for each environment! In the article I linked previously I describe the [benefits/downsides of compile-time vs. runtime configuration](/blog/2018/01/ng-app-runtime-config/).
 
 
 Before adjusting our pipeline configuration, let’s configure different Firebase environments first. 
@@ -367,14 +378,14 @@ Finally we also need to adjust the `package.json` to take advantage of the newly
 {
   "scripts": {
     ...
-    "predeploy": "firebase use --token $FIREBASE_TOKEN $CI_ENVIRONMENT_SLUG",
+    "predeploy": "firebase use --token $FIREBASE_TOKEN $CI_ENVIRONMENT_NAME",
     "deploy": "firebase deploy --non-interactive --token $FIREBASE_TOKEN"
   },
   ...
 }
 ```
 
-Note how the `predeploy` step chooses the corresponding environment that gets passed in via the GitLab `$CI_ENVIRONMENT_SLUG` parameter.
+Note how the `predeploy` step chooses the corresponding environment that gets passed in via the GitLab `$CI_ENVIRONMENT_NAME` parameter.
 
 <figure>
   <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-pipeline-2.png">
