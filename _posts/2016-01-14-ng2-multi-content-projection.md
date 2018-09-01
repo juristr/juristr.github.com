@@ -75,3 +75,8 @@ Try it out yourself:
 
 {% assign uid = "edit/angular-multi-contentprojection" %}
 {% include stackblitz.html %}
+
+Another example of a **collapsible panel** component:
+
+{% assign uid = "edit/angular-contentprojection-collapsiblepanel" %}
+{% include stackblitz.html %}
