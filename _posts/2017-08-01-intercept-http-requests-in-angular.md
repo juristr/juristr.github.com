@@ -107,7 +107,7 @@ import {
 } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/do';
+import { tap } from 'rxjs/operators';
 
 @Injectable()
 export class MyHttpLogInterceptor implements HttpInterceptor {
@@ -116,11 +116,13 @@ export class MyHttpLogInterceptor implements HttpInterceptor {
 
     return next
       .handle(customReq)
-      .do((ev: HttpEvent<any>) => {
-        if (ev instanceof HttpResponse) {
-          console.log('processing response', ev);
-        }
-      });
+      .pipe(
+        tap((ev: HttpEvent<any>) => {
+          if (ev instanceof HttpResponse) {
+            console.log('processing response', ev);
+          }
+        });
+      )
   }
 }
 ```
@@ -140,9 +142,8 @@ import {
 } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+import { tap, catchError } from 'rxjs/operators';
+import { _throw } from 'rxjs/observable/throw';
 
 @Injectable()
 export class MyHttpLogInterceptor implements HttpInterceptor {
@@ -151,16 +152,18 @@ export class MyHttpLogInterceptor implements HttpInterceptor {
 
     return next
       .handle(customReq)
-      .do((ev: HttpEvent<any>) => {
-        ...
-      })
-      .catch(response => {
-        if (response instanceof HttpErrorResponse) {
-          console.log('Processing http error', response);
-        }
+      .pipe(
+         tap((ev: HttpEvent<any>) => {
+           ...
+         }),
+	 catchError(response => {
+           if (response instanceof HttpErrorResponse) {
+             console.log('Processing http error', response);
+           }
 
-        return Observable.throw(response);
-      });
+           return _throw(response);	 
+	 })
+      )
   }
 }
 ```
