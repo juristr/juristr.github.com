@@ -184,7 +184,8 @@ Strange error, not very expressive. The issue occured to me when setting custom 
 // WRONG
 ...
 intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
-   const newRequest = req.clone({ headers: req.headers.set('somekey', 11234') });
+   // header value send as number
+   const newRequest = req.clone({ headers: req.headers.set('somekey', 11234) });
 
    return next.handle(newRequest);
 }
@@ -195,6 +196,7 @@ intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
 // CORRECT
 ...
 intercept(req: HttpRequest<any>, next: HttpHandler): Observable<any> {
+   // header value needs to be sent as string
    const newRequest = req.clone({ headers: req.headers.set('somekey', '11234') });
 
    return next.handle(newRequest);
