@@ -92,6 +92,23 @@ All requests made to `/api/...` from within our application will be forwarded to
 
 **Note the `changeOrigin`** property. You will definitely have to set this to `true` when you're using some virtual proxies (such as configured with Apache2) on your backend.
 
+## Configure the CLI proxy for Ionic 4
+
+Luckily, Ionic for (to the contrary of Ionic 3) uses now the Angular CLI under the hood for serving, generating and building your Ionic project. As such, we can pretty much in the same way pass a proxy configuration to our `serve` command:
+
+```
+{
+   "name": "my-ionic-4-app",
+   ...
+   "scripts": {
+      "start": "ionic serve -- --proxy-config ../../proxy.conf.json",
+      ...
+   }
+}
+```
+
+You can reuse **the exact same `proxy.conf.json`** from your normal Angular web project setup.
+
 ## This is NOT FOR PRODUCTION
 
 "How can I configure Angular CLI's dev-server in production?" I get this question a lot. **This is NOT FOR PRODUCTION**
