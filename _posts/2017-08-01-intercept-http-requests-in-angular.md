@@ -143,7 +143,7 @@ import {
 
 import { Observable } from 'rxjs/Observable';
 import { tap, catchError } from 'rxjs/operators';
-import { _throw } from 'rxjs/observable/throw';
+import { throwError } from "rxjs";
 
 @Injectable()
 export class MyHttpLogInterceptor implements HttpInterceptor {
@@ -161,7 +161,7 @@ export class MyHttpLogInterceptor implements HttpInterceptor {
              console.log('Processing http error', response);
            }
 
-           return _throw(response);	 
+           return throwError(response);	 
 	 })
       )
   }
