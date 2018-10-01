@@ -23,7 +23,7 @@ tags: [ "Angular" ]
 
 Before diving in I’d like to give you some context and the reason for doing this refactoring.
 
-I’m working on an Angular app that uses Microsoft’s Graph and SharePoint APIs to get/create/modify data. This means that we make a lot of requests. To do that we’re using the excellent `[HttpClient](https://angular.io/api/common/http/HttpClient)` service build into Angular. This makes it very easy for us to send a request by using methods like `get()`, `post()`, `patch()`, etc. One important detail, however, is the fact that all of these methods return Observables. Early on in the development of our app we decided to convert these Observables to Promises because we didn’t have much experience doing things “reactively”. So we ended up treating all of the requests we’re making as Promises. 
+I’m working on an Angular app that uses Microsoft’s Graph and SharePoint APIs to get/create/modify data. This means that we make a lot of requests. To do that we’re using the excellent [`HttpClient`](https://angular.io/api/common/http/HttpClient) service build into Angular. This makes it very easy for us to send a request by using methods like `get()`, `post()`, `patch()`, etc. One important detail, however, is the fact that all of these methods return Observables. Early on in the development of our app we decided to convert these Observables to Promises because we didn’t have much experience doing things “reactively”. So we ended up treating all of the requests we’re making as Promises. 
 
 Then some time passed by and we got brave enough to try a bit of RxJS here and there but mostly related to handling `resize` and `scroll` events. Then a few months ago we realized that it was about time to “stop swimming against the stream” and embrace the idea of handling HTTP requests as Observables as well. So we’ve been slowly refactoring our code towards using RxJS Observables.
 
@@ -114,8 +114,9 @@ createFolder() {
 
 So the rest of the post will be dedicated to explaining how the code works and how each part maps to the different parts of the `Promise` based method from the example in the beginning.
 
-**forkJoin**
-This operator works pretty much the same way as `Promise.all()`. It accepts any number of Observables passed in directly or as an array. It will wait ****for all of them ****to complete and combine the last values they emitted.
+### `forkJoin`
+
+This operator works pretty much the same way as `Promise.all()`. It accepts any number of Observables passed in directly or as an array. It will wait **for all of them** to complete and combine the last values they emitted.
 
 ```javascript
 Promise.all([
@@ -139,7 +140,8 @@ Now, if I wanted to just make three requests and move on, I would have called `s
 
 But since I wanted to do more, I had to do some extra work.
 
-**pipe**
+### `pipe`
+
 This little fellow is quite useful.
 
 Starting from v5.5, RxJS shipped “[*pipeable operators*](https://github.com/ReactiveX/rxjs/blob/master/doc/pipeable-operators.md)”. Without going into too much details, a “pipeable“ operator is just a function that takes an Observable as an input, performs some action on it, and returns a new Observable as an output. This new Observable is then passed as an input to the next operator and so on until it eventually reaches the `subscribe()` method at the end.
@@ -148,7 +150,8 @@ The `pipe()` method is what makes this possible. It basically allows you to comb
 
 Let’s see how that solved my problem.
 
-**mergeMap**
+### `mergeMap`
+
 Things started to get serious. `mergeMap` (and it’s cousins) was one of those operators that no matter how much I read about, I still felt unsure when and how to use.
 
 With that in mind, let me try to explain it.
@@ -176,7 +179,8 @@ forkJoin([ ... ])
 
 Whenever `forkJoin()` emits a value, `mergeMap()` will start a new request for getting an `id`. When the request is done and the the inner observable emits the `id`, `mergeMap()` will grab it and merge it back to `forkJoin()`. Since there are no more operators the `id` will be passed to `subscribe()`.
 
-**filter**
+### `filter`
+
 The next step in the process was to handle the second `then()`. This step can be split into two parts. The first is the `if` check and the second is the two Promises that are returned in case the `if` check evaluates to `true`.
 
 The first part can be handled quite easily by using the `filter()` operator. 
@@ -207,7 +211,8 @@ forkJoin([ ... ])
 
 It’s worth mentioning here that the `next()` function inside `subscribe()` will receive the `id` value only if it passes through the `filter()`. In case the `id` doesn’t make it through the `filter()`, only the `complete()` function will be called.
 
-**concat**
+### `concat`
+
 The second part of the second `then()` was about handling two requests running in sequence. The order was important that’s why I ended up using two Promises chained together. When the second Promise resolves, the last `then()` in the chain will be called and that’s how I knew that everything is done.
 
 So in order to achieve this behavior of two requests executed in sequence, I ended up using `concat()`. According to the documentation:
@@ -219,9 +224,10 @@ Exactly what I was looking for!
 The only problem was that the `concat()` is not an operator*, so I could not simply put it after `filter()`.
 
 
-> There is actually a `[concat](https://rxjs-dev.firebaseapp.com/api/operators/concat)` [operator](https://rxjs-dev.firebaseapp.com/api/operators/concat) but it is deprecated.
+> There is actually a [`concat` operator](https://rxjs-dev.firebaseapp.com/api/operators/concat) but it is deprecated.
 
-**mergeMap again**
+### `mergeMap` again
+
 The trick was to use `mergeMap()` once again. This operator would wait for `filter()` to emit something, and when it does, it would take the value and pass it on to `concat()`. The `concat()` on the other hand will subscribe to the first observable and it will wait for it to emit something. When it does, the value will be send back to `mergeMap()`, which will merge it into the outer Observable, and from there on it will travel all the way down to `subscribe()`.
 
 Put in practice:
