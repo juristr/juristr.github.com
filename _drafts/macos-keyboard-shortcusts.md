@@ -20,12 +20,24 @@ tags: [ "Productivity", "Development" ]
 
 {% include toc.html %}
 
+## MacOS basic text navigation
+
+<kbd>CMDS</kbd>+<kbd>➡</kbd> - Jump to end of line
+
+<kbd>CMDS</kbd>+<kbd>⬅</kbd> - Jump to end of line
+
+<kbd>OPTIONS</kbd>+<kbd>→</kbd> - Jump over words
+
 
 ## Visual Studio Code
 
 <kbd>CMD</kbd>+<kbd>Down</kbd> - When having the Explorer window active, open the selected file
 
 <kbd>CMD</kbd>+<kbd>K</kbd>+<kbd>ENTER</kbd> - Keep editor window
+
+<kbd>CMD</kbd>+<kbd>Options</kbd>+<kbd>[</kbd> - Fold code region under the cursor
+
+<kbd>CMD</kbd>+<kbd>Options</kbd>+<kbd>]</kbd> - Unfold code region under the cursor
 
 ### Custom
 
