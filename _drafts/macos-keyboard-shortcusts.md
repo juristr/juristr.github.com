@@ -24,6 +24,7 @@ tags: [ "Productivity", "Development" ]
 ## Visual Studio Code
 
 <kbd>CMD</kbd>+<kbd>Down</kbd> - When having the Explorer window active, open the selected file
+
 <kbd>CMD</kbd>+<kbd>K</kbd>+<kbd>ENTER</kbd> - Keep editor window
 
 ### Custom
