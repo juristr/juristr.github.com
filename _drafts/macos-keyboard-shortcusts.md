@@ -20,13 +20,17 @@ tags: [ "Productivity", "Development" ]
 
 {% include toc.html %}
 
-## MacOS basic text navigation
+## MacOS basic (text) navigation
 
-<kbd>CMDS</kbd>+<kbd>➡</kbd> - Jump to end of line
+<kbd>CMDS</kbd>+<kbd>&lt;right&gt;</kbd> - Jump to end of line, use <kbd>&lt;left&gt;</kbd> to jump to the beginning
 
-<kbd>CMDS</kbd>+<kbd>⬅</kbd> - Jump to end of line
+<kbd>OPTIONS</kbd>+<kbd>&lt;right&gt;</kbd> - Jump over words, <kbd>&lt;left&gt;</kbd> for other direction
 
-<kbd>OPTIONS</kbd>+<kbd>→</kbd> - Jump over words
+> Use <kbd>Shift</kbd> with the above commands to select the text.
+
+<kbd>CMD</kbd>+<kbd>&lt;TAB&gt;</kbd> - Switch between active applications
+
+<kbd>CMD</kbd>+<kbd>`</kbd> - Switch between multiple instances of the current window
 
 
 ## Visual Studio Code
@@ -43,3 +47,6 @@ tags: [ "Productivity", "Development" ]
 
 <kbd>CMD</kbd>+<kbd>E</kbd> <kbd>CMD</kbd>+<kbd>E</kbd> - Focus File in Explorer
 
+## Chrome
+
+<kbd>CMD</kbd>+<kbd>&lt;left&gt;</kbd> - Back navigation
