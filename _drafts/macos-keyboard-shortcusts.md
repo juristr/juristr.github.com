@@ -43,6 +43,8 @@ tags: [ "Productivity", "Development" ]
 
 <kbd>CMD</kbd>+<kbd>Options</kbd>+<kbd>]</kbd> - Unfold code region under the cursor
 
+<kbd>CMD</kbd>+<kbd>Shift</kbd>+<kbd>\</kbd> - Jump to backet
+
 ### Custom
 
 <kbd>CMD</kbd>+<kbd>E</kbd> <kbd>CMD</kbd>+<kbd>E</kbd> - Focus File in Explorer
