@@ -32,6 +32,16 @@ tags: [ "Productivity", "Development" ]
 
 <kbd>CMD</kbd>+<kbd>`</kbd> - Switch between multiple instances of the current window
 
+### Dialogs
+
+You know those nasty dialogs in MacOS with ("Don't save", "Cancel" and "Save") options?
+
+<kbd>ENTER</kbd> - Clicks the "Save" option
+
+<kbd>CMD</kbd> + <kbd>.</kbd> - Clicks the "Cancel" action (or press <kbd>ESC</kbd>)
+
+<kbd>CMD</kbd> + <kbd>d</kbd> - Clicks the "Don't save" option
+
 
 ## Visual Studio Code
 
