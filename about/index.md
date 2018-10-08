@@ -65,8 +65,10 @@ Check out [my video lessons](https://egghead.io/instructors/juri-strumpflohner).
 
 Here are some of my public speaking events. Find more details [here](/about/timeline/).
 
-https://devchat.tv/adv-in-angular/aia-193-angular-libraries-with-juri-strumpflohner
-
+- [**ngTalks 2018**](https://ngvikings.org/) (August 2018) - "Supercharge your Angular forms!"  
+Slides: [GSlides](https://www.youtube.com/redirect?q=https%3A%2F%2Ft.co%2Fz7dX6vDi0R&redir_token=fKzm0zkGT7CNvkI6A1HIu33pAlh8MTUzOTA4NzI1M0AxNTM5MDAwODUz&event=video_description&v=XYFrWkzHVxw)   
+Talk: [Youtube](https://www.youtube.com/watch?v=XYFrWkzHVxw)
+- [**Podcast: My Angular Story**](https://devchat.tv/my-angular-story/mas-045-juri-strumpflohner/) (August 2018) - I was a guest at the Adventures in Angular Podcast's special edition "My Angular story", talking how I got into programming and ultimately into Angular and frontend dev.
 - [**Podcast: AiA Angular Libraries with Juri Strumpflohner**](https://devchat.tv/adv-in-angular/aia-193-angular-libraries-with-juri-strumpflohner) (June 2018) - I was a guest at the Adventures in Angular Podcast where we talked about Angular Libraries.
 - [**ngVikings 2018**](https://ngvikings.org/) (March 2018) - 2nd, improved version of my talk about "Create and publish Angular libs like a PRO".  
 Slides: [GSlides](https://docs.google.com/presentation/d/1TY2wDLWvbY9hxuhXxFLMY6xfrpdmpMnsTflipEwtsiI/edit#slide=id.g2b6eab8706_0_12)   
