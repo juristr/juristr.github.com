@@ -4,3 +4,4 @@ _site
 .sass-cache
 vendor
 Thumbs.db
+.jekyll-metadata
