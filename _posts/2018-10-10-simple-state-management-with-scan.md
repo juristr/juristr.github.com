@@ -146,6 +146,8 @@ state$ = this.stateSubject.asObservable().pipe(
 
 Note, this is obviously a very naive implementation and it needs probably be tailored to your own situation. But on the other side, if you just need a very simple state management for some part of your application, this might totally suffice your requirements. I wouldn’t recommend using it to blow it up to a be like the application-wide store. In those situations I’d definitely recommend giving a look at some of the state management libraries I cited before.
 
+_Thanks [Pisman Kwinten](https://twitter.com/KwintenP) for reviewing this article :)_
+
 **Related articles**
 
 - [NgRx + Facades: Better State Management](https://medium.com/@thomasburleson_11450/ngrx-facades-better-state-management-82a04b9a1e39)
