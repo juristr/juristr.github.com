@@ -57,6 +57,8 @@ You know those nasty dialogs in MacOS with ("Don't save", "Cancel" and "Save") o
 
 <kbd>Ctrl</kbd>+<kbd>-</kbd> - Jump to last cursor position (use <kbd>Shift</kbd> to jump the other direction)
 
+<kbd>CMD</kbd>+<kbd>Options</kbd>+<kbd>T</kbd> - Close all other open files (except the current one)
+
 ### Custom
 
 <kbd>CMD</kbd>+<kbd>E</kbd> <kbd>CMD</kbd>+<kbd>E</kbd> - Focus File in Explorer
