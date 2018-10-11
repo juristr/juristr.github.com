@@ -49,15 +49,15 @@ You know those nasty dialogs in MacOS with ("Don't save", "Cancel" and "Save") o
 
 <kbd>CMD</kbd>+<kbd>K</kbd>+<kbd>ENTER</kbd> - Keep editor window
 
-<kbd>CMD</kbd>+<kbd>Options</kbd>+<kbd>[</kbd> - Fold code region under the cursor
+<kbd>OPTIONS</kbd>+<kbd>CMD</kbd>+<kbd>[</kbd> - Fold code region under the cursor
 
-<kbd>CMD</kbd>+<kbd>Options</kbd>+<kbd>]</kbd> - Unfold code region under the cursor
+<kbd>OPTIONS</kbd>+<kbd>CMD</kbd>+<kbd>]</kbd> - Unfold code region under the cursor
 
 <kbd>CMD</kbd>+<kbd>Shift</kbd>+<kbd>\\</kbd> - Jump to backet
 
 <kbd>Ctrl</kbd>+<kbd>-</kbd> - Jump to last cursor position (use <kbd>Shift</kbd> to jump the other direction)
 
-<kbd>CMD</kbd>+<kbd>Options</kbd>+<kbd>T</kbd> - Close all other open files (except the current one)
+<kbd>OPTIONS</kbd>+<kbd>CMD</kbd>+<kbd>T</kbd> - Close all other open files (except the current one)
 
 ### Custom
 
