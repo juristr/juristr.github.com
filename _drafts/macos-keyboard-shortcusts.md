@@ -57,7 +57,11 @@ You know those nasty dialogs in MacOS with ("Don't save", "Cancel" and "Save") o
 
 <kbd>Ctrl</kbd>+<kbd>-</kbd> - Jump to last cursor position (use <kbd>Shift</kbd> to jump the other direction)
 
+### Working with files
+
 <kbd>OPTIONS</kbd>+<kbd>CMD</kbd>+<kbd>T</kbd> - Close all other open files (except the current one)
+
+<kbd>OPTIONS</kbd>+<kbd>CMD</kbd>+<kbd>S</kbd> - Save all files
 
 ### Custom
 
