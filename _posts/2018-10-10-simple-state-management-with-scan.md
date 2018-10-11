@@ -154,3 +154,4 @@ _Thanks [Pisman Kwinten](https://twitter.com/KwintenP) for reviewing this articl
 - [The sandbox pattern](https://blog.strongbrew.io/A-scalable-angular-architecture-part2/)
 - [Manage State in RxJS with StartWith and Scan](https://egghead.io/lessons/angular-manage-state-in-rxjs-with-startwith-and-scan)
 - [Do we really need Redux or @ngrx/store](https://blog.strongbrew.io/do-we-really-need-redux/)
+- [Angular Firebase: Redux from scratch](https://youtu.be/hG7v7quMMwM)
