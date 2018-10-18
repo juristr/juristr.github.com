@@ -320,6 +320,26 @@ Here's an example to play around with.
 {% assign plunker_url = "https://embed.plnkr.co/LfjCS6DMSi8d44O4Uhkj/" %}
 {% include plunker.html %}
 
+## Add a class to my component host
+
+When you create a custom Angular component you may often have the necessity to not only style things (divs, ...) within your component template but also to add it to the "component host" itself. Say we have the following component
+
+```html
+<my-custom-component></my-custom-component>
+```
+
+In order to be able to properly style it, we want it to have a class attached to it. Of course we could just add a `class` attribute, but we want it to happen automatically. As we have already seen in the section before, we can leverage the `@HostBinding` decorator, but this time we don't need any kind of condition. Rather we can write it as:
+
+```javascript
+@Component({
+   selector: 'my-custom-component',
+   ...
+})
+export class MyCustomComponent {
+    @HostBinding('class') hostClass = 'some-class';
+}
+```
+
 ## Referencing the DOM element directly via ElementRef
 
 {% assign video_title = "Use the Renderer2 to add styles to an element in Angular" %}
