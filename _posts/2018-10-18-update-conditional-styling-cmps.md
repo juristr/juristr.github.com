@@ -1,6 +1,6 @@
 ---
 layout: articles-post
-title: "Update: Learning Angular: Conditionally add styles to an element"
+title: "Learning Angular: Conditionally add styles to an element"
 type: update-notice
 target-url: /blog/2016/01/learning-ng2-dynamic-styles/#add-a-class-to-my-component-host
 ---
