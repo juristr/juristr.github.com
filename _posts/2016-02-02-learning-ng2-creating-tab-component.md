@@ -154,8 +154,11 @@ selectTab(tab: Tab){
 
 That's it :+1:. You did it! Here's the full code to play with:
 
-{% assign plunker_url = "https://embed.plnkr.co/afhLA8wHw9LRnzwwTT3M/" %}
-{% include plunker.html %}
+<!-- {% assign plunker_url = "https://embed.plnkr.co/afhLA8wHw9LRnzwwTT3M/" %}
+{% include plunker.html %} -->
+
+{% assign uid = "edit/angular-tabs-example" %}
+{% include stackblitz.html %}
 
 ## Want dynamic tabs?
 
