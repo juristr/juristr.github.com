@@ -65,10 +65,7 @@ Whenever we click the "Add new person" or "edit" button beneath an existing reco
 
 ### TL;DR - Gimme a running code example!
 
-Impatient? Here's a Plunk with the fully working example we are going to build step by step in this article. Have fun!
-
-{% assign plunker_url = "https://embed.plnkr.co/wWKnXzpm8V31wlvu64od/" %}
-{% include plunker.html %}
+Impatient? Jump to the end of the article for a running example of what we are building step by step in this article. Have fun!
 
 ## Desired API for our dynamic tabs
 
@@ -487,8 +484,10 @@ Also take a look at the official docs for `ViewContainerRef`: https://angular.io
 
 Check out the full example in this Plunker here:
 
-{% assign plunker_url = "https://embed.plnkr.co/wWKnXzpm8V31wlvu64od/" %}
-{% include plunker.html %}
+<!-- {% assign plunker_url = "https://embed.plnkr.co/wWKnXzpm8V31wlvu64od/" %}
+{% include plunker.html %} -->
+{% assign uid = "edit/angular-dynamic-tabs" %}
+{% include stackblitz.html %}
 
 ## Conclusion - Wrapping up
 
