@@ -1,0 +1,318 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Angular Localization with ngx-translate</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Angular Localization with ngx-translate"
+                  environment="web"
+                  feedback-link="https://github.com/juristr/codelab-ng-http-basics/issues">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>Every serious single-page application needs to interact with some API in order to retrieve the data it wants to visualize to its users. While we could simply use the native browser APIs for executing HTTP requests (such as <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">fetch</a>), Angular comes with its built-in Http client.</p>
+<h2 class="checklist"><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>How to install and setup ngx-translate</li>
+<li>How to localize Angular templates</li>
+<li>How to programmatically localize strings</li>
+<li>How to dynamically switch the application language</li>
+</ul>
+<h2><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>A valid code editor, ideally <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>Git and a recent version of Node (v9+) and NPM (v5+)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Getting set up" duration="3">
+        <h2><strong>Download the Code</strong></h2>
+<p>Click the following link to download all the code for this codelab:</p>
+<p><a href="https://github.com/juristr/codelab-ngx-translate/archive/master.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
+<p>Unzip the code and open it with Visual Studio Code (or your respective code editor of choice).</p>
+<h2><strong>Install npm packages and start the app</strong></h2>
+<p>After unpacking the files, open up a terminal (you can also do that from within Visual Studio Code) at the location where you unzipped your files.</p>
+<p>Execute <code>npm install</code> to download all the necessary packages.</p>
+<h2><strong>Launching the Angular Development Server?</strong></h2>
+<p>Open your terminal and type</p>
+<pre><code>$ npm start</code></pre>
+<p>This is a shortcut for <code>npm run start</code> and is mapped in your package.json to ng serve which will launch the local Angular CLI development server. Open your browser at <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>. You should see the following screen:</p>
+<p><img style="max-width: 624.00px" src="img/522c71f9ba046016.png"></p>
+<aside class="special"><p>More help on Angular CLI commands: <a href="https://github.com/angular/angular-cli/wiki" target="_blank">Angular CLI Wiki</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configure ngx-translate to our project" duration="1">
+        <p>Install the ngx-translate/core package as well as the ngx-translate/http-loader packages.</p>
+<pre><code>$ npm i @ngx-translate/core</code></pre>
+<p>As a next step we need to add the corresponding Angular modules and register them on our <code>AppModule</code>.</p>
+<pre><code>...
+import { TranslateModule } from &#39;@ngx-translate/core&#39;;
+
+@NgModule({
+ declarations: [AppComponent],
+ imports: [
+   ...
+   TranslateModule.forRoot()
+ ],
+ providers: [],
+ bootstrap: [AppComponent]
+})
+export class AppModule {}
+
+</code></pre>
+<aside class="special"><p><strong>Heads up:</strong> from time to time, make sure your application still runs by checking your browser at localhost:4200 from time to time as you make changes to your app.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuring a localization loader" duration="1">
+        <p>Ngx-translate allows to set translations in a static manner using the <code>setTranslation</code> on the <code>TranslateService</code>.</p>
+<pre><code>translations.setTranslation(&#39;en&#39;, {
+ title: &#39;Localization with ngx-translate&#39;
+});
+translations.setTranslation(&#39;de&#39;, {
+ title: &#39;Lokalisierung mit ngx-translate&#39;
+});</code></pre>
+<p>While this works for very simple scenarios, ngx-translate is most commonly set up with a loader that <strong>fetches the corresponding localizations via HTTP</strong>. Therefore, let&#39;s install the <code>@ngx-translate/http-loader library</code>.</p>
+<pre><code>$ npm i @ngx-translate/http-loader</code></pre>
+<h2>Configure the Http Loader</h2>
+<p>In your app.module.ts, just above the <code>@NgModule({..})</code> decorator, create a function that will configure our Http Loader.</p>
+<pre><code>...
+import {TranslateModule } from &#39;@ngx-translate/core&#39;;
+import { TranslateHttpLoader } from &#39;@ngx-translate/http-loader&#39;;
+import { HttpClient } from &#39;@angular/common/http&#39;;
+
+export function createTranslateLoader(http: HttpClient) {
+ return new TranslateHttpLoader(http, &#39;./assets/i18n/&#39;, &#39;.json&#39;);
+}
+...</code></pre>
+<p>We configure the <code>TranslateHttpLoader</code> to fetch the localizations in our &#34;<code>assets/i18n</code>&#34; folder.</p>
+<p>Also, make sure you also register the <code>HttpClientModule</code> in your <code>AppModule</code>.</p>
+<h2>Configure the TranslateModule to use our new loader</h2>
+<p>As a final step, we need to make sure our TranslateModule uses the Http loader we just created, by passing the loader option to the <code>TranslateModule.forRoot(..)</code> function.</p>
+<pre><code>@NgModule({
+ declarations: [AppComponent],
+ imports: [
+   ...
+   TranslateModule.forRoot({
+     loader: {
+       provide: TranslateLoader,
+       useFactory: createTranslateLoader,
+       deps: [HttpClient]
+     }
+   })
+ ],
+ providers: [],
+ bootstrap: [AppComponent]
+})
+export class AppModule {}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configure the default language" duration="1">
+        <p>First, let&#39;s create a localization file for the English language: &#34;src/assets/i18n/en.json&#34; with the following content:</p>
+<pre><code>{
+ &#34;app.title&#34;: &#34;Localization with ngx-translate&#34;
+}</code></pre>
+<p>Restart your Angular CLI devserver and navigate to <a href="http://localhost:4200/assets/i18n/en.json" target="_blank">http://localhost:4200/assets/i18n/en.json</a>. It should properly expose the created file.</p>
+<p><a href="http://localhost:4200/assets/i18n/en.json" target="_blank"><paper-button class="colored" raised>TRY IT</paper-button></a></p>
+<aside class="special"><p><strong>Note</strong>: The Angular CLI automatically serves everything within the &#34;assets&#34; folder without touching the files. Also when compiling our app for production, these files will be copied over and therefore also be available in your final app.</p>
+</aside>
+<h2>Set the current language</h2>
+<p>Most of the interactions with ngx-translate happens via its <code>TranslateService</code>. We can get a reference to it by simply injecting it via the constructor function.</p>
+<pre><code>import { Component } from &#39;@angular/core&#39;;
+import { TranslateService } from &#39;@ngx-translate/core&#39;;
+
+@Component({
+ ...
+})
+export class AppComponent {
+ title = &#39;Localization with ngx-translate&#39;;
+ constructor(private translateService: TranslateService) {
+ }
+}</code></pre>
+<p>Use the setDefaultLang(..) function to set the default language, by passing in the two-letter ISO code of the corresponding language you want to activate.</p>
+<pre><code>export class AppComponent {
+ title = &#39;Localization with ngx-translate&#39;;
+ constructor(private translateService: TranslateService) {
+   translateService.setDefaultLang(&#39;en&#39;);
+ }
+}</code></pre>
+<p>Inspecting the network traffic in our browser&#39;s devtools, we should now see our &#34;en.json&#34; file being fetched properly.</p>
+<p><img style="max-width: 624.00px" src="img/de881b182f617c94.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Localize the Angular template" duration="4">
+        <p>We can now localize the title of our application. <code>ngx-translate</code> uses an Angular Pipe to transform the &#34;key&#34; into the corresponding value of the currently active language.</p>
+<p>Open the <code>app.component.html</code> and replace the <code>{{ title }}</code> with the following:</p>
+<pre><code>{{ &#39;app.title&#39; | translate }}</code></pre>
+<p>Instead of referencing the &#34;title&#34; variable of our AppComponent (we can now delete that variable), we&#39;re directly referencing the localized value from the &#34;en.json&#34; file.</p>
+<p>Alternatively, also the <code>translate</code> directive can be used which is equivalent.</p>
+<pre><code>&lt;div [translate]=&#34;&#39;HELLO&#39;&#34;&gt;&lt;/div&gt;
+
+// or
+&lt;div translate&gt;HELLO&lt;/div&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Switching language" duration="2">
+        <p>To verify our localization properly works, let&#39;s add some other languages. Create a corresponding &#34;de.json&#34; and &#34;it.json&#34; and localize the title accordingly.</p>
+<p>Once you have created those files, we need to add some buttons that allow us to switch the language. Copy the following piece of code into proper space of the &#34;<code>mat-toolbar</code>&#34; of our <code>app.component.html</code></p>
+<pre><code>&lt;mat-toolbar color=&#34;primary&#34; role=&#34;header&#34; class=&#34;app-navbar&#34;&gt;
+   ...
+   &lt;div fxFlex fxFill&gt;&lt;/div&gt;
+   &lt;div fxFlex=&#34;100px&#34;&gt;
+   &lt;mat-form-field&gt;
+       &lt;mat-select (valueChange)=&#34;onLanguageChange($event)&#34;&gt;
+       &lt;mat-option value=&#34;en&#34;&gt;
+           English
+       &lt;/mat-option&gt;
+       &lt;mat-option value=&#34;it&#34;&gt;
+           Italian
+       &lt;/mat-option&gt;
+       &lt;mat-option value=&#34;de&#34;&gt;
+           German
+       &lt;/mat-option&gt;
+       &lt;/mat-select&gt;
+   &lt;/mat-form-field&gt;
+   &lt;/div&gt;
+   &lt;div fxFlex=&#34;200px&#34; fxLayoutAlign=&#34;end&#34; class=&#34;avatar-col&#34;&gt;
+   Hi, unknown
+   &lt;/div&gt;
+&lt;/mat-toolbar&gt;</code></pre>
+<p>Then in our AppComponent code, add the following function, where we set the current language by using the <code>TranslateService</code>.</p>
+<pre><code>@Component({ ... })
+export class AppComponent {
+ ...
+
+ onLanguageChange(lang) {
+   this.translateService.use(lang);
+ }
+}</code></pre>
+<p>Switching the language from the select box should dynamically also translate the app title.</p>
+<p><img style="max-width: 624.00px" src="img/e40597826a04ae6f.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Localization parameters" duration="2">
+        <p>Assume we want to have some string to localize which contains parameters. For instance:</p>
+<pre><code>Hi, {{ name }}!</code></pre>
+<p>Let&#39;s add this string to our various translations files first.</p>
+<pre><code>// en.json
+{
+ &#34;app.title&#34;: &#34;Localization with ngx-translate&#34;,
+ &#34;app.greeting&#34;: &#34;Hi, {{ name }}!&#34;
+}
+
+// de.json
+{
+ &#34;app.title&#34;: &#34;Lokalisierungen mit ngx-translate&#34;,
+ &#34;app.greeting&#34;: &#34;Hallo, {{ name }}!&#34;
+}
+
+// it.json
+{
+ &#34;app.title&#34;: &#34;Localizzazione UI con ngx-translate&#34;,
+ &#34;app.greeting&#34;: &#34;Ciao, {{ name }}!&#34;
+}</code></pre>
+<p>Then, in our app.component.html find the part &#34;Content here&#34; inside the <code>.app-page-container</code>. Replace it with the following:</p>
+<pre><code>{{ &#34;app.greeting&#34; | translate:{ name: &#34;Juri&#34;} }}</code></pre>
+<p>As you can see, the translate pipe takes an object as parameter where the properties act like the keys we defined in our localized string: i.e. in our example &#34;name&#34;.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Programmatic translations" duration="2">
+        <p>While most of the translatable things are inside our component templates and can be handled via the translate pipe, often you have the need to <strong>retrieve translations</strong> from within our component template. </p>
+<p>Just below our &#34;app.greeting&#34; key, insert a new button element.</p>
+<pre><code>&lt;mat-drawer-content class=&#34;app-page-container&#34;&gt;
+  &lt;div&gt;
+    {{ &#34;app.greeting&#34; | translate:{ name: &#34;Juri&#34;} }}
+  &lt;/div&gt;
+
+  &lt;button mat-raised-button color=&#34;secondary&#34; (click)=&#34;onShowGreeting()&#34;&gt;Show greeting&lt;/button&gt;
+&lt;/mat-drawer-content&gt;</code></pre>
+<p>In our AppComponent code, we need to implement the <code>onShowGreeting</code> function with the goal of retrieving the localized value of our &#34;app.greeting&#34; from the TranslateService. For that purpose we can use the <code>.get(...)</code> function.</p>
+<pre><code>onShowGreeting() {
+ this.translateService.get(&#39;app.greeting&#39;, { name: &#39;Juri&#39; }).subscribe(x =&gt; {
+   alert(x);
+ });
+}</code></pre>
+<p>Clicking the button you should get an alert in the currently selected language.</p>
+<p><img style="max-width: 624.00px" src="img/cc105317fe5b8b7.png"></p>
+<p>Note, the <code>translateService.get(...)</code> function returns an <code>Observable</code>. The reason is that our translations <strong>might not have been fetched yet</strong>, especially when we retrieve them via an http loader.</p>
+<p>If you&#39;re certain that all the translations are ready (i.e. because you fetch them at app startup), then you can also use the <code>translateService.instant(..)</code> function, which works exactly like <code>.get(..)</code> but immediately returns the value.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Listening for language changes" duration="2">
+        <p>In some situations we might need to know when the language is being changed, in order to update our data as well (i.e. select boxes which might have to be fetched from the API again).</p>
+<p>To listen to language changes, the <code>TranslateService</code> expose an <code>onLangChange</code> event to which we can subscribe. Add the following to the constructor of our AppComponent.</p>
+<pre><code>this.translateService.onLangChange.subscribe((ev: LangChangeEvent) =&gt; {
+ console.log(&#39;language changed&#39;, ev);
+});</code></pre>
+<p>Inspect the Browser&#39;s devtools console to see the log statements when switching between the languages</p>
+<p><img style="max-width: 624.00px" src="img/9f77899b6639730a.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>

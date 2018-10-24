@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "source": "1XZYqkP9TwuLjNIUBbnbKZ4bWhNjtZYUxnZMZ8m45Sls",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2018-10-08T21:26:01Z",
+  "id": "angular-di",
+  "duration": 18,
+  "title": "Angular Dependency Injection",
+  "author": "Juri Strumpflohner",
+  "summary": "Learn about Angular's powerful DI container.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "angular"
+  ],
+  "feedback": "https://github.com/googlecodelabs/your-first-pwapp/issues",
+  "url": "angular-di"
+}

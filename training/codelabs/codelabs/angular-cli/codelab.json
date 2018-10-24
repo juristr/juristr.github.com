@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "source": "1eMVJ8Lc87jKG9qjNONQM0yAeSVO2Q6lkHYD_LOV3dhs",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2018-10-06T21:46:19Z",
+  "id": "angular-cli",
+  "duration": 23,
+  "title": "Angular CLI",
+  "author": "Juri Strumpflohner",
+  "summary": "Get comfortable with the Angular CLI tooling",
+  "theme": "angular",
+  "status": [
+    "released"
+  ],
+  "category": [
+    "Angular"
+  ],
+  "tags": [
+    "tooling",
+    "web"
+  ],
+  "url": "angular-cli"
+}

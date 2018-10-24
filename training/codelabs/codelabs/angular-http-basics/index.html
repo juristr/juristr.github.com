@@ -1,0 +1,557 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Angular Http Basics</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Angular Http Basics"
+                  environment="web"
+                  feedback-link="https://github.com/juristr/codelab-ng-http-basics/issues">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>Every serious single-page application needs to interact with some API in order to retrieve the data it wants to visualize to its users. While we could simply use the native browser APIs for executing HTTP requests (such as <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">fetch</a>), Angular comes with its built-in Http client.</p>
+<h2 class="checklist"><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>What async programming means in the frontend space</li>
+<li>RxJS and how its Observables differ from Promises</li>
+<li>Setting up the Angular Http client with your Angular App Module</li>
+<li>Interacting with the server API issuing <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code> requests</li>
+<li>How to pass additional metadata such as query params and headers</li>
+<li>How to read the HTTP response object</li>
+<li>How to bind data to the component template</li>
+</ul>
+<h2><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>A valid code editor, ideally <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>Git and a recent version of Node (v9+) and NPM (v5+)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Getting set up" duration="3">
+        <h2><strong>Download the Code</strong></h2>
+<p>Click the following link to download all the code for this codelab:</p>
+<p><a href="https://github.com/juristr/codelab-ng-http-basics/archive/master.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
+<p>Unzip the code and open it with Visual Studio Code (or your respective code editor of choice).</p>
+<h2><strong>Install npm packages and start the app</strong></h2>
+<p>After unpacking the files, open up a terminal (you can also do that from within Visual Studio Code) at the location where you unzipped your files.</p>
+<p>Execute <code>npm install</code> to download all the necessary packages.</p>
+<h2><strong>Launching the JSON API server?</strong></h2>
+<p>Open your terminal (also from within VSCode) and type</p>
+<pre><code>$ npm run start:server</code></pre>
+<p>This will launch a <a href="https://github.com/typicode/json-server" target="_blank">JSON server</a> which we will use as our fake backend in order to be able to perform HTTP requests. Once the server is running, go to <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> and you should see the following screen.</p>
+<p><img style="max-width: 624.00px" src="img/4eee8d45d3f7ea0.png"></p>
+<p>Also, opening <a href="http://localhost:3000/api/people" target="_blank">http://localhost:3000/api/people</a> should get you a JSON response of people.</p>
+<h2><strong>Launching the Angular Development Server?</strong></h2>
+<p>Open your terminal and type</p>
+<pre><code>$ npm start</code></pre>
+<p>This is a shortcut for <code>npm run start</code> and is mapped in your package.json to ng serve which will launch the local Angular CLI development server. Open your browser at <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>. You should see the following screen:</p>
+<p><img style="max-width: 624.00px" src="img/ba662545b86260f7.png"></p>
+<aside class="special"><p>More help on Angular CLI commands: <a href="https://github.com/angular/angular-cli/wiki" target="_blank">Angular CLI Wiki</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Inspecting the setup" duration="2">
+        <p>If you navigate to <a href="http://localhost:4200/api/people" target="_blank">http://localhost:4200/api/people</a> you should get the same result as navigating to <a href="http://localhost:3000/api/people" target="_blank">http://localhost:3000/api/people</a>. The main reason for this behavior is that</p>
+<ul>
+<li><a href="http://localhost:3000" target="_blank">http://localhost:3000</a> - is our fake JSON server which delivers our API. In a real world development setup, this would be your backend API service</li>
+<li><a href="http://localhost:4200" target="_blank">http://localhost:4200</a> - is our Angular CLI development server, that pipes all requests to /api/... to our API server.</li>
+</ul>
+<p>We&#39;ve set up a proxy configuration to pipe through API requests, to avoid having to implement <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> on our API. If your API is already exposing CORS headers, you obviously don&#39;t have to setup any kind of proxy.</p>
+<p>The proxy configuration can be adjusted in the <code>proxy.conf.json</code> file at the root of our Angular CLI project and loaded by our <code>npm start</code> command using the <code>--proxy-config</code> flag.</p>
+<pre><code>{
+ &#34;/api/*&#34;: {
+   &#34;target&#34;: &#34;http://localhost:3000&#34;,
+   &#34;secure&#34;: false,
+   &#34;logLevel&#34;: &#34;debug&#34;
+ }
+}</code></pre>
+<aside class="special"><p>More on configuring the Angular CLI with a development proxy can be found here: <a href="https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/" target="_blank">https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/</a> </p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuring the HttpClientModule" duration="1">
+        <p>In this first step, let&#39;s configure the <code>HttpClientModule</code>, in order to be able to access Angular&#39;s http services from within our app.</p>
+<p>Open your <code>app.module.ts</code> and import the <code>HttpClientModule</code> from <code>@angular/common/http</code>.</p>
+<pre><code>...
+import { HttpClientModule } from &#39;@angular/common/http&#39;;
+
+@NgModule({
+ declarations: [AppComponent],
+ imports: [
+   ...
+   HttpClientModule
+ ],
+ providers: [],
+ bootstrap: [AppComponent]
+})
+export class AppModule {}</code></pre>
+<aside class="special"><p><strong>Heads up:</strong> make sure your application still runs by checking your browser at localhost:4200 from time to time as you make changes to your app.</p>
+</aside>
+<h2><strong>Do we need to import the HttpClientModule in every module where we want to use Angular&#39;s http services?</strong></h2>
+<p>Or is it enough to register it once in our <code>AppModule</code>? Yes, it&#39;s enough to register it there. The reason is that the <code>HttpClientModule</code> only provides Angular services, which, once registered automatically exist on the global scope. Thus all of our other Angular modules will be able to inject http services coming from the <code>HttpClientModule</code>, without having to actually import it on their own.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Fetch the list of people" duration="1">
+        <p>Use the Angular CLI to generate a new service.</p>
+<pre><code>$ ng g s people --spec false</code></pre>
+<p>We use the <code>--spec false</code> to not generate unit tests for our simple example. That&#39;s the topic of another codelab.</p>
+<p>Let&#39;s inject the <code>HttpClient</code> into the constructor of our newly created <code>PeopleService</code>. </p>
+<pre><code>import { Injectable } from &#39;@angular/core&#39;;
+
+@Injectable({
+ providedIn: &#39;root&#39;
+})
+export class PeopleService {
+
+ constructor() { }
+}</code></pre>
+<p>Once we have that, we can create a new function <code>getPeople()</code> and issue a GET request to <code>/api/people</code>.</p>
+<pre><code>import { Injectable } from &#39;@angular/core&#39;;
+import { HttpClient } from &#39;@angular/common/http&#39;;
+
+@Injectable({
+ providedIn: &#39;root&#39;
+})
+export class PeopleService {
+ constructor(private http: HttpClient) {}
+
+ getPeople() {
+   return this.http.get(&#39;/api/people&#39;);
+ }
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add proper typings for our Person object" duration="1">
+        <p>We should also add some types to our Person object. For now, create a new TypeScript interface in the PeopleService. A Person has the following properties:</p>
+<ul>
+<li><code>id</code> which is the primary key in our database (it can be null in case when the person has not yet been saved)</li>
+<li><code>name</code> which is the name of the person</li>
+<li><code>website</code> and <code>twitter</code> handle</li>
+</ul>
+<pre><code>...
+
+export interface Person {
+ id?: number;
+ name: string;
+ website?: string;
+ twitter?: string;
+}
+</code></pre>
+<h2>Adjust the HTTP function to use the TypeScript types</h2>
+<p>Since we now have a type defined for the return value of our API, let&#39;s also use it. Angular&#39;s <code>HttpClient</code> supports generic types.</p>
+<pre><code>...
+export class PeopleService {
+ constructor(private http: HttpClient) {}
+
+ getPeople() {
+   return this.http.get&lt;Person[]&gt;(&#39;/api/people&#39;);
+ }
+}</code></pre>
+<p>Note, while we could also specify the return type of <code>getPeople()</code> as <code>Observable&lt;People[]&gt;,</code> it is not necessary. TypeScript has a mechanism called <strong>type inference</strong> and thanks to which return type will be inferred automatically.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Visualize the list on our component" duration="4">
+        <p>In order to visualize the list of people, we subscribe to the <code>getPeople()</code> function we just created, from within our <code>AppComponent</code>.</p>
+<p>First of all need to get a reference to our PeopleService. We&#39;ll do this using Angular&#39;s dependency injection mechanism.</p>
+<pre><code>import { Component, OnInit } from &#39;@angular/core&#39;;
+import { PeopleService } from &#39;./people.service&#39;;
+
+@Component({
+ selector: &#39;app-root&#39;,
+ templateUrl: &#39;./app.component.html&#39;,
+ styleUrls: [&#39;./app.component.css&#39;]
+})
+export class AppComponent {
+
+ constructor(private peopleService: PeopleService) {}
+
+}</code></pre>
+<p>Next we implement the <code>OnInit</code> lifecycle event which is usually the place where you initialize your component and fetch the data to be visualized.</p>
+<aside class="special"><p><strong>Did you know:</strong> An Angular component has different kind of lifecycle hooks. You can find them <a href="https://angular.io/guide/lifecycle-hooks" target="_blank">here on the official Angular docs</a>.</p>
+</aside>
+<pre><code>import { Component, OnInit } from &#39;@angular/core&#39;;
+import { PeopleService } from &#39;./people.service&#39;;
+
+@Component({
+ selector: &#39;app-root&#39;,
+ templateUrl: &#39;./app.component.html&#39;,
+ styleUrls: [&#39;./app.component.css&#39;]
+})
+export class AppComponent implements OnInit {
+
+ constructor(private peopleService: PeopleService) {}
+
+ ngOnInit(): void {
+
+ }
+}</code></pre>
+<p>In the <code>OnInit</code> we can now call the <code>getPeople()</code> function and subscribe to it. For now, simply print it to the browser console and verify the data is retrieved correctly.</p>
+<pre><code>ngOnInit(): void {
+ this.peopleService.getPeople().subscribe(x =&gt; console.log(x));
+}</code></pre>
+<p>Also, try what happens when you just call <code>getPeople()</code> without using the <code>.subscribe()</code> operator. Do you see a request being made in the Browser&#39;s Devtools&#39; network tab?</p>
+<h2>Rendering the data</h2>
+<p>Finally, we obviously want the data to be displayed to the user. To do so, we simply <strong>assign the result of our HTTP call to a component variable</strong>, <code>people</code>. </p>
+<pre><code>...
+export class AppComponent implements OnInit {
+ people: Person[];
+ ...
+ ngOnInit(): void {
+   this.peopleService.getPeople().subscribe(x =&gt; {
+     this.people = x;
+   });
+ }
+}</code></pre>
+<p>Then, let&#39;s open the app.component.html template and render the data properly. Search the &#34;Content here&#34; area and add the following HTML</p>
+<pre><code>...
+&lt;mat-drawer-content class=&#34;app-page-container&#34;&gt;
+ &lt;h1&gt;People&lt;/h1&gt;
+
+ &lt;div *ngFor=&#34;let person of people&#34;&gt;
+   {{ person.name }}
+ &lt;/div&gt;
+&lt;/mat-drawer-content&gt;</code></pre>
+<aside class="special"><p><strong>Extra Credit</strong>: Use the <code>async pipe</code> to bind to your HTTP Observable.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a new person" duration="3">
+        <p>We&#39;re not going to create a fully fledged CRUD interface for managing our people. But let&#39;s create a simple mechanism that allows us to experiment with adding new people to our list.</p>
+<p>Add the following piece of UI directly in our <code>app.component.html</code> under the <code>&lt;h1&gt;People&lt;/h1&gt;</code> section.</p>
+<pre><code>&lt;mat-form-field&gt;
+ &lt;input matInput placeholder=&#34;Person name&#34; #personName&gt;
+&lt;/mat-form-field&gt;
+&lt;button mat-raised-button color=&#34;primary&#34; (click)=&#34;createPerson(personName.value)&#34;&gt;Create&lt;/button&gt;
+
+&lt;hr /&gt;</code></pre>
+<p>Next, in our app.component.ts file we create a new function that will be called when clicking the &#34;Create&#34; button.</p>
+<pre><code>@Component({ ... })
+export class AppComponent implements OnInit {
+ constructor(private peopleService: PeopleService) {}
+
+ ngOnInit(): void { ... }
+
+ createPerson(name: string) {
+   console.log(&#39;new person&#39;, name);
+ }
+}</code></pre>
+<h2>Implement the POST function in our PeopleService</h2>
+<p>We&#39;re now ready to implement the according <code>createPerson(...)</code> function that will call the backend and create a new person.</p>
+<pre><code>@Injectable({
+ providedIn: &#39;root&#39;
+})
+export class PeopleService {
+ constructor(private http: HttpClient) {}
+
+ ...
+
+ createPerson(aPerson: Person) {
+   return this.http.post&lt;Person&gt;(&#39;/api/people&#39;, aPerson);
+ }
+}</code></pre>
+<p>The <code>post</code> function takes <code>&lt;Person&gt;</code> as a type because that will be the <strong>return type</strong> we get from the server after a successful creation.</p>
+<h2>Wire everything up in our component</h2>
+<p>The PeopleService is set up, now we need to wire it to the AppComponent, s.t. When we click the &#34;Create&#34; button, our actual <code>createPerson(..)</code> function is being called with the proper arguments.</p>
+<p>Change the <code>createPerson</code> function in our <code>AppComponent</code> to the following.</p>
+<pre><code>@Component({ ... })
+export class AppComponent implements OnInit {
+ ...
+
+ createPerson(name: string) {
+   this.peopleService
+     .createPerson({
+       name: name
+     })
+     .subscribe(createdPerson =&gt; {
+       console.log(createdPerson);
+     });
+ }
+}</code></pre>
+<p>Try adding some people now. Inspect the network tab of your browser&#39;s devtools. Also refreshing the browser will reveal the people you&#39;ve added.</p>
+<aside class="special"><p><strong>Bonus</strong>: Refresh the list when a new person has been added</p>
+</aside>
+<p>Editing and/or deleting a person is exactly the same as creating a new person, just that we use the <code>put</code> and <code>delete</code> function of the <code>HttpClient</code> respectively.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Send query parameters to our backend" duration="2">
+        <p>To simulate sending parameters to our backend, we will try to create a small, very simple search feature.</p>
+<p>Add the following button just after the &#34;Create&#34; button we&#39;ve created earlier:</p>
+<pre><code>&lt;button mat-raised-button (click)=&#34;onSearchPerson(personName.value)&#34;&gt;Search&lt;/button&gt;</code></pre>
+<p>Also we need to create and implement the <code>onSearchPerson()</code> function. We simply call again the <code>PeopleService</code>, passing our filter criteria to the <code>getPeople</code> function.</p>
+<pre><code>@Component({ ... })
+export class AppComponent implements OnInit {
+ ... 
+
+ ngOnInit(): void {
+   this.initList();
+ }
+
+ initList() {
+   this.people = this.peopleService.getPeople();
+ }
+
+ createPerson(name: string) { ... }
+
+ onSearchPerson(name: string) {
+   if (name) {
+     this.people = this.peopleService.getPeople({ name: name });
+   } else {
+     this.people = this.peopleService.getPeople();
+   }
+ }
+}</code></pre>
+<p>Obviously this<strong> doesn&#39;t yet work</strong>, we also need to adjust our <code>getPeople(..)</code> function of the PeopleService.</p>
+<h2>Change the PeopleService implementation</h2>
+<p>We need to adjust the getPeople() function to take optional parameters and send them to the server. We use the <code>fromObject</code> functionality of the <code>HttpParams</code>.</p>
+<pre><code>...
+export class PeopleService {
+ constructor(private http: HttpClient) {}
+
+ getPeople(params = {}) {
+   return this.http.get&lt;Person[]&gt;(&#39;/api/people&#39;, {
+     params: new HttpParams({ fromObject: params })
+   });
+ }
+ ...
+}</code></pre>
+<p>You should now be able to filter for a person&#39;s name. Also inspect the network traffic of your browser&#39;s devtools to see how the params are mapped onto the HTTP call.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create an HTTP interceptor to log the traffic" duration="4">
+        <p>Intercepting HTTP traffic at a single place is a really powerful mechanism for solving common tasks such as adding authentication headers, logging or even global error handling. Otherwise we would have to change every single HTTP call of our applications.</p>
+<p>Let&#39;s implement a simple Http interceptor. Generate a new service using the Angular CLI and call it &#34;my-http-interceptor&#34;</p>
+<pre><code>$ ng g s my-http-interceptor --spec false</code></pre>
+<p>We need to register the interceptor manually, so we can remove the &#34;providedIn&#34; part of the <code>@Injectable</code>. Also we need to implement the <strong>HttpInterceptor</strong> interface.</p>
+<pre><code>import { Injectable } from &#39;@angular/core&#39;;
+import {
+ HttpInterceptor,
+ HttpRequest,
+ HttpHandler,
+ HttpEvent
+} from &#39;@angular/common/http&#39;;
+import { Observable } from &#39;rxjs&#39;;
+
+@Injectable()
+export class MyHttpInterceptorService implements HttpInterceptor {
+ constructor() {}
+
+ intercept(
+   request: HttpRequest&lt;any&gt;,
+   next: HttpHandler
+ ): Observable&lt;HttpEvent&lt;any&gt;&gt; {
+   return next.handle(request);
+ }
+}</code></pre>
+<h2>Register the interceptor</h2>
+<p>In order for the interceptor to have an effect, we need to register it in a special way to the <code>HTTP_INTERCEPTORS</code>. Open the <code>AppModule</code> and go to the <code>providers: []</code> section.</p>
+<p>Register our http interceptor as follows:</p>
+<pre><code>...
+import { HTTP_INTERCEPTORS } from &#39;@angular/common/http&#39;;
+import { MyHttpInterceptorService } from &#39;./my-http-interceptor.service&#39;;
+
+@NgModule({
+ declarations: [AppComponent],
+ imports: [
+   ...
+   HttpClientModule
+ ],
+ providers: [
+   {
+     provide: HTTP_INTERCEPTORS,
+     useClass: MyHttpInterceptorService,
+     multi: true
+   }
+ ],
+ bootstrap: [AppComponent]
+})
+export class AppModule {}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Manipulate the request with the Http Interceptor" duration="2">
+        <p>Next, we are going to modify the request by adding some simple header to it. We need to clone the request, manipulate it and then pass it along to the <code>HttpHandler</code>.</p>
+<p>Let&#39;s attach an <code>app-language</code> header. In our simple example it is static, in a real-world app you would obviously fetch it from some service.</p>
+<pre><code>...
+
+@Injectable()
+export class MyHttpInterceptorService implements HttpInterceptor {
+ constructor() {}
+
+ intercept(
+   request: HttpRequest&lt;any&gt;,
+   next: HttpHandler
+ ): Observable&lt;HttpEvent&lt;any&gt;&gt; {
+   const customReq = request.clone({
+     headers: request.headers.set(&#39;app-language&#39;, &#39;it&#39;)
+   });
+
+   return next.handle(customReq);
+ }
+}</code></pre>
+<p>Open the browser&#39;s devtools and inspect the network traffic. You should see the header being attached.</p>
+<p><img style="max-width: 624.00px" src="img/fcc4076be7af93a8.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Intercept the response from the server" duration="2">
+        <p>The <code>next.handle(..)</code> function of our http interceptor returns an Observable. Thus we can simply subscribe to it and apply all the standard RxJS operators we want. As a result we could simply add a tap operator to log out the responses from the server.</p>
+<pre><code>...
+import { Observable } from &#39;rxjs&#39;;
+import { tap } from &#39;rxjs/operators&#39;;
+
+@Injectable()
+export class MyHttpInterceptorService implements HttpInterceptor {
+ constructor() {}
+
+ intercept(
+   request: HttpRequest&lt;any&gt;,
+   next: HttpHandler
+ ): Observable&lt;HttpEvent&lt;any&gt;&gt; {
+   const customReq = request.clone({
+     headers: request.headers.set(&#39;app-language&#39;, &#39;it&#39;)
+   });
+
+   return next.handle(customReq).pipe(
+     tap((ev: HttpEvent&lt;any&gt;) =&gt; {
+       if (ev instanceof HttpResponse) {
+         console.log(&#39;processing response&#39;, ev);
+       }
+     })
+   );
+ }
+}</code></pre>
+<p>Inspecting the Console of the browser devtools we see the result being logged out:</p>
+<p><img style="max-width: 624.00px" src="img/a88aea9c4b19219b.png"></p>
+<p>Similarly we <strong>could also catch errors</strong> in a central place and then handle them accordingly. As an example that could be a redirect to some login screen when we get some 401 or 403 responses from our API, that signal that the authentication session might have expired.</p>
+<p>Here&#39;s a simple scenario, were we just catch the errors, log them and then throw the error again up the Observable chain.</p>
+<pre><code>import { Injectable } from &#39;@angular/core&#39;;
+import {
+ HttpInterceptor,
+ HttpRequest,
+ HttpHandler,
+ HttpEvent,
+ HttpResponse,
+ HttpErrorResponse
+} from &#39;@angular/common/http&#39;;
+import { Observable, throwError } from &#39;rxjs&#39;;
+import { tap, catchError } from &#39;rxjs/operators&#39;;
+
+@Injectable()
+export class MyHttpInterceptorService implements HttpInterceptor {
+ constructor() {}
+
+ intercept(
+   request: HttpRequest&lt;any&gt;,
+   next: HttpHandler
+ ): Observable&lt;HttpEvent&lt;any&gt;&gt; {
+   const customReq = request.clone({
+     headers: request.headers.set(&#39;app-language&#39;, &#39;it&#39;)
+   });
+
+   return next.handle(customReq).pipe(
+     tap((ev: HttpEvent&lt;any&gt;) =&gt; {
+       if (ev instanceof HttpResponse) {
+         console.log(&#39;processing response&#39;, ev);
+       }
+     }),
+     catchError(response =&gt; {
+       if (response instanceof HttpErrorResponse) {
+         console.log(&#39;Processing http error&#39;, response);
+       }
+
+       return throwError(response);
+     }))
+   );
+ }
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Brain Check" duration="2">
+        <p><strong>You did it!!</strong> Quickly go through these questions to check your knowledge. You should be able to answer most of these by now.</p>
+<h2><strong>Check your knowledge</strong></h2>
+<ul>
+<li>What is RxJS?</li>
+<li>What are Observables and how are they different to Promises?</li>
+<li>In which package does the HttpClientModule reside?</li>
+<li>How can we make sure our data returned from the backend properly matches our TypeScript type definitions?</li>
+<li>Can we directly bind Observables in our Angular templates? How can that be achieved?</li>
+<li>How do we pass parameters to an HTTP GET call?</li>
+<li>How do we set HTTP headers?</li>
+<li>How can we handle HTTP errors?</li>
+<li>If you&#39;d like to append an authentication token to each HTTP request that is being made to your backend API. How would you implement such scenario?</li>
+<li>If you&#39;d like to globally handle all HTTP errors that occur (for logging purposes etc..). How would you implement such scenario?</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>
