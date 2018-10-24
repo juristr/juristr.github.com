@@ -95,8 +95,12 @@ class ChildComponent implements OnChanges {
 
 Here's a Plunker that demoes how this works. Open your dev console to see according logs being printed out.
 
+<!--
 {% assign plunker_url="https://embed.plnkr.co/Uw9eFcBqfoOWyaEoVwsQ/" %}
 {% include plunker.html %}
+-->
+{% assign uid = "edit/angular-finegrained-cd-docheck-p1" %}
+{% include stackblitz.html %}
 
 ### So what's the matter?
 
@@ -125,8 +129,13 @@ class App {
 
 Note that, in our `changePerson()` function, we now **directly mutate the property** of our `person` object which we pass on to our child component. All of a sudden, while the data binding still works, `ngOnChanges` **is not being invoked any more**. Check out the source here on this Plunker:
 
+<!--
 {% assign plunker_url="https://embed.plnkr.co/NNdeurjvzKWTEDpbTCoF/" %}
 {% include plunker.html %}
+-->
+
+{% assign uid = "edit/angular-finegrained-cd-docheck-p2" %}
+{% include stackblitz.html %}
 
 Instead, **if we make our `person` object immutable**, it works just fine:
 
@@ -185,7 +194,7 @@ class ChildComponent implements DoCheck {
 	differ: any;
 
 	constructor(private differs: KeyValueDiffers) {
-		this.differ = differs.find({}).create(null);
+		this.differ = differs.find({}).create();
 	}
 	...
 	ngDoCheck() {
@@ -208,6 +217,10 @@ Slick, isn't it :smiley:? Here's a Plunker to play around with it:
 
 {% assign plunker_url="https://embed.plnkr.co/hCKn9V1L8rzDPYzGc5HW/" %}
 {% include plunker.html %}
+
+{% assign uid = "edit/angular-finegrained-cd-docheck-p3" %}
+{% include stackblitz.html %}
+
 
 Note, if you get a list as `@Input`, you can use [IterableDiffers](https://angular.io/docs/ts/latest/api/core/IterableDiffers-class.html) rather than KeyValueDiffers.
 
