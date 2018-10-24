@@ -4,7 +4,7 @@
   "format": "html",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2018-10-08T21:26:01Z",
+  "updated": "2018-10-23T19:52:15Z",
   "id": "angular-di",
   "duration": 18,
   "title": "Angular Dependency Injection",
@@ -12,7 +12,7 @@
   "summary": "Learn about Angular's powerful DI container.",
   "theme": "web",
   "status": [
-    "draft"
+    "released"
   ],
   "category": [
     "Web"
