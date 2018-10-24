@@ -7,7 +7,7 @@ kramdown:
   hard_wrap: false
   toc_levels: 1..3
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "training/**/*.md"]
 #auto: true
 #pygments: true
 
