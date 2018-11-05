@@ -140,7 +140,7 @@ viewRef.rootNodes.forEach(rootNode => outletElement.appendChild(rootNode));
 
 ## How is Angular able to run Change Detection on the embedded view?
 
-If you payed attention, then you've seen that we're creating the `EmbeddedViewRef` using an instance of the `ViewContainerRef` that we get via Angular's dependency injection from the `PageActionsComponent`. That view container is actually part of the `PageActionsComponent` and as a result, also our embedded view. 
+If you paid attention, then you've seen that we're creating the `EmbeddedViewRef` using an instance of the `ViewContainerRef` that we get via Angular's dependency injection from the `PageActionsComponent`. That view container is actually part of the `PageActionsComponent` and as a result, also our embedded view. 
 
 It just happens, that in our case the nodes of the `EmbeddedViewRef` are rendered somewhere else on the page, namely inside our `outletElement`. Still, whenever Angular runs CD on our `PageActionsComponent`, it will execute it as well on our embedded view ref.
 
