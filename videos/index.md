@@ -10,6 +10,10 @@ You can see all of my video courses on my [official Egghead.io instructor page](
 
 ## Video Courses
 
+<a href="https://egghead.io/courses/learn-angular-router-for-real-world-applications" class="external-link" data-client="eggheadio" data-uid="courses/learn-angular-router-for-real-world-applications">
+  <img src="/blog/assets/imgs/banners/router-course-banner.png" style="width:100%" />
+</a>
+
 <a href="https://egghead.io/courses/angular-service-injection-with-the-dependency-injector-di" class="external-link" data-client="eggheadio" data-uid="/courses/angular-service-injection-with-the-dependency-injector-di">
     <img src="/blog/assets/imgs/banners/egghead-banner-course-service-di.png" style="width:100%" />
 </a>
