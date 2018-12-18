@@ -30,7 +30,7 @@ Here is the release changelog of the features added in **Angular version 7.1.0**
     <figcaption><a href="https://github.com/angular/angular/blob/master/CHANGELOG.md#features">Angular 7.1 Changelog</a></figcaption>
 </figure>
 
-> **TL;DR:** until now the route guard allowed to return a boolean (or the async variants such as `Promise<boolean>`, `Observable<boolean>`) to indicate whether the route should be activated or not. Now you can also return an UrlTree that indicates the new router state that should be activated instead.
+> **TL;DR:** until now the route guard allowed to return a boolean (or the async variants such as `Promise<boolean>`, `Observable<boolean>`) to indicate whether the route should be activated or not. Now you can also return a UrlTree that indicates the new router state that should be activated instead.
 
 ## Route Guards - A quick primer
 
@@ -92,7 +92,7 @@ export class AuthGuard implements CanActivate {
 }
 ```
 
-## NEW: Returning an UrlTree
+## NEW: Returning a UrlTree
 
 Until Angular <= 7.1 the only options to return from an AuthGuard were boolean expressions:
 
@@ -105,10 +105,10 @@ export interface CanActivate {
 }
 ```
 
-Starting with version 7.1 we can **now also return an** `**UrlTree**` object.
+Starting with version 7.1 we can **now also return a** `**UrlTree**` object.
 
 
-> What is an `UrlTree`? The [Angular docs describes](https://angular.io/api/router/UrlTree) it as follows: “Since a router state is a tree, and the URL is nothing but a serialized state, the URL is a serialized tree. UrlTree is a data structure that provides a lot of affordances in dealing with URLs”.
+> What is a `UrlTree`? The [Angular docs describes](https://angular.io/api/router/UrlTree) it as follows: “Since a router state is a tree, and the URL is nothing but a serialized state, the URL is a serialized tree. UrlTree is a data structure that provides a lot of affordances in dealing with URLs”.
 
 The easiest way to create such an `UrlTree` is by using the `parseUrl(…)` or `createUrlTree(…)` functions of the `Router` object.
 
@@ -143,7 +143,7 @@ The difference lies in how Angular can now take care of the redirect and do a co
 
 **Prioritization**
 The main advantage is **prioritization**. With the old API, there was no way for prioritizing redirects. Assume you’re having multiple guards active doing async validation and redirects on failure. It was purely dependent on the execution time of those async operations: whichever async guard invoked a redirect as last was the one to win.
-By now returning an `UrlTree` rather than running the redirect directly, Angular can take care of executing it and make sure to properly prioritize multiple route guards potentially running. The prioritization works by **giving the guard closest to the root of the application the highest priority**. As a result, if a child guard returns `false` or an `UrlTree` but its parent hasn’t resolved yet, it’ll wait until the parent resolves. If the parent guard check fails, it’ll take priority over all the others.
+By now returning an `UrlTree` rather than running the redirect directly, Angular can take care of executing it and make sure to properly prioritize multiple route guards potentially running. The prioritization works by **giving the guard closest to the root of the application the highest priority**. As a result, if a child guard returns `false` or a `UrlTree` but its parent hasn’t resolved yet, it’ll wait until the parent resolves. If the parent guard check fails, it’ll take priority over all the others.
 
 **Navigation Cancellation**
 Another benefit is the possibility to cancel all other navigation events. Whenever a `UrlTree` is returned from a route guard, Angular fires a `NavigationCancel` event, thus effectively cancelling all running navigation events and kicking off a new navigation to the indicated URL.
