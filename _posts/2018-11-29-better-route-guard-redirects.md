@@ -1,6 +1,6 @@
 ---
 layout: post_new
-title: "Better Redirects in Angular Route Guards"
+title: "New in Angular 7.1: Better Redirects in Angular Route Guards"
 lead: "Learn how to properly redirect in an Angular route guard"
 postimg: "/blog/assets/imgs/better-route-guards/route-guard-sketch.png"
 tags: [ "Angular"]
