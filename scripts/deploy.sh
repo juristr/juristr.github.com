@@ -8,7 +8,7 @@ mkdir public
 
 echo "creating master branch in public folder"
 # clone master branch from the local repo into a repo located within "public"
-git clone .git --branch master public
+# git clone .git --branch master public
 
 echo "generating hugo files"
 
