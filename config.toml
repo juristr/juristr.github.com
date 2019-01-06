@@ -10,7 +10,7 @@ pygmentsUseClasses=true
 PygmentsCodeFences = true
 #publishDir = "docs"
 disqusShortname = "juristr"
-#googleAnalytics = "UA-1XXXXXXX1-1"
+# googleAnalytics = "UA-416229-12"
 
 [permalinks]
   blog = "/blog/:year/:month/:title/"
