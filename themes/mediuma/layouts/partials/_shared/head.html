@@ -56,7 +56,7 @@
 
 	<!-- Custom styles for this template -->
 	<!-- <link href="{{ "/css/mediumish.css" | urlize | relURL }}" rel="stylesheet"> -->
-	{{ $main := resources.Get "/scss/main.scss" | toCSS | minify | fingerprint }}
+	{{ $main := resources.Get "/scss/main.scss" | toCSS | minify }}
 	<link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" media="screen">
 
 	<!-- <link href="{{ "/css/additional.css" | urlize | relURL }}" rel="stylesheet">
@@ -64,12 +64,12 @@
 	<link href="{{ "/css/fluidbox.min.css" | urlize | relURL }}" rel="stylesheet"> -->
 
 	{{ if eq .Kind "home" }}
-	{{ $styles := resources.Get "/scss/home.scss" | toCSS | minify | fingerprint }}
+	{{ $styles := resources.Get "/scss/home.scss" | toCSS | minify }}
 	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 	{{ end }}
 
 	{{ if eq .Kind "page" }}
-	{{ $styles := resources.Get "/scss/article.scss" | toCSS | minify | fingerprint }}
+	{{ $styles := resources.Get "/scss/article.scss" | toCSS | minify }}
 	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 	{{ end }}
 

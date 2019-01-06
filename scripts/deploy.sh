@@ -1,6 +1,6 @@
 # remove previous publication
 SHA=$(git rev-parse HEAD)
-GIT_USER_ARGS="-c user.name='travis' -c user.email='travis'"
+GIT_USER_ARGS="-c user.name='CircleCI autodeploy' -c user.email='juri.strumpflohner@gmail.com'"
 
 echo "cleaning up previous deploy"
 rm -rf public
