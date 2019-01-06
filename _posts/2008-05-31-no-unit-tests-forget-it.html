@@ -1,9 +1,0 @@
----
-layout: post
-title: "No unit tests?? Forget it!"
-date: 2008-05-31
-comments: true
-tags: 
----
-
-I know a lot of people that look somehow skeptic to unit tests and unit testing in general. They see it as an additional work that has to be done and often think it's just a waste of time. So why to write them? Well, because they give you some kind of peace during the development that you're on the right path. My preferred approach is to have some kind of <a href="http://blog.js-development.com/2007/11/tdd-junit-38-and-junit-4.html">Test-Driven-Development</a>. I applied this development style when working on my thesis project where I wrote unit test cases for the mobile as well as for the server-side (using mock objects), at the end having about a hundred of them. Developing in a TDD style is however not that easy, especially if many people are in a team. You need a lot of training and you have to be open-minded and available for changes regarding the development. And still you will catch yourself again and again during development, writing the code before the test :)<br />What I want to say is: write unit tests, even when you're under pressure with project deadlines etc. If you have only a small project you may not feel the need, but what if you have hundreds of business rules to validate where your input may come directly from the UI or over other sources such as XML files. I can guarantee you that in such a case you'll thank god for having a unit test in place which shows you the green bar :D (I'm talking from experience) A prerequisite is of course to have a well structured application in terms of the architecture. All the logic has to be inside a business layer. Otherwise you will have a hard time to write your tests or you'll cover only small parts of your logic.

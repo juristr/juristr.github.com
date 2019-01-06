@@ -1,9 +1,0 @@
----
-layout: post
-title: "Comments smell! Replace them with more expressive code."
-date: 2010-01-06
-comments: true
-tags: [  Antipatterns, Best Practices, Software Design ]
----
-
-As already pointed out in <a href="http://blog.js-development.com/2009/09/add-semantic-through-your-code-not.html">that post</a>, here's another code example:<br /><pre class="prettyprint">...<br /><b>//300 = Italy</b><br />if(aCompany.NationId == 300)<br />{<br />   ...<br />}<br />...<br /></pre>The comment above the <code>if</code> clause is definitely a code smell. If you wouldn't have that and you come back three months after releasing the software in search for a bug, you probably don't remember what's the meaning of 300, right? Therefore, refactor it by writing more expressive code:<br /><pre class="prettyprint">...<br />if(aCompany.NationId == Nation.TypeOf.Italy)<br />{<br />   ...<br />}<br />...<br /></pre>The comment is completely useless now. Every developer in the team will now understand the meaning of this code without any effort. Note, such code can lower the <a href="http://en.wikipedia.org/wiki/Mean_time_to_repair">mean-time-to-repair (MTTR)</a> significantly.

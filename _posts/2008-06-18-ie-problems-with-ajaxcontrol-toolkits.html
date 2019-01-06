@@ -1,9 +1,0 @@
----
-layout: post
-title: "IE problems with AjaxControl Toolkit's AutoComplete extender"
-date: 2008-06-18
-comments: true
-tags: [  ASP.net, .Net ]
----
-
-Microsoft's .Net AjaxControlToolkit provides a nice extender for doing Ajax-enabled auto-completion by calling a webservice on the server-side.<br />Below is a sample:<br /><pre class="prettyprint">&lt;cc1:AutoCompleteExtender2 ID="aceBirthPlace" runat="server" SecondControlElementID="txbBirthPlaceCode"<br />TargetControlID="txbBirthPlace" ServicePath="~/FormsControls/AutoCompleteLists.asmx"<br />ServiceMethod="GetAllMunicipality" MinimumPrefixLength="3" <b>CompletionInterval="100"</b><br />EnableCaching="true" CompletionSetCount="20" FirstRowSelected="true"&gt;<br />&lt;/cc1:AutoCompleteExtender2&gt;</pre>Today however I recognized a problem with the <span class="code">CompletionInterval</span> property.<br /><span style="font-weight: bold;"></span><blockquote><span style="font-weight: bold;">CompletionInterval:</span> Time in milliseconds when the timer will kick in to get                 suggestions using the web service.</blockquote>Since we got some complaints that the appearance of the autocomplete box takes to long, we set the <span class="code">CompletionInterval</span> to "0" (zero). In that way, once the <span class="code">MinimumPrefixLength</span> is reached the javascript starts to call the webservice. Everything worked fine with Firefox but - as usual - on IE no autocomplete entry was shown at all. Changing the value to "100" made everything work again. I don't know the exact reason (don't have the time to check it out).

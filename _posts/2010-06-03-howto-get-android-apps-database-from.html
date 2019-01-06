@@ -1,9 +1,0 @@
----
-layout: post
-title: "HowTo: Get an Android app's database from the emulator"
-date: 2010-06-03
-comments: true
-tags: [  HowTo, Java, Eclipse, mobile dev, Android ]
----
-
-<div style="text-align: left;">Most apps need a database for storing their data onto the device in a structured form. Android's natively supported DB is SQLite. Now of course if you develop an app you'll probably have the need for inspecting the stored data during development. Since the DB sits on the emulator/real device you have to first pull it to your workstation, however.</div><div><br />There are two possibilities for doing so:</div><div><ul><li>Use the adb command from your shell:<br />For instance<br /><br /><pre class="code">adb pull /data/data/com.yourcompany.yourpackage/databases/yourdbname.db /Users/Juri/Desktop/<br /></pre>This will store it on your desktop.<br /><br /></li><li>Alternatively you can use Eclipse like:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/_tF6XjsUy87k/TAe_IuGPyOI/AAAAAAAAClo/w29gClebgfw/s1600/DDMS.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="329" src="http://4.bp.blogspot.com/_tF6XjsUy87k/TAe_IuGPyOI/AAAAAAAAClo/w29gClebgfw/s640/DDMS.png" width="640" /></a></div><br /></li></ul></div>

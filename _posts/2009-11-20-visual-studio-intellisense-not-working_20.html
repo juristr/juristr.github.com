@@ -1,9 +1,0 @@
----
-layout: post
-title: "Visual Studio intellisense not working properly"
-date: 2009-11-20
-comments: true
-tags: [  Visual Studio, Microsoft ]
----
-
-Recently a work mate pointed me out that my Visual Studio <a href="http://en.wikipedia.org/wiki/Intellisense">Intellisense </a>seemed to not work correctly. When writing...<br /><pre class="prettyprint">this.Page.GetPostBackClientEvent(<br /></pre>...the info with the remaining parameters should appear automatically which was not the case on my machine. I actually hadn't noticed that before since you can just press CTRL+SHIFT+SPACE within the method call and you will get the parameter info.<br /><br />Nevertheless I tried to figure out the reason and I was already fearing that some 3rd-party VS add-in may have broken my Intellisense and that I'd have to invoke "<a href="http://blog.js-development.com/2009/10/visual-studio-2010-beta2-cannot-start.html">devenv.exe /resetuserdata</a>" (which however is a pain). Then I found this setting inside the VS options dialog:<br /><div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_tF6XjsUy87k/SwaNu1f20lI/AAAAAAAACeo/0McYKu3yvRU/s1600/IntellisenseStoppedWorking.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/_tF6XjsUy87k/SwaNu1f20lI/AAAAAAAACeo/0McYKu3yvRU/s640/IntellisenseStoppedWorking.jpg" /></a><br /></div>From the "grayed-out" checkbox I assume that some configuration was really damaged since otherwise it should either be in the disabled or enabled state. Anyway, ticking the checkbox in again solved my issue :)
