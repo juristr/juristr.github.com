@@ -1,9 +1,0 @@
----
-layout: post
-title: "HowTo: Bind an input field to a Date property using Spring's SimpleFormController"
-date: 2009-04-10
-comments: true
-tags: [  Java, Spring, Web dev ]
----
-
-If you're using the Spring SimpleFormController for binding your Java bean object to the UI, you may come across the case where you want to create a binding between an input field (where the user inputs a date) and your bean's Date property:<br /><pre class="prettyprint">&lt;form:input path="expiryDate" size="15" /&gt;</pre><br />You will notice that you cannot just do it as normal, but to let your SimpleFormController accept the binding, you have to override the following method:<br /><pre class="prettyprint">@Override<br />protected void initBinder(PortletRequest request, PortletRequestDataBinder binder) throws Exception {<br />    DateFormat df = new SimpleDateFormat("dd/MM/yyyy");<br />    df.setLenient(false);<br />    binder.registerCustomEditor(Date.class, new CustomDateEditor(df, true));<br /><br />    super.initBinder(request,binder);<br />}</pre>

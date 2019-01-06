@@ -1,9 +1,0 @@
----
-layout: post
-title: "Visual Studio 2010 Beta2: Cannot start application"
-date: 2009-10-23
-comments: true
-tags: [  Visual Studio, Microsoft ]
----
-
-After installing the new Visual Studio 2010 Ultimate beta2 release today, I just started to play a bit, trying out the new features. One was to move the Solution Explorer panel out of the main Visual Studio frame onto my second monitor and then again back into the main window. I shouldn't have done that. VS crashed and restarting it gave me the nice error message "The application cannot start".<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_tF6XjsUy87k/SuGXO42gxbI/AAAAAAAACeA/eP6LZfLqTr4/s1600-h/vs10Error.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/_tF6XjsUy87k/SuGXO42gxbI/AAAAAAAACeA/eP6LZfLqTr4/s320/vs10Error.jpg" /></a><br /></div><div class="separator" style="clear: both; text-align: left;">Nice surprise! As a workaround to fix this problem navigate (inside the command prompt window) to the installation directory of Visual Studio "..\Microsoft Visual Studio 10.0\Common7\IDE" and type<br /></div><pre class="code">devenv /resetuserdata<br /></pre>The consequence: you loose all of your preferences.

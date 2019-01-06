@@ -1,3 +1,0 @@
-<h3 class="title">
-    <a href="{{ post-entry.url }}">{{post-entry.title}}</a>
-</h3>

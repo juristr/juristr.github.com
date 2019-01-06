@@ -1,9 +1,0 @@
----
-layout: post
-title: "HowTo: Control the rendered Html tag on your custom, composite server controls"
-date: 2009-08-11
-comments: true
-tags: [  HowTo, ASP.net, C#, Web dev, .Net ]
----
-
-Normally when you want to achieve that your custom server control is rendered inside a specific HTML tag you don't override the Render method, but you do something like<br /><pre class="prettyprint">public class MySrvControl : WebControl, INamingContainer<br />{<br />   public MySrvControl() : base(HtmlTextWriterTag.Div)<br />   {<br />      ...<br />   }<br /><br />   ...<br /><br />}<br /></pre><br />Now most often you'll probably have a composite control, meaning that you are aggregating a couple of already existing controls inside your custom server control, providing some further functionality. In such a case, the .Net framework provides the CompositeControl class which should be inherited in that case:<br /><pre class="prettyprint">public class MySrvControl : <b>CompositeControl</b><br />{<br />   public MySrvControl() : <b>base(HtmlTextWriterTag.Div)</b><br />   {<br />      ...<br />   }<br /><br />   ...<br /><br />}<br /></pre>Note, you don't need the INamingContainer marker interface any more, because it's already done by the CompositeControl. The line "base(HtmlTextWriterTag.Div) however will give you a compiler error, since there is no constructor on the CompositeControl which is taking parameters. So to still provide the same rendering functionality, you simply add<br /><pre class="prettyprint">public class MySrvControl : <b>CompositeControl</b><br />{<br />   public MySrvControl()<br />   {<br />      ...<br />   }<br /><br />   protected override HtmlTextWriterTag TagKey<br />   {<br />      get<br />      {<br />         return <b>HtmlTextWriterTag.Div;</b><br />      }<br />   }<br /><br />   ...<br /><br />}<br /></pre>

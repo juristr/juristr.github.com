@@ -1,8 +1,0 @@
-<div id="related-posts" class="container-fluid">
-	<h3>Other Related Posts</h3>
-	{% for post in site.related_posts limit:3 %}
-		<p>
-			<strong>{{ post.date | date_to_string }}&nbsp;-</strong>&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>
-		</p>
-	{% endfor %}
-</div>

@@ -1,9 +1,0 @@
----
-layout: post
-title: "What happens if you think in Java and program C#"
-date: 2009-05-28
-comments: true
-tags: [  C#, .Net ]
----
-
-I'm quite jumping between the two languages. In the morning at the university I'm usually programming Java and then in the afternoon at work I'm programming in C#.net. This can be quite interesting and also be an advantage to have this kind of view to both of the languages (and also the according expertise). My personal opinion is that usually good programmers emerge from the Java world since I find it highly educational.<br />Anyway, having this kind of view however, you often then come across funny things you coded such as the following :)<br /><br />I just needed a way for reading in an image as a byte[]. As a Java programmer, hearing byte[], you would immediately think of some stream etc...and so the following came out:<br /><pre class="prettyprint">private byte[] ConvertImageToByte(Image toConvert, ImageFormat format)<br />{<br />    byte[] result;<br /><br />    using (MemoryStream ms = new MemoryStream())<br />    {<br />        toConvert.Save(ms, format);<br />        result = ms.ToArray();<br />    }<br /><br />    if (result.Length == 0)<br />        result = null;<br /><br />    return result;<br />}</pre>Well encapsulated and it worked perfectly but the solution could have been so simple ;)<br /><pre class="prettyprint">byte[] imageData = File.ReadAllBytes(tifFilePath);</pre>

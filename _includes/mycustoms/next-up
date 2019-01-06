@@ -1,9 +1,0 @@
-<p class="next-up">
-    I'm writing this article in an incremental fashion, adding more stuff as I proceed in the topic.
-    {% if topics != nil %}
-        {{ topics }}
-    {% else %}
-        Thus, it might be subject to significant enhancements over the coming weeks.
-    {% endif %}
-    Simply keep an eye at my <a href="http://feeds.feedburner.com/juristrumpflohner">RSS feed</a> or <a href="http://twitter.com/juristr">Twitter account</a> to know when updates appear. <br/>
-</p>
