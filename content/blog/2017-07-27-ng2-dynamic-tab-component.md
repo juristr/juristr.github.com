@@ -21,7 +21,7 @@ image: /blog/assets/imgs/ng-dynamic-tabs/multi-tab-editing.png
 {{<warn-notice message="Contents are based on Angular version >=4" >}}
  
 
-{{<warn-notice message="<strong>Update for Angular version 5:</strong> I just upgraded the article to match Angular version 5. You need to change <code>ngOutletContext</code> to <code>ngTemplateOutletContext</code>. Here's a very helpful app for upgrading btw: <a href='https://angular-update-guide.firebaseapp.com/'>Angular Update Guide</a>" >}}
+{{<warn-notice message="**Update for Angular version 5:** I just upgraded the article to match Angular version 5. You need to change `ngOutletContext` to `ngTemplateOutletContext`. Here's a very helpful app for upgrading btw: <a href='https://angular-update-guide.firebaseapp.com/'>Angular Update Guide</a>" >}}
  
 
 {{< toc >}}
