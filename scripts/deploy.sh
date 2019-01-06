@@ -1,6 +1,6 @@
 # remove previous publication
 SHA=$(git rev-parse HEAD)
-GIT_USER_ARGS="-c user.name='CircleCI autodeploy' -c user.email='juri.strumpflohner@gmail.com'"
+GIT_USER_ARGS="-c user.name='CircleCI' -c user.email='juri.strumpflohner@gmail.com'"
 
 echo "cleaning up previous deploy"
 rm -rf public
@@ -8,7 +8,7 @@ mkdir public
 
 echo "creating master branch in public folder"
 # clone master branch from the local repo into a repo located within "public"
-# git clone .git --branch master public
+git clone .git --branch master public
 
 echo "generating hugo files"
 
