@@ -1,0 +1,23 @@
+{{ $imgFileName := lower (replace (replace (replace .Title "." "_") "#" "_") "+" "__") }}
+
+<div class="card category-card">
+    <div class="card-block">
+        <div class="row">
+            <div class="col-2">
+                <div class="post-category-icon">
+                    {{ if fileExists (print "static/assets/images/categories/" $imgFileName ".svg" ) }}
+                        <img src="/assets/images/categories/{{ $imgFileName }}.svg" />
+                    {{ else }}
+                        {{- partial "_shared/svgicons.html" $imgFileName -}}
+                        <div class="svgicon clean_code"></div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="col-10 card-title-container">
+                <h2 class="card-title">
+                    <a href="{{ .URL }}">{{ .Title }}</a>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>

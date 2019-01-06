@@ -1,0 +1,57 @@
+---
+title: 'Best practices: version control system usage'
+date: 2008-05-22T00:00:00.000Z
+comments: true
+tags:
+- Best Practices
+url: /blog/2008/05/best-practices-version-control-system
+type: post
+---
+
+I come to the office in the morning, start Visual Studio and fetch the latest versions of the source code....recompile
+the solution: COMPILATION ERROR. The build is broken! That's for sure something you don't want to see in the morning!<br />Working
+in a team is actually not that straightforward. Normally (actually there should be!!), there is a version control
+system (<a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System">CVS</a>, <a href="http://en.wikipedia.org/wiki/Subversion_%28software%29">SVN</a>,
+<a href="http://en.wikipedia.org/wiki/Team_Foundation_Server">TFS</a>) in place which allows more people to work
+together on a project. But that's not enough. People need to be aware that they're not working alone on the project and
+have therefore to use the version control system appropriately. "Of course" you would think, but it sometimes doesn't
+seem that clear to people.<br />The number 1 rule: <span style="font-weight: bold;">NEVER EVER</span> upload a broken
+build to the common repository!!<br />Why that?? Well, because the next time your team members are fetching the latest
+versions, they'll have a broken build on their local development environment, which will not allow them to continue to
+work on the code.<br />Don't get me wrong, it's not that it never happened to me that I accidentally uploaded some
+broken build. Anyway, I started to think about some guidelines for working with version control systems, lets call them
+best practices:<br />
+<ul>
+  <li><span style="font-weight: bold;">ONLY check-in working code</span><br />Checking-in or committing only working
+    code is essential. If you don't do so, you'll break the build.<br /></li>
+  <li><span style="font-weight: bold;">Check-in often</span><br />Don't check out in the morning and check-in in the
+    evening!!<br />Checking-in in short time frames has several advantages. For the first you have always only checked
+    out the code you're currently working on, which helps you keeping the overview and secondly checking-in is somehow
+    a backup of your work. Lets assume the case that you've implemented something wrong or you made a mistake which
+    broke your whole build. If you checked-in constantly, you can just revert to a previous version.<br />So the advice
+    is: implement a use-case (if it isn't to large) and after successful implementation commit it to the repository.</li>
+  <li><span style="font-weight: bold;">Fetch the latest versions regularly</span><br />It doesn't cost you anything!
+    Retrieve the latest source code versions regularly to stay up-to-date. Assume you're working on a piece of code
+    which makes use of functionalities provided by other source-code modules which you're not currently working on.
+    Those functionalities may change while you're working on your code. Method signatures may change which may break
+    your running-code. By fetching the latest version you can immediately react to those changes.</li>
+  <li><span style="font-weight: bold;">Write comments on the files you check-in to the repository</span><br />Sometimes
+    this may be annoying, but it may help you, especially when there comes the situation when you have to revert to a
+    previous version. Then comments may help you find the right one.<br /></li>
+</ul>So how could an ideal work cycle look like(from my perspective)?<br />
+<ol>
+  <li>Open your programming environment and fetch the latest versions from the repository</li>
+  <li>Compile and build the system to see whether there are no problems.</li>
+  <li>Check out the files where you have to work on and implement your use-case.</li>
+  <li>Once finished, make sure that everything compiles without errors.</li>
+  <li>Again, retrieve the latest versions from the repository.</li>
+  <li>Run a project build to see whether still everything compiles and works fine.</li>
+  <li>If it does so, check-in your changes and add a comment to what you've done.</li>
+  <li>(Continue with step 3)<br /></li>
+</ol>I'm actually not an expert, but if you follow these rules, everything should work fine. The steps mentioned above
+are somehow adapted to the work with Microsofts TFS (Team Foundation Server) where the option of multiple checkout is
+disabled. This easies the handling because code merges should theoretically not be necessary. If you're working however
+on SVN systems where theoretically two team members could work on the same piece of code at the same time, things
+become more complicate and need still more discipline. In that case before you commit, you're usually doing a
+synchronize with the repository. You'll get a list of conflicts which you have first to solve by manually merging the
+files and fixing your local build. Once that is done you can commit your code.<br />So happy coding ;)

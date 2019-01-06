@@ -1,0 +1,11 @@
+---
+title: HTML list item background image disappears on IE
+date: 2009-07-20T00:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+url: /blog/2009/07/html-list-item-background-image
+type: post
+---
+
+I recently faced the problem that the background images that have been added to an HTML li tag over CSS disappeared on Internet Explorer (on Firefox and Webkit browsers everything worked fine).<br /><br />What I noticed is that the problem just happens when the text is wrapped to a new line. The following figure shows when it's working correctly<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/_tF6XjsUy87k/SmH_VuYYYkI/AAAAAAAACbY/d9fFBZJ89tg/s1600-h/listImageOk.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/_tF6XjsUy87k/SmH_VuYYYkI/AAAAAAAACbY/d9fFBZJ89tg/s400/listImageOk.jpg" /></a></div>and if you then decrease the size of the browser window (or on a computer with a lower screen resolution) you'll get this result<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_tF6XjsUy87k/SmH_h51ojgI/AAAAAAAACbg/gEO_X8jtGVc/s1600-h/listImageProblem.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/_tF6XjsUy87k/SmH_h51ojgI/AAAAAAAACbg/gEO_X8jtGVc/s400/listImageProblem.jpg" /></a></div>Note that the icon is missing on the last list entry. The solution is to add the "position:relative" to the ul tag, either directly or over the corresponding CSS class<br /><pre class="prettyprint">&lt;ul style="<b>position:relative</b>"&gt;<br /> &lt;li&gt;...&lt;/li&gt;<br /> &lt;li&gt;...&lt;/li&gt;<br />&lt;/ul&gt;</pre>

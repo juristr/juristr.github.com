@@ -1,0 +1,78 @@
+
+<!-- begin post -->
+<div class="card">
+    <!-- <a href="{{ .URL }}">
+        {{with .Params.image}}
+        <img class="card--image" src="{{ . | urlize | relURL }}" alt="A thumbnail image">
+        {{end}}
+    </a> -->
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="{{ .URL }}">{{ .Title }}</a>
+        </h2>
+        <h4 class="card-text">
+            {{ .Params.Lead }}
+            <!-- {{ .Summary }} -->
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        <span class="meta-footer-thumb">
+                            <a href="author.html">
+                                <img class="author-thumb" src="{{ .Site.Params.author.thumbnail}}" alt="{{ .Site.Params.author.name }}">
+                            </a>
+                        </span>
+                        <span class="author-meta">
+                            <span class="post-name"><a href="author.html">{{ .Site.Params.author.name }}</a></span><br />
+                            <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span><span class="dot"></span><span
+                                class="post-read">{{ .ReadingTime }} min read</span>
+                        </span>
+                    </div>
+                    <div class="col-2">
+                        {{ if isset .Params "categories" }}
+                        {{ if gt (len .Params.categories) 0 }}
+                        {{ $imgFileName := lower (replace (replace (replace (lower (index .Params.categories 0)) "." "_") "#" "_") "+" "__") }}
+                        <span class="post-category-icon">
+                            <!-- <img src="/assets/images/categories/{{ lower (index .Params.categories 0)  }}.svg" /> -->
+                            {{ if fileExists (print "static/assets/images/categories/" $imgFileName ".svg" ) }}
+                                <img src="/assets/images/categories/{{ $imgFileName }}.svg" />
+                            {{ else }}
+                                {{- partial "_shared/svgicons.html" $imgFileName -}}
+                                <div class="svgicon clean_code"></div>
+                            {{ end }}
+                        </span>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="card h-100">
+        
+        <div class="card-body">
+            <h2 class="card-title"><a class="text-dark" href="{{ .URL }}">{{ .Title }}</a></h2>
+            <h4 class="card-text">{{ .Summary }}</h4>            
+        </div>
+        <div class="card-footer bg-white">
+            <div class="wrapfooter">
+                {{if isset .Site.Params "author"}}
+                {{if isset .Site.Params "author_thumb"}}
+                    <span class="meta-footer-thumb">
+                    <img class="author-thumb" src="{{ .Site.Params.author_thumb | urlize | relURL  }}" alt="{{ .Site.Params.author }}">
+                    </span>                
+                    <span class="author-meta">
+                    <span class="post-name">{{ .Site.Params.author }}</a></span><br/>
+                {{end}}
+                {{end}}
+                <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }} - {{ .ReadingTime }} min read </span>
+                </span>
+                <span class="post-read-more"><a href="{{ .URL }}" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- end post -->

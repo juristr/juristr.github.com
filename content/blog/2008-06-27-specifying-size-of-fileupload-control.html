@@ -1,0 +1,18 @@
+---
+title: Specifying the size of a FileUpload control on Firefox
+date: 2008-06-27T00:00:00.000Z
+comments: true
+categories:
+- ASP.net
+- ".Net"
+url: /blog/2008/06/specifying-size-of-fileupload-control
+type: post
+---
+
+Apparently there seems to be a problem on Firefox when you want to specify a size for a<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"
+  href="http://1.bp.blogspot.com/_tF6XjsUy87k/SGTyXg7oHCI/AAAAAAAABKA/W66u6qPOv88/s1600-h/fileUploadBox.jpg"><img style="margin: 0pt 0pt 10px 10px; float: right; cursor: pointer;"
+    src="http://1.bp.blogspot.com/_tF6XjsUy87k/SGTyXg7oHCI/AAAAAAAABKA/W66u6qPOv88/s320/fileUploadBox.jpg" alt="" id="BLOGGER_PHOTO_ID_5216560754192817186"
+    border="0" /></a> file-upload box (which is an HTML input control of type "file"). If you just specify the width as
+style tag it will (surprisingly ;) ) work with IE but for some reason not with Firefox.<br /><br />The solution to this
+problem is to specify a "size" attribute like:<br /><br />
+<pre class="code">&lt;input type="file" id="someId" name="someName" <b>size="10"</b>/&gt;<br /></pre>

@@ -1,0 +1,32 @@
+@import "custom/variables";
+
+.article-toc {
+    background-color: $neutral_100;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: smaller;
+
+    strong {
+        font-family: $article-title-font;
+        font-size: larger;
+    }
+
+    #TableOfContents > ul > li {
+        list-style: none;
+    }
+
+    /* highlight 1st level */
+    // #TableOfContents > ul > li > ul > li > a {
+    //     font-weight: 700;
+    // }
+
+    #TableOfContents li {
+        margin-bottom:0;
+        margin-left: 20px;
+        list-style-type: disc;
+    }
+    
+    #TableOfContents > li > ul > li {
+        font-size: 93%;
+    }
+}

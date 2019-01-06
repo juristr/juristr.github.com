@@ -1,0 +1,65 @@
+---
+title: Time Machine backups to Windows shared network drive
+date: 2010-01-31T01:00:00.000Z
+comments: true
+categories:
+- MacOS
+tags:
+- Windows
+- Apple
+url: /blog/2010/01/time-machine-backups-to-windows-shared
+type: post
+---
+
+As some of you may have already read I <a href="http://blog.js-development.com/2009/05/my-new-macbook-pro.html">acquired
+  a MacBook Pro</a> about half a year ago and I love it ;) . Now one of the really cool things OS X provides is Time
+Machine backups.<br /><object height="344" width="425">
+  <param name="movie" value="http://www.youtube.com/v/n055CqFnjyo&hl=en_US&fs=1&">
+  </param>
+  <param name="allowFullScreen" value="true">
+  </param>
+  <param name="allowscriptaccess" value="always">
+  </param><embed src="http://www.youtube.com/v/n055CqFnjyo&hl=en_US&fs=1&" type="application/x-shockwave-flash"
+    allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object><br /><br />It's so
+great because you simple don't have to do anything. If at all, you can specify the folders which should be excluded
+from the backup, but the rest is a completely automated process. Time Machine takes care of creating backups that
+contain the best possible coverage, starting from hourly, weekly to monthly backups, depending on the remaining space
+on your backup drive.<br /><br />
+<div class="separator" style="clear: both; text-align: center;"><a href="http://images.apple.com/timecapsule/images/overview_timecapsule_20091202.png"
+    imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" height="140"
+      src="http://images.apple.com/timecapsule/images/overview_timecapsule_20091202.png" width="320" /></a></div>Now,
+Apple wouldn't be Apple if they wouldn't have a business model behind this thing.They call it <a href="http://www.apple.com/timecapsule/">Time
+  Capsule</a> and it is the device which is intented to be the backup drive on the other side of Time Machine. It is
+more than just a simple external (network capable) HD: it may also function as print server and router.<br /><br />Anyway,
+I already bought an external HD about 1 1/2 years ago (I guess). Unfortunately it cannot be attached to the network,
+but just over USB. So for a while I used to do my backups by manually attaching my HD to the USB port of my MacBook and
+let Time Machine do its work. However this is cumbersome and you often forget to attach it regularly and moreover, the
+HD usually stands at some place in your&nbsp;apartment. You're not going to take it around and again, it's nerving to
+take your notebook there, attach it just for the purpose of doing backups.<br /><br />So the idea came to my mind of
+sharing my HD over the network through another computer. I still have my very first notebook, an Acer which is about 6
+years old now, I guess. I usually use it as some kind of server, also for sharing my non-network printer to the home
+wireless. So why shouldn't I also expose my HD?<br />A <a href="http://superuser.com/questions/95005/any-experiences-using-time-machine-backup-to-windows-network-drive">post
+  on Superuser</a> pointed me <a href="http://adamcohenrose.blogspot.com/2008/02/time-machine-wireless-backup-without.html">to</a>
+<a href="http://serverfault.com/questions/20768/using-whs-for-a-mac-time-machine-backup">some</a> <a href="http://www.stocksy.co.uk/articles/Mac/getting_time_machine_to_work_how_i_want/">interesting</a>
+<a href="http://www.macosxhints.com/article.php?story=20080420211034137">pages</a>&nbsp;(<a href="http://www.levelofindirection.com/journal/2009/10/10/using-a-networked-drive-for-time-machine-backups-on-a-mac.html">this
+  one is another good one</a>). I'm not going to repeat everything since you can get more informations on the linked
+pages. The main steps are the following:<br />
+<ol>
+  <li>Activate 'unsupported' network drives for backup<br />
+    <pre class="code">defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1</pre><br /></li>
+  <li>Create a sparsebundle which will be used by TimeMachine for doing its job. This sparsebundle has to be created <i>locally</i><br />
+    <pre class="code">sudo hdiutil create -size 320g -type SPARSEBUNDLE -nospotlight -volname "Backup of &lt;computer_name&gt;" -fs "Case-sensitive Journaled HFS+" -verbose ~/Desktop/&lt;computer_name&gt;_&lt;mac address&gt;.sparsebundle<br /></pre><br /></li>
+  <li>Share the external HD on your Windows server (or notebook as in my case) and make sure you have the necessary
+    user rights for writing/reading.<br /><br /></li>
+  <li>Mount the network drive and copy the created sparsebundle on it<br /><br /></li>
+  <li>Configure the network drive for backups by referencing it from within the Time Machine configuration</li>
+</ol>
+<div>You have to pay attention that the hostname you indicate in the .sparsebundle name matches exactly your Mac's
+  hostname. Spaces and strange characters may create problems.<br />Moreover I'd suggest to do the first backup
+  directly over a wired network connection since the 1st backup may take quite a while.<br /><br />
+  <div class="notebox warn"><b>Note</b>, if you use your ethernet card for doing the initial backup which is highly
+    recommended, you have to use the MAC address of your that ethernet card, otherwise Time Machine won't recognize
+    your sparsebundle.</div><br />I'm now using this backup mechanism for about three weeks and it
+  works&nbsp;seamlessly. When my Mac is within the home wireless network it automatically connects to the shared backup
+  drive and starts creating his hourly backups. Just great :)
+</div>

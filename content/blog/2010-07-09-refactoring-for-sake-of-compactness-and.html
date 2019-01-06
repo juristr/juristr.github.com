@@ -1,0 +1,29 @@
+---
+title: Refactoring for the sake of compactness and reusability
+date: 2010-07-09T00:00:00.000Z
+comments: true
+categories:
+- 'C#'
+- Clean Code
+- ".Net"
+url: /blog/2010/07/refactoring-for-sake-of-compactness-and
+type: post
+---
+<p>Currently I'm doing a rather monotonic work, let's call it like this. We basically need to serialize our data to an
+  XML file that has to match a given XSD which has been given to us by our customer. The problem, the XSD has not
+  nearly the same structure of our own domain model which implies a lot of property 1-1 mapping between the C# objects
+  generated from the XSD file and our domain model. Automatism?? Not really applicable. I tried already to figure out
+  to which degree libs like <a href="http://goo.gl/H4RA">AutoMapper</a> could be useful but concluded that it wouldn't
+  really bring much in the end.</p>
+
+A nice thing when coding such object mappings is that there emerge patterns which can then be refactored nicely, also
+because these mapping stores involve an overall structural/architectural design initially but then they are nearly a
+pure typing exercise (which often isn't that bad too). Take the example below:<br /><br />
+<pre class="prettyprint">List&lt;SoggAggiudicatarioType&gt; soggAggiudicatarioTypes = new List&lt;SoggAggiudicatarioType&gt;();<br />if (awardCompanies != null)<br />{<br />    foreach (ICompanyDetail companyDetail in awardCompanies)<br />    {<br />        soggAggiudicatarioTypes.Add(<b>MapAwardCompanySoggAggiudicatarioType(companyDetail)</b>);<br />    }<br />}<br />convertedType.Aggiudicatari = soggAggiudicatarioTypes.ToArray&lt;SoggAggiudicatarioType&gt;();</pre><br />This
+was one re-occurring&nbsp;pattern. A list of objects from our domain model had to be mapped accordingly to an array of
+a generated XSD type. Lot's of mostly similar constructs emerged so I refactored the whole stuff above to the
+following:<br /><br />
+<pre class="prettyprint">convertedType.Aggiudicatari = <br />  MapArray&lt;ICompanyDetail, SoggAggiudicatarioType&gt;(awardCompanies,<b>MapAwardCompanySoggAggiudicatarioType</b>);</pre><br />Transforms
+in a nice one-liner :) and saves you from cramps in your fingers ;) . But the code hasn't disappeared, it has just been
+refactored to the given, generic method:<br /><br />
+<pre class="prettyprint">protected TConvertTo[] MapArray&lt;TConvertFrom, TConvertTo&gt;(List&lt;TConvertFrom&gt; sourceData, Func&lt;TConvertFrom, TConvertTo&gt; convertFunction)<br />{<br />    List&lt;TConvertTo&gt; convertedResult = new List&lt;TConvertTo&gt;();<br />    if (sourceData != null)<br />    {<br />        foreach (TConvertFrom sourceItem in sourceData)<br />        {<br />            TConvertTo converted = convertFunction.Invoke(sourceItem);<br />            convertedResult.Add(converted);<br />        }<br />    }<br /><br />    return convertedResult.ToArray&lt;TConvertTo&gt;();<br />}</pre>

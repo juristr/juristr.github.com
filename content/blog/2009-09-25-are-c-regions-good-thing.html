@@ -1,0 +1,27 @@
+---
+title: 'Are C# regions a good thing??'
+date: 2009-09-25T00:00:00.000Z
+comments: true
+categories:
+- 'C#'
+- Tooling
+- ".Net"
+url: /blog/2009/09/are-c-regions-good-thing
+type: post
+---
+
+Well, I'd say it depends. If you use regions to logically group your code in your class, then it may be a good thing
+'cause people come to your class and see something like<br /><br />
+<pre class="prettyprint">public class MyDummyClass : IMySuperInterface<br />{<br />   public MyDummyClass(...)<br />   {<br />      ...<br />   } <br /><br />   #region Properties<br />   ...<br />   #endregion<br /><br />   #region Utility<br />   ...<br />   #endregion<br /><br />   #region Implementation of IMySuperInterface<br />   ...<br />   #endregion<br />}</pre>In
+such case it may increase the organization of the code inside your class. I wouldn't say it increases the readability
+of your class since it's just a matter of code reorganization.<br /><br />Many times however you find people using
+regions like<br />
+<pre class="prettyprint">public class MyBLClass : IMySuperInterface<br />{<br />   public MyBLClass(...)<br />   {<br />      ...<br />   } <br /><br />   public IList<sometype> ReadAllOrComputeWhatever(...)<br />   {<br />      if(parameterA &gt;= someNumberOrString)<br />      {<br />         #region Check for blablabal<br />            // 30LOC+ hidden here of CC 10+<br />         #endregion<br />         ...<br />      }<br />   }<br />}</sometype></pre>...then
+regions suddenly aren't that nice any more. I find that a lot of people actually use it for hiding their ugly,
+"smelling" pieces of code which would highly have the need of being refactored. I think this is very much related<a
+  href="http://blog.js-development.com/2009/09/add-semantic-through-your-code-not.html"> to this here</a>.<br /><br />So...<br />
+<ul>
+  <li><u>logically grouping:</u> good thing, though it depends on preferences (I personally don't like it that much)</li>
+  <li><u>code hiding:</u> bad practice. Sign of a code smell and you should consider to<a href="http://blog.js-development.com/2009/09/add-semantic-through-your-code-not.html">
+      refactor it</a>.<br /></li>
+</ul>

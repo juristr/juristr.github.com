@@ -1,0 +1,12 @@
+---
+title: 'HowTo: Run IIS 7 on Vista 64bit OS in 32bit mode'
+date: 2009-11-10T01:00:00.000Z
+comments: true
+categories:
+  - ASP.net
+  - Windows
+url: /blog/2009/11/howto-run-iis-7-on-vista-64bit-os-in
+type: post
+---
+
+A couple of days ago, I ran into a nice problem. I had to configure the setup of a new project using an old ASP based application as the entry point from which then the new ASP.net application will be started. After a couple of strange error messages I realized that my web application running on the local IIS wasn't able to locate the 32bit driver since I'm having a 64bit Vista installation on my machine. Consequently also the IIS application pool was running in 64bit mode.<br /><br />After a quick exchange with one of our technicians, he sent me the solution on how to run the IIS in 32bit mode. Here just as a note to myself (and any other potentially interested) on how to downgrade the 64bit IIS to 32bit:<br /><ol><li>Open IIS</li><li>Click Application Pools</li><li>Right click DefaultAppPool. Choose "Advanced Settings..."<br /></li><li>A properties window will open, having on the upper "General" section a field named "Enable 32-Bit Applications". Set that to true.</li><li>Restart your web application and it should work.<br /></li></ol>&nbsp;Note this works just on IIS 7 (as far as I know).

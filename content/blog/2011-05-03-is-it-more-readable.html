@@ -1,0 +1,27 @@
+---
+title: Is It More Readable??
+date: 2011-05-03T00:00:00.000Z
+comments: true
+categories:
+- 'C#'
+- Clean Code
+- ".Net"
+url: /blog/2011/05/is-it-more-readable
+type: post
+---
+
+I was just going over some code and came across some webservice methods having a lot of repetitive conditional
+statements checking the language - represented by the corresponding two-letter code and send by the client from
+JavaScript. Based on the outcome, the code was calling two different methods on the BL layer.<br />
+<pre class="brush:c#">public List&lt;Nation&gt; GetCitizenship(string abbr, string lang)<br />{<br />   IList&lt;Nation&gt; nat = null;<br />   if (lang == "it")<br />   {<br />      nat = NationBL.ReadAllNationsByDescIt(abbr, false, null);<br />   }<br />   else<br />   {<br />      nat = NationBL.ReadAllNationsByDescDe(abbr, false, null);<br />   }<br /><br />   return nat.ToList();<br />}</pre><br /><a
+  name='more'></a>This cluttered up the whole method and moreover the same kind of duplication was present on more
+methods on that service class. Now, without considering the fact that the NationBL should probably be structured
+differently s.t. you don't have to call two different kind of methods just because of the language, I came up with the
+following refactoring:<br />
+<pre class="brush:c#">private IList&lt;TItem&gt; GetLocalizedList&lt;TItem&gt;(string lang, Func&lt;IList&lt;TItem&gt;&gt; blfunctionDe, Func&lt;IList&lt;TItem&gt;&gt; blfunctionIt)<br />{<br />    IList&lt;TItem&gt; result;<br />    if (lang == "it")<br />    {<br />        result = blfunctionIt.Invoke();<br />    }<br />    else<br />    {<br />        result = blfunctionDe.Invoke();<br />    }<br /><br />    if(result != null)<br />       return result.ToList&lt;TItem&gt;;<br />    else<br />       return null;<br />}</pre>This
+method returns you the correct list by invoking the right delegate (passed as parameter), depending on the kind of
+language (lang param) it received. In this way, the check for the language is centralized in the method and could
+arbitrarily be adapted/substituted without having to touch code in ten different places.<br /><br />The implementation
+of the original service method can then be changed by calling the new <code>GetLocalizedList</code> method:<br />
+<pre class="brush:c#">[WebMethod]<br />[ScriptMethod(ResponseFormat = ResponseFormat.Json)]<br />public List&lt;Nation&gt; GetCitizenship(string abbr, string lang)<br />{<br />    return GetLocalizedList(<br />              lang, <br />              () =&gt; NationBL.ReadAllNationsByCitizenshipIt(abbr, false, null), <br />              () =&gt; NationBL.ReadAllNationsByCitizenshipDe(abbr, false, null));<br />}</pre>While
+certainly this refactoring eliminates code duplication, I'm not sure whether it improves code readability...

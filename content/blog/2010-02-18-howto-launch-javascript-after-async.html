@@ -1,0 +1,13 @@
+---
+title: 'HowTo: Launch JavaScript after async postback of UpdatePanel'
+date: 2010-02-18T01:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+  - ASP.net
+  - 'C#'
+url: /blog/2010/02/howto-launch-javascript-after-async
+type: post
+---
+
+Assume the scenario where you want to launch a JavaScript function after your UpdatePanel finished to do its async postback. This turns out to actually be quite simple. What you do is to use the <code>ScriptManager.RegisterStartupScript(...)</code> method.<br /><pre class="prettyprint">ScriptManager.RegisterStartupScript(btnSave, this.GetType(), "myScriptKey", "myFunction()", true);<br /></pre>The only thing I found that people misdo is to not specify the correct instance&nbsp;(1st parameter)&nbsp;that caused the asynchronous postback to fire and thus the UpdatePanel to do the postback. In such a case it will just fail silently.

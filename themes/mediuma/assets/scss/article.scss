@@ -1,0 +1,243 @@
+@import "custom/base";
+@import "custom/variables";
+@import "custom/article-images";
+@import "external/fluidbox";
+@import "custom/toc";
+@import "custom/article-link";
+
+body {
+  background: white;
+}
+
+.container.page-container {
+  padding-bottom: 25px;
+}
+
+.article-post {
+  background-color: white;
+  color:$article-body-color;
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
+  font-family: $article-body-font;
+  padding-bottom: 15px;
+  
+  h1, h2, h3, h4 {
+    font-family: Harmonia Sans W01,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Fira Sans,sans-serif;
+    color: $article-headers-color;
+    font-weight: 700;
+    margin-top: 1.8em;
+    margin-bottom: 0.83em;
+  }
+
+  h4 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    margin-left: -1.5px;
+    line-height: 1.2;
+    color: rgba(0,0,0,0.44);
+    margin-top: 40px;
+    margin-bottom: 2px;
+  }
+
+  .article-intro {
+    font-size: 25px;
+    color: $neutral_800;
+  }
+
+}
+
+
+.posttitle {
+    font-family: $article-title-font;
+    color: $article-title-color;
+    font-style: normal;
+    /* font-size: 60px; */
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    /* margin-top: 5px; */
+    /* margin-bottom: 8px; */
+}
+
+.article-subtitle {
+  font-family: $article-subtitle-font;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 1.1;
+  color: $article-subtitle-color;
+  margin-bottom: 10px;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+  display: block;
+  width: 100px;
+  margin: 51px auto 41px auto;
+  border: 0;
+  letter-spacing: 18px;
+  font-weight: 700;
+}
+
+hr::before {
+  content: '...';
+  display: inline-block;
+  margin-left: .6em;
+  color: rgba(0,0,0,.6);
+  position: relative;
+  top: -30px;
+}
+
+.article-post {
+  ol, ul {
+    padding: 0;
+  }
+  
+  ol {
+    list-style: none;
+    list-style-image: none;
+    counter-reset: post;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  li {
+    margin-left: 30px;
+    margin-bottom: 12px;
+    padding-top: 2px;
+  }
+  
+  ol >li:before {
+    padding-right: 12px;
+    counter-increment: post;
+    content: counter(post) ".";
+    position: absolute;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 58px;
+    margin-left: -58px;
+    text-align: right;
+  }
+}
+
+pre > code {
+    font-family: 'Source Code Pro';
+    overflow-x: auto;
+    /* margin-bottom: 2.5em;
+    margin-top: 2.5em; */
+    padding: 1.25em;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    background-color: $neutral_200;
+    border-radius: 10px;
+}
+
+  pre {
+    background-color: none!important;
+    // background: $neutral_300;
+    // background: f5f5f5;
+    // border: 0;
+  }
+
+  blockquote.emphasized {
+    line-height: 1.4;
+    text-align: center;
+    font-size: 32px;
+    /* margin: 48px -100px; */
+    border: none;
+    padding: 0;
+    letter-spacing: 0.01rem;
+    font-weight: 300;
+    font-style: italic;
+    -webkit-transition: margin .1s;
+    -moz-transition: margin .1s;
+    -ms-transition: margin .1s;
+    -o-transition: margin .1s;
+    transition: margin .1s;
+  }
+
+  blockquote {
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+    font-style: italic;
+    border-left: 4px solid $supp_orange_500;
+    padding-left: 20px;
+    /* margin-left: -23px; */
+    padding-bottom: 3px;
+    margin:0 0 1.5rem 0;
+  }
+
+  blockquote > p {
+    margin: 0;
+    padding: 0;
+  }
+
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    color: #6c7781;
+    font-size: 13px;
+    margin-top: 1em;
+    position: relative;
+  }
+
+/* IMAGES */
+
+.article-post img {
+    width: 100%;
+}
+
+.article-post figcaption {
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0,0,0,0.6);
+  }
+
+.article-post a.image--zoom {
+    text-decoration: none;
+    background-image: none !important;
+  }
+
+
+.related-container {
+  background-color: $neutral_100;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+kbd, .kbd {
+  padding: 0.1em 0.6em;
+  border: 1px solid rgb(204, 204, 204);
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: rgb(247, 247, 247);
+  color: $neutral_800;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px rgb(255, 255, 255) inset;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.1em;
+  text-shadow: 0 1px 0 rgb(255, 255, 255);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* END IMAGES */

@@ -1,0 +1,39 @@
+---
+title: Don't Fall into the IEnumerable&lt;T&gt; Trap
+date: 2012-01-17T01:00:00.000Z
+comments: true
+categories:
+- 'C#'
+- ".Net"
+url: /blog/2012/01/dont-fall-into-ienumerable-trap
+type: post
+---
+
+<p>Recently I upgraded some code of our company-internal class library and observed a plausible but still tricky
+  problem. See yourself. </p>
+
+<div class="separator" style="clear: both; text-align: center;"><img border="0" height="192" src="http://images.all-free-download.com/images/graphiclarge/question_smiley_clip_art_25272.jpg"
+    width="200" /></div>In a class deep inside the class library ( ;)) there was a method which looked similar to the
+following:<br />
+<pre class="brush:csharp">public IEnumerable&lt;SomeObject&gt; GetAllValidations()<br />{<br />   foreach...<br />       yield return new ValidationObject(...);<br />}<br /></pre>Then,
+inside another method in some other class there was the following code: <br />
+<pre class="brush:csharp;highlight:[5,18, 24]">public void HandleValidationErrors(IEnumerable&lt;ValidationObject&gt; validationObjects)<br />{<br />    IDictionary&lt;ValidationObject, IList&lt;ValidationErrors&gt;&gt; cache = new Dictionary&lt;ValidationObject, IList&lt;ValidationErrors&gt;&gt;();<br /><br />    foreach(var validationObj in validationObjects)<br />    {<br />        cache.Add(validationObj, validationObj.ValidationErrors.ToList<validationerror>());<br />    }<br /><br />    ActivateValidatorsAccordingToValidationErrors(validationObjects, cache);<br /><br />    //snip snip: If cache not empty, some validation objects haven't been treated/found<br />}<br /><br /><br />public void ActivateValidatorsAccordingToValidationErrors(IEnumerable&lt;ValidationObject&gt; validationObjects, IDictionary&lt;ValidationObject, IList&lt;ValidationErrors&gt;&gt; cache)<br />{<br />    foreach(var valObj in validationObjects)<br />    {<br />        var validator = GetValidatorByValidationObj(valObj);<br />        if(validator != null)<br />        {<br />            //activate validator<br />            //remove ValidationObj from cache<br />        }<br />    }<br />}<br /></validationerror></pre>Now
+guess what, <strong>line 24</strong> gave me an exception when I wanted to access the dictionary with the validationObj
+as key, telling me that the key was not present. I debugged the code and the obj was present!? My first thought: did
+someone override the <code>Equals()</code>??...but that wasn't the case.<br /><br />Then I immediately saw the problem
+when looking at the method signature. Did you get it? <code>IEnumerable&lt;T&gt;</code>. Did you hear about the <strong>"lazy-evaluation"</strong>
+of IEnumerables? I did, fortunately. The problem here was that when the code entered the <code>HandleValidationErrors(...)</code>
+method, passing in the IEnumerable, that latter has not been evaluated so far. And then I had the situation of a <b>possible
+  multiple enumeration </b>(<a href="http://confluence.jetbrains.net/display/ReSharper/Possible+multiple+enumeration+of+IEnumerable"
+  target="_blank">Resharper tells you that</a>, so don't ignore it!). So what does that mean? When the <code>IEnumerable</code>
+was accessed 1st in <strong>line 5</strong>, the method <code>GetAllValidations()</code> was called, actually executing
+the enumeration with <strong>new</strong> instances of type ValidationObject. So far so good. Then when the loop in
+<strong>line 18</strong> was executed, <strong>the same happened</strong>, returning another, <strong>new</strong>
+instance of a ValidationObject, basically another <code>IEnumerable&lt;ValidationObject&gt;</code> than I previously
+added to the <code>cache</code> variable. And here we are, now the exception when accessing the dictionary is quite
+obvious, isn't it?<br /><br />Obviously this was a silly mistake and fixing it was quite easy by inserting somewhere (I
+did it in the first possible place to keep other devs from falling in this trap as well ;)) a line like <br />
+<pre class="brush:csharp">var theList = theValidationObjectEnumeration.ToList&lt;ValidationObject&gt;()</pre>which
+"materializes" the list and prevents the multiple enumeration problem.<br /><br />I'm writing this post because such
+bugs can become quite nasty to find, especially if you don't know the fact about lazy-loading of <code>IEnumerable&lt;T&gt;</code>&nbsp;and
+if the method returning the IEnumerable was written by some other dev. So watch out!

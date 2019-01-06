@@ -1,0 +1,19 @@
+---
+title: 'Help, my MSTest DeploymentItem doesn''t get deployed!'
+date: 2009-05-23T00:00:00.000Z
+comments: true
+categories:
+- Tooling
+- testing
+url: /blog/2009/05/help-my-mstest-deploymentitem-doesnt
+type: post
+---
+
+MSTests allow you to define items you'd like to deploy to the deployment directory when executing the test cases. There
+are different ways for achieving this, either to configure it in your LocalTestRun.testrunconfig or to add attributes
+to your test case like<br />
+<pre class="prettyprint">[TestMethod]<br />[DeploymentItem(@"files\somefolder\", "optionalOutputFolder")]<br />[DeploymentItem(@"files\someOtherFolder\", "againAnOptionalOutputFolder")]<br />public void MyDummyTest()<br />{<br />   ...<br />}<br /></pre>What
+may happen though is that despite defining this attribute, your files won't get copied to the deployment. If that's the
+case you have to make sure that you set the "Copy to Output Folder" setting to "Copy Always". This is kind of strange
+since by defining the DeploymentItem attribute one would imagine to have it already copied automatically. A bit of a
+messy implementation...

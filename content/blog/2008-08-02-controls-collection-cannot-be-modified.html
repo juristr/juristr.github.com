@@ -1,0 +1,70 @@
+---
+title: The Controls collection cannot be modified because...
+date: 2008-08-02T00:00:00.000Z
+comments: true
+categories:
+- ASP.net
+- JavaScript
+- ".Net"
+url: /blog/2008/08/controls-collection-cannot-be-modified
+type: post
+---
+
+Programming on the web (JSP, ASP.net, etc..) is quite different than programming a desktop client. On the web,
+everything is characterized by the request/response paradigm due to the structure of the HTTP protocol. But still some
+customers desire to have desktop-client-like behavior such as for instance showing/hiding fields depending on the
+content of other fields (or even manipulate their content dynamically).<br />Here is where the request/response
+paradigm comes into play. The problem is that once the page is sent back to the client you have no control what the
+user changes unless you send the page back to the server (autopostback in ASP.net) s.t. you can check for changes. But
+that's "ugly" and may impact on the user-friendliness of your app since it causes a complete page refresh (your
+customer wouldn't be happy for sure). <a href="http://en.wikipedia.org/wiki/Ajax_%28programming%29">Ajax</a> is a must
+in that case. Google is an expert in that field. Just take a look at some of its services like <a href="http://www.gmail.com/">Gmail</a>,
+<a href="http://reader.google.com/">GReader </a>or <a href="http://docs.google.com/">GDocs</a>, just to mention some of
+them or the <a href="http://code.google.com/">Google Code</a> pages.<br />Of course also Microsoft has an answer to it:
+the <a href="http://atlas.asp.net/">AjaxControlToolkit</a>, an open source collection of Ajax-enabled controls.
+Probably the most popular among them is the UpdatePanel. Programming Ajax is easier than ever, you don't even have to
+know anything about Ajax. Just take the UpdatePanel control from the toolbox and drag&amp;drop it into your webpage,
+start your app and see there, everything updates magically within the UpdatePanel without any page refresh. Nice, isn't
+it? Well not really. I don't really like these drag&amp;drop solutions which apply some "magic" and solve your problem
+but you don't really know what's going on behind the scene. If you use Firebug to inspect the requests sent by the
+UpdatePanel to the server and the resulting responses you'll notice that it doesn't actually do any Ajax as it would be
+done normally, meaning to use an XMLHttpRequest object, send a request to the server and to process the response inside
+a callback function. Of course the UpdatePanel does an asynchronous postback and it uses a callback function somewhere,
+but the server answers not just with the plain data but with the complete rendered HTML code. What is done, is to just
+replace the whole HTML code inside the UpdatePanel with the new one returned from the server. The problem with this is
+mainly performance since for the first all the HTML code has to be send from the client to the server and vice versa
+and moreover also the whole viewstate is carried as well. On a page with just a few controls it may not pose any
+problem, but if you have an immense web-form with about 50 controls on it, carrying all of the control's viewstate may
+represent quite a huge amount of data to carry. I'll maybe write another post to demonstrate how you can bypass this
+problem by querying a web-service from JavaScript and by doing the data exchange with Json.<br />But back to the
+original problem (wherefore I'm writing this post :) ): if you have to show/hide controls on your UI, you usually won't
+need any Ajax (unless the conditions are complex and are calculated by some business logic on the server-side). The
+temptation however is big ;) , doing it with an UpdatePanel would be a matter of a minute. Just put the involved
+controls inside it and add the appropriate event-handlers and server-side code for showing/hiding your fields. And
+still I strongly discourage this for the above mentioned reasons.<br />Instead, what you can do is to manipulate the
+DOM with JavaScript. That sounds pretty straightforward, just query the document object model for the control to
+retrieve its value. So on an ASP.net page you'll do something like var element =
+document.getElementById('ddlContracts') where "ddlContracts" is the name of the drop-down list containing some values
+you need to query in order to understand whether to display some other fields. That won't work however. The reason is
+that ASP.net assigns unique id's to all of it's controls in order to avoid naming conflicts. So on the client-side your
+"ddlContracts" will be named something like "UserControl1_ddlContracts" or something similar, depending on how deep it
+is nested. I searched for a while on the web whether there exists some kind of mechanism for retrieving the id of the
+control on the client-side but it seems as if the only possibility or better the most commonly used one is to directly
+retrieve the client-side id by embedding server-tags inside your aspx code like the following:<br />
+<pre class="prettyprint">&lt;script type="text/javascript"&gt;<br />function doSomething(){<br />  var ddlContract = document.getElementById('&lt;%= ddlContract.ClientID %&gt;');<br />  ...<br />}<br />&lt;/script&gt;<br /></pre>The
+part between the angle brackets is evaluated on the server-side and returns the client id of the drop down list. In
+this way everything works fine, although embedding such server-tags is a style of coding which I don't really like :( .
+Anyway, after embedding those tags, I started the application but then the following message appeared:<br />
+<blockquote class="tr_bq">The Controls collection cannot be modified because the control contains code blocks (i.e.
+  &lt;% ... %&gt;)</blockquote>Damn...but actually, the error message is completely justified. On the project I'm
+currently working, validation controls are assigned dynamically to the UI depending on rules defined in the business
+logic. That's why that error appears.<br />After informing myself on the web I came up with basically two workarounds:<br />
+<ol>
+  <li><b>using <span class="code">&lt;%# ... %&gt;</span> instead of <span class="code">&lt;%= ... &gt;</span></b><br />The
+    difference between the two is that <span class="code">&lt;%# ... %&gt;</span> tags are embedded at runtime whereas
+    <span class="code">&lt;%= ... %&gt;</span> is embedded as a part of the generated ASP.net parse tree class.
+    &lt;%#...%&gt; works however only on databound fields.</li>
+  <li><b>Force your scripts to run on a server-control</b>...<br />...and removing it in this way from the content
+    container where the controls (in my case the validators) are added dynamically at runtime.</li>
+</ol>I've chosen the 2nd solution. You've just to do something like the following:<br />
+<pre class="prettyprint">...<br />   &lt;div runat="server"&gt;<br />      &lt;script type="text/javascript"&gt;<br />            function someJavaScript(){<br />                var dropDownElement = document.getElementById('&lt;%= ddlContractType.ClientID %&gt;');<br />                //do some actions<br />                ...<br />            }  <br />      &lt;/script&gt;<br />   &lt;/div&gt;<br /></pre>

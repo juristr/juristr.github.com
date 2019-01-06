@@ -1,0 +1,17 @@
+---
+title: 'Scaling Android Emulator Size: Without using Eclipse'
+date: 2012-05-03T00:00:00.000Z
+comments: true
+categories:
+  - Android
+tags:
+  - mobile dev
+reposts:
+  - >-
+    http://www.javacodegeeks.com/2012/05/android-emulator-scale-size-without.html
+  - 'http://www.dzone.com/articles/scaling-android-emulator-size'
+url: /blog/2012/05/scaling-android-emulator-size-without
+type: post
+---
+
+<p>As you might have <a href="http://blog.js-development.com/2012/04/html5-version-android-apps-or-web-for.html" target="_blank">read following my previous post</a>&nbsp;I'm currently experimenting with mobile web solutions. In such a case, having an Android emulator is quite comfortable for quickly testing your solution. Personally though, I hate the default emulator skin, mainly also because it takes up quite a large portion of your screen. Hence, I normally use a custom emulator skin. But there is the problem of the scaling the size properly as the default settings will most probably go out of your screen.</p><br />A couple of years ago I <a href="http://blog.js-development.com/2010/03/tune-your-emulator-with-pretty-nexus.html" target="_blank">wrote a blog post on how to tune your Android</a> emulator with a custom skin. In that post, I also described on how to scale it properly, by adding the <code>-scale</code> option to the command line arguments from within the Eclipse Run Configuration dialog.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_tF6XjsUy87k/S5aBOXKncyI/AAAAAAAACjE/-P7spfvFXWo/s640/scaleEmulatorEclipse.png" imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="340" src="http://1.bp.blogspot.com/_tF6XjsUy87k/S5aBOXKncyI/AAAAAAAACjE/-P7spfvFXWo/s400/scaleEmulatorEclipse.png" width="400" /></a></div><br />However, if you're only interested in the emulator itself, you may start it by launching the AVD manager directly. In that case, the scale parameter can be directly set when launching your AVD:<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-b8h2NPCCBgU/T6IsjLuMdCI/AAAAAAAADMg/pyuUJZjw1CQ/s1600/scalingEmulatorAVD.png" imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="292" src="http://1.bp.blogspot.com/-b8h2NPCCBgU/T6IsjLuMdCI/AAAAAAAADMg/pyuUJZjw1CQ/s400/scalingEmulatorAVD.png" width="400" /></a></div><div class="separator" style="clear: both; text-align: left;">Btw, should you have problems connecting to the Internet from your emulator, it might be due to the proxy settings of your (company) network. <a href="http://www.gitshah.com/2011/02/android-fixing-no-internet-connection.html" rel="" target="_blank">Have a look at this post then</a>, it might help you.</div>

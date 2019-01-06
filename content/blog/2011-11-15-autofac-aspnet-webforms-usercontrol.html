@@ -1,0 +1,29 @@
+---
+title: "AutoFac: ASP.net WebForms UserControl Dependencies Only Available At Page_Load Event"
+date: 2011-11-15T01:00:00.000Z
+comments: true
+categories:
+- ASP.net
+- ".Net"
+url: /blog/2011/11/autofac-aspnet-webforms-usercontrol
+type: post
+---
+
+<p>I'm currently adapting the architecture of one of our old but core projects, still written in ASP.net WebForms and
+  with our custom ORM mapper. Since we're currently starting to release a new version of the project, we decided took
+  the opportunity to also exchange our custom ORM mapper with Entity Framework and at the same time I introduced <a
+    href="http://code.google.com/p/autofac/"><b>AutoFac</b></a> for providing dependency injection. It turned out
+  however, that with the default ASP.net WebForms integration, dependencies of a Page's child control (i.e. a
+  UserControl) are only available in the Page_Load event of the UserControl rather than already in its OnInit.</p>
+
+The official AutoFac page has a nice article describing the integration into ASP.net Webforms: <a href="http://code.google.com/p/autofac/wiki/AspNetIntegration">*click*</a>.
+That worked out just fine with one exception. Normally our ASP.net pages contain very little logic. They're just
+aggregating a series of UserControls. As such I noticed that the dependencies inside those child UserControls are only
+available starting from the UserControl's Page_Load event whereas it would often be handy to have them in the <code>OnInit</code>
+event already.<br />
+<pre class="brush:c#">public class MyUserControl : UserControl<br />{<br />    public IServiceClass ServiceClass { get; set; }<br /><br />    protected override void OnInit(EventArgs e)<br />    {<br />        base.OnInit(e);<br />        //ServiceClass.DoSomething(); //&lt;&lt; would not work as ServiceClass is at this point<br />    }<br /><br />    protected void Page_Load(object sender, EventArgs e)<br />    {<br />       ServiceClass.DoSomething(); //works just fine<br />    }<br />}<br /></pre>Note,
+the dependencies are autowired here over the public properties.<br />To avoid this, I used a BaseClass
+DependencyResolvingUserControl<br />
+<pre class="brush:c#">public class DependencyResolvingUserControl : UserControl<br />{<br />    protected override void OnInit(EventArgs e)<br />    {<br />        var cpa = (IContainerProviderAccessor)HttpContext.Current.ApplicationInstance;<br />        var cp = cpa.ContainerProvider;<br />        cp.RequestLifetime.InjectProperties(this);<br /><br />        base.OnInit(e);<br />    }<br />}<br /></pre>And
+the according custom UserControl does now inherit from it <br />
+<pre class="brush:c#; highlight:[1]">public class MyUserControl : DependencyResolvingUserControl<br />{<br />    public IServiceClass ServiceClass { get; set; }<br /><br />    protected override void OnInit(EventArgs e)<br />    {<br />        base.OnInit(e);<br />        ServiceClass.DoSomething(); //works<br />    }<br /><br />    protected void Page_Load(object sender, EventArgs e)<br />    {<br />       ServiceClass.DoSomething(); //works as well<br />    }<br />}</pre>

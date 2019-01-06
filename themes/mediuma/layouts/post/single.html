@@ -1,0 +1,126 @@
+{{ define "header"}}
+{{- partial "_shared/navbar.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+<!-- {{- partial "_shared/title.html" . -}} -->
+<!-- <div class="main-content"> -->
+<!-- Begin Article
+        ================================================== -->
+<div class="container page-container">
+    <div class="row">
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            {{- partial "single-partials/share.html" . -}}
+        </div>
+        <!-- Post -->
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                {{if isset .Site.Params.author "name"}}
+                {{if isset .Site.Params.author "thumbnail"}}
+                {{if isset .Site.Params.author "description"}}
+                <!-- Begin Top Meta -->
+                <div class="row post-top-meta">
+                    <div class="col-md-2">
+                        <!-- <a href="author.html"> -->
+                        <img class="author-thumb" src="{{ .Site.Params.author.thumbnail}}" alt="{{ .Site.Params.author.name }}">
+                        <!-- </a> -->
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="author.html">{{ .Site.Params.author.name }}</a><a href="https://twitter.com/{{.Site.Params.author.twitter}}"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">{{ .Site.Params.author.description | markdownify }}</span>
+                        <!-- <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span><span class="dot"></span>
+                        <span class="post-read">{{ .ReadingTime }} min read</span> -->
+                    </div>
+                </div>
+                <!-- End Top Menta -->
+                {{end}}
+                {{end}}
+                {{end}}
+
+                <h1 class="posttitle">{{ .Title }}</h1>
+                {{ if .Params.lead }}
+                <h2 class="article-subtitle">{{ .Params.lead }}</h2>
+                {{ end }}
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            {{ dateFormat "Jan 2, 2006" .PublishDate }}
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">{{ .ReadingTime }} min read</span>
+                </p>
+            </div>
+
+            <!-- Post Featured Image -->
+            <!-- {{with .Params.image}}
+            <img class="featured-image img-fluid" src="{{ . | urlize | relURL }}" alt="thumbnail for this post">
+            {{end}} -->
+            <!-- End Featured Image -->
+
+            {{ with .Site.Params.adlink }}
+            <a href="{{ .link }}" class="external-link" data-client="{{ .client }}" data-uid="{{ .uid }}">
+                <img src="{{ .image }}" style="width:100%" />
+            </a>
+            {{ end }}
+
+            <!-- Post Content -->
+            <div class="article-post">
+                {{ .Content}}
+            </div>
+
+            <!-- Post Categories -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    {{ range .Params.tags }}
+                    <li>
+                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{.}}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            <!-- Prev/Next -->
+            <!-- <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    {{with .Prev}}
+                    <a class="prev d-block col-md-6" href="{{.URL}}"> &laquo; {{.Title}}</a>
+                    {{end}}
+                    {{with .Next}}
+                    <a class="next d-block col-md-6 text-lg-right" href="{{.URL}}">{{.Title}} &raquo;</a>
+                    {{end}}
+                    <div class="clearfix"></div>
+                </div> -->
+            <!-- End Prev/Next -->
+        </div>
+        <!-- End Post -->
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+<!-- End Article
+        ================================================== -->
+
+{{- partial "single-partials/related.html" . -}}
+
+{{ if .Params.comments }}
+{{- partial "single-partials/comments.html" . -}}
+{{ end }}
+<!-- </div> -->
+<!-- {{- partial "_shared/alertbar.html" . -}} -->
+{{ end }}
+
+{{ define "footer"}}
+<div class="container">
+    <!-- {{- partial "_shared/jumbotron.html" . -}} -->
+    {{- partial "_shared/footer.html" . -}}
+</div>
+{{ end }}

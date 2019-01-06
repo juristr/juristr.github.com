@@ -1,0 +1,11 @@
+---
+title: Linux main menu bars (top and bottom) disappeared
+date: 2008-10-05T00:00:00.000Z
+comments: true
+categories:
+  - Linux
+url: /blog/2008/10/linux-main-menu-bars-top-and-bottom
+type: post
+---
+
+Linux (Ubuntu) is generally great...and still I must admit that most often ones habits are stronger I launch Windows. There are however many points that speak for Ubuntu...it's free, you always stay up-to-date by automatically getting the latest updates. But then there are moments - as today - where you switch your notebook on, start Ubuntu and look there...no menu bars (the top and bottom one of the operating system) pop up, Alt+F2 doesn't work etc...<br />If you're not a Linux specialist you might get into trouble. Fortunately I managed to launch Firefox and search the web for a solution and that's another positive point regarding Linux operating systems. Since it's open source, you'll find a huge amount of documentation and problems/solutions on forums etc..So I followed some indications and after about 10 min everything worked fine again, menu bars launched correctly.<br /><br />So for everyone of you which reads this post because he actually encountered the same problem. Just follow the following steps:<br /><ol><li> Hit Ctrl+Alt+F1 to switch to the console window. (Hint: you can switch around between different console windows by hitting Ctrl+Alt+<f1-f6>, Ctrl+Alt+F7 will (usually) show you the graphical inteface with the desktop.</f1-f6></li><li>Log in by using your username and password.</li><li>Type the following command:<br /><br /><pre class="code">sudo apt-get install ubuntu-desktop</pre></li><li>After that finished type<br /><br /><pre class="code">sudo apt-get update</pre></li></ol>Then I switched back to the desktop mode (Ctrl+Alt+F7) and killed the session by hitting Ctrl+Alt+Backspace. I logged back in and everything worked again.

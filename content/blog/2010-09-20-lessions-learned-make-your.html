@@ -1,0 +1,61 @@
+---
+title: 'Lessons Learned: Make your ListItemCollection Linq Queryable'
+date: 2010-09-20T00:00:00.000Z
+comments: true
+categories:
+- ".Net"
+- 'C#'
+tags:
+- lessons learned
+url: /blog/2010/09/lessions-learned-make-your
+type: post
+---
+
+<p>I love Linq! In my opinion it is one of the best features that have ever been added to C#, making developers
+  extremely more productive. Really miss it when coding Java ;) . Beside the different Linq providers (LinqToSQL,
+  LinqToEntities, LinqToXml, ...), one of the powerful possibilities is to query collections in memory.&nbsp;I mean,
+  just think how often you have to traverse lists, searching for some specific type, some object with a specific
+  property and so on.</p>
+
+This is cumbersome because there is nothing especially complex in doing those tasks, but rather it reduces to silly
+typing work.&nbsp;Linq is great, because it gives you the possibility to &nbsp;naturally express a query and more
+importantly it allows you to <b>abstract</b>. If you take a look at one of your Linq queries, what you do is to express
+<b>what</b>&nbsp;should be done but not <b>how</b>. That's up to the specific Linq provider implementation (like making
+use of deferred execution etc..).
+
+
+
+<h2>Problem</h2>
+Often you may encounter the situation where you don't see the famous <code>Where</code>, <code>First</code>, <code>FirstOrDefault</code>
+etc extension methods appear in your Intellisense popup. &nbsp;That's mainly because Linq extends on <code>IEnumerable&lt;T&gt;</code>
+and <code>IQueryable&lt;T&gt;</code> types.<br />Take for instance ASP.net and the <code>CheckBoxList</code> server
+control. Suppose you'd like to get all of the checked items by the user. In such a case you would like to query the
+<code>CheckBoxList.Items</code> collection. That's however not an <code>IEnumerable&lt;T&gt;</code> type but a <code>ListItemCollection</code>&nbsp;which
+just implements <code>IEnumerable</code> and won't therefore allow to be queried using Linq. So you would end up
+writing it the old style:<br />
+<pre class="brush: c#">List&lt;ListItem&gt; selectedItems = new List&lt;ListItem&gt;();<br />foreach(ListItem item : checkBoxList.Items)<br />{<br />   if(item.Selected == true)<br />   {<br />      selectedItems.Add(item);<br />   }<br />}<br /><br />...</pre>Annoying
+to write and more difficult to read.<br /><br />
+
+<h2>Candiate Solution</h2>
+Instead, writing as a Linq query you could do it like<br />
+<pre class="brush: c#">IEnumerable&lt;ListItem&gt; selectedItems = from item in checkBoxList.Items.AsEnumerable()<br />                                      where item.Selected == true<br />                                      select item;<br /></pre>Nice,
+isn't it, or the even more concise Lambda version<br />
+<pre class="brush: c#">IEnumerable&lt;ListItem&gt; selectedItems = checkBoxList.Items.AsEnumerable()<br />        .Where(x =&gt; x.Selected == true);<br /></pre><br />This
+is a lot more readable! As mentioned however,&nbsp;<code>ListItemCollection</code> is not of type <code>IEnumerable&lt;T&gt;</code>
+and there <b>doesn't exist</b> a <code>AsEnumerable</code> function out of the box. The code above used a very simple
+extension method I've written, that adds the missing functionality:<br /><br />
+<pre class="brush: c#">public static IEnumerable&lt;ListItem&gt; AsEnumerable(this ListItemCollection listItems)<br />{<br />    foreach (ListItem item in listItems)<br />    {<br />        yield return item;<br />    }<br />}<br /></pre><br />An
+according unit test verifies the correct functioning of the above.<br /><br />
+<pre class="brush: c#">[TestMethod]<br />public void TestListItemCollection_AsEnumerable_Filtering()<br />{<br />   //setup<br />   ListItemCollection collection = new ListItemCollection();<br />   collection.Add(new ListItem("text1", "value", false));<br />   collection.Add(new ListItem("text2", "value2", true));<br />   collection.Add(new ListItem("text3", "value3", false));<br /><br />   //execute<br />   IEnumerable&lt;ListItem&gt; filteredItems = collection.AsEnumerable().Where(x =&gt; x.Enabled == true);<br /><br />   //verify<br />   Assert.AreEqual(1, filteredItems.Count(), "There should be 1 item filtered");<br />}<br /></pre>It
+works, just as expected. But then...once I had the <code>AsEnumerable</code> extension coded, a <a href="http://goo.gl/tPF2">ReSharper</a>
+info message icon popped up telling me that my foreach loop could be converted into a Linq expression. Interesting I
+though and approved the conversion and see there, that was the result:<br />
+<pre class="brush: c#">public static IEnumerable&lt;ListItem&gt; AsEnumerable(this ListItemCollection listItems)<br />{<br />    return listItems.Cast&lt;ListItem&gt;();<br />}<br /></pre><br />Cool
+:)
+
+<h2>Conclusion</h2>
+Once more, ReSharper taught me new syntax! Basically my <code>AsEnumerable</code> extension isn't needed at all, but
+instead one can use the <code>Cast<t>()</t></code> extension method directly to achieve the same effect. The only
+reason for leaving the <code>AsEnumerable()</code> extension method, is to give your devs an already familiar
+experience as with some other native collections which already expose an&nbsp;<code>AsEnumerable()</code>method. On the
+other side, "the less code you write, the less you have to maintain" ;) .

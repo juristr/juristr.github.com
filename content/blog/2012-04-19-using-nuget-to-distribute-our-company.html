@@ -1,0 +1,58 @@
+---
+title: Using NuGet to Distribute Our Company Internal DLLs
+date: 2012-04-19T00:00:00.000Z
+comments: true
+categories:
+- ".Net"
+url: /blog/2012/04/using-nuget-to-distribute-our-company
+type: post
+---
+
+<p>Releasing new software has to be simple and super fast! That was not the case for our company-internal class
+  libraries till a couple of month ago until I finally decided to take the time to optimize that release process.</p>
+
+<p>At the company where I'm working at currently, we have an internal class library which bundles a series of utilities
+  with the scope of helping devs doing their day-to-day job. So far so good, however, there has always been a thing
+  that &nbsp;puzzled me right from the beginning was the cumbersome release process of that library.&nbsp;Creating a
+  release bundle consisted in</p>
+<ul>
+  <li>incrementing the version number in the AssemblyInfo</li>
+  <li>building the library project in release mode</li>
+  <li>opening the bin folder</li>
+  <li>zipping the dlls</li>
+  <li>uploading the zip to our company-internal wiki page with a version history of the release</li>
+</ul>
+<div>That's really tedious, isn't it? <b>It sometimes took longer to create a new release than to fix a bug</b>. So a
+  couple of months ago I decided to optimize that: <b>using NuGet</b>. If you're a .Net dev you for sure already heard
+  about it.</div>
+<blockquote>NuGet is a Visual Studio extension that makes it easy to install and update third-party libraries and tools
+  in Visual Studio. When you use NuGet to install a package, it copies the library files to your solution and
+  automatically updates your project (add references, change config files, etc.). If you remove a package, NuGet
+  reverses whatever changes it made so that no clutter is left. <br />
+  <div>
+    <div style="text-align: right;"><a href="http://nuget.org/"><i><span style="font-size: x-small;">http://nuget.org/</span></i></a></div>
+  </div>
+</blockquote>The idea was to create a local, company-internal NuGet repository. <br />
+<h2> Setting up a company-internal NuGet Repository</h2>That turned out to be simpler than expected. Creating a local
+NuGet repository is as simple as creating a folder on some network share and to deploy all of your NuGet packages
+there. <br />
+<h2> Configuring Visual Studio</h2>In order for NuGet to also search on your private repo you need to add the URL to
+the repository in your NuGet Package Manager Settings under <code>Tools &gt; Library Package Manager &gt; Package Manager Settings</code>.<br />
+<div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-xO0_TNrL14g/T46_Hbw4nhI/AAAAAAAADIQ/gjBpVvdqry8/s1600/nugetrepo.png"
+    imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="230" src="http://1.bp.blogspot.com/-xO0_TNrL14g/T46_Hbw4nhI/AAAAAAAADIQ/gjBpVvdqry8/s400/nugetrepo.png"
+      width="400" /></a></div><br />When you now invoke the Nuget Package Manager on a Visual Studio Project or
+Solution you should also see your private repo listed as a possible source:<br />
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-XgG2vdTMgy0/T47AKR1rZ2I/AAAAAAAADIY/GHfZTVs2LdA/s1600/nugetrepolisted.png"
+    imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="253" src="http://2.bp.blogspot.com/-XgG2vdTMgy0/T47AKR1rZ2I/AAAAAAAADIY/GHfZTVs2LdA/s400/nugetrepolisted.png"
+      width="400" /></a></div><br />You're ready! You can now start packaging your class libraries and dlls as NuGet
+packages.<br />
+<h2> Automate to the death?</h2>I'm not going to write on how to create NuGet packages as&nbsp;<a href="http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package"
+  rel="nofollow" target="_blank">NuGet has excellent docs on this</a>. What I did is to create a <code>.nuspec</code>
+file for the class library and then a nice <code>publishRelease.bat</code> containing something like <br />
+<pre class="brush:bash">msbuild Siag.Base.csproj /target:Rebuild /property:Configuration=Release <br />nuget pack Siag.Base.csproj -Symbols -Prop Configuration=Release<br />move *.nupkg \\snip\snip\NuGetRepository</pre>
+<h2> Releasing today means...</h2>
+<ul>
+  <li>Incrementing the version number in the AssemblyInfo.cs</li>
+  <li>double-clicking on the publishRelease.bat</li>
+</ul>
+<div>Like it! :)</div>

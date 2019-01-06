@@ -1,0 +1,17 @@
+---
+title: Find Code Duplicates with Sublime Text
+date: 2012-09-04T00:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+  - tooling
+tags:
+  - Antipatterns
+  - Best Practices
+url: /blog/2012/09/find-code-duplicates-with-sublime-text
+type: post
+---
+
+<p>Code duplication is the worst practice ever, right? Well, actually there <a href="http://blog.js-development.com/2012/04/qcon-london-my-personal-recap.html" target="_blank">might be situations</a> where duplicating can be better than factoring out, but these are very rare. But, before I loose myself in best practices preaches, here's a quick post about a possible way to use <a href="http://sublimetext.com/2" target="_blank">Sublime</a> for identifying code duplications.</p>
+
+Often, when I come across some conditions then it happens I see similar code pieces in each of the branches but it's often really hard to identify whether they really match in every part. So instead of going and comparing statement by statement, Sublime has this nice <kbd>Ctrl</kbd>+<kbd>D</kbd> shortcut which maps to the "Quick Add Next" command. What it does is to select the next match in the current document (btw. also adding multiple cursors, so you could directly edit each of the selections in <b>parallel</b>). So what you can do is to highlight a given code region, press <kbd>Ctrl</kbd>+<kbd>D</kbd> and look at how many matches there are:<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-lrcnszrpYDk/UEW4Z6u2-lI/AAAAAAAADiY/0U2JHGTv28s/s1600/codematches_doc.png" imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="271" src="http://1.bp.blogspot.com/-lrcnszrpYDk/UEW4Z6u2-lI/AAAAAAAADiY/0U2JHGTv28s/s400/codematches_doc.png" width="400" /></a></div>Bad...<br /><br />The same can obviously be applied by searching in multiple documents. Again, just select the code part of interest and press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> and then click on the "Find" button. This will present you a nice overview of all files with corresponding matches.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-SA_x50c5XHc/UEW5EuCjaBI/AAAAAAAADig/isUTox0pJ4o/s1600/filematches.png" imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="281" src="http://3.bp.blogspot.com/-SA_x50c5XHc/UEW5EuCjaBI/AAAAAAAADig/isUTox0pJ4o/s400/filematches.png" width="400" /></a></div>Simple but effective.

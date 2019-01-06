@@ -1,0 +1,25 @@
+---
+title: 'Visual Studio: Set the Build Action for an Entire Folder'
+date: 2012-05-14T00:00:00.000Z
+comments: true
+categories:
+- Tooling
+url: /blog/2012/05/visual-studio-set-build-action-for
+type: post
+---
+
+<p>I'm sure you already encountered this problem, right? In my specific case I have a folder called "frontend" with a
+  bunch of JavaScript, CSS and view template (EJS) files; my rich JavaScript client basically. I just need them when
+  starting my app in my local Visual Studio development server but they should not be copied when publishing. Why?
+  Because they walk through a Minifier and Linter before. The solution: set the <code>Build Action</code> to <code>None</code>.
+  That won't work on an entire folders however, sigh...</p>
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-qFE9gRNqius/T7CpRg0vmpI/AAAAAAAADOw/CYg7cyPHDUo/s1600/buildActionNone.png"
+    imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="163" src="http://3.bp.blogspot.com/-qFE9gRNqius/T7CpRg0vmpI/AAAAAAAADOw/CYg7cyPHDUo/s400/buildActionNone.png"
+      width="400" /></a></div><br />Since Visual Studio doesn't provide us such option, the solution is basically to
+open your .csproj file with your preferred editor and to replace all&nbsp;occurrences&nbsp;of <br />
+<pre class="brush:xml">&lt;Content Include="frontend\snip\snip\somefile.js" /&gt;</pre>with <br />
+<pre class="brush:xml">&lt;None Include="frontend\snip\snip\somefile.js" /&gt;</pre>I'll leave the regex for you ;).<br /><br />I
+just did it with <a href="http://www.sublimetext.com/blog/articles/sublime-text-2-beta" target="_blank">Sublime Text</a>
+and that's just amazing. Basically you do a <code>Ctrl+F</code> and enter your regex. Then you click the "Find All"
+button and it will <b>place a cursor automatically on all of the found&nbsp;occurrences</b>&nbsp;such that you can just
+edit those lines. Awesome!!

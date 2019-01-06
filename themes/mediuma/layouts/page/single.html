@@ -1,0 +1,28 @@
+{{ define "header"}}
+{{- partial "_shared/navbar.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+	<div class="row">
+		<div class="col-md-2 pl-0">
+			<!-- {{- partial "single-partials/share.html" . -}} -->
+		</div>
+		<div class="col-md-9 col-md-offset-2 col-xs-12">
+			<div class="mainheading">
+				<h1 class="posttitle">{{ .Title }}</h1>
+			</div>
+			<div class="article-post">
+				{{ .Content }}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- {{- partial "_shared/alertbar.html" . -}} -->
+{{ end }}
+
+{{ define "footer"}}
+<div class="container">
+	{{- partial "_shared/footer.html" . -}}
+</div>
+{{ end }}

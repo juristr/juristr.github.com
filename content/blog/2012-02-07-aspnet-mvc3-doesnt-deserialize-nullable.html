@@ -1,0 +1,39 @@
+---
+title: 'ASP.net MVC3: Doesn''t Deserialize Nullable Properties from Json'
+date: 2012-02-07T01:00:00.000Z
+comments: true
+categories:
+- JavaScript
+- 'C#'
+- ASP.net MVC
+- ".Net"
+url: /blog/2012/02/aspnet-mvc3-doesnt-deserialize-nullable
+type: post
+---
+
+<p>A couple of days ago I noticed that the <code>Nullable</code> properties of a C# object were not properly
+  deserialized when posting back a Json object to an MVC3 action. It seems like this is a bug in the <code><a href="http://msdn.microsoft.com/en-us/library/system.web.script.serialization.javascriptserializer.aspx" target="_blank">JavaScriptSerializer</a></code>
+  used by MVC3 to serialize/deserialize Json data.</p>
+
+This behavior is quite nerving as you probably have a lot of nullable properties, often resulting directly from the
+underlying data structure in the DB (especially in a data-base first case with EF). So one solution might be to create
+your separate ViewModels and somehow handle the mapping of the nullable properties through those. Extremely smelly!<br /><br />While
+browsing for a potential solution I came across <a href="http://syper-blogger.blogspot.com/2011/07/hello-world.html"
+  rel="nofollow" target="_blank">this blogpost</a>. According to the author of the post, apparently the <code>DataContractSerializer</code>
+doesn't have this problem. So what he does is to create an MVC3 ActionFilter for intercepting the call to the Action
+method and then to deserialize the arriving Json data using the <code>DataContractSerializer</code>.<br />
+<pre class="brush:csharp">public class JsonModelBinder : ActionFilterAttribute<br />{<br />    public JsonModelBinder()<br />    {}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />    public Type ActionParameterType { get; set; }<br />    public string ActionParameterName { get; set; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />    public override void OnActionExecuting(ActionExecutingContext filterContext)<br />    {<br />        HttpRequestBase request = filterContext.HttpContext.Request;<br />        Stream stream = request.InputStream;<br />        stream.Position = 0;<br />        filterContext.ActionParameters[ActionParameterName] =<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(new DataContractJsonSerializer(ActionParameterType)).ReadObject(stream);<br />    }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />}</pre>The
+real action method then looks as follows:<br />
+<pre class="brush:csharp">[HttpPost]<br />[JsonModelBinder(ActionParameterName="student", ActionParameterType=typeof(Student)]<br />public ActionResult Save(Student student)<br />{<br />    // save the student <br />    return View();<br />}</pre>Now,
+I didn't try "Syper blogger"'s approach, also because I don't really want all of the devs to require to put those
+attributes on every action method they write. This is a huge <b>overhead</b> and introduces <b>redundancy </b>in the
+type definition etc.<br /><br />So I aimed for a <b>more clean approach</b> by implementing a custom <code>IModelBinder</code>
+and by using the popular (and even more performant) <a href="http://nuget.org/packages/Newtonsoft.Json">Json.net</a>
+library for deserializing my entities. So the result looked like<br />
+<pre class="brush:csharp;highlight:[12,14,30]">public class MyCustomModelBinder: IModelBinder<br />{<br />    private IModelBinder fallbackModelBinder;<br /><br />    public MyCustomModelBinder(IModelBinder fallbackModelBinder)<br />    {<br />        this.fallbackModelBinder = fallbackModelBinder;<br />    }<br /><br />    public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)<br />    {<br />        if (controllerContext.HttpContext.Request.HttpMethod.Equals("GET", StringComparison.InvariantCultureIgnoreCase))<br />        {<br />            return this.fallbackModelBinder.BindModel(controllerContext, bindingContext);<br />        }<br />        else<br />        {<br />            //ONLY do this for POST,PUT,DELETE requests that transmit application/json<br />            string bodyText;<br />            using (var stream = controllerContext.HttpContext.Request.InputStream)<br />            {<br />                stream.Seek(0, SeekOrigin.Begin);<br />                using (var reader = new StreamReader(stream))<br />                    bodyText = reader.ReadToEnd();<br />            }<br /><br />            if (string.IsNullOrEmpty(bodyText))<br />                return (null);<br /><br />            return JsonConvert.DeserializeObject(bodyText, bindingContext.ModelType);<br />        }<br />    }<br />}</pre>Inside
+global.asax you have then to register the <code>IModelBinder</code> as follows: <br />
+<pre class="brush:csharp">protected void Application_Start()<br />{<br />   ...<br />   ModelBinders.Binders.DefaultBinder = new MyCustomModelBinder(ModelBinders.Binders.DefaultBinder);<br />   ...<br />}</pre><b>Note</b>
+that I'm only touching POST,PUT or DELETE requests that post Json data to my MVC3 webapp. All other requests are
+directly forwarded to the default model binder.<br /><br />I prefer this solution of the registration of ActionFilter
+attributes on each action method because in this way the deserialization process is completely transparent. Let me know
+if any better solution comes to your mind for solving this issue.

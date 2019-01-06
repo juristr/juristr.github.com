@@ -1,0 +1,37 @@
+---
+title: Watch out when cloning objects
+date: 2009-09-08T00:00:00.000Z
+comments: true
+categories:
+- 'C#'
+- ".Net"
+url: /blog/2009/09/watch-out-when-cloning-objects
+type: post
+---
+
+Cloning is never a good thing. I would say in most cases there is a better alternative for reaching your goal, but now
+and then it happens that you need it. But in such a case, be careful. Assume you have something like this:<br />
+<pre class="prettyprint">class Person<br />{<br />    public string Name { get; set; }<br />    public Address Address { get; set; }<br /><br />    public Person Clone()<br />    {<br />        return MemberwiseClone() as Person;<br />    }<br />}<br /><br />class Address<br />{<br />    public string Street { get; set; }<br />    public string Country { get; set; }<br />}<br /></pre>Note,
+to clone I have to use the inherited method "MemberwiseClone()" from Object and expose it publicly. This creates a
+shallow copy, meaning copying just the surface. So if you then have somewhere<br />
+<pre class="prettyprint">Person p = new Person<br />{<br />    Name = "Juri",<br />    Address = new Address<br />    {<br />        Street = "Bolzano",<br />        Country = "Italy"<br />    }<br />};<br /></pre>(using
+inline initialization just for the purpose of this demo) and then cloning the object by calling<br />
+<pre class="prettyprint">Person clone = p.Clone();<br /></pre>...you'll have the situation that the following statement
+will be true<br />
+<pre class="prettyprint">clone.Address == p.Address;</pre>If you read the documentation on MSDN it will also be clear
+why this is the case:<br />
+<blockquote>The MemberwiseClone method creates a <b>shallow copy</b> by creating a new object, and then copying the
+  nonstatic fields of the current object to the new object. If a field is a value type, a bit-by-bit copy of the field
+  is performed. If a field is a reference type, the reference is copied but the referred object is not; therefore, the
+  original object and its clone refer to the same object.</blockquote><br />One has to pay particular attention to
+this. If you ignore this and you expect to have different Address objects you may get weird behavior in your program
+which may be difficult to debug later on.<br /><br />So basically what would be expected above is to not do a shallow
+copy, but a <b>deep copy</b>. In such a case you shouldn't expose the Clone() method yourself but rather implement the
+ICloneable interface. The deep copy logic has to be implemented by yourself. The example above could then look like
+this<br />
+<pre class="prettyprint">public class Person : ICloneable<br />{<br />    public string Name { get; set; }<br />    public Address Address { get; set; }<br /><br />    #region ICloneable Members<br /><br />    public object Clone()<br />    {<br />        Person clone = MemberwiseClone() as Person;<br />        if (this.Address != null)<br />        {<br />            this.Address = this.Address.Clone() as Address;<br />        }<br /><br />        return clone;<br />    }<br /><br />    #endregion<br />}<br /><br />public class Address : ICloneable<br />{<br />    public string Street { get; set; }<br />    public string Country { get; set; }<br /><br />    #region ICloneable Members<br /><br />    public object Clone()<br />    {<br />        return MemberwiseClone();<br />    }<br /><br />    #endregion<br />}<br /></pre>This
+could be one way of doing it. However be sure that you have the control of the whole object hierarchy. Cloning customer
+server controls (that inherit from the standard web controls) won't be such a good idea since there are too much
+dependencies among the object hierarchy which could lead to strange side effects. I was experiencing some of them, but
+I'll post an update as soon as I found the exact reason.<br /><br /><a href="http://blogs.msdn.com/brada/archive/2003/04/09/49935.aspx">Brad
+  Abrams</a> mentions some comments on implementing the ICloneable interface which may be worth looking at.

@@ -1,0 +1,36 @@
+---
+title: NullsafeGet extension method? Simplicity for the cost of readability??
+date: 2009-08-14T00:00:00.000Z
+comments: true
+categories:
+- 'C#'
+- ".Net"
+url: /blog/2009/08/nullsafeget-extension-method-simplicity
+type: post
+---
+
+When programming, there is often the the situation where you have to continuously do the null-check in order to not get
+exceptions. For instance take the dummy example of a Person object with an according Address object. Like this...<br />
+<pre class="prettyprint">class Person<br />{<br />    public string Name { get; set; }<br />    public Address Address { get; set; }<br />}<br /><br />class Address<br />{<br />    public string Street { get; set; }<br /><br />    public string GetCountry()<br />    {<br />        return "Italy"; //just dummy code<br />    }<br />}<br /></pre>Now
+consider the case where you'd like to access the Street property of the Address object<br />
+<pre class="prettyprint">//some code, person is an instance of Person<br />textBoxStreet.Text = person.Address.Street;<br /></pre>I
+guess everyone agrees that this will give a nice NullReferenceException if the Address object is null. This results in
+continuously (now this is just a dummy example) checking for null<br />
+<pre class="prettyprint">...<br />if(person.Address != null)<br />  textBoxStreet.Text = person.Address.Street;<br /></pre>In
+this example it even looks simple enough, but in certain conditions it may be quite awkward. I actually found the
+approach on a <a href="http://stackoverflow.com/questions/1196031/evil-use-of-maybe-monad-and-extension-methods-in-c">Stackoverflow
+  post</a> which pointed to <a href="http://code.logos.com/blog/2008/01/nullpropagating_extension_meth.html">this blog
+  here</a>. A solution is to use extension methods which - apparently - can also be applied to a null instance of an
+object.<br />
+<pre class="prettyprint">public static class NullSafeGetExtension<br />{<br /><br />    public static U NullsafeGet&lt;T, U&gt;(this T t, Func&lt;T, U&gt; fn)<br />    {<br />        if (t != null)<br />            return fn(t);<br />        else<br />            return default(U);<br />    }<br /><br />}<br /></pre>I
+called it "NullsafeGet", another commonly used name is "IfNotNull"...it's just a matter of preferences. This solution
+allows to write the above code like<br />
+<pre class="prettyprint">//some code, person is an instance of Person<br />textBoxStreet.Text = person.NullsafeGet(x =&gt; x.Address).NullsafeGet(x =&gt; x.Street);<br /></pre>This
+turns out to be a quite nice solution since you don't need all of the nested ifs. In this example it was obviously
+simple enough to write the if instead of using the extension methods. This piece from the Stackoverflow post probably
+illustrates the advantage in a more clear way:<br />
+<pre class="prettyprint">string activeControlName = null;<br />var activeForm = Form.ActiveForm;<br />if (activeForm != null)<br />{<br />    var activeControl = activeForm.ActiveControl;<br />    if(activeControl != null)<br />    {<br />        activeControlname = activeControl.Name;<br />    }<br />}<br /></pre>And
+with the extension method solution...<br />
+<pre class="prettyprint">activeControlname = activeForm.NullsafeGet(x =&gt; x.ActiveControl).NullsafeGet(x =&gt; x.Name);<br /></pre>Although
+this looks quite nicely, my doubt is on the readability of the code itself....So I don't know whether I'll really use
+it...<br />What do you think??

@@ -1,0 +1,11 @@
+---
+title: Extending JavaScript objects with custom functions
+date: 2008-07-14T00:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+url: /blog/2008/07/extending-javascript-objects-with
+type: post
+---
+
+It is nice how JavaScript objects can be extended with additional custom functions. Today for instance I needed a "contains" function (as it exists already on Java String objects). This can be achieved very nicely as the example below demonstrates:<br /><pre class="prettyprint">&lt;html&gt;<br />&lt;head&gt;<br /> &lt;script type="text/javascript"&gt;<br />  String.prototype.contains = function(someString){<br />   return (this.indexOf(someString) &gt;= 0) ? true : false;<br />  }<br /> <br />  function test(){<br />   var stringA = new String('Hallo');<br />   var stringB = 'llo';<br />   alert(stringA.contains(stringB));<br />  }<br /> &lt;/script&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br /> &lt;a href="#" onClick="javascript:test();"&gt;Click me!&lt;/a&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</pre>

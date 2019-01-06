@@ -1,0 +1,77 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{{ .Hugo.Generator }}
+	{{ with .Site.Params.icon }}
+	<link rel="shortcut icon" href="{{ . | urlize | relURL }}">
+	{{ end }}
+	<title>{{ .Page.Title }} | {{ .Site.Title }}</title>
+	{{ with .Site.Params.meta.description }}
+	<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.meta.keywords }}
+	<meta name="keywords" content="{{ . }}">{{ end }}
+
+	<!-- Profile links -->
+	<meta name="author" content="{{ .Site.Params.author.name }}">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	<!-- Webmaster verification tokens -->
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	<!-- Twitter cards -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="{{ .Page.Title }}" />
+	{{ if isset .Page.Params "lead" }}
+	<meta name="twitter:description" content="{{ .Page.Params.lead }}" />
+	{{ end }}
+
+	{{ if isset .Page.Params "image" }}
+	<meta name="twitter:image:src" content="https://juristr.com{{ .Page.Params.image | urlize | relURL }}" />
+	{{ end }}
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	{{ with .OutputFormats.Get "rss" -}}
+	{{ printf `
+	<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
+
+	<!-- INCLUDES -->
+
+	<!-- Bootstrap core CSS -->
+	<link href="{{ "/css/bootstrap.min.css" | urlize | relURL }}" rel="stylesheet">
+
+	<!-- Fonts -->
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+	<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/github.min.css"> -->
+
+	<!-- Custom styles for this template -->
+	<!-- <link href="{{ "/css/mediumish.css" | urlize | relURL }}" rel="stylesheet"> -->
+	{{ $main := resources.Get "/scss/main.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" media="screen">
+
+	<!-- <link href="{{ "/css/additional.css" | urlize | relURL }}" rel="stylesheet">
+	<link href="{{ "/css/tango_syntax.css" | urlize | relURL }}" rel="stylesheet">
+	<link href="{{ "/css/fluidbox.min.css" | urlize | relURL }}" rel="stylesheet"> -->
+
+	{{ if eq .Kind "home" }}
+	{{ $styles := resources.Get "/scss/home.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+	{{ end }}
+
+	{{ if eq .Kind "page" }}
+	{{ $styles := resources.Get "/scss/article.scss" | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+	{{ end }}
+
+	<!-- <link href="{{ "/css/article.css" | urlize | relURL }}" rel="stylesheet"> -->
+</head>

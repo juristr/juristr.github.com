@@ -1,0 +1,15 @@
+---
+title: >-
+  JavaScriptSerializer: Circular Reference was Detected While Serializing an
+  Object of Type...
+date: 2011-08-12T00:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+  - ASP.net MVC
+  - 'C#'
+url: /blog/2011/08/javascriptserializer-circular-reference
+type: post
+---
+
+Consider an ASP.net MVC web application where you use some Ajax for retrieving an object. Let's start from the server-side MVC controller:<br /><br /><br /><pre class="brush:c#">public class BaseDataController : Controller<br />{<br />    private DataRepository repository;<br /><br />    public BaseDataController()<br />    {<br />        repository = new DataRepository();<br />    }<br /><br />    public JsonResult GetOperationDefinitionByCode(string operationCode)<br />    {<br />        return Json(repository.GetOperationDefinitionByCode(operationCode), JsonRequestBehavior.AllowGet);<br />    }<br />}<br /><br />public class DataRepository<br />{<br />   private EntityContext context;<br />   ...<br /><br />   public OperationDefinition GetOperationDefinitionByCode(string operationCode)<br />   {<br />      return context.OperationDefinitions.Where(x =&gt; x.OperationCode == operationCode).FirstOrDefault();<br />   }<br />}<br /></pre>So far, so good. Now you call your controller via a GET request, like <code>http://localhost:40492/basedata/getoperationdefinitionbycode/?operationCode=120</code>. This will call your method, but unfortunately it returns an exception:<br /><blockquote>A circular reference was detected while serializing an object of type 'System.Data.Entity.DynamicProxies.OperationDefinition_12123132123....' </blockquote><br /><a name='more'></a>The issue here - at least in my case - was the new DbContext T4 template for generating the EntityFramework entities. In order to be able to perform the change tracking, this templates uses the Proxy pattern, by wrapping your nice POCOs with them. This then causes the issues when serializing with the&nbsp;<code>JavaScriptSerializer</code>.<br /><br />Now there are two solution possibilities. Either you just serialize and return the properties you need on the client, like<br /><pre class="brush:c#">public class BaseDataController : Controller<br />{<br />    private DataRepository repository;<br /><br />    public BaseDataController()<br />    {<br />        repository = new DataRepository();<br />    }<br /><br />    public JsonResult GetOperationDefinitionByCode(string operationCode)<br />    {<br />        OperationDefinition result = repository.GetOperationDefinitionByCode(operationCode);<br />        return Json(<br />             new <br />             {<br />                  Description = result.Description<br />             },<br />             JsonRequestBehavior.AllowGet);<br />    }<br />}<br /></pre>Alternatively you may switch off the automatic generation of proxies by setting it on the context's configuration:<br /><pre class="brush:c#">context.Configuration.ProxyCreationEnabled = false;<br /></pre>

@@ -1,0 +1,11 @@
+---
+title: IE8 Trouble Continued...Hangs on Dropdown Selection
+date: 2012-07-16T00:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+url: /blog/2012/07/ie8-trouble-continuedhangs-on-dropdown
+type: post
+---
+
+<p>The trouble <a href="http://blog.js-development.com/2012/07/strange-error-when-downloading-file-in.html" target="_blank">seems to continue</a>. In one of our apps, when clicking on a dropdown list, IE8 hang up completely. I quickly searched for similar problems and apparently IE has its issues with dropdowns. Anyway, here's a quick guide to a fix that worked for me.</p>After I got notified by one of our clients, I setup a virtual machine with XP and IE8 installed and indeed, I was able to successfully reproduce the odd behavior. Basically when opening the dropdown and selecting an entry the browser completely blocked.<br /><div class="separator" style="clear: both; text-align: center;"><img border="0" height="400" src="http://4.bp.blogspot.com/-ZjCA1xv1iGA/UAQFg-MHS3I/AAAAAAAADZ8/u0DmueFO4bs/s400/dropdown_expanded.png" width="245" /></div><i><span style="font-size: x-small;">(Note the "Windows Internet Explorer (Not Respnding)" in the title bar)</span></i><br /><br />..and about a couple of minutes later<br /><div class="separator" style="clear: both; text-align: center;"><img border="0" src="http://3.bp.blogspot.com/-olVrSPOH4QQ/UAQFhYUGI2I/AAAAAAAADaA/3A5paTJDTBA/s1600/ieunresponsive.png" /></div><br />IE9, Chrome and Firefox obviously worked just perfectly. I searched in the codebase for any interactions with the dropdown and found this event listener:<br /><pre class="brush:javascript;highlight:[3]">".nationList change": function (el, ev) {<br />    // current nation id<br />    var nationId = el.context.selectedOptions[0].value;<br /><br />    //snip snip snip<br />}</pre>One of our devs used the highlighted line to extract the currently selected dropdown option. It's a rather complicated approach, but not wrong at all, at least it worked on the other browsers. The line seemed suspect to me and so I changed it to the much simpler jQuery alternative... <br /><pre class="brush:javascript">...<br />var nationId = $(el).val();<br />...<br /></pre>...and see there, everything worked as expected and also IE8 didn't hang no longer. Don't ask me why this happened, but it seems to work now.

@@ -1,0 +1,89 @@
+.article-post {
+    img {
+      width: 100%;
+    }
+  
+    figcaption {
+      font-size: 14px;
+      text-align: left;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      font-style: normal;
+      color: $lightgray;
+    }
+  
+    a.image--zoom {
+      text-decoration: none;
+      background-image: none !important;
+    }
+  
+    figure.image--wide {
+      width: 950px;
+      margin-left: -40px;
+  
+      img {
+        width: 950px;
+      }
+  
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+  
+        img {
+          width: 100%;
+        }
+  
+      }
+    }
+  
+    figure.image--left,
+    img.image--left,
+    a.image--left {
+      float: left;
+      width: 50%;
+      height: auto;
+      padding-right: 20px;
+    }
+  
+    .image--small {
+      width: 50%;
+      height: auto;
+    }
+  
+    .image--medium {
+      width: 70%;
+      height: auto;
+    }
+  
+    // .image--full {
+    //     margin-left: calc(50% - 50vw);
+    //     margin-right: calc(50% - 50vw);
+    //     width: auto;
+    //     max-width: 1000%;
+        
+    //     img {
+    //         display: block;
+    //         margin: 0 auto;
+    //     }
+  
+    //   figcaption {
+    //     text-align:center !important;
+    //   }
+    // }
+  
+    .gallery {
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+  
+    .col-2 {
+      width: 49%;
+    }
+  
+    .col-3 {
+      width: 32%;
+    }
+  
+  }

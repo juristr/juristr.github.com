@@ -1,0 +1,106 @@
+---
+title: First steps with Silverlight. What about GWT?
+date: 2008-12-23T01:00:00.000Z
+comments: true
+categories:
+- GWT
+- Java
+tags:
+- Silverlight
+url: /blog/2008/12/first-steps-with-silverlight-what-about
+type: post
+---
+
+Last week I had some time which allowed me to do some experiments with Microsoft Silverlight. I had to give it a try
+since you hear so much on the web about it, so I was quite curious, how it works out.<br />When searching for a
+tutorial, I watched a couple of videos and finally ended on Scott Guthrie's blog where he presents a <a href="http://weblogs.asp.net/scottgu/pages/silverlight-2-end-to-end-tutorial-building-a-digg-search-client.aspx">"End-to-End
+  tutorial" of creating a Digg search client with Silverlight 2</a>. I followed the tutorial and it's great, since it
+gives you quite a good feeling of the environment. The tutorial consists of the following eight parts:<br />
+<ul>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-1-creating-quot-hello-world-quot-with-silverlight-2-and-vs-2008.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-1-creating-quot-hello-world-quot-with-silverlight-2-and-vs-2008.aspx"
+      style="color: #3399ff;" target="_blank">Part 1: Creating "Hello World" with Silverlight 2 and VS 2008</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-2-using-layout-management.aspx" mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-2-using-layout-management.aspx"
+      style="color: #3399ff;" target="_blank">Part 2: Using Layout Management</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-3-using-networking-to-retrieve-data-and-populate-a-datagrid.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-3-using-networking-to-retrieve-data-and-populate-a-datagrid.aspx"
+      style="color: #3399ff;" target="_blank">Part 3: Using Networking to Retrieve Data and Populate a DataGrid</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-4-using-style-elements-to-better-encapsulate-look-and-feel.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-4-using-style-elements-to-better-encapsulate-look-and-feel.aspx"
+      style="color: #3399ff;" target="_blank">Part 4: Using Style Elements to Better Encapsulate Look and Feel</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-5-using-the-listbox-and-databinding-to-display-list-data.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-5-using-the-listbox-and-databinding-to-display-list-data.aspx"
+      style="color: #3399ff;" target="_blank">Part 5: Using the ListBox and DataBinding to Display List Data</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-6-using-user-controls-to-implement-master-detail-scenarios.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-6-using-user-controls-to-implement-master-detail-scenarios.aspx"
+      style="color: #3399ff;" target="_blank">Part 6: Using User Controls to Implement Master/Details Scenarios</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-7-using-control-templates-to-customize-a-control-s-look-and-feel.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-7-using-control-templates-to-customize-a-control-s-look-and-feel.aspx"
+      style="color: #3399ff;" target="_blank">Part 7: Using Templates to Customize Control Look and Feel</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-8-creating-a-digg-desktop-application-using-wpf.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-8-creating-a-digg-desktop-application-using-wpf.aspx"
+      style="color: #3399ff;" target="_blank">Part 8: Creating a Digg Desktop Version of our Application using WPF</a></li>
+</ul>And here's a screenshot of my outcome (basically the same as on Scott's tutorial obviously :) ):<br />
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_tF6XjsUy87k/SUEvnXV-lCI/AAAAAAAABqU/40FdqPz79gQ/s1600-h/silverlightFirstSteps.jpg"
+    imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/_tF6XjsUy87k/SUEvnXV-lCI/AAAAAAAABqU/40FdqPz79gQ/s320/silverlightFirstSteps.jpg" /></a></div>I
+was really impressed of the environment. And you know...as most of us probably do, I'm personally always aiming to
+build highly user-friendly applications because at the end that's what counts, since that's the point where your users
+interact with your application. When we talk about web applications and user-friendliness, most often we have to speak
+about high-responsiveness of the web application, which again - on the web - is strongly connected with Ajax.
+Traditional Asp.net applications don't give you this value. Having the page refreshing on each action is somehow
+annoying because the user has to continuously wait till he sees the user interface again for being able to continue and
+this is somehow distracting.<br /><br />What regards Ajax technologies, Google is for sure one of the leaders in that
+field. They are able to build highly-interactive web applications (i.e. <a href="http://www.gmail.com/">Gmail</a> , <a
+  href="http://maps.google.com/">Google Maps</a> ,...) which don't feel any more like web applications but more like
+normal desktop apps. I did a couple of experiments also with the <a href="http://code.google.com/webtoolkit/">GWT
+  (Google Web Toolkit)</a> which allows you to program (quite) normal Java code which then gets translated into pure
+JavaScript by the GWT-compiler. Again these applications are great. GWT allows you to build desktop-like applications
+running on the browser that communicate with some server over web service calls (using XML, Json,...) or even with RPC
+(remote procedure calls). Programming GWT is cool and there are a couple of good online tutorials. Everything is
+perfectly integrated into <a href="http://www.eclipse.org/">Eclipse</a> , and you can even debug (!!) your application,
+your written Java code in Eclipse, which is not that straightforward if you think of debugging JavaScript code. Also
+the deployment process is easy, you've just to copy the compiled (generated) set of HTML and JavaScript files on your
+webserver. If you then combine your GWT client with advanced web frameworks like the Spring Web MVC framework you get
+even more benefits out of it. Although it is possible, that process of letting GWT communicate with your Spring
+application framework through GWT RPC calls is not that easy (I may post a short tutorial on that on some later posts).
+The point with GWT, as with most Java technologies, is the learning curve. You need to investigate quite a lot
+initially to really become productive (especially in designing good user-interfaces and user-interface components).<br />Now
+why did I mention GWT? Well because Silverlight seems to be somehow Microsoft's answer to it. Well not exactly because
+it is more similar to Flash than the GWT, but it is Microsoft's trial to provide a framework for easily developing
+highly interactive web applications. You can build Silverlight applications by using XAML files and the .Net framework.
+So you don't have to learn anything new and that will be one of the major advantages. Another point which is really
+cool, is how easily you can bind object properties on your interface (inside the XAML file). Scott Guthrie's tutorial
+points this out. The best is that you try the tutorial to get a feeling of Silverlight.<br /><br />If you compare
+Silverlight with GWT from the point of the prerequisites which you need to run the different kind of applications, GWT
+is for sure the winner. It uses the standard JavaScript which is supported by all of the commonly used browsers. The
+produced JavaScript is performance and cross-browser optimized. For being able to run Silverlight applications you need
+to download the framework to the client first (similar to Flash, where you first have to install the Flash Player).<br />From
+a "productivity" point of view, I think Silverlight will be better, but it very much depends on the situation. If you
+start from scratch, Silverlight will for sure be better, due to the Microsoft "visual" way of programming. You have
+your designer, where you can quickly compose several predefined components. By using Microsoft Expression Blend,
+designing UI's will even be more easy. Also the rendering of the object-data on the UI is straightforward due to the
+implemented data-binding mechanism. Moreover you can nearly continue programming like you were accustomed when building
+normal Asp.net apps. Here, GWT is (initially) a bit more complicated. For programming you can only use a subset of the
+Java programming language. This is due to the fact that GWT "compiles" Java into JavaScript and so the GWT team has to
+continuously implement the new Java features into their compiler. Designing the UI is a bit awkward. You have to keep a
+good overview and impose a good structure, by creating UI components which again you combine on the UI s.t. everything
+remains flexible and exchangeable. As I mentioned, this will produce some overhead, since initially you spend quite a
+lot of time in producing good UI's. Once you have your components, you may reuse them however on your other GWT apps.
+Unfortunately there don't exist any predefined "visual editors" for GWT integrated in Eclipse. <a href="http://www.instantiations.com/prods/docs/ajax.html">Instantiations</a>
+however provides one (you have to pay it), but I never tried it out. Another "disadvantage" is the databinding
+mechanism (binding your object-data to the UI). You have to create a data-binding mechanism yourself. There doesn't
+exist anything like in Silverlight. <a href="http://blog.js-development.com/2008/03/logical-separation-with-mvc.html">MVC</a>
+works out well here, and again, if you design your components in an intelligent and smart way, you're able to reuse
+them. The prerequisite here is that you have a good understanding of such design patterns as MVC, observer, mediator
+etc...everything it includes basically. In Silverlight you can get rid of these details which from a productive point
+of view may be an advantage, from a learning point of view however you loose some interesting aspects.<br /><br />Don't
+take this comparison too seriously, it's just a really informal description of what I experienced somehow...to do a
+better job, one would have to really program the same sample app with Silverlight and GWT and extract some metrics.<br /><br />Generally
+speaking, I think that Silverlight is as most of Microsofts technologies. Microsoft provides you with great and
+powerful tools, where you can quickly build and set-up a  running application, possibly already connected to some
+datasource. But that may be also a dangerous part, these "fast" solutions may not always be optimal from an
+architectural point of view, but again that would be enough stuff for another post (which may come :) ).<br />But I'm
+concluding this post now, it already became too long...btw with this post is number 100 for this year :D<br />I wish
+you Merry Christmas!!<br /><br /><span style="text-decoration: underline;">References:</span><br /><a href="http://www.microsoft.com/silverlight/resources/install.aspx">Install
+  Silverlight</a><br /><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=c22d6a7b-546f-4407-8ef6-d60c8ee221ed&amp;DisplayLang=en">Silverlight
+  tools for Visual Studio 2008</a><br /><a href="http://code.google.com/webtoolkit/">GWT main site</a><br /><a href="http://code.google.com/webtoolkit/app_gallery.html">http://code.google.com/webtoolkit/app_gallery.html</a>

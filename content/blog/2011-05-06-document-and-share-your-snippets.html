@@ -1,0 +1,50 @@
+---
+title: 'Document and Share Your Snippets: Presenting SnippetDoc'
+date: 2011-05-06T00:00:00.000Z
+comments: true
+url: /blog/2011/05/document-and-share-your-snippets
+type: post
+---
+
+Increasing the productivity in the long run is most often tightly related to increasing the quality. Beside introducing
+best practices like automated testing, <b>defining standards</b> is a good way to start. Standardizing activities in
+the software development process has several advantages...<br />
+<ul>
+  <li>Development of a common sense and sharing of knowledge among different development teams</li>
+  <li>Similarity among realization of software solutions (i.e. a corporate design encompasses many "standards")</li>
+  <li>Easier maintenance</li>
+  <li>Greater flexibility in sharing developers among development teams <i>(they work the same way)</i></li>
+  <li>Represent proven, best practices of approaching problems</li>
+  <li>Tend to get improved over time as they are continuously implemented across different projects</li>
+</ul><a name='more'></a>Tendentially they help in achieving higher quality results and increase the productivity of
+developers by providing them well defined solutions for re-occurring&nbsp;problems, kind of patterns basically.<br /><br /><span
+  class="Apple-style-span" style="font-size: large;"><b>How to Promote Them Among Teams??</b></span><br />There are
+different kind of strategies for promoting standards among developers. I usually prefer the active kind of approaches.
+It is of high importance to nail them down on some company-internal wiki site where people can go and have a look at
+them. However, from a learning point of view,&nbsp;doing presentations and pair programming sessions for disseminating
+new standards is way more effective.<br /><br />At the coding level, IDE integrated code snippets are a great way of
+supporting the diffusion of such standards among the different developers. Consider for instance that we want each of
+our unit test methods structured according to the suggested AAA pattern:<br />
+<pre class="brush:c#">[TestMethod]<br />public void TestCreateSum_TwoValidPositiveNumbers_ShouldSumUpCorrectly()<br />{<br />   //Arrange<br /><br />   //Act<br /><br />   //Assert<br />}<br /></pre>How
+can you <b>help</b> your devs follow such guidelines? An interesting approach is to make the implementation of these
+standards as easy as possible, for instance by creating code snippets for the IDE, i.e. Visual Studio. So - for
+instance - a dev does just have to type&nbsp;"newTestMethod" for the above construct to appear on his editor. <b>Visual
+  Studio</b>&nbsp;is very good at allowing to define such snippets and by using the <b><a href="http://snippeteditor.codeplex.com/">Snippet
+    Editor</a></b> it requires you really just a few clicks to create a new snippet.<br /><br /><span class="Apple-style-span"
+  style="font-size: large;"><b>The Problem: Sharing...and Documenting</b></span><br />As long as you keep the snippet
+just locally for yourself, <b>others in your team can't benefit from it</b>. The best place therefore is to deploy all
+code snippets at a central location which is accessible by all of them. Maybe on Dropbox, or some network drive. Your
+team mates then reference this location containing the snippets in their IDE. When you update one of the snippets, they
+immediately get the update on their editor.<br />The problem: <b>how do you document them</b>. How do your team mates
+know which snippets are available?? Directly browsing the .snippet files on the folder?? Bad!<br /><br /><b><span class="Apple-style-span"
+    style="font-size: large;">SnippetDoc</span></b><br />SnippetDoc aims to address this lack of documentation
+possibilities. It is a very small, tiny app I wrote which automates the process of scanning a given snippet folder and
+then to produce a nicely formatted HTML report with the found snippets.<br />
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-CJduuq0H35Y/Tayffj9l-tI/AAAAAAAAC1M/aNp-42w9br0/s1600/SnippetDocOutputSampleBig.png"
+    imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="182" src="http://3.bp.blogspot.com/-CJduuq0H35Y/Tayffj9l-tI/AAAAAAAAC1M/aNp-42w9br0/s320/SnippetDocOutputSampleBig.png"
+      width="320" /></a></div>This HTML page can then be placed on a location where each of your members has access and
+can get an insight of the available snippets with the according shortcut, description, last modification as well as the
+produced code sample.<br /><br />Check it out at<br />
+<div style="text-align: center;"><span class="Apple-style-span" style="font-size: large;"><b><a href="http://snippetdoc.codeplex.com/">http://snippetdoc.codeplex.com</a></b>.&nbsp;</span></div><br />But
+be patient, at the time of this post it is still in beta :). Feel free to leave some comments for improvements /
+defects.

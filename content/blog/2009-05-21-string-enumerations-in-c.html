@@ -1,0 +1,37 @@
+---
+title: 'String enumerations in C#'
+date: 2009-05-21T00:00:00.000Z
+comments: true
+categories:
+- 'C#'
+- ".Net"
+url: /blog/2009/05/string-enumerations-in-c
+type: post
+---
+
+Enumerations are a very handy programming construct. Especially when you're developing in a larger team, you can
+prevent a lot of problems and possible bugs by using enum types for properties that can just have certain values. Take
+for instance a class property "Status". It could have several different values: just "open" and "closed" or "O" and "C"
+or "M" for modified and "C" for complete etc...If another developer in the team is using your class he always will have
+to directly go to your class in order to check the specifications (since also useful intellisense comments are missing
+;) ). But if you would use enumerations he can just type and will immediately see a list of possible values. Moreover
+you prevent stupid bugs such as (if "C" and "M" would be the correct values) that he assigns "c" and "m" where you can
+sure that at some point in your app there will be a wrong comparison. <br /><br />The problem however in C# is that you
+cannot have string enumerations although often they would be handy. I recently had the case where a possible DB value
+for a property is "C" for complete and "M" for modified. Furthermore these values have also to be written to a CSV
+file. Here a string enumeration would be great, wouldn't it? Of course you could argue to just use constant string
+fields, but that wouldn't be so elegant. So I decided to create one.<br />I searched on the web and found <a href="http://www.codeproject.com/KB/cs/stringenum.aspx">this
+  solution</a> which I've taken in part and modified to make it a bit more convenient (at least from my point of view).
+The strategy in this example is to make use of the System.Attribute to enhance standard enumerations.<br />
+<pre class="prettyprint">using System;<br />using System.Collections.Generic;<br />using System.Linq;<br />using System.Web;<br /><br />namespace Jsdevlib.Base<br />{<br />    public class StringValueAttribute : System.Attribute<br />    {<br />        public StringValueAttribute(string value)<br />        {<br />            _Value = value;<br />        }<br /><br />        private string _Value;<br />        public string Value<br />        {<br />            get<br />            {<br />                return _Value;<br />            }<br />        }<br />    }<br />}</pre>Then
+you can create your string enumeration as needed. For instance<br />
+<pre class="prettyprint">using System;<br />using System.Collections.Generic;<br />using System.Linq;<br />using System.Web;<br />using Jsdevlib.Base;<br /><br />namespace SimpleTests<br />{<br />    public enum StringEnumeration<br />    {<br />        [StringValue("C")]<br />        COMPLETE = 1,<br /><br />        [StringValue("M")]<br />        MODIFIED = 2<br />    }<br />}</pre>To
+now retrieve the defined StringValue, the example on CodeProject used an additional utility class. I preferred to
+slightly change this implementation and to use the C# extension methods:<br />
+<pre class="prettyprint">using System;<br />using System.Collections.Generic;<br />using System.Linq;<br />using System.Web;<br />using System.Reflection;<br /><br />namespace Jsdevlib.Base<br />{<br />    public static class StringEnumExtender<br />    {<br />        public static string StringValue(this Enum value)<br />        {<br />            string output = null;<br />            Type type = value.GetType();<br /><br />            FieldInfo fi = type.GetField(value.ToString());<br />            StringValueAttribute[] attrs =<br />               fi.GetCustomAttributes(typeof(StringValueAttribute),<br />                                       false) as StringValueAttribute[];<br />            if (attrs.Length &gt; 0)<br />            {<br />                output = attrs[0].Value;<br />            }<br />            else<br />            {<br />                throw new InvalidOperationException("The StringValue can just be invoked on String enumerations having the '[StringValue(...)]' attribute.");<br />            }<br /><br />            return output;<br />        }<br />    }<br />}<br /></pre>To
+retrieve the string value you can do now something like<br />
+<pre class="prettyprint">StringEnumeration.COMPLETE.StringValue();</pre>But pay attention that you have to first import
+the namespace in which you have definde your StringEnumExtender, because otherwise you won't see the StringValue()
+method. That's the drawback of extension methods.<br />This kind of mechanism gives you great flexibility since you can
+add the StringValue attribute to whatever enumeration. Btw, invoking the StringValue() on enumerations that don't
+define a StringValue attribute an exception will be thrown. I found that the most reasonable behavior.

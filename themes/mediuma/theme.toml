@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Mediuma"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = ""
+homepage = "https://juristr.com"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Juri Strumpflohner"
+  homepage = "https://juristr.com"
+
+# If porting an existing theme
+[original]
+  name = "Mediumish"
+  homepage = "https://www.wowthemes.net/mediumish-free-bootstrap-4-0-html-template-medium-styled/"
+  repo = ""

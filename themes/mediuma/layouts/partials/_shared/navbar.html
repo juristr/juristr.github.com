@@ -1,0 +1,90 @@
+<!-- Begin Menu Navigation
+================================================== -->
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        <!-- Begin Logo -->
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://developers.google.com/experts/people/juri-strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                <!-- <a class="btn follow" href="https://twitter.com/wowthemesnet" target="blank"><i class="fa fa-twitter"></i>
+                    Follow</a>
+
+
+                <a target="_blank" href="https://plus.google.com/+WowthemesNet"> <i class="fa fa-google-plus social"></i></a>
+                <a target="_blank" href="https://facebook.com/wowthemesnet"> <i class="fa fa-facebook social"></i></a> -->
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="{{ .Site.BaseURL }}/">
+                    {{ with .Site.Params.logo }}
+                    <img src="{{ . | urlize | relURL }}" alt="logo">
+                    {{ else }}
+                    <span style="font-family:Righteous;">{{.Site.Title}}</span>
+                    {{ end }}
+                </a>
+                <!-- <a class="navbar-brand" href="https://www.themepush.com/demo-mediumish/">{{.Site.Title}}</a> -->
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        <!-- End Logo -->
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                <!-- <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+                    data-target="#bs4navbar" aria-controls="bs4navbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div id="bs4navbar" class="navbar-collapse">
+                    {{ $currentPage := . }}
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        {{ range .Site.Menus.main }}
+                        <li class="menu-item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                            <a class="nav-link" href="{{ .URL }}">{{ .Name | title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+
+                    <!-- <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        <li id="menu-item-247" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-247 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/" class="nav-link">Home</a></li>
+                        <li id="menu-item-68" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-68 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/category/life/" class="nav-link">life</a></li>
+                        <li id="menu-item-69" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-69 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/category/marketing/" class="nav-link">marketing</a></li>
+                        <li id="menu-item-71" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-71 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/category/how-to/" class="nav-link">how
+                                to</a></li>
+                        <li id="menu-item-109" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-109 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/category/creativity/" class="nav-link">creativity</a></li>
+                        <li id="menu-item-185" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-185 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/category/social/" class="nav-link">social</a></li>
+                        <li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/authors/" class="nav-link">Authors</a></li>
+                        <li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/write-for-us/" class="nav-link">Write
+                                for Us</a></li>
+                        <li id="menu-item-192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-192 nav-item"><a
+                                href="https://www.themepush.com/demo-mediumish/contact/" class="nav-link">Contact</a></li>
+                    </ul> -->
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>

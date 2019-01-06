@@ -1,0 +1,20 @@
+---
+title: Persisting the current perspective state of an RCP
+date: 2008-11-15T01:00:00.000Z
+comments: true
+categories:
+- Java
+tags:
+- Eclipse RCP
+- Eclipse
+url: /blog/2008/11/persisting-current-perspective-state-of
+type: post
+---
+
+If you're developing on Eclipse RCP applications it may be interesting to save the perspective layout and open views of
+the user s.t. when he launches the application the next time, everything looks as before. That may sound difficult but
+actually it is really simple.<br />In your ApplicationWorkbenchAdvisor.java, in the initialize(IWorkbenchConfigurer)
+just write the following:<br /><br />
+<pre class="prettyprint">public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {<br />   ...<br /><br />   @Override<br />   public void initialize(IWorkbenchConfigurer configurer) {<br />      super.initialize(configurer);<br />      configurer.setSaveAndRestore(true);<br />      ...<br />   }<br /><br />   ...<br />}<br /></pre>This
+should work fine. In case it doesn't, try to get the WorkbenchConfigurer by calling the method getWorkbenchConfigurer()
+and invoke the setSaveAndRestore(...) on that.

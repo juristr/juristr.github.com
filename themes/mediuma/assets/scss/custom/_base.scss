@@ -1,0 +1,21 @@
+@import "colors";
+
+.primary {
+    // fill: #A5B3BB; 
+    fill: $primary_400;
+}
+  
+.secondary {
+    // fill: #0D2B3E; 
+    fill: $primary_300;
+}
+
+a {
+    color: $primary_600;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary_800;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,19 @@
+
+@import "colors";
+
+// colors
+$lightgray: rgba(0,0,0,0.6);
+$superlightgray: rgba(0,0,0,0.44);
+
+$article-body-maxwidth: 850px;
+// $article-body-font: 'Lora', serif;
+$article-body-font: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Fira Sans,sans-serif!important;
+
+$article-title-color: $neutral_1000;
+$article-title-font: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$article-subtitle-font: $article-title-font;
+$article-subtitle-color: $neutral_500;
+$article-headers-color: $neutral_900;
+$article-body-color: $neutral_700;
+
+$navbar-color: rgba(0,0,0,0.8);

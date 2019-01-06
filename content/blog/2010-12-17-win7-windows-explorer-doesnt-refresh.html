@@ -1,0 +1,13 @@
+---
+title: 'Win7: Windows Explorer Doesn''t Refresh Elements'
+date: 2010-12-17T01:00:00.000Z
+comments: true
+categories:
+  - Windows
+url: /blog/2010/12/win7-windows-explorer-doesnt-refresh
+type: post
+---
+
+<p>This was a really weird problem. Overnight Windows Explorer on my Windows 7 Enterprise installation stopped refreshing items. For instance, I created a new file and/or renamed an existing one and nothing happened until I manually pressed <kbd>F5</kbd> to refresh. I guess I don't have to mention how annoying this was...</p>
+
+Initially I thought that one of the tools I installed like <a href="http://virtuawin.sourceforge.net/">VirtuaWin</a>, <a href="http://download.cnet.com/WizMouse/3000-18487_4-10907935.html">WizMouse </a>or <a href="http://www.stardock.com/products/fences/downloads.asp">Fences </a>are responsible for that, but apparently they wasn't. Searching for any settings was fruitless so I ended up searching the Windows registry for entries containing "refresh". And look there, I found the following key under <code>HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{BDEADE7F-C265-11D0-BCED-00A0C90AB50F}\Instance</code><br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_tF6XjsUy87k/TQsnQQpzk7I/AAAAAAAACyQ/tofU3zD9akQ/s1600/regeditWinRefresh.jpg" imageanchor="1" rel="zoombox" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="249" src="http://1.bp.blogspot.com/_tF6XjsUy87k/TQsnQQpzk7I/AAAAAAAACyQ/tofU3zD9akQ/s640/regeditWinRefresh.jpg" width="640" /></a></div><br />Nice, huh? Don't ask me how that setting came in there. Changing it to "0" (false) fixed the issue and everything worked again just fine. I wonder whether this problem occurs again, 'cause then I have to hunt the prog which causes this setting to be placed.

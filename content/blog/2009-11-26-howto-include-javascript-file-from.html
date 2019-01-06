@@ -1,0 +1,11 @@
+---
+title: 'HowTo: Include JavaScript file from JavaScript code'
+date: 2009-11-26T01:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+url: /blog/2009/11/howto-include-javascript-file-from
+type: post
+---
+
+Recently a colleague asked me on how to add a JavaScript file reference to an HTML document from within JavaScript code. It's actually quite easy. All you need is to create the appropriate element and attach it to the HTML document's dom structure on the appropriate position, i.e. the head element. The following JavaScript does the job.<br /><pre class="prettyprint">function loadScript(src) {<br />   var script = document.createElement("script");<br />   script.type = "text/javascript";<br />   document.getElementsByTagName("head")[0].appendChild(script);<br />   script.src = src;<br />}<br /></pre>And then call it from within your JavaScript code with<br /><pre class="prettyprint">loadScript('http://someurl.com/test.js');</pre><br />Similarly you may want to attach a JavaScript function programmatically to the HTML body's onLoad event. This can be achieved with the following function<br /><pre class="prettyprint">function addLoadEvent(func) {<br />   var old = window.onload;<br />   if (typeof window.onload != 'function') {<br />      window.onload = func;<br />   } else {<br />      window.onload = function() {<br />         old();<br />         func();<br />      }<br />   }<br />}<br /></pre>And then by calling it similarly as in the loadScript function<br /><pre class="prettyprint">addLoadEvent(&lt;someJavaScriptFunction&gt;);</pre>

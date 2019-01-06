@@ -1,0 +1,13 @@
+---
+title: Extended view reloaded
+date: 2009-03-25T01:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+  - The Desk
+  - jQuery
+url: /blog/2009/03/extended-view-reloaded
+type: post
+---
+
+With the transition to the complete new blog design I initially had to leave away some features which I had on my old blog layout. One which I personally found most important was the ability to <a href="http://blog.js-development.com/2008/04/extended-view-full-focus-on-readers.html">extend the blog post content area</a> s.t. the full width of the blog can be used for reading the post.<br />I experimented a bit with jQuery which made it extremely easy to add the kind of effects I needed. What I had to do is to just include the jQuery script which can be downloaded from the <a href="http://jquery.com/">official jQuery site</a>. The remaining could be solved with these lines of jQuery enhanced JavaScript.<br /><br /><pre class="prettyprint">&lt;script type="text/javascript"&gt;<br />   var isHidden = false;<br />   $("#resizeBar").click(function(){<br />       if(isHidden){<br />          $("#sidebar-column").fadeIn("slow");<br />          isHidden = false;<br />       }else{<br />          $("#sidebar-column").fadeOut("slow");<br />          isHidden = true;<br />       }<br />   });<br />&lt;/script&gt;</pre><br /><br /><br /><br />Click on the small gray bar that separates the (white) post content area from the navigation area to see the result :) <br /><br />I tested the feature on Safari, Chrome, Firefox and Internet Explorer and it works on all of them. However I found a strange behavior in IE7 (not related to this new feature here). I opened the blog on IE7 and strangely the small bar which separates the two areas was not shown, the navigation area was pressed on the left corner and the main content area where the posts are written filled more than the available space on the web-page s.t. a horizontal scrollbar appeared on the page (really ugly). Initially I though of a CSS incompatibility but then I notice an interesting thing. When you load this blog in IE7 till it's fully rendered, then you open another tab, browse a bit around and then you switch back to the tab with my blog loaded...and suprise...the blog is rendered perfectly as it should be. It's really strange, it seems as IE7 takes a bit till it renders the entire CSS completely?? Does anyone have a suggestion?

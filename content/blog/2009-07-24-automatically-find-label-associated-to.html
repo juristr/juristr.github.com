@@ -1,0 +1,27 @@
+---
+title: "Automatically find the Label associated to a WebControl through the AssociatedControlID"
+date: 2009-07-24T00:00:00.000Z
+comments: true
+categories:
+- ASP.net
+- 'C#'
+- ".Net"
+url: /blog/2009/07/automatically-find-label-associated-to
+type: post
+---
+
+ASP.net Label controls own the property "AssociatedControlID" which points to the control to which the label is
+associated. This property will then be rendered as "for" attribute on the final HTML.&nbsp; This property is however
+one-way only: it's easy to find the associated control at runtime but there is no way to have a control, say a TextBox,
+and to find it's associated label (if any). There are however situations where you'd like to get this kind of
+information. Just to mention one: think of a custom TextBox control which, its visibility property is set to false at
+runtime, automatically also hides it's associated label. This is just a "dummy scenario" but it has some realistic
+elements.<br /><br />Since I recently faced a similar situation I implemented a way for reaching the associated label
+of a WebControl. The idea is to collect all of the Label controls within a certain container (i.e. UserControl, Page,
+Panel etc...) and to use a Dictionary for creating the link between label and associated control. See the code example
+below.<br /><br />
+<pre class="prettyprint">private IDictionary&lt;string, Label&gt; associatedLabels; //1st=controlID, 2nd=Label instance<br />...<br />protected override void OnInit(EventArgs e)<br />{<br />    base.OnInit(e);<br />    ...<br />    associatedLabels = new Dictionary&lt;string,Label&gt;();<br />    FindAllLabelControls(this.Page, associatedLabels);<br />    ..<br />}<br /><br />...<br /><br />/// &lt;summary&gt;<br />/// Finds all label controls on the page that have the AssociatedControlID set and adds them<br />/// to the passed Dictionary &lt;paramref name="labelCollection"/&gt;<br />/// &lt;/summary&gt;<br />/// &lt;param name="parent"&gt;The parent.&lt;/param&gt;<br />/// &lt;param name="labelCollection"&gt;The label collection.&lt;/param&gt;<br />private void FindAllLabelControls(Control parent, IDictionary&lt;string, Label&gt; labelCollection)<br />{<br />    if (labelCollection == null)<br />        throw new ArgumentNullException("The IList&lt;Label&gt; labelCollection is null! That cannot be!");<br /><br />    if (parent is Label)<br />    {<br />        Label lbl = parent as Label;<br />        if (!String.IsNullOrEmpty(lbl.AssociatedControlID))<br />            labelCollection.Add(new KeyValuePair&lt;string, Label&gt;(lbl.AssociatedControlID, lbl));<br />    }<br />    else<br />    {<br /><br />        foreach (Control ctrl in parent.Controls)<br />        {<br />            FindAllLabelControls(ctrl, labelCollection);<br />        }<br />    }<br />}</pre><br />Now,
+finding the label is easy...<br />
+<pre class="prettyprint">Label lbl = null;<br />associatedLabels.TryGetValue(controlID, out lbl);</pre><br />Note, the
+"FindAllLabelControls" method is recursive and may pose some performance degradation, although it shouldn't be that
+much if you choose the "parent" argument wisely :)

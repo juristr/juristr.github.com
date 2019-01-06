@@ -1,0 +1,35 @@
+---
+title: 'Instantiating object from generic type: Java vs. .Net'
+date: 2009-10-30T01:00:00.000Z
+comments: true
+categories:
+- Java
+- ".Net"
+url: /blog/2009/10/instantiating-object-from-generic-type
+type: post
+---
+
+Consider the following .Net code:<br />
+<pre class="prettyprint">public static class Processor<br />{<br />        public static TItem CreateInstance&lt;TItem&gt;() where TItem:new()<br />        {<br />            TItem result = new TItem();<br />            return result;<br />        }<br />}</pre>This
+is a pretty straightforward class, although not so meaningless if left in this way. You may use this piece of code as
+follows:<br />
+<pre class="prettyprint">class Program<br />{<br />    static void Main(string[] args)<br />    {<br />        Test t = Processor.CreateInstance&lt;Test&gt;();<br />        Console.Write(t.SomeInt);<br />    }<br />}<br /><br />class Test<br />{<br />    public int SomeInt { get; set; }<br /><br />    public Test()<br />    {<br />        SomeInt = 3;<br />    }<br /><br />}</pre>Nothing
+strange so far. What I want to show however is how simple it is to create an instance of a generic type in C#.<br /><br />Now
+let's switch over to the Java world where I'd like to realize a similar thing. So first, create a class Processor again
+with a static method createInstance.<br />
+<pre class="prettyprint">public class Processor {<br /> public static &lt;T&gt; T createInstance(){<br />  T t = new T();<br />  return t;<br /> }<br />}</pre>Probably
+that's what you would write or better, would like to write since this will give you a nice compiler error. You cannot
+do "new T()" where T is a generic type parameter. So now the challenge starts. How can I create an instance. It turns
+out that you need the class for doing so s.t. it looks like<br />
+<pre class="prettyprint">public class Processor {<br /> public static &lt;T&gt; T createInstance(Class clazz) throws InstantiationException, IllegalAccessException{<br />  T t = (T) clazz.newInstance();<br />  return t;<br /> }<br />}</pre>And
+then you invoke it like<br />
+<pre class="prettyprint">public class MainClass {<br /><br /> public static void main(String[] args) throws InstantiationException, IllegalAccessException {<br />  Test t = Processor.createInstance(Test.class);<br />  System.out.println(t.getSomeInt());<br /> }<br />}</pre>Note
+in Java you don't have to pass the generic type. The compiler will understand it outmatically. That's nice. However
+when looking at the overall solution, the C# example seems much more elegant. If you look at the "createInstance"
+method in the Java example you may also note that providing the class is somehow a duplicate information. If you're a
+clean-code fanatic like myself the immediate thought would be to somehow get this information form the generic
+parameter type directly. Through reflection? It turns out that to be a major challenge. Java has a mechanism called
+type erasure, which eliminates generics information at runtime in order to stay backward compatible. <a href="http://java.sun.com/docs/books/tutorial/java/generics/erasure.html">Read
+  this article</a> for more information.<br />Another guy which seemed to have the same problem proposed a possible
+workaround for this: <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=208860">happy reading</a> ;)<br /><br />Usually
+then, passing the class information in some acceptable way is the simpler and probably type-safer solution.

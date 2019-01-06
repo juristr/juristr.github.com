@@ -1,0 +1,47 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+<!-- Begin Related
+================================================== -->
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            {{ with $related }}
+            {{ range . }}
+
+            <div class="col-md-4">
+                {{- partial "list-partials/postbox.html" . -}}
+                <!-- <div class="card">
+                    <div class="card-block">
+                        <h2 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                        <div class="metafooter">
+                            <div class="wrapfooter">
+                                <span class="meta-footer-thumb">
+                                    <a href="author.html">
+                                        <img class="author-thumb" src="{{ .Site.Params.author.thumbnail}}" alt="{{ .Site.Params.author.name }}">
+                                    </a>
+                                </span>
+                                <span class="author-meta">
+                                    <span class="post-name"><a href="author.html">{{ .Site.Params.author.name }}</a></span><br />
+                                    <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span><span
+                                        class="dot"></span><span class="post-read">{{ .ReadingTime }} min read</span>
+                                </span>
+                                {{ if isset .Params "categories" }}
+                                {{ if gt (len .Params.categories) 0 }}
+                                <span class="post-category-icon">
+                                    <img src="/assets/images/categories/{{ lower (index .Params.categories 0)  }}.svg" />
+                                </span>
+                                {{ end }}
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            {{ end }}
+            {{ end }}
+
+        </div>
+    </div>
+</div>
+<!-- End Related Posts
+    ================================================== -->

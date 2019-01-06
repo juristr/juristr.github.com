@@ -1,0 +1,67 @@
+---
+title: Boost your productivity using shortcuts in Visual Studio
+date: 2010-05-26T00:00:00.000Z
+comments: true
+categories:
+- Tooling
+url: /blog/2010/05/boost-your-productivity-using-shortcuts
+type: post
+---
+
+<p>A major aim of everyone is (or should be) to increase his personal productivity. Now productivity is a vast term
+  actually. It can be related to individual programming productivity focusing on code quality problems but it can also
+  be related to management issues and so on.</p>
+
+This post targets the individual human-computer-interaction topics, more specifically on how you interact with your
+Visual Studio IDE during development. Personally what I don't like is when I have to use the mouse. Yes, I'm a keyboard
+fanatic ;) , just use your mouse if you have no other possibilities. Mouse interactions cost time! Take for instance
+the following situation:<br />You're currently going over some code in your editor, you see a line which looks
+suspicious and really shouldn't be there. Your approach: comment the line and launch the app to check it. I assume your
+hands are on the keyboard (as they should be ;) )<br /><b>Mouse interaction:</b><br />
+<ol>
+  <li>Move your hand (right/left depending on your orientation) from your keyboard to the mouse.</li>
+  <li>Move the mouse pointer up to point to the right symbol on the toolbar for commenting out the current line (ensure
+    you have the focus on that line, otherwise you have to position it first)</li>
+  <li>Click the toolbar button for commenting that line of code (hopefully you hit it correctly, otherwise the steps
+    will increase for the according undo operation)</li>
+  <li>Move your mouse pointer to the save button (let's save explicitly)</li>
+  <li>Click the save button (again, hopefully you hit it correctly)</li>
+  <li>Move your mouse pointer to the toolbar button for launching the app</li>
+  <li>Click the toolbar button for launching the app.</li>
+</ol>
+<div>These are 7 steps. Now let's take a look at the keyboard interaction. Again, I assume the hands are on the
+  keyboard, and the cursor blinks at the line which we want to comment out:<br />
+  <ol>
+    <li>Press Ctrl + K,C (on VS2008).</li>
+    <li>Press Ctrl + S (to save explicitly)</li>
+    <li>Press F5 to launch in debug mode or Ctrl + F5 to launch without debugging.</li>
+  </ol>That's it. Pretty simple, huh? Now imagine how much faster I am by using these simple keyboard shortcuts. While
+  you are on the way to the save button with your mouse, I'm probably already waiting for my app to launch. Of course
+  the example above is a really simple one, but adding these things up, you save quite a lot of time. Or another
+  example, I always again get goosebumps (do you call them like this?) when I see devs formatting their code by
+  manually pressing the Tab key instead of just writing it down followed by a quick Ctrl + K,D (for auto-formatting)
+  and a Ctrl + S (for saving).<br />
+  <div><br />Below there is a small list of the top shortcuts I'm using in my everyday working with Visual Studio. I
+    tried to just pick the most frequently used and unfortunately they're taken to my working experience related to
+    VS2008. Most of them should work with VS2010 too, however. I'll update the list &nbsp;below as I find more useful
+    ones.</div>
+  <div><br /></div>
+  <div><b><u>Simple keyboard text navigation shortcuts (work in most text editors)</u></b></div>
+  <div><b>Ctrl + (Arrow left/right)</b></div>
+  <div>Quickly jump from word to word. Combine this with <i>Shift</i> (see below).</div>
+  <div><br /></div>
+  <div><b>Shift + (above mentioned shortcuts)</b></div>
+  <div>Select the text.<br /><br /><b>Pos 1 and End</b><br />These are quite useful for quickly jumping to the
+    beginning/end of line. Try combining them with Shift for selecting whole rows, like <i>Shift (right) + End</i>.<br /><br /><b>Ctrl
+      + (Arrow up/down)</b><br />Scroll the code editor without moving the cursor.</div>
+</div><br /><u><b>Predefined VS2008 Shortcuts</b></u><br /><b>F5 or Ctrl + F5</b><br />First to launch in debug, second
+to launch the app without debugging.<br /><br /><b>Alt + Shift + F10</b><br />Open the suggestion context menu which
+appears beneath code statements, i.e. for implementing an interface, creating a method which doesn't exist but is
+referenced and so on.<br /><br /><b>Ctrl + - / Ctrl + Shift + -</b><br />This allows you to navigate back and forth in
+your cursor position history. This is veeery useful. Try it out.<br /><br /><b>Ctrl + Tab / Ctrl + Shift + Tab</b><br />Easy,
+for navigating among the open code editor windows.<br /><br /><b>Ctrl + Shift + B</b><br />Start a build.<br /><br /><b>Ctrl
+  + K, D</b><br />Auto-formats your code.<br /><br /><b>Ctrl + R,R</b><br />Refactor &gt; Rename.<br /><br /><b>Ctrl +
+  K, C</b><br />Comment out code.<br /><br /><b>Ctrl + K, U</b><br />Un-comment a commented code part.<br /><br /><b><u>Custom
+    defined VS2008 Shortcuts</u></b><br /><b>Ctrl + W</b><br />Close the active code editor window. This is a <u>must</u>&nbsp;to
+quickly navigate.<br /><br /><b>Ctrl + R, S (combined shortcut)</b><br />Rebuild the entire solution. Scrolling up the
+Solution Explorer and right-clicking on that solution icon takes just too much time :)

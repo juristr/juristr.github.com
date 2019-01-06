@@ -1,0 +1,46 @@
+---
+title: 'Smelly Code: Direct Object Instantiation as a Testability Killer'
+date: 2010-12-09T01:00:00.000Z
+comments: true
+categories:
+- testing
+- Clean Code
+- 'C#'
+- ".Net"
+- Software Design
+url: /blog/2010/12/smelly-code-direct-object-instantiation
+type: post
+---
+
+<p>This Smelly Code post discusses mainly a testability issue without going into further detail on other things like
+  readability which could be improved for sure as well.</p><span class="Apple-style-span" style="font-size: x-large;">Original,
+  smelly code</span><br />
+<pre class="brush:c#; highlight:[6]">public Account ReadCompleteAccountByADUsernameAndServiceUID(string adUsername, string serviceInstanceUID)<br />{<br />    IList&lt;Address&gt;&gt; addresses;<br />    IList&lt;Contact&gt; contacts;<br /><br />    MasterDataBL masterDataBL = new MasterDataBL();<br /><br />    Account result =  AccoDao.ReadCompleteAccountByADUsernameAndServiceUID(adUsername, serviceInstanceUID, ConnectionString.Master, out addresses, out contacts);<br /><br />    result.PhoneNumber = contacts.Where(x =&gt; x.ContactType.Id == masterDataBL.GetCachedContactTypeByUid(ContactType.WellKnownUid.PHONE).Id).FirstOrDefault();<br />    result.MobilePhone = contacts.Where(x =&gt; x.ContactType.Id == masterDataBL.GetCachedContactTypeByUid(ContactType.WellKnownUid.MOBILE).Id).FirstOrDefault();<br /><br />    result.Residence = addresses.Where(x =&gt; x.AddressTypeId == masterDataBL.GetCachedAddressTypeByUid(AddressType.WellKnownUid.RESIDENCE).Id).FirstOrDefault();<br />    result.Domicile = addresses.Where(x =&gt; x.AddressTypeId == masterDataBL.GetCachedAddressTypeByUid(AddressType.WellKnownUid.DOMICILE).Id).FirstOrDefault();<br /><br />    return result;<br />}<br /></pre><br /><a
+  name='more'></a><br /><span class="Apple-style-span" style="font-size: x-large;">Objections and Comments</span><br />As
+highlighted, the problem resides in the instantiation of the <code>MasterDataBL</code> class in line 6. The problem
+with this declaration is that it makes testing extremely difficult. When you're writing a proper unit test, then your
+ultimate goal is to take that <b>unit under test</b>&nbsp;out of its context and test it in <b>complete isolation</b>.
+What does this mean? Taking an object out of its context means to remove its dependencies to its neighbors. In this
+example the method <code>ReadCompleteAccountByADUsernameAndServiceUID(...)</code> is a method of my class <code>AccountBL</code>.
+Obviously that class collaborates with others, creating dependencies. Hence, they are inevitable, however, there is a
+distinction between the kind of coupling that is created: tight vs. loose coupling. I've written a <a href="http://blog.js-development.com/2010/03/tackle-software-dependencies-with-ioc.html">blog
+  post</a> about that about half a year ago.<br /><b>Instantiation is an example of tight&nbsp;coupling</b>. During
+unit testing you won't be able to replace <code>MasterDataBL</code> with an appropriate stub. Consequently, if <code>MasterDataBL</code>
+is instantiated inside the method and then executes a call which ends in the database, you won't be able to prevent
+that.<br /><br /><span class="Apple-style-span" style="font-size: x-large;">Proposed Refactoring</span><br />A possible
+refactoring is therefore to convert the <b>tight</b>&nbsp;coupling into a <b>loose</b>&nbsp;coupling by introducing
+dependency injection or creating an appropriate factory. Usually I prefer the first approach, but the main idea is to
+<b>separate the object creation from its usage</b>.<br /><br />
+<pre class="brush:c#; highlight:[7,13]">private IMasterDataBl _MasterDataBL;<br />public IMasterDataBl MasterDataBL<br />{<br />    get<br />    {<br />        if (_MasterDataBL == null)<br />            _MasterDataBL = BlAgentConfigurationSection.GetAgent().Get&lt;IMasterDataBl&gt;();<br />        return _MasterDataBL;<br />    }<br /><br />    set<br />    {<br />        _MasterDataBL = value;<br />    }<br />}<br /><br />public Account ReadCompleteAccountByADUsernameAndServiceUID(string adUsername, string serviceInstanceUID)<br />{<br />    IList&lt;Address&gt; addresses;<br />    IList&lt;Contact&gt; contacts;<br /><br />    Account result =  AccoDao.ReadCompleteAccountByADUsernameAndServiceUID(adUsername, serviceInstanceUID, ConnectionString.Master, out addresses, out contacts);<br /><br />    result.PhoneNumber = contacts.Where(x =&gt; x.ContactType.Id == MasterDataBL.GetCachedContactTypeByUid(ContactType.WellKnownUid.PHONE).Id).FirstOrDefault();<br />    result.MobilePhone = contacts.Where(x =&gt; x.ContactType.Id == MasterDataBL.GetCachedContactTypeByUid(ContactType.WellKnownUid.MOBILE).Id).FirstOrDefault();<br /><br />    result.Residence = addresses.Where(x =&gt; x.AddressTypeId == MasterDataBL.GetCachedAddressTypeByUid(AddressType.WellKnownUid.RESIDENCE).Id).FirstOrDefault();<br />    result.Domicile = addresses.Where(x =&gt; x.AddressTypeId == MasterDataBL.GetCachedAddressTypeByUid(AddressType.WellKnownUid.DOMICILE).Id).FirstOrDefault();<br /><br />    return result;<br />}</pre><br />Our
+codebase uses factories (as of now) which is the reason why I refactored it in that direction. <b>Line 7</b>&nbsp;makes
+a call to that factory, asking for an appropriate instance of the <b>interface</b>&nbsp;<code>IMasterDataBl</code>
+(note how relying on interfaces decouples things). Moreover I've wrapped everything inside a property which allows me
+to <b>explicitly set</b>&nbsp;the instance of the used MasterDataBL. You guessed it, that's exactly the point where my
+test injects its stub while during production code the factory will be invoked.<br /><br />An even - from my point of
+view - cleaner approach would be to rely on some kind of dependency injection framework s.t. you have a plain property
+for IMasterDataBl and no kind of call to a factory for retrieving the object instance, but rather the IoC container
+will set the right instance at the right time (Hollywood principle).<br /><br /><b>Related post:</b><br /><a href="http://blog.js-development.com/2010/03/tackle-software-dependencies-with-ioc.html">Tackle
+  software dependencies with IoC and Dependency Injection</a><br /><br /><i><span class="Apple-style-span" style="font-size: small;">This
+    is one of a series of "smelly code" posts.&nbsp;<a href="http://blog.js-development.com/2010/09/introducing-smellycode.html"
+      muse_scanned="true" style="color: #0066cc; text-decoration: none;">Read more here</a>&nbsp;or find them on&nbsp;<a
+      href="http://search.twitter.com/search?q=%23smellycode" muse_scanned="true" style="color: #0066cc; text-decoration: none;">Twitter</a>.</span></i>

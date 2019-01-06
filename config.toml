@@ -1,0 +1,99 @@
+baseURL = "https://juristr.com"
+languageCode = "en-us"
+title = "juri.strumpflohner"
+#theme = "mediumish-gohugo-theme"
+theme = "mediuma"
+summaryLength = 25
+copyright = "Juri Strumpflohner - All rights reserved"
+enableEmoji = true
+pygmentsUseClasses=true
+PygmentsCodeFences = true
+#publishDir = "docs"
+disqusShortname = "juristr"
+#googleAnalytics = "UA-1XXXXXXX1-1"
+
+[permalinks]
+  blog = "/blog/:year/:month/:title/"
+
+[params]
+  icon = "/assets/images/sitelogo.jpeg"
+  # logo = "/images/sitelogo.jpeg"
+  description ="the clean blog!"
+#   #mailchimp = "you can provide a mailchimp-link here"
+
+[outputFormats]
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "atom"
+
+[params.author]
+  name = "Juri Strumpflohner"
+  thumbnail = "https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
+  description = "Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for [Egghead.io](https://egghead.io/instructors/juri-strumpflohner), writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops."
+  twitter = "@juristr"
+  email = "&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;"
+
+[params.index]
+  picture = "/images/author.png"
+  title = "John Doe"
+  subtitle = "I'm a unique placeholder. Working here and there!"
+  mdtext = '''
+Currently trying to get this blog running, still don't know what the blog will be about!\
+**This textblock is a demonstration of the mdtext-param.**\
+### This is a markdown heading
+'''
+
+alertbar = false
+
+[params.social]
+  github = "juristr"
+  linkedin = "<username>"
+  #xing = "<username>"
+  medium = "juristr"
+  twitter = "juristr"
+
+[params.adlink]
+  link = "https://egghead.io/courses/learn-angular-router-for-real-world-applications"
+  image = "/assets/images/banners/router-course-banner.png"
+  client = "eggheadio"
+  uid = "url"
+
+[params.category]
+  angular = "My Angular articles"
+
+## Main Menu
+[[menu.main]]
+    name = "Home"
+    weight = 1
+    identifier = "home"
+    url = "/"
+[[menu.main]]
+    name = "Blog"
+    weight = 100
+    identifier = "blog"
+    url = "/blog"
+[[menu.main]]
+    name = "Collections"
+    weight = 100
+    identifier = "categories"
+    url = "/categories"
+# [[menu.main]]
+#     name = "Talks"
+#     weight = 100
+#     identifier = "talks"
+#     url = "/talks"
+# [[menu.main]]
+#     name = "Consulting"
+#     weight = 100
+#     identifier = "consulting"
+#     url = "/consulting"
+[[menu.main]]
+    name = "About Me"
+    identifier = "about"
+    weight = 500
+    url = "/about"
+[[menu.main]]
+    name = "AMA"
+    identifier = "ama"
+    weight = 300
+    url = "https://github.com/juristr/ama"

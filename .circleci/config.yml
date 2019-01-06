@@ -1,0 +1,21 @@
+version: 2
+general:
+  branches:
+    only:
+      - site
+
+jobs:
+  build:
+    docker:
+      - image: juristr/hugo-docker
+    steps:
+      - checkout
+      - run:
+          name: Avoid hosts unknown for github
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run: 
+          name: "Install container dependencies for deploy"
+          command: apk --no-cache add git openssh
+      - run: 
+          name: "Build and deploy to GitHub"
+          command: ./scripts/deploy.sh

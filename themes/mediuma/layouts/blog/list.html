@@ -1,0 +1,49 @@
+{{ define "header"}}
+{{- partial "_shared/navbar.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+<div class="container list-page blog">
+    <!-- {{- partial "_shared/title.html" . -}} -->
+    {{- partial "_shared/featured-posts.html" . -}}
+
+    <a href="https://egghead.io/courses/learn-angular-router-for-real-world-applications" class="external-link"
+        data-client="eggheadio" data-uid="courses/learn-angular-router-for-real-world-applications">
+        <img src="/assets/images/banners/router-course-banner.png" style="width:100%" />
+    </a>
+
+    <!-- Posts Index
+        ================================================== -->
+    <section class="recent-posts">
+        <div class="section-title">
+            <h2>
+                <span>Latest Articles</span>
+                <span class="more-actions">
+                    <a href="/blog/archive">
+                        <svg style="height: 20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-collection">
+                            <rect width="20" height="12" x="2" y="10" class="primary" rx="2"></rect>
+                            <path class="secondary" d="M20 8H4c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2zm-2-4H6c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <!-- View all &raquo; -->
+                    </a>
+                </span>
+            </h2>
+        </div>
+        <div class="listrecent">
+            {{ $post_paginator := .Paginate (.Pages) 7 }}
+            {{ range after 1 $post_paginator.Pages }}
+            {{- partial "list-partials/postbox.html" . -}}
+            {{end}}
+        </div>
+    </section>
+    {{- partial "list-partials/pagination.html" $post_paginator -}}
+</div>
+<!-- {{- partial "_shared/alertbar.html" . -}} -->
+{{ end }}
+
+{{ define "footer"}}
+<div class="container">
+    <!-- {{- partial "_shared/jumbotron.html" . -}} -->
+    {{- partial "_shared/footer.html" . -}}
+</div>
+{{ end }}

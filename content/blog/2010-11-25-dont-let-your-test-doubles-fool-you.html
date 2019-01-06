@@ -1,0 +1,29 @@
+---
+title: Don't Let Your Test Doubles Fool You
+date: 2010-11-25T01:00:00.000Z
+comments: true
+categories:
+- 'C#'
+- testing
+- ".Net"
+url: /blog/2010/11/dont-let-your-test-doubles-fool-you
+type: post
+---
+
+<p>During unit testing it is common to substitute dependencies with a <b>test double </b><a href="http://martinfowler.com/articles/mocksArentStubs.html">(see
+    Martin Fowler's disambiguation)</a>. This is necessary for isolating the tested environment and consequently also
+  the potential source of error in case of a test failure. Thus also the name&nbsp;<b>unit</b>&nbsp;testing.</p>
+
+Let's assume the very simple example of an <b>AnimalFactory</b>&nbsp;which, given the name of an animal and some type,
+creates an according object representation. When coding a unit test for some object which is dependent on the
+AnimalFactory, you'd most probably exchange that factory with a stub which returns exactly the object you need in your
+test case. A possible setup of <a href="http://code.google.com/p/moq/">Moq</a> could look as follows.<br /><a name='more'></a><br />
+<pre class="brush:java">//Setup<br />var mockAnimalFactory = new Mock&lt;IAnimalFactory&gt;();<br />mockAnimalFactory.Setup(x =&gt; x.CreateAnimal(It.IsAny&lt;string&gt;(), It.IsAny&lt;AnimalType&gt;())<br />.Returns(new Dog{<br />  Name = "SomeName"<br />});</pre>So
+far, so good. Now assume your code makes different calls to the <code>IAnimalFactory.CreateAnimal(...)</code> in your
+code (which during testing is substituted with your test double) and it also makes use of object reference comparison
+for some reason. This may lead to quite strange side-effects, mainly because the <code>mockAnimalFactory</code> will <b>always</b>&nbsp;return
+the <b>same instance</b>&nbsp;of the Dog object. I don't know if you knew this.<br /><br />The solution is actually
+pretty simple. <code>Mock.Returns(...)</code> has different overloads, one of which takes a function for creating the
+actual return object. This has the consequence that the function is evaluated on every call to the stub's <code>CreateAnimal(...)</code>
+method, thus returning different object instances each time.<br />
+<pre class="brush:java;highlight:[3]">var mockAnimalFactory = new Mock&lt;IAnimalFactory&gt;();<br />mockAnimalFactory.Setup(x =&gt; x.CreateAnimal(It.IsAny&lt;string&gt;(), It.IsAny&lt;AnimalType&gt;())<br />.Returns(() =&gt; new Dog{<br />  Name = "SomeName"<br />});</pre>

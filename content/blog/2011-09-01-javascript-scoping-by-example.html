@@ -1,0 +1,39 @@
+---
+title: JavaScript Scoping by Example
+date: 2011-09-01T00:00:00.000Z
+comments: true
+categories:
+- JavaScript
+url: /blog/2011/09/javascript-scoping-by-example
+type: post
+---
+
+<p>Understanding the scoping rules of JavaScript is one of the fundamental things to learn when getting started with
+  the language. I just found <a href="http://twitter.com/#!/codylindley/status/108152873438814208">this link</a> posted
+  by <a href="http://twitter.com/#!/codylindley">@codylindley</a> on Twitter. It goes over some basic principles of
+  jQuery, however the first part covers native JavaScript scoping. It is an interesting example to get an understanding
+  about it.</p>
+
+Take the following piece of JavaScript:<br />
+<div style="text-align: right;"><a href="http://jsbin.com/ayibam/2/edit#javascript,live"><span style="font-size: x-small;">Live
+      example</span></a></div>
+<pre class="brush:javascript">var x = "Hi";<br /><br />var someFunction = (function(){<br />  document.getElementById("out").innerHTML = x;<br />});<br /><br />someFunction();</pre>The
+example is quite simple. There is <code>x</code>, which is defined in the global scope, followed by the definition of a
+function which gets stored in the <code>someFunction</code> variable. <code>someFunction</code> gets called immediately
+afterwards, printing out the value of <code>x</code> to the HTML element "out". When executed, we get "Hi" as a result.<br /><b>Why
+  does this happen?</b>&nbsp;In order to understand this, you need to understand that JavaScript has <b>function scope</b>,
+meaning that when printing out x, it will first search for a definition within the function itself, and then it will
+walk up the prototype chain in order to find a corresponding variable definition. In the specific example above, it
+will go up till it reaches the global (window) object where x is defined.<br /><br />If now the example above gets
+modified as follows, can you guess what will be its output??<br />
+<div style="text-align: right;"><a href="http://jsbin.com/ayibam/3/edit#javascript,live"><span style="font-size: x-small;">Live
+      example</span></a></div>
+<pre class="brush:javascript">var x = "Hi";<br /><br />var someFunction = (function(){<br />  document.getElementById("out").innerHTML = x;<br />  var x = "Hi, there!";<br />});<br /><br />someFunction();</pre>Actually
+the output is "undefined". This is due to the <b>lexical function scoping</b>, meaning the scoping rules are applied at
+<b>function-definition,</b>&nbsp;not at runtime. Btw, this kind of mechanism also allows for having <b>closures</b>.
+Hence, x is defined within the function's scope, but just not at the moment when it was printed out.<br /><br />To fix
+this one would have to explicitly let x point to the globally defined one like<br />
+<div style="text-align: right;"><a href="http://jsbin.com/ayibam/4/edit#javascript,live"><span style="font-size: x-small;">Live
+      example</span></a></div>
+<pre class="brush:javascript">var x = "Hi";<br /><br />var someFunction = (function(){<br />  document.getElementById("out").innerHTML = window.x;<br />  var x = "Hi, there!";<br />});<br /><br />someFunction();</pre>Now
+it again works.

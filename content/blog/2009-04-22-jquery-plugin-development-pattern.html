@@ -1,0 +1,13 @@
+---
+title: jQuery plugin development pattern
+date: 2009-04-22T00:00:00.000Z
+comments: true
+categories:
+  - JavaScript
+  - Software Design
+  - jQuery
+url: /blog/2009/04/jquery-plugin-development-pattern
+type: post
+---
+
+I'm currently diving more and more into the jQuery library. First I'm using it on a portlet I'm developing for the Liferay portal server as the project for a university course and secondly I'm planning to use jQuery on some ajax-enabled server controls I'm designing (I'm not yet 100% sure whether to use jQuery or Asp.net Ajax for ajax communication).<br /><br />All I can say till now is that jQuery is really cool and it dramatically improves your JavaScript programming abilities. Some time ago I found <a href="http://www.learningjquery.com/">this website</a> which has some nice posts about jQuery. Since I'm a strong promoter of design patterns, I'd like to particularly share this post which highlights a common design pattern for developing jQuery plugins:<br /><blockquote>I've been developing jQuery plugins for quite a while now, and I've become rather comfortable with a particular style of plugin development for my scripts. This article is meant to share the pattern that I've found especially useful for plugin authoring. It assumes you already have an understanding of plugin development for jQuery; if you're a novice plugin author, please review the <a href="http://docs.jquery.com/Plugins/Authoring">jQuery Authoring Guidelines</a> first.<br />There are a few <i>requirements</i> that I feel this pattern handles nicely:<br /><ol><li>Claim only a single name in the jQuery namespace</li><li>Accept an options argument to control plugin behavior</li><li>Provide public access to default plugin settings</li><li>Provide public access to secondary functions (as applicable)</li><li>Keep private functions private</li><li>Support the Metadata Plugin</li></ol><br />I'll cover these requirements one by one, and as we work through them we'll build a simple plugin which highlights text....<a href="http://www.learningjquery.com/2007/10/a-plugin-development-pattern">read more»</a></blockquote>

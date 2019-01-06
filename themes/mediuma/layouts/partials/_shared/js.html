@@ -1,0 +1,23 @@
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ "/js/jquery.min.js" | urlize | relURL }}"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script> -->
+<!-- <script src="{{ "/js/bootstrap.min.js" | urlize | relURL }}"></script> -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+{{ $siteJS := resources.Get "js/mediumish.js" }}
+{{ $js := slice $siteJS | resources.Concat "js/bundle.js" }}
+{{ $secureJS := $js | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+
+<!-- image zoom for post detail -->
+<script src="{{ "/js/jquery.fluidbox.min.js" | urlize | relURL }}"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<!-- <script src="assets/js/ie10-viewport-bug-workaround.js"></script> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script> -->

@@ -1,0 +1,255 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Angular CLI</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Angular CLI"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Introduction" duration="2">
+        <p>The Angular CLI is a command line interface developed by the Angular team at Google as well as Open Source contributors to improve the overall developer experience when working with Angular applications. It is the top choice for Angular developers to generate, serve the app during development and create production bundles for their apps.</p>
+<h2><strong>What is the Angular CLI</strong></h2>
+<p>The Angular CLI is a command line interface, currently based on top of <a href="https://webpack.js.org/" target="_blank">Webpack</a>. It allows you to</p>
+<ul>
+<li><strong>Generate a new project setup</strong> - It allows to scaffold a new project, generating the initial project structure and build setup (for TypeScript, bundling, code splitting, lazy loading, compression).</li>
+<li><strong>Serve your project</strong> - During development you can serve your project via the Angular CLI&#39;s integrated web development server.</li>
+<li><strong>Generate new artifacts as you develop</strong> - As you develop your project you can create new services, directives, modules, components etc. using the Angular CLI. Using this approach guarantees you&#39;re compliant with the <a href="https://angular.io/guide/styleguide" target="_blank">official Angular Styleguide</a>.</li>
+<li><strong>Test your project</strong> - The initially generate project setup already comes with a fully working Karma + Jasmine test setup. As you generate new components, services etc., Jasmine spec files will be created along the way, that can be executed using dedicated commands provided by the CLI.</li>
+</ul>
+<p>This codelab will walk you through creating a new Angular project using the Angular CLI, through scaffolding various artifacts such as services, components etc and explore the various configuration options that help you customize the process to your own.</p>
+<aside class="special"><p>Looking for more? Check out the <a href="https://cli.angular.io/" target="_blank">official documentation</a>.</p>
+</aside>
+<h2 class="checklist"><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>How to generate a new Angular project from scratch</li>
+<li>How to generate new modules, services, components,...</li>
+<li>How to leverage the various CLI flags to control the generated code</li>
+<li>How to run Angular unit tests (using various options)</li>
+<li>How to build a project, ready to be deployed for production</li>
+</ul>
+<h2><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>The latest version of <a href="https://nodejs.org/en/" target="_blank">Node.js</a> and NPM (comes with Node)</li>
+<li>A Code editor (ideally <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Generating a new project" duration="2">
+        <p>In order to get started we need to install the Angular CLI. We have different possibilities. Either install it globally, using</p>
+<pre><code>$ npm install -g @angular/cli</code></pre>
+<p>...or use npx which should come pre-installed with npm. Npx is a package runner, basically installing an npm package temporarily and executing its main binary executable.</p>
+<p><strong>To generate a new project</strong>, we can use the &#34;new&#34; command.</p>
+<pre><code>$ ng new &lt;the-project-name&gt;</code></pre>
+<p>Or if you want to use npx, simply type</p>
+<pre><code>$ npx @angular/cli new &lt;the-project-name&gt;</code></pre>
+<p>The advantage of using npx is that we don&#39;t have to install any global dependency. All following commands will be executed with the local installation of the Angular CLI that lives inside the generated project.</p>
+<p><img style="max-width: 624.00px" src="img/2d1a0aa67e8cd559.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Inspecting the generated project" duration="2">
+        <p>The Angular CLI should have generated a new folder using the name of the project you provided. Open the project in your favorite code editor (ideally VSCode). You should see a structure similar to the following:</p>
+<p><img style="max-width: 624.00px" src="img/34c18a4628d7c458.png"></p>
+<p>Note, in the <code>package.json</code> we have a series of scripts for starting, building, testing and linting our Angular project. All these commands are scoped to the local Angular CLI version, so there is no need to have a global installation other than for generating the initial project scaffold.</p>
+<h2>The <code>angular.json</code></h2>
+<p>An important file is the <code>angular.json</code> file that resides at the root of our Angular project. It contains the meta information of all projects living in the generated &#34;project workspace&#34;</p>
+<p><img style="max-width: 624.00px" src="img/d9829caac27a4fa8.png"></p>
+<p>Each project usually has an architect section, which among potentially other build steps, describes how to build, serve, test and lint the given project.</p>
+<p>Take some time to go through the configuration and try to understand it by their corresponding names.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Starting the project" duration="1">
+        <p>In order to start the project, execute</p>
+<pre><code>$ npm run start</code></pre>
+<p>You could also simply execute <code>npm start</code>. <code>start</code> and <code>test</code> are special aliases. The <code>start</code> command is mapped to the <code>ng serve</code> command in the npm scripts section of the <code>package.json</code>.</p>
+<p><code>ng serve</code> launches the Angular CLI development server (a wrapper around the <a href="https://webpack.js.org/configuration/dev-server/#devserver" target="_blank">Webpack development server</a>).</p>
+<p><img style="max-width: 624.00px" src="img/6e58f01cc3da808a.png"></p>
+<p>Once the compilation process finishes, go to <a href="http://localhost:4200" target="_blank">http://localhost:4200</a> and you should see your application running.</p>
+<p><img style="max-width: 624.00px" src="img/a47783d6bbfcdfd2.png"></p>
+<p>Note that the CLI dev server is in watch mode. Each time you change some file, the app will be recompiled and the browser refreshed.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Scaffold new items" duration="4">
+        <p>One of the most useful features of the CLI (besides the whole compilation setup) is the ability to scaffold new items for us. We can generate various things and the entire process of code scaffolding and manipulation, called <strong>schematics</strong>, is even extensible by 3rd party authors.</p>
+<p>Let&#39;s take a look at a couple of important ones.</p>
+<h2>Generate a new module</h2>
+<p>Try generating a new module with the following command</p>
+<pre><code>$ ng generate module &lt;the-module-name&gt;</code></pre>
+<h2>Use the <code>--dry-run</code> option</h2>
+<p>If you&#39;re not sure about whether the outcome is the desired one, you can append the --dry-run or -d flag to each of the commands to perform a &#34;dry run&#34;.</p>
+<pre><code>$ ng generate module &lt;the-module-name&gt; -d</code></pre>
+<h2>Generate a new module with routing</h2>
+<p>Automatically add routing configuration to a new module by appending the <code>--routing</code> flag. Also not that we can use the &#34;g&#34; (for generate) and &#34;m&#34; (for module) shorthands.</p>
+<pre><code>$ ng g m &lt;the-module-name&gt; --routing</code></pre>
+<h2>Generate a new component</h2>
+<p>To generate a new component, use</p>
+<pre><code>$ ng generate component &lt;the-component-name&gt;</code></pre>
+<p>Also try generating a component under an existing module or folder. For instance:</p>
+<pre><code>$ ng g m people
+$ ng g c people/people-list</code></pre>
+<p>These commands should generate a new people module, containing a people-list component that is registered on the <code>people.module.ts</code> file automatically.</p>
+<h2>Generate components without test files</h2>
+<p>Generate a component without test files by appending the <code>--spec false</code> flag.</p>
+<pre><code>$ ng g c &lt;the-component-name&gt; --spec false</code></pre>
+<h2>Generate components with inlined template and styles</h2>
+<p>Generate a new component with inlined template (using <code>-t</code>) and/or inlined styles (<code>-s</code>).</p>
+<pre><code>$ ng g c &lt;the-component-name&gt; -t -s</code></pre>
+<p>Note, with inlined styles, it is not possible to have CSS preprocessors such as SCSS compilation. That will only work if styles are in a separate file.</p>
+<h2>Generate components with a flat structure</h2>
+<p>When generating components, they are placed by default into their own folder. Most of the time this is the desired behavior, also because they immediately come with a spec, html and css file, other than the actual TypeScript code file. However, if we create a very simple component, with no spec and inlined template and styles, we may prefer a flat folder structure. We can enforce this using the <code>--flat</code> option. </p>
+<pre><code>$ ng g c &lt;the-component-name&gt; -t -s --flat --spec false</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Project Assets" duration="2">
+        <p>Assets are simply static files that should be made available to the app at runtime and which should also be copied into the final production bundle of our applications. These might be images, JavaScript files,... The Angular CLI already generates an assets folder under <code>src/assets</code>.</p>
+<p><img style="max-width: 624.00px" src="img/34e53386c1b8b322.png"></p>
+<p>You can create additional subfolders within assets. Try creating a person.json with some valid JSON content. Then open your browser at <a href="http://localhost:4200/assets/person.json" target="_blank">http://localhost:4200/assets/person.json</a> and you should see the file being served by the Angular dev server.</p>
+<aside class="special"><p><strong>Hint:</strong> It is possible to configure the asset files and folders. Open the <code>angular.json</code> file and search for &#34;assets&#34;.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="CSS Preprocessors" duration="1">
+        <p>The Angular CLI supports sass/scss, less and stylus as CSS preprocessors. You can either generate the project already with some configuration, like</p>
+<pre><code>$ ng new &lt;project-name&gt; --style=scss</code></pre>
+<p>...or set it on an existing project via the following command</p>
+<pre><code>$ ng config schematics.@schematics/angular:component.styleext scss</code></pre>
+<p>Note that on an existing project you have to change the global <code>styles.css</code> to have the proper <code>styles.scss</code> file ending, as well as in the <code>angular.json</code> the reference to the styles.scss has to be adjusted.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Proxy configuration" duration="3">
+        <p>When serving our project with the Angular CLI development server, the app runs at port 4200 (unless we change it with the <code>--port</code> option). Our API backend server however, might run on another port, say localhost:3000. Hence, our http calls would have to specify the full path localhost:3000/api/people which results in <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> requests.</p>
+<p><img style="max-width: 624.00px" src="img/da53d370d81b6d7a.png"></p>
+<p>Unless that&#39;s the desired final scenario, we&#39;d like to have a setup, where we can simply issue our HTTP calls against <code>/api/people</code> and that those API calls will automatically be proxied to the correct API server.</p>
+<p><img style="max-width: 624.00px" src="img/8d4968d5c05c2be6.png"></p>
+<p>To configure such proxy, we create a proxy.conf.json at the root of our Angular project with the following content.</p>
+<pre><code>{
+ &#34;/api/*&#34;: {
+   &#34;target&#34;: &#34;http://localhost:3000&#34;,
+   &#34;secure&#34;: false,
+   &#34;logLevel&#34;: &#34;debug&#34;
+ }
+}</code></pre>
+<p>Then, our &#34;serve&#34; script needs to be adjusted, also passing in the <code>--proxy-config</code> option.</p>
+<pre><code>{
+ ...
+ &#34;scripts&#34;: {
+   &#34;start&#34;: &#34;ng serve --proxy-config proxy.config.json&#34;,
+   ...
+ },
+ ...
+}</code></pre>
+<p>Execute <code>npm start</code> and you should see an according message in the console about the active proxy.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Execute unit tests" duration="2">
+        <p>Unit tests are already pre-configured and set up with <a href="https://karma-runner.github.io/2.0/index.html" target="_blank">Karma</a> and <a href="https://jasmine.github.io/" target="_blank">Jasmine</a>. The according test files are specified with the <code>*.spec.ts</code> ending and are defined along side the files they are testing (such as components, services,..). To execute the application&#39;s unit tests, simply run</p>
+<pre><code>$ npm test</code></pre>
+<p>This will start Karma (using the <code>karma.conf.js</code> file), open Chrome and execute all Jasmine unit tests.</p>
+<p>Try it by yourself.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Creating a production build" duration="2">
+        <p>While developing our application, we can use the Angular CLI dev server using the <code>ng serve</code> command. The entire compilation process however happens in memory and no files are written to disk. The moment we want to deploy our app to production, we need to compile the TypeScript files to an optimized JavaScript bundle that can be executed by the browser.</p>
+<p>The default ng build command will do this for us, however it is <strong>not optimized for production</strong> use. To do so, add the <code>--prod</code> flag.</p>
+<pre><code>$ ng build --prod</code></pre>
+<p>It is good practice to create an npm script for that.</p>
+<pre><code>{
+ &#34;name&#34;: &#34;ng-cli-codelab&#34;,
+ &#34;version&#34;: &#34;0.0.0&#34;,
+ &#34;scripts&#34;: {
+   &#34;ng&#34;: &#34;ng&#34;,
+   &#34;start&#34;: &#34;ng serve&#34;,
+   &#34;build&#34;: &#34;ng build&#34;,
+   &#34;build:prod&#34;: &#34;ng build --prod&#34;,
+   ...
+ },
+ ...
+}</code></pre>
+<p>After the build process succeeds, we should have a <code>dist</code> folder with the optimized output files that can be copied to our production web server.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Brain Check" duration="2">
+        <p><strong>You did it!!</strong> Quickly go through these questions to check your knowledge. You should be able to answer most of these by now.</p>
+<h2><strong>Check your knowledge</strong></h2>
+<ul>
+<li>How do we generate a new application?</li>
+<li>How do we generate new modules?</li>
+<li>How do we generate new components?</li>
+<li>How do we generate new services?</li>
+<li>What kind of flag can be appended to Angular CLI commands to just perform a test run of its effect?</li>
+<li>What is a dev server proxy and how do we configure it for our API calls?</li>
+<li>Explore further use cases on the <a href="https://github.com/angular/angular-cli/wiki/stories" target="_blank">Angular CLI Wiki</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>

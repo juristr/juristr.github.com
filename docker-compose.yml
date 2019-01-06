@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  hugo:
+    image: juristr/hugo-docker:latest
+    # build:
+    #   context: .
+    #   dockerfile: ./scripts/Dockerfile
+    working_dir: /srv/hugo
+    volumes:
+      - .:/srv/hugo
+    # WORKDIR
+    #   - /srv/hugo
+    command: "hugo server --buildDrafts --disableFastRender --bind 0.0.0.0 --templateMetrics"
+    ports:
+      - 1313:1313
