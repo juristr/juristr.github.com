@@ -1,8 +1,0 @@
-development/juristr/production/
-_site
-.tmp
-.sass-cache
-vendor
-Thumbs.db
-.jekyll-metadata
-sync-codelabs.sh
