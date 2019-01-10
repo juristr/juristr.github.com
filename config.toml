@@ -11,6 +11,7 @@ PygmentsCodeFences = true
 #publishDir = "docs"
 disqusShortname = "juristr"
 disablePathToLower = true
+enableInlineShortcodes = true
 # googleAnalytics = "UA-416229-12"
 
 [permalinks]
