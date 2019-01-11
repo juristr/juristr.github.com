@@ -21,7 +21,14 @@
                         {{ if isset .Params "categories" }}
                         {{ if gt (len .Params.categories) 0 }}
                         <span class="post-category-icon">
-                            <img src="/assets/images/categories/{{ lower (index .Params.categories 0)  }}.svg" />
+                            {{ $imgFileName := lower (replace (replace (replace (lower (index .Params.categories 0)) "." "_") "#" "_") "+" "__") }}
+                            <!-- <img src="/assets/images/categories/{{ lower (index .Params.categories 0)  }}.svg" /> -->
+                            {{ if fileExists (print "static/assets/images/categories/" $imgFileName ".svg" ) }}
+                                <img src="/assets/images/categories/{{ $imgFileName }}.svg" />
+                            {{ else }}
+                                {{- partial "_shared/svgicons.html" $imgFileName -}}
+                                <div class="svgicon clean_code"></div>
+                            {{ end }}
                         </span>
                         {{ end }}
                         {{ end }}
