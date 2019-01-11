@@ -24,7 +24,11 @@ draft: true
 
 {{<postad>}}
 
-In order to illustrate **the problem** I created an example use case, simplified of course, but still it represents a potential real world use case. We basically have the following user interface:
+In order to illustrate **the problem** I created an example use case, simplified of course, but still it represents a potential real world use case. 
+
+{{<toc>}}
+
+We basically have the following user interface:
 
 <figure class="image--medium">
   <img src="/blog/assets/imgs/rxjs-order-guarantee.png" />
@@ -35,6 +39,10 @@ When the user **checks** some option, an http request is made to retrieve some v
 > For the sake of simplicity, in this fake example I simply use a `setTimeout(..)` to simulate the asyncronous request.
 
 When the user again **deselects** the option, the corresponding value is removed from the list below (without any async request).
+
+## TL;DR: Here's the corresponding Egghead lesson
+
+{{<egghead-lesson uid="lessons/angular-guarantee-ordering-of-events-with-rxjs">}}
 
 ## The Problem
 
