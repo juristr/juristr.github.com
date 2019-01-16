@@ -65,7 +65,7 @@ if(data.checkboxEvent.checked) {
     }, 1500)
 } else {
     // remove the record given by the id (if present)
-    this.records = [...this.records.filter(x => x.value !== id )];
+    this.records = this.records.filter(x => x.value !== id );
 }
 ```
 
@@ -211,7 +211,7 @@ In the `.subscribe(...)` of our `selectionObject` we then effectively parse the 
       if (action.type === 'ADD') {
         this.records.push(action.data)
       } else {
-        this.records = [...this.records.filter(x => x.value !== action.data)];
+        this.records = this.records.filter(x => x.value !== action.data);
       }
     });
 ```
