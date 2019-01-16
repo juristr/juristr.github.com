@@ -2,7 +2,7 @@
 type: post
 title: "Guarantee Event Order with RxJS"
 lead: "use concatMap to guarantee ordering of events"
-date: 2019-01-09T15:03:22+01:00
+date: 2019-01-16T15:03:22+01:00
 comments: true
 image: /blog/assets/imgs/rxjs-order-guarantee.png
 categories:
@@ -13,7 +13,6 @@ tags:
   - Angular
   - async
   - ordering
-draft: true
 ---
 
 <div class="article-intro">
@@ -233,7 +232,11 @@ Here's the according Stackblitz example to play around with. Check it out, doubl
 
 But can do even better. In the current `concatMap` example, when the user double-clicks, we effectively wait until the async call comes back and then remove it again. But why even execute the async logic. When the user double-clicks we can just abort the previous action and not even execute it, thus save time.
 
-That's what `switchMap` does. In contrast to `concatMap`, it doesn't execute the actions (our Observable events) in sequence, but rather it cancels the previous Observable. Here's a Stackblitz example. Pay particular attention to the console log. In the `setTimeout(..)` a log is written (`console.log('Returning data');`). If you double-click, that log doesn't even appear, proving that the async action is not even executed.
+That's what `switchMap` does. In contrast to `concatMap`, it doesn't execute the actions (our Observable events) in sequence, but rather it cancels the previous Observable. 
+
+> **Watch out!!** While for this use-case _cancelling_ was an option, this might not always be the case. So be careful to evaluate between using `concatMap` or `switchMap`.
+
+Here's a Stackblitz example. Pay particular attention to the console log. In the `setTimeout(..)` a log is written (`console.log('Returning data');`). If you double-click, that log doesn't even appear, proving that the async action is not even executed.
 
 {{<stackblitz uid="edit/blog-guarantee-order-switchmap">}}
 
