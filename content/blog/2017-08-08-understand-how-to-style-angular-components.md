@@ -30,16 +30,8 @@ Last year I wrote an in depth article on how to conditionally style Angular comp
 
 The article walks through different kind of possibilities Angular offers and helps decide which approach might be the best for your current scenario or use case.
 
-{% assign lesson_url = "courses/understand-how-to-style-angular-components" %}
-{% assign lesson_img = "/blog/assets/imgs/egghead-artwork-styling-components.png" %}
-{% assign image_class="image--small" %}
-{% include egghead.html %}
+{{<egghead-course uid="courses/understand-how-to-style-angular-components" lesson_img="/blog/assets/imgs/egghead-artwork-styling-components.png" >}}
 
-<!-- <figure class="image--small">
-  <a href="https://egghead.io/courses/understand-how-to-style-angular-components">
-    <img src="/blog/assets/imgs/egghead-artwork-styling-components.png" />
-  </a>
-</figure> -->
 
 [This Egghead course "Understand How to Style Angular Components](https://egghead.io/courses/understand-how-to-style-angular-components) can be seen as a natural extension of that article. It should give you a complete overview of everything related to styling Angular components. 
 

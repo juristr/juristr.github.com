@@ -20,8 +20,7 @@ image: /blog/assets/imgs/conditional-add-styles.png
 
 {{< postad >}}
 
-{{<warn-notice message="$1" >}}
- 
+{{<warn-notice message="Contents are based on Angular version >=2" >}}
 
 {{< toc >}}
 
@@ -29,47 +28,34 @@ image: /blog/assets/imgs/conditional-add-styles.png
 
 Check out [my Egghead.io course](https://egghead.io/courses/understand-how-to-style-angular-components) to get a full picture on styling Angular components. I hope you enjoy it :blush:
 
-{% assign lesson_url = "courses/understand-how-to-style-angular-components" %}
-{% assign lesson_img = "/blog/assets/imgs/egghead-artwork-styling-components.png" %}
-{% assign image_class="image--small" %}
-{% include egghead.html %}
+{{<egghead-course uid="courses/understand-how-to-style-angular-components" lesson_img="/blog/assets/imgs/egghead-artwork-styling-components.png" >}}
+
 
 ## Directly manipulating styles property
 
-{% assign video_title = "Style HTML elements in Angular using the style property" %}
-{% assign video_url = "https://egghead.io/lessons/style-html-elements-in-angular-using-the-style-property" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/style-html-elements-in-angular-using-the-style-property" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/style-html-elements-in-angular-using-the-style-property" >}}
 
 A rather unconventional way would be to return the styling property as a string and then to directly set it on the desired element:
 
-```javascript
-//our root app component
-import {Component} from '@angular/core'
-
+```typescript
 @Component({
-  selector: 'my-app',
+  selector: 'being-stylish',
   template: `
-    <div>
-      <div [style.background-color]="getStyle()">
-        I am a div that wants to be styled
-      </div>
-      <button (click)="showStyle = !showStyle;">Toggle style</button>
+    <div 
+      [style.background-color]="getBackgroundColor()"
+      [style.color]="'red'" 
+      (click)="showStyle = !showStyle">
+      I'm stylish, kinda..
     </div>
   `
 })
-export class App {
-  showStyle: false;
-  
-  constructor() {
-  }
-  
-  getStyle() {
-    if(this.showStyle) {
-      return "yellow";
+export class StylishComponent {
+  showStyle = false;
+  getBackgroundColor() {
+    if (this.showStyle) {
+      return 'yellow';
     } else {
-      return "";
+      return '';
     }
   }
 }
@@ -77,30 +63,27 @@ export class App {
 
 Note the `[style.background-color]` in the code above.
 
-{{<plunker plunker_url="https://embed.plnkr.co/Zt051PhE8Kd03ksiF4K9/">}}
+{{<stackblitz uid="edit/blog-styling-angular-components-background">}}
  
 
 ## Style Sanitization
 
-{% assign video_title = "Use Angular style sanitization to mark dynamic styles as trusted values" %}
-{% assign video_url = "https://egghead.io/lessons/use-angular-style-sanitization-to-mark-dynamic-styles-as-trusted-values" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/use-angular-style-sanitization-to-mark-dynamic-styles-as-trusted-values" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/use-angular-style-sanitization-to-mark-dynamic-styles-as-trusted-values" >}}
+
 
 Assume for instance we want to dynamically add a background image of a user's profile image, using the `[style.background-image]="..."` approach. Naively, we may try the following:
 
-```javascript
+```typescript
 @Component({
-  selector: 'my-app',
+  selector: 'sanitized-component',
   template: `
-    <div [style]="getStyle()">
+    <div [style]="getGravatarUrl()">
     </div>
   `
 })
-export class App {
+export class SanitizedComponent {
   
-  getStyle() {
+  getGravatarUrl() {
     // snip snip -> fetch the url from somewhere
     const profilePicUrl = 'some-remote-server-url.jpg';
     const style = `background-image: url(${profilePicUrl})`;
@@ -116,15 +99,15 @@ However, what we get is an error message from Angular saying:
 
 This is a security warning, alerting us for a potential [XSS security vulnerability](https://angular.io/docs/ts/latest/guide/security.html#xss). **If you know that the URL is safe**, you can go around this and mark the style as safe.
 
-```javascript
+```typescript
 import { DomSanitizer  } from '@angular/platform-browser';
 
 @Component({...})
-export class App {
+export class SanitizedComponent {
   
   constructor(private sanitizer: DomSanitizer) {}
 
-  getStyle() {
+  getGravatarUrl() {
     // snip snip -> fetch the url from somewhere
     const profilePicUrl = 'some-remote-server-url.jpg';
     const style = `background-image: url(${profilePicUrl})`;
@@ -138,105 +121,104 @@ export class App {
 
 The `DomSanitizer` has other methods as well: [refer to the official docs](https://angular.io/docs/ts/latest/api/platform-browser/index/DomSanitizer-class.html).
 
+{{<stackblitz uid="edit/blog-styling-angular-components-sanitizing">}}
+
 ## The good old "ngClass"
 
-{% assign video_title = "Style HTML elements in Angular using ngClass" %}
-{% assign video_url = "https://egghead.io/lessons/style-html-elements-in-angular-using-ngclass" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/style-html-elements-in-angular-using-ngclass" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/style-html-elements-in-angular-using-ngclass" >}}
 
 Straight away, there's still the good old [NgClass](https://angular.io/docs/ts/latest/api/common/NgClass-directive.html) which might especially be known by Angular 1 developers. NgClass allows to pass in an object (key:value) where the key represents the class and the value a boolean condition which controls whether that specific class is applied to the element or not.  
 That said, it is the preferred way of adding one or more classes to an element. 
 
 It is made available under the `@angular/common` module which is imported already for you (under the `@angular/browser` module), so there's no need to do it manually. Then we can use it just as we did in Angular 1. Here's the full code example.
 
-```javascript
+```typescript
 //our root app component
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'ngclass-component',
   template: `
-    <div>
-      <div [ngClass]="{'my-class': isClassVisible }">
-        I am a div that wants to be styled
-      </div>
-      <button (click)="isClassVisible = !isClassVisible;">Toggle style</button>
+    <div [ngClass]="{ bold: isBold, strike: isStrike, highlight: isHighlight }">
+      Hi there!
     </div>
+
+    <p>
+      <label><input type="checkbox" [(ngModel)]="isStrike"> Strike</label>
+      <label><input type="checkbox" [(ngModel)]="isBold"> Bold</label>
+      <label><input type="checkbox" [(ngModel)]="isHighlight"> Highlight</label>
+    </p>
   `,
   styles: [
-  `
-  .my-class {
-    background-color: yellow;
-  }
-  `
+    `
+     .bold {
+        font-weight: bold;
+      }
+
+      .highlight {
+        background-color: yellow;
+      }
+
+      .strike {
+        text-decoration: line-through;
+      }
+    `
   ]
 })
-export class App {
-  isClassVisible: false;
-  
-  constructor() {
-  }
-  
+export class NgClassComponent {
+  isStrike = false;
+  isBold = false;
+  isHighlight = false;
 }
 ```
 
-{{<plunker plunker_url="https://embed.plnkr.co/yCalvA1OsC6w2VZUAHm6/">}}
+{{<stackblitz uid="edit/blog-styling-angular-components-ngclass">}}
  
 
 ## Adding a single class
 
-{% assign video_title = "Conditionally add a single CSS class to a DOM element in Angular" %}
-{% assign video_url = "https://egghead.io/lessons/conditionally-add-a-single-css-class-to-a-dom-element-in-angular" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/conditionally-add-a-single-css-class-to-a-dom-element-in-angular" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/conditionally-add-a-single-css-class-to-a-dom-element-in-angular" >}}
 
 An alternative to the `ngClass` and especially in situations when only a single class needs to be applied is the following syntax.  
 Similarly as we did with the background-color above, we can add a single class, using the following notation: `[class.nameOfClass]="someCondition"`.
 
-```javascript
+```typescript
 //our root app component
 import {Component} from '@angular/core'
 
 @Component({
-  selector: 'my-app',
+  selector: 'cssclass-component',
   template: `
-    <div>
-      <div [class.my-class]="isClassVisible">
-        I am a div that wants to be styled
-      </div>
-      <button (click)="isClassVisible = !isClassVisible;">Toggle style</button>
+    <div [class.rounded-border]="isBorder">
+      I have a rounded border.
     </div>
+
+    <p>
+      <label><input type="checkbox" [(ngModel)]="isBorder"> add border</label>
+    </p>
   `,
   styles: [
-  `
-  .my-class {
-    background-color: yellow;
-  }
-  `
+    `
+      .rounded-border {
+        border: 1px solid black;
+        border-radius: 3px;
+        width: 200px;
+        padding: 15px;
+      }
+    `
   ]
 })
-export class App {
-  isClassVisible: false;
-  
-  constructor() {
-  }
-  
+export class CssClassComponent {
+  isBorder = true;
 }
 ```
 
-{{<plunker plunker_url="https://embed.plnkr.co/WmrldzDHCib5ixsdL8R0/">}}
+{{<stackblitz uid="edit/blog-styling-angular-components-single-class">}}
  
 
 ## Using `:host(..)` and `@HostBinding`
 
-{% assign video_title = "Use Angular’s @HostBinding and :host(...) to add styling to the component itself" %}
-{% assign video_url = "https://egghead.io/lessons/use-angular-s-hostbinding-and-host-to-add-styling-to-the-component-itself" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/use-angular-s-hostbinding-and-host-to-add-styling-to-the-component-itself" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/use-angular-s-hostbinding-and-host-to-add-styling-to-the-component-itself" >}}
 
 Consider you have a component `<styled>` which you'd like have different CSS classes applied based on some setting, like `.yellow-style` in case when you specify `<styled style="yellow">` and `.red-style` when you pass in `red`: `<styled style="red">`.
 
@@ -252,7 +234,7 @@ What's important to note here is that, different to what we did so far, we don't
 
 Still, for reusability purposes, our styles should be supplied with the component itself, so again we use the `styles` property of our `StyledComponent`:
 
-```javascript
+```typescript
 @Component({
   selector: 'styled',
   template: `
@@ -283,7 +265,7 @@ As you can see, we use the special `:host(...)` selector to target the styles on
 
 Next, we define an `@Input()` property which allows us pass in the style configuration.
 
-```javascript
+```typescript
 @Component({...})
 export class StyledComponent {
     @Input() style;
@@ -292,7 +274,7 @@ export class StyledComponent {
 
 What we're still missing is to programmatically set the CSS class on our host element based on the value of the `style` input property. We use the `@HostBinding` for this:
 
-```javascript
+```typescript
 import { Component, Input, HostBinding } from '@angular/core';
 
 @Component({ ... })
@@ -322,8 +304,38 @@ In the `ngOnChanges` we the `style` input property changes, we properly adjust o
 
 Here's an example to play around with.
 
-{{<plunker plunker_url="https://embed.plnkr.co/LfjCS6DMSi8d44O4Uhkj/">}}
- 
+{{<stackblitz uid="edit/blog-styling-angular-components-host-styling">}}
+
+## Restricting styles with `host-context`
+
+We can even restrict styles/classes being applied to our Angular component, based on our ancestor elements. Here for instance, we're restricting the adding of a border, based on whether there exists an ancestor element that has the class `.styled-component`:
+
+```typescript
+@Component({
+  selector: 'hostcontext-styling',
+  template: `
+    <div>
+      I'm a div that wants to be styled
+    </div>
+    ...
+  `,
+  styles: [
+    `
+      :host-context(.styled-component) {
+        border: 1px solid gray;
+        display:block;
+      }
+
+      ...
+
+    `
+  ]
+})
+export class HostContextStylingComponent {
+}
+```
+
+{{<stackblitz uid="edit/blog-styling-angular-components-hostcontext">}}
 
 ## Add a class to my component host
 
@@ -335,7 +347,7 @@ When you create a custom Angular component you may often have the necessity to n
 
 In order to be able to properly style it, we want it to have a class attached to it. Of course we could just add a `class` attribute, but we want it to happen automatically. As we have already seen in the section before, we can leverage the `@HostBinding` decorator, but this time we don't need any kind of condition. Rather we can write it as:
 
-```javascript
+```typescript
 @Component({
    selector: 'my-custom-component',
    ...
@@ -347,11 +359,7 @@ export class MyCustomComponent {
 
 ## Referencing the DOM element directly via ElementRef
 
-{% assign video_title = "Use the Renderer2 to add styles to an element in Angular" %}
-{% assign video_url = "https://egghead.io/lessons/use-the-renderer2-to-add-styles-to-an-element-in-angular" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/use-the-renderer2-to-add-styles-to-an-element-in-angular" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/use-the-renderer2-to-add-styles-to-an-element-in-angular" >}}
 
 The last possibility is by directly interacting with the underlying DOM element. For that purpose we create a directive `styled` which we add to our div.
 
@@ -363,7 +371,7 @@ The last possibility is by directly interacting with the underlying DOM element.
 
 Our directive looks like this:
 
-```javascript
+```typescript
 import {Directive, ElementRef, Renderer2} from '@angular/core';
 
 @Directive({
@@ -381,15 +389,13 @@ The important part here is the `ElementRef` and the `Renderer2` which I import i
 
 The `ElementRef` allows us to gain access to the `nativeElement` API via
 
-```javascript
+```typescript
 el.nativeElement.style.backgroundColor = 'yellow';
 ```
 
 This way you can deliberately modify the properties of the native DOM element. So why would I want to use the `Renderer2`. Well, Angular isn't only build for the browser, but it can potentially also be rendered on the server or render native elements on a mobile device (via [NativeScript](https://www.nativescript.org/) for instance). Thus, the `Renderer2` provides an abstraction over the native elements.
 
-Check out this Plunk for the full code.
-
-{{<plunker plunker_url="https://embed.plnkr.co/TqteblvISNtHObNbQAel/">}}
+{{<stackblitz uid="edit/blog-styling-angular-components-elementref">}}
  
 
 ## More...
