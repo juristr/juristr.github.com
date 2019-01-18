@@ -13,6 +13,9 @@ tags:
   - Angular
   - async
   - ordering
+  - concatMap
+  - switchMap
+  - mergeMap
 ---
 
 <div class="article-intro">
@@ -239,6 +242,45 @@ That's what `switchMap` does. In contrast to `concatMap`, it doesn't execute the
 Here's a Stackblitz example. Pay particular attention to the console log. In the `setTimeout(..)` a log is written (`console.log('Returning data');`). If you double-click, that log doesn't even appear, proving that the async action is not even executed.
 
 {{<stackblitz uid="edit/blog-guarantee-order-switchmap">}}
+
+## `switchMap` - potential race conditions
+
+Ok, so we've learned, that with `switchMap` we can optimize our `concatMap` approach in that we cancel the previous observable, thus preventing from even executing that (possibly costly logic) in case when the user double-clicks on one of our checkboxes. But there's a caveaut here: **what if the user quickly clicks the 1st and then 2nd checkbox?** We would actually cancel the click of the 1st checkbox, thus preventing it from being properly activated. Let's see how to fix that.
+
+[Kwinten](https://mobile.twitter.com/KwintenP) suggested to use `mergeMap` in this case and then handling the "cancelling" optimization by using the `takeUntil` operator, verifying whether a second event from the same checkbox comes in. Here's how to achieve that:
+
+```typescript
+this.selectionSubject
+  .pipe(
+    mergeMap(data => {
+      const id = data.option.value;
+
+      if (data.checkboxEvent.checked) {
+        return Observable.create((observer) => {
+          ...
+        }).pipe(
+          takeUntil(this.selectionSubject.pipe(
+            filter(data => data.option.value === id),
+          ))
+        );
+      } else {
+        return of({
+          type: 'REMOVE',
+          data: id
+        });
+      }
+    }
+    )
+  ).subscribe((action: any) => {
+    ...
+  });
+```
+
+As you can see the "async" observable has a `takeUntil` that stops that Observable the moment a new event comes in on our `selectionSubject` with the same id we're currently processing. Because that's the scenario of a double-click on the same checkbox. In any other case, we just complete the observable and let it go on without terminating it, thus solving the potential issue of quickly clicking multiple different checkboxes :smiley:.
+
+And here's the according modified Stackblitz to play around with.
+
+{{<stackblitz uid="edit/blog-guarantee-order-mergemap" >}}
 
 ## Conclusion
 
