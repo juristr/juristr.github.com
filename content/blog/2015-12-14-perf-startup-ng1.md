@@ -3,7 +3,6 @@ title: Improve your Angular 1.x startup time
 lead: A neat and simple trick to give your app some boost
 show_img_in_detail: true
 coverimage: false
-category: null
 categories:
   - Angular.js
   - JavaScript
