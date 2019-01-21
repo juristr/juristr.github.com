@@ -7,8 +7,8 @@ show_img_in_detail: true
 coverimage: true
 category: null
 categories:
-  - JavaScript
   - Angular.js
+  - JavaScript
 date: 2014-11-06T01:00:00.000Z
 comments: true
 url: /blog/2014/11/learning-ng-series-intro

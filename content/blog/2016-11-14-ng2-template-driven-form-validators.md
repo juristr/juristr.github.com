@@ -4,8 +4,8 @@ lead: >-
   Learn what a validation factory function is and how to implement a validation
   directive to be added to your form controls
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 reposts:
   - 'http://javascriptweekly.com/issues/311'
 date: 2016-11-14T01:00:00.000Z

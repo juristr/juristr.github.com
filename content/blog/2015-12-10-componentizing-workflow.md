@@ -3,10 +3,9 @@ title: Componentizing Workflow for Angular
 lead: A possible (mental) workflow to split up your static HTML into components
 show_img_in_detail: true
 coverimage: false
-category: angular2
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 reposts:
   - 'https://dzone.com/articles/componentizing-workflow-for-angular-2'
 date: 2015-12-10T01:00:00.000Z

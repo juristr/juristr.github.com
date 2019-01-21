@@ -1,10 +1,9 @@
 ---
 title: From ng-controller to components with Angular 1.5
 lead: Driving your Angular frontend architecture to a new level
-category: angular1
 categories:
-  - JavaScript
   - Angular.js
+  - JavaScript
 reposts:
   - 'https://dzone.com/articles/from-ng-controller-to-components-with-angular-15'
 date: 2016-06-27T00:00:00.000Z

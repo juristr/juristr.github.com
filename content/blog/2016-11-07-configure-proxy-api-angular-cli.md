@@ -2,8 +2,8 @@
 title: Configure a proxy for your API calls with Angular CLI
 lead: Learn how to configure the Angular CLI to proxy API calls to your backend
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 date: 2016-11-07T01:00:00.000Z
 comments: true
 url: /blog/2016/11/configure-proxy-api-angular-cli

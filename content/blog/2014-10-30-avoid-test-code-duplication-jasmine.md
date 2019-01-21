@@ -5,8 +5,8 @@ show_img_in_detail: true
 coverimage: false
 category: null
 categories:
-  - JavaScript
   - testing
+  - JavaScript
   - Angular.js
 reposts:
   - >-

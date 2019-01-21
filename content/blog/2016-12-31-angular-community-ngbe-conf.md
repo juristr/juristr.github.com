@@ -2,8 +2,8 @@
 title: NG-BE Conf and the Angular Community <3
 lead: Thankful for having attended Belgium's first ever Angular conference
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 date: 2016-12-31T01:00:00.000Z
 comments: true
 url: /blog/2016/12/angular-community-ngbe-conf

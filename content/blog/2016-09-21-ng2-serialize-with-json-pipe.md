@@ -2,8 +2,8 @@
 title: 'Angular: Using the JSONPipe for debugging'
 lead: Remember the JSON filter in Angular 1? Here's how you can use it in Angular
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 reposts:
   - 'https://dzone.com/articles/angular-2-using-the-jsonpipe-for-debugging'
 date: 2016-09-21T00:00:00.000Z

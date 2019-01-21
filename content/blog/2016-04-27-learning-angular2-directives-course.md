@@ -3,11 +3,10 @@ title: Learning Angular 2 Directives
 lead: >-
   Learn how to build efficient Angular 2 directives with this fast and
   interactive video course
-category: angular2
 categories:
-  - JavaScript
-  - Angular.js
   - Angular
+  - Angular.js
+  - JavaScript
 date: 2016-04-27T00:00:00.000Z
 comments: true
 url: /blog/2016/04/learning-angular2-directives-course

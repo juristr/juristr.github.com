@@ -4,8 +4,8 @@ lead: >-
   It's time to get started. In this video I will help you create your first
   Angular app
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 reposts:
   - 'https://dzone.com/articles/lets-create-your-first-angular-2-app'
 date: 2016-10-05T00:00:00.000Z

@@ -2,8 +2,8 @@
 title: 'Ok.. let me explain: it''s going to be Angular 4.0, or simply Angular'
 lead: And from now on we will just call it Angular
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 date: 2016-12-13T01:00:00.000Z
 comments: true
 url: /blog/2016/12/let-me-explain-angular-release-cycles

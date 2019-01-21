@@ -1,10 +1,9 @@
 ---
 title: Fine grained change detection with Angular
 lead: Ever heard about DoCheck or OnChanges in Angular components? Then read along..
-category: angular2
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 date: 2016-04-07T00:00:00.000Z
 comments: true
 url: /blog/2016/04/angular2-change-detection

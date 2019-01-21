@@ -3,10 +3,9 @@ title: 'Learning Angular: Creating a tabs component'
 lead: >-
   A follow up on thoughtram's excellent article on creating a tabs components
   with Angular
-category: angular2
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 date: 2016-02-02T01:00:00.000Z
 comments: true
 url: /blog/2016/02/learning-ng2-creating-tab-component

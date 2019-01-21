@@ -4,10 +4,9 @@ lead: How named/multi-slot transclusion works in Angular
 show_img_in_detail: true
 lastupdated: '2016-06-14'
 coverimage: false
-category: angular2
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 reposts:
   - >-
     https://dzone.com/articles/multi-content-projection-aka-multiple-transclusion

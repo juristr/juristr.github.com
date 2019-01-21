@@ -2,8 +2,8 @@
 title: Configure Ahead of Time (AoT) for your Angular app using the Angular CLI
 lead: Learn how to leverage the true power of AoT compilation with the CLI
 categories:
-  - JavaScript
   - Angular
+  - JavaScript
 date: 2016-12-03T01:00:00.000Z
 comments: true
 url: /blog/2016/12/configure-aot-with-angular-cli
