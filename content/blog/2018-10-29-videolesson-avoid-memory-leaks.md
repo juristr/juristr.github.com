@@ -50,7 +50,7 @@ Similarly, when using `takeUntil`, make sure it's the **last operator in the `.p
 
 Also, here's a running Stackblitz example.
 
-{{<stackblitz uid="edit/angular-state-mgmnt-scan" >}}
+{{<stackblitz uid="edit/egghead-angular-rxjs-memoryleak" >}}
  
 
 ## Like the video?
