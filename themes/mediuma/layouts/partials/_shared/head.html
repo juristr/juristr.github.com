@@ -63,7 +63,7 @@
 	<link href="{{ "/css/tango_syntax.css" | urlize | relURL }}" rel="stylesheet">
 	<link href="{{ "/css/fluidbox.min.css" | urlize | relURL }}" rel="stylesheet"> -->
 
-	{{ if eq .Kind "home" }}
+	{{ if (or (eq .Kind "home") (isset .Params "is_workshop")) }}
 	{{ $styles := resources.Get "/scss/home.scss" | toCSS | minify }}
 	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 	{{ end }}
