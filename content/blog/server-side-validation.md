@@ -9,10 +9,12 @@ url: /blog/2019/02/display-server-side-validation-errors-with-angular
 image: /blog/assets/imgs/server-side-validation-errors.png
 categories:
   - Angular
+  - Egghead
 tags:
   - angular
   - forms
   - validation
+  - egghead
 draft: false
 ---
 

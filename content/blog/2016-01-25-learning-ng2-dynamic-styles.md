@@ -5,6 +5,11 @@ lastupdated: '2017-03-30'
 categories:
   - Angular
   - JavaScript
+  - Egghead
+tags:
+  - Angular
+  - JavaScript
+  - Egghead
 ads: false
 date: 2016-01-25T01:00:00.000Z
 comments: true

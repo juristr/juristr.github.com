@@ -8,6 +8,7 @@ image: /blog/assets/imgs/rxjs-order-guarantee.png
 categories:
   - RxJS
   - Angular
+  - Egghead
 tags:
   - RxJS
   - Angular

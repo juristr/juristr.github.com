@@ -4,6 +4,7 @@ lead: Video session on how to implement simple caching using RxJS in Angular
 categories:
   - Angular
   - RxJS
+  - Egghead
 date: 2018-11-11T01:00:00.000Z
 comments: true
 url: /blog/2018/11/videolesson-rxjs-caching-angular

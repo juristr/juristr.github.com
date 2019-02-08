@@ -5,6 +5,7 @@ title: >-
 lead: A free Egghead lesson on avoiding memory leaks in Angular components
 categories:
   - Angular
+  - Egghead
 date: 2018-10-29T01:00:00.000Z
 comments: true
 url: /blog/2018/10/videolesson-avoid-memory-leaks
