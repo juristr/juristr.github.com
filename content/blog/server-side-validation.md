@@ -27,6 +27,12 @@ Before starting straight away, we can basically have these types of validation:
 
 Sometimes however, we **have to submit the form** to be able to perform more cross-cutting validation logic. We might need to take the data combine it with other data (from the DB) we only have available on the server side, before ultimately then returning either a success status or fail due to "validation errors". Such validation errors can then be targeted to a single field (i.e. the username field) or even the entire entity (or user model).
 
+## TL;DR
+
+Might want to watch the according [Egghead.io lesson](https://egghead.io/lessons/egghead-display-a-server-side-validation-error-response-onto-an-angular-form) then :wink:...
+
+{{<egghead-lesson uid="lessons/egghead-display-a-server-side-validation-error-response-onto-an-angular-form">}}
+
 ## HTTP and Status Codes
 
 In modern APIs, whenever we send data to the server and it gets processed successfully, an `HTTP 200` response is being sent back to confirm the success. We might even get the data back in the response body, containing additional fields that might have been calculated on the server side. A classic example: the primary key property (usually) `id` might have been populated on the server side.
