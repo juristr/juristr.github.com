@@ -22,18 +22,33 @@
                 {{if isset .Site.Params.author "description"}}
                 <!-- Begin Top Meta -->
                 <div class="row post-top-meta">
+                    {{ if isset .Params "author" }}
+                        {{ $author := index .Site.Params.author .Params.author }}
+                        <div class="col-md-2">
+                            <img class="author-thumb" src="{{ $author.thumbnail}}" alt="{{ $author.name }}">
+                        </div>
+                        <div class="col-md-10">
+                            <a class="link-dark" href="{{$author.url}}">{{ $author.name }}</a><a href="https://twitter.com/{{$author.twitter}}"
+                                class="btn follow">Follow</a>
+                            <span class="author-description">
+                                {{ $author.description | markdownify }}<br/>
+                                <i>Guest writer on juristr.com</i>
+                            </span>
+                            <!-- <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span><span class="dot"></span>
+                            <span class="post-read">{{ .ReadingTime }} min read</span> -->
+                        </div>
+                    {{ else }}
                     <div class="col-md-2">
-                        <!-- <a href="author.html"> -->
                         <img class="author-thumb" src="{{ .Site.Params.author.thumbnail}}" alt="{{ .Site.Params.author.name }}">
-                        <!-- </a> -->
                     </div>
                     <div class="col-md-10">
-                        <a class="link-dark" href="author.html">{{ .Site.Params.author.name }}</a><a href="https://twitter.com/{{.Site.Params.author.twitter}}"
+                        <a class="link-dark" href="{{.Site.Params.author.url}}">{{ .Site.Params.author.name }}</a><a href="https://twitter.com/{{.Site.Params.author.twitter}}"
                             class="btn follow">Follow</a>
                         <span class="author-description">{{ .Site.Params.author.description | markdownify }}</span>
                         <!-- <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span><span class="dot"></span>
                         <span class="post-read">{{ .ReadingTime }} min read</span> -->
                     </div>
+                    {{end}}
                 </div>
                 <!-- End Top Menta -->
                 {{end}}

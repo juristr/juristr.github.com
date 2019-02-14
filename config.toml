@@ -34,6 +34,14 @@ enableInlineShortcodes = true
   description = "Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for [Egghead.io](https://egghead.io/instructors/juri-strumpflohner), writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops."
   twitter = "@juristr"
   email = "&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;"
+  url = "/about/"
+
+[params.author.maxim_koretskyi]
+  name = "Max Koretskyi"
+  thumbnail = "https://pbs.twimg.com/profile_images/1088111421102141452/2C0rQ12M_400x400.jpg"
+  description = "Finds patterns in frameworks and explains them. #Angular & #React contributor. DevEvangelist at @ag_grid. Chief Inspiration Officer at @AngularInDepth. GDE, MVP."
+  twitter = "@maxim_koretskyi"
+  url = "https://twitter.com/maxim_koretskyi"
 
 [params.index]
   picture = "/images/author.png"

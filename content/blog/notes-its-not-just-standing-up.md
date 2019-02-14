@@ -18,6 +18,8 @@ tags:
   I'm highly convinced that the hardest part of software development is people. Here are some of my notes of the [awesome article from Jason Yip on "It's Not Just Standing Up: Patterns for Daily Standup Meetings"](https://martinfowler.com/articles/itsNotJustStandingUp.html).
 {{</intro>}}
 
+<!--more-->
+
 {{<postad>}}
 
 People and organization aspects of the software development process are at least as important as the technical ones. Still they are often underestimated. A good working team can be a lot more productive, even though they might not have exceptional rockstar developers. This starts by optimizing meetings, coordinating work and especially **good team communication**.

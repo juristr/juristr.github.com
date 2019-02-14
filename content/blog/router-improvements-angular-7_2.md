@@ -21,6 +21,10 @@ draft: false
   Learn how we can use new options introduced for the `runGuardsAndResolvers` setting for the Angular Router configuration to get a better control over when to run our resolvers and guards.
 {{</intro>}}
 
+<!--more-->
+
+{{<postad>}}
+
 I'm pretty sure you know about Router guards and resolvers and what they are good for. If not, don't worry. I have a [full course out on Egghead.io](https://egghead.io/courses/learn-angular-router-for-real-world-applications) :wink:.  
 
 The `runGuardsAndResolvers` options ([here's the official doc](https://angular.io/api/router/RunGuardsAndResolvers)) is actually quite a hidden functionality and not that much used. However, it has been there already since about Angular v4. The possibilities at that time were quite limited though, something like the following:

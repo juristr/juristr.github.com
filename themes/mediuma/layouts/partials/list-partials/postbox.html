@@ -17,16 +17,30 @@
             <div class="wrapfooter">
                 <div class="row">
                     <div class="col-10">
-                        <span class="meta-footer-thumb">
-                            <a href="author.html">
-                                <img class="author-thumb" src="{{ .Site.Params.author.thumbnail}}" alt="{{ .Site.Params.author.name }}">
-                            </a>
-                        </span>
-                        <span class="author-meta">
-                            <span class="post-name"><a href="author.html">{{ .Site.Params.author.name }}</a></span><br />
-                            <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span><span class="dot"></span><span
-                                class="post-read">{{ .ReadingTime }} min read</span>
-                        </span>
+                        {{ if isset .Params "author" }}
+                            {{ $author := index .Site.Params.author .Params.author }}
+                            <span class="meta-footer-thumb">
+                                <a href="{{$author.url}}">
+                                    <img class="author-thumb" src="{{ $author.thumbnail}}" alt="{{ $author.name }}">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="{{$author.url}}">{{ $author.name }}</a></span><br />
+                                <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span><span class="dot"></span><span
+                                    class="post-read">{{ .ReadingTime }} min read</span>
+                            </span>
+                        {{ else }}
+                            <span class="meta-footer-thumb">
+                                <a href="{{.Site.Params.author.url}}">
+                                    <img class="author-thumb" src="{{ .Site.Params.author.thumbnail}}" alt="{{ .Site.Params.author.name }}">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="{{.Site.Params.author.url}}">{{ .Site.Params.author.name }}</a></span><br />
+                                <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span><span class="dot"></span><span
+                                    class="post-read">{{ .ReadingTime }} min read</span>
+                            </span>
+                        {{ end }}
                     </div>
                     <div class="col-2">
                         {{ if isset .Params "categories" }}
