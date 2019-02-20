@@ -1,0 +1,431 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Angular Issue Manager</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Angular Issue Manager"
+                  environment="web"
+                  feedback-link="https://github.com/juristr/codelab-ng-http-basics/issues">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>In this codelab you&#39;re going to learn the fundamentals of Angular by building a simple application, called &#34;Issue Manager&#34;.</p>
+<p><img style="max-width: 624.00px" src="img/950f416488bcfbe3.png"></p>
+<h2 class="checklist"><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>Use the Angular CLI for development (serving our project, building, scaffolding code,..)</li>
+<li>Installing external libraries, specifically the Angular Material library</li>
+<li>Structuring an Angular app into modules</li>
+<li>Creating components and binding data</li>
+<li>Creating services and consume them from a component</li>
+<li>Setting up the Angular Http client with your Angular App Module</li>
+<li>Using Angular&#39;s HTTP service</li>
+<li>Set up Angular routes and lazy loading</li>
+<li>Using forms to edit data</li>
+</ul>
+<h2><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>A valid code editor, ideally <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+<li>Git and a recent version of Node (v9+) and NPM (v5+)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Getting set up" duration="3">
+        <h2><strong>Download the Code</strong></h2>
+<p>Click the following link to download all the code for this codelab:</p>
+<p><a href="https://github.com/juristr/codelab-ng-issue-manager/archive/master.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
+<p>Unzip the code and open it with Visual Studio Code (or your respective code editor of choice).</p>
+<h2><strong>Install npm packages and start the app</strong></h2>
+<p>After unpacking the files, open up a terminal (you can also do that from within Visual Studio Code) at the location where you unzipped your files.</p>
+<p>Execute <code>npm install</code> (from your command line) to download all the necessary packages.</p>
+<h2><strong>Run the app</strong></h2>
+<p>Once installed, open your terminal (also from within VSCode) and type</p>
+<pre><code>$ npm start</code></pre>
+<p>You should ideally see something like this in your browser:</p>
+<p><img style="max-width: 624.00px" src="img/b7a1547b71460fe.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Install Angular Material" duration="3">
+        <aside class="special"><p>Make sure to have a clean Git status. Before proceeding, commit your changes.</p>
+</aside>
+<p>We want to be building a nice looking UI. As such we&#39;re installing <a href="https://material.angular.io" target="_blank">Angular Material</a> as our main UI kit library. The <a href="https://material.angular.io/guide/getting-started" target="_blank">Getting Started</a> section on the official documentation has all we need in order to set everything up.</p>
+<p>We can either manually install the required libraries like</p>
+<pre><code>$ npm install @angular/material @angular/cdk</code></pre>
+<p>...and configure our app accordingly, <strong>or use the </strong><strong><code>ng add</code></strong> command:</p>
+<pre><code>$ ng add @angular/material</code></pre>
+<p>Choose &#34;Indigo/Pink&#34; as your theme:</p>
+<p>Install HammerJS which is needed for gesture recognition:<img style="max-width: 624.00px" src="img/e71371caf3adc339.png"></p>
+<p><img style="max-width: 624.00px" src="img/b8724f35024cf772.png"></p>
+<p>Also confirm the setup of browser animations for a nicer, more interactive UI experience.</p>
+<p><img style="max-width: 624.00px" src="img/79a8cd611532184c.png"></p>
+<p>After the installation finishes, <strong>inspect your file changes via Git</strong> to see which files have been changed.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Setup the Angular Material Shell" duration="3">
+        <p>We need to develop the overall app layout (also called &#34;app shell&#34;) with the top-level toolbar and title and the central content area. Navigate to the &#34;<code>app.component.html</code>&#34; and overwrite the current content with the following:</p>
+<pre><code>&lt;div class=&#34;flexbox-parent&#34;&gt;
+ &lt;div class=&#34;flexbox-item header&#34;&gt;
+   &lt;mat-toolbar color=&#34;primary&#34; role=&#34;header&#34; class=&#34;app-navbar&#34;&gt;
+     &lt;div&gt;
+       &lt;span&gt;{{ title }}&lt;/span&gt;
+     &lt;/div&gt;
+     &lt;div&gt;
+       &lt;a href=&#34;javascript:;&#34; mat-button&gt;Issues&lt;/a&gt;
+       &lt;a href=&#34;javascript:;&#34; mat-button&gt;Search&lt;/a&gt;
+     &lt;/div&gt;
+   &lt;/mat-toolbar&gt;
+ &lt;/div&gt;
+
+ &lt;div class=&#34;flexbox-item fill-area content flexbox-item-grow&#34;&gt;
+   &lt;div class=&#34;app-container&#34;&gt;
+     Content here...
+   &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>Note the usage of <code>mat-toolbar</code> (see <a href="https://material.angular.io/components/toolbar/overview" target="_blank">docs</a>). It is an Angular component provided by the Angular Material modules. Running the app right now, we will get an error message in the devtools console:</p>
+<p><img style="max-width: 624.00px" src="img/dec4a13847a9f95e.png"></p>
+<h2><strong>Create a SharedModule</strong></h2>
+<p>Since we will need the Angular Material modules throughout our app, we create a so-called &#34;SharedModule&#34;, containing shared modules and components for our application (see <a href="https://angular.io/guide/ngmodule-faq#sharedmodule" target="_blank">NgModule FAQs</a>).</p>
+<p>We use the Angular CLI to scaffold the module:</p>
+<pre><code>$ ng g m shared</code></pre>
+<p>In the <code>shared.module.ts</code>, import the following Angular Material modules and export them again.</p>
+<pre><code>import {
+ MatToolbarModule,
+ MatSidenavModule,
+ MatIconModule,
+ MatButtonModule,
+ MatCardModule,
+ MatListModule,
+ MatGridListModule,
+ MatDividerModule,
+ MatFormFieldModule,
+ MatInputModule,
+ MatSelectModule
+} from &#39;@angular/material&#39;;</code></pre>
+<p>Afterwards, go to the <code>app.module.ts</code> and import the <code>SharedModule</code>. </p>
+<p>You should see the following result:</p>
+<p><img style="max-width: 624.00px" src="img/2f8ad0afcb9e6abd.png"></p>
+<p>Git commit everything.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Component for visualizing issues" duration="3">
+        <p>Use the CLI to generate a new component called &#34;issue-list&#34; under <code>shared/components</code>.</p>
+<aside class="special"><p>Note, you can always use the --dry-run flag to only simulate the file generation, in order to verify the correctness of your command.</p>
+</aside>
+<p>Include the newly generated &lt;app-issue-list&gt; in the app.component.html.</p>
+<pre><code>&lt;div class=&#34;flexbox-item fill-area content flexbox-item-grow&#34;&gt;
+ &lt;div class=&#34;app-container&#34;&gt;
+   &lt;app-issue-list&gt;&lt;/app-issue-list&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>You should see the following:</p>
+<p><img style="max-width: 624.00px" src="img/731f9fac80e32e50.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Creating our Issue TypeScript interface" duration="3">
+        <p>It&#39;s important to type our files, especially as our application grows and gets more complex. This will not only help preventing errors but also allow us to execute safer refactorings later.</p>
+<p>In order to type our issues model, let&#39;s create a issue.ts file that represents our issue. Create a <strong>new folder </strong><strong><code>core</code></strong> and a file &#34;<code>issue.ts</code>&#34; with the following content:</p>
+<pre><code>export interface Issue {
+ title: string;
+ description: string;
+ user?: number;
+}</code></pre>
+<aside class="special"><p>Note, the usage of an optional property denoted by the <code>?</code></p>
+</aside>
+<p>Create a <strong>barrell file</strong>, that is an <code>index.ts</code> file in the core folder and export the contents of the folder; right now that&#39;s only our <code>issue.ts</code> file.</p>
+<pre><code>export * from &#39;./issue&#39;;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Service for exposing issues" duration="3">
+        <p>In order to render a list of issues, let&#39;s create a new service called <code>issues</code> in the core folder. Use the CLI to generate the service. Export the service again in our <code>index.ts</code> barrel file.</p>
+<p>The service should expose a function called <code>fetchIssues()</code> for retrieving a list of issues. For now we return a static list of issues, but we return them as observable. We can use the <code>of()</code> RxJS function for that (<a href="https://rxjs.dev/api/index/function/of" target="_blank">see docs</a>).</p>
+<pre><code>import { Injectable } from &#39;@angular/core&#39;;
+import { of, Observable } from &#39;rxjs&#39;;
+import { Issue } from &#39;./issue&#39;;
+
+@Injectable({
+ providedIn: &#39;root&#39;
+})
+export class IssuesService {
+
+ constructor() { }
+
+ fetchIssues(): Observable&lt;Issue[]&gt; {
+  ...
+ }
+}</code></pre>
+<p>Return a couple of issue objects like</p>
+<pre><code>return of([
+ {
+   title: &#39;Issue 1&#39;,
+   description: &#39;Description of issue 1&#39;
+ },
+ {
+   title: &#39;Issue 2&#39;,
+   description: &#39;Description of issue 2&#39;
+ }
+]);</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Render a list of issues" duration="3">
+        <p>In our <code>IssueListComponent</code>, inject an instance of the <code>Issues</code> service and expose the observable list returned by the <code>fetchIssues()</code> function, to the template.</p>
+<pre><code>export class IssueListComponent implements OnInit {
+ issues$ = this.issuesService.fetchIssues();
+
+ constructor(private issuesService: IssuesService) {}
+
+ ngOnInit() {}
+}</code></pre>
+<aside class="special"><p>Note, the <code>$</code> suffix. It denotes that the variable holds an Observable, and not a resolved, static value.</p>
+</aside>
+<p>Render the list of issues displaying by using the <code>&lt;mat-card&gt;</code> component (<a href="https://material.angular.io/components/card/overview" target="_blank">see docs</a>) and an <code>*ngFor</code> loop.</p>
+<pre><code>&lt;mat-card...&gt;
+ &lt;mat-card-header&gt;
+   &lt;mat-card-title&gt;...&lt;/mat-card-title&gt;
+ &lt;/mat-card-header&gt;
+ &lt;mat-card-actions&gt;
+   &lt;button mat-button&gt;OPEN&lt;/button&gt;
+ &lt;/mat-card-actions&gt;
+&lt;/mat-card&gt;</code></pre>
+<p>Add some spacing between the cards by copying the following into the component specific stylesheet: <code>issue-list.component.scss</code>.</p>
+<pre><code>mat-card {
+ margin-bottom: 15px;
+}</code></pre>
+<p>The end result should look similar to this:</p>
+<p><img style="max-width: 624.00px" src="img/3b21b972855f546.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuring the local Http Server" duration="3">
+        <p>In order to be able to properly execute Http calls, we&#39;re setting up a mock server. Actually your node_modules have already <a href="https://github.com/typicode/json-server" target="_blank">json-server</a> installed, as it came preconfigured with this Angular example setup. Moreover at the root of our Angular workspace, we already have a <code>proxy.conf.json</code>, configured to proxy all calls to <code>/api/*</code> to <code>localhost:3000/api</code> where our JSON mock server will run.</p>
+<pre><code>{
+ &#34;/api/*&#34;: {
+   &#34;target&#34;: &#34;http://localhost:3000&#34;,
+   &#34;secure&#34;: false,
+   &#34;logLevel&#34;: &#34;debug&#34;
+ }
+}</code></pre>
+<p>Let&#39;s change our &#34;start&#34; script in package.json to use the proxy configuration file and add another script &#34;start:server&#34; that launches the json mock server.</p>
+<pre><code>{
+ ...
+ &#34;scripts&#34;: {
+   &#34;start&#34;: &#34;ng serve --proxy-config proxy.conf.json&#34;,
+   &#34;start:server&#34;: &#34;json-server --routes ./mock/routes.json --watch ./mock/db.json&#34;,
+   ...
+ },
+ ...
+}</code></pre>
+<p>Start both, the app and the server using <code>npm run ...</code></p>
+<p>You should see the json server running</p>
+<p><img style="max-width: 624.00px" src="img/972613bef2408312.png"></p>
+<p>Similarly, calling <a href="http://localhost:4200/api/issues" target="_blank"><code>localhost:4200/api/issues</code></a> should return a valid JSON response.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuring the HttpClient" duration="3">
+        <p>In order to make use of Angular&#39;s Http services, we need to make sure that</p>
+<ul>
+<li><code>@angular/common</code> package is installed with npm</li>
+<li>The <code>app.module.ts</code> imports the <code>HttpClientModule</code> from <code>@angular/common/http</code></li>
+</ul>
+<p>Verify that your setup has all the requirements before proceeding.</p>
+<p>As a next step, let&#39;s go to the issue service we created earlier and substitute our static array of issues with a call to <code>/api/issues</code>. Hint: in order to do so, you need to inject the <code>HttpClient</code>.</p>
+<p>You should get the following being rendered by your app:</p>
+<p><img style="max-width: 624.00px" src="img/d50dff6ff092e9b2.png"></p>
+<p>Also make sure to inspect the network traffic for the requests that are being executed.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Generate route for our list" duration="3">
+        <p>Right now, the <code>IssueListComponent</code> is included statically in our app.component.html. Let&#39;s create a route that renders our list component based on the browser&#39;s URL.</p>
+<p>As a first step, generate a new &#34;<strong>routed Angular module</strong>&#34; <code>called issue-list</code>. You can use the <code>--routing</code> CLI flag.</p>
+<p>Next generate a new component called &#34;<strong>issues&#34;</strong> under <code>issue-list/container</code>. Your structure should now look similar to this:</p>
+<p><img style="max-width: 364.00px" src="img/ab4b7566c550ddeb.png"></p>
+<p>This component will be the one that is being shown when our route gets activated. Configure an Angular route, s.t. When we navigate to <code>/issues</code>, we see our issue.component being loaded.</p>
+<p>Finally, include our previously created <code>shared/components/issue-list</code> component in the <code>issues</code> component so that we again get the full list of issues rendered properly.</p>
+<p><img style="max-width: 624.00px" src="img/a7feca287ff3f522.png"></p>
+<aside class="special"><p>Note, you also need to import the existing app routing module in the app.module and make sure to add the <code>&lt;router-outlet&gt;</code> component where the dynamic content should be rendered.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Automatically redirect to /issues" duration="3">
+        <p>If we start our app we don&#39;t want our users to stare at an empty screen, but rather automatically redirect to our <code>/issues</code> view (which is somehow the main view of our app).</p>
+<p>Change the current routing (in <code>app.module.ts</code>) s.t. the redirect happens at startup. Whenever we enter <a href="http://localhost:4200/" target="_blank">http://localhost:4200</a> into our browser, we should end up at <a href="http://localhost:4200/issues" target="_blank">http://localhost:4200/issues</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Change the route to be lazy loaded" duration="3">
+        <p>Right now we did not apply any kind of lazy loading. If we inspect the network panel, we should see the following files being downloaded.</p>
+<p><img style="max-width: 624.00px" src="img/d55b713e2cc70101.png"></p>
+<p>All of our app is bundled in <code>main.js</code>. In order to speed up the startup time but also to not download unnecessary resources, we want to lazy load our routes. For this simple example, let&#39;s apply that on the <code>/issues</code> route. <strong>Change the configuration of the routing s.t. </strong><strong><code>/issues</code></strong><strong> gets loaded lazily.</strong></p>
+<p>Once you configured the lazy loading properly, you should see another separate file <code>issue-list-issue-list-module.js</code> being downloaded in the network panel:</p>
+<p><img style="max-width: 624.00px" src="img/d713ca80b38e29ea.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Create a detail route" duration="3">
+        <p>In order to see the detail of our issue, we want to generate a route <code>/issue/&lt;id&gt;</code> that displays the detail view of a single issue.</p>
+<p>Let&#39;s generate a new component issue-detail into the <code>issue-list/container</code> using the CLI.</p>
+<pre><code>$ ng g c issue-list/container/issue-detail</code></pre>
+<p>Configure the routing of our issue-list module s.t. the issue detail view gets displayed when going to the following URL <code>/issue/1</code></p>
+<p><img style="max-width: 624.00px" src="img/4df1d46d4cc4eca0.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Read the issue to display in the detail view" duration="3">
+        <p>In the <code>IssueDetailComponent</code>, use the <code>ActivatedRoute</code> to read the URL params, retrieve the ID from the URL and then call the backend <code>/api/issue/&lt;id&gt;</code> with the retrieved ID.</p>
+<p><img style="max-width: 624.00px" src="img/f70f35423f9350fa.png"></p>
+<p>For that purpose we need to add a new function to our <code>IssueService</code>.</p>
+<p>To render the issue, for now we can just use the JSON pipe:</p>
+<pre><code>&lt;pre&gt;{{ issue$ | async | json }}&lt;pre&gt;</code></pre>
+<p>So in steps:</p>
+<ol type="1" start="1">
+<li>In the <code>IssueDetailComponent</code> retrieve the id from the URL</li>
+<li>Create a function <code>fetchIssueById(id: number): Observable&lt;Issue&gt;</code> in our existing <code>IssuesService</code>. Use Angular&#39;s http service to fetch the issue by it&#39;s ID from the backend API</li>
+<li>Call the new function from the <code>IssueDetailComponent</code>, passing it the ID retrieved from the URL.</li>
+<li>Expose the issue to the template and render it as shown before. Note, depending on whether you expose the Observable directly or not, you may have to use the <code>| async</code> pipe.</li>
+</ol>
+<p>In the end we should se something like this:</p>
+<p><img style="max-width: 624.00px" src="img/c900fea9a35b0917.png"></p>
+<p>Also test it navigating to <code>/issues/2</code>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add navigation links" duration="3">
+        <p>In order to be able to navigate to the detail view, let&#39;s add some navigation links to the IssueListComponent. Add a [routerLink] directive to the button</p>
+<pre><code>&lt;button mat-button [routerLink]=&#34;[issue.id]&#34;&gt;OPEN&lt;/button&gt;</code></pre>
+<p>Note, it might not work immediately, you need to fix some module imports ;)</p>
+<p>Also, let&#39;s <strong>add some navigation link to our Issues menu item</strong> in the toolbar. Navigate to the app.component.html and add a routerLink directive.</p>
+<pre><code>&lt;a href=&#34;javascript:;&#34; mat-button routerLink=&#34;/issues&#34;&gt;Issues&lt;/a&gt;</code></pre>
+<p>Optional: add a <code>routerLinkActive=&#34;active&#34;</code> to the navigation links and the following CSS to the app <code>styles.scss</code> to highlight the currently active route.</p>
+<pre><code>.app-navbar {
+ .active {
+   background-color: #394aa5;
+ }
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Develop our detail form" duration="3">
+        <p>Nice, we can now see a list of issues and inspect its details. To make our app a bit more useful, we create an HTML form that allows us to see the values as well as edit them accordingly.</p>
+<p>Copy the following HTML into our <code>issue-detail.component.html</code></p>
+<pre><code>&lt;div class=&#34;example-container&#34;&gt;
+ &lt;mat-form-field&gt;
+   &lt;input matInput placeholder=&#34;Title&#34; /&gt;
+ &lt;/mat-form-field&gt;
+
+ &lt;mat-form-field&gt;
+   &lt;textarea matInput placeholder=&#34;Description&#34;&gt;&lt;/textarea&gt;
+ &lt;/mat-form-field&gt;
+
+ &lt;div&gt;
+   &lt;button mat-raised-button color=&#34;primary&#34;&gt;Save&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>We use the Reactive Forms approach to create our form. Wrap our form controls into a &lt;form&gt; tag that looks as follows:</p>
+<pre><code>&lt;form [formGroup]=&#34;form&#34; (ngSubmit)=&#34;onSubmit(form)&#34;&gt;
+...
+&lt;/form&gt;</code></pre>
+<p>In our IssueDetailComponent we need to create the the <code>form</code> variable and instantiate it with a new <code>FormGroup({..})</code> with according FormControls for <code>title</code> and <code>description</code>. Also create an empty <code>onSubmit(...)</code> function.</p>
+<p>Hint: we need to import/export the ReactiveFormsModule in the SharedModule s.t. the <code>[formGroup]</code> and <code>(ngSubmit)</code> directives work properly.</p>
+<p>Make sure you see the form being rendered:</p>
+<p><img style="max-width: 624.00px" src="img/d962534cb3595867.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Bind the Issue detail data" duration="3">
+        <p>Before, we just rendered our issue detail data using the JSON pipe. We can now bind it to our form.</p>
+<ol type="1" start="1">
+<li>Make sure to add the <code>formControlName</code> tags to our form controls in the HTML</li>
+<li>Use the <code>form.patchValue(...)</code> function to pass in the data.</li>
+</ol>
+<p><img style="max-width: 624.00px" src="img/50e7e10815cd794a.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Submitting the data &amp; saving the data" duration="3">
+        <p>To submit the data, add a new function <code>saveIssue</code> to our <code>IssuesService.</code></p>
+<pre><code>saveIssue(issue: Issue): Observable&lt;Issue&gt; {
+  ...
+}</code></pre>
+<p>Check whether we save an existing issue (using the <code>id</code> property) and use a post or put request to <code>/api/issues/...</code></p>
+<p>In our component, implement the <code>onSubmit(form: FormGroup)</code>, check whether the form is valid, and if so, invoke the previously created <code>saveIssue</code> function to save the issue to the server.</p>
+<p>Test whether persisting the issue works as expected.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>

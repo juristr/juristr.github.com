@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "source": "1l315CcMCOvUchHpK0cUMFbDbqLehhmas724a2iVNWX4",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-02-20T20:05:46Z",
+  "id": "angular-issue-manager",
+  "duration": 54,
+  "title": "Angular Issue Manager",
+  "author": "Juri Strumpflohner",
+  "summary": "In this codelab we're going to learn the Angular fundamentals by building a simple Issue Manager application.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "angular"
+  ],
+  "feedback": "https://github.com/juristr/codelab-ng-http-basics/issues",
+  "url": "angular-issue-manager"
+}
