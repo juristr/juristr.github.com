@@ -87,7 +87,7 @@ export class AuthGuard implements CanActivate {
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (!this.authService.isLoggedIn) {
       // redirect to some view explaining what happened
-      router.navigateByUrl('/notauthorized');
+      this.router.navigateByUrl('/notauthorized');
       return false;
     } else {
       return true;
@@ -132,7 +132,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (!this.authService.isLoggedIn) {
-      return router.parseUrl('/notauthorized');
+      return this.router.parseUrl('/notauthorized');
     } else {
       return true;
     }
