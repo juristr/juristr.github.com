@@ -63,9 +63,9 @@ this.someService.fetchDataFromApi()
 
 Whenever `isLoading` is set, we disable our button on the form. Now as in the example before, the `isLoading = false` instruction is duplicated, because we want to re-enable the button in both, success and error cases.
 
-### Using the `tap` operator?
+### Option 1: Using the `tap` operator?
 
-Now one might think to use the `tap` operator for that. For instance:
+One option could be the `tap` operator. For instance:
 
 ```typescript
 this.isLoading = true;
@@ -85,11 +85,40 @@ this.someService.fetchDataFromApi()
   )
 ```
 
-This won't work however, since the `tap` operator is only executed in case of a success and not when the observable throws an exception (such as in a failed HTTP call in Angular).
+Using `tap` like this however, will only execute in case of a success and not when the observale throws an exception & terminates (such as in a failed Http call in Angular).
 
-### Using the `finalize` operator!
+The operator however takes a config object that allows us to hook onto the `next`, `error` and `complete` event state of an Observable, very much like we can do in the `subscribe`.
 
-Instead, we can use the `finalize` operator. It's like in the `try-catch-finally` programming construct which is present in most C based programming languages. Hence, we can modify our example from before to the following:
+```typescript
+this.someService.fetchDataFromApi()
+  .pipe(
+    tap({
+      next: (x) => {
+        console.log('tap success', x);
+        this.isLoading = false;
+      },
+      error: (err) => {
+        console.log('tap error', err);
+        this.isLoading = false;
+      },
+      complete: () => console.log('tap complete')
+    }),
+  )
+  .subscribe(x => {
+    console.log('Got result', x);
+  }, (err) => {
+    console.error('Got error', err);
+  })
+```
+
+Here's an example of using `tap` like that:
+
+{{<stackblitz uid="edit/rxjs-finalize-operator-aabtcm" >}}
+
+
+### Option 2: Using the `finalize` operator!
+
+Another option is to use the `finalize` operator. It's like in the `try-catch-finally` programming construct which is present in most C based programming languages. Hence, we can modify our example from before to the following:
 
 ```typescript
 this.isLoading = true;
@@ -109,12 +138,16 @@ this.someService.fetchDataFromApi()
   )
 ```
 
-## Conclusion
-
-The `finalize` operator is executed whenever **our Observable terminates**. This is important! For Angular HTTP this works perfectly, because the `Observable` returned by the Angular HTTP service "completes" once the request is done. That might not be the case if you have a custom Observable.
-
-Check out [my corresponding video explaining the finalize operator](https://egghead.io/lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator) or play directly with this Stackblitz code sample.
+How does `finalize` work? It basically adds a callback to the teardown of the Observable, via `subscription.add(fn)`. This guarantees it will be called on `error`, `complete`, and `unsubscription`.
 
 {{<stackblitz uid="edit/rxjs-finalize-operator">}}
 
+## Conclusion
+
+Note, the `finalize` operator is executed whenever **our Observable terminates**. This is important! For Angular HTTP this works perfectly, because the `Observable` returned by the Angular HTTP service "completes" once the request is done. That might not be the case if you have a custom Observable.
+
+Check out [my corresponding video explaining the finalize operator](https://egghead.io/lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator) or play directly with this Stackblitz code sample.
+
 Happy coding!
+
+_Thx [Ben Lesh](https://mobile.twitter.com/BenLesh) for suggesting updates on the article_
