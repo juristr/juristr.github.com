@@ -17,8 +17,7 @@ image: /blog/assets/imgs/rxjs-first-steps/rxjsintro.gif
 
 {{< postad >}}
 
-{% assign message = "Contents are based on Angular version >=2" %}
-{% include warn-notice.html %}
+{{<warn-notice message="Contents are based on Angular version >= 2" >}}
 
 {{< toc >}}
 

@@ -20,8 +20,7 @@ image: /blog/assets/imgs/ng2-window-obj-cardimage.png
 
 {{< postad >}}
 
-{% assign message = "Contents are based on Angular version >=2" %}
-{% include warn-notice.html %}
+{{<warn-notice message="Contents are based on Angular version >= 2" >}}
 
 Referencing global browser objects like `document` or `window` directly from within your code is possible, but not encouraged and considered bad practice. 
 

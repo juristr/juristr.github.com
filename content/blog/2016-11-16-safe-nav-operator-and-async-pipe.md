@@ -18,8 +18,7 @@ image: /blog/assets/imgs/asyncpipe-bg.png
 
 {{< postad >}}
 
-{% assign message = "Contents are based on Angular version >=2" %}
-{% include warn-notice.html %}
+{{<warn-notice message="Contents are based on Angular version >= 2" >}}
 
 {{< toc >}}
 

@@ -18,8 +18,7 @@ image: /blog/assets/imgs/portal-toolbar-action.png
 
 {{< postad >}}
 
-{{<warn-notice message="Contents are based on Angular version >= 5.0.0" >}} {%
-include warn-notice.html %}
+{{<warn-notice message="Contents are based on Angular version >= 5.0.0" >}}
 
 {{< toc >}}
 
@@ -292,5 +291,5 @@ export class PageActionsComponent implements OnInit, AfterViewInit, OnDestroy {
 
 That's it. Here's a running demo to play around with. Have fun :+1:.
 
-{% assign uid = "github/juristr/demo-cdk-portal-mobile-pageactions" %}
+{{<stackblitz uid="github/juristr/demo-cdk-portal-mobile-pageactions">}}
  

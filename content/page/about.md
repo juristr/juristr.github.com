@@ -23,8 +23,6 @@ You can find me also on
 - [LinkedIn](https://linkedin.com/in/juristr/)
 - [StackOverflow](http://stackoverflow.com/users/50109/juri)
 
-<!-- I'm also available on these social networks: {% include social_icons %} -->
-
 ## Freelance Consulting
 
 I'm also a freelance trainer and consultant mostly around topics such as **frontend development**, **Angular** and **Git**. Interested? Feel free to <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;" target="_blank">reach out to me</a>.

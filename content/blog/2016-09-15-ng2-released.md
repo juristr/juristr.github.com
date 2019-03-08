@@ -17,8 +17,7 @@ image: /blog/assets/imgs/angular2-out.jpg
 
 {{< postad >}}
 
-{% assign message = "Contents are based on Angular version >=2" %}
-{% include warn-notice.html %}
+{{<warn-notice message="Contents are based on Angular version >= 2" >}}
 
 <video width="100%" height="100%" autoplay="autoplay" loop="loop">
   <source src="/blog/assets/imgs/ng2outanimation.mp4" type="video/mp4">

@@ -19,7 +19,7 @@ draft: true
     As part of the <a href="https://developers.google.com/experts/" target="_blank">Google Developers Experts program</a> I was invited to come here to Sunnyvale and San Francisco for the annual Google Developers Experts Summit as well as the Chrome Developer Summit in San Francisco. Here are some of my personal key takeaways.
 </div>
 
-{% include postads %}
+{{< postad >}}
 
 
 <figure class="image--full">

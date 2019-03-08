@@ -32,11 +32,8 @@ This is ideal on the CI server or in those cases when you're not really interest
 
 Lazy? Then check out my Egghead.io companion lesson on how to setup the Mocha reporter for your Karma tests" :smiley:
 
-{% assign video_title = "Configure the Angular CLI to use the Karma Mocha test reporter" %}
-{% assign video_url = "https://egghead.io/lessons/angular-configure-the-angular-cli-to-use-the-karma-mocha-test-reporter" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/angular-configure-the-angular-cli-to-use-the-karma-mocha-test-reporter" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/angular-configure-the-angular-cli-to-use-the-karma-mocha-test-reporter" >}}
+
 
 ## Install and configure the Mocha Reporter
 

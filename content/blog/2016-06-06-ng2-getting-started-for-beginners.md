@@ -20,8 +20,7 @@ image: /blog/assets/imgs/meetup-intro-angular2/ng2-gettingstarted-image.png
 	Since about half a year, I'm organizing a <a href="http://www.meetup.com/Software-Craftsmanship-SouthTyrol/">local Meetup group around Software Craftsmanship</a>. I recently also published <a href="/blog/2016/04/learning-angular2-directives-course/">a video course on "Learning Angular 2 directives"</a> and given Angular 2 finally released RC1, I decided to organize a Meetup session to introduce Angular 2 to our members. <i>Hint: check out the screencast at the end :wink:</i>
 </div>
 
-{% assign message = "Contents are based on Angular version >=2" %}
-{% include warn-notice.html %}
+{{<warn-notice message="Contents are based on Angular version >= 2" >}}
 
 <figure class="image--wide">
 	<a href="https://docs.google.com/presentation/d/1sgIjSzDVrc2VDpQr6OGZ7rPGMnSV_TSvLFDVvGi3yB0/edit?usp=sharing">

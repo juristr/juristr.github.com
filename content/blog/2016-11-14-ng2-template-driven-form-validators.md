@@ -21,7 +21,7 @@ image: /blog/assets/imgs/customvalidator.png
 
 {{< postad >}}
 
-{{<warn-notice message="$1" >}}
+{{<warn-notice message="Contents are based on Angular version >= 2" >}}
  
 
 {{< toc >}}
@@ -32,11 +32,7 @@ image: /blog/assets/imgs/customvalidator.png
 
 Don't wanna read through the entire article? Then lean back and watch my free Egghead lesson :wink:
 
-{% assign video_title = "Create a custom validator for template driven forms in Angular" %}
-{% assign video_url = "https://egghead.io/lessons/create-a-custom-validator-for-template-driven-forms-in-angular" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/create-a-custom-validator-for-template-driven-forms-in-angular" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/create-a-custom-validator-for-template-driven-forms-in-angular" >}}
 
 ## A simple Angular Form
 

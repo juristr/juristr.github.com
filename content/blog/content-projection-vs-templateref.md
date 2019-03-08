@@ -65,22 +65,12 @@ But of course you cannot just pass in text (such as `Hi there!`) in this example
 
 Here's a more advanced example, also using multi-slot content projection.
 
-{% assign uid = "edit/angular-contentprojection-collapsiblepanel" %}
-{% include stackblitz.html %}
+{{<stackblitz uid="edit/angular-contentprojection-collapsiblepanel">}}
 
-{% include article-link.html
-    url="/blog/2016/01/ng2-multi-content-projection/"
-    title="Multi Content Projection aka Multiple Transclusion"
-    text="How named/multi-slot transclusion works in Angular"
-    imageurl="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
-%}
+{{<article-link url="/blog/2016/01/ng2-multi-content-projection/" title="Multi Content Projection aka Multiple Transclusion">}}
 
-{% include article-link.html
-    url="/blog/2016/02/learning-ng2-creating-tab-component/"
-    title="Learning Angular: Creating a tabs component"
-    text="A follow up on thoughtram's excellent article on creating a tabs components with Angular"
-    imageurl="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
-%}
+{{<article-link url="/blog/2016/02/learning-ng2-creating-tab-component/" title="Learning Angular: Creating a tabs component">}}
+
 
 ## Dynamic Components with ngTemplateOutlet
 
@@ -136,17 +126,12 @@ And in order to use it, we use `<ng-template>`:
 
 And here's a runnable Stackblitz.
 
-{% assign uid = "edit/angular-ngtemplateoutlet-collapsiblepanel" %}
-{% include stackblitz.html %}
+{{<stackblitz uid="edit/angular-ngtemplateoutlet-collapsiblepanel">}}
 
 As you can see, the API is not that nice and elegant compared to the content projection approach. That's simply because the collapsible panel fits better with it. `ng-template` and `ngTemplateOutlet` are more suited for scenarios where you need to take a template and visualize it in dynamic ways.
 
-{% include article-link.html
-    url="/blog/2017/07/ng2-dynamic-tab-component/"
-    title="Create a dynamic tab component with Angular"
-    text="Learn about advanced topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef, ngTemplateOutlet and much more..."
-    imageurl="/blog/assets/imgs/ng-dynamic-tabs/multi-tab-editing.png"
-%}
+{{<article-link url="/blog/2017/07/ng2-dynamic-tab-component/" title="Create a dynamic tab component with Angular">}}
+
 
 ## Portals
 

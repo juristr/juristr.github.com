@@ -21,8 +21,7 @@ image: /blog/assets/imgs/videocover.png
 
 {{< postad >}}
 
-{% assign message = "Contents are based on Angular version >=2" %}
-{% include warn-notice.html %}
+{{<warn-notice message="Contents are based on Angular version >= 2" >}}
 
 This video will very shortly guide you through creating a state of the art Angular application. In this ~50 min screencast, you will learn..
 

@@ -27,11 +27,7 @@ include warn-notice.html %}
 
 Lazy? Then check out my Egghead.io companion lesson on how to "Create a custom form control using Angular's ControlValueAccessor"
 
-{% assign video_title = "Create a custom form control using Angular's ControlValueAccessor" %}
-{% assign video_url = "https://egghead.io/lessons/egghead-create-a-custom-form-control-using-angular-s-controlvalueaccessor" %}
-{% assign affiliate_client = "eggheadio" %}
-{% assign affiliate_uid = "lessons/egghead-create-a-custom-form-control-using-angular-s-controlvalueaccessor" %}
-{% include video-banner.html %}
+{{<egghead-lesson uid="lessons/egghead-create-a-custom-form-control-using-angular-s-controlvalueaccessor" >}}
 
 ## Why?
 
