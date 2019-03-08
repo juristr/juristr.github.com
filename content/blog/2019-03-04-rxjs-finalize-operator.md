@@ -24,6 +24,8 @@ tags:
 
 {{< postad >}}
 
+**Translations of this article:** [Chinese](https://awesome.angular.live/articles/6eaf3c79__juristr_RxJS_finalize_operator_to_execute_logic_on_Observable_termination)
+
 ## TL;DR: Here's the corresponding Egghead lesson
 
 {{<egghead-lesson uid="lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator" >}}
