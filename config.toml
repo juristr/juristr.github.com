@@ -114,3 +114,6 @@ alertbar = false
     identifier = "ama"
     weight = 300
     url = "https://github.com/juristr/ama"
+
+[taxonomies]
+  tag = "tags"

@@ -6,10 +6,12 @@
 	<link rel="shortcut icon" href="{{ . | urlize | relURL }}">
 	{{ end }}
 	<title>{{ .Page.Title }} | {{ .Site.Title }}</title>
-	{{ with .Site.Params.meta.description }}
-	<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Page.Params.lead }}
+	<meta name="description" content="{{ . }}">
+	{{ end }}
 	{{ with .Site.Params.meta.keywords }}
 	<meta name="keywords" content="{{ . }}">{{ end }}
+	<meta name="robots" content="index, follow">
 
 	<!-- Profile links -->
 	<meta name="author" content="{{ .Site.Params.author.name }}">
@@ -33,6 +35,18 @@
 	{{ if isset .Page.Params "image" }}
 	<meta name="twitter:image:src" content="https://juristr.com{{ .Page.Params.image | urlize | relURL }}" />
 	{{ end }}
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="{{ .Page.Title }}" />
+	{{ if isset .Page.Params "lead" }}
+	<meta property="og:description" content="{{ .Page.Params.lead }}" />
+	{{ end }}
+	{{ if isset .Page.Params "image" }}
+	<meta property="og:image" content="https://juristr.com{{ .Page.Params.image | urlize | relURL }}" />
+	{{ end }}
+	<meta property="og:url" content="https://juristr.com{{ .URL | urlize }}" />
+	<meta property="og:site_name" content="juristr.com" />
 
 	<!-- RSS -->
 	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">

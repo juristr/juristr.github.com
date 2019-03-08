@@ -1,0 +1,57 @@
+{{ define "header"}}
+{{- partial "_shared/navbar.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+<div class="container list-page categories">
+    <!-- {{- partial "_shared/title.html" . -}} -->
+    <!-- {{- partial "_shared/featured-posts.html" . -}} -->
+
+    <!-- Posts Index
+        ================================================== -->
+    <div style="display:flex; justify-content: center">
+        {{ if eq .Kind "taxonomyTerm" }}
+        <svg style="height: 140px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-swatch">
+            <path class="primary" d="M9 22c.19-.14.37-.3.54-.46L17.07 14H20a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H9zM4 2h4a2 2 0 0 1 2 2v14a4 4 0 1 1-8 0V4c0-1.1.9-2 2-2zm2 17.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+            <path class="secondary" d="M11 18.66V7.34l2.07-2.07a2 2 0 0 1 2.83 0l2.83 2.83a2 2 0 0 1 0 2.83L11 18.66z"></path>
+        </svg>
+        {{ else }}
+        {{ $imgFileName := lower (replace (replace (replace .Title "." "_") "#" "_") "+" "__") }}
+        {{ if fileExists (print "static/assets/images/categories/" $imgFileName ".svg" ) }}
+            <img src="/assets/images/categories/{{ $imgFileName }}.svg" />
+        {{ else }}
+            {{- partial "_shared/svgicons.html" $imgFileName -}}
+            <div class="svgicon clean_code"></div>
+        {{ end }}
+        {{ end }}
+    </div>
+
+    <section class="recent-posts">
+        <div class="section-title">
+            {{ if eq .Kind "taxonomyTerm" }}
+            <h2><span>All Collections</span></h2>
+            {{ else }}
+            <h2><span>Articles for "{{.Title}}"</span></h2>
+            {{ end }}
+        </div>
+        <div class="listrecent">
+            {{ range .Pages.ByDate.Reverse }}
+
+            {{ if and (eq .Kind "taxonomy") (eq .Type "categories") }}
+            {{- partial "list-partials/categorybox.html" . -}}
+            {{ else }}
+            {{- partial "list-partials/postbox.html" . -}}
+            {{ end }}
+            {{end}}
+        </div>
+    </section>
+</div>
+<!-- {{- partial "_shared/alertbar.html" . -}} -->
+{{ end }}
+
+{{ define "footer"}}
+<div class="container">
+    <!-- {{- partial "_shared/jumbotron.html" . -}} -->
+    {{- partial "_shared/footer.html" . -}}
+</div>
+{{ end }}
