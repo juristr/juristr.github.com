@@ -5,6 +5,9 @@ lead: >-
   to RxJS
 categories:
   - Rxjs
+tags:
+  - rxjs
+  - guest-post
 date: 2018-10-01T00:00:00.000Z
 comments: true
 url: /blog/2018/10/journey-promises-to-rxjs
