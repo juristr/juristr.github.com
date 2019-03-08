@@ -10,6 +10,7 @@ comments: true
 url: /blog/2018/10/journey-promises-to-rxjs
 type: post
 image: /blog/assets/imgs/rx-to-promise-journey/rxjourney-bg.jpg
+author: dzhavatushev
 ---
 
 <div class="article-intro">

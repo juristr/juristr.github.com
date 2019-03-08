@@ -43,6 +43,13 @@ enableInlineShortcodes = true
   twitter = "@maxim_koretskyi"
   url = "https://twitter.com/maxim_koretskyi"
 
+[params.author.dzhavatushev]
+  name = "Dzhavat Ushev"
+  thumbnail = "https://pbs.twimg.com/profile_images/915706383986823168/GVDwgIBt_400x400.jpg"
+  description = "Father, husband, front-end developer, who uses web technology to solve problems and improve people's lives."
+  twitter = "@dzhavatushev"
+  url = "https://twitter.com/dzhavatushev"
+
 [params.index]
   picture = "/images/author.png"
   title = "John Doe"
