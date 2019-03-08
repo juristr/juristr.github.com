@@ -7,10 +7,15 @@
     <!-- {{- partial "_shared/title.html" . -}} -->
     {{- partial "_shared/featured-posts.html" . -}}
 
-    <a href="https://egghead.io/courses/learn-angular-router-for-real-world-applications" class="external-link"
-        data-client="eggheadio" data-uid="courses/learn-angular-router-for-real-world-applications">
-        <img src="/assets/images/banners/router-course-banner.png" style="width:100%" />
-    </a>
+    <!-- <a href="https://egghead.io/courses/getting-started-with-angular-elements" class="external-link"
+        data-client="eggheadio" data-uid="courses/getting-started-with-angular-elements">
+        <img src="/assets/images/banners/egghead-banner-elements-course.png" style="width:100%" />
+    </a> -->
+    {{ with .Site.Params.entryAdlink }}
+        <a href="{{ .link }}" class="external-link" data-client="{{ .client }}" data-uid="{{ .uid }}">
+            <img src="{{ .image }}" style="width:100%" />
+        </a>
+    {{ end }}
 
     <!-- Posts Index
         ================================================== -->

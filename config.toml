@@ -69,11 +69,19 @@ alertbar = false
   medium = "juristr"
   twitter = "juristr"
 
-[params.adlink]
-  link = "https://egghead.io/courses/learn-angular-router-for-real-world-applications"
-  image = "/assets/images/banners/router-course-banner.png"
+[params.entryAdlink]
+  link = "https://egghead.io/courses/getting-started-with-angular-elements"
+  image = "/assets/images/banners/egghead-banner-elements-course.png"
   client = "eggheadio"
   uid = "url"
+
+[params.adlink]
+  link = "https://egghead.io/courses/getting-started-with-angular-elements"
+  image = "/assets/images/banners/egghead-banner-elements-course.png"
+  client = "eggheadio"
+  uid = "url"
+
+
 
 [params.category]
   angular = "My Angular articles"
