@@ -46,7 +46,7 @@ this.someService.fetchDataFromApi()
   )
 ```
 
-Assume this call is triggered by a button click on our form. Many people still double-click on those buttons and we definitely want to prevent 2 calls being sent to our backend API. There are different ways to avoid that of course, but for the purpose of this exable, let's go the route of disabling the button once it has been clicked, and re-enable it when the http call terminates.
+Assume this call is triggered by a button click on our form. Many people still double-click on those buttons and we definitely want to prevent 2 calls being sent to our backend API. There are different ways to avoid that of course, but for the purpose of this example, let's go the route of disabling the button once it has been clicked, and re-enable it when the http call terminates.
 
 ```typescript
 this.isLoading = true;
