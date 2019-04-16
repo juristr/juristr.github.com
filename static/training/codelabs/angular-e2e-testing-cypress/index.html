@@ -1,0 +1,374 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>E2e Testing with Cypress</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="E2e Testing with Cypress"
+                  environment="web"
+                  feedback-link="https://github.com/juristr/ama/issues/new">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>In this codelab we&#39;re going to learn about e2e testing with <a href="https://www.cypress.io" target="_blank">Cypress</a>.</p>
+<p>In this codelab we&#39;re going to explore Angular Elements, a new way for creating <strong>Custom Elements</strong> out of plain normal Angular Components.</p>
+<h2 class="checklist"><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>How to setup Cypress within <a href="https://nx.dev" target="_blank">Nrwl&#39;s NX workspace</a></li>
+<li>How to write tests with Cypress</li>
+<li>How to fake HTTP requests with fixtures</li>
+<li>How to modify existing fixtures at runtime</li>
+<li>How to test confirmation dialogs</li>
+</ul>
+<h2><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>A browser, ideally Chrome</li>
+<li><a href="https://code.visualstudio.com" target="_blank">VSCode</a> (or any other code editor of your preference with TypeScript &amp; Angular support)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Getting set up" duration="5">
+        <p>Download the starter project:</p>
+<p><a href="https://drive.google.com/open?id=1xuZZLBry1tAfVfhTzyP40oa47y39riwi" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download project</paper-button></a></p>
+<p>Unzip the code and open it with Visual Studio Code (or your respective code editor of choice).</p>
+<h2><strong>Install npm packages and start the app</strong></h2>
+<p>After unpacking the files, open up a terminal (you can also do that from within Visual Studio Code) at the location where you unzipped your files.</p>
+<p>Execute <code>npm install</code> (from your command line) to download all the necessary packages.</p>
+<h2><strong>Run the app</strong></h2>
+<p>Once installed, open your terminal (also from within VSCode) and type</p>
+<pre><code>$ npm start</code></pre>
+<p>You should ideally see something like this in your browser:</p>
+<p><img style="max-width: 624.00px" src="img/3e73ec7fc994e269.png"></p>
+<aside class="special"><p><strong>Tip:</strong> Setup a local git repo (<code>git init</code>) and commit when switching to the next steps to always have a backup copy ready in case something goes terribly wrong.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Inspect the Workspace setup" duration="3">
+        <p>What you see in your code editor is a Nrwl NX workspace. NX (<a href="https://nx.dev" target="_blank">see docs here</a>) is an extension on top of the Angular CLI to make things more productive with a special focus for enterprises. In fact, Nx promotes the so-called <strong>monorepo</strong>, a single repository where you divide your code into &#34;apps&#34; and &#34;libs&#34;.</p>
+<p>For this codelab we&#39;re particularly interested in the e2e test setup Nx gives us. The sample project already contains a generated app and it&#39;s companion e2e test app configured to run Cypress.</p>
+<p><img style="max-width: 624.00px" src="img/7f7e74c9e3e54e56.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Start the Cypress test runner" duration="3">
+        <p>If you open up the package.json at the root of the workspace, you&#39;ll find various npm scripts under which there&#39;s also one for running the app as well as for running our e2e tests:</p>
+<pre><code>{
+ &#34;scripts&#34;: {
+   &#34;ng&#34;: &#34;ng&#34;,
+   &#34;start&#34;: &#34;concurrently \&#34;npm:start:*\&#34; &#34;,
+   ...
+   &#34;e2e:watch&#34;: &#34;ng e2e issue-tracker-e2e --watch&#34;
+   ...
+ }
+}</code></pre>
+<p>Execute <code>npm run e2e:watch</code> to start the Cypress Test Runner UI. After the project compiles the following UI should open:</p>
+<p><img style="max-width: 624.00px" src="img/1a0293ea55c1116b.png"></p>
+<p>If you open the <code>apps/issue-tracker-e2e/src/integration/app.spec.ts</code> you can already find a first test that verifies the title of our app.</p>
+<pre><code>describe(&#39;Issue-Tracker&#39;, () =&gt; {
+ beforeEach(() =&gt; {
+   cy.visit(&#39;/&#39;);
+ });
+
+ it(&#39;should have the correct title&#39;, () =&gt; {
+   cy.get(&#39;mat-toolbar&#39;).should(&#39;contain&#39;, &#39;Issue Tracker&#39;);
+ });
+});</code></pre>
+<p>That&#39;s the test you see in the test runner UI. Click the &#34;Run all specs&#34; button or directly click on the integration test to execute it:</p>
+<p><img style="max-width: 624.00px" src="img/221126a5d0fe66a6.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Test the app redirect" duration="3">
+        <p>When our app opens, the app automatically redirects to the <code>/issues</code> route. We&#39;ve implemented that in the <code>app-routing.module.ts</code>.</p>
+<pre><code>const routes: Routes = [
+ {
+   path: &#39;&#39;,
+   redirectTo: &#39;issues&#39;,
+   pathMatch: &#39;full&#39;
+ },
+ {
+   path: &#39;issues&#39;,
+   loadChildren: &#39;./issue-list/issue-list.module#IssueListModule&#39;
+ }
+];</code></pre>
+<p>Add another test to the <code>app.spec.ts</code> that verifies the correct functioning of this redirect.</p>
+<pre><code>it(&#39;should redirect to the issues&#39;, () =&gt; {
+   ...
+ });</code></pre>
+<p>Hint: You can use the <code>cy.url()</code> and then assert in the same way as in the previous test for the app title.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Verify the proper rendering of the issue list" duration="3">
+        <p>In this test we&#39;d like to verify our issue list gets rendered properly.</p>
+<p><img style="max-width: 624.00px" src="img/ef10ee521af2585e.png"></p>
+<p>If we inspect the browser&#39;s XHR requests, we can see that whenever we navigate to the issues list, a request to <code>/api/issues</code> is being made to retrieve the list of issues to visualize.</p>
+<p><img style="max-width: 624.00px" src="img/89a2bfca8ecc802a.png"></p>
+<p>We don&#39;t want to call our actual server, but rather we want to provide a fixture for this request.</p>
+<p>Create a new test spec file called <code>issues.spec.ts</code>.</p>
+<pre><code>import &#39;../support&#39;;
+
+describe(&#39;Issues&#39;, () =&gt; {
+ beforeEach(() =&gt; {
+   
+ });
+
+ describe(&#39;List rendering&#39;, () =&gt; {
+
+ });
+});</code></pre>
+<p>To activate Cypress&#39;s fixture server, we need to add the <code>cy.server()</code> command in the <code>beforeEach</code>.</p>
+<p>If you look in the fixtures folder, there&#39;s already an <code>issues.json</code> file which I created for you. We can use that as a response when an HTTP call to <code>/api/issues</code> happens. To do so, we can use Cypress&#39;s <code>cy.route()</code> command (<a href="https://docs.cypress.io/api/commands/route.html#Fixtures" target="_blank">docs</a>) and provide the path to the fixtures file.</p>
+<pre><code>import &#39;../support&#39;;
+
+describe(&#39;Issues&#39;, () =&gt; {
+ beforeEach(() =&gt; {
+   cy.server();
+ });
+
+ describe(&#39;List rendering&#39;, () =&gt; {
+   beforeEach(() =&gt; {
+     cy.route(&#39;GET&#39;, &#39;/api/issues&#39;, &#39;fx:issues.json&#39;).as(&#39;api_issues&#39;);
+     cy.visit(&#39;/issues&#39;);
+   });
+ });
+});</code></pre>
+<p>Finally, let&#39;s add the test to see whether the list of issues gets rendered by our Angular app.</p>
+<pre><code>import &#39;../support&#39;;
+
+describe(&#39;Issues&#39;, () =&gt; {
+ ...
+
+ describe(&#39;List rendering&#39;, () =&gt; {
+   ....
+
+   it(&#39;should render a list of issues&#39;, () =&gt; {
+     cy.get(&#39;[data-tuid=&#34;issue-card&#34;]&#39;).should(&#39;have.length&#39;, 2);
+   });
+ });
+});</code></pre>
+<p>Note, <code>data-tuid</code> is the tag the app developer has added to each card to easily find it. Check the corresponding source file: <code>apps/issue-tracker/src/app/shared/components/issue-list/issue-list.component.html</code></p>
+<p>Run the test file and verify it passes</p>
+<p><img style="max-width: 624.00px" src="img/a823053369f189d2.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Asserting the HTTP request" duration="3">
+        <p>The previous test properly verifies that the data gets rendered. Let&#39;s also verify the API request is properly being made. We can do that with <code>cy.wait(...)</code>.</p>
+<pre><code>import &#39;../support&#39;;
+
+describe(&#39;Issues&#39;, () =&gt; {
+ ...
+
+ describe(&#39;List rendering&#39;, () =&gt; {
+   beforeEach(() =&gt; {
+     cy.route(&#39;GET&#39;, &#39;/api/issues&#39;, &#39;fx:issues.json&#39;).as(&#39;api_issues&#39;);
+     cy.visit(&#39;/issues&#39;);
+   });
+
+   it(&#39;should render a list of issues&#39;, () =&gt; {
+     cy.wait(&#39;@api_issues&#39;);
+     cy.get(&#39;[data-tuid=&#34;issue-card&#34;]&#39;).should(&#39;have.length&#39;, 2);
+   });
+ });
+});</code></pre>
+<p>Note the &#34;@&#34; symbol. This is how you address <strong>aliases</strong> in Cypress. In the fixture setup in the beforeEach, we added <code>.as(‘api_issu</code>es&#39;). With that instruction we created an alias which we can later point to with the <code>@</code> symbol.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Refactor the selector" duration="3">
+        <p>Adding a data attribute as a hook point for being used later in Cypress tests is a known best practice. This makes tests more durable even when we change the DOM element. We could also use a class, but those are usually just for styling, so the <code>data-</code> attributes fit in nicely.</p>
+<p>As a result we&#39;re going to create a lot of selectors that look like the one we already used:</p>
+<pre><code>cy.get(&#39;[data-tuid=&#34;issue-card&#34;]&#39;)</code></pre>
+<p>Let&#39;s refactor that by extending the <code>cy</code> object with a custom <code>getEl</code> function. Open the <code>support/commands.ts</code> file and add the following content.</p>
+<pre><code>declare namespace Cypress {
+ // tslint:disable-next-line interface-name
+ interface Chainable {
+   getEl: (identifier: string) =&gt; Chainable;
+ }
+}
+
+Cypress.Commands.add(
+ &#39;getEl&#39;,
+ { prevSubject: &#39;optional&#39; },
+ (subject, identifier) =&gt; {
+   if (subject) {
+     return subject.find(`[data-tuid=&#34;${identifier}&#34;]`);
+   } else {
+     return cy.get(`[data-tuid=&#34;${identifier}&#34;]`);
+   }
+ }
+);</code></pre>
+<p>The first part of the pasted code extends the current TypeScript definition with the new <code>getEl</code> function. </p>
+<p>The second part implements it by using <code>Cypress.Commands.add(...)</code>.</p>
+<p>Inspect the implementation and try to understand what&#39;s going on (<a href="https://docs.cypress.io/api/cypress-api/custom-commands.html#Examples" target="_blank">here are the docs</a>).</p>
+<p>Now that we have implemented this custom command, let&#39;s refactor our previous test in the issues.spec.ts to the following:</p>
+<pre><code>it(&#39;should render a list of issues&#39;, () =&gt; {
+ ...
+ cy.getEl(&#39;issue-card&#39;).should(&#39;have.length&#39;, 2);
+});</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Test for info message on empty list" duration="3">
+        <p>When the issue list does not return any records, a message is shown to the user. Create a test that verifies the info message is shown properly.</p>
+<p>The element&#39;s data-tuid is &#34;no-issues&#34;. You can check the implementation directly here: <code>apps/issue-tracker/src/app/shared/components/issue-list/issue-list.component.html</code></p>
+<p>Here&#39;s the test scaffold. Just add it to the <code>issues.spec.ts</code> file.</p>
+<pre><code>describe(&#39;error handling&#39;, () =&gt; {
+ it(&#39;should render a message if there are no issues&#39;, () =&gt; {
+   ...
+ });
+});</code></pre>
+<aside class="special"><p><strong>Hint:</strong> To return an empty response for the issues API, you can just include the empty array as the 2nd parameter of the <code>cy.route(...)</code>.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Verify the user gets a confirmation before deleting a record" duration="3">
+        <p>When the user tries to delete a record, he should get a confirmation dialog to make sure he knows what he is doing.</p>
+<p><img style="max-width: 624.00px" src="img/fa5ce7512f809d47.png"></p>
+<p>Let&#39;s write a test that makes sure the confirmation is shown to the user during the delete operation.</p>
+<p>We add the test directly to the issues.spec.ts inside the &#34;List rendering&#34; spec:</p>
+<pre><code>describe(&#39;List rendering&#39;, () =&gt; {
+  ...
+  it(&#39;should ask for confirmation when deleting an issue&#39;, () =&gt; {
+     ...
+  })
+})</code></pre>
+<p>Cypress automatically closes alert and confirm dialogs to not block the test run. We can however listen whether such confirm dialog has been shown. This can be achieved with the cy.stub() command as follows:</p>
+<pre><code>it(&#39;should ask for confirmation when deleting an issue&#39;, () =&gt; {
+ const stub = cy.stub();
+ cy.on(&#39;window:confirm&#39;, stub);
+});</code></pre>
+<p>Retrieve the delete button of the 1st card you find in the issue list, click the button and then assert whether the confirm dialog has been shown with this command:</p>
+<pre><code>it(&#39;should ask for confirmation when deleting an issue&#39;, () =&gt; {
+ const stub = cy.stub();
+ cy.on(&#39;window:confirm&#39;, stub);
+
+ cy.get...
+   .click()
+   .then(() =&gt; {
+     expect(stub.log().getCalls().length).eq(1);
+   });
+});</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Test XHR request sent by delete button" duration="3">
+        <p>When the user clicks the <strong>delete button</strong> of a issue, behind the scenes an XHR DELETE request is sent to the backend API. We want to make sure the id is properly passed on to that request.</p>
+<pre><code>describe(&#39;List rendering&#39;, () =&gt; {
+ ...
+
+ it(&#39;should include the id in the request when deleting an issue&#39;, () =&gt; {
+   ...
+ });
+});</code></pre>
+<p>There are different strategies for doing this. Actually you should already be able to do this with the things you learned so far. However, we want to take a specific one in order to explore some new Cypress APIs.</p>
+<p>First, we need to fake the call to the server for the DELETE request. Since we don&#39;t exactly know the ID, use <code>*</code> as placeholder. Implement the fake response using cy.route(..)</p>
+<pre><code>it(&#39;should include the id in the request when deleting an issue&#39;, () =&gt; {
+ cy.route(&#39;DELETE&#39;,...).as(&#39;delete_call&#39;);
+});</code></pre>
+<p>Next, we grab the delete button of the first card in the issue list.</p>
+<pre><code>it(&#39;should include the id in the request when deleting an issue&#39;, () =&gt; {
+ ...
+
+ cy.getEl(&#39;issue-card&#39;)
+   .first()
+   .getEl(&#39;delete-button&#39;)
+   .then(buttonEl =&gt; {
+     ...
+   });
+});</code></pre>
+<p>Note the <code>.then(buttonEl =&gt; { ... })</code> callback. This allows us to inspect the button because we need to read the id from it&#39;s <code>data-tuid-id</code> property. </p>
+<aside class="special"><p><strong>Tip:</strong> If you open the <code>apps/issue-tracker/src/app/shared/components/issue-list/issue-list.component.html</code> you can see that the action buttons have the id data-bound to the element. This is useful for retrieving them later in our tests.</p>
+</aside>
+<p>We can now retrieve the id via the data(..) API, click the button and inspect the URL</p>
+<pre><code>...
+cy.getEl(&#39;issue-card&#39;)
+ .first()
+ .getEl(&#39;delete-button&#39;)
+ .then(buttonEl =&gt; {
+   const id = buttonEl.data(&#39;tuid-id&#39;);
+   buttonEl.click();
+
+   cy.wait(&#39;@delete_call&#39;)
+     .its(&#39;url&#39;)
+     .should(&#39;include&#39;, `/${id}`);
+ });</code></pre>
+<p>An alternative way for asserting the URL of the XHR call is by directly inspecting it:</p>
+<pre><code>// alternatively
+cy.wait(&#39;@delete_call&#39;).then(httpReq =&gt; {
+ const requestData = httpReq.url;
+
+ expect(httpReq.url.endsWith(`/${id}`)).to.be.true;
+});</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="You did it!" duration="3">
+        <p>Congrats. There&#39;s much more to explore. Go to the official docs:</p>
+<p><a href="https://docs.cypress.io/guides/overview/why-cypress.html" target="_blank">https://docs.cypress.io/guides/overview/why-cypress.html</a></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>

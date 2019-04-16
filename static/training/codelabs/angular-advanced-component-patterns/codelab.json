@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "source": "1ZQUmJ5ZBaw2Utj5CYvf9P1qU0GQ8l-zNT_psSN87SqU",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-03-18T20:33:28Z",
+  "id": "angular-advanced-component-patterns",
+  "duration": 32,
+  "title": "Advanced Angular Component Patterns",
+  "author": "Juri Strumpflohner",
+  "summary": "In this codelab we're going to look into some more advanced component patterns.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "angular"
+  ],
+  "feedback": "https://github.com/juristr/ama/issues/new",
+  "url": "angular-advanced-component-patterns"
+}

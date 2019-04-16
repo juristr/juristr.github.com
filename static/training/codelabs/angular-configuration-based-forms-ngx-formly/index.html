@@ -1,0 +1,260 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Configuration Based Angular Forms with ngx-formly</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Configuration Based Angular Forms with ngx-formly"
+                  environment="web"
+                  feedback-link="https://github.com/juristr/ama/issues/new">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>In Angular we have two main methods for creating forms: template driven and model driven (better known as reactive) forms. Both have advantages and disadvantages. Template driven forms tend to be simpler to learn initially, are more template heavy, but not as powerful for more complex scenarios than reactive forms.</p>
+<p>This codelab dives into an alternative way of creating forms, namely by using a fully configuration based approach to developing reactive forms. For that purpose we&#39;re going to use <a href="https://ngx-formly.github.io/ngx-formly/" target="_blank">ngx-formly</a>.</p>
+<h2 class="checklist"><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>Install ngx-formly into an existing Angular project components</li>
+<li>Create a simple Angular form with formly</li>
+<li>Define select controls with dynamic data</li>
+<li>Disabling controls based on others</li>
+<li>Hiding/showing controls based on others</li>
+</ul>
+<h2><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>A browser, ideally Chrome</li>
+<li>Preferably a GitHub account for saving the work being done</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Getting set up" duration="2">
+        <p>The exercises will be done directly in <a href="https://stackblitz.com" target="_blank">Stackblitz</a>, an online IDE. Make sure you have access to <a href="https://stackblitz.com" target="_blank">Stackblitz</a> and - although not strictly required - <strong>login with your GitHub account</strong>. This allows you to fork the exercises and save your intermediate state.</p>
+<p><a href="https://stackblitz.com/github/juristr/codelab-configuration-based-forms" target="_blank"><paper-button class="colored" raised>Open starting Stackblitz example</paper-button></a></p>
+<p>Alternatively download the example and use your local setup:</p>
+<p><a href="https://github.com/juristr/codelab-configuration-based-forms/archive/master.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download (to run locally)</paper-button></a></p>
+<p><img style="max-width: 624.00px" src="img/25d00ba61eb6c298.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Inspecting the Formly Setup" duration="3">
+        <p>The project is already setup with Formly and ready for you to get started. Inspect the current setup. Open the <code>app.module.ts</code> and note the registration of the <code>FormlyModule</code> as well as the <code>FormlyMaterialModule</code>. We need the latter because for this exercises app we&#39;re using <a href="https://material.angular.io" target="_blank">Angular&#39;s Material Design library</a>.</p>
+<p>Go to the <code>src/app/configuration-forms/formly-demo/formly-demo.component.html</code> and note how the <code>formly-form</code> component is placed in the HTML, and the input properties it takes.</p>
+<p>You should see the app being rendered properly in Stackblitz&#39;s preview window (if you&#39;re running the example locally, execute <code>npm start</code> from some shell).</p>
+<p><img style="max-width: 514.50px" src="img/3ca86ce8eb2327f9.png"></p>
+<p>The debug component is there to inspect the current state of the form as well as the model that is databound. This is useful during development to check everything is properly databound.</p>
+<p>Open the <code>formly-demo.component.ts</code>. This is the place where we&#39;ll mainly operate in this exercise.</p>
+<pre><code>// src/app/configuration-forms/formly-demo/formly-demo.component.ts
+@Component({...})
+export class FormlyDemoComponent implements OnInit {
+ form = new FormGroup({});
+ model: any = {
+   id: 1223,
+   firstname: &#39;Juri&#39;,
+   age: 33,
+   nationId: 1,
+   cityId: 1,
+   zipCode: 39100,
+   phoneNumbers: [{ contactTypeId: 1, number: &#39;&#39; }]
+ };
+
+ fields: FormlyFieldConfig[] = [];
+ ...
+}</code></pre>
+<p>The code excerpt shows the main properties we&#39;re interested:</p>
+<ul>
+<li><code>form</code> - is already instantiated. This is the Angular reactive Form object we need to hook on the controls. This will be done automatically by Formly</li>
+<li><code>model</code> - is the data object we need to bind onto our form. In a real-world example this would be the data we retrieve from our backend API.</li>
+<li><code>fields</code> - this is the place where we configure our form, using Formly&#39;s syntax.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Mapping some basic fields" duration="3">
+        <p>Let&#39;s map the <code>firstname</code> and <code>age</code> property of our model object. Go to the <code>fields</code> property and add the following Formly configuration:</p>
+<pre><code>{
+  key: &#39;firstname&#39;,
+  type: &#39;input&#39;,
+  templateOptions: {
+    label: &#39;Firstname&#39;
+  }
+}</code></pre>
+<p>You should see the according input field being rendered automatically as well as being databound to our model.</p>
+<p><img style="max-width: 624.00px" src="img/846c7bb3203e5442.png"></p>
+<p>Similarly map the <code>age</code> field. Note, add another <code>type: ‘num</code>ber&#39; to the <code>templateOptions</code> of that mapping. As a result you should get an <code>input type=&#34;number&#34;</code> being rendered.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Mapping Nation Select" duration="5">
+        <p>As a next step we want to map the <code>nationId</code> property. Obviously the end user won&#39;t enter the id directly, but rather choose it from a list of nations.</p>
+<p><strong>Hints:</strong></p>
+<ul>
+<li>Use the formly type &#34;select&#34;</li>
+<li>The list of options can be set on the <code>templateOptions.options</code> property of the corresponding formly config.</li>
+</ul>
+<p>Use the following array as the data source</p>
+<pre><code>[
+ {
+   label: &#39;--&#39;,
+   value: null
+ },
+ {
+   label: &#39;Italy&#39;,
+   value: 1
+ },
+ {
+   label: &#39;Germany&#39;,
+   value: 2
+ }
+]</code></pre>
+<p><img style="max-width: 624.00px" src="img/233742d344f38e79.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Bind an RxJS Observable to the Nation select" duration="3">
+        <p>Of course won&#39;t have a static array in a real app. Rather we have an Observable that might be returned by Angular&#39;s HTTP service. There is already a <code>city.service.ts</code> configured that you can inject into the <code>formly-demo.component.ts</code>. </p>
+<p>Bind the <code>cityService.getNations()</code> Observable to the select that binds the <code>nationId</code>.</p>
+<aside class="special"><p><strong>Hint:</strong> you can directly assign it to the <code>options</code> property in the Formly configuration</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Conditionally load the City based on the Nation" duration="8">
+        <p>Copy the configuration of the <code>nationId</code> and map it to the <code>cityId</code>. We now want to retrieve the city <strong>filtered by the chosen </strong><strong><code>nationId</code></strong><strong>.</strong> The cityService already exposes an according method called <code>getCities(nationId)</code> that takes an optional <code>nationId</code> as parameter.</p>
+<p>In order to be able to listen to changes of another form field, we can use the native reactive Forms API:</p>
+<pre><code>field.form.get(&#39;nationId&#39;).valueChanges;</code></pre>
+<p>This <strong>gives us an observable stream</strong> of values emitted by the <code>nationId</code> form control.</p>
+<p>To get access to the form, we can add the <code>onInit</code> hook on the <code>cityId</code> definition.</p>
+<pre><code>{
+ key: &#39;cityId&#39;,
+ type: &#39;select&#39;,
+ templateOptions: {
+   label: &#39;City&#39;,
+   options: []
+ },
+ hooks: {
+   onInit: (field: FormlyFieldConfig) =&gt; {
+     const nationIdCtrl = field.form.get(&#39;nationId&#39;);
+     ...
+   }
+ }
+}</code></pre>
+<p>Subscribe to the stream of nationId changes, invoke the cityService.getCities(...) passing the <code>nationId</code> and then set it to the formlyField config like this:</p>
+<pre><code>field.templateOptions.options = cities;</code></pre>
+<aside class="special"><p><strong>Note:</strong> When reloading the window, the <code>cityId</code> doesn&#39;t automatically bind. What&#39;s the reason? How can we fix that?</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Hide cityId when no nation selected" duration="3">
+        <p>Whenever the nation is not chosen, we want to hide the city select. We can use the Formly <code>hideExpression</code> to achieve that.</p>
+<p>The <code>hideExpression</code> has a callback function that gives us the model and expects either true/false as a return value. </p>
+<pre><code>hideExpression: model =&gt; ...</code></pre>
+<p>Thus we can directly check the nationId on our model object.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add required validation" duration="3">
+        <p>Add a required validation to our <code>firstname</code> property.</p>
+<pre><code>{
+   ...
+   templateOptions: {
+      ...
+      required: true
+  }
+}</code></pre>
+<p>To also add a proper validation message, open the app.module.ts and add it to the registration of our <code>FormlyModule.forRoot(...)</code>.</p>
+<pre><code>FormlyModule.forRoot({
+ validationMessages: [
+   { name: &#39;required&#39;, message: &#39;This field is required&#39; }
+ ],
+})</code></pre>
+<p><img style="max-width: 624.00px" src="img/79f8d8d78d54a1ad.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Add a custom validator" duration="6">
+        <p>Formly obviously also allows us to specify a custom validator. First, open the <code>app.module.ts</code> and create our validator logic.</p>
+<p>A custom validator in Angular reactive forms is simply a function. Define a function that we can add to our nation select control which returns a validation error whenever the selected nation is different than Italy.</p>
+<pre><code>export function onlyItaliansValidator(control: FormControl): ValidationErrors {
+ /*
+  return { onlyItalians: true } whenever the validation fails
+ */
+}</code></pre>
+<p>After implementing the validation logic, we need to <strong>register it on the FormlyModule</strong>. Moreover we also need to define an according validation message:</p>
+<pre><code>FormlyModule.forRoot({
+ validationMessages: [
+   { name: &#39;required&#39;, message: &#39;This field is required&#39; },
+   { name: &#39;onlyItalians&#39;, message: &#39;Sorry, solo italiani!&#39; }
+ ],
+ validators: [{ name: &#39;onlyItalians&#39;, validation: onlyItaliansValidator }]
+}),</code></pre>
+<h2>Add the validator to our <code>nationId</code> field configuration.</h2>
+<p>Add the validator to the nationId field configuration as follows:</p>
+<pre><code>{
+ key: &#39;nationId&#39;,
+ ...
+ validators: {
+   validation: [&#39;onlyItalians&#39;]
+ }
+},</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>
