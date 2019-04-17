@@ -18,9 +18,6 @@ image: /blog/assets/imgs/angular-cli-compiletime-config.png
 
 {{< postad >}}
 
-{{<warn-notice message="Contents are based on Angular version >= 2.0.0" >}} {%
-include warn-notice.html %}
-
 {{< toc >}}
 
 ## Compile-time configuration
@@ -214,9 +211,13 @@ const appInitializerFn = (appConfig: AppConfigService) => {
 export class AppModule
 ```
 
-The important thing here - which you might have missed - is that the `app-config.service.ts`'s `loadAppConfig()` returns a `Promise` rather than an `Observable` as most of Angular's HTTP calls do. The reason is that the `APP_INITIALIZER` only supports promises as of now.
+The important thing here - which you might have missed - is that the `app-config.service.ts`'s `loadAppConfig()` **returns a `Promise` rather than an `Observable`** as most of Angular's HTTP calls do. The reason is that the `APP_INITIALIZER` only supports promises as of now.
 
 The benefit of this approach is that when the application bootstraps, it gets our initializer function, and since we return a `Promise`, Angular will first resolve that `Promise` before it continues with the bootstrapping. As a result, within some other component, we can simply inject our `AppConfigService` and use its `getConfig()` function to access our configuration props.
+
+Here's a quick Stackblitz that shows the application startup delay when using the app initializer, proving it prevents the app from starting until the returned Promise resolves.
+
+{{<stackblitz uid="edit/angular-czh7ca" >}}
 
 ## Which one to choose?
 
