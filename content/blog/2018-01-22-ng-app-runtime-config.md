@@ -77,19 +77,43 @@ console.log(environment);
 
 Note, we're always importing `environment.ts` and never an environment specific file such as `environment.prod.ts`. The reason is that at compile time, the **Angular CLI will take care of renaming the environment specific configuration file into `environment.ts`** and to compile it into your app accordingly.
 
-You can also create new files, say for your "staging" environment. Just create a new `environment.staging.ts` and **make sure to configure it in your `.angular-cli.json` file:
+You can also create new files, say for your "staging" environment. Just create a new `environment.staging.ts` and make sure to configure it in your `angular.json` file:
 
 ```json
 {
-    "apps":[
-        ...
-        "environmentSource": "environments/environment.ts",
-        "environments": {
-            "dev": "environments/environment.ts",
-            "staging": "environments/environment.staging.ts",
-            "prod": "environments/environment.prod.ts"
-        }
-    ]
+  // ...
+  "projects": {
+    "demo": {
+      //...
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          // ...
+          "configurations": {
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ],
+              //...
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              //...
+            }
+          }
+        },
+        //...
+      }
+    }
+  }
 }
 ```
 
@@ -113,7 +137,6 @@ Note, we're passing in the `--env=<your-environment>` flag. the `--prod` is a bu
 ## Runtime configuration
 
 {{<egghead-lesson uid="lessons/angular-configure-an-angular-app-at-runtime" >}}
-
 
 If however you need to be able to change your app's configuration settings or maybe you even expose them via an API, then you need to use **a runtime configuration approach**. Normally you simply have some JSON file - say `appConfig.json` that contains the necessary configuration options which you then deploy with your app on your server. When your app runs, you execute an HTTP request to that JSON file and read the settings.
 
@@ -215,7 +238,26 @@ The important thing here - which you might have missed - is that the `app-config
 
 The benefit of this approach is that when the application bootstraps, it gets our initializer function, and since we return a `Promise`, Angular will first resolve that `Promise` before it continues with the bootstrapping. As a result, within some other component, we can simply inject our `AppConfigService` and use its `getConfig()` function to access our configuration props.
 
-Here's a quick Stackblitz that shows the application startup delay when using the app initializer, proving it prevents the app from starting until the returned Promise resolves.
+### How does the APP_INITIALIZER work?
+
+The `APP_INITIALIZER` allows to defer the "booting" of your module, normally the `AppModule`. If you're curious how this is implemented behind the scenes, well Angular is open source, so you can just go and [read the source](https://github.com/angular/angular/blob/master/packages/core/src/application_ref.ts#L269-L274) :wink:.
+
+So what did I mean exactly by saying "defer the booting of your module"? It means Angular won't instantiate the components of that model and start rendering them before the initialization Promise resolves. That's exactly what we've leveraged to implement the runtime configuration approach described in this article. A **common mistake though is to place initialization code in a modules constructor**. Assume we have a simple app with a module `SomeModule` (yes I know, I'm very creative with names today). 
+
+<figure class="image--small">
+  <img src="/blog/assets/imgs/folder-structure-app-initializer.png">
+  <figcaption>Our sample app structure</figcaption>
+</figure>
+
+Having an `APP_INITIALIZER` in the `AppModule` doesn't prevent Angular from executing the constructor of the `SomeModule`. In fact since `AppModule` imports that sub-module, `SomeModule`'s constructor is called immediately, even before the `AppModule` constructor itself. Most probably though, the components of `SomeModule` won't be called. The reason being is that since `AppModule` has an `APP_INITIALIZER` defined, its `AppComponent` won't be instantiated until the that initializer resolves. Since `AppComponent` is the root component, loading the entire app, no other components will be instantiated either.
+
+**But what if I want to separate the config code per module?** Normally such configuration code is global and per-app, which is why `AppModule` is the place to go. But nothing prevents you from adding a second `APP_INITIALIZER` also to `SomeModule`. I created a quick Stackblitz to better demonstrate the order with which these modules and components get instantiated:
+
+<figure class="image--small">
+  <img src="/blog/assets/imgs/app-init-order-calling.png">
+</figure>
+
+Here's the Stackblitz for you to play around with
 
 {{<stackblitz uid="edit/angular-czh7ca" >}}
 
