@@ -89,7 +89,7 @@ So here are some strategies you can apply.
 
 ### Immutable Objects
 
-{{<youtube youtube_id="8SImpeCg2ZU">}}
+{{<youtube 8SImpeCg2ZU >}}
  
 
 {{<stackblitz uid="edit/angular-cd-onpush" >}}
@@ -139,7 +139,7 @@ this.data = { counter: this.data.counter + 1 };
 
 ### Observables
 
-{{<youtube youtube_id="sYo9rla8Cz8">}}
+{{<youtube sYo9rla8Cz8 >}}
  
 {{<stackblitz uid="edit/angular-cd-observables" >}}
  
@@ -215,7 +215,7 @@ As you can see, whenever we get a new value in our `subscribe(..)` we manually t
 
 ### Manually handling change Detection
 
-{{<youtube youtube_id="n0UUIx2ASt0">}}
+{{<youtube n0UUIx2ASt0 >}}
  
 
 {{<stackblitz uid="edit/angular-cd-manual" >}}

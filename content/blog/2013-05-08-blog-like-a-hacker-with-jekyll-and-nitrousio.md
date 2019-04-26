@@ -25,8 +25,6 @@ as well. On a table that doesn't work. Or does it?
 
 ## Nitrous.IO Makes It Possible
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/7X6IvkgkC7k" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
-
 Simply speaking Nitrous.IO is a cloud IDE similar to Cloud9 but with the additional focus to give you a complete development box, with SSH access and in-browser shell. Their goal is to make a new setup as easy as possible.
 
 > **Hello World in 60 Seconds.** Managing development environments is a pain. Get setup lightning fast in the cloud & code from anywhere, on any machine. <cite><a href="https://www.nitrous.io/">nitrous.io/</a></cite>

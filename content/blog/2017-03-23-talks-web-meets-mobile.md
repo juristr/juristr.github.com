@@ -34,7 +34,7 @@ And I'd like to again thank all three speakers for helping me make this happen. 
 
 Sani gave us a very funny and entertaining introduction to the power of Ionic and Angular.
 
-{{<youtube youtube_id="p85xlAmbLHU">}}
+{{<youtube p85xlAmbLHU >}}
  
 
 ## Automatic Progressive Web Apps using the Angular Mobile Toolkit by Maxim Salnikov 
@@ -43,7 +43,7 @@ Sani gave us a very funny and entertaining introduction to the power of Ionic an
 
 And even though Maxim had his birthday at 21st of March (the day we had our meetup), he was willing to give us a talk and share his knowledge with us. Happy birthday Maxim!! :birthday:
 
-{{<youtube youtube_id="QhGzR8Qbgps">}}
+{{<youtube QhGzR8Qbgps >}}
  
 
 ## Overview of NativeScript - Build native iOS/Android apps with Angular 
@@ -66,6 +66,6 @@ I first got to know Nathan when he offered to [review my video course on "Learni
 
 Unfortunately we had some connectivity issues during our live-broadcast with Nathan. But he was so kind to re-record his talk with super-crisp audio and give us the permission to share it with all of you :heart_eyes:. Watch this super insightful talk into the power of NativeScript.
 
-{{<youtube youtube_id="xdoy51PTBpI">}}
+{{<youtube xdoy51PTBpI >}}
  
 

@@ -67,6 +67,6 @@ Also, thanks to [Nathan Walker](https://twitter.com/wwwalkerrun) for doing the t
 
 Wanna get a grasp of what Angular (2+) is all about. Check out my free introductory video on Youtube:
 
-{{<youtube youtube_id="fXHyqSIIF9Q">}}
+{{<youtube fXHyqSIIF9Q >}}
  
 

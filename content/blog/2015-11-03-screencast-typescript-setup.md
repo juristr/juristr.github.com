@@ -16,7 +16,7 @@ type: post
 
 First of all, this is my first screencast ever, so be patient :wink:. The idea is to quickly demonstrate how you can setup your working environment s.t. you can start playing around with TypeScript. Enjoy!
 
-{{<youtube youtube_id="2j5PCtOuUT8">}}
+{{<youtube 2j5PCtOuUT8 >}}
 
 ## Useful Resources
 

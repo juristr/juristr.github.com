@@ -40,7 +40,7 @@ image: /blog/assets/imgs/testing-with-angular.png
 
 Here's the video of my talk:
 
-{{<youtube youtube_id="Uw_XomCJaGQ">}}
+{{<youtube Uw_XomCJaGQ >}}
  
 
 ## Code Repository

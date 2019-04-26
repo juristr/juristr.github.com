@@ -145,7 +145,7 @@ So you can see that **major versions will be released approximately every 6 mont
 
 ## Video: See the announcement yourself
 
-{{< youtube youtube_id="aJIMoLgqU_o" >}}
+{{< youtube aJIMoLgqU_o >}}
  
 
 ## Conclusion
