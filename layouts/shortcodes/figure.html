@@ -1,6 +1,11 @@
+{{ if .Get "size" }}
+<figure class="image--{{.Get "size" }}">
+{{ else }}
 <figure class="image--medium">
+{{ end }}
     <a href="{{ .Get "url" }}" class="image--zoom">
         <img src="{{ .Get "url" }}"/>
     </a>
     <figcaption>{{ .Get "caption" }}</figcaption>
 </figure>
+
