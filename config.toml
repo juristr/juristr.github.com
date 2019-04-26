@@ -76,8 +76,8 @@ alertbar = false
   uid = "url"
 
 [params.adlink]
-  link = "https://egghead.io/courses/getting-started-with-angular-elements"
-  image = "/assets/images/banners/egghead-banner-elements-course.png"
+  link = "https://egghead.io/courses/productive-git-for-developers"
+  image = "/assets/images/banners/egghead-banner-productive-git.png"
   client = "eggheadio"
   uid = "url"
 
