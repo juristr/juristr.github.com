@@ -13,6 +13,7 @@ categories:
 tags:
   - git
   - egghead
+  - videos
 ---
 
 {{<intro>}}

@@ -14,3 +14,11 @@ comments: true
 #   - angular
 draft: true
 ---
+
+{{<intro>}}
+  Your awesome intro here...
+{{</intro>}}
+<!--more-->
+
+{{< postad >}}
+

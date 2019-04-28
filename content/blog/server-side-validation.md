@@ -15,6 +15,7 @@ tags:
   - forms
   - validation
   - egghead
+  - videos
 draft: false
 ---
 
