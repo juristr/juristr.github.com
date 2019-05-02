@@ -33,5 +33,12 @@
 		  ">}}"
 		],
 		"description": "article-link"
+	  },
+	  "hugoFigure": {
+		"prefix": "hugoFigure",
+		"body": [
+		  "{{<figure url=\"/blog/assets/imgs/$1\" size=\"${2:full}\">}}"
+		],
+		"description": "hugoFigure"
 	  }
 }
