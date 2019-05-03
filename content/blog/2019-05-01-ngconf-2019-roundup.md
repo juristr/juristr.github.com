@@ -755,6 +755,253 @@ customElements.define('hello-world', HelloWorldElement);
 
 Note the `withLazyNgComponent` that fetches the necessary scripts only when really needed.
 
-## Day 2 & 3
 
-_Coming soon..._
+## CDK is the Coolest Thing You are Not Using (Yet)
+
+_Jeremy Elbourn_
+
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk.png" size="full">}}
+
+The CDK is the basis for [Angular Material](https://material.angular.io). It is a set of design agnostic components and functionality you can use to build your own design system on top of it.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk-capabilities.png" size="full">}}
+
+So far, the CDK as well as Angular Material lived under `angular/material2` on GitHub. That **name changed now to [angular/components](https://github.com/angular/components)**, which IMHO communicates much better that it is not just about Material Design.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk-components-team.png" size="full" caption="New name of the former Angular Material team">}}
+
+Jeremy showcases some of the CDK capabilities, in specific [Drag and Drop](https://material.angular.io/cdk/drag-drop/overview).
+
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk-new-material.png" size="full" caption="Open Source library produced by the Material Design team at Google">}}
+
+Angular Material will include not only the CDK as basis going forward, but also strongly collaborate with the team developing the MDC web library.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk-including-mdc-web.png" size="full">}}
+
+This helps the Angular Material library to be much more aligned with the Material Design spec.
+
+## Mastering the Subject: Communication options in RxJS
+
+_Dan Wahlin_
+
+When you need to communicate between different components that don't know each other, usually people tend to go straight into a full-blown state management library. But that's not always necessary: RxJS has some state management power as well. I actually wrote an article about that a while ago:
+
+{{<article-link 
+   url="/blog/2018/10/simple-state-management-with-scan/" 
+   title="Simple State Management with RxJS’s scan operator" 
+   text="Learn how you can build your own simple state management with just RxJS" 
+   imageurl="" 
+>}}
+
+So given the following scenario of components nested within each other, how can the inner component communicate with some upper one?
+
+{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-communicate-with-upper-cmp.png" size="full">}}
+
+Of course we can have a `@Output()` chain...which might soon go out of control. The alternative solution here are **RxJS Subjects**. There are 4 main `Subject` types in RxJS here.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-subjects.png" size="full">}}
+
+The `Subject` is the most simple one. A particular behavior here is that you only get the data after you subscribed. What happened before is not known.
+
+The `BehaviorSubject` on the other side, keeps track of the previous values as well. So if a component B comes in later and subscribes, it will also get the last emitted piece of data and of course all future ones. I discussed some of this in my article (video included) on [RxJS first steps - Subject and ReplaySubject](/blog/2016/06/rxjs-1st-steps-subject/).
+
+So what is the `ReplaySubject` :thinking:? Well the `ReplaySubject` is similar to the `BehaviorSubject` in that it replays the data that has been emitted also before a given component subscribes. While the `BehaviorSubject` only replays the last one, with `ReplaySubject` we can control how many of them we want to replay.
+
+Finally, the `AsyncSubject` returns always the "freshest" value. You get the last value before the Subject completes.
+
+### Communication Techniques: Event Bus
+
+We can create something like an "Event Bus". You can picture that as a pipe of data at a commonly known place, where interested listeners can subscribe to.
+
+```typescript
+@Injectable({
+  providedIn: 'root'
+})
+export class EventBusService {
+  private subject$ = new Subject();
+
+  emit(event: EmitEvent) {
+    this.subject$.next(event);
+  }
+
+  on(event: Events, action: any): Subscription {
+    return this.subject$.pipe(
+      filter((e: EmitEvent) => e.name === event),
+      map((e: EmitEvent) => e.value))
+    ).subscribe(action)
+  }
+
+}
+```
+
+A component can now send data through that Event Bus as follows:
+
+```typescript
+export class CustomersListComponent {
+  @Input() customers: Customer[];
+
+  constructor(private eventbus: EventBusService) { }
+
+  selectCustomer(cust: Customer) {
+    this.eventbus.emit(new EmitEvent(Events.CustomerSelected, cust));
+  }
+
+}
+```
+
+Other components can register and listen to these events like:
+
+```typescript
+export class HeaderComponent implements OnInit, OnDestroy {
+  customer: Customer;
+  subsink = new SubSink();
+
+  constructor(private eventBus: EventBusService) {}
+
+  ngOnInit() {
+    this.subsink.sink = this.eventBus.on(
+      Events.CustomerSelected, 
+      (cust => (this.customer = cust))
+    );
+  }
+
+  ngOnDestroy() {
+    this.subsink.unsubscribe();
+  }
+}
+```
+
+This technique is very loosely coupled, but if overused it can get messy as you have hundreds of events firing around and you have a hard time knowing where they come from.
+
+### Communication Techniques: Observable Service
+
+I personally use this pattern a lot. Here's an example:
+
+```typescript
+@Injectable({ 
+  providedIn: 'root'
+})
+export class InventoryService {
+  latestProduct: Product;
+
+  // BehaviorSubject to not miss the last data if someone subscribes after
+  // some data has "nexted" into this Subject
+  private inventorySubject$ = new BehaviorSubject<Product>(this.latestProduct);
+
+  // only expose the Observable, otherwise others could also emit new data
+  // which is not what we want. Should only allow for listening
+  inventoryChanged$ = this.inventorySubject$.asObservable();
+
+  addToInventory(product: Product) {
+    this.latestProduct = product;
+    this.inventorySubject$.next(product);
+  }
+}
+```
+
+Subscribing from a component is super simple.
+
+```typescript
+export class InventoryComponent implements OnInit, OnDestroy {
+  private subsink = new SubSink();
+  @Input() products: Products[] = [];
+
+  constructor(private inventoryService: InventoryService) {}
+
+  ngOnInit() {
+    this.subsink.sink = 
+      this.inventoryService.inventoryChanged$
+        .subscribe(prod => this.products.push(prod));
+  }
+
+  ngOnDestroy() {
+    this.subsink.unsubscribe();
+  }
+}
+```
+
+If you want a simple store, you can [read my article on how to implement that by yourself using the `scan` operator](/blog/2018/10/simple-state-management-with-scan/) or just head over to Dan's [ObservableStore library](https://github.com/DanWahlin/Observable-Store).
+
+{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-observable-store.png" size="full">}}
+
+## Bazel Opt-in Preview is Here!
+
+_Alex Eagle_
+
+Bazel is something I'm most excited about :heart_eyes:!
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-slow.png" size="full">}}
+
+This diagram from Alex is super easy to clarify some confusion in people's mind. What's a build tool after all? No, it does not replace your Jenkins :wink:.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-build-tools.png" size="full">}}
+
+Bazel simply orchestrates the different tools, so they don't have to be rewritten for Bazel as they have with some other tools like Webpack etc. Bazel simply invokes other tools like Rollup, the TypeScript compiler, a dev server,...
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-difference-bazel.png" size="full">}}
+
+Bazel is designed to
+
+- be incremental
+- allow full-stack build and test
+- scales with the cloud easily
+- extensible
+
+Bazel is the part where Google does not consume something from the OSS world, but rather contributes something back. Bazel comes out of Google's internal Blaze tool that powers its huge monorepo.
+
+So what's the current progress with Bazel?
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-current-state.png" size="full">}}
+
+With that, similar to Ivy (as mentioned before), Bazel is now available for opt-in preview starting with Angular v8.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-opt-in.png" size="full">}}
+
+How does Bazel fit into the Angular CLI? It extends an Angular CLI Builder (a new feature I've mentioned further up in the article). Right now the CLI uses the `@angular-devkit/build-angular` package (go check your `angular.json` and you'll see :wink:). Bazel is simply another builder that can live side-by-side and can be activated by you to opt-in.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-builder.png" size="full">}}
+
+That said, the priority #1 of course is to not break your app and provide stability. In a small app, opting in to Bazel won't bring any difference (no good, nor bad). You will only see improvements in the build/test speed starting from medium size apps.
+
+Right now many of the current build tools are monolithic. Bazel on the other side follows the Unix philosophy, piping results from one tool into another.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-unix-philosophy.png" size="full">}}
+
+**How can you try that today?** First, update to Angular 8. Then
+
+```
+// update to Angular 8
+$ ng update --next @angular/cli @angular/core
+
+// create a new app
+$ ng new --collection=@angular/bazel
+
+// existing app
+$ ng add @angular/bazel
+```
+
+What to expect: the same behavior as before, same sources, similar outputs. To scale up...
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-scaling-up.png" size="full">}}
+
+Some results with 1000+ components:
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-results.png" size="full">}}
+
+This is already faster, but it only shards among the local available CPUs. This can be further scaled by **sharing build caches between you and the CI and even co-workers**. Meaning if your CI system (or one of your team mates) already built a given portion of the app, you won't have to do that again, but you'll just get the cache.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-share-cache.png" size="full">}}
+
+With that, results get even better. This runs on the Remote Build Execution which is a "Bazel backend service" on the Google Cloud.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-results-cloud-share.png" size="full">}}
+
+Here's the future timeline for Bazel. Focus is mainly on making some of the still manual steps fully automated.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-future-plan.png" size="full">}}
+
+All the info on [bazel.angular.io](https://bazel.angular.io).
+
+---
+
+_More coming soon...check [my Twitter account to get notified](https://twitter.com/juristr)_

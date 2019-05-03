@@ -1,13 +1,17 @@
 ---
 title: Simple State Management with RxJS’s scan operator
 lead: Learn how you can build your own simple state management with just RxJS
-categories:
-  - Angular
 date: 2018-10-10T00:00:00.000Z
 comments: true
 url: /blog/2018/10/simple-state-management-with-scan
 type: post
 image: /blog/assets/imgs/scan-operator-marble.png
+categories:
+  - RxJS
+  - Angular
+tags:
+  - rxjs
+  - angular
 ---
 
 <div class="article-intro">
