@@ -22,7 +22,7 @@ tags:
 
 
 Note, _I'll update this blog post as the conf is progressing with more stuff, so don't forget to check back_  
-_Last update: 2nd May 2019 11:30pm GMT+2 - check my [Twitter stream for more](https://twitter.com/juristr)_
+_Last update: 3rd May 2019 11:30pm GMT+2 - check my [Twitter stream for more](https://twitter.com/juristr)_
 
 > Note: images here are copyright of the respective presenters at ngconf 2019. These are simple screenhots from the online live stream
 
