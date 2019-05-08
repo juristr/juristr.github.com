@@ -21,19 +21,21 @@ tags:
 {{< postad >}}
 
 
-Note, _I'll update this blog post as the conf is progressing with more stuff, so don't forget to check back_  
-_Last update: 3rd May 2019 11:30pm GMT+2 - check my [Twitter stream for more](https://twitter.com/juristr)_
-
-> Note: images here are copyright of the respective presenters at ngconf 2019. These are simple screenhots from the online live stream
-
+Note, _I'll update this blog post as I catch up with talks from the conf, so don't forget to check back_  
+_Last update: 8th May 2019 11:30pm GMT+2 - check my [Twitter stream for more](https://twitter.com/juristr)_
 
 ---
 
+
 {{< toc >}}
+
+## Disclaimer
+
+This is my personal summary of the sessions from ngconf. While I summarize the things with my own words, the material used such as images, graphs, source code examples are not my own. Most of them are from the Youtube videos or slide of the respective speakers of the various sessions.
 
 ## Keynote (day 1)
 
-_Brad Green & Igor Minar - [Youtube](https://youtu.be/O0xx5SvjmnU)_
+_Brad Green & Igor Minar - [Youtube](https://youtu.be/O0xx5SvjmnU), [Slides](https://docs.google.com/presentation/d/19yTRqHT1v4SQz5kXCL6OrIWvH9M20029s_ri5Eil03Y/edit?usp=sharing)_
 
 First and foremost, before going ahead with "tech details", this is what the Angular community stands for..
 
@@ -95,6 +97,10 @@ You see those builders already if you inspect your `angular.json` file:
 ```
 
 This opens up a huge set of possibilities to decide by yourself which tools should run and you can orchestrate them by yourself. Like on top of builders you could create functionality to automatically deploy directly from the CLI.
+
+### Deploy from the CLI
+
+Minko also demonstrated this by deploying to Firebase. More [here](#automated-deploy-via-cli).
 
 ### Web Workers and Lazy Loading
 
@@ -241,6 +247,78 @@ How do you join?
 Finally...
 
 {{<figure url="/blog/assets/imgs/ngconf2019/empathy-respect.png" size="full">}}
+
+## Keynote (day 3)
+
+_Misko Hevery and Stephen Fluin - [Youtube](https://www.youtube.com/watch?v=-kYtw3CSe6s), [Slides](http://bit.ly/angular-rd-report)_
+
+The Angular Team develops on GitHub, in public.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-innovate-open.png" size="full">}}
+
+As such they also **innovate in the open**, they make experiments, PRs containing proof of concepts they need in order to progress the platform and explore new ideas. As such **not every line of code necessarily affects you**. This often resuls in misinterpretation when those commits or PRs land on social media, on reddit etc, without further context.
+
+The process a new Angular feature goes through is more or less something like this:
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-process.png" size="full" caption="Informal process from idea to implementation of new Angular features">}}
+
+**Ideas** continuously emerge, mostly out of an existing problem. From that knowledge a **theory** evolves, exploration of what would happen if "X" is done/implemented (via proof of concepts, design docs,...). If that works out, the team starts to implement the underlying primitives that make it **possible**. Also initially not the full set of tooling is being implemented, but rather some of it is left to the community. If the community responds very well, the team starts to help **make it easy**, by adding documentation, higher the quality bar, via opt-in and self-run commands. Finally the goal is to make it **automatic**, i.e. via ng-update, schematics, fully integrate it into the platform and make it the "only way" (or suggested way of doing something).
+
+Such projects that are early experiments land as so-called Angular Labs project.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-ng-labs.png" size="full">}}
+
+For such projects, the goal might change, APIs might change and also failure is an option. Some of the projects that have gone through this Labs mode and graduated are for instance: CDK (2017), Elements (2018), Schematics (2018), Builders (with 8.0 - 2019).
+
+Current Labs projects are:
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-current-ng-labs.png" size="full" caption="Current Angular Labs projects">}}
+
+### Future Ideas
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-future-ideas.png" size="full">}}
+
+#### Fastest possible apps
+
+The focus here is TTI (Time to Interactive). The best way to achieve better TTI is basically "the less code, the better". The hard task is to understand the difference between the code you will need vs. the one you "might need". Like if there is a button on the UI, the code executed for that button click is "code you might need". If the user doesn't click it, you don't need it.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-code-needed.png" size="full">}}
+
+This is really difficult to understand and tree shaking cannot solve this for us. Currently by default Angular provides lazy load boundaries around routes, which is something where Angular needs to improve. I did dig into the lazy loading part in one of my articles here:
+
+{{<article-link 
+   url="/blog/2019/04/state-lazy-loading-components-angular/" 
+   title="Lazy load Angular Components" 
+   text="Or better..how to lazy load Angular Modules. Learn about the state of lazy loading and lazy loading on steroids with Angular Elements" 
+   imageurl="" 
+>}}
+
+#### Replayable vs. Resumable
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-replayable-vs-resumable.png" size="full">}}
+
+Right now we have replayable apps. The server might perform some prerendering, the client takes over, does the bootstrap again, fetches the data again etc...Different to that, a resumable app just takes over and goes ahead, without the need to replicate certain steps.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-resumable-chart.png" size="full">}}
+
+Replayable is quite easy and we're comfortable doing it. Resumable is harder but totally worth it (for certain use cases). However, in order to be able to create resumable apps, Angular needs to be aware of the state it manages and provide ways to rehydrate the DOM. 
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-state.png" size="full">}}
+
+The goal is basically if yo have various controls and components on your page (rendered via server side rendering), the logic behind the component (i.e. the JavaScript) is only loaded if the user starts interacting with it (i.e. by typing into an input field etc..). So lazy loading has to go further and not only for routes but rather for
+
+- interactions
+- injected services
+- code for re-rendering
+
+**Ivy** paves the way for starting to think about adding such features.
+
+#### Ideas of implementing a resumable Todo app
+
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-disclaimer.png" size="full">}}
+
+[More here &raquo;](https://youtu.be/-kYtw3CSe6s?t=1308)
+
 
 ## Angular for the Enterprise
 
@@ -442,11 +520,13 @@ export const entityConfig = {
 
 ## Tools For Fast Angular Applications
 
-_Minko Gechev - [Youtube](https://youtu.be/5VlBaaXO6ok)_
+_Minko Gechev - [Youtube](https://youtu.be/5VlBaaXO6ok), [Slides](https://speakerdeck.com/mgechev/tools-for-fast-angular-applications)_
 
 {{<figure url="/blog/assets/imgs/ngconf2019/minko-network-perf.png" size="full">}}
 
 The idea is to generally ship less JavaScript (or just enough) and don't penalize the user with JavaScript code he'll never even execute (because those parts are hidden behind permission flags or whatever). Addy Osmani has published the [Cost of JavaScript](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4) where he shows how shipping the some amount of JavaScript costs much more than shipping the same amount of - say - images. This due to the parsing overhead.
+
+### Strategies for reducing JavaScript load
 
 The strategies for reducing the amount of JavaScript we ship is:
 
@@ -503,14 +583,22 @@ Minko (as usual) brings this to a whole other level with libraries such as
 
 Also, not to forget about Angular CLI's [performance budgets](https://angular.io/guide/build#configure-size-budgets).
 
-Finally, some low hanging fruit:
+### Automated Deploy via CLI
 
-- apply content compression for static assets
-- CDNs
+Finally, some low hanging fruit. Turns out
+
+- more than 27% do not apply content compression on static assets (SVG, images, JavaScript)
+- more than 80% do not use CDNs to avoid latency
+
+As Brad announced in his keynote, the Angular team is working on optimizing deployments by providing automated deployment mechanisms directly from the Angular CLI. This happens in close collaboration with the big cloud providers.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/minko-ng-deploy-clouds.png" size="full" caption="Collaboration with cloud providers for automated deployments">}}
+
+See how that works [here in Minko's talk](https://youtu.be/5VlBaaXO6ok?t=991).
 
 ## Not Every App is a SPA
 
-_Rob Wormald_
+_Rob Wormald - [Youtube](https://www.youtube.com/watch?v=JX5GGu_7JKc)_
 
 Rob targets the graph mentioned by Igor about the current field Angular apps are being adopted.
 
@@ -758,7 +846,7 @@ Note the `withLazyNgComponent` that fetches the necessary scripts only when real
 
 ## CDK is the Coolest Thing You are Not Using (Yet)
 
-_Jeremy Elbourn_
+_Jeremy Elbourn - [Youtube](https://youtu.be/4EXQKP-Sihw), [Slides](http://g.co/ng/conf19-components-slides)_
 
 {{<figure url="/blog/assets/imgs/ngconf2019/cdk.png" size="full">}}
 
@@ -782,7 +870,7 @@ This helps the Angular Material library to be much more aligned with the Materia
 
 ## Mastering the Subject: Communication options in RxJS
 
-_Dan Wahlin_
+_Dan Wahlin - Youtube, [Slides](https://www.dropbox.com/s/sfqyjksou18b399/Mastering%20the%20Subject%20-%20Communication%20Options%20in%20RxJS.pdf?dl=0)_
 
 When you need to communicate between different components that don't know each other, usually people tend to go straight into a full-blown state management library. But that's not always necessary: RxJS has some state management power as well. I actually wrote an article about that a while ago:
 
@@ -926,7 +1014,7 @@ If you want a simple store, you can [read my article on how to implement that by
 
 ## Bazel Opt-in Preview is Here!
 
-_Alex Eagle_
+_Alex Eagle - [Youtube](https://www.youtube.com/watch?v=J1lnp-nU4wM)_
 
 Bazel is something I'm most excited about :heart_eyes:!
 
@@ -1002,6 +1090,204 @@ Here's the future timeline for Bazel. Focus is mainly on making some of the stil
 
 All the info on [bazel.angular.io](https://bazel.angular.io).
 
+
+## Angular Elements Everywhere
+
+Angular Elements have been around in a couple of talks at NGConf 2019.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-elements.png" size="full">}}
+
+- [Web Components wth Angular Elements: Beyond the Basics - Manfred Steyer](https://www.youtube.com/watch?v=E9i3YBFxSSE)
+- [Angular Elements Make The Best React Components - Brad Mcalister & Ryan Chenkie](https://www.youtube.com/watch?v=tHclHHs7nmo)
+- [Not Every App is a SPA - Rob Wormald](https://www.youtube.com/watch?v=JX5GGu_7JKc)
+- [A Deep Look at Angular Elements - Manfred Steyer](https://youtu.be/_QU0mpyF7bQ)
+
+If you wanna learn more, I have an introductory article and Egghead video on the topic:
+
+{{<article-link 
+   url="/blog/2019/04/intro-to-angular-elements/" 
+   title="Introduction to Angular Elements" 
+   text="Learn how to automatically convert your Angular Components to native Custom Elements" 
+   imageurl="" 
+>}}
+
+## Before NgRx: Superpowers with RxJS + Facades
+
+_Thomas Burleson - [Youtube](https://www.youtube.com/watch?v=h-F5uYM69a4), [Slides](http://bit.ly/2VgrxCX)_
+
+I'm particularly interested in software architecture, in all fields, backend as well as frontend. And as the frontend grows and grows in terms of logic it includes, thinking about architecture is indispensable. Thomas talks about how to implement a **push-based** (rather than pull-based) approach with Angular and RxJS.
+
+Traditionally there is a pull-based approach:
+
+```typescript
+const users$ = this.http.get<Users[]>(url);
+```
+
+This is a temporary stream that terminates once the data has arrived from the API. A different way of thinking would be to implement a pull-based service, such as:
+
+```typescript
+const users$ = this.state$.pipe(map(state => state.users));
+```
+
+This is a long-lived stream that might be updated over time. This is definitely a **reactive approach** of implementing your architecture. Furthermore, Thomas hides the implementation logic behind "Facades" which are a software development pattern for abstracting and hiding implementation details. For example:
+
+```typescript
+// synchronous
+const pagination$ = userFacade.pagination$
+const criteria$ = userFacade.updateCriteria(searchCriteria);
+
+// async
+const users$ = userFacade.users$;
+const results$ = userFacade.search(criteria);
+```
+
+As you can see the Facade hides the implementation details. Also note, you cannot distinguish whether the stream is async or synchronous, which ultimately shouldn't even matter.
+
+
+### Pull-based
+
+In the talk, Thomas walks through a concrete example of implementing such pull-based approach.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/facades-pull-push.png" size="full">}}
+
+So generally speaking, all of the state & logic should be kept out of the view as much as possible. That allows for better reusability and results in easier testing. So let's focus on the service part. Here's an example of a _pull-based_ service:
+
+```typescript
+@Injectable()
+export class UserService {
+  users: User[] = [];
+  criteria: string = 'ngDominican';
+  pagination: Pagination = {
+    selectedSize: 5,
+    currentPage: 0,
+    pageSizes: [5, 10, 20, 50]
+  };
+
+  constructor(private http: HttpClient) {}
+
+  findAllUsers(): Observable<User[]> {
+    const url = buildUserUrl(this.criteria, this.pagination);
+    const request$ = this.http.get<RandomUserResponse>(url)
+      .pipe(
+        map(response => response.results),
+        tap(list => this.users = list)
+      );
+
+    return requests$
+  }
+}
+```
+
+Once the `findAllUsers()` is called, the stream is returned and terminated (because that's the nature of the streams returned from HTTP). Here's the Stackblitz for the example:
+
+{{<stackblitz uid="edit/facade-traditional-no-rxjs-4jdfwq" >}}
+
+### Push-based
+
+A push-based approach would look more like this.
+
+{{<figure url="/blog/assets/imgs/ngconf2019/facades-push-based.png" size="full">}}
+
+What I find particularly intersting when I first heard about Thomas's approach of Facades and push-based a while back, is to have streams not only go out of your service (as you usally have), but also to go into the service (i.e. via method calls for instance).
+
+{{<figure url="/blog/assets/imgs/ngconf2019/facades-stream-in-out.png" size="full">}}
+
+This makes up a very clear API of the Facade:
+
+```typescript
+@Injectable()
+export class UserFacade {
+  criteria$: Observable<string>;
+  pagination$: Observable<Pagination>;
+  users$: Observable<User[]>;
+
+  constructor(private http: HttpClient){}
+
+  updateSearchCriteria(criteria: string){}
+  updatePagination(selectedSize: number, currentPage: number = 0) {}
+}
+```
+
+Furthermore, state is managed with a simple `BehaviorSubject`. You can look up my article on [Simple State Management with RxJS's scan operator](/blog/2018/10/simple-state-management-with-scan/).
+
+```typescript
+export interface UserState {
+  users: User[];
+  pagination: Pagination;
+  criteria: string;
+}
+
+let _state: UserState = {
+  users: [],
+  criteria: 'ngDominican',
+  pagination: {
+    currentPage: 0,
+    selectedSize: 5,
+    pageSizes: [5, 10, 20, 50]
+  }
+}
+
+@Injectable()
+export class UserFacade {
+  private store = new BehaviorSubject<UserState>(_state);
+  private state$ = this.store.asObservable();
+}
+```
+
+Moreover the `BehaviorSubject` makes sure the latest value is kept and emitted whenever someone new subscribes. At startup the default state should be emitted, which is why `_state` is passed when instantiating the `BehaviorSubject`.  
+Since streams come into the service as well as go outwards, they can also be consumed and combined nternally to the UserFacade. That is, we can subscribe to the `criteria$` and `pagination$` and whenever either of the two changes, the backend can be invoked automatically and streamed back into the `findAllUsers$` stream. That's push-based at work :smiley:
+
+{{<figure url="/blog/assets/imgs/ngconf2019/facades-stream-consuming.png" size="full">}}
+
+How is this implemented? Something like this:
+
+```typescript
+@Injectable()
+export class UserFacade {
+  private store = new BehaviorSubject<UserState>(_state);
+  private state$ = this.store.asObservable();
+
+  users$ = this.state$.pipe(map(state => state.users), distinctUntilChanged());
+  criteria$ = this.state$.pipe(map(state => state.criteria), distinctUntilChanged());
+  pagination$ = this.state$.pipe(map(state => state.pagination), distinctUntilChanged());
+
+  /**
+   * Watch 2 streams to trigger user loads and state updates
+   */
+  constructor(private http: HttpClient) {
+    combineLatest(this.criteria$, this.pagination$).pipe(
+      switchMap(([criteria, pagination]) => {
+        return this.findAllUsers(criteria, pagination);
+      })
+    ).subscribe(users => {
+      this.updateState({ ..._state, users,  loading: false });
+    });
+  }
+
+  // ------- Public Methods ------------------------
+
+  updateSearchCriteria(criteria: string) {
+    this.updateState({ ..._state, criteria, loading: true });
+  }
+
+  updatePagination(selectedSize: number, currentPage: number = 0) {
+    const pagination = { ..._state.pagination, currentPage, selectedSize };
+    this.updateState({ ..._state, pagination, loading: true });
+  }
+  ...
+}
+```
+
+I've already implemented such an approach and the cool thing about it is that once you've set up the streams and connected them together, you click the button, which triggers an emit into - say - the `pagination$` stream and you will automatically get a call triggered to the server and your list be updated with fresh data :heart_eyes:.  
+In a traditional pull-based approach, you would click the button, in the click handler, invoke a function on your service passing the new pagination value, get back a stream and re-bind it to your list. Moreover, think about what this opens up for you. If your server is able to handle websockets or server sent events, you can actively even push down new data as other users change them.
+
+{{<stackblitz uid="edit/facades-with-rxjs-only-d82xvx" >}}
+
+## Useful links
+
+- [Collection of Slides by Sam Julien](https://github.com/samjulien/ngconf2019-slides)
+
 ---
 
 _More coming soon...check [my Twitter account to get notified](https://twitter.com/juristr)_
+

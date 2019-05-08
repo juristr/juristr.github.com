@@ -4,7 +4,7 @@
 <figure class="image--medium">
 {{ end }}
     <a href="{{ .Get "url" }}" class="image--zoom">
-        <img src="{{ .Get "url" }}" loading="lazy"/>
+        <img src="{{ .Get "url" }}" loading="lazy" class="lazyload"/>
     </a>
     <figcaption>{{ .Get "caption" }}</figcaption>
 </figure>

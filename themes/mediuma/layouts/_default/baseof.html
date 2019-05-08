@@ -24,6 +24,23 @@
     </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
     <!-- End Cookie Consent plugin -->
+
+    <!-- Lazy loading cross browser (with fallback) -->
+    <!-- <script>
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll("img.lazyload");
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Dynamically import the LazySizes library
+            let script = document.createElement("script");
+            script.async = true;
+            script.src =
+            "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.8/lazysizes.min.js";
+            document.body.appendChild(script);
+        }
+    </script> -->
 </body>
 
 </html>
