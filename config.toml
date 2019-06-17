@@ -113,6 +113,11 @@ alertbar = false
 #     identifier = "consulting"
 #     url = "/consulting"
 [[menu.main]]
+    name = "Newsletter"
+    identifier = "newsletter"
+    weight = 300
+    url = "/newsletter"
+[[menu.main]]
     name = "About Me"
     identifier = "about"
     weight = 500
@@ -120,7 +125,7 @@ alertbar = false
 [[menu.main]]
     name = "AMA"
     identifier = "ama"
-    weight = 300
+    weight = 400
     url = "https://github.com/juristr/ama"
 
 [taxonomies]

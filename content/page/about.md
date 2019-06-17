@@ -3,7 +3,7 @@ title: "About Me"
 url: "/about"
 ---
 
-I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work as a software architect and frontend developer at [R3-GIS](https://www.r3-gis.com/), [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22) where my main tasks are on the frontend, doing JavaScript, TypeScript, AngularJS and Angular. I'm a [Google Developer Expert in Web Technologies](https://developers.google.com/experts/people/juri-strumpflohner), an [Egghead Instructor](https://egghead.io/instructors/juri-strumpflohner) and happen to organize the [Software Craftsmanship Meetup](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/).
+I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work as a software architect and frontend developer at [R3-GIS](https://www.r3-gis.com/), [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22) where my main tasks are on the frontend, doing JavaScript, TypeScript, AngularJS and Angular. I'm a [Google Developer Expert in Web Technologies](https://developers.google.com/experts/people/juri-strumpflohner), an [Egghead Instructor](https://egghead.io/instructors/juri-strumpflohner), speaker and happen to organize the [Software Craftsmanship Meetup](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/).
 
 <figure class="image--full">
   <a href="/about/imgs/speaking.jpg" class="image--zoom">
@@ -61,7 +61,7 @@ I'm trying to spend as much quality time as possible with my family. Moreover I'
   diff /= 24;
   var days = Math.round(diff % 365);
   diff /= 365;
-  var years = parseFloat(Math.round(diff * 100) / 100).toFixed(2);
+  var years = parseFloat(Math.round(diff * 100) / 100).toFixed(0);
 
   document.getElementById('age').innerHTML = years;
 })();
