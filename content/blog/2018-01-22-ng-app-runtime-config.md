@@ -155,7 +155,7 @@ export class AppComponent implements OnInit {
     configLoaded = false;
 
     ngOnInit() {
-        this.http.get('/assets/appConfig.json')
+        this.http.get('./assets/appConfig.json')
             .subscribe(config => {
                 // do something with your configuration
                 ...
