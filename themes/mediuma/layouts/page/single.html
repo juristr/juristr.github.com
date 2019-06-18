@@ -4,7 +4,7 @@
 
 {{ define "main" }}
 <div class="container">
-	{{ if isset .Params "Icon" }}
+	{{ if isset .Params "icon" }}
 		<div style="display:flex; justify-content: center">
 			{{- partial "_shared/svgicons.html" .Params.Icon -}}
 			<div class="svgicon clean_code"></div>
@@ -15,9 +15,12 @@
 			<!-- {{- partial "single-partials/share.html" . -}} -->
 		</div>
 		<div class="col-md-9 col-md-offset-2 col-xs-12">
+			{{ with .Params.HideTitle }}
+			{{ else }}
 			<div class="mainheading">
 				<h1 class="posttitle">{{ .Title }}</h1>
 			</div>
+			{{ end }}
 			<div class="article-post">
 				{{ .Content }}
 			</div>

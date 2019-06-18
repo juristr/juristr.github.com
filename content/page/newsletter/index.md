@@ -3,6 +3,7 @@ title: "Newsletter"
 url: "/newsletter"
 is_workshop: true
 icon: mail
+hideTitle: true
 ---
 
 Hey :wave:
