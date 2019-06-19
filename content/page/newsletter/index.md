@@ -4,6 +4,7 @@ url: "/newsletter"
 is_workshop: true
 icon: mail
 hideTitle: true
+image: /assets/images/newsletter-bg.jpg
 ---
 
 Hey :wave:
