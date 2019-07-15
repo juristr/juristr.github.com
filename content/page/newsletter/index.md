@@ -2,7 +2,7 @@
 title: "Newsletter"
 url: "/newsletter"
 is_workshop: true
-icon: mail
+icon: newsletter
 hideTitle: true
 image: /assets/images/newsletter-bg.jpg
 ---

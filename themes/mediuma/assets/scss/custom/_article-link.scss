@@ -17,3 +17,24 @@
         font-size: small;
     }
 }
+
+.newsletter-box {
+    height: inherit;
+
+    .share-link {
+        svg {
+            height: 40px;
+        }
+    }
+
+    .title {
+        padding-top: 23px;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .description {
+        font-size: 1.1rem;
+        padding-right: 30px;
+    }
+}

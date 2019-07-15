@@ -16,13 +16,13 @@
             <path class="secondary" d="M11 18.66V7.34l2.07-2.07a2 2 0 0 1 2.83 0l2.83 2.83a2 2 0 0 1 0 2.83L11 18.66z"></path>
         </svg>
         {{ else }}
-        {{ $imgFileName := lower (replace (replace (replace .Title "." "_") "#" "_") "+" "__") }}
-        {{ if fileExists (print "static/assets/images/categories/" $imgFileName ".svg" ) }}
-            <img src="/assets/images/categories/{{ $imgFileName }}.svg" />
-        {{ else }}
-            {{- partial "_shared/svgicons.html" $imgFileName -}}
-            <div class="svgicon clean_code"></div>
-        {{ end }}
+            {{ $imgFileName := lower (replace (replace (replace .Title "." "_") "#" "_") "+" "__") }}
+            {{ if fileExists (print "static/assets/images/categories/" $imgFileName ".svg" ) }}
+                <img style="width:140px" src="/assets/images/categories/{{ $imgFileName }}.svg" />
+            {{ else }}
+                {{- partial "_shared/svgicons.html" $imgFileName -}}
+                <div class="svgicon clean_code"></div>
+            {{ end }}
         {{ end }}
     </div>
 
