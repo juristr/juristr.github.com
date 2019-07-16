@@ -3,7 +3,7 @@ type: post
 title: "Challenging the Testing Pyramid"
 lead: >-
   Automated e2e testing with Cypress
-date: 2019-07-1612:00:00+02:00
+date: 2019-07-16T12:00:00+02:00
 comments: true
 url: /blog/2019/07/testing-cypress-intro
 image: /blog/assets/imgs/testing-pyramide.png
@@ -13,7 +13,6 @@ categories:
 tags:
   - testing
   - JavaScript
-draft: false
 ---
 
 {{<intro>}}
@@ -48,7 +47,7 @@ The testing pyramid told us **which tests to write based on the speed of executi
 
 If we focus more on the UI (and e2e) testing area, there are a couple of tools around. Most of them are based on the Selenium driver. I've been using them in combination with Java, .Net and more successfully with wrappers like [NightwatchJS](https://nightwatchjs.org) and [Protractor](https://www.protractortest.org/#/). Selenium is great, it provides an abstraction layer around the browser APIs that allows you to write selenium tests in a variety of different programming languages. However, that very same abstraction makes it often also **cumbersome and verbose to use, and hard to debug.**
 
-[Cypress](https://www.cypress.io/) is a relatively new tool on the marktetand that is definitely worth giving a look. Not only does it feel extremely refreshing to use it, with a simple API, but it also has a couple of cool killer features, such as **time travel**, improved **debugging**, **real-time reloads** and **automatic waiting**.
+[Cypress](https://www.cypress.io/) is a relatively new tool on the marktetand that is definitely worth giving a look. Not only does it feel extremely refreshing to use it, with a simple API, but it also has a couple of cool [killer features](https://docs.cypress.io/guides/overview/why-cypress.html#Features), such as **[time travel](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Time-travel)**, improved **[debugging](https://docs.cypress.io/guides/guides/debugging.html#Using-debugger)**, **real-time reloads** and **automatic waiting**.
 
 {{<figure url="/blog/assets/imgs/cypress-capabilities.png" size="medium">}}
 
