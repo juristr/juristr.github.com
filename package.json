@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "[![CircleCI](https://circleci.com/gh/juristr/juristr.github.com.svg?style=svg)](https://circleci.com/gh/juristr/juristr.github.com)",
+  "scripts": {
+    "deploy": "./scripts/deploy.sh && gh-pages -d public -b master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juristr/juristr.github.com.git"
+  },
+  "author": "Juri Strumpflohner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juristr/juristr.github.com/issues"
+  },
+  "homepage": "https://juristr.com",
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

@@ -6,3 +6,5 @@ vendor
 Thumbs.db
 .jekyll-metadata
 sync-codelabs.sh
+node_modules/
+public/

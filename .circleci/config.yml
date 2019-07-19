@@ -1,11 +1,11 @@
 version: 2
 general:
-  branches:
-    only:
-      - site
 
 jobs:
   build:
+    branches:
+      only:
+        - site
     docker:
       - image: juristr/hugo-docker
     steps:
@@ -17,5 +17,8 @@ jobs:
           name: "Install container dependencies for deploy"
           command: apk --no-cache add git openssh
       - run: 
+          name: "Install node modules"
+          command: npm install
+      - run: 
           name: "Build and deploy to GitHub"
-          command: ./scripts/deploy.sh
+          command: npm run deploy
