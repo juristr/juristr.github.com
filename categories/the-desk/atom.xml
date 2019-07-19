@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Desk on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/the-desk/</link>
+    <description>Recent content in The Desk on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sat, 30 Dec 2017 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/the-desk/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Looking back on 2017</title>
+      <link>https://juristr.com/blog/2017/12/looking-back-on-2017/</link>
+      <pubDate>Sat, 30 Dec 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/12/looking-back-on-2017/</guid>
+      <description>2017 has been a great year, lots of changes for me and new things 😅. Time for some retrospective. (Warning: this is not a tech blog post 😉)  i love that people are tweeting lists of work they&amp;#39;re proud of this year!</description>
+    </item>
+    
+    <item>
+      <title>Easy SSL support for your Jekyll Blog with CloudFlare</title>
+      <link>https://juristr.com/blog/2017/01/enable-ssl-jekyll-blog/</link>
+      <pubDate>Wed, 04 Jan 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/01/enable-ssl-jekyll-blog/</guid>
+      <description>It&#39;s 2017 and if you didn&#39;t switch to a secure SSL connection yet, it&#39;s definitely time to do so. This has been on my todo list for a while already and now that I know how easy it was, I definitely should have done it before!</description>
+    </item>
+    
+    <item>
+      <title>About Personal Productivity</title>
+      <link>https://juristr.com/blog/2016/01/about-personal-productivity/</link>
+      <pubDate>Sun, 24 Jan 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/01/about-personal-productivity/</guid>
+      <description>Thinking aloud about productivity, what I&#39;m currently doing about it and where I think I need to improve a lot.     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>Role of an Enterprise Architect in a Lean Organization</title>
+      <link>https://juristr.com/blog/2015/11/link-ea-in-lean-enterprise/</link>
+      <pubDate>Mon, 30 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/link-ea-in-lean-enterprise/</guid>
+      <description>Role of an Enterprise Architect in a Lean Organization  http://martinfowler.com/articles/ea-in-lean-enterprise.html      map the current state present vision to key technical leaders and get feedback, they know why certain things are the way they are upon consensus, make current + future state visible to all (not in a Sharepoint folder, or document) &amp;ldquo;build bridges&amp;rdquo;, become partner and resource for development teams When a new project starts, update the team of the latest vision Try to avoid getting mired in the details of the implementation focus on high level goals and design avoid temptation to immediately say no to new technology, discuss, do time-boxed proof of concept, measure, discuss success as an EA is only made possible with the support of the development teams build excitement of new vision, celebrate the victories (however small) try to bind technical changes to business changes build community of learning, involve passionate technologists, lead devs etc&amp;hellip;give opportunity to share their learnings do not force people to attend training and learning activities.</description>
+    </item>
+    
+    <item>
+      <title>Good Tech Lead, Bad Tech Lead</title>
+      <link>https://juristr.com/blog/2015/11/link-good-bad-techleads/</link>
+      <pubDate>Sun, 29 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/link-good-bad-techleads/</guid>
+      <description>A very good read and I couldn&amp;rsquo;t agree more on this. Here&amp;rsquo;s a quick summary of the main points from the article.
+     Good Tech Lead, Bad Tech Lead  https://medium.</description>
+    </item>
+    
+    <item>
+      <title>Building an Enterprise CSS Framework</title>
+      <link>https://juristr.com/blog/2015/10/link-building-enterprise-css-frmwrk/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/link-building-enterprise-css-frmwrk/</guid>
+      <description>I&amp;rsquo;ve already had a couple of times the chance to work on a common style guide for our enterprise-wide web applications. It really is tough.</description>
+    </item>
+    
+    <item>
+      <title>Nepal: Help for Anil Joshi</title>
+      <link>https://juristr.com/blog/2015/05/nepal-help-for-anil/</link>
+      <pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/05/nepal-help-for-anil/</guid>
+      <description>This is not the kind of post you usually find on my site here. But it&amp;rsquo;s the story of a good friend of mine who tries to help Anil, a young Nepalese who lost his home during the big earthquake at the end of April.</description>
+    </item>
+    
+    <item>
+      <title>Happy new year 2015!</title>
+      <link>https://juristr.com/blog/2014/12/happy-new-year-2015/</link>
+      <pubDate>Wed, 31 Dec 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/12/happy-new-year-2015/</guid>
+      <description>A very short post as I&amp;rsquo;m preparing to go out for celebrating New Year&amp;rsquo;s Eve. 2014 has been a great year, with its ups and downs.</description>
+    </item>
+    
+    <item>
+      <title>Kudos for your site - powered by Firebase</title>
+      <link>https://juristr.com/blog/2014/12/kudos-for-your-site/</link>
+      <pubDate>Mon, 29 Dec 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/12/kudos-for-your-site/</guid>
+      <description>I don&amp;rsquo;t quite remember, guess it was about more than a year ago when I came across a Svbtle-hosted blog where I noticed a small little circle, bouncing when you hover it and showing a number followed by &amp;ldquo;Kudos&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Decision making, problem solving, introducing ideas, being influencial</title>
+      <link>https://juristr.com/blog/2014/03/decision-making-and-problem-solving/</link>
+      <pubDate>Wed, 05 Mar 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/03/decision-making-and-problem-solving/</guid>
+      <description>Usually when people think about software development, they just have the typical nerds in mind, shy but smart, introvert people sitting in (often) dark rooms hammering down obscure instruction sets on their keyboards.</description>
+    </item>
+    
+    <item>
+      <title>How to add a reading time indicator to your blog in ten minutes</title>
+      <link>https://juristr.com/blog/2013/07/how-to-setup-reading-time-indicator-ten-minutes/</link>
+      <pubDate>Tue, 23 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/07/how-to-setup-reading-time-indicator-ten-minutes/</guid>
+      <description>Time is money, right, and given that nowadays we are continuously being flooded with an enormous amount of information, we need to be fast in consuming it and particularly good at filtering what&amp;rsquo;s worth and what isn&amp;rsquo;t.</description>
+    </item>
+    
+    <item>
+      <title>Blog Like a Hacker with Jekyll and Nitrous.IO</title>
+      <link>https://juristr.com/blog/2013/05/blog-like-a-hacker-with-jekyll-and-nitrousio/</link>
+      <pubDate>Wed, 08 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/05/blog-like-a-hacker-with-jekyll-and-nitrousio/</guid>
+      <description>One of the best moves I probably did about half a year ago was to move my Blog from blogger to Jekyll, hosted on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Interview with DZone</title>
+      <link>https://juristr.com/blog/2013/03/interview-with-dzone/</link>
+      <pubDate>Wed, 06 Mar 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/03/interview-with-dzone/</guid>
+      <description>DZone, where I&#39;m part as an MVB, recently contacted me for an interview for their weekly newsletter edition. Yesterday it got published. If you&#39;re interested in their newsletter, the best way is to follow DZone on their Facebook page.</description>
+    </item>
+    
+    <item>
+      <title>Retrospective 2012</title>
+      <link>https://juristr.com/blog/2012/12/retrospective-2012/</link>
+      <pubDate>Mon, 31 Dec 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/12/retrospective-2012/</guid>
+      <description>Yes we&amp;rsquo;re still alive ;) No jokes apart, it&amp;rsquo;s time for a year retrospective.
+Normally, a retrospective consists more or less about asking the following three questions:</description>
+    </item>
+    
+    <item>
+      <title>Architecting for Failure at the Guardian</title>
+      <link>https://juristr.com/blog/2012/05/architecting-for-failure-at-guardian/</link>
+      <pubDate>Sun, 20 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/05/architecting-for-failure-at-guardian/</guid>
+      <description>Architecting for the Failure, a presentation of this year&#39;s QCon London 2012. Michael Brunton-Spall gives some insights into how they moved their architecture at the Guardian from a monolith system to a system composed of &#34;</description>
+    </item>
+    
+    <item>
+      <title>Joining the DZone MVB Program</title>
+      <link>https://juristr.com/blog/2012/04/joining-dzone-mvb-program/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/04/joining-dzone-mvb-program/</guid>
+      <description>A couple of weeks ago I was kindly invited to join DZone as a MVB (Most Valuable Blogger). If you shouldn&#39;t already know, &#34;DZone is a technology publishing company that produces valuable content for software architects and developers worldwide.</description>
+    </item>
+    
+    <item>
+      <title>QCon London - My Personal Recap</title>
+      <link>https://juristr.com/blog/2012/04/qcon-london-my-personal-recap/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/04/qcon-london-my-personal-recap/</guid>
+      <description>From the previous posts (or from those on my Tumblr stream) you might have understood my participation at this year&#39;s QCon London. Actually it was my 1st QCon conference and I enjoyed it a lot.</description>
+    </item>
+    
+    <item>
+      <title>Sharpening the Tools</title>
+      <link>https://juristr.com/blog/2012/03/sharpening-tools/</link>
+      <pubDate>Wed, 14 Mar 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/03/sharpening-tools/</guid>
+      <description>This is a talk from Dan North about Sharpening the Tools at QCon 2010. I had the great pleasure to listen to this guy at this year&#39;s QCon (recap is in the drafts already and will be published soon btw).</description>
+    </item>
+    
+    <item>
+      <title>Questions for an Enterprise Architect</title>
+      <link>https://juristr.com/blog/2012/03/questions-for-enterprise-architect/</link>
+      <pubDate>Fri, 02 Mar 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/03/questions-for-enterprise-architect/</guid>
+      <description>Erik Dörnenburg answers: What is Enterprise and Evolutionary Architecture?, discussing 4 issues: Turning strategy into execution, Ensuring conformance, Where do the architects sit? Buying or building?</description>
+    </item>
+    
+    <item>
+      <title>JCG - Joining the Java Code Geeks Program</title>
+      <link>https://juristr.com/blog/2011/03/jcg-joining-java-code-geeks-program/</link>
+      <pubDate>Thu, 10 Mar 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/03/jcg-joining-java-code-geeks-program/</guid>
+      <description>A couple of days ago I was kindly invited to the Java Code Geeks program. Their goal is to build an online community for Java developers by aggregating and republishing content from different bloggers on their blog.</description>
+    </item>
+    
+    <item>
+      <title>Test-Driven Development and Automated Testing: A Metaphor</title>
+      <link>https://juristr.com/blog/2010/10/test-driven-development-and-automated/</link>
+      <pubDate>Fri, 15 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/10/test-driven-development-and-automated/</guid>
+      <description>Motivation is an important factor when learning something new. It is what makes you ambitious and what helps you forget the effort that needs to be invested.</description>
+    </item>
+    
+    <item>
+      <title>Testing Newbies: Some Thoughts about Test First</title>
+      <link>https://juristr.com/blog/2010/07/testing-newbies-some-thoughts-about/</link>
+      <pubDate>Fri, 30 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/testing-newbies-some-thoughts-about/</guid>
+      <description>A quick post just before diving into the weekend filled with Yoseikan training, swimming, going out with friends and - of course - Android coding :) .</description>
+    </item>
+    
+    <item>
+      <title>Blog to learn...</title>
+      <link>https://juristr.com/blog/2009/10/blog-to-learn/</link>
+      <pubDate>Sun, 11 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/blog-to-learn/</guid>
+      <description>John Skeet answered a question on SO related to how to learn good programming in terms of learning good software design.
+I liked John&#39;s statement which btw explains pretty much why to have a technical blog like this one here.</description>
+    </item>
+    
+    <item>
+      <title>Do you know the &#34;Joel Test&#34;?</title>
+      <link>https://juristr.com/blog/2009/06/did-you-know-joel-test/</link>
+      <pubDate>Fri, 19 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/06/did-you-know-joel-test/</guid>
+      <description>First of all, who is &#34;Joel&#34;? Joel Spolsky is a software developer in the US. I came across his interesting blog about a year ago.</description>
+    </item>
+    
+    <item>
+      <title>These damn spammers!!!</title>
+      <link>https://juristr.com/blog/2009/03/these-damn-spammers/</link>
+      <pubDate>Mon, 30 Mar 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/these-damn-spammers/</guid>
+      <description>Once again one of my blog posts got infected by &#34;spam&#34; comments. But this time not the usual pharmaceutical spam messages which you immediately recognize.</description>
+    </item>
+    
+    <item>
+      <title>Extended view reloaded</title>
+      <link>https://juristr.com/blog/2009/03/extended-view-reloaded/</link>
+      <pubDate>Wed, 25 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/extended-view-reloaded/</guid>
+      <description>With the transition to the complete new blog design I initially had to leave away some features which I had on my old blog layout.</description>
+    </item>
+    
+    <item>
+      <title>Guidelines for promoting your blog</title>
+      <link>https://juristr.com/blog/2009/03/guidelines-for-promoting-your-blog/</link>
+      <pubDate>Thu, 05 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/guidelines-for-promoting-your-blog/</guid>
+      <description>Some guidelines on how to promote and so to increase the traffic on your blog. These &#34;rules&#34; have been taken from the Blogger Help and I thought some of you may be interested.</description>
+    </item>
+    
+    <item>
+      <title>Blogging year 2008</title>
+      <link>https://juristr.com/blog/2009/01/blogging-year-2008/</link>
+      <pubDate>Thu, 01 Jan 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/01/blogging-year-2008/</guid>
+      <description>First of all, happy new year 2009, I wish you all the best! :) This is a scheduled post of course :D I&#39;m not in front of the PC over new year, and you shouldn&#39;t be neither.</description>
+    </item>
+    
+    <item>
+      <title>Congratulations Dott.ssa Stefanie Franchi</title>
+      <link>https://juristr.com/blog/2008/01/congratulations-dottssa-stefanie/</link>
+      <pubDate>Sat, 26 Jan 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/01/congratulations-dottssa-stefanie/</guid>
+      <description>I&#39;d like to take the occasion to congratulate my girlfriend Dottoressa Stefanie Franchi to her successful graduation as Bachelor of Science in Economics and Mangement Sciences.</description>
+    </item>
+    
+  </channel>
+</rss>

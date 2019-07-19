@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Router on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/router/</link>
+    <description>Recent content in Router on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 31 Jan 2019 18:39:51 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/router/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Explore Angular Router&#39;s  runGuardsAndResolvers</title>
+      <link>https://juristr.com/blog/2019/01/Explore-Angular-Routers-runGuardsAndResolvers/</link>
+      <pubDate>Thu, 31 Jan 2019 18:39:51 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/01/Explore-Angular-Routers-runGuardsAndResolvers/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Learn how we can use new options introduced for the &lt;code&gt;runGuardsAndResolvers&lt;/code&gt; setting for the Angular Router configuration to get a better control over when to run our resolvers and guards.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Test-Driven-Design: A real world scenario of an email sending requirement | juri.strumpflohner</title>
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Test-Driven-Design: A real world scenario of an email sending requirement" />
+	
+
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Test-Driven-Design: A real world scenario of an email sending requirement" />
+	
+	
+	<meta property="og:url" content="https://juristr.com/blog/2010/04/test-driven-design-real-world-scenario" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2010%2f04%2ftest-driven-design-real-world-scenario%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2010%2f04%2ftest-driven-design-real-world-scenario%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Test-Driven-Design: A real world scenario of an email sending requirement</h1>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Apr 15, 2010
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">6 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+<p>Many applications have requirements to send automatic emails to their users, especially in web environments. So it was also in my case.</p>
+
+Summarizing in a few words, the requirement was the following:
+
+<blockquote>Automatically send an email notification to the company coordinator as well as to the admin (in CC) in case of a rectification of an already transmitted order <i>(let's call it this way)</i>.<br />The content of the email subject as well as of the message body <b>depends on the kind of order</b> that has been transmitted previously.</blockquote>
+
+So, the approach is to have some kind of email-message templates where the specific gaps are filled with the necessary information. Such an email body could look like<br /><blockquote>Dear [company_coordinator_name],<br /><br />[username] has requested to rectify the order with number [ordernumber] which has been transmitted at [transmission_data].<br /><br />...<br /><br />Kind regards<br />...</blockquote>Obviously this is just a fake message content, but it's enough to understand the requirement's context.<br /><br />So when you think about implementing this, you would probably place the message template in a resource file, substitute all "[placeholders]" with <code>{0},{1},...,{n}</code> s.t. you can later replace them by using <code>String.Format(messagebody, value_1, value_2,...,value_n)</code>. So far so good, then you'd create a class which sends the mail by using the .Net available <code>SMTPClient</code> and <code>MailMessage</code> classes and - of course - assuming you dispose of a SMTP server that allows you to perform the operation.<br />So a first draft could look as follows (don't take the UML too strictly, it's just for better understanding)<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://yuml.me/e015a2c" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="187" src="http://yuml.me/e015a2c" width="640" /></a></div><br />Pretty simple, what's your opinion? Be aware!! The complexity is hidden here. Remember the logic of variations in the email content depending on the order type? There will be a couple of if-statements which type of order is being processed and accordingly the text will be adapted, data will possibly be fetched from the DB and so on. What are the problems with that? Take these...<br /><ul><li><u>Where will this logic reside? In the OrderBL or within EmailService?</u><br />On the one hand it could be within the OrderBL because there's where the order data is known and handled. But wait, loading and preparing the email template there? Should the OrderBL really know about that stuff? Know where to fetch the email text? Would be better within the EmailService then, right? But that means the EmailService's <code>SendMail(...)</code> will take quite a lot of parameters (think of your template having 10+ placeholders).<br /><br /></li><li><u>Extensibility: What about when a new Order type comes in?</u><br />What would that mean for our solution? Depending on where you placed your logic, touch the OrderBL, EmailService and so on, add new if statements to handle the new order type. Bad!<br /><br /></li><li><u>Reusability?</u><br />The EmailService class may come in quite handy since within another project there's also the need to send emails. But there I have different kind of requirements, different data and consequently different email templates! Not reusable!<br /><br /></li><li><u>Finally, testability?</u><br />How to you test it? You surely don't want to test the email functionality itself. That's out of scope of a unit test, but you'd like to verify the correctness of the produced (and ultimately send) email body, subject etc...Verifying <code>EmailService.SendMail(...)</code> will be difficult, given the strict references to <code>SMTPClient</code> and <code>MailMessage</code>.</li></ul><div>So can we come up with a better design in terms of the above mentioned points?<br /><br />What I did in my situation is to <b>not</b>&nbsp;<b>think about pure functionality</b>&nbsp;but about <b>how to test</b>&nbsp;it. List down the facts which would make your design more easily testable:</div><div><ul><li><u>F1: No control over SMTPClient and MailMessage</u><br />They are somehow in the way. Direct references to them, especially to SMTPClient will result in sending mails somewhere which we definitely don't want during <i>Unit</i>-Testing.<br /><br /></li><li><u>F2: Clearly separate responsibilities</u><br />A class having multiple responsibilities results in more if-statements and thus higher complexity (see <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity">CC</a>). This not only lowers it's maintainability but also hinders us from being able to test it.<br /><br /></li><li><u>F3: Decouple</u><br />Remember the <a href="http://blog.js-development.com/2010/03/tackle-software-dependencies-with-ioc.html">purpose of interfaces</a>? This is essential but still, many developers don't really get the reason for using interfaces. First clearly define the contracts, then implement the functionality.</li></ul></div><br />Let's go stepwise.<br /><ol><li>We have the concept of templates, so let's create an interface <u>IMailTemplate</u> which knows the stuff a mail template has to expose to the world, basically the subject and mail body.<br /><br /></li><li>The concept of a <u>email sender</u>. This class should just get the addresses, subject and body. Then it should care about sending the mail (somehow).<br /><br /></li><li>The <u>email sending service</u>. It should know where to fetch the email addresses and to delegate the sending of the template to its destination. It shouldn't care about <i>how<span class="Apple-style-span" style="font-style: normal;">&nbsp;the sending takes place.</span></i><br /><br /></li><li>Finally, the already in our application existing <u>OrderBL</u>. Its sole responsibility in the term of the requirement is to know how to create a specific email template and in which state of the application the email has to be sent.</li></ol><div>So for the first point we have the following situation.</div><div class="separator" style="clear: both; text-align: center;"><a href="http://yuml.me/783a3070" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="126" src="http://yuml.me/783a3070" width="640" /></a></div><div><br /></div><div>A generic template interface and the concrete implementations for the different types, just as it gets taught in any programming class :)</div><div><br /></div><div>In the case of the mail sender concept we have an interface <code>IMailSender</code> and a concrete implementation. Note, this separates out the dependencies to the underlying .Net classes.</div><div class="separator" style="clear: both; text-align: center;"><a href="http://yuml.me/12d854eb" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="194" src="http://yuml.me/12d854eb" width="640" /></a></div><div><br /></div><div><br /></div><div>Let's come to the email service. It takes a template, and has a mail sender associated (through the IMailSender interface). Again, note that the email service has no knowledge on how the email gets send. A concrete implementation of the IMailSender could also just write a file on the FS :)</div><div><br /></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://yuml.me/6739b183" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="122" src="http://yuml.me/6739b183" width="640" /></a></div><br />And finally the OrderBL which simply knows about a concrete email template and a email service which can do something with that template. That's it.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://yuml.me/4508ac39" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="144" src="http://yuml.me/4508ac39" width="640" /></a></div><br /><br />I know what you think now. Damn that got much more complex, look at how many interfaces, classes etc there are. <b>Wait</b>, give me a chance to highlight you the differences and explain them.<br />It's true, there are more classes, but it became simpler in terms of complexity, maintainability and testability. Before it was just hidden in large if statements within an OrderBL or EmailService class.<br /><br />Let's revise the 4 points I mentioned in the very beginning against the new design:<br /><ul><li><u>Where will this logic reside? In the OrderBL or within EmailService?</u><br />Simple, isn't it? Each has it's clear responsibility, OrderBL knows how to create a template and gives its associated EmailService the command to process it.<br /><br /></li><li><u>Extensibility: What about when a new Order type comes in?</u><br />Again, too simple. Just create another concrete implementation of a template, MailTemplateOrderTypeC. That's it, nothing more and nothing less, everything will work without touching other code.<br /><br /></li><li><u>Reusability?</u><br />Reusing the functionality of sending a mail? No problem, take the EmailSender class with interface and you're done. It can be reused in any arbitrary context.<br /><br /></li><li><u>Finally, testability?</u>The master discipline, will it be testable? Sure, you could now test the EmailService class by passing it an IMailTemplate of your choice and by mocking out the undesirable IMailSender object.</li></ul>Still not convinced? Well :) it takes time, took me a while actually to think&nbsp;in this way and to <i>understand</i>&nbsp;it.<br /><br />The reason why I'm not going to post the underlying code (unit tests and classes) is that the purpose of this post is not to show about the technical details, but to emphasize the impact of TDD onto the <b>design</b> of your software. That's where the often forgotten meaning Test-Driven-<b>Design</b> comes from.<br /><br />Hope you got the point. Feel free to leave any comment :)<br /><br /><div class="notebox info">The art of unit testing is not about testing, but about the art of writing testable code.</div>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

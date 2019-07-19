@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Process on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/software-process/</link>
+    <description>Recent content in Software Process on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 11 Jan 2019 10:53:38 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/software-process/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>It&#39;s not just Standing Up</title>
+      <link>https://juristr.com/blog/2019/01/Its-not-just-Standing-Up/</link>
+      <pubDate>Fri, 11 Jan 2019 10:53:38 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/01/Its-not-just-Standing-Up/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I&amp;rsquo;m highly convinced that the hardest part of software development is people. Here are some of my notes of the &lt;a href=&#34;https://martinfowler.com/articles/itsNotJustStandingUp.html&#34;&gt;awesome article from Jason Yip on &amp;ldquo;It&amp;rsquo;s Not Just Standing Up: Patterns for Daily Standup Meetings&amp;rdquo;&lt;/a&gt;.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to be agile in a non-agile environment</title>
+      <link>https://juristr.com/blog/2015/11/link-agile-in-non-agile-environment/</link>
+      <pubDate>Tue, 03 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/link-agile-in-non-agile-environment/</guid>
+      <description>Good article from the Gov.uk Government Digital Service blog.
+     How to be agile in a non-agile environment  https://gds.blog.gov.uk/2015/10/09/how-to-be-agile-in-a-non-agile-environment/     It&amp;rsquo;s damn hard if not impossible to be agile in a rigid environment, where upper management just won&amp;rsquo;t grasp the benefits from having such an approach.</description>
+    </item>
+    
+    <item>
+      <title>About Scrum - in under 10 minutes</title>
+      <link>https://juristr.com/blog/2009/06/about-scrum-in-under-10-minutes/</link>
+      <pubDate>Thu, 18 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/06/about-scrum-in-under-10-minutes/</guid>
+      <description>Here&amp;rsquo;s a nice video that explains Scrum in under 10 minutes. It was quite useful when preparing for the exam in Software Quality Management. Some of you might be interested in it.</description>
+    </item>
+    
+  </channel>
+</rss>

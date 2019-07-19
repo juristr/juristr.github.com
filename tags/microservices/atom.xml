@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microservices on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/microservices/</link>
+    <description>Recent content in Microservices on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sat, 03 Jan 2015 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/microservices/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Notes: Microservices by Martin Fowler</title>
+      <link>https://juristr.com/blog/2015/01/notes-microservices-fowler-xconf/</link>
+      <pubDate>Sat, 03 Jan 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/01/notes-microservices-fowler-xconf/</guid>
+      <description>I just watched Martin Fowler&amp;rsquo;s talk about Microservices at XConf. Here are some of my notes and related thoughts. The talk is heavily based upon Martin Fowler and James Lewis&amp;rsquo; article about Microservices, so you can find and read most of the information there.</description>
+    </item>
+    
+  </channel>
+</rss>

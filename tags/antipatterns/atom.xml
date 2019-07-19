@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Antipatterns on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/antipatterns/</link>
+    <description>Recent content in Antipatterns on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 04 Sep 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/antipatterns/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Find Code Duplicates with Sublime Text</title>
+      <link>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</guid>
+      <description>Code duplication is the worst practice ever, right? Well, actually there might be situations where duplicating can be better than factoring out, but these are very rare.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,4715 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/07/testing-cypress-intro/</loc>
+    <lastmod>2019-07-16T12:00:00+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/06/angular-v8/</loc>
+    <lastmod>2019-06-03T12:00:00+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/05/create-vscode-snippets/</loc>
+    <lastmod>2019-05-23T12:00:00+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/05/Angular-8-and-the-Future-NGConf-2019-Roundup/</loc>
+    <lastmod>2019-05-01T17:30:08+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</loc>
+    <lastmod>2019-04-29T14:00:00+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/04/intro-to-angular-elements/</loc>
+    <lastmod>2019-04-28T12:00:09+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/04/setup-for-angular-dev/</loc>
+    <lastmod>2019-04-26T16:10:05+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/04/productive-git-for-developers/</loc>
+    <lastmod>2019-04-16T10:00:00+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</loc>
+    <lastmod>2019-03-04T10:00:00+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/02/ag-grid-integrating-with-angular/</loc>
+    <lastmod>2019-02-14T21:24:36+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</loc>
+    <lastmod>2019-02-07T20:30:31+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/01/Explore-Angular-Routers-runGuardsAndResolvers/</loc>
+    <lastmod>2019-01-31T18:39:51+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</loc>
+    <lastmod>2019-01-16T15:03:22+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2019/01/Its-not-just-Standing-Up/</loc>
+    <lastmod>2019-01-11T10:53:38+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/12/egghead-learn-router-real-world-apps/</loc>
+    <lastmod>2018-12-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/11/better-route-guard-redirects/</loc>
+    <lastmod>2018-11-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/11/videolesson-rxjs-caching-angular/</loc>
+    <lastmod>2018-11-11T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/10/videolesson-avoid-memory-leaks/</loc>
+    <lastmod>2018-10-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/10/simple-state-management-with-scan/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/10/journey-promises-to-rxjs/</loc>
+    <lastmod>2018-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/07/object-errorthrown-karma/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/06/how-cdk-portals-work/</loc>
+    <lastmod>2018-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/05/dynamic-UI-with-cdk-portals/</loc>
+    <lastmod>2018-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/02/angular-permission-directive/</loc>
+    <lastmod>2018-02-21T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/02/add-mocha-reporter-angular-cli-tests/</loc>
+    <lastmod>2018-02-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/02/cd-gitlab-angular-firebase/</loc>
+    <lastmod>2018-02-08T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/02/ng-true-value-directive/</loc>
+    <lastmod>2018-02-01T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2018/01/ng-app-runtime-config/</loc>
+    <lastmod>2018-01-22T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/12/looking-back-on-2017/</loc>
+    <lastmod>2017-12-30T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/12/egghead-three-ng-courses/</loc>
+    <lastmod>2017-12-27T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/11/dynamic-angular-components-for-rendering-html/</loc>
+    <lastmod>2017-11-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/10/demystify-dynamic-angular-forms/</loc>
+    <lastmod>2017-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/08/understand-how-to-style-angular-components/</loc>
+    <lastmod>2017-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/08/intercept-http-requests-in-angular/</loc>
+    <lastmod>2017-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/07/ng2-dynamic-tab-component/</loc>
+    <lastmod>2017-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/06/new-enhanced-ngIf-and-ngFor/</loc>
+    <lastmod>2017-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/03/talks-web-meets-mobile/</loc>
+    <lastmod>2017-03-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/03/angular-tuning-change-detection/</loc>
+    <lastmod>2017-03-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/03/angular-modules-vs-es6-modules/</loc>
+    <lastmod>2017-03-09T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/02/link-talk-puzzle-of-motivation/</loc>
+    <lastmod>2017-02-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/01/video-course-learning-ng-cmps/</loc>
+    <lastmod>2017-01-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/01/talk-angular-testing-recipes/</loc>
+    <lastmod>2017-01-11T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2017/01/enable-ssl-jekyll-blog/</loc>
+    <lastmod>2017-01-04T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/12/angular-community-ngbe-conf/</loc>
+    <lastmod>2016-12-31T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/12/ama-igor-angularbeers/</loc>
+    <lastmod>2016-12-19T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/12/let-me-explain-angular-release-cycles/</loc>
+    <lastmod>2016-12-13T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/12/configure-aot-with-angular-cli/</loc>
+    <lastmod>2016-12-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/11/safe-nav-operator-and-async-pipe/</loc>
+    <lastmod>2016-11-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/11/ng2-template-driven-form-validators/</loc>
+    <lastmod>2016-11-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/11/ng2-binding-radiobutton-lists/</loc>
+    <lastmod>2016-11-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/</loc>
+    <lastmod>2016-11-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/10/lets-create-ur-first-ng2-app/</loc>
+    <lastmod>2016-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/09/ng2-serialize-with-json-pipe/</loc>
+    <lastmod>2016-09-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/09/ng2-get-window-ref/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/09/ng2-event-registration-document/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/09/ng2-released/</loc>
+    <lastmod>2016-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/08/ng2-forms-first-look/</loc>
+    <lastmod>2016-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/06/rxjs-1st-steps-subject/</loc>
+    <lastmod>2016-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/06/from-ngcontroller-to-components/</loc>
+    <lastmod>2016-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/06/ng2-getting-started-for-beginners/</loc>
+    <lastmod>2016-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/04/learning-angular2-directives-course/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/04/angular2-change-detection/</loc>
+    <lastmod>2016-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/02/debugging-angular2-console/</loc>
+    <lastmod>2016-02-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/02/learning-ng2-creating-tab-component/</loc>
+    <lastmod>2016-02-02T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</loc>
+    <lastmod>2016-01-25T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/01/about-personal-productivity/</loc>
+    <lastmod>2016-01-24T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2016/01/ng2-multi-content-projection/</loc>
+    <lastmod>2016-01-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/12/link-upgrade-ng1-to-ng2/</loc>
+    <lastmod>2015-12-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/12/perf-startup-ng1/</loc>
+    <lastmod>2015-12-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/12/componentizing-workflow/</loc>
+    <lastmod>2015-12-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/12/followup-evolving-publication/</loc>
+    <lastmod>2015-12-04T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/12/link-gitlab-flow/</loc>
+    <lastmod>2015-12-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/11/link-egghead-learn-redux/</loc>
+    <lastmod>2015-11-30T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/11/link-ea-in-lean-enterprise/</loc>
+    <lastmod>2015-11-30T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/11/link-good-bad-techleads/</loc>
+    <lastmod>2015-11-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/11/link-ng1-components/</loc>
+    <lastmod>2015-11-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/11/link-agile-in-non-agile-environment/</loc>
+    <lastmod>2015-11-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/11/rest-api-design/</loc>
+    <lastmod>2015-11-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/11/screencast-typescript-setup/</loc>
+    <lastmod>2015-11-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/link-ng-model-options-speedup/</loc>
+    <lastmod>2015-10-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/angular-connect-london-day2/</loc>
+    <lastmod>2015-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/angular-connect-london/</loc>
+    <lastmod>2015-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/link-vid-breaking-apart-conceptions/</loc>
+    <lastmod>2015-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/release-like-a-pro/</loc>
+    <lastmod>2015-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/link-10-javascript-interview-questions/</loc>
+    <lastmod>2015-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/link-fix-osx-devtools/</loc>
+    <lastmod>2015-10-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/link-otto-monoliths-microservices/</loc>
+    <lastmod>2015-10-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/10/link-building-enterprise-css-frmwrk/</loc>
+    <lastmod>2015-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/09/link-12-prof-js-tips/</loc>
+    <lastmod>2015-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/09/link-es-features/</loc>
+    <lastmod>2015-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/09/link-angular-spies/</loc>
+    <lastmod>2015-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/09/link-angular-defer/</loc>
+    <lastmod>2015-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/09/link-ng2-survey-results/</loc>
+    <lastmod>2015-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/09/link-list-layout-recalculations/</loc>
+    <lastmod>2015-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/09/link-10-common-testing-mistakes/</loc>
+    <lastmod>2015-09-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/link-github-scaling/</loc>
+    <lastmod>2015-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/jump-start-es2015/</loc>
+    <lastmod>2015-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/link-why-stop-using-bower/</loc>
+    <lastmod>2015-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/link-why-avoid-canonical-datamodels/</loc>
+    <lastmod>2015-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/link-angular-v1-mix-v2/</loc>
+    <lastmod>2015-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/link-angular-perf-cheatsheet/</loc>
+    <lastmod>2015-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/link-desktop-apps-electron/</loc>
+    <lastmod>2015-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/link-angular2-di/</loc>
+    <lastmod>2015-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/08/link-semantic-release-talk/</loc>
+    <lastmod>2015-08-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/07/learning-ng-prepare-ng2/</loc>
+    <lastmod>2015-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/06/learning-ng-testing-promises/</loc>
+    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/06/learning-ng-expose-directive-api/</loc>
+    <lastmod>2015-06-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/06/guide-as-in-mountaineering/</loc>
+    <lastmod>2015-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/06/github-social-contribute-learn/</loc>
+    <lastmod>2015-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/05/jersey-webresource-ignores-headers/</loc>
+    <lastmod>2015-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/05/nepal-help-for-anil/</loc>
+    <lastmod>2015-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/03/migrate-tfs-to-git/</loc>
+    <lastmod>2015-03-25T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/03/learning-ng-angular-translate-promises/</loc>
+    <lastmod>2015-03-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/02/learning-ng-verify-presence-of-directive-props/</loc>
+    <lastmod>2015-02-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/01/learning-ng-directives-access-scope-controller/</loc>
+    <lastmod>2015-01-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/01/backup-windows-to-synology/</loc>
+    <lastmod>2015-01-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2015/01/notes-microservices-fowler-xconf/</loc>
+    <lastmod>2015-01-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/12/happy-new-year-2015/</loc>
+    <lastmod>2014-12-31T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/12/kudos-for-your-site/</loc>
+    <lastmod>2014-12-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/11/learning-ng-angularjs-utility-functions/</loc>
+    <lastmod>2014-11-28T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/11/learning-ng-testing-watch-expressions/</loc>
+    <lastmod>2014-11-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/11/review-javascript-promises-essentials/</loc>
+    <lastmod>2014-11-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/11/learning-ng-what-is-your-directives-scope/</loc>
+    <lastmod>2014-11-13T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/11/learning-ng-databinding-doesnt-work/</loc>
+    <lastmod>2014-11-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/11/enable-spell-check-sublime-markdown/</loc>
+    <lastmod>2014-11-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/11/learning-ng-series-intro/</loc>
+    <lastmod>2014-11-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/10/avoid-test-code-duplication-jasmine/</loc>
+    <lastmod>2014-10-30T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/10/invite-your-friend-to-inbox/</loc>
+    <lastmod>2014-10-28T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/10/static-code-analyis-for-free/</loc>
+    <lastmod>2014-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/09/hack-mimic-disabled-checkboxes/</loc>
+    <lastmod>2014-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/09/implementing-the-git-flow/</loc>
+    <lastmod>2014-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/08/node-grunt-yeoman-bower/</loc>
+    <lastmod>2014-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/07/lazy-angular-modules/</loc>
+    <lastmod>2014-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/05/angular-baby-steps/</loc>
+    <lastmod>2014-05-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/05/told-you-that-testing-is-a-waste/</loc>
+    <lastmod>2014-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/04/building-adaptable-software-with-events/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/03/integrating-node-with-csharp/</loc>
+    <lastmod>2014-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/03/Video-JBoss-EAP-Administration/</loc>
+    <lastmod>2014-03-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/03/Jenkins-Build-Setup-Project/</loc>
+    <lastmod>2014-03-12T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/03/decision-making-and-problem-solving/</loc>
+    <lastmod>2014-03-05T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/02/nightwatch-test-automation/</loc>
+    <lastmod>2014-02-21T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2014/01/git-flow-jenkins-gitlab/</loc>
+    <lastmod>2014-01-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/12/react-rethingking-best-practices/</loc>
+    <lastmod>2013-12-20T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/12/nprogress-splash-screen/</loc>
+    <lastmod>2013-12-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/11/narrow-path-best-practices-overengineering/</loc>
+    <lastmod>2013-11-19T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/10/jboss-weld-cdi-for-java-platform/</loc>
+    <lastmod>2013-10-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/09/developing-win-store-apps-with-html5-and-javascript/</loc>
+    <lastmod>2013-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/08/object-does-not-contain-definition/</loc>
+    <lastmod>2013-08-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/08/jsconfus-javascript-masterclass/</loc>
+    <lastmod>2013-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/07/how-to-setup-reading-time-indicator-ten-minutes/</loc>
+    <lastmod>2013-07-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/07/typescript-application-scale-javascript/</loc>
+    <lastmod>2013-07-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/06/setup-wpf-with-prism/</loc>
+    <lastmod>2013-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/06/code-coverage-with-qunit-in-javascriptmvc/</loc>
+    <lastmod>2013-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/06/learning-javascriptmvc/</loc>
+    <lastmod>2013-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/06/unit-testing-tip-create-descriptive-tests/</loc>
+    <lastmod>2013-06-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/06/vae-soli/</loc>
+    <lastmod>2013-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/06/caching-jquery-ajax-and-other-ie-fun/</loc>
+    <lastmod>2013-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/06/getting-started-with-git-and-visualstudio/</loc>
+    <lastmod>2013-06-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/05/blog-like-a-hacker-with-jekyll-and-nitrousio/</loc>
+    <lastmod>2013-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/05/perfect-workflow-in-sublime-text2/</loc>
+    <lastmod>2013-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/04/git-explained/</loc>
+    <lastmod>2013-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/04/my-sublimetext-setup/</loc>
+    <lastmod>2013-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/04/modularity-in-javascript-frameworks/</loc>
+    <lastmod>2013-04-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/03/intercepting-sql-queries-for-contextual-logging/</loc>
+    <lastmod>2013-03-22T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/03/mocking-internal-interfaces-with-moq/</loc>
+    <lastmod>2013-03-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/03/interview-with-dzone/</loc>
+    <lastmod>2013-03-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/02/the-coaching-architect/</loc>
+    <lastmod>2013-02-12T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/02/dzone-mvb-goodies-box/</loc>
+    <lastmod>2013-02-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/02/test-your-app-under-slow-network-speeds/</loc>
+    <lastmod>2013-02-01T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/01/aspnet-mvc-action-methods-testing-against-anonymous-return-types/</loc>
+    <lastmod>2013-01-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/01/how-to-stay-up-to-date-on-web-technology/</loc>
+    <lastmod>2013-01-11T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2013/01/transformer-tf101-meets-jelly-bean-powered-by-cyanogenmod/</loc>
+    <lastmod>2013-01-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/12/retrospective-2012/</loc>
+    <lastmod>2012-12-31T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/12/gist-my-new-devbook/</loc>
+    <lastmod>2012-12-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/12/cerego-learn-anything-everywhere/</loc>
+    <lastmod>2012-12-17T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/12/programming-aspnet-mvc4/</loc>
+    <lastmod>2012-12-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/11/howto-subscribe-to-failed-tfs-builds/</loc>
+    <lastmod>2012-11-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/11/visual-studio-where-did-my-shelvesets-go/</loc>
+    <lastmod>2012-11-19T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/11/deploying-git-vs-tfs-showdown/</loc>
+    <lastmod>2012-11-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/11/dont-create-your-own-mapper-let-automapper-do-the-job/</loc>
+    <lastmod>2012-11-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/10/visual-studio-tips/</loc>
+    <lastmod>2012-10-31T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/10/output-caching-in-aspnet-mvc/</loc>
+    <lastmod>2012-10-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/</loc>
+    <lastmod>2012-10-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/10/hrt-humility-respect-and-trust/</loc>
+    <lastmod>2012-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/10/2nd-dan-yoseikan-budo/</loc>
+    <lastmod>2012-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/10/vs2012-test-explorer-automatically-execute-all-unit-tests-only/</loc>
+    <lastmod>2012-10-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/09/im-relocating-my-domain-site-and-blog/</loc>
+    <lastmod>2012-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</loc>
+    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/08/know-your-tools-become-javascript-power/</loc>
+    <lastmod>2012-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/08/fluent-conference-javascript-beyond_29/</loc>
+    <lastmod>2012-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/08/jasmine-an-introduction/</loc>
+    <lastmod>2012-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/08/its-time-to-learn-coffeescript/</loc>
+    <lastmod>2012-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/08/git-tf-early-view/</loc>
+    <lastmod>2012-08-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/08/mobile-javascript-application/</loc>
+    <lastmod>2012-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/07/entity-framework-schema-translations/</loc>
+    <lastmod>2012-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/07/testing-and-single-responsibility/</loc>
+    <lastmod>2012-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/07/ux-why-github-for-windows-is-better/</loc>
+    <lastmod>2012-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/07/an-example-of-test-driven-bugfixing/</loc>
+    <lastmod>2012-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/07/why-extendsomeobj-anotherobj-might-be/</loc>
+    <lastmod>2012-07-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/07/ie8-trouble-continuedhangs-on-dropdown/</loc>
+    <lastmod>2012-07-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/07/strange-error-when-downloading-file-in/</loc>
+    <lastmod>2012-07-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/07/setting-up-my-developer-machine/</loc>
+    <lastmod>2012-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/06/choose-your-commit-messages-properly/</loc>
+    <lastmod>2012-06-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/05/detecting-location-redirects-from/</loc>
+    <lastmod>2012-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/05/architecting-for-failure-at-guardian/</loc>
+    <lastmod>2012-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/05/visual-studio-set-build-action-for/</loc>
+    <lastmod>2012-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/05/scaling-android-emulator-size-without/</loc>
+    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/04/html5-version-android-apps-or-web-for/</loc>
+    <lastmod>2012-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/04/using-nuget-to-distribute-our-company/</loc>
+    <lastmod>2012-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/04/respecting-zone/</loc>
+    <lastmod>2012-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/04/joining-dzone-mvb-program/</loc>
+    <lastmod>2012-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/04/qcon-london-my-personal-recap/</loc>
+    <lastmod>2012-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/03/sharpening-tools/</loc>
+    <lastmod>2012-03-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/03/questions-for-enterprise-architect/</loc>
+    <lastmod>2012-03-02T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/02/i-want-cursor-to-be-placed-in-1st-empty/</loc>
+    <lastmod>2012-02-17T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/02/sequential-asynchronous-processing-with/</loc>
+    <lastmod>2012-02-13T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/02/aspnet-mvc3-doesnt-deserialize-nullable/</loc>
+    <lastmod>2012-02-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/02/dont-rant-become-social-and-contribute/</loc>
+    <lastmod>2012-02-01T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/01/eclipse-importing-existing-project/</loc>
+    <lastmod>2012-01-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/01/dont-fall-into-ienumerable-trap/</loc>
+    <lastmod>2012-01-17T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/01/help-ubuntu-1110-wont-boot/</loc>
+    <lastmod>2012-01-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2012/01/2011-retrospective-and-new-look/</loc>
+    <lastmod>2012-01-05T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/12/writing-ioc-supported-integration-tests/</loc>
+    <lastmod>2011-12-12T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/12/exploring-javascript-scope-pollution/</loc>
+    <lastmod>2011-12-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/12/saying-goodbye-to-university/</loc>
+    <lastmod>2011-12-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/11/large-scale-javascript-application/</loc>
+    <lastmod>2011-11-21T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/11/some-usability-thoughts-for-weekend/</loc>
+    <lastmod>2011-11-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/11/use-var-keyword-to-have-more/</loc>
+    <lastmod>2011-11-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/11/autofac-aspnet-webforms-usercontrol/</loc>
+    <lastmod>2011-11-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/11/jquery-validation-add-required-field/</loc>
+    <lastmod>2011-11-04T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/11/dont-underestimate-trouble-caused-by/</loc>
+    <lastmod>2011-11-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/10/exploring-javascript-iterating-over/</loc>
+    <lastmod>2011-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/10/what-model-view-controller-in/</loc>
+    <lastmod>2011-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/10/techvid-become-javascript-console-power/</loc>
+    <lastmod>2011-10-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/10/similarity-of-c-and-javascript-syntax/</loc>
+    <lastmod>2011-10-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/09/testing-javascript-mocking-jquery-ajax/</loc>
+    <lastmod>2011-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/09/javascript-scoping-by-example/</loc>
+    <lastmod>2011-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</loc>
+    <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/08/why-did-it-have-to-be-so-complicated/</loc>
+    <lastmod>2011-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/08/chrome-developer-tools-12-tricks-to/</loc>
+    <lastmod>2011-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/08/experiencing-jquery-16-breaking-changes/</loc>
+    <lastmod>2011-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/08/javascriptserializer-circular-reference/</loc>
+    <lastmod>2011-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/08/how-often-did-you-use-yield-keyword/</loc>
+    <lastmod>2011-08-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/08/check-in-small-pieces-to-your-vcs/</loc>
+    <lastmod>2011-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/08/posting-json-data-to-aspnet-mvc-3-web/</loc>
+    <lastmod>2011-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/07/write-minimum-necessary-code-in-your/</loc>
+    <lastmod>2011-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/06/android-development-tools/</loc>
+    <lastmod>2011-06-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/06/create-dom-tree-out-of-dynamic-html/</loc>
+    <lastmod>2011-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</loc>
+    <lastmod>2011-06-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</loc>
+    <lastmod>2011-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/05/howto-upgrade-ram-of-your-macbook-pro/</loc>
+    <lastmod>2011-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/05/visual-studio-application-cannot-start/</loc>
+    <lastmod>2011-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-2-ef-best/</loc>
+    <lastmod>2011-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-1-entity/</loc>
+    <lastmod>2011-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/05/document-and-share-your-snippets/</loc>
+    <lastmod>2011-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/05/is-it-more-readable/</loc>
+    <lastmod>2011-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/04/trouble-with-vs-qualitytoolsunittestfra/</loc>
+    <lastmod>2011-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/04/why-automated-tests-boost-your/</loc>
+    <lastmod>2011-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/04/load-javascript-files-asynchronously/</loc>
+    <lastmod>2011-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/03/concluding-another-chapter/</loc>
+    <lastmod>2011-03-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/03/test-driven-devs-nightmare-meeting/</loc>
+    <lastmod>2011-03-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/03/jcg-joining-java-code-geeks-program/</loc>
+    <lastmod>2011-03-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/03/help-gingerbread-drains-battery-of-my/</loc>
+    <lastmod>2011-03-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/02/getting-started-with-android/</loc>
+    <lastmod>2011-02-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/02/least-invasive-approach-to-gain-root/</loc>
+    <lastmod>2011-02-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/02/deploy-android-apk-ota-using-symbolic/</loc>
+    <lastmod>2011-02-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/02/coding-update-functionality-for-your/</loc>
+    <lastmod>2011-02-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/02/friendlybool-extender-what/</loc>
+    <lastmod>2011-02-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/01/why-extract-class-interface-method/</loc>
+    <lastmod>2011-01-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/01/android-howto-detect-installed-sqlite/</loc>
+    <lastmod>2011-01-21T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2011/01/aspnet-organize-your-resources-correct/</loc>
+    <lastmod>2011-01-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/12/tomcat-illegalstateexception-no-output/</loc>
+    <lastmod>2010-12-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/12/win7-windows-explorer-doesnt-refresh/</loc>
+    <lastmod>2010-12-17T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</loc>
+    <lastmod>2010-12-09T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/12/update-sdk-to-platform-gingerbread-23/</loc>
+    <lastmod>2010-12-08T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/12/howto-using-vs2010-webconfig/</loc>
+    <lastmod>2010-12-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/11/juri-goes-git-first-steps/</loc>
+    <lastmod>2010-11-30T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/11/dont-let-your-test-doubles-fool-you/</loc>
+    <lastmod>2010-11-25T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/11/testing-your-sut-against-exceptions/</loc>
+    <lastmod>2010-11-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/11/android-attaching-clicklisteners/</loc>
+    <lastmod>2010-11-19T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/11/more-than-just-synching-dropbox/</loc>
+    <lastmod>2010-11-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/11/howto-mysql-workbench-to-remote-ubuntu/</loc>
+    <lastmod>2010-11-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/11/intercepting-wcf-operation-calls-with/</loc>
+    <lastmod>2010-11-05T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/10/test-driven-development-and-automated/</loc>
+    <lastmod>2010-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/09/smelly-code-eager-test/</loc>
+    <lastmod>2010-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/09/introducing-smellycode/</loc>
+    <lastmod>2010-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/09/lessions-learned-make-your/</loc>
+    <lastmod>2010-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/09/retrieve-selected-items-on-checkable/</loc>
+    <lastmod>2010-09-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/08/design-tech-talk-series-presents-oo/</loc>
+    <lastmod>2010-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/08/tdd-test-unit-test-or-tdd-test-unit/</loc>
+    <lastmod>2010-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/08/howto-teach-visual-studio-to-remember/</loc>
+    <lastmod>2010-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/08/do-i-really-need-to-test-this/</loc>
+    <lastmod>2010-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/07/testing-newbies-some-thoughts-about/</loc>
+    <lastmod>2010-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/07/passing-property-names-compiler-safe/</loc>
+    <lastmod>2010-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/07/howto-install-your-android-app-ota-on/</loc>
+    <lastmod>2010-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/07/practical-example-applying-template/</loc>
+    <lastmod>2010-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/07/refactoring-for-sake-of-compactness-and/</loc>
+    <lastmod>2010-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</loc>
+    <lastmod>2010-06-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/06/android-instrumentation-test/</loc>
+    <lastmod>2010-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/06/howto-get-android-apps-database-from/</loc>
+    <lastmod>2010-06-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/05/why-factories-with-configuration-files/</loc>
+    <lastmod>2010-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/05/boost-your-productivity-using-shortcuts/</loc>
+    <lastmod>2010-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/05/can-you-trust-your-tests/</loc>
+    <lastmod>2010-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/05/n-will-break-your-json-jquery-wcf/</loc>
+    <lastmod>2010-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/04/test-driven-design-real-world-scenario/</loc>
+    <lastmod>2010-04-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/04/howto-prevent-visual-studio-from-auto/</loc>
+    <lastmod>2010-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/04/unit-testing-asynchronous-code/</loc>
+    <lastmod>2010-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/03/tackle-software-dependencies-with-ioc/</loc>
+    <lastmod>2010-03-21T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/03/gwt-button-with-image-and-text/</loc>
+    <lastmod>2010-03-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/03/client-server-communication/</loc>
+    <lastmod>2010-03-12T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/02/gwt-hyperlink-widget-with-image/</loc>
+    <lastmod>2010-02-28T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/02/gwt-app-engine-and-app-engine-data/</loc>
+    <lastmod>2010-02-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/02/docklayoutpanel-doesnt-work-correctly/</loc>
+    <lastmod>2010-02-19T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/02/howto-launch-javascript-after-async/</loc>
+    <lastmod>2010-02-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/02/gwt-decoratorpanel-style-problems/</loc>
+    <lastmod>2010-02-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/02/reloaded-clean-up-your-folder-for-osx/</loc>
+    <lastmod>2010-02-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/02/are-anonymous-lambda-style-event/</loc>
+    <lastmod>2010-02-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/01/time-machine-backups-to-windows-shared/</loc>
+    <lastmod>2010-01-31T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/01/howto-use-your-iphone-as-remote-control/</loc>
+    <lastmod>2010-01-28T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/01/howto-use-globally-defined-resources-in/</loc>
+    <lastmod>2010-01-08T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2010/01/comments-smell-replace-them-with-more/</loc>
+    <lastmod>2010-01-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/12/howto-fade-out-div-after-some-seconds/</loc>
+    <lastmod>2009-12-30T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/12/android-sms-activity-doesnt-fill-phone/</loc>
+    <lastmod>2009-12-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/12/creating-test-suites-with-junit-4/</loc>
+    <lastmod>2009-12-25T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/12/power-and-simplicity-of-command-pattern/</loc>
+    <lastmod>2009-12-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/12/mapview-doesnt-fire-onlongclick-event/</loc>
+    <lastmod>2009-12-02T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/11/howto-include-javascript-file-from/</loc>
+    <lastmod>2009-11-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/11/implementing-ontouchevent-for/</loc>
+    <lastmod>2009-11-24T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/11/visual-studio-intellisense-not-working_20/</loc>
+    <lastmod>2009-11-20T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/11/howto-get-selected-list-index-on/</loc>
+    <lastmod>2009-11-11T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/11/howto-run-iis-7-on-vista-64bit-os-in/</loc>
+    <lastmod>2009-11-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/11/aspnet-ajax-consuming-webservice-from/</loc>
+    <lastmod>2009-11-07T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/10/instantiating-object-from-generic-type/</loc>
+    <lastmod>2009-10-30T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/10/accessing-host-machine-from-your/</loc>
+    <lastmod>2009-10-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/10/repeater-looses-its-data-collection/</loc>
+    <lastmod>2009-10-27T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</loc>
+    <lastmod>2009-10-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/10/blog-to-learn/</loc>
+    <lastmod>2009-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</loc>
+    <lastmod>2009-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/09/gwt-meets-spring/</loc>
+    <lastmod>2009-09-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/09/are-c-regions-good-thing/</loc>
+    <lastmod>2009-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/09/law-of-demeter-nice-metaphor/</loc>
+    <lastmod>2009-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/09/microsoft-ajax-cdn/</loc>
+    <lastmod>2009-09-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/09/add-semantic-through-your-code-not/</loc>
+    <lastmod>2009-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/09/watch-out-when-cloning-objects/</loc>
+    <lastmod>2009-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/09/it-is-not-about-writing-tests-its-about/</loc>
+    <lastmod>2009-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/08/dont-use-negated-method-names/</loc>
+    <lastmod>2009-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/08/nullsafeget-extension-method-simplicity/</loc>
+    <lastmod>2009-08-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/08/controlling-rendered-html-tag-on-your/</loc>
+    <lastmod>2009-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/08/howto-changing-tfs-workitem-type-from/</loc>
+    <lastmod>2009-08-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/08/aroundj2me-listed-on-softpedia/</loc>
+    <lastmod>2009-08-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/08/using-code-metrics-as-indicator-for/</loc>
+    <lastmod>2009-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/07/server-error-validation-of-viewstate/</loc>
+    <lastmod>2009-07-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/07/vs-designer-x-coud-not-be-set-on/</loc>
+    <lastmod>2009-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/07/automatically-find-label-associated-to/</loc>
+    <lastmod>2009-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/07/html-list-item-background-image/</loc>
+    <lastmod>2009-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/07/executabletask-pattern-to-tackle-j2me/</loc>
+    <lastmod>2009-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/06/midlet-for-downloading-image-from-web/</loc>
+    <lastmod>2009-06-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/06/did-you-know-joel-test/</loc>
+    <lastmod>2009-06-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/06/about-scrum-in-under-10-minutes/</loc>
+    <lastmod>2009-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/06/mashup-editor-about-to-shut-down/</loc>
+    <lastmod>2009-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/06/howto-getting-started-with-junit/</loc>
+    <lastmod>2009-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/06/page-speed-firebug-add-on-for-analyzing/</loc>
+    <lastmod>2009-06-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/howto-keep-request-parameters-on/</loc>
+    <lastmod>2009-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/howto-get-localized-string-different/</loc>
+    <lastmod>2009-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/what-happens-if-you-think-in-java-and/</loc>
+    <lastmod>2009-05-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/use-google-scholar-and-latex-for/</loc>
+    <lastmod>2009-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/jstestdriver-easy-unit-testing-for/</loc>
+    <lastmod>2009-05-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/help-my-mstest-deploymentitem-doesnt/</loc>
+    <lastmod>2009-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/string-enumerations-in-c/</loc>
+    <lastmod>2009-05-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/intel-proset-wireless-tool-causing-lot/</loc>
+    <lastmod>2009-05-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/debugging-and-testing-web-with-firebug/</loc>
+    <lastmod>2009-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/05/howto-make-your-custom-aspnet-server/</loc>
+    <lastmod>2009-05-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/04/jquery-plugin-development-pattern/</loc>
+    <lastmod>2009-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/04/use-firebug-everywhere/</loc>
+    <lastmod>2009-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/04/best-practices-challenge-of-designing/</loc>
+    <lastmod>2009-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/04/howto-bind-input-field-to-date-property/</loc>
+    <lastmod>2009-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/04/internet-explorer-8-compatibility/</loc>
+    <lastmod>2009-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/03/these-damn-spammers/</loc>
+    <lastmod>2009-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/03/extended-view-reloaded/</loc>
+    <lastmod>2009-03-25T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/03/best-practices-deploying-webapps-contd_20/</loc>
+    <lastmod>2009-03-20T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/03/uml-use-case-extend-and-include/</loc>
+    <lastmod>2009-03-17T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/03/floating-figures-and-tables-with-latex/</loc>
+    <lastmod>2009-03-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/03/problems-with-character-encoding-on/</loc>
+    <lastmod>2009-03-11T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/03/delicious-links-and-three-new-projects/</loc>
+    <lastmod>2009-03-09T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/03/guidelines-for-promoting-your-blog/</loc>
+    <lastmod>2009-03-05T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/02/howto-set-assembly-binding-location/</loc>
+    <lastmod>2009-02-28T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/02/getting-ready-for-mobile-development/</loc>
+    <lastmod>2009-02-27T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/02/howto-detect-assembly-dependencies-at/</loc>
+    <lastmod>2009-02-25T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/02/observation-selected-value-behaviour-of/</loc>
+    <lastmod>2009-02-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/02/google-ajax-apis-google-visualization/</loc>
+    <lastmod>2009-02-22T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/02/installing-and-configuring-ati-graphics/</loc>
+    <lastmod>2009-02-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/02/howto-persist-viewstate-on-server-side/</loc>
+    <lastmod>2009-02-12T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/02/accidentally-deleted-ubuntu-main-menu/</loc>
+    <lastmod>2009-02-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</loc>
+    <lastmod>2009-01-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/01/accessing-webcontrols-inside/</loc>
+    <lastmod>2009-01-09T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/01/best-practices-tracking-information-on/</loc>
+    <lastmod>2009-01-08T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/01/by-far-best-404-not-found-notification/</loc>
+    <lastmod>2009-01-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2009/01/blogging-year-2008/</loc>
+    <lastmod>2009-01-01T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/12/first-steps-with-silverlight-what-about/</loc>
+    <lastmod>2008-12-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/12/using-extenders-to-abstract-details-and/</loc>
+    <lastmod>2008-12-02T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/c-linking-libraries-to-build/</loc>
+    <lastmod>2008-11-27T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/c-experiences/</loc>
+    <lastmod>2008-11-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/jface-table-api-with-eclipse-rcp/</loc>
+    <lastmod>2008-11-20T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/haskell-type-conversions-converting/</loc>
+    <lastmod>2008-11-19T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/persisting-current-perspective-state-of/</loc>
+    <lastmod>2008-11-15T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/creating-soft-links-to-folders-on-linux/</loc>
+    <lastmod>2008-11-11T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/howto-execute-file-download-from/</loc>
+    <lastmod>2008-11-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/type-x-is-not-accessible-due-to/</loc>
+    <lastmod>2008-11-09T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/strange-focus-behavior-on-firefox-3/</loc>
+    <lastmod>2008-11-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/11/verifying-command-line-parameters-on-c/</loc>
+    <lastmod>2008-11-04T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/10/problem-launching-javascript-from/</loc>
+    <lastmod>2008-10-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/10/javaforge-causing-lot-of-problems/</loc>
+    <lastmod>2008-10-28T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/10/cc-programming-on-linux/</loc>
+    <lastmod>2008-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/10/haskell-functional-programming/</loc>
+    <lastmod>2008-10-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/10/linux-main-menu-bars-top-and-bottom/</loc>
+    <lastmod>2008-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/10/fighting-around-with-vim/</loc>
+    <lastmod>2008-10-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/10/howto-create-linked-tables-in-ms-access/</loc>
+    <lastmod>2008-10-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/09/best-practices-deploying-webapps/</loc>
+    <lastmod>2008-09-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/09/revised-changed-values-of-readonly-and/</loc>
+    <lastmod>2008-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/09/changed-values-of-readonly-and-disabled/</loc>
+    <lastmod>2008-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/09/google-chrome-browsing-google-way_04/</loc>
+    <lastmod>2008-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/08/javascript-onchange-event-handling/</loc>
+    <lastmod>2008-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/08/strange-gwt-compiler-error-when-trying/</loc>
+    <lastmod>2008-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/08/controls-collection-cannot-be-modified/</loc>
+    <lastmod>2008-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/07/dynamically-modifying-css-class-name/</loc>
+    <lastmod>2008-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/07/extending-javascript-objects-with/</loc>
+    <lastmod>2008-07-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/07/gmap-script-being-reused/</loc>
+    <lastmod>2008-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/06/recursive-version-of-findcontrol-method/</loc>
+    <lastmod>2008-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/06/specifying-size-of-fileupload-control/</loc>
+    <lastmod>2008-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/06/testing-ajax-applications/</loc>
+    <lastmod>2008-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/06/ie-problems-with-ajaxcontrol-toolkits/</loc>
+    <lastmod>2008-06-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/06/type-x-exists-in-both/</loc>
+    <lastmod>2008-06-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/06/viewstate-hell-controls-loosing-their/</loc>
+    <lastmod>2008-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/06/finally-my-katana-arrived/</loc>
+    <lastmod>2008-06-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/06/attaching-client-side-event-handler-to/</loc>
+    <lastmod>2008-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/05/no-unit-tests-forget-it/</loc>
+    <lastmod>2008-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/05/best-practices-vcs-usage-flowchart/</loc>
+    <lastmod>2008-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/05/best-practices-version-control-system/</loc>
+    <lastmod>2008-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/05/extended-user-management-under-xp/</loc>
+    <lastmod>2008-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/05/retrieving-list-of-installed/</loc>
+    <lastmod>2008-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/04/c-refresher/</loc>
+    <lastmod>2008-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/03/noo-google-browser-sync-deleted-my/</loc>
+    <lastmod>2008-03-24T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/03/logical-separation-with-mvc/</loc>
+    <lastmod>2008-03-22T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/03/beside-hacking-each-day/</loc>
+    <lastmod>2008-03-18T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/03/java-generics-c-class-templates-vs-java/</loc>
+    <lastmod>2008-03-17T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/03/my-new-domain-js-developmentcom/</loc>
+    <lastmod>2008-03-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/01/congratulations-dottssa-stefanie/</loc>
+    <lastmod>2008-01-26T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/01/creating-simple-backups-with-winrar/</loc>
+    <lastmod>2008-01-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2008/01/roundup-of-blogging-year-2007/</loc>
+    <lastmod>2008-01-03T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/12/unknown-protocol-d/</loc>
+    <lastmod>2007-12-30T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/12/speakers-dont-mute-when-plugging-in/</loc>
+    <lastmod>2007-12-27T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/12/where-has-beryl-gone/</loc>
+    <lastmod>2007-12-23T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/12/learning-by-understanding-and-reusing/</loc>
+    <lastmod>2007-12-14T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/12/news-mapper-experiences-revival/</loc>
+    <lastmod>2007-12-13T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/12/red-green-color-deficiency-whats-that/</loc>
+    <lastmod>2007-12-10T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/12/clean-up-your-folder/</loc>
+    <lastmod>2007-12-06T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/11/tdd-junit-38-and-junit-4/</loc>
+    <lastmod>2007-11-27T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/11/mapplets-on-own-website-illegal/</loc>
+    <lastmod>2007-11-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/10/news-mapper-has-success/</loc>
+    <lastmod>2007-10-31T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/10/now-in-two-weeks-after-my-successful/</loc>
+    <lastmod>2007-10-29T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/10/blog-action-day-water/</loc>
+    <lastmod>2007-10-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/10/bloggers-action-day/</loc>
+    <lastmod>2007-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/09/appearing-on-blugpulse/</loc>
+    <lastmod>2007-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/07/3-column-blog-layout/</loc>
+    <lastmod>2007-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/06/how-to-close-safari-3-for-win-its-easy/</loc>
+    <lastmod>2007-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/05/qi-gong/</loc>
+    <lastmod>2007-05-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/04/what-now-program-file-or-programme/</loc>
+    <lastmod>2007-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/04/syntax-highlighting-on-blogger_20/</loc>
+    <lastmod>2007-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/04/beryl-window-manager/</loc>
+    <lastmod>2007-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/04/logging-is-useful/</loc>
+    <lastmod>2007-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/03/vista-and-stability/</loc>
+    <lastmod>2007-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/03/when-windows-tray-icons-disappear_16/</loc>
+    <lastmod>2007-03-16T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/03/first-step-in-long-way/</loc>
+    <lastmod>2007-03-13T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/03/diving-into-new-area/</loc>
+    <lastmod>2007-03-04T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/02/smiley-support-for-blog-entries/</loc>
+    <lastmod>2007-02-13T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/2007/02/moving-to-new-home/</loc>
+    <lastmod>2007-02-09T01:00:00+00:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/</loc>
+    <lastmod>2019-07-16T12:00:00+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/.net/</loc>
+    <lastmod>2015-10-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/about/</loc>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/agile/</loc>
+    <lastmod>2019-01-11T10:53:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/android/</loc>
+    <lastmod>2013-01-06T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/android/</loc>
+    <lastmod>2012-04-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/angular/</loc>
+    <lastmod>2019-06-03T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/angular/</loc>
+    <lastmod>2019-06-03T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/angular.js/</loc>
+    <lastmod>2017-01-23T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/antipatterns/</loc>
+    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/apple/</loc>
+    <lastmod>2011-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/architecture/</loc>
+    <lastmod>2015-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/asp.net/</loc>
+    <lastmod>2014-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/asp.net-mvc/</loc>
+    <lastmod>2012-12-14T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/async/</loc>
+    <lastmod>2019-01-16T15:03:22+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/beginner/</loc>
+    <lastmod>2019-03-04T10:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/best-practices/</loc>
+    <lastmod>2012-09-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/archive/</loc>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/blog/</loc>
+    <lastmod>2019-07-16T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/book-review/</loc>
+    <lastmod>2014-11-18T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/c/</loc>
+    <lastmod>2013-08-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/c&#43;&#43;/</loc>
+    <lastmod>2008-11-27T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/c&#43;&#43;/</loc>
+    <lastmod>2009-03-09T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/</loc>
+    <lastmod>2015-10-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/charity/</loc>
+    <lastmod>2015-05-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/clean-code/</loc>
+    <lastmod>2011-11-18T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/coaching/</loc>
+    <lastmod>2013-02-12T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/concatmap/</loc>
+    <lastmod>2019-01-16T15:03:22+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/conferences/</loc>
+    <lastmod>2012-04-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/continuous-delivery/</loc>
+    <lastmod>2018-02-08T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/dev-setup/</loc>
+    <lastmod>2012-07-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/eclipse/</loc>
+    <lastmod>2009-03-09T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/eclipse-rcp/</loc>
+    <lastmod>2008-11-09T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/eclipse-rcp/</loc>
+    <lastmod>2009-03-09T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/egghead/</loc>
+    <lastmod>2019-04-28T12:00:09+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/egghead/</loc>
+    <lastmod>2019-04-28T12:00:09+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/es2015/</loc>
+    <lastmod>2015-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/es6/</loc>
+    <lastmod>2015-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/forms/</loc>
+    <lastmod>2019-02-07T20:30:31+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/functional-programming/</loc>
+    <lastmod>2008-11-19T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/git/</loc>
+    <lastmod>2019-04-16T10:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/git/</loc>
+    <lastmod>2019-04-26T16:10:05+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/google/</loc>
+    <lastmod>2011-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/guards/</loc>
+    <lastmod>2019-01-31T18:39:51+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/guest-post/</loc>
+    <lastmod>2019-02-14T21:24:36+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/gwt/</loc>
+    <lastmod>2010-03-15T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/interesting-apps/</loc>
+    <lastmod>2010-02-07T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/ios/</loc>
+    <lastmod>2012-04-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/iphone/</loc>
+    <lastmod>2010-01-28T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/j2me/</loc>
+    <lastmod>2009-08-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/java/</loc>
+    <lastmod>2015-05-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/javascript/</loc>
+    <lastmod>2019-04-26T16:10:05+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/javascript/</loc>
+    <lastmod>2019-07-16T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/jface/</loc>
+    <lastmod>2009-01-15T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/jquery/</loc>
+    <lastmod>2012-02-13T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/latex/</loc>
+    <lastmod>2009-03-15T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/lazy-loading/</loc>
+    <lastmod>2019-04-29T14:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/lessons-learned/</loc>
+    <lastmod>2010-11-23T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/linux/</loc>
+    <lastmod>2012-01-15T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/macos/</loc>
+    <lastmod>2015-10-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/mergemap/</loc>
+    <lastmod>2019-01-16T15:03:22+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/microservices/</loc>
+    <lastmod>2015-01-03T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/mobile-dev/</loc>
+    <lastmod>2012-05-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/newsletter/</loc>
+    <lastmod>2019-07-16T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/newsletter/</loc>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/node.js/</loc>
+    <lastmod>2014-08-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/notes/</loc>
+    <lastmod>2015-11-30T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/open-source/</loc>
+    <lastmod>2012-02-01T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/ordering/</loc>
+    <lastmod>2019-01-16T15:03:22+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/osx/</loc>
+    <lastmod>2010-01-28T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/performance/</loc>
+    <lastmod>2019-04-29T14:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/page/speaking/</loc>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/resolvers/</loc>
+    <lastmod>2019-01-31T18:39:51+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/router/</loc>
+    <lastmod>2019-01-31T18:39:51+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/rxjs/</loc>
+    <lastmod>2019-03-04T10:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/rxjs/</loc>
+    <lastmod>2019-03-04T10:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/scrum/</loc>
+    <lastmod>2019-01-11T10:53:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/silverlight/</loc>
+    <lastmod>2008-12-23T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/software-architecture/</loc>
+    <lastmod>2015-01-03T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/software-design/</loc>
+    <lastmod>2015-11-03T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/software-process/</loc>
+    <lastmod>2019-01-11T10:53:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/software-process/</loc>
+    <lastmod>2019-01-11T10:53:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/spring/</loc>
+    <lastmod>2011-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/standup-meeting/</loc>
+    <lastmod>2019-01-11T10:53:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/switchmap/</loc>
+    <lastmod>2019-01-16T15:03:22+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/</loc>
+    <lastmod>2019-01-11T10:53:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/talks/</loc>
+    <lastmod>2017-01-11T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/tech-vids/</loc>
+    <lastmod>2013-02-12T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/testing/</loc>
+    <lastmod>2019-07-16T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/testing/</loc>
+    <lastmod>2019-07-16T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/the-desk/</loc>
+    <lastmod>2017-12-30T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/tooling/</loc>
+    <lastmod>2019-05-23T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/tooling/</loc>
+    <lastmod>2019-05-23T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/typescript/</loc>
+    <lastmod>2015-11-03T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/validation/</loc>
+    <lastmod>2019-02-07T20:30:31+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/vba/</loc>
+    <lastmod>2008-10-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/videos/</loc>
+    <lastmod>2019-05-23T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/vscode/</loc>
+    <lastmod>2019-05-23T12:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/windows/</loc>
+    <lastmod>2015-01-18T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/windows/</loc>
+    <lastmod>2010-01-31T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  
+</urlset>

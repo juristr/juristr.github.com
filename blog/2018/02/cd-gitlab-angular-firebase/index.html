@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Create a CD pipeline with Angular, GitLab and Firebase | juri.strumpflohner</title>
+	
+	<meta name="description" content="Learn to create a continuous deployment pipeline to deploy an Angular app to Firebase using Gitlab&#39;s integrated CI server">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Create a CD pipeline with Angular, GitLab and Firebase" />
+	
+	<meta name="twitter:description" content="Learn to create a continuous deployment pipeline to deploy an Angular app to Firebase using Gitlab&#39;s integrated CI server" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/cd-gitlab-firebase/gitlab-pipeline-1.png" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Create a CD pipeline with Angular, GitLab and Firebase" />
+	
+	<meta property="og:description" content="Learn to create a continuous deployment pipeline to deploy an Angular app to Firebase using Gitlab&#39;s integrated CI server" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/cd-gitlab-firebase/gitlab-pipeline-1.png" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2018/02/cd-gitlab-angular-firebase" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2018%2f02%2fcd-gitlab-angular-firebase%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2018%2f02%2fcd-gitlab-angular-firebase%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Create a CD pipeline with Angular, GitLab and Firebase</h1>
+                
+                <h2 class="article-subtitle">Learn to create a continuous deployment pipeline to deploy an Angular app to Firebase using Gitlab&#39;s integrated CI server</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Feb 8, 2018
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">10 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+
+<div class="article-intro">
+    I’m a huge fan of automating all the stuff. Even if you’re a very precise and organized person, you’re likely to make mistakes. Be it because you do multiple things at the same time, you get distracted wherever. Machines won’t and better even, you spare lots and lots of time you otherwise would have to invest on annoying, repetitive and time consuming tasks. In this article we’re going to give GitLab’s CI/CD process a go.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#step-1-prepare-your-package-json-scripts">Step 1: Prepare your package.json scripts</a></li>
+<li><a href="#step-2-add-firebase-configuration">Step 2: Add Firebase configuration</a></li>
+<li><a href="#step-3-configure-gitlab-pipelines">Step 3: Configure GitLab pipelines</a></li>
+<li><a href="#step-4-add-deployment-environments">Step 4: Add Deployment Environments</a></li>
+<li><a href="#further-checks-nrwl-nx-code-formatting">Further checks: nrwl/nx code formatting</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<p>So I started with the following setup:</p>
+
+<ul>
+<li>Angular project generated with <a href="https://nrwl.io/nx">nrwl/nx</a></li>
+<li>Git Repository hosted on <a href="https://gitlab.com/">Gitlab.com</a></li>
+<li>Backend and Hosting on <a href="http://www.firebase.com/">Firebase</a></li>
+</ul>
+
+<h2 id="step-1-prepare-your-package-json-scripts">Step 1: Prepare your package.json scripts</h2>
+
+<p>One of the first steps is to prepare your <code>package.json</code> with a series of scripts that can be invoked from the build server.</p>
+
+<blockquote>
+<p><strong>Note:</strong> It’s considered an antipattern to have too much CI/CD specific scripts on your build server configuration. Rather try to have <code>npm scripts</code> or other kind of local script files that are simply invoked from the CI server. That way it’s easy to run them locally on your machine as well.</p>
+</blockquote>
+
+<p><strong>Configure build scripts</strong></p>
+
+<p>The build script is relatively easy. Inside my nrwl/nx workspace I generated an Angular app called “js-training” for which I have created a dedicated <code>build:js-training</code> script which uses the <code>--app</code> flag of the Angular CLI to execute just the build of that specific app (as there might be multiple ones).</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;build:js-training&#34;</span><span class="p">:</span> <span class="s2">&#34;ng build --prod --app=js-training&#34;</span><span class="p">,</span>
+    <span class="err">...</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span> </code></pre></div>
+<p><strong>Configure Karma test with headless Chrome</strong></p>
+
+<p>Besides automated deployment, running health &amp; sanity checks is one of the biggest advantages of having an automated build pipeline. That includes running your unit tests.</p>
+
+<p>By default, <a href="https://karma-runner.github.io/">Karma</a> is configured to run all of our tests in a Chrome instance.  Meaning when you execute <code>ng test</code>, Chrome will be launched, executing all of them in a real browser window. Moreover it will remain in watching mode, s.t. changes to your test/code files are picked up and tests are executed again. That’s particularly helpful if you proceed in a TDD kind of fashion as you can keep your tests running while you code.
+On the CI server however, we don’t have any UI running: we need a <strong>headless browser.</strong> PhantomJS is one choice, however it starts to get abandoned since a <a href="https://developers.google.com/web/updates/2017/04/headless-chrome">headless version of Chrome got announced</a>.</p>
+
+<p>Here’s an excerpt of how to adjust your <code>karma.conf.js</code> to be read to run on a CI server with headless Chrome.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// karma.conf.js
+</span><span class="c1"></span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">configuration</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="nx">plugins</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">...</span>
+      <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;karma-chrome-launcher&#39;</span><span class="p">),</span>
+      <span class="p">...</span>
+    <span class="p">],</span>
+    <span class="p">...</span>
+    <span class="nx">autoWatch</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">browsers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;ChromeHeadless&#39;</span><span class="p">],</span>
+    <span class="nx">customLaunchers</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">ChromeHeadless</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">base</span><span class="o">:</span> <span class="s1">&#39;Chrome&#39;</span><span class="p">,</span>
+        <span class="nx">flags</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s1">&#39;--headless&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;--disable-gpu&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;--no-sandbox&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;--remote-debugging-port=9222&#39;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">singleRun</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">};</span>
+  <span class="c1">// when you are on the CI Server
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">CI_SERVER</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">configuration</span><span class="p">.</span><span class="nx">browsers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ChromeHeadless&#39;</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="nx">config</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Note, in the configuration above, I&rsquo;m using ChromeHeadless even when running tests locally. It&rsquo;s just faster. But for completeness I also included the part where you can check whether you&rsquo;re running on a CI server (the <code>CI_SERVER</code> variable might be dependent on the concrete one you&rsquo;re running on).</p>
+
+<pre><code>if (process.env.CI_SERVER) {
+  configuration.browsers = ['ChromeHeadless'];
+}
+</code></pre>
+
+<p>Using such conditions you can eventually overwrite an existing setting. Alternatively you can also steer which browser is being used via a dedicated script entry in your <code>package.json</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;test:ci&#34;</span><span class="p">:</span> <span class="s2">&#34;ng test --no-watch --single-run=true --browser=ChromeHeadless&#34;</span><span class="p">,</span>
+    <span class="err">...</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="step-2-add-firebase-configuration">Step 2: Add Firebase configuration</h2>
+
+<p>I won’t go into too much details on how to setup Firebase as they have awesome docs &amp; video tutorials:</p>
+
+<ol>
+<li><a href="https://firebase.google.com/">Go to Firebase</a> and create a new project</li>
+<li>Install the firebase tools: <code>npm install -g firebase-tools</code></li>
+<li>Use <code>firebase init</code> and follow instructions.</li>
+</ol>
+
+<p>As said, for any of these steps you should find plenty of documentation and articles 🙂. Alternatively you can check out my Egghead lessons:</p>
+
+<p><strong>Build and Deploy your Angular app to Firebase</strong></p>
+
+<div class="egghead-video-embed">
+    <iframe src="https://egghead.io/lessons/build-and-deploy-your-angular-app-to-firebase-hosting/embed" width="100%" height="500px"> </iframe>
+    <a href="https://egghead.io/lessons/build-and-deploy-your-angular-app-to-firebase-hosting" class="external-link" data-client="eggheadio" data-uid="lessons/build-and-deploy-your-angular-app-to-firebase-hosting">View
+        on
+        Egghead.io</a>
+</div>
+
+<p><strong>Setup automated deployment with Angular, Travis and Firebase</strong></p>
+
+<div class="egghead-video-embed">
+    <iframe src="https://egghead.io/lessons/setup-automated-deployment-with-angular-travis-and-firebase/embed" width="100%" height="500px"> </iframe>
+    <a href="https://egghead.io/lessons/setup-automated-deployment-with-angular-travis-and-firebase" class="external-link" data-client="eggheadio" data-uid="lessons/setup-automated-deployment-with-angular-travis-and-firebase">View
+        on
+        Egghead.io</a>
+</div>
+
+<p>In order to have our CI server be able to deploy to firebase we need to generate a proper authentication token that can be used when running the deployment script.</p>
+
+<pre><code>$ firebase login:ci
+</code></pre>
+
+<p>The <code>$FIREBASE_TOKEN</code> needs to be registered on your GitLab repository’s <code>Settings &gt; CI/CD Settings &gt; Secret variables</code>.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-env-vars.png">
+  <figcaption>Setting environment variables in GitLab</figcaption>
+</figure>
+
+<p>When configuring the variable in GitLab, make sure to <strong>not activate the &ldquo;protected&rdquo;</strong> flag, otherwise you will have issues in reading these variables during the build.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-variables-protect.png">
+  <figcaption>Adding the firebase token to GitLab</figcaption>
+</figure>
+
+<p>After we’ve configured our project with Firebase, let’s add the necessary npm scripts to deploy to Firebase hosting.</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&#34;deploy&#34;</span><span class="p">:</span> <span class="s2">&#34;firebase deploy --non-interactive --token $FIREBASE_TOKEN&#34;</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="step-3-configure-gitlab-pipelines">Step 3: Configure GitLab pipelines</h2>
+
+<p>We’re ready now:</p>
+
+<ul>
+<li>we have configured our build scripts</li>
+<li>we configured headless test running</li>
+<li>we have a backend where to deploy to</li>
+</ul>
+
+<p>What’s missing is to automate the whole pipeline with GitLab’s CI/CD infrastructure. The GitLab docs are superb and describe the whole setup and options you have very clearly. Here are some articles to get you started:</p>
+
+<ul>
+<li><a href="https://docs.gitlab.com/ee/ci/pipelines.html">Introduction to Jobs and Pipelines</a></li>
+<li><a href="https://docs.gitlab.com/ce/ci/yaml/README.html">Configuration of your jobs with .gitlab-ci.yml</a></li>
+</ul>
+
+<p>At the root of our repository, we create a <code>.gitlab-ci.yml</code> which contains the GitLab pipeline configuration:</p>
+
+<pre><code>// .gitlab-ci.yml
+image: juristr/angular-ci-build:1.0.0
+stages:
+  - build
+  - test
+  - deploy
+  
+before_script:
+  - npm install
+  - npm --prefix ./functions install
+  
+app-build:
+  stage: build
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - npm run build:js-training
+
+unit-tests:
+  stage: test
+  script:
+    - npm run test:ci
+
+deploy-production:
+  stage: deploy
+  dependencies:
+    - app-build
+  script:
+    - npm run deploy
+  only:
+    - master
+</code></pre>
+
+<p>Let’s cut this up in parts for a second.</p>
+
+<p>The first step is to define our environment:</p>
+
+<pre><code>image: node:latest
+stages:
+  - build
+  - test
+  - deploy
+</code></pre>
+
+<p>Here we tell GitLab to use a Docker image <code>node:latest</code> as our base image for all builds. Note, you can also define an <code>image</code> property for each job separately if needed. Then we tell GitLab what stages we have, in our case build, test and finally the deploy stage.</p>
+
+<p>We have to make sure to install the packages for each job (each of which runs independently of each other in a dedicated Docker container). For that purpose we can use a global <code>before_script</code> part. If needed, each job can have its own <code>before_script</code> as well.</p>
+
+<pre><code>before_script:
+  - npm install
+  - npm --prefix ./functions install
+</code></pre>
+
+<p>Next, let’s define our <strong>build job</strong>. We give that job the <code>app-build</code> ID (which needs to be unique) and assign it to the stage “build”. Next we define that we want to keep the <code>dist/</code> folder as an artifact after the job succeeds. The <code>dist</code> folder contains our compiled Angular app. Finally in the <code>script</code> section we add the npm script that needs to be executed.</p>
+
+<pre><code>app-build:
+  stage: build
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - npm run build:js-training
+</code></pre>
+
+<p>Similarly for our <strong>test part</strong>. We assign the job to the “test” stage. In order to be able to run our ChromeHeadless tests on CI, we need to have it installed. Make sure you use a proper Docker image which already includes it. I created one on purpose that helps building Angular on CI servers: <code>image: juristr/angular-ci-build:1.0.0</code> (sources on <a href="https://github.com/juristr/docker-angular-ci-build">GitHub</a>)</p>
+
+<p>You can either use it globally on your <code>.gitlab-ci.yml</code> (as in my case) or just for a specific task, like the testing one:</p>
+
+<pre><code>unit-tests:
+  image: juristr/angular-ci-build:1.0.0
+  stage: test
+  script:
+    - npm run test:ci
+</code></pre>
+
+<p>Great, last step, <strong>deploy to Firebase hosting.</strong> What’s particular of this step is that we don’t build our Angular app again, but rather we take in our <code>app-build</code> artifact containing the app bundle. By executing <code>npm run deploy</code> internally the firebase command we’ve prepared previously will be invoked.</p>
+
+<pre><code>deploy-production:
+  stage: deploy
+  dependencies:
+    - app-build
+  script:
+    - npm run deploy
+  only:
+    - master
+</code></pre>
+
+<p>Once we have that and commit it to master, GitLab will automatically pick it up and execute our pipeline:</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-pipeline-1.png">
+</figure>
+
+<h2 id="step-4-add-deployment-environments">Step 4: Add Deployment Environments</h2>
+
+<p>Our current setup directly deploys to production, which can be scary if you don’t have any steps in between. Therefore, I’d like to change our pipeline slightly s.t.</p>
+
+<ul>
+<li>build</li>
+<li>execute automated checks (unit tests etc)</li>
+<li>deploy to a staging environment</li>
+<li>deploy to the production environment (only via manual trigger &amp; if every previous step succeeded)</li>
+</ul>
+
+<p><strong>Configuring GitLab</strong></p>
+
+<p>To add new environments in GitLab, first go to the web interface, navigate to your repository and then to <code>CI / CD &gt; Environments</code>. There you can add 2 new entries, “development” and “production”.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-deploy-environment-staging.png">
+</figure>
+
+<p>and finally our production environment:</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-deploy-environment-prod.png">
+</figure>
+
+<p>Once that is done, we can add them in our <code>.gitlab-ci.yml</code> configuration file.</p>
+
+<pre><code>...
+deploy-staging:
+  stage: deploy-staging
+  environment:
+    name: staging
+  dependencies:
+    - app-build
+  script:
+    - npm run deploy
+  only:
+    - master
+
+deploy-production:
+  stage: deploy
+  environment:
+    name: production
+  dependencies:
+    - app-build
+  when: manual
+  script:
+    - npm --prefix ./functions install
+    - npm run deploy
+  only:
+    - master
+</code></pre>
+
+<p>Note the new <code>environment</code> property. Moreover in the <code>deploy-production</code> job I added the <code>when: manual</code> property. That way the production deployment has to be triggered manually.</p>
+
+<p><strong>Using the environment in our Angular CLI project</strong></p>
+
+<p>Inside our Angular CLI project we can make use of these environments. By default the Angular CLI already generates an <code>environment.ts</code> and <code>environment.prod.ts</code>, but you can add more as needed. Then in the build commands, we can tell the CLI which <code>environment.ts</code> file to take, using the <code>--env</code> flag. Check out my article on “<a href="/blog/2018/01/ng-app-runtime-config/">Compile-time vs. runtime configuration of your Angular App</a>” for more details.</p>
+
+<p>When GitLab builds our project in the pipeline, it injects the name of the environment it is currently building for, via a proper variable: <code>$CI_ENVIRONMENT_NAME</code>. We can thus configure a <code>environment.staging.ts</code> and adjust our build script in the <code>package.json</code>. For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&#34;build:js-training&#34;</span><span class="p">:</span> <span class="s2">&#34;ng build --env=$CI_ENVIRONMENT_NAME --app=js-training&#34;</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span></code></pre></div>
+<p><strong>Heads up:</strong> That means however, that we need to create a dedicated build for each environment! In the article I linked previously I describe the <a href="/blog/2018/01/ng-app-runtime-config/">benefits/downsides of compile-time vs. runtime configuration</a>.</p>
+
+<p>Before adjusting our pipeline configuration, let’s configure different Firebase environments first.</p>
+
+<p><strong>Configure Firebase environments</strong></p>
+
+<p>Firebase projects don’t have specific environments, but rather you simply create a new project which works as your staging environment. Once you have that, you can add that staging environment to your existing Firebase project via the <code>firebase-tools</code> command line.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/firebase-tools-config.png">
+</figure>
+
+<p>You should end up with a <code>.firebaserc</code> file having the following content:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;projects&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;staging&#34;</span><span class="p">:</span> <span class="s2">&#34;juristr-training-staging&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;production&#34;</span><span class="p">:</span> <span class="s2">&#34;juristr-training&#34;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p><a href="https://firebase.googleblog.com/2016/07/deploy-to-multiple-environments-with.html">Here’s a nice link from the official Firebase blog</a> in case you want more details.</p>
+
+<p>Finally we also need to adjust the <code>package.json</code> to take advantage of the newly configured GitLab environments in our firebase deployment scripts as well:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="err">...</span>
+    <span class="nt">&#34;predeploy&#34;</span><span class="p">:</span> <span class="s2">&#34;firebase use --token $FIREBASE_TOKEN $CI_ENVIRONMENT_NAME&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;deploy&#34;</span><span class="p">:</span> <span class="s2">&#34;firebase deploy --non-interactive --token $FIREBASE_TOKEN&#34;</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span></code></pre></div>
+<p>Note how the <code>predeploy</code> step chooses the corresponding environment that gets passed in via the GitLab <code>$CI_ENVIRONMENT_NAME</code> parameter.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-pipeline-2.png">
+</figure>
+
+<p>GitLab also nicely keeps track which commit has been deployed to which environment, also showing the play button here as well, which allows us to promote a given build from staging into production.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-deployment-tracking.png">
+</figure>
+
+<h2 id="further-checks-nrwl-nx-code-formatting">Further checks: nrwl/nx code formatting</h2>
+
+<p>We can now start adding further checks. <a href="https://nrwl.io/nx/guide-nx-workspace">nrwl/nx</a> for instance has checks that verify the correct <a href="https://blog.nrwl.io/12-things-to-help-large-organizations-do-angular-right-f261a798ad6b">formatting of your source code using prettier rules</a>. You can run those formatting rules either on the entire repository using <code>npm run format:check</code> or by passing in the the corresponding SHAs:</p>
+
+<pre><code>$ npm run format:check SHA1 SHA2
+</code></pre>
+
+<p>We get the current commit SHA that triggered the pipeline via <code>$CI_COMMIT_SHA</code> and we can calculate (say the last 5) like this: <code>$(git rev-parse $CI_COMMIT_SHA^5)</code>.</p>
+
+<pre><code>check-formatting:
+  stage: test
+  script:
+    - npm run format:check $(git rev-parse $CI_COMMIT_SHA^5) $CI_COMMIT_SHA
+</code></pre>
+
+<p>Note we’re running this as part of the “test” stage, that way it gets parallelized with the unit tests.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-pipeline-3.png">
+</figure>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>So in this article we’ve covered the basic setup of an automated pipeline using Angular, nrwl/nx and Firebase on GitLab.</p>
+
+<p><strong>Setup deployment early in the process -</strong> Don’t wait too long. Initially it’s easy, you just have the initial scaffold of your project, no strange external libraries or special situations. The longer you wait the more complex it gets. Complexity can be mitigated by incrementally adjusting your build pipeline configuration as the project evolves.</p>
+
+<p><strong>Build on every commit -</strong> The main benefit of an automated pipeline is to get feedback as early as possible in the process. Thus, build every commit, regardless whether it’s to master, or a PR. Whenever something fails, GitLab (or every other CI server) will send the commit author some nicely formatted message about what happened, so that you can immediately react:</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/cd-gitlab-firebase/gitlab-error-mails.png">
+</figure>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/continuous-delivery">continuous delivery</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2009/03/best-practices-deploying-webapps-contd_20">Best practices: Deploying webapps (contd.)</a>
+        </h2>
+        <h4 class="card-text">
+            
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Mar 20, 2009</span><span class="dot"></span><span
+                                    class="post-read">3 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/asp_net.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

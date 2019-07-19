@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/notes/</link>
+    <description>Recent content in Notes on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 30 Nov 2015 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/notes/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Role of an Enterprise Architect in a Lean Organization</title>
+      <link>https://juristr.com/blog/2015/11/link-ea-in-lean-enterprise/</link>
+      <pubDate>Mon, 30 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/link-ea-in-lean-enterprise/</guid>
+      <description>Role of an Enterprise Architect in a Lean Organization  http://martinfowler.com/articles/ea-in-lean-enterprise.html      map the current state present vision to key technical leaders and get feedback, they know why certain things are the way they are upon consensus, make current + future state visible to all (not in a Sharepoint folder, or document) &amp;ldquo;build bridges&amp;rdquo;, become partner and resource for development teams When a new project starts, update the team of the latest vision Try to avoid getting mired in the details of the implementation focus on high level goals and design avoid temptation to immediately say no to new technology, discuss, do time-boxed proof of concept, measure, discuss success as an EA is only made possible with the support of the development teams build excitement of new vision, celebrate the victories (however small) try to bind technical changes to business changes build community of learning, involve passionate technologists, lead devs etc&amp;hellip;give opportunity to share their learnings do not force people to attend training and learning activities.</description>
+    </item>
+    
+    <item>
+      <title>Good Tech Lead, Bad Tech Lead</title>
+      <link>https://juristr.com/blog/2015/11/link-good-bad-techleads/</link>
+      <pubDate>Sun, 29 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/link-good-bad-techleads/</guid>
+      <description>A very good read and I couldn&amp;rsquo;t agree more on this. Here&amp;rsquo;s a quick summary of the main points from the article.
+     Good Tech Lead, Bad Tech Lead  https://medium.</description>
+    </item>
+    
+    <item>
+      <title>Building an Enterprise CSS Framework</title>
+      <link>https://juristr.com/blog/2015/10/link-building-enterprise-css-frmwrk/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/link-building-enterprise-css-frmwrk/</guid>
+      <description>I&amp;rsquo;ve already had a couple of times the chance to work on a common style guide for our enterprise-wide web applications. It really is tough.</description>
+    </item>
+    
+    <item>
+      <title>Testing Newbies: Some Thoughts about Test First</title>
+      <link>https://juristr.com/blog/2010/07/testing-newbies-some-thoughts-about/</link>
+      <pubDate>Fri, 30 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/testing-newbies-some-thoughts-about/</guid>
+      <description>A quick post just before diving into the weekend filled with Yoseikan training, swimming, going out with friends and - of course - Android coding :) .</description>
+    </item>
+    
+  </channel>
+</rss>

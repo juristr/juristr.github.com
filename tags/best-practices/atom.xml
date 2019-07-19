@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Best Practices on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/best-practices/</link>
+    <description>Recent content in Best Practices on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 04 Sep 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/best-practices/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Find Code Duplicates with Sublime Text</title>
+      <link>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</guid>
+      <description>Code duplication is the worst practice ever, right? Well, actually there might be situations where duplicating can be better than factoring out, but these are very rare.</description>
+    </item>
+    
+    <item>
+      <title>QCon London - My Personal Recap</title>
+      <link>https://juristr.com/blog/2012/04/qcon-london-my-personal-recap/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/04/qcon-london-my-personal-recap/</guid>
+      <description>From the previous posts (or from those on my Tumblr stream) you might have understood my participation at this year&#39;s QCon London. Actually it was my 1st QCon conference and I enjoyed it a lot.</description>
+    </item>
+    
+    <item>
+      <title>Check-in Small Pieces to your VCS!</title>
+      <link>https://juristr.com/blog/2011/08/check-in-small-pieces-to-your-vcs/</link>
+      <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/check-in-small-pieces-to-your-vcs/</guid>
+      <description>A while ago our TFS master at work :) sent around a statistic about the &#34;ExcutionCount&#34; of each developer w.r.t. the TFS. The result was me on top of the &#34;</description>
+    </item>
+    
+    <item>
+      <title>Best practices: version control system usage</title>
+      <link>https://juristr.com/blog/2008/05/best-practices-version-control-system/</link>
+      <pubDate>Thu, 22 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/05/best-practices-version-control-system/</guid>
+      <description>I come to the office in the morning, start Visual Studio and fetch the latest versions of the source code....recompile the solution: COMPILATION ERROR. The build is broken!</description>
+    </item>
+    
+  </channel>
+</rss>

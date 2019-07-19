@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clean Code on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/clean-code/</link>
+    <description>Recent content in Clean Code on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 18 Nov 2011 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/clean-code/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use The &#34;var&#34; Keyword to Have More Maintainable Tests!?</title>
+      <link>https://juristr.com/blog/2011/11/use-var-keyword-to-have-more/</link>
+      <pubDate>Fri, 18 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/use-var-keyword-to-have-more/</guid>
+      <description>I have to admit that initially when the &#34;var&#34; keyword has been introduced in C# I was quite precautious in using it. It does reduce code readability, I thought.</description>
+    </item>
+    
+    <item>
+      <title>Write the Minimum Necessary Code In Your Unit Test Case That Makes It Valuable</title>
+      <link>https://juristr.com/blog/2011/07/write-minimum-necessary-code-in-your/</link>
+      <pubDate>Sun, 17 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/07/write-minimum-necessary-code-in-your/</guid>
+      <description>Maintainability is of major importance in software development. Usually writing tests against your codebase increases maintainability in that it gives you some degree of freedom in making changes, at the same time assuring you did not break any existing logic.</description>
+    </item>
+    
+    <item>
+      <title>SmellyCode: A Classical Example of Non-Unittestable Code</title>
+      <link>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</link>
+      <pubDate>Mon, 20 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</guid>
+      <description>I know there might be some degree of repetition in my posts when I speak about unit testing and mocking, but I always again come over similar problems in code I&#39;m reviewing.</description>
+    </item>
+    
+    <item>
+      <title>Is It More Readable??</title>
+      <link>https://juristr.com/blog/2011/05/is-it-more-readable/</link>
+      <pubDate>Tue, 03 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/is-it-more-readable/</guid>
+      <description>I was just going over some code and came across some webservice methods having a lot of repetitive conditional statements checking the language - represented by the corresponding two-letter code and send by the client from JavaScript.</description>
+    </item>
+    
+    <item>
+      <title>Why Extract {Class | Interface | Method} Refactoring improves Testability and Readability</title>
+      <link>https://juristr.com/blog/2011/01/why-extract-class-interface-method/</link>
+      <pubDate>Sat, 29 Jan 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/01/why-extract-class-interface-method/</guid>
+      <description>I still see many developers coding huge methods and large classes. The code looks very much procedural, having lots of conditional statements and loops one following the other and eventually even nested.</description>
+    </item>
+    
+    <item>
+      <title>Smelly Code: Direct Object Instantiation as a Testability Killer</title>
+      <link>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</link>
+      <pubDate>Thu, 09 Dec 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</guid>
+      <description>This Smelly Code post discusses mainly a testability issue without going into further detail on other things like readability which could be improved for sure as well.</description>
+    </item>
+    
+    <item>
+      <title>Smelly Code: Eager Test</title>
+      <link>https://juristr.com/blog/2010/09/smelly-code-eager-test/</link>
+      <pubDate>Wed, 29 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/smelly-code-eager-test/</guid>
+      <description>This post shows a common code smell in unit tests also mentioned in the xunit test patterns book, namely &#34;Eager tests&#34;. Original, smelly code public void testSaveSession(){</description>
+    </item>
+    
+    <item>
+      <title>Introducing #smellycode</title>
+      <link>https://juristr.com/blog/2010/09/introducing-smellycode/</link>
+      <pubDate>Mon, 27 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/introducing-smellycode/</guid>
+      <description>Couple of month ago, after posting some comments about bad code on Twitter, my ex-work-mate Peter (greets to Oz) asked me to show it s.</description>
+    </item>
+    
+    <item>
+      <title>Refactoring for the sake of compactness and reusability</title>
+      <link>https://juristr.com/blog/2010/07/refactoring-for-sake-of-compactness-and/</link>
+      <pubDate>Fri, 09 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/refactoring-for-sake-of-compactness-and/</guid>
+      <description>Currently I&#39;m doing a rather monotonic work, let&#39;s call it like this. We basically need to serialize our data to an XML file that has to match a given XSD which has been given to us by our customer.</description>
+    </item>
+    
+    <item>
+      <title>Test-Driven-Design: A real world scenario of an email sending requirement</title>
+      <link>https://juristr.com/blog/2010/04/test-driven-design-real-world-scenario/</link>
+      <pubDate>Thu, 15 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/04/test-driven-design-real-world-scenario/</guid>
+      <description>Many applications have requirements to send automatic emails to their users, especially in web environments. So it was also in my case.
+Summarizing in a few words, the requirement was the following: Automatically send an email notification to the company coordinator as well as to the admin (in CC) in case of a rectification of an already transmitted order (let&#39;s call it this way).</description>
+    </item>
+    
+    <item>
+      <title>Are anonymous Lambda style event handlers a readability killer?</title>
+      <link>https://juristr.com/blog/2010/02/are-anonymous-lambda-style-event/</link>
+      <pubDate>Wed, 03 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/are-anonymous-lambda-style-event/</guid>
+      <description>A standard event handling method in C# looks something like this
+public void SomeOtherMethod()
+{
+MyClass aObj = new MyClass();
+aObj.MyCustomEventName += new EventHandler(OnMyCustomEventName);</description>
+    </item>
+    
+    <item>
+      <title>Comments smell! Replace them with more expressive code.</title>
+      <link>https://juristr.com/blog/2010/01/comments-smell-replace-them-with-more/</link>
+      <pubDate>Wed, 06 Jan 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/01/comments-smell-replace-them-with-more/</guid>
+      <description>As already pointed out in that post, here&#39;s another code example:
+...
+//300 = Italy
+if(aCompany.NationId == 300)
+{
+...
+}
+...
+The comment above the if clause is definitely a code smell.</description>
+    </item>
+    
+    <item>
+      <title>Add semantic through your code, not through commenting</title>
+      <link>https://juristr.com/blog/2009/09/add-semantic-through-your-code-not/</link>
+      <pubDate>Sun, 13 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/add-semantic-through-your-code-not/</guid>
+      <description>Is it good to have a lot of code comments, explaining things s.t. your other team members know what was your intention when writing certain pieces?</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t use negated method names!</title>
+      <link>https://juristr.com/blog/2009/08/dont-use-negated-method-names/</link>
+      <pubDate>Fri, 28 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/dont-use-negated-method-names/</guid>
+      <description>What does this mean. Don&#39;t write something like
+public bool IsNotCorrect(...)
+{
+...
+}
+but rather write
+public bool IsCorrect(...)
+{
+...
+}
+and the caller of the method then does the negation by calling it like</description>
+    </item>
+    
+    <item>
+      <title>Using code metrics as indicator for code refactoring</title>
+      <link>https://juristr.com/blog/2009/08/using-code-metrics-as-indicator-for/</link>
+      <pubDate>Sun, 02 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/using-code-metrics-as-indicator-for/</guid>
+      <description>Developing software is not just hacking in a solution, but to develop simple, well structured and therefore maintainable constructs. There are a couple of design guidelines that one should follow (some of them are here) to achieve this.</description>
+    </item>
+    
+  </channel>
+</rss>

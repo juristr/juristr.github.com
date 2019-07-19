@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Angular 2&#43; - A Getting Started Guide for Beginners | juri.strumpflohner</title>
+	
+	<meta name="description" content="A gentle introduction to a local Meetup group">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Angular 2&#43; - A Getting Started Guide for Beginners" />
+	
+	<meta name="twitter:description" content="A gentle introduction to a local Meetup group" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/meetup-intro-angular2/ng2-gettingstarted-image.png" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Angular 2&#43; - A Getting Started Guide for Beginners" />
+	
+	<meta property="og:description" content="A gentle introduction to a local Meetup group" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/meetup-intro-angular2/ng2-gettingstarted-image.png" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2016/06/ng2-getting-started-for-beginners" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2016%2f06%2fng2-getting-started-for-beginners%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2016%2f06%2fng2-getting-started-for-beginners%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Angular 2&#43; - A Getting Started Guide for Beginners</h1>
+                
+                <h2 class="article-subtitle">A gentle introduction to a local Meetup group</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Jun 6, 2016
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">23 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+
+<div class="article-intro">
+    Since about half a year, I'm organizing a <a href="http://www.meetup.com/Software-Craftsmanship-SouthTyrol/">local Meetup group around Software Craftsmanship</a>. I recently also published <a href="/blog/2016/04/learning-angular2-directives-course/">a video course on "Learning Angular 2 directives"</a> and given Angular 2 finally released RC1, I decided to organize a Meetup session to introduce Angular 2 to our members. <i>Hint: check out the screencast at the end 😉</i>
+</div>
+
+<div class="warn-notice">
+    Contents are based on Angular version &gt;= 2
+</div>
+
+<figure class="image--wide">
+    <a href="https://docs.google.com/presentation/d/1sgIjSzDVrc2VDpQr6OGZ7rPGMnSV_TSvLFDVvGi3yB0/edit?usp=sharing">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/slide-deck.png" />
+    </a>
+    <figcaption>Click to get access to the slides</figcaption>
+</figure>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<blockquote>
+<p>Wohooo! <strong>This article earned some fame</strong> and was chosen at <strong>rank #1</strong> out of ~1500 Angular 2 articles published in May-June 2016. <a href="https://medium.com/@Mybridge/top-10-angular-2-articles-for-the-past-month-v-june-37bb96b667a3#.tjs9etrwb">Read the whole story</a> 😊</p>
+</blockquote>
+
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#big-picture">Big Picture</a>
+<ul>
+<li><a href="#server-side-rendered">Server-side rendered</a></li>
+<li><a href="#client-side-rendered">Client-side rendered</a></li>
+<li><a href="#server-side-pre-rendering-isomorphic-javascript-or-universal-javascript">Server-side pre-rendering, isomorphic JavaScript or universal JavaScript</a></li>
+</ul></li>
+<li><a href="#why-angular-2-what-s-different">Why Angular 2? What&rsquo;s different?</a>
+<ul>
+<li><a href="#angular-2-is-a-platform">Angular 2 is a platform!</a></li>
+<li><a href="#extremely-fast">Extremely fast!</a></li>
+<li><a href="#small">Small!</a></li>
+<li><a href="#web-components">&lt;(web)-components&gt;</a></li>
+<li><a href="#templates-and-data-binding">Templates and Data Binding</a></li>
+<li><a href="#services-and-dependency-injection">Services and Dependency Injection</a></li>
+<li><a href="#reactive-programming-with-rxjs-5-and-http">Reactive Programming with RxJs 5 and Http</a></li>
+</ul></li>
+<li><a href="#lot-s-of-stuff-let-s-get-started-with-some-code">Lot&rsquo;s of stuff, let&rsquo;s get started with some code</a></li>
+<li><a href="#okay-we-re-now-all-set-up-i-guess-time-to-code">Okay..we&rsquo;re now all set up I guess. Time to code!</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<h2 id="intro">Intro</h2>
+
+<p>This article is for those of you that are new to Angular 2 or even to web development in general. Here, I&rsquo;m going to give you a good overview what Angular 2 is all about, highlighting some of the main concepts behind. The idea is to give you a good starting point from where to go and do further research.</p>
+
+<blockquote>
+<p><strong>TL;DR -</strong> Check out the <a href="#screencast">video screencast at the end</a> of this article 😉</p>
+</blockquote>
+
+<p>If you did already some coding examples in Angular 2, then I&rsquo;m probably going to bore you 😃. But maybe you want to dive deeper with my <a href="/blog/2017/01/video-course-learning-ng-cmps/">Learning Angular components video course</a> I recently published 😉.</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2016/04/learning-angular2-directives-course/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2016/04/learning-angular2-directives-course/" target="_blank">Learning Angular 2 directives</a></div>
+            <div class="description">Learn how to build efficient Angular 2 directives with this fast and interactive video course</div>
+            <div class="link">
+                /blog/2016/04/learning-angular2-directives-course/
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 id="big-picture">Big Picture</h2>
+
+<p>Here&rsquo;s a simple classification of today&rsquo;s web application architectures.</p>
+
+<h3 id="server-side-rendered">Server-side rendered</h3>
+
+<p>In server-side rendered applications, most of the application&rsquo;s logic resides on the server, and remains there. The user basically enters the URL, the request gets send to the server, which then produces the final HTML containing the requested data and sends that back to the browser which simply renders it out. When the user interacts with the page, that request gets again sent to the server, which in turn generates a new HTML page and serves it back to the browser.</p>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/server-side-rendering.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/server-side-rendering.png"/>
+    </a>
+</figure>
+
+<p>This is how the web has been designed, a perfectly valid model and what many pages still use today.</p>
+
+<h3 id="client-side-rendered">Client-side rendered</h3>
+
+<p>Modern web pages often require to work more like applications do on the desktop, though. People demand for a much better user experience, more interactivity, fast transitions between &ldquo;pages&rdquo; and even offline capabilities. That&rsquo;s where the so-called SPAs (Single Page Applications) come into play.</p>
+
+<p>When the user enters the URL, the web server responds with an HTML page, but also with a set of resources (JavaScript files and images) that make up our client-side application. The browser receives that, loads the JavaScript application and &ldquo;boots it&rdquo;. Now it&rsquo;s the job of that application to dynamically generate the user interface (HTML) based on the data, right from within the browser. After that happens, every new user action doesn&rsquo;t reload the entire web site again, but rather the data for that specific user interaction is send to the server (usually by using the JSON format) and the server in turn responds with the just the amount of data requested by the JavaScript client, again using JSON (normally). The JavaScript application gets the data, parses it and dynamically generates HTML code which is shown to the user.</p>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/client-side-rendering.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/client-side-rendering.png" />
+    </a>
+</figure>
+
+<p>As you can see, the amount of data that is being exchanged is very optimized. However, a big downside of such type of applications is that the startup time is usually much longer. You might already have figured why: well, because the browser doesn&rsquo;t get the HTML code to show, but rather a bunch of JavaScript files that need to be interpreted, and executed, and which in turn then generates the final HTML to be shown to the user.</p>
+
+<h3 id="server-side-pre-rendering-isomorphic-javascript-or-universal-javascript">Server-side pre-rendering, isomorphic JavaScript or universal JavaScript</h3>
+
+<p>Just some names that are currently being used for the third type of web application I&rsquo;d like to show you. As you might guess, it aims at taking the best of the server-side rendered web apps and SPAs.</p>
+
+<p>In a nutshell, what it does is the following. When the user enters the URL, the server loads the JavaScript application on the server side, boots it up and then delivers the already (by the JavaScript app) pre-rendered HTML plus the JavaScript app itself back to the client. There, the browser interprets the JS app and runs it, which has then to be intelligent enough to resume where the server has left off.</p>
+
+<p>The advantage is obvious: you get fast startup times, but still the benefit of a SPA as mentioned before.</p>
+
+<h2 id="why-angular-2-what-s-different">Why Angular 2? What&rsquo;s different?</h2>
+
+<p>Ok, let&rsquo;s get to the meat. Why should you be interested in Angular 2? Here are a couple of things I picked up mainly from <a href="https://twitter.com/bradlygreen">Brad Green&rsquo;s</a> and other core member&rsquo;s talks from a couple of the latest conferences.</p>
+
+<h3 id="angular-2-is-a-platform">Angular 2 is a platform!</h3>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/angular2-platform.jpeg" class="image--zoom" >
+        <img src="/blog/assets/imgs/meetup-intro-angular2/angular2-platform.jpeg"/>
+    </a>
+    <figcaption>Angular 2 is a platform!</figcaption>
+</figure>
+
+<p>At <a href="https://www.youtube.com/watch?v=gdlpE9vPQFs">his keynote at NgConf 2016</a>, Brad Green named <strong>Angular 2 a platform</strong> rather than a library or framework. The main reason is that it is split up into modular pieces, build upon each other, some of which can even be used outside the Angular ecosystem.</p>
+
+<p>There are some building blocks, like the dependency injection, decorator support, <a href="https://github.com/angular/zone.js/">zone.js</a> (which btw. can be used completely independently from Angular and is <a href="https://github.com/tc39/proposals/blob/master/stage-0-proposals.md">currently under discussion at stage 0 at TC39</a> for being included into the ECMA standard), a compilation service, change detection and a rendering engine (which is platform independent). On top of that, there are other libraries such as <a href="https://github.com/angular/material2">Angular Material</a> (an UI library with material design support), <a href="https://mobile.angular.io/">mobile</a> and <a href="https://universal.angular.io/">Universal</a> etc.</p>
+
+<p>There are even modules such as i18n, the router and animation that can be used from within Angular 1.x as well.</p>
+
+<h3 id="extremely-fast">Extremely fast!</h3>
+
+<p>Angular 2 is designed to be extremely fast. Well, every new JS library would probably claim that, but there are some differences in the approach Angular 2 is taking.</p>
+
+<p>First of all, <del>they&rsquo;re currently hardly working on a so-called &ldquo;template compiler&rdquo; or &ldquo;offline compiler&rdquo;</del> the so-called <a href="https://angular.io/docs/ts/latest/cookbook/aot-compiler.html">Ahead-of-time (AoT) compilation</a>. Many JavaScript frontend frameworks basically render the templates dynamically into the browser&rsquo;s DOM at runtime, which requires a templating engine of some kind. Angular 2 templates and it&rsquo;s components are made in a way that Angular 2 is able &ldquo;to reason about your app&rsquo;s templates&rdquo; and thus to generate an <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a> and consequently to translate all of your templates into pure JavaScript code <strong>at compile time</strong>. This is huge IMHO :+1:.</p>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/templatecompiler.png" class="image--zoom" >
+        <img src="/blog/assets/imgs/meetup-intro-angular2/templatecompiler.png"/>
+    </a>
+    <figcaption>Template compiler aka offline compiler</figcaption>
+</figure>
+
+<p>As a result, your deployed app doesn&rsquo;t require any templating engine to run, but it rather contains highly optimized JavaScript code for directly manipulating the DOM. That&rsquo;s super fast and moreover the resulting Angular 2 library gets a lot smaller, as you don&rsquo;t need its templating engine any more when you deploy in production.</p>
+
+<p>And that leads us to the next part.</p>
+
+<h3 id="small">Small!</h3>
+
+<p>The library gets really, really small.</p>
+
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/John_Papa">@John_Papa</a> <a href="https://twitter.com/arhoads76">@arhoads76</a> <a href="https://twitter.com/DanWahlin">@DanWahlin</a> I believe current numbers are something like 49K via Rollup and 25K via jscompiler.</p>&mdash; Brad Green (@bradlygreen) <a href="https://twitter.com/bradlygreen/status/737700486673891328">May 31, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+By being able to strip out useless parts with the template/offline compiler, lots of stuff can already be dropped when deploying in production. Furthermore, the goal is to use a bundler that supports tree shaking and thus reduce the size of the final compiled JS files even more by eliminating everything that is not actively being used within your application. Frankly, if you don't use the routing module of angular, it simply won't get included in your final app.
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/angular2size.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/angular2size.png" class="image--medium"/>
+    </a>
+    <figcaption>Angular 2 will be veeeeery small!</figcaption>
+</figure>
+
+> **Tree shaking** is basically "dead code elimination". By analyzing which JavaScript modules are used and which aren't, compilers that support such approach can eliminate the unused parts and thus produce a much more optimized and smaller bundle. Obviously a proper module system such as ES2015 modules has to be used for this to work.
+
+### Lazy loading, built-in
+
+Finally! Lazy loading has been a hot topic already for Angular 1.x and many other frameworks. When you build a serious application, it might get quite big pretty quick. That said, you cannot force your users to download megabytes over megabytes just to get your app boot up, especially on flaky Internet connections or mobiles. That's why lazy loading needs to be implemented. The idea is to load only those parts the users most heavily use and load other parts on demand when needed. This was particularly hard in Angular 1. [ocLazyLoad](https://oclazyload.readme.io/) being one possibility to achieve this.
+
+Now with Angular 2 this is finally built-in right from the beginning, through the framework's router and so-called "lazy routes".
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/lazyloading.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/lazyloading.png" class="image--medium"/>
+    </a>
+    <figcaption>Lazy loading via routes</figcaption>
+</figure>
+
+At the moment of writing this article, the router has been rewritten and thus [there are no docs at the moment](https://angular.io/docs/ts/latest/guide/router.html). It should be available shortly. Till then, you may want to give this video a go, where Misko Hevery explains it.
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/d8yAdeshpcw?list=PLOETEcp3DkCq788xapkP_OU-78jhTf68j" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
+### Angular Universal
+
+This is Angular 2's answer to isomorphic JavaScript or server side pre-rendering. Again, it's all about performance, to get the app to the user as quickly as possible.
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/angular-universal.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/angular-universal.png"/>
+    </a>
+    <figcaption>Server side pre-rendering with angular-universal</figcaption>
+</figure>
+
+[angular-universal](https://universal.angular.io/) is a library that lives under the Angular 2 GitHub repository with the goal of making server-side rendering as easy and straightforward as possible. Since Angular 2 is made to be platform agnostic, it can be executed in non-browser environments without too much issues.
+
+So, when loading a universal Angular 2 app, from a high-level perspective, what happens is the following:
+
+1. Your user opens your universal Angular app, also maybe invoking a client-side route like `http://myuniversal-app.io/people/detail/1`
+2. Some angular-universal compatible server gets the request, _knows_ it is a client-side route and thus boots the Angular 2 root component (usually `app.component.ts`) on the server side and executes it.
+3. The server then delivers the already rendered application state of that invoked client route inside the `index.html` back to the browser
+4. The browser renders the HTML, thus the user will see the person with id 1 rendered immediately (as it is already present in the HTML)
+5. Meanwhile the Angular 2 app again boots,but this time on the client-side (the browser) in the background (in a hidden div basically). A library, `preboot.js`, records all user events like clicks, input changes etc. until Angular 2 is fully loaded.
+6. When the Angular 2 app is ready, it will have the same rendered state as the server has delivered previously. `preboot` then _replays_ all of the user events against that client-side rendered app.
+7. Finally, the client-side rendered app gets activated and the server-rendered HTML is being dropped
+
+That was really from a birds-eye perspective but you get the idea. To know more details, a good place to start is the [quickstart guide](https://universal.angular.io/quickstart/). Also the [universal-starter repository](https://github.com/angular/universal-starter) has some good examples to play around with.
+
+Currently the angular-universal supported server frameworks are Node and ASP.net. But there's currently support for Java, Go and PHP in the works.
+
+### Unified Development
+
+Something I'm particularly excited about is the approach of having a unified development model.
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/unified-development.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/unified-development.png"/>
+    </a>
+    <figcaption>Support for Web, Desktop and Mobile</figcaption>
+</figure>
+
+#### Angular ❤️ Mobile
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/angular-loves-mobile.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/angular-loves-mobile.png"/>
+    </a>
+</figure>
+
+You can choose among **4 different possibilities** for developing mobile applications with Angular 2.
+
+**[Angular Mobile Toolkit](https://mobile.angular.io) -** focuses mostly on a new architectural approach to creating web applications: Progressive Web Apps (PWA). These are normal web applications, that facilitate modern web technologies like service workers for offline caching and a special (non-standard right now) manifest file that instructs Chrome to provide "installation like capabilities" for the app, s.t. it can be added onto your homescreen. Google I/O 2016 was all about PWA development. Just [check out some of the talks on Youtube](https://www.youtube.com/results?search_query=google+Io+2016+progressive+web+app). Also, [JavaScriptAir's latest talk on it might be relevant](https://javascriptair.com/episodes/2016-05-25/).
+
+**[Ionic 2](http://ionic.io/2) -** is a hybrid mobile application framework. That simply means you build a web application and package it in a native installable package for iOS and Android that can be installed through the corresponding app stores. The app itself is served through a WebView component, which means you're running a web application in the end. Access to underlying APIs is achieved [through Apache Cordova](https://cordova.apache.org/). Ionic specializes in providing you the tools for setup and building the native app packages. Moreover it gives you a highly tuned UI framework and mobile routing support. They recently also announced futures support for PWAs, so it'll be quite interesting to see it evolve.
+
+**[NativeScript](https://www.nativescript.org/) -** is a framework developed by Telerik. Different to Ionic, it "compiles" to a native application. Actually your JavaScript code is being executed through a special JavaScript VM (like Chrome's V8) which builds the bridge to the underlying native platform. But anyway, take a look [at this video with John Papa, Burke Holland and TJ VanToll showing off some NativeScript capabilities](https://www.youtube.com/watch?v=efk_oeI58hc).
+
+**[React Native](https://facebook.github.io/react-native/) -** There's the possibility to even use React-Native with Angular 2. Unfortunately I've not done anything with it yet, so you may want to browse the web for it if you're particularly interested in this one 😉.
+
+The trick is just to get the right one for your needs 😉
+
+#### Installed Desktop
+
+When talking about "installed desktop" we don't mean like running an Angular 2 app on a desktop browser, but rather to run it inside an installable application. This is powered by [Electron](http://electron.atom.io) and [Windows Universal (UWP)](https://developer.microsoft.com/en-US/windows/develop/build-apps-shared-code). Watch [what Brad Green had to say about it at NGConf 2016 📹](https://youtu.be/gdlpE9vPQFs?t=21m).
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/installeddesktop.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/installeddesktop.png"/>
+    </a>
+</figure>
+
+A very important point here that's easy to miss: by running Angular 2 directly from within a Web Worker, not only you get an enormous performance boost as it runs in a separate thread, but you also get access to the underlying platform, Databases etc..
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="http://www.html5rocks.com/en/tutorials/workers/basics/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="http://www.html5rocks.com/en/tutorials/workers/basics/" target="_blank">The basics of web workers</a></div>
+            <div class="description">The Web Workers specification defines an API for spawning background scripts in your web application. Web Workers allow you to do things like fire up long-running scripts to handle computationally intensive tasks, but without blocking the UI or other scripts to handle user interactions.</div>
+            <div class="link">
+                http://www.html5rocks.com/en/tutorials/workers/basics/
+            </div>
+        </div>
+    </div>
+</div>
+
+Not convinced? Well, most probably you're already using an Electron app, like [VSCode](https://code.visualstudio.com/), or [Slack](https://slack.com/) or some of these:
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/electronapps.gif" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/electronapps.gif"/>
+    </a>
+</figure>
+
+## The 7 Key Concepts behind Angular 2
+
+At NGConf 2016, John Papa [had a slide in his talk](https://youtu.be/WAPQF_GA7Qg?t=1m25s) describing the **seven main key concepts** behind Angular 2. These really nail it.
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/seven-concepts-ng2.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/seven-concepts-ng2.png"/>
+    </a>
+    <figcaption>7 key concepts by John Papa</figcaption>
+</figure>
+
+### Modules and the ES2015 story
+
+Ok, at this point I should probably stop and we should take a broader look at what modules are all about.
+
+Initially in web development, you most likely did something like this:
+
+```html
+<html>
+<head>...</head>
+
+<body>
+
+	<script src="./vendor/jquery.min.js"></script>
+	<script src="./vendor/super-awesome-datepicker.min.js"></script>
+	<script src="./myapp.js"></script>
+</body>
+</html>
+
+```
+
+You simply include the required JavaScript files **in the correct order**. Within your `myapp.js` you might have..
+
+```javascript
+function initDatePicker(someDateValue) {
+	$('#myBirthDateInput').superAwesomeDatePicker({
+		value: moment(someDateValue)
+	});
+}
+```
+
+A couple of things to note here. We rely on **global state** and libraries to be loaded. Like `$` for jQuery and `moment` and `superAwesomeDatePicker`. These libraries need to be present at the moment this function is executed. Meaning you have to load all of the scripts in the right order, based on their respective dependencies. This is simply not feasible for large scale applications with hundreds of different JavaScript files. That's why **module systems** have been created, like the AMD standard implemented by - for example - RequireJS:
+
+```javascript
+define(['jquery', 'moment'], function($, moment) {
+	function initDatePicker(someDateValue) {
+		$('#myBirthDateInput').superAwesomeDatePicker({
+			value: moment(someDateValue);
+		});
+	}
+
+	return initDatePicker;
+});
+```
+
+Note, we now have imports, like a dependency called `jquery` and `moment` get defined somewhere and imported as `$` and `moment` inside this specific file. In turn, also functionality within this file gets exported with `return initDatePicker` s.t. it can be imported by other files in the exact same way. And so on.
+
+This worked, but wasn't always ideal. Or better, there have been different other patterns around, and they weren't always that nicely compatible and interchangeable. With ES6 or ES2015, the TC39 (the committee deciding over the next ECMAScript features to be implemented by browsers) finally specified _a standard syntax for defining JavaScript modules_.
+
+```javascript
+import * as $ from 'jquery';
+import * as moment from 'moment/moment';
+
+function initDatePicker(someDateValue) {
+	$('#myBirthDateInput').superAwesomeDatePicker({
+		value: moment(someDateValue)
+	});
+}
+
+export initDatePicker;
+```
+
+A much more clear and expressive syntax.
+
+Another notable feature that many developers coming from languages like Java or C# may like, are classes and inheritance:
+
+```javascript
+class MyApp {
+	_someDateValue;
+
+	constructor(someDateValue) {
+		this._someDateValue = someDateValue;
+	}
+
+	get someDateValue() {
+		return this._someDateValue;
+	}
+
+	set someDateValue(value) {
+		this._someDatevalue = value;
+	}
+
+	static someStaticFunction() { ... }
+}
+```
+
+Finally, another construct we need to learn about to understand Angular 2 apps are **decorators**.
+
+```
+@DebugLog({
+	...
+})
+export class MyApp { ... }
+```
+
+These simply provide metadata to the underlying framework, in this case Angular, about the class. There is currently a proposal for decorator support in ECMAScript. Also, other than many might think, in JavaScript, decorators are not annotations.
+
+<blockquote>
+Annotations and decorators are two competing and incompatible ways to compile the @ symbols that we often see attached to Angular components. Annotations create an "annotations" array. Decorators are functions that receive the decorated object and can make any changes to it they like.<br /><br />
+Traceur gives us annotations. TypeScript gives us decorators. Angular 2 supports both.
+ <cite><a href="http://nicholasjohnson.com/blog/annotations-vs-decorators/">nicholasjohnsom.com</a></cite>
+</blockquote>
+
+<p>Also, check out the <a href="http://blog.thoughtram.io/angular/2015/05/03/the-difference-between-annotations-and-decorators.html">article on Thoughtram on this topic</a>.</p>
+
+<p><strong>So, can I use all of this in the browser right now?</strong> No, unfortunately not. What you need is a compiler or transpiler. Currently <a href="https://babeljs.io/">Babel</a> and <a href="https://www.typescriptlang.org/">TypeScript</a> are the most popular ones.</p>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/transpiling.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/transpiling.png"/>
+    </a>
+</figure>
+
+<p>The Angular team decided to go with TypeScript and has written its entire codebase with it. TypeScript has been created by Microsoft already in 2010 and then went first public in 2012. It really kicked off only recently, though, with Angular 2. The main difference to other transpilers is that it adds optional type support to JavaScript. First of all, this allows to discover and prevent nasty errors at compile time and second it opens up numerous possibilities for better tooling support.</p>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/typescriptdemo.gif" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/typescriptdemo.gif"/>
+    </a>
+</figure>
+
+<p><strong>Ok ok wait wait, so how is this relevant for Angular 2?</strong> Angular 2 is written entirely in TypeScript and while it&rsquo;s not impossible to write Angular 2 applications in ES5, it is highly recommended to write them in ES6 or TypeScript to get the best out of it. This way you can start using all of the above mentioned features on modules, classes, decorators and much more we didn&rsquo;t even cover.</p>
+
+<p><strong>Long story short</strong>, you should get accustomed to the new features of ES2015. Browse the web or <a href="/blog/2015/08/jump-start-es2015/">check out my article</a> which gives you a quick intro and links to many other useful resources.</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2015/08/jump-start-es2015/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2015/08/jump-start-es2015/" target="_blank">ES2015 - Jump Start</a></div>
+            <div class="description">ES6: Get introduced to the next generation JavaScript</div>
+            <div class="link">
+                /blog/2015/08/jump-start-es2015/
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="web-components">&lt;(web)-components&gt;</h3>
+
+<p>Component based architectures is the new paradigm for frontend development. This is not something particular to Angular but is something that&rsquo;s shared among other libraries like React, Ember or Polymer as well. The idea is to build <strong>autonomous pieces</strong> with clearly defined responsibilities and which might even be reusable across multiple applications.</p>
+
+<p><strong>So what are web components about?</strong> Roughly speaking, it&rsquo;s about defining custom HTML tags and their corresponding behavior. Like..</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">google-map</span> <span class="na">pointer</span><span class="o">=</span><span class="s">&#34;46.471089,11.332816&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">google-map</span><span class="p">&gt;</span></code></pre></div>
+<p>It&rsquo;s a powerful way to express semantics, isn&rsquo;t it? By simply looking at this HTML tag, we know that it&rsquo;ll render a google map most probably and set a pointer at the given coordinates. Neat! Currently this isn&rsquo;t something the browser understands natively, although there&rsquo;s a <a href="https://www.w3.org/standards/techs/components#w3c_all">draft spec document on the w3c website</a> on the web component standard and what concepts it should embrace.</p>
+
+<p>You may also want to check out <a href="https://www.polymer-project.org/1.0/">Polymer</a> and <a href="http://webcomponents.org/">webcomponents.org</a></p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="https://player.oreilly.com/videos/9781785884702" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="https://player.oreilly.com/videos/9781785884702" target="_blank">Learning Angular 2 directives: All about Components</a></div>
+            <div class="description">Free sample from my video course where I explain different ways of creating components</div>
+            <div class="link">
+                https://player.oreilly.com/videos/9781785884702
+            </div>
+        </div>
+    </div>
+</div>
+
+<p><strong>Angular 2 fully embraces this component based development</strong> style. In fact, already since the beginning of Angular 1.x, allowing the user to define custom HTML elements with behavior was one of the core philosophies of the framework. A simple component in Angular 2 looks like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+	<span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;hello-world&#39;</span><span class="p">,</span>
+	<span class="nx">template</span><span class="o">:</span> <span class="sb">`&lt;p&gt;Hello, world!&lt;/p&gt;`</span>
+<span class="p">})</span>
+<span class="k">class</span> <span class="nx">HelloWorldComponent</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>In the corresponding HTML you would write this to instantiate it.</p>
+
+<pre><code>&lt;hello-world&gt;&lt;/hello-world&gt;
+</code></pre>
+
+<p>As you can see, decorators are being used to add meta information about the tag of the component, about the template that should be rendered and much more (which aren&rsquo;t being used in this basic example here).</p>
+
+<blockquote class="emphasized">"Components are 1st class citizens in Angular 2"</blockquote>
+
+<p>Now with <strong>components being a 1st class citizen in Angular 2</strong>, there&rsquo;s the <strong>concept of the so-called component-tree</strong>. Every Angular 2 application consists of such a component tree, having a top-level &ldquo;application component&rdquo; or root component and from there, lots of child and sibling components.</p>
+
+<p>For example:</p>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/component-tree.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/component-tree.png"/>
+    </a>
+</figure>
+
+<p>And this could then be mapped to HTML code like as follows.</p>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/component-tree-mapping.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/component-tree-mapping.png"/>
+    </a>
+    <figcaption>Illustration of a component tree and how it's mapped to HTML</figcaption>
+</figure>
+
+<p>The component tree is of major importance in Angular 2 and you will always again come across it. For example, this is how you compose your application, and the arcs from one component to the other are the way data is assumed to flow through your application as well as what Angular uses for performing change detection.</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html" target="_blank">Change Detection Explained</a></div>
+            <div class="description">Excellent article by Pascal Precht on how change detection works in Angular 2</div>
+            <div class="link">
+                http://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
+            </div>
+        </div>
+    </div>
+</div>
+
+<blockquote>
+<p>&ldquo;Change detection&rdquo; is the mechanism by which Angular determines which components need to be refreshed as a result of changes in the data of the application.</p>
+</blockquote>
+
+<h3 id="templates-and-data-binding">Templates and Data Binding</h3>
+
+<p>Obviously, when we write something like <code>&lt;hello-world&gt;&lt;/hello-world&gt;</code>, we also need to define somewhere what Angular should render in place. That&rsquo;s where <em>templates</em> and <em>data binding</em> come into play. As we&rsquo;ve seen before, we define the template directly in the <code>@Component({})</code> annotation by either using the <code>template</code> or <code>templateUrl</code> property, depending on whether we want to define it inline or load it from some url.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+	<span class="p">...</span>
+	<span class="nx">template</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">	&lt;p&gt;Hello, world!&lt;/p&gt;
+</span><span class="sb">	`</span>
+<span class="p">})</span>
+<span class="k">class</span> <span class="nx">HelloWorldComponent</span> <span class="p">{}</span>
+</code></pre></div>
+<p>We also need some data binding mechanism to get data into this template and out of it again. Let&rsquo;s look at an example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">{</span><span class="o">%</span> <span class="nx">raw</span> <span class="o">%</span><span class="p">}</span>
+<span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+	<span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;hello-world&#39;</span><span class="p">,</span>
+	<span class="nx">template</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">	&lt;p&gt;Hello, {{ who }}&lt;/p&gt;
+</span><span class="sb">	`</span>
+<span class="p">})</span>
+<span class="k">class</span> <span class="nx">HelloWorldComponent</span> <span class="p">{</span>
+	<span class="nx">who</span><span class="o">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="s1">&#39;Juri&#39;</span>
+<span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="nx">endraw</span> <span class="o">%</span><span class="p">}</span>
+</code></pre></div>
+<p>As you can see, the variable <code>who</code> inside the component&rsquo;s class gets bound to into the template. Whenever you change the value of <code>who</code>, the template will automatically reflect that change.</p>
+
+<h3 id="services-and-dependency-injection">Services and Dependency Injection</h3>
+
+<p>Besides components, Angular always had the concept of Services and Dependency Injection. So does Angular 2. While the component is meant to deal with the UI and related stuff, the <strong>service is the place where you put your &ldquo;business logic&rdquo;</strong> s.t. it can be shared and consumed by multiple components. A service is nothing else than a simple ES6 class:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Injectable</span><span class="p">()</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">PersonService</span> <span class="p">{</span>
+	<span class="nx">fetchAllPeople</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>From within some component we can then use this service</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">PersonService</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./services/person.service&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+	<span class="p">...</span>
+	<span class="nx">providers</span><span class="o">:</span> <span class="p">[</span> <span class="nx">PersonService</span> <span class="p">]</span>
+<span class="p">})</span>
+<span class="k">class</span> <span class="nx">PersonComponent</span> <span class="p">{</span>
+	<span class="nx">people</span><span class="p">;</span>
+	<span class="nx">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">personService</span><span class="o">:</span> <span class="nx">PersonService</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// DI in all it&#39;s beauty, just provide TS type annotation and Angular will handle the rest
+</span><span class="c1"></span>		<span class="c1">// like adding the reference of personService to the class
+</span><span class="c1"></span>		<span class="c1">// no need for &#34;this.personService = personService;&#34;
+</span><span class="c1"></span>	<span class="p">}</span>
+
+	<span class="nx">ngOnInit</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">people</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">personService</span><span class="p">.</span><span class="nx">fetchAllPeople</span><span class="p">();</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Nice, we get a reference to <code>PersonService</code> from within our component. But wait, who instantiates the class? You guessed it, Angular&rsquo;s <strong>dependency injection</strong>. For this to work you need two things</p>
+
+<ul>
+<li>add the <code>@Injectable</code> annotation</li>
+<li>register <code>PersonService</code> as a provider either on the app, the top level component or from the part of the component tree (downwards) where you want to have the service injectable</li>
+</ul>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html" target="_blank">Dependency Injection in Angular 2</a></div>
+            <div class="description">Awesome introduction to how dependency injection works in Angular 2 by Pascal Precht on the Thoughtram blog.</div>
+            <div class="link">
+                http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html
+            </div>
+        </div>
+    </div>
+</div>
+
+<p><a name="rxjs"></a></p>
+
+<h3 id="reactive-programming-with-rxjs-5-and-http">Reactive Programming with RxJs 5 and Http</h3>
+
+<figure class="image--left">
+    <img src="https://raw.githubusercontent.com/Reactive-Extensions/RxJS/master/examples/dragndrop/logo.png">
+    <figcaption>RxJS 5</figcaption>
+</figure>
+
+<p>Angular 2 heavily uses a paradigm called &ldquo;Reactive Programming&rdquo;, in particular this is implemented through the <a href="https://github.com/ReactiveX/rxjs">RxJS 5</a> library. Like the Angular 2 http service won&rsquo;t return promises, but instead RxJS Observables.</p>
+
+<p>This pattern is not new at all, and gained a lot of popularity recently in modern frontend development. I&rsquo;m not going into the details here now, as it would be an entire article on its own. Just know that Angular 2 will heavily rely on it and that&rsquo;s why you should probably go and learn more about it.</p>
+
+<p>Here are some good articles to get started 😃</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="https://gist.github.com/staltz/868e7e9bc2a7b8c1f754" target="_blank">The introduction to Reactive Programming you&#39;ve been missing</a></div>
+            <div class="description">André Staltz introduces the very basics of what reactive programming is all about.</div>
+            <div class="link">
+                https://gist.github.com/staltz/868e7e9bc2a7b8c1f754
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="https://gist.github.com/btroncone/d6cf141d6f2c00dc6b35" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="https://gist.github.com/btroncone/d6cf141d6f2c00dc6b35" target="_blank">RxJS 5 Operators By Example</a></div>
+            <div class="description">A complete list of RxJS 5 operators with easy to understand explanations and runnable examples.</div>
+            <div class="link">
+                https://gist.github.com/btroncone/d6cf141d6f2c00dc6b35
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="https://medium.com/google-developer-experts/angular-introduction-to-reactive-extensions-rxjs-a86a7430a61f#.bknbea8ny" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="https://medium.com/google-developer-experts/angular-introduction-to-reactive-extensions-rxjs-a86a7430a61f#.bknbea8ny" target="_blank">Angular - Introduction to Reactive Extensions (RxJS)</a></div>
+            <div class="description">How to use observable sequences in AngularJS, an introduction by Gerard Sans.</div>
+            <div class="link">
+                https://medium.com/google-developer-experts/angular-introduction-to-reactive-extensions-rxjs-a86a7430a61f#.bknbea8ny
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="https://coryrylan.com/blog/intro-to-rxjs-observables-and-angular-2" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="https://coryrylan.com/blog/intro-to-rxjs-observables-and-angular-2" target="_blank">Intro to RxJS Observables and Angular 2</a></div>
+            <div class="description">Screencast from Cory Rylan where he demoes RxJS with Angular 2.</div>
+            <div class="link">
+                https://coryrylan.com/blog/intro-to-rxjs-observables-and-angular-2
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>We will also briefly touch it in the screencast at the end of the article.</p>
+
+<h2 id="lot-s-of-stuff-let-s-get-started-with-some-code">Lot&rsquo;s of stuff, let&rsquo;s get started with some code</h2>
+
+<p>In recent years, getting started quickly with frontend development got notably more difficult. Just creating some <code>index.html</code> with a couple of <code>&lt;script&gt;</code> tags is by far no more enough. What you need is some transpiler and a build tool that transpiles the code and serves it up, not to mention then optimizations like minification, inclusion of HTML templates, CSS compilation etc..</p>
+
+<figure class="image--medium">
+    <a href="/blog/assets/imgs/meetup-intro-angular2/tooling-landscape.png" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/tooling-landscape.png"/>
+    </a>
+    <figcaption>Just some of the tools being used in modern JavaScript development (not mentioning frontend frameworks here, just tools ;) )</figcaption>
+</figure>
+
+<p>Some build tools/module bundlers you should definitely take a closer look at is <strong>SystemJS and Webpack</strong>. These are currently at the base of most Angular 2 projects. To make this easier, the <a href="https://cli.angular.io">Angular CLI project</a> has been created. Mike Brocchi, core contributor of the CLI project <a href="https://www.youtube.com/watch?v=wHZe6gGI5RY">demoed it at NGConf 2016</a>.</p>
+
+<figure class="image--medium">
+    <a href="https://cli.angular.io" class="image--zoom">
+        <img src="/blog/assets/imgs/meetup-intro-angular2/angular-cli.png"/>
+    </a>
+</figure>
+
+<p>The CLI allows to do things like</p>
+
+<pre><code>$ ng new my-super-awesome-project
+$ ng g component my-new-component
+$ ng g route hero
+</code></pre>
+
+<p>Moreover it generates these components by <a href="https://angular.io/docs/ts/latest/guide/style-guide.html">following the official styleguide</a> and has even linting built-in.</p>
+
+<p>Angular CLI is still under heavy development and has still some way to go till it&rsquo;s fully usable. But it&rsquo;s awesome for quickly getting started, and I&rsquo;m quite sure it&rsquo;ll get better and be a huge help especially for newcomers to get started with Angular 2 without having to know all the tooling in depth (recently <a href="http://blog.jetbrains.com/webstorm/2016/06/webstorm-2016-2-eap-162-646/">Webstorm integrated Angular CLI support</a>). However, I also strongly recommend to learn these tools as you go along. The CLI will bring you quickly to a good point, but it&rsquo;s indispensable to know your tooling to get further ahead.</p>
+
+<p>Other popular starters you definitely also want to take a look at are these. They are community based, have lots of best practices bundled and have been around for quite a while now.</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="https://github.com/AngularClass/angular2-webpack-starter" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="https://github.com/AngularClass/angular2-webpack-starter" target="_blank">github/angular2-webpack-starter</a></div>
+            <div class="description">An Angular 2 Starter kit featuring Angular 2 (Router, Http, Forms, Services, Tests, E2E, Dev/Prod), Material Design, Karma, Protractor, Jasmine, Istanbul, TypeScript, TsLint, Codelyzer, Hot Module Replacement, Typings, and Webpack by @AngularClass</div>
+            <div class="link">
+                https://github.com/AngularClass/angular2-webpack-starter
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="https://github.com/mgechev/angular2-seed" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="https://github.com/mgechev/angular2-seed" target="_blank">github/angular2-seed</a></div>
+            <div class="description">Modular seed project for Angular 2 apps with fast, statically typed build</div>
+            <div class="link">
+                https://github.com/mgechev/angular2-seed
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 id="okay-we-re-now-all-set-up-i-guess-time-to-code">Okay..we&rsquo;re now all set up I guess. Time to code!</h2>
+
+<p><a name="screencast"></a></p>
+
+<p>Are you ready? Great, so let&rsquo;s create our first Angular 2 application, step by step :+1:.</p>
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/fXHyqSIIF9Q" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Congrats, you&rsquo;ve come to the end 😉. So by now you probably realize there&rsquo;s lots of new stuff for you to learn. But the nice thing is that maybe it isn&rsquo;t even only Angular 2 related. Like switching to ES2015 (ES6) and/or TypeScript, or adopting the reactive programming style with RxJS, or learn new toolings like Webpack and SystemJS&hellip;these are all things you can totally reuse, even though you dont&rsquo; plan to continue with Angular 2 in the end. Fortunately, the things you have to exclusively learn for Angular 2 got a lot smaller compared to Angular 1.x!</p>
+
+<p>So this was basically just the beginning. From here you can start go more in depth. Follow the links I provided to get started. Also, feel <a href="https://twitter.com/juristr">free to drop me a line on Twitter</a>. In general, try to connect with the Angular 2 community (over Twitter, GitHub, Slack,&hellip;), there are lots and lots of awesome people willing to help you with their enourmous expertise. 😃</p>
+
+<p>_Thanks to <a href="https://twitter.com/martin_hotell">Martin Hochel</a> for reviewing this article :+1:_</p>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

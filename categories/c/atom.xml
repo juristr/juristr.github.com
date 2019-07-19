@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/c/</link>
+    <description>Recent content in C# on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 30 Aug 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/c/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#39;object&#39; does not contain a definition for &#39;errors&#39;</title>
+      <link>https://juristr.com/blog/2013/08/object-does-not-contain-definition/</link>
+      <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/08/object-does-not-contain-definition/</guid>
+      <description>Today I ran into an interesting issues when writing a unit test for an ExceptionFilter which involved inspecting anonymous return types.
+I basically had the requirement to return a Json object with a predefined structure (for our ASP.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net MVC Action Methods: Testing Against Anonymous Return Types</title>
+      <link>https://juristr.com/blog/2013/01/aspnet-mvc-action-methods-testing-against-anonymous-return-types/</link>
+      <pubDate>Fri, 18 Jan 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/01/aspnet-mvc-action-methods-testing-against-anonymous-return-types/</guid>
+      <description>I don&amp;rsquo;t use dynamic types regularly, but there are always again situations when they come in quite handy. Here is one example of testing an MVC controller&amp;rsquo;s return value.</description>
+    </item>
+    
+    <item>
+      <title>Programming ASP.net MVC4 by J. Chadwick, T. Snyder and H. Panda</title>
+      <link>https://juristr.com/blog/2012/12/programming-aspnet-mvc4/</link>
+      <pubDate>Fri, 14 Dec 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/12/programming-aspnet-mvc4/</guid>
+      <description>This is one of the recent books I got from O&amp;rsquo;Reilly. It is probably the most comprehensive and detailed one I&amp;rsquo;ve encountered so far regarding ASP.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t Create Your Own Mapper, Let AutoMapper Do The Job!</title>
+      <link>https://juristr.com/blog/2012/11/dont-create-your-own-mapper-let-automapper-do-the-job/</link>
+      <pubDate>Wed, 14 Nov 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/11/dont-create-your-own-mapper-let-automapper-do-the-job/</guid>
+      <description>Mapping is a common task when integrating different systems with each other. Although it might often seem an unnecessary overhead, it&amp;rsquo;s highly suggested (even when you communicate within your own systems) as you don&amp;rsquo;t want to depend on the internal structure of another service.</description>
+    </item>
+    
+    <item>
+      <title>Output Caching in ASP.net MVC</title>
+      <link>https://juristr.com/blog/2012/10/output-caching-in-aspnet-mvc/</link>
+      <pubDate>Mon, 29 Oct 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/10/output-caching-in-aspnet-mvc/</guid>
+      <description>Although nowadays most of us have broadband connections, resource caching is important as loading a resource from your local HD is (by now) still faster than fetching it remotely.</description>
+    </item>
+    
+    <item>
+      <title>Lessons Learned: Don&#39;t Expose EF Entities to the Client Directly</title>
+      <link>https://juristr.com/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/</link>
+      <pubDate>Wed, 24 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/</guid>
+      <description>When we refactored our main application architecture, moving from an ASP.net WebForms app to a rich client JavaScript application with an ASP.net MVC REST backend, one of our main goals was to keep things as simple as possible.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net MVC3: Doesn&#39;t Deserialize Nullable Properties from Json</title>
+      <link>https://juristr.com/blog/2012/02/aspnet-mvc3-doesnt-deserialize-nullable/</link>
+      <pubDate>Tue, 07 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/02/aspnet-mvc3-doesnt-deserialize-nullable/</guid>
+      <description>A couple of days ago I noticed that the Nullable properties of a C# object were not properly deserialized when posting back a Json object to an MVC3 action.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t Fall into the IEnumerable&amp;lt;T&amp;gt; Trap</title>
+      <link>https://juristr.com/blog/2012/01/dont-fall-into-ienumerable-trap/</link>
+      <pubDate>Tue, 17 Jan 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/01/dont-fall-into-ienumerable-trap/</guid>
+      <description>Recently I upgraded some code of our company-internal class library and observed a plausible but still tricky problem. See yourself. In a class deep inside the class library ( ;)) there was a method which looked similar to the following:</description>
+    </item>
+    
+    <item>
+      <title>Writing IoC Supported Integration Tests using AutoFac</title>
+      <link>https://juristr.com/blog/2011/12/writing-ioc-supported-integration-tests/</link>
+      <pubDate>Mon, 12 Dec 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/12/writing-ioc-supported-integration-tests/</guid>
+      <description>Using a dependency injection framework can greatly facilitate your code&#39;s testability&amp;nbsp;in that you don&#39;t have any &#34;glue&#34; code for managing a classes&#39; dependency that needs to be mocked (if even possible) when writing unit tests.</description>
+    </item>
+    
+    <item>
+      <title>Some Usability Thoughts for the Weekend...</title>
+      <link>https://juristr.com/blog/2011/11/some-usability-thoughts-for-weekend/</link>
+      <pubDate>Fri, 18 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/some-usability-thoughts-for-weekend/</guid>
+      <description>A couple of days ago I got the order to write a very simple program that would take a bunch of XML input files with the task to elaborate them in terms of grouping them according to some identifier and then to output the result (grouped per directory) in a more user friendly and readable way.</description>
+    </item>
+    
+    <item>
+      <title>Use The &#34;var&#34; Keyword to Have More Maintainable Tests!?</title>
+      <link>https://juristr.com/blog/2011/11/use-var-keyword-to-have-more/</link>
+      <pubDate>Fri, 18 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/use-var-keyword-to-have-more/</guid>
+      <description>I have to admit that initially when the &#34;var&#34; keyword has been introduced in C# I was quite precautious in using it. It does reduce code readability, I thought.</description>
+    </item>
+    
+    <item>
+      <title>The Similarity of C# and JavaScript Syntax</title>
+      <link>https://juristr.com/blog/2011/10/similarity-of-c-and-javascript-syntax/</link>
+      <pubDate>Mon, 03 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/10/similarity-of-c-and-javascript-syntax/</guid>
+      <description>I&#39;m currently diving deeply into creating rich JavaScript web applications. You cannot deny that they are now the must have for modern-looking web (2.0) apps.</description>
+    </item>
+    
+    <item>
+      <title>JavaScriptSerializer: Circular Reference was Detected While Serializing an Object of Type...</title>
+      <link>https://juristr.com/blog/2011/08/javascriptserializer-circular-reference/</link>
+      <pubDate>Fri, 12 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/javascriptserializer-circular-reference/</guid>
+      <description>Consider an ASP.net MVC web application where you use some Ajax for retrieving an object. Let&#39;s start from the server-side MVC controller:
+public class BaseDataController : Controller</description>
+    </item>
+    
+    <item>
+      <title>How often did you use the Yield keyword??</title>
+      <link>https://juristr.com/blog/2011/08/how-often-did-you-use-yield-keyword/</link>
+      <pubDate>Mon, 08 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/how-often-did-you-use-yield-keyword/</guid>
+      <description>If you think about your coding...how often have you used C#&#39;s yield keyword? To be honest I continuously forget to use it myself, too. But it would be so useful in certain scenarious.</description>
+    </item>
+    
+    <item>
+      <title>SmellyCode: A Classical Example of Non-Unittestable Code</title>
+      <link>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</link>
+      <pubDate>Mon, 20 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</guid>
+      <description>I know there might be some degree of repetition in my posts when I speak about unit testing and mocking, but I always again come over similar problems in code I&#39;m reviewing.</description>
+    </item>
+    
+    <item>
+      <title>Basta-On-Tour Wrap Up Day 2: EF Best Practices, JavaScript, MVC</title>
+      <link>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-2-ef-best/</link>
+      <pubDate>Tue, 24 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-2-ef-best/</guid>
+      <description>Day 2 at the BASTA! On Tour was dedicated to different kind of small workshops.
+Web 2.0 Applications with ASP.net MVC, Entity Framework and jQuery</description>
+    </item>
+    
+    <item>
+      <title>Basta-On-Tour Wrap Up Day 1: Entity Framework</title>
+      <link>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-1-entity/</link>
+      <pubDate>Fri, 20 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-1-entity/</guid>
+      <description>Well, this is a very short and brief wrap up of the 1st day here at the Basta! On Tour in Düsseldorf. The session was about Entity Framework, hold by Dr.</description>
+    </item>
+    
+    <item>
+      <title>Is It More Readable??</title>
+      <link>https://juristr.com/blog/2011/05/is-it-more-readable/</link>
+      <pubDate>Tue, 03 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/is-it-more-readable/</guid>
+      <description>I was just going over some code and came across some webservice methods having a lot of repetitive conditional statements checking the language - represented by the corresponding two-letter code and send by the client from JavaScript.</description>
+    </item>
+    
+    <item>
+      <title>A Test-Driven Dev&#39;s Nightmare: Meeting the HttpContext</title>
+      <link>https://juristr.com/blog/2011/03/test-driven-devs-nightmare-meeting/</link>
+      <pubDate>Wed, 16 Mar 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/03/test-driven-devs-nightmare-meeting/</guid>
+      <description>My main task for the coming weeks at work is to extend&amp;nbsp;one of our older but highly successful web application with new functionalities. The webapp has become quite complex over the years, as it happens with most applications when they&#39;re being extended.</description>
+    </item>
+    
+    <item>
+      <title>FriendlyBool Extender What?</title>
+      <link>https://juristr.com/blog/2011/02/friendlybool-extender-what/</link>
+      <pubDate>Thu, 03 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/friendlybool-extender-what/</guid>
+      <description>From now and then it happens that I have to databind some entities onto the UI, containing boolean datatypes like &#34;Married&#34; or &#34;Editable&#34; and so on.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net: Organize Your Resources the Correct Way!</title>
+      <link>https://juristr.com/blog/2011/01/aspnet-organize-your-resources-correct/</link>
+      <pubDate>Tue, 18 Jan 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/01/aspnet-organize-your-resources-correct/</guid>
+      <description>ASP.net provides well-known mechanisms for localizing web applications, namely by extracting hard-coded strings into resources files. Localization for Pages and UserControls is fully automated and available from within Visual Studio.</description>
+    </item>
+    
+    <item>
+      <title>Smelly Code: Direct Object Instantiation as a Testability Killer</title>
+      <link>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</link>
+      <pubDate>Thu, 09 Dec 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</guid>
+      <description>This Smelly Code post discusses mainly a testability issue without going into further detail on other things like readability which could be improved for sure as well.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t Let Your Test Doubles Fool You</title>
+      <link>https://juristr.com/blog/2010/11/dont-let-your-test-doubles-fool-you/</link>
+      <pubDate>Thu, 25 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/dont-let-your-test-doubles-fool-you/</guid>
+      <description>During unit testing it is common to substitute dependencies with a test double (see Martin Fowler&#39;s disambiguation). This is necessary for isolating the tested environment and consequently also the potential source of error in case of a test failure.</description>
+    </item>
+    
+    <item>
+      <title>Testing Your SUT Against Exceptions</title>
+      <link>https://juristr.com/blog/2010/11/testing-your-sut-against-exceptions/</link>
+      <pubDate>Tue, 23 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/testing-your-sut-against-exceptions/</guid>
+      <description>When you test your method for exceptions (which is good practice) the usually naive approach - which btw I was following myself till today - is to wrap your method under test with an appropriate try-catch and set a boolean.</description>
+    </item>
+    
+    <item>
+      <title>Intercepting WCF Operation Calls with Impersonated Identity</title>
+      <link>https://juristr.com/blog/2010/11/intercepting-wcf-operation-calls-with/</link>
+      <pubDate>Fri, 05 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/intercepting-wcf-operation-calls-with/</guid>
+      <description>Take the following scenario. You have a WCF webservice with several operations. The communication runs within a secure SSL channel and uses Kerberos authentication. The webservice application runs with an assigned application pool user, in your .</description>
+    </item>
+    
+    <item>
+      <title>Lessons Learned: Make your ListItemCollection Linq Queryable</title>
+      <link>https://juristr.com/blog/2010/09/lessions-learned-make-your/</link>
+      <pubDate>Mon, 20 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/lessions-learned-make-your/</guid>
+      <description>I love Linq! In my opinion it is one of the best features that have ever been added to C#, making developers extremely more productive.</description>
+    </item>
+    
+    <item>
+      <title>Passing Property Names the &#34;compiler-safe&#34; Way</title>
+      <link>https://juristr.com/blog/2010/07/passing-property-names-compiler-safe/</link>
+      <pubDate>Thu, 29 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/passing-property-names-compiler-safe/</guid>
+      <description>A common bad practice which I often find when browsing through code is to see people directly hard-code strings in their source code. I&#39;ve also proposed some refactorings in some of my previous posts.</description>
+    </item>
+    
+    <item>
+      <title>Practical example: Applying the Template Method design pattern</title>
+      <link>https://juristr.com/blog/2010/07/practical-example-applying-template/</link>
+      <pubDate>Tue, 13 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/practical-example-applying-template/</guid>
+      <description>As I already mentioned in my previous post I&#39;m currently doing domain objects to XSD generated object mapping. Monotonic, exactly, but I&#39;m approaching the end of the work.</description>
+    </item>
+    
+    <item>
+      <title>Refactoring for the sake of compactness and reusability</title>
+      <link>https://juristr.com/blog/2010/07/refactoring-for-sake-of-compactness-and/</link>
+      <pubDate>Fri, 09 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/refactoring-for-sake-of-compactness-and/</guid>
+      <description>Currently I&#39;m doing a rather monotonic work, let&#39;s call it like this. We basically need to serialize our data to an XML file that has to match a given XSD which has been given to us by our customer.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Launch JavaScript after async postback of UpdatePanel</title>
+      <link>https://juristr.com/blog/2010/02/howto-launch-javascript-after-async/</link>
+      <pubDate>Thu, 18 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/howto-launch-javascript-after-async/</guid>
+      <description>Assume the scenario where you want to launch a JavaScript function after your UpdatePanel finished to do its async postback. This turns out to actually be quite simple.</description>
+    </item>
+    
+    <item>
+      <title>Are anonymous Lambda style event handlers a readability killer?</title>
+      <link>https://juristr.com/blog/2010/02/are-anonymous-lambda-style-event/</link>
+      <pubDate>Wed, 03 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/are-anonymous-lambda-style-event/</guid>
+      <description>A standard event handling method in C# looks something like this
+public void SomeOtherMethod()
+{
+MyClass aObj = new MyClass();
+aObj.MyCustomEventName += new EventHandler(OnMyCustomEventName);</description>
+    </item>
+    
+    <item>
+      <title>Are C# regions a good thing??</title>
+      <link>https://juristr.com/blog/2009/09/are-c-regions-good-thing/</link>
+      <pubDate>Fri, 25 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/are-c-regions-good-thing/</guid>
+      <description>Well, I&#39;d say it depends. If you use regions to logically group your code in your class, then it may be a good thing &#39;cause people come to your class and see something like</description>
+    </item>
+    
+    <item>
+      <title>Add semantic through your code, not through commenting</title>
+      <link>https://juristr.com/blog/2009/09/add-semantic-through-your-code-not/</link>
+      <pubDate>Sun, 13 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/add-semantic-through-your-code-not/</guid>
+      <description>Is it good to have a lot of code comments, explaining things s.t. your other team members know what was your intention when writing certain pieces?</description>
+    </item>
+    
+    <item>
+      <title>Watch out when cloning objects</title>
+      <link>https://juristr.com/blog/2009/09/watch-out-when-cloning-objects/</link>
+      <pubDate>Tue, 08 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/watch-out-when-cloning-objects/</guid>
+      <description>Cloning is never a good thing. I would say in most cases there is a better alternative for reaching your goal, but now and then it happens that you need it.</description>
+    </item>
+    
+    <item>
+      <title>NullsafeGet extension method? Simplicity for the cost of readability??</title>
+      <link>https://juristr.com/blog/2009/08/nullsafeget-extension-method-simplicity/</link>
+      <pubDate>Fri, 14 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/nullsafeget-extension-method-simplicity/</guid>
+      <description>When programming, there is often the the situation where you have to continuously do the null-check in order to not get exceptions. For instance take the dummy example of a Person object with an according Address object.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Control the rendered Html tag on your custom, composite server controls</title>
+      <link>https://juristr.com/blog/2009/08/controlling-rendered-html-tag-on-your/</link>
+      <pubDate>Tue, 11 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/controlling-rendered-html-tag-on-your/</guid>
+      <description>Normally when you want to achieve that your custom server control is rendered inside a specific HTML tag you don&#39;t override the Render method, but you do something like</description>
+    </item>
+    
+    <item>
+      <title>Automatically find the Label associated to a WebControl through the AssociatedControlID</title>
+      <link>https://juristr.com/blog/2009/07/automatically-find-label-associated-to/</link>
+      <pubDate>Fri, 24 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/07/automatically-find-label-associated-to/</guid>
+      <description>ASP.net Label controls own the property &#34;AssociatedControlID&#34; which points to the control to which the label is associated. This property will then be rendered as &#34;</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Get localized string different from the current culture</title>
+      <link>https://juristr.com/blog/2009/05/howto-get-localized-string-different/</link>
+      <pubDate>Fri, 29 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/howto-get-localized-string-different/</guid>
+      <description>Localization is a key part of most applications. For this purpose you usually use resource files (property files in Java, actually they are the same) with the according culture extension, like &#34;</description>
+    </item>
+    
+    <item>
+      <title>What happens if you think in Java and program C#</title>
+      <link>https://juristr.com/blog/2009/05/what-happens-if-you-think-in-java-and/</link>
+      <pubDate>Thu, 28 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/what-happens-if-you-think-in-java-and/</guid>
+      <description>I&#39;m quite jumping between the two languages. In the morning at the university I&#39;m usually programming Java and then in the afternoon at work I&#39;m programming in C#.</description>
+    </item>
+    
+    <item>
+      <title>String enumerations in C#</title>
+      <link>https://juristr.com/blog/2009/05/string-enumerations-in-c/</link>
+      <pubDate>Thu, 21 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/string-enumerations-in-c/</guid>
+      <description>Enumerations are a very handy programming construct. Especially when you&#39;re developing in a larger team, you can prevent a lot of problems and possible bugs by using enum types for properties that can just have certain values.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Make your custom ASP.net server control validatable</title>
+      <link>https://juristr.com/blog/2009/05/howto-make-your-custom-aspnet-server/</link>
+      <pubDate>Mon, 11 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/howto-make-your-custom-aspnet-server/</guid>
+      <description>Content validation is a major issue of every application. It is an absolute &#34;must have&#34; to notify the user about invalid data he may have entered.</description>
+    </item>
+    
+    <item>
+      <title>Problems with character encoding on cookies</title>
+      <link>https://juristr.com/blog/2009/03/problems-with-character-encoding-on/</link>
+      <pubDate>Wed, 11 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/problems-with-character-encoding-on/</guid>
+      <description>For preserving the search&amp;nbsp;criteria on some page of our web application we&#39;re saving the different settings of the search filters into a cookie. So, when the user comes back next time we can restore the search filter settings that have been used previously.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Set the assembly binding location</title>
+      <link>https://juristr.com/blog/2009/02/howto-set-assembly-binding-location/</link>
+      <pubDate>Sat, 28 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/howto-set-assembly-binding-location/</guid>
+      <description>This post is somehow related to the one I made just a couple of days ago. The application plugins (dlls placed in a special folder of my app) are loaded dynamically at run-time with my small &#34;</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Detect Assembly dependencies at runtime</title>
+      <link>https://juristr.com/blog/2009/02/howto-detect-assembly-dependencies-at/</link>
+      <pubDate>Wed, 25 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/howto-detect-assembly-dependencies-at/</guid>
+      <description>I&#39;m currently developing a small project for myself, where I&#39;m trying to build a small plugin framework (for experimenting purposes). In that environment I just came across the problem of detecting an assemblies dependencies at runtime.</description>
+    </item>
+    
+    <item>
+      <title>Accessing webcontrols inside the ProgressTemplate of an UpdateProgress</title>
+      <link>https://juristr.com/blog/2009/01/accessing-webcontrols-inside/</link>
+      <pubDate>Fri, 09 Jan 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/01/accessing-webcontrols-inside/</guid>
+      <description>Apparently it is not possible to access server-side web controls that are within the &#34;ProgressTemplate&#34; of an UpdateProgress control. If you have for instance the following code</description>
+    </item>
+    
+    <item>
+      <title>Using extenders to abstract details and improve code readability</title>
+      <link>https://juristr.com/blog/2008/12/using-extenders-to-abstract-details-and/</link>
+      <pubDate>Tue, 02 Dec 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/12/using-extenders-to-abstract-details-and/</guid>
+      <description>Extenders are a really cool feature of C#, which can be quite handy sometimes. I found the following extender I&#39;ve written the most useful. Think for instance how often you have to write conditions like</description>
+    </item>
+    
+    <item>
+      <title>Recursive version of the FindControl(..) method</title>
+      <link>https://juristr.com/blog/2008/06/recursive-version-of-findcontrol-method/</link>
+      <pubDate>Fri, 27 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/recursive-version-of-findcontrol-method/</guid>
+      <description>I don&#39;t know why there is none already implemented in the .NET framework. Anyway it wasn&#39;t too difficult to write one by myself:
+/// &amp;lt;summary&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>The ViewState hell: controls loosing their values</title>
+      <link>https://juristr.com/blog/2008/06/viewstate-hell-controls-loosing-their/</link>
+      <pubDate>Thu, 12 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/viewstate-hell-controls-loosing-their/</guid>
+      <description>Recently at work I encountered severe problems with the ASP.net viewstate. We have build a very nice framework which we use on our web projects for dynamically adding validation controls to our text-fields or dropdown lists on the UI according to the validity of rules defined in the business logic.</description>
+    </item>
+    
+    <item>
+      <title>C# refresher</title>
+      <link>https://juristr.com/blog/2008/04/c-refresher/</link>
+      <pubDate>Thu, 10 Apr 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/04/c-refresher/</guid>
+      <description>Recently I changed work and am now employed at the SIAG, a local informatics company which operates mainly for the public administration sector. Today was my 3rd working day and I&#39;m currently getting some intensive training for being able to join the project team as fast as possible.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/testing/</link>
+    <description>Recent content in Testing on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 16 Jul 2019 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/testing/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Challenging the Testing Pyramid</title>
+      <link>https://juristr.com/blog/2019/07/testing-cypress-intro/</link>
+      <pubDate>Tue, 16 Jul 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/07/testing-cypress-intro/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Writing automated tests has become like a standard practice in software development and (should be) an integral part of a healthy software development process. Testing (in particular automated testing) can come with different flavors and at different levels. In this article I&amp;rsquo;d like to provide a quick overview of automated UI or end-2-end testing with Cypress.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Add Mocha reporter for Karma unit tests to your Angular CLI project</title>
+      <link>https://juristr.com/blog/2018/02/add-mocha-reporter-angular-cli-tests/</link>
+      <pubDate>Wed, 14 Feb 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/02/add-mocha-reporter-angular-cli-tests/</guid>
+      <description>Every Angular CLI generated project comes already with a test setup in place using Karma. I think the default &#34;progress&#34; test result report is not as nice however.</description>
+    </item>
+    
+    <item>
+      <title>Talk: Testing with Angular - Some Recipes</title>
+      <link>https://juristr.com/blog/2017/01/talk-angular-testing-recipes/</link>
+      <pubDate>Wed, 11 Jan 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/01/talk-angular-testing-recipes/</guid>
+      <description>I recently wanted to dive deeper into testing Angular applications, in specific on how to write proper unit tests for some common scenarious you might encounter.</description>
+    </item>
+    
+    <item>
+      <title>Easy testing with angular-spies</title>
+      <link>https://juristr.com/blog/2015/09/link-angular-spies/</link>
+      <pubDate>Sat, 26 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/09/link-angular-spies/</guid>
+      <description>Small useful lib by Shai Reznik (@shai_reznik) that aims at helping you to test your Angular apps.</description>
+    </item>
+    
+    <item>
+      <title>Are you making these 10 Unit Testing mistakes?</title>
+      <link>https://juristr.com/blog/2015/09/link-10-common-testing-mistakes/</link>
+      <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/09/link-10-common-testing-mistakes/</guid>
+      <description>Interesting article that lists 10 very common mistakes I encountered (and made) myself. Check it out.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Testing $q promise resolves with Sinon and Jasmine</title>
+      <link>https://juristr.com/blog/2015/06/learning-ng-testing-promises/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/06/learning-ng-testing-promises/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  This article shows a brief example on how to properly mock and resolve a $q promise from within a Jasmine unit test.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Unit Testing $watch expressions</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-testing-watch-expressions/</link>
+      <pubDate>Wed, 26 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-testing-watch-expressions/</guid>
+      <description>Today I wanted to write a unit test for a watch expression on my controller. What seemed quite obvious initially, turned out to be quite nasty.</description>
+    </item>
+    
+    <item>
+      <title>Avoid test code duplication in Jasmine tests</title>
+      <link>https://juristr.com/blog/2014/10/avoid-test-code-duplication-jasmine/</link>
+      <pubDate>Thu, 30 Oct 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/10/avoid-test-code-duplication-jasmine/</guid>
+      <description>Test code has to be treated like production code. Obviously we cannot charge the customer for it, it&amp;rsquo;s something that helps us developers to make sure we keep our codebase healthy, which ultimately is the responsibility we have towards our customers.</description>
+    </item>
+    
+    <item>
+      <title>See, always told you: testing is just a waste of time</title>
+      <link>https://juristr.com/blog/2014/05/told-you-that-testing-is-a-waste/</link>
+      <pubDate>Wed, 07 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/05/told-you-that-testing-is-a-waste/</guid>
+      <description>Automated testing has become something people don&amp;rsquo;t speak about any more. It matured to being a standard in software development, everyone is and should be practicing.</description>
+    </item>
+    
+    <item>
+      <title>Automate your UI testing with Nightwatch</title>
+      <link>https://juristr.com/blog/2014/02/nightwatch-test-automation/</link>
+      <pubDate>Fri, 21 Feb 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/02/nightwatch-test-automation/</guid>
+      <description>Although I feel like I&#39;m repeating myself, automate **everything**. We&#39;re here to automate the processes and work of our clients. Why don&#39;t we do the same for our own stuff as well?</description>
+    </item>
+    
+    <item>
+      <title>&#39;object&#39; does not contain a definition for &#39;errors&#39;</title>
+      <link>https://juristr.com/blog/2013/08/object-does-not-contain-definition/</link>
+      <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/08/object-does-not-contain-definition/</guid>
+      <description>Today I ran into an interesting issues when writing a unit test for an ExceptionFilter which involved inspecting anonymous return types.
+I basically had the requirement to return a Json object with a predefined structure (for our ASP.</description>
+    </item>
+    
+    <item>
+      <title>Code Coverage with QUnit in JavaScriptMVC</title>
+      <link>https://juristr.com/blog/2013/06/code-coverage-with-qunit-in-javascriptmvc/</link>
+      <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/06/code-coverage-with-qunit-in-javascriptmvc/</guid>
+      <description>Beside giving you an immediate feedback, unit tests are extremely useful as a regression test suite. They basically build a safety net around your code, giving you the freedom to apply changes without breaking anything existing.</description>
+    </item>
+    
+    <item>
+      <title>Unit Testing Tip: Create Descriptive Tests</title>
+      <link>https://juristr.com/blog/2013/06/unit-testing-tip-create-descriptive-tests/</link>
+      <pubDate>Mon, 17 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/06/unit-testing-tip-create-descriptive-tests/</guid>
+      <description>Your unit tests should be as descriptive as possible. The feedback they give you should be so clear you don&amp;rsquo;t even need to fire up the debugger and step one by one through the code to inspect your local variables.</description>
+    </item>
+    
+    <item>
+      <title>Mocking Internal Interfaces with Moq</title>
+      <link>https://juristr.com/blog/2013/03/mocking-internal-interfaces-with-moq/</link>
+      <pubDate>Thu, 07 Mar 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/03/mocking-internal-interfaces-with-moq/</guid>
+      <description>When creating some Class Library you should pay attention to the visibility of its members and have a clear vision of what you&amp;rsquo;d like to expose to its users and what on the other side should be hidden.</description>
+    </item>
+    
+    <item>
+      <title>Test Your App Under Slow Network Speeds</title>
+      <link>https://juristr.com/blog/2013/02/test-your-app-under-slow-network-speeds/</link>
+      <pubDate>Fri, 01 Feb 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/02/test-your-app-under-slow-network-speeds/</guid>
+      <description>I guess that I don&amp;rsquo;t have to start talking about the importance of testing in the software development process. There are couple of different kind of tests which I&amp;rsquo;m not going to mention now, but generally speaking a good test should verify the correct implementation of the business requirements but also test the software on its boundaries and edge cases.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net MVC Action Methods: Testing Against Anonymous Return Types</title>
+      <link>https://juristr.com/blog/2013/01/aspnet-mvc-action-methods-testing-against-anonymous-return-types/</link>
+      <pubDate>Fri, 18 Jan 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/01/aspnet-mvc-action-methods-testing-against-anonymous-return-types/</guid>
+      <description>I don&amp;rsquo;t use dynamic types regularly, but there are always again situations when they come in quite handy. Here is one example of testing an MVC controller&amp;rsquo;s return value.</description>
+    </item>
+    
+    <item>
+      <title>Jasmine - An Introduction</title>
+      <link>https://juristr.com/blog/2012/08/jasmine-an-introduction/</link>
+      <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/08/jasmine-an-introduction/</guid>
+      <description>This page is the result of taking notes from the session about Jasmine by Davis W. Frank at this years Fluent Conference in San Francisco.</description>
+    </item>
+    
+    <item>
+      <title>Testing and the Single Responsibility Principle</title>
+      <link>https://juristr.com/blog/2012/07/testing-and-single-responsibility/</link>
+      <pubDate>Thu, 26 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/testing-and-single-responsibility/</guid>
+      <description>Automated testing is hard! Therefore, if you&#39;re about to learn it, just keep going. Resist the initial learning curve as afterwards it&#39;ll allow you to adopt a completely different programming style.</description>
+    </item>
+    
+    <item>
+      <title>An Example of Test-Driven Bugfixing</title>
+      <link>https://juristr.com/blog/2012/07/an-example-of-test-driven-bugfixing/</link>
+      <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/an-example-of-test-driven-bugfixing/</guid>
+      <description>Unfortunately many people still don&amp;rsquo;t use a test-driven approach during development. That&amp;rsquo;s sad given the bunch of advantages automated tests give you. One of my favorite is regression testing.</description>
+    </item>
+    
+    <item>
+      <title>Writing IoC Supported Integration Tests using AutoFac</title>
+      <link>https://juristr.com/blog/2011/12/writing-ioc-supported-integration-tests/</link>
+      <pubDate>Mon, 12 Dec 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/12/writing-ioc-supported-integration-tests/</guid>
+      <description>Using a dependency injection framework can greatly facilitate your code&#39;s testability&amp;nbsp;in that you don&#39;t have any &#34;glue&#34; code for managing a classes&#39; dependency that needs to be mocked (if even possible) when writing unit tests.</description>
+    </item>
+    
+    <item>
+      <title>Use The &#34;var&#34; Keyword to Have More Maintainable Tests!?</title>
+      <link>https://juristr.com/blog/2011/11/use-var-keyword-to-have-more/</link>
+      <pubDate>Fri, 18 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/use-var-keyword-to-have-more/</guid>
+      <description>I have to admit that initially when the &#34;var&#34; keyword has been introduced in C# I was quite precautious in using it. It does reduce code readability, I thought.</description>
+    </item>
+    
+    <item>
+      <title>Testing JavaScript: Mocking jQuery Ajax Calls</title>
+      <link>https://juristr.com/blog/2011/09/testing-javascript-mocking-jquery-ajax/</link>
+      <pubDate>Mon, 26 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/09/testing-javascript-mocking-jquery-ajax/</guid>
+      <description>When &#34;seriously&#34; developing JavaScript applications we obviously need to write tests. Being a fully dynamic language (similar as Ruby), tests are more necessary than ever since there is no compiler that checks for you all the silly mistakes before you run your code the first time.</description>
+    </item>
+    
+    <item>
+      <title>Why Did it Have to Be So Complicated Before??</title>
+      <link>https://juristr.com/blog/2011/08/why-did-it-have-to-be-so-complicated/</link>
+      <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/why-did-it-have-to-be-so-complicated/</guid>
+      <description>I started&amp;nbsp;web development using Java, basically during my studies at the university. When working on my bachelor degree thesis I needed a web server back-end system (to my mobile J2ME client); I decided to do it &#34;</description>
+    </item>
+    
+    <item>
+      <title>Write the Minimum Necessary Code In Your Unit Test Case That Makes It Valuable</title>
+      <link>https://juristr.com/blog/2011/07/write-minimum-necessary-code-in-your/</link>
+      <pubDate>Sun, 17 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/07/write-minimum-necessary-code-in-your/</guid>
+      <description>Maintainability is of major importance in software development. Usually writing tests against your codebase increases maintainability in that it gives you some degree of freedom in making changes, at the same time assuring you did not break any existing logic.</description>
+    </item>
+    
+    <item>
+      <title>SmellyCode: A Classical Example of Non-Unittestable Code</title>
+      <link>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</link>
+      <pubDate>Mon, 20 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</guid>
+      <description>I know there might be some degree of repetition in my posts when I speak about unit testing and mocking, but I always again come over similar problems in code I&#39;m reviewing.</description>
+    </item>
+    
+    <item>
+      <title>Trouble with the VS QualityTools.UnitTestFramework dll</title>
+      <link>https://juristr.com/blog/2011/04/trouble-with-vs-qualitytoolsunittestfra/</link>
+      <pubDate>Sat, 09 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/04/trouble-with-vs-qualitytoolsunittestfra/</guid>
+      <description>I recently build a tool that automates and simplifies the unit testing of large parts of our application&#39;s business layer. The system works by declaratively specifying scenarios in xml files which are read by using the MS test&#39;s data driven test cases and validated against a set of &#34;</description>
+    </item>
+    
+    <item>
+      <title>Why Automated Tests Boost Your Development Speed</title>
+      <link>https://juristr.com/blog/2011/04/why-automated-tests-boost-your/</link>
+      <pubDate>Wed, 06 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/04/why-automated-tests-boost-your/</guid>
+      <description>Many critics against writing automated tests directly address the additional time that is needed for coding them, which alternatively could have been invested in writing new functionality.</description>
+    </item>
+    
+    <item>
+      <title>A Test-Driven Dev&#39;s Nightmare: Meeting the HttpContext</title>
+      <link>https://juristr.com/blog/2011/03/test-driven-devs-nightmare-meeting/</link>
+      <pubDate>Wed, 16 Mar 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/03/test-driven-devs-nightmare-meeting/</guid>
+      <description>My main task for the coming weeks at work is to extend&amp;nbsp;one of our older but highly successful web application with new functionalities. The webapp has become quite complex over the years, as it happens with most applications when they&#39;re being extended.</description>
+    </item>
+    
+    <item>
+      <title>Why Extract {Class | Interface | Method} Refactoring improves Testability and Readability</title>
+      <link>https://juristr.com/blog/2011/01/why-extract-class-interface-method/</link>
+      <pubDate>Sat, 29 Jan 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/01/why-extract-class-interface-method/</guid>
+      <description>I still see many developers coding huge methods and large classes. The code looks very much procedural, having lots of conditional statements and loops one following the other and eventually even nested.</description>
+    </item>
+    
+    <item>
+      <title>Smelly Code: Direct Object Instantiation as a Testability Killer</title>
+      <link>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</link>
+      <pubDate>Thu, 09 Dec 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</guid>
+      <description>This Smelly Code post discusses mainly a testability issue without going into further detail on other things like readability which could be improved for sure as well.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t Let Your Test Doubles Fool You</title>
+      <link>https://juristr.com/blog/2010/11/dont-let-your-test-doubles-fool-you/</link>
+      <pubDate>Thu, 25 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/dont-let-your-test-doubles-fool-you/</guid>
+      <description>During unit testing it is common to substitute dependencies with a test double (see Martin Fowler&#39;s disambiguation). This is necessary for isolating the tested environment and consequently also the potential source of error in case of a test failure.</description>
+    </item>
+    
+    <item>
+      <title>Testing Your SUT Against Exceptions</title>
+      <link>https://juristr.com/blog/2010/11/testing-your-sut-against-exceptions/</link>
+      <pubDate>Tue, 23 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/testing-your-sut-against-exceptions/</guid>
+      <description>When you test your method for exceptions (which is good practice) the usually naive approach - which btw I was following myself till today - is to wrap your method under test with an appropriate try-catch and set a boolean.</description>
+    </item>
+    
+    <item>
+      <title>Test-Driven Development and Automated Testing: A Metaphor</title>
+      <link>https://juristr.com/blog/2010/10/test-driven-development-and-automated/</link>
+      <pubDate>Fri, 15 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/10/test-driven-development-and-automated/</guid>
+      <description>Motivation is an important factor when learning something new. It is what makes you ambitious and what helps you forget the effort that needs to be invested.</description>
+    </item>
+    
+    <item>
+      <title>Smelly Code: Eager Test</title>
+      <link>https://juristr.com/blog/2010/09/smelly-code-eager-test/</link>
+      <pubDate>Wed, 29 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/smelly-code-eager-test/</guid>
+      <description>This post shows a common code smell in unit tests also mentioned in the xunit test patterns book, namely &#34;Eager tests&#34;. Original, smelly code public void testSaveSession(){</description>
+    </item>
+    
+    <item>
+      <title>Design Tech Talk Series Presents: OO Design for Testability</title>
+      <link>https://juristr.com/blog/2010/08/design-tech-talk-series-presents-oo/</link>
+      <pubDate>Wed, 18 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/08/design-tech-talk-series-presents-oo/</guid>
+      <description>One of the main challenges in adopting TDD methodologies and automated testing with xUnit frameworks is to create an appropriate OO design that is testable.</description>
+    </item>
+    
+    <item>
+      <title>TDD Test == Unit Test or TDD Test &lt;&gt; Unit Test?? Is it Really Important??</title>
+      <link>https://juristr.com/blog/2010/08/tdd-test-unit-test-or-tdd-test-unit/</link>
+      <pubDate>Mon, 16 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/08/tdd-test-unit-test-or-tdd-test-unit/</guid>
+      <description>Recently I had an interesting&amp;nbsp;buzz conversation with a former work-mate, Peter. Just like myself he heavily orientates his learning to best practices, especially into agile software development methodologies and automated testing.</description>
+    </item>
+    
+    <item>
+      <title>Do I Really Need to Test This??</title>
+      <link>https://juristr.com/blog/2010/08/do-i-really-need-to-test-this/</link>
+      <pubDate>Tue, 03 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/08/do-i-really-need-to-test-this/</guid>
+      <description>Yes! Let&#39;s start straight of with an example. Consider I have my service (business) class SourceCodeItemService and an according SourceCodeItemDao class in my nicely layered app and there is the method removeSourceCodeItem(SourceCodeItem) with the following content</description>
+    </item>
+    
+    <item>
+      <title>Testing Newbies: Some Thoughts about Test First</title>
+      <link>https://juristr.com/blog/2010/07/testing-newbies-some-thoughts-about/</link>
+      <pubDate>Fri, 30 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/testing-newbies-some-thoughts-about/</guid>
+      <description>A quick post just before diving into the weekend filled with Yoseikan training, swimming, going out with friends and - of course - Android coding :) .</description>
+    </item>
+    
+    <item>
+      <title>Let tests guide you through development</title>
+      <link>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</link>
+      <pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</guid>
+      <description>I&#39;m currently working on my MSc thesis work which is divided into a project that has to be developed (in my case an Android application) and then the according paper that has to be written.</description>
+    </item>
+    
+    <item>
+      <title>Android Instrumentation test - AndroidTestCase: java.lang.IllegalAccessError</title>
+      <link>https://juristr.com/blog/2010/06/android-instrumentation-test/</link>
+      <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/06/android-instrumentation-test/</guid>
+      <description>Today I started writing the instrumentation tests for the Android platform side of the project. For your understanding, here&#39;s the structure of my situation:</description>
+    </item>
+    
+    <item>
+      <title>Why factories with configuration files are better for decoupling but still a testability killer</title>
+      <link>https://juristr.com/blog/2010/05/why-factories-with-configuration-files/</link>
+      <pubDate>Mon, 31 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/05/why-factories-with-configuration-files/</guid>
+      <description>As I already highlighted in several previous posts one of the most critical things when facing unit testing is an appropriate design. My sensation is that those rejecting unit tests.</description>
+    </item>
+    
+    <item>
+      <title>Can you trust your tests?</title>
+      <link>https://juristr.com/blog/2010/05/can-you-trust-your-tests/</link>
+      <pubDate>Fri, 14 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/05/can-you-trust-your-tests/</guid>
+      <description>One important thing about unit testing but also about testing in general is that you can trust&amp;nbsp;your tests. If that nice little bar shines green, then your logic should be fine.</description>
+    </item>
+    
+    <item>
+      <title>Test-Driven-Design: A real world scenario of an email sending requirement</title>
+      <link>https://juristr.com/blog/2010/04/test-driven-design-real-world-scenario/</link>
+      <pubDate>Thu, 15 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/04/test-driven-design-real-world-scenario/</guid>
+      <description>Many applications have requirements to send automatic emails to their users, especially in web environments. So it was also in my case.
+Summarizing in a few words, the requirement was the following: Automatically send an email notification to the company coordinator as well as to the admin (in CC) in case of a rectification of an already transmitted order (let&#39;s call it this way).</description>
+    </item>
+    
+    <item>
+      <title>Unit testing asynchronous code</title>
+      <link>https://juristr.com/blog/2010/04/unit-testing-asynchronous-code/</link>
+      <pubDate>Sun, 04 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/04/unit-testing-asynchronous-code/</guid>
+      <description>Today I wrote on a first prototype for my current thesis research. I started coding just ahead however - at the same time - trying to find a good design which has a high potential to be reused for the final system.</description>
+    </item>
+    
+    <item>
+      <title>Creating Test Suites with jUnit 4</title>
+      <link>https://juristr.com/blog/2009/12/creating-test-suites-with-junit-4/</link>
+      <pubDate>Fri, 25 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/creating-test-suites-with-junit-4/</guid>
+      <description>A while back I&#39;ve posted about how to enable the automatic (jUnit 3.8-style) creation of test suites in Eclipse. That was necessary for Eclipse 3.</description>
+    </item>
+    
+    <item>
+      <title>Part 1: Writing testable code for the Android</title>
+      <link>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</link>
+      <pubDate>Tue, 20 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</guid>
+      <description>Creating testable code is one of the major aims when designing good, maintainable applications. I actually just started to take a look at developing for the Android and after playing a bit around with UI components, I started to develop a design that allows me to create a nicely testable Android app.</description>
+    </item>
+    
+    <item>
+      <title>Law of Demeter: Nice metaphor</title>
+      <link>https://juristr.com/blog/2009/09/law-of-demeter-nice-metaphor/</link>
+      <pubDate>Tue, 22 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/law-of-demeter-nice-metaphor/</guid>
+      <description>I just came across a nice metaphor for explaining the Law of Demeter. For those of you that didn&#39;t yet hear about it, the Law of Demeter is a object oriented design principle.</description>
+    </item>
+    
+    <item>
+      <title>It is not about writing tests, its about writing stories</title>
+      <link>https://juristr.com/blog/2009/09/it-is-not-about-writing-tests-its-about/</link>
+      <pubDate>Fri, 04 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/it-is-not-about-writing-tests-its-about/</guid>
+      <description>Writing unit test and moreover having them in place when developing is a great thing. They give you some kind of assurance (if well done).</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Getting started with JUnit testing for Liferay portlets with Netbeans (for Eclipse users)</title>
+      <link>https://juristr.com/blog/2009/06/howto-getting-started-with-junit/</link>
+      <pubDate>Wed, 10 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/06/howto-getting-started-with-junit/</guid>
+      <description>Besides at work, where I&#39;m developing in .Net using Visual Studio, I&#39;m a heavy Eclipse user. I use it for a lot of things, programming J2ME, J2EE, when developing Java desktop clients (using Eclipse RCP) or even when writing LaTeX documents.</description>
+    </item>
+    
+    <item>
+      <title>JsTestDriver - Easy unit testing for JavaScript code</title>
+      <link>https://juristr.com/blog/2009/05/jstestdriver-easy-unit-testing-for/</link>
+      <pubDate>Mon, 25 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/jstestdriver-easy-unit-testing-for/</guid>
+      <description>Today this video got my attention which is basically a short demo of JsTestDriver, a nice implementation of easy unit testing for JavaScript code. This allows to easily create automated test for multiple browsers.</description>
+    </item>
+    
+    <item>
+      <title>Help, my MSTest DeploymentItem doesn&#39;t get deployed!</title>
+      <link>https://juristr.com/blog/2009/05/help-my-mstest-deploymentitem-doesnt/</link>
+      <pubDate>Sat, 23 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/help-my-mstest-deploymentitem-doesnt/</guid>
+      <description>MSTests allow you to define items you&#39;d like to deploy to the deployment directory when executing the test cases. There are different ways for achieving this, either to configure it in your LocalTestRun.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: testing jFace Action class taking a StructuredSelection object</title>
+      <link>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</link>
+      <pubDate>Thu, 15 Jan 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</guid>
+      <description>Let&#39;s consider the following jFace Action class:
+public class RateAction extends Action {
+private final int fRating;
+private IStructuredSelection fSelection;
+/**
+* @param rating</description>
+    </item>
+    
+    <item>
+      <title>Testing Ajax applications</title>
+      <link>https://juristr.com/blog/2008/06/testing-ajax-applications/</link>
+      <pubDate>Fri, 27 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/testing-ajax-applications/</guid>
+      <description>Testing the correct functioning of an application is a major issue in software development. Errors happen and cannot (always) be prevented upfront. There are however some approaches to filter bugs already during development</description>
+    </item>
+    
+  </channel>
+</rss>

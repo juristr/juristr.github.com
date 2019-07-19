@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jface on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/jface/</link>
+    <description>Recent content in Jface on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 15 Jan 2009 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/jface/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HowTo: testing jFace Action class taking a StructuredSelection object</title>
+      <link>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</link>
+      <pubDate>Thu, 15 Jan 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</guid>
+      <description>Let&#39;s consider the following jFace Action class:
+public class RateAction extends Action {
+private final int fRating;
+private IStructuredSelection fSelection;
+/**
+* @param rating</description>
+    </item>
+    
+    <item>
+      <title>JFace Table API with Eclipse RCP</title>
+      <link>https://juristr.com/blog/2008/11/jface-table-api-with-eclipse-rcp/</link>
+      <pubDate>Thu, 20 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/jface-table-api-with-eclipse-rcp/</guid>
+      <description>Today I had to create a new view inside on an Eclipse RCP application representing data inside a table. I found the following article</description>
+    </item>
+    
+  </channel>
+</rss>

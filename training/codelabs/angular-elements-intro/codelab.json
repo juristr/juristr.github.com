@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "source": "11q59PfLojaadjMOznPzHhjUFG0S76nMWgSRWR6COfWM",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-03-18T20:49:45Z",
+  "id": "angular-elements-intro",
+  "duration": 31,
+  "title": "Introduction to Angular Elements",
+  "author": "Juri Strumpflohner",
+  "summary": "This codelab gives you an introduction to the power of Angular Elements",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "angular"
+  ],
+  "feedback": "https://github.com/juristr/ama/issues/new",
+  "url": "angular-elements-intro"
+}

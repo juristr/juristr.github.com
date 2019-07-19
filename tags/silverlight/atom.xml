@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Silverlight on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/silverlight/</link>
+    <description>Recent content in Silverlight on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 23 Dec 2008 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/silverlight/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First steps with Silverlight. What about GWT?</title>
+      <link>https://juristr.com/blog/2008/12/first-steps-with-silverlight-what-about/</link>
+      <pubDate>Tue, 23 Dec 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/12/first-steps-with-silverlight-what-about/</guid>
+      <description>Last week I had some time which allowed me to do some experiments with Microsoft Silverlight. I had to give it a try since you hear so much on the web about it, so I was quite curious, how it works out.</description>
+    </item>
+    
+  </channel>
+</rss>

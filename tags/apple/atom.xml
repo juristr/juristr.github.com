@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apple on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/apple/</link>
+    <description>Recent content in Apple on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 07 Jun 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/apple/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Should Android Worry About the iOS 5 Update? Definitely Not!</title>
+      <link>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</link>
+      <pubDate>Tue, 07 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</guid>
+      <description>With the announcement of the new iOS 5 at the WWDC, the first articles emerge already on the web relating the new features with the existing Android OS.</description>
+    </item>
+    
+    <item>
+      <title>Time Machine backups to Windows shared network drive</title>
+      <link>https://juristr.com/blog/2010/01/time-machine-backups-to-windows-shared/</link>
+      <pubDate>Sun, 31 Jan 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/01/time-machine-backups-to-windows-shared/</guid>
+      <description>As some of you may have already read I acquired a MacBook Pro about half a year ago and I love it ;) . Now one of the really cool things OS X provides is Time Machine backups.</description>
+    </item>
+    
+    <item>
+      <title>Annotation tools for the Mac</title>
+      <link>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</link>
+      <pubDate>Tue, 06 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</guid>
+      <description>When you create scientific reports or you just prepare for exams you usually have to go over a whole bunch of papers, lecture notes and websites.</description>
+    </item>
+    
+  </channel>
+</rss>

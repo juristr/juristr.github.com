@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "source": "1ep5vNS21zP1ZMI2MwWTQ9-VWGrcrgwNI33N9fLJNtF8",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2018-10-24T16:53:01Z",
+  "id": "angular-localization-ngx-translate",
+  "duration": 18,
+  "title": "Angular Localization with ngx-translate",
+  "author": "Juri Strumpflohner",
+  "summary": "Learn how to localize your application with ngx-translate",
+  "theme": "web",
+  "status": [
+    "released"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "angular"
+  ],
+  "feedback": "https://github.com/juristr/codelab-ng-http-basics/issues",
+  "url": "angular-localization-ngx-translate"
+}

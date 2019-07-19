@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Preparing for Angular 2 | juri.strumpflohner</title>
+	
+	<meta name="description" content="Collection of best practices to be ready for Angular 2">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Preparing for Angular 2" />
+	
+	<meta name="twitter:description" content="Collection of best practices to be ready for Angular 2" />
+	
+
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Preparing for Angular 2" />
+	
+	<meta property="og:description" content="Collection of best practices to be ready for Angular 2" />
+	
+	
+	<meta property="og:url" content="https://juristr.com/blog/2015/07/learning-ng-prepare-ng2" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2015%2f07%2flearning-ng-prepare-ng2%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2015%2f07%2flearning-ng-prepare-ng2%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Preparing for Angular 2</h1>
+                
+                <h2 class="article-subtitle">Collection of best practices to be ready for Angular 2</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Jul 6, 2015
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">6 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+
+<p>I&rsquo;m sure you heard about Angular 2 and that it will be <strong>totally</strong> different. Forget everything you know and start from scratch 😮 . Jokes apart, if you have taken a closer look you already know that, yes, it will be new, things will be different (as it&rsquo;s mostly the case with new stuff), but many concepts will still be there. Well, as Angular 2 starts getting more and more concrete, articles, videos and podcasts get published that contains lots of useful information on how to get prepared an eventual migration scenario. I use this article to collect such best practices for myself and and obviously to share them with you!</p>
+
+<p><strong>Totally feel free</strong> to submit new practices in my comments. That&rsquo;d be awesome! You can also directly submit a PR as <a href="https://github.com/juristr/juristr.github.com">this blog is Open Source</a>. Simply click the &ldquo;Contribute&rdquo; link above.</p>
+
+<p class="notice fact"
+    <strong>Keep an eye on this post</strong> here as I will update it from now and then as I stumble upon new things. Following is easy, simply <a href="http://feeds.feedburner.com/juristrumpflohner">subscribe to the RSS</a> feed or <a href="https://twitter.com/juristr">follow me on Twitter</a>.
+</p>
+
+<h2 id="get-rid-of-scope-controller-as-syntax">Get rid of $scope: controller-as syntax</h2>
+
+<p>Definitely switch over to the <a href="https://github.com/johnpapa/angular-styleguide#controllers">controller-as syntax</a> and get rid of <code>$scope</code> in your controller files as well as in the templates.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-controller</span><span class="o">=</span><span class="s">&#34;PersonController as personCtrl&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-repeat</span><span class="o">=</span><span class="s">&#34;person in personCtrl.people&#34;</span><span class="p">&gt;</span>
+        {% raw %}{{ person.name }}{% endraw %}
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">ng-click</span><span class="o">=</span><span class="s">&#34;personCtrl.add()&#34;</span><span class="p">&gt;</span>Add<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span>
+    <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;PersonController&#39;</span><span class="p">,</span> <span class="nx">PersonController</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">PersonController</span><span class="p">(){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">people</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Juri&#39;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Steffi&#39;</span>
+        <span class="p">}</span>
+    <span class="p">];</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>First of all, Angular 2 won&rsquo;t have any concept of <code>$scope</code> and then - especially in the HTML - using the controller-as syntax avoids a lot of headache when it comes to nested controllers.</p>
+
+<h3 id="links">Links</h3>
+
+<ul>
+<li><a href="https://github.com/johnpapa/angular-styleguide#controllers">Angular StyleGuide</a></li>
+<li><a href="http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html">Exploring Angular 1.3: Binding to Directive Controllers</a></li>
+</ul>
+
+<h2 id="use-directive-controllers-where-possible">Use directive controllers where possible</h2>
+
+<p>When you create new Angular directives you actually have different possibilities where to define your logic:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span>
+    <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;personDisplay&#39;</span><span class="p">,</span> <span class="nx">PersonDisplayDirective</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">PersonDisplayDirective</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">compile</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">attrs</span><span class="p">){</span>
+            <span class="c1">// implement logic
+</span><span class="c1"></span>        <span class="p">},</span>
+        <span class="nx">link</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">iElement</span><span class="p">,</span> <span class="nx">iAttrs</span><span class="p">){</span>
+            <span class="c1">// implement logic
+</span><span class="c1"></span>        <span class="p">},</span>
+        <span class="nx">controller</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="c1">// implement logic
+</span><span class="c1"></span>        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>When should we use which?? That&rsquo;s a common question among Angular devs. You can find some suggestions on the Angular docs and in various online communities, but it&rsquo;s not always that clear.</p>
+
+<p><strong>Angular 2 removes all of these</strong>, you&rsquo;ll have a component (directive) and a controller class associated to it. As an obvious result, <strong>people suggest to use &ldquo;directive controllers&rdquo; wherever possible</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span>
+    <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;personDisplay&#39;</span><span class="p">,</span> <span class="nx">PersonDisplayDirective</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">PersonDisplayDirective</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">controller</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="c1">// implement logic
+</span><span class="c1"></span>        <span class="p">},</span>
+        <span class="nx">controllerAs</span><span class="o">:</span> <span class="s1">&#39;vm&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>I asked on Twitter:</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">True to say we should avoid the compile/link fns and use directive controllers with bindToController etc. ? <a href="https://twitter.com/hashtag/angular?src=hash">#angular</a> //cc <a href="https://twitter.com/PascalPrecht">@PascalPrecht</a></p>&mdash; Juri Strumpflohner (@juristr) <a href="https://twitter.com/juristr/status/616859925193576450">July 3, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>Pascal Precht - Angular expert @ <a href="http://thoughtram.io">Thoughtram</a> - answered:</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/juristr">@juristr</a> In addition, it&#39;s much more aligned with the philosophy behind Angular 2 components. I recommend using controllers where possible</p>&mdash; Pascal Precht ʕ•̫͡•ʔ (@PascalPrecht) <a href="https://twitter.com/PascalPrecht/status/616877259895504896">July 3, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>From his perspective:</p>
+
+<ul>
+<li>No you shouldn&rsquo;t avoid them per se. The point is, as long as you do stuff that hasn&rsquo;t to be in compile/pre/postlink, put it in ctrl</li>
+<li>In other words, in most of the cases you actually don&rsquo;t need to deal with compile/link. Controller gives you everything you need</li>
+<li>Except for cases like ngModelController, which registers itself at ngFormController during preLink</li>
+<li>However, when controller is enough, use that. You don&rsquo;t have to deal with rather complicated compile/link things.</li>
+<li>In addition, it&rsquo;s much more aligned with the philosophy behind Angular 2 components. I recommend using controllers where possible</li>
+<li>Also easier to test!</li>
+</ul>
+
+<p>Note that one issue when you use directive controllers is often on how to reference the directive scope properties from within the controller - since we should possibly avoid <code>$scope</code>. Since Angular v1.3 there is the boolean <code>bindToController</code> property and recently in v1.4 they&rsquo;ve even improved it s.t. you can write things like</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">return</span> <span class="p">{</span>
+  <span class="nx">restrict</span><span class="o">:</span> <span class="s1">&#39;...&#39;</span><span class="p">,</span>
+  <span class="nx">bindToController</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">val1</span><span class="o">:</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span>
+    <span class="nx">val2</span><span class="o">:</span> <span class="s1">&#39;@&#39;</span>
+    <span class="p">...</span>
+  <span class="p">},</span>
+  <span class="nx">controller</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$log</span><span class="p">){</span>
+    <span class="c1">// access them with
+</span><span class="c1"></span>    <span class="nx">$log</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">val1</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>There&rsquo;s a nice article on Thoughtram about that. Follow the link below.</p>
+
+<h3 id="links-1">Links</h3>
+
+<ul>
+<li><a href="http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html">Exploring Angular 1.3: Binding to Directive Controllers</a></li>
+</ul>
+
+<h2 id="get-rid-of-ng-controller-write-directives">Get rid of ng-controller; Write Directives</h2>
+
+<p>Angular 2 follows the current trend of web components. Thus, it won&rsquo;t have autonomous controllers any more, but just in conjunction with so-called <strong>components</strong>. An Angular 2 app is a tree of nested components, with a top-level component being the app.</p>
+
+<p>So rather than having controllers, start to create such widgets or components that are autonomous. In Angular 1.x we know them as <strong>directives</strong>. Search for template dependent controllers and try to move them into separate directives. For example, refactoring the previous example we could get something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-controller</span><span class="o">=</span><span class="s">&#34;PersonController as personCtrl&#34;</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- PersonController scope --&gt;</span> 
+
+    <span class="p">&lt;</span><span class="nt">people-list</span> <span class="na">people</span><span class="o">=</span><span class="s">&#34;personCtrl.people&#34;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- PersonListController scope here --&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-repeat</span><span class="o">=</span><span class="s">&#34;person in personListCtrl.people&#34;</span><span class="p">&gt;</span>
+            {% raw %}{{ person.name }}{% endraw %}
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">ng-click</span><span class="o">=</span><span class="s">&#34;personListCtrl.add()&#34;</span><span class="p">&gt;</span>Add<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">people-list</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Note that <code>PersonController</code> passes in the data required by our list component. Thus it remains fairly re-usable. All it does is creating the UI functionality.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span>
+    <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="p">...</span>
+    <span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;peopleList&#39;</span><span class="p">,</span> <span class="nx">peopleListDirective</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">peopleListDirective</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">controllerAs</span><span class="o">:</span> <span class="s1">&#39;personListCtrl&#39;</span><span class="p">,</span>
+        <span class="nx">controller</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$attrs</span><span class="p">){</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">peopleList</span> <span class="o">=</span> <span class="nx">$scope</span><span class="p">.</span><span class="nb">eval</span><span class="p">(</span><span class="nx">$attrs</span><span class="p">.</span><span class="nx">people</span><span class="p">);</span>
+
+            <span class="k">this</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+                <span class="c1">// implementation
+</span><span class="c1"></span>            <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="start-writing-components">Start writing Components</h2>
+
+<p>Start <strong>writing components</strong>:</p>
+
+<ul>
+<li><code>restrict: 'E'</code> - restrict to elements as they will be a lot more common in Angular 2. (there are attribute directives as well, though)</li>
+<li><code>bindToController: {}</code> - makes it a lot easier to use the controllerAs syntax (<a href="http://blog.thoughtram.io/angularjs/2015/01/02/exploring-angular-1.3-bindToController.html">Thoughtram article</a>)</li>
+<li><code>controllerAs</code> - well&hellip;see the sections before about why</li>
+</ul>
+
+<p>Here&rsquo;s an example.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">myAngular1ComponentDirective</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">restrict</span><span class="o">:</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span>
+    <span class="nx">scope</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="nx">bindToController</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">user</span><span class="o">:</span> <span class="s1">&#39;=&#39;</span>
+    <span class="p">},</span>
+    <span class="nx">controller</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{},</span>
+    <span class="nx">controllerAs</span><span class="o">:</span> <span class="s1">&#39;vm&#39;</span><span class="p">,</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="p">[</span>
+      <span class="s1">&#39;&lt;p&gt;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Hi, {{ vm.user.name }}!&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;&lt;/p&gt;&#39;</span>
+    <span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Try it <a href="http://plnkr.co/edit/PBKTITr4Hl7daSvlLicM?p=info">yourself</a>.</p>
+
+<blockquote>
+<p><strong>Note</strong>, Angular v1.5 will introduce <code>.component()</code> which are even more similar to Angular 2 components. See <a href="http://toddmotto.com/exploring-the-angular-1-5-component-method/">Todd Motto&rsquo;s article on that</a>.</p>
+</blockquote>
+
+<h2 id="use-observables-instead-of-watch">Use Observables instead of $watch</h2>
+
+<p>David East <a href="https://www.youtube.com/watch?v=KWz7IAm35UM">recently spoke at Angular U</a> on how to prepare for upgrading to NG 2. What&rsquo;s particularly interesting is his usage of <a href="https://github.com/Reactive-Extensions/RxJS">Rx.js</a> to avoid <code>$watch</code>.</p>
+
+<p>Here&rsquo;s an example of a <code>peopleService</code> in the form of an Angular factory. Note, in the <code>subscribe</code> method, external listeners can register themselves on the Rx <code>ReplaySubject</code> for getting updates. The actual broadcasting happens in the <code>add</code> method which first performs the actual &ldquo;business&rdquo; logic (obviously quite simple in this demo service) and then broadcasts the changes.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;demo&#39;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="p">.</span><span class="nx">service</span><span class="p">(</span><span class="s1">&#39;peopleService&#39;</span><span class="p">,</span> <span class="nx">PeopleService</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">PeopleService</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">peopleSubject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Rx</span><span class="p">.</span><span class="nx">ReplaySubject</span><span class="p">();</span>
+
+  <span class="kd">var</span> <span class="nx">service</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">subscribe</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">subscription</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">peopleSubject</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">subscription</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="nx">add</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">people</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">people</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Name &#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">people</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="p">});</span>
+
+      <span class="c1">// broadcast
+</span><span class="c1"></span>      <span class="nx">peopleSubject</span><span class="p">.</span><span class="nx">next</span><span class="p">(</span><span class="nx">people</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="nx">service</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>At this point, on the <code>PeopleController</code> (or any other interested party) we can subscribe to those changes:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">PersonController</span><span class="p">(</span><span class="nx">peopleService</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+  <span class="nx">vm</span><span class="p">.</span><span class="nx">people</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="nx">peopleService</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">people</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">vm</span><span class="p">.</span><span class="nx">people</span> <span class="o">=</span> <span class="nx">people</span><span class="p">;</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In the <code>people-list</code> directive, when the button is clicked and the <code>add</code> method invoked, we forward the action to our service, which - as we&rsquo;ve seen - will broadcast the changes.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">peopleListDirective</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">controllerAs</span><span class="o">:</span> <span class="s1">&#39;peopleListCtrl&#39;</span><span class="p">,</span>
+    <span class="nx">controller</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$attrs</span><span class="p">,</span> <span class="nx">peopleService</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">people</span> <span class="o">=</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">$eval</span><span class="p">(</span><span class="nx">$attrs</span><span class="p">.</span><span class="nx">people</span><span class="p">);</span>
+
+      <span class="k">this</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">peopleService</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">people</span><span class="p">);</span>
+      <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<iframe src="http://embed.plnkr.co/bLTZhfhL4eaYYjsLG9oZ/preview" width="100%" height="400px"> </iframe>
+
+<h3 id="links-2">Links</h3>
+
+<ul>
+<li>Presentation by David East on preparing for Angular 2
+
+<ul>
+<li>Video: <a href="https://www.youtube.com/watch?v=KWz7IAm35UM">https://www.youtube.com/watch?v=KWz7IAm35UM</a></li>
+<li>Source Code: <a href="https://github.com/davideast/angularu-a2-migration">https://github.com/davideast/angularu-a2-migration</a></li>
+</ul></li>
+<li><a href="https://github.com/Reactive-Extensions/RxJS">Reactive Extensions - Rx.js</a></li>
+</ul>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/android/</link>
+    <description>Recent content in Android on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sun, 06 Jan 2013 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/android/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Transformer TF101 meets Jelly Bean powered by CyanogenMod</title>
+      <link>https://juristr.com/blog/2013/01/transformer-tf101-meets-jelly-bean-powered-by-cyanogenmod/</link>
+      <pubDate>Sun, 06 Jan 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/01/transformer-tf101-meets-jelly-bean-powered-by-cyanogenmod/</guid>
+      <description>During the Christmas holidays I found a bit of time to upgrade my old (but still nicely working) Nexus One to CyanogenMod 7 and I&amp;rsquo;m really happy about that.</description>
+    </item>
+    
+    <item>
+      <title>Scaling Android Emulator Size: Without using Eclipse</title>
+      <link>https://juristr.com/blog/2012/05/scaling-android-emulator-size-without/</link>
+      <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/05/scaling-android-emulator-size-without/</guid>
+      <description>As you might have read following my previous post&amp;nbsp;I&#39;m currently experimenting with mobile web solutions. In such a case, having an Android emulator is quite comfortable for quickly testing your solution.</description>
+    </item>
+    
+    <item>
+      <title>Android Development Tools</title>
+      <link>https://juristr.com/blog/2011/06/android-development-tools/</link>
+      <pubDate>Thu, 23 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/android-development-tools/</guid>
+      <description>Till recently,&amp;nbsp;(IMHO)&amp;nbsp;Android Developers had a very bad experience in designing graphical UIs for their Android apps. Personally I never relied on the graphical designer that was provided with the Android Eclipse plugin.</description>
+    </item>
+    
+    <item>
+      <title>Help, Gingerbread drains the Battery of my Nexus One!!</title>
+      <link>https://juristr.com/blog/2011/03/help-gingerbread-drains-battery-of-my/</link>
+      <pubDate>Mon, 07 Mar 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/03/help-gingerbread-drains-battery-of-my/</guid>
+      <description>A couple of days ago I finally got the eagerly awaited system upgrade to Gingerbread on my Nexus One. The update went pretty well, although some Nexus One users reported about problems with the updating process.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Android Development</title>
+      <link>https://juristr.com/blog/2011/02/getting-started-with-android/</link>
+      <pubDate>Wed, 23 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/getting-started-with-android/</guid>
+      <description>Android has become very popular recently, especially among developers which would like to create some nice apps for mobile environments. This trend can be noted also when looking at the Android category on Stackoverflow.</description>
+    </item>
+    
+    <item>
+      <title>Least Invasive Approach to Gain Root Access on the Nexus One</title>
+      <link>https://juristr.com/blog/2011/02/least-invasive-approach-to-gain-root/</link>
+      <pubDate>Mon, 14 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/least-invasive-approach-to-gain-root/</guid>
+      <description>For my current Android research project I needed to copy an APK to the /system/app folder. Now for that you need root rights. Well, that shouldn&#39;t be a problem, right?</description>
+    </item>
+    
+    <item>
+      <title>Deploy Android APK OTA Using Symbolic Links and Dropbox</title>
+      <link>https://juristr.com/blog/2011/02/deploy-android-apk-ota-using-symbolic/</link>
+      <pubDate>Thu, 10 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/deploy-android-apk-ota-using-symbolic/</guid>
+      <description>Couple of time ago I wrote a blog post describinghow you can use Dropbox for deploying your Android APK basically over-the-air to your device. That involved copying your APK to a dedicated Dropbox folder that can then be accessed from your Android device to install it.</description>
+    </item>
+    
+    <item>
+      <title>Coding an Update Functionality for your Android App</title>
+      <link>https://juristr.com/blog/2011/02/coding-update-functionality-for-your/</link>
+      <pubDate>Mon, 07 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/coding-update-functionality-for-your/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  An immediate answer would be: why should I need that. I publish my app on the market which has a build-in update functionality.</description>
+    </item>
+    
+    <item>
+      <title>Android: HowTo Detect Installed SQLite DB Version</title>
+      <link>https://juristr.com/blog/2011/01/android-howto-detect-installed-sqlite/</link>
+      <pubDate>Fri, 21 Jan 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/01/android-howto-detect-installed-sqlite/</guid>
+      <description>As you might already know, Android comes with a preinstalled SQLite database. This is quite handy because you can rely on it without the need to care about installing a DB along with your application (although you can, standalone, small DB&#39;s of course like HSQLDB).</description>
+    </item>
+    
+    <item>
+      <title>Update SDK to Platform Gingerbread 2.3: Conversion to Dalvik Format Failed</title>
+      <link>https://juristr.com/blog/2010/12/update-sdk-to-platform-gingerbread-23/</link>
+      <pubDate>Wed, 08 Dec 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/12/update-sdk-to-platform-gingerbread-23/</guid>
+      <description>Today I took the chance (and a bit of free time) to upgrade to the latest Android SDK release, namely Gingerbread. Experience has shown that you better back up your Eclipse as well as currently installed Android SDK folder, especially if you&#39;re working on an important project (which I consider my Master thesis project to be kind of ;)).</description>
+    </item>
+    
+    <item>
+      <title>Android: Attaching ClickListeners Declaratively</title>
+      <link>https://juristr.com/blog/2010/11/android-attaching-clicklisteners/</link>
+      <pubDate>Fri, 19 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/android-attaching-clicklisteners/</guid>
+      <description>If you define a click listener for - say - a button in an android Activity, then you basically have three different possibilities.
+The &#34;</description>
+    </item>
+    
+    <item>
+      <title>Smelly Code: Eager Test</title>
+      <link>https://juristr.com/blog/2010/09/smelly-code-eager-test/</link>
+      <pubDate>Wed, 29 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/smelly-code-eager-test/</guid>
+      <description>This post shows a common code smell in unit tests also mentioned in the xunit test patterns book, namely &#34;Eager tests&#34;. Original, smelly code public void testSaveSession(){</description>
+    </item>
+    
+    <item>
+      <title>Retrieve Selected Items on Checkable ListView: Differences in SDK Level 7 and 8</title>
+      <link>https://juristr.com/blog/2010/09/retrieve-selected-items-on-checkable/</link>
+      <pubDate>Tue, 14 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/retrieve-selected-items-on-checkable/</guid>
+      <description>I&#39;m currently testing my Android app that I&#39;m developing for my MSc thesis on different real devices. While I own a Nexus One with Android Froyo 2.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Install your Android app OTA on your device for testing</title>
+      <link>https://juristr.com/blog/2010/07/howto-install-your-android-app-ota-on/</link>
+      <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/howto-install-your-android-app-ota-on/</guid>
+      <description>A fundamental thing when developing Android apps but also in general when developing with device emulators is to test your app on real devices. Android makes this easy.</description>
+    </item>
+    
+    <item>
+      <title>Let tests guide you through development</title>
+      <link>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</link>
+      <pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</guid>
+      <description>I&#39;m currently working on my MSc thesis work which is divided into a project that has to be developed (in my case an Android application) and then the according paper that has to be written.</description>
+    </item>
+    
+    <item>
+      <title>Android Instrumentation test - AndroidTestCase: java.lang.IllegalAccessError</title>
+      <link>https://juristr.com/blog/2010/06/android-instrumentation-test/</link>
+      <pubDate>Sun, 06 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/06/android-instrumentation-test/</guid>
+      <description>Today I started writing the instrumentation tests for the Android platform side of the project. For your understanding, here&#39;s the structure of my situation:</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Get an Android app&#39;s database from the emulator</title>
+      <link>https://juristr.com/blog/2010/06/howto-get-android-apps-database-from/</link>
+      <pubDate>Thu, 03 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/06/howto-get-android-apps-database-from/</guid>
+      <description>Most apps need a database for storing their data onto the device in a structured form. Android&#39;s natively supported DB is SQLite. Now of course if you develop an app you&#39;ll probably have the need for inspecting the stored data during development.</description>
+    </item>
+    
+    <item>
+      <title>Android SMS activity doesn&#39;t fill phone number</title>
+      <link>https://juristr.com/blog/2009/12/android-sms-activity-doesnt-fill-phone/</link>
+      <pubDate>Sat, 26 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/android-sms-activity-doesnt-fill-phone/</guid>
+      <description>Today while fixing a bug for our current project we develop for the Android phone I found a strange behavior when trying to launch the phone&#39;s SMS sender activity.</description>
+    </item>
+    
+    <item>
+      <title>MapView doesn&#39;t fire onLongClick event</title>
+      <link>https://juristr.com/blog/2009/12/mapview-doesnt-fire-onlongclick-event/</link>
+      <pubDate>Wed, 02 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/mapview-doesnt-fire-onlongclick-event/</guid>
+      <description>Here&#39;s another curiosity I came across today while programming on my Android project. I was creating a MapView for displaying some interesting stuff on it.</description>
+    </item>
+    
+    <item>
+      <title>Implementing the onTouchEvent for the MapActivity</title>
+      <link>https://juristr.com/blog/2009/11/implementing-ontouchevent-for/</link>
+      <pubDate>Tue, 24 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/implementing-ontouchevent-for/</guid>
+      <description>Android View classes expose an onTouchEvent(MotionEvent ev) method. As the name already suggests, by overriding this method you can handle touch events done by the user on the current view.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Get the selected list index on Android Activity from context menu event</title>
+      <link>https://juristr.com/blog/2009/11/howto-get-selected-list-index-on/</link>
+      <pubDate>Wed, 11 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/howto-get-selected-list-index-on/</guid>
+      <description>Consider the situation where you have an Activity displaying a list of items. You have a context menu and a normal option menu. When pressing the option menu button, you can get the selected item and index as follows:</description>
+    </item>
+    
+    <item>
+      <title>Accessing the host machine from your Android emulator</title>
+      <link>https://juristr.com/blog/2009/10/accessing-host-machine-from-your/</link>
+      <pubDate>Thu, 29 Oct 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/accessing-host-machine-from-your/</guid>
+      <description>I recently started a project where I develop an Android app (there will some posts later on ;) ) which accesses a remote server as its back-end, hosted on the Google Appengine.</description>
+    </item>
+    
+    <item>
+      <title>Part 1: Writing testable code for the Android</title>
+      <link>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</link>
+      <pubDate>Tue, 20 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</guid>
+      <description>Creating testable code is one of the major aims when designing good, maintainable applications. I actually just started to take a look at developing for the Android and after playing a bit around with UI components, I started to develop a design that allows me to create a nicely testable Android app.</description>
+    </item>
+    
+  </channel>
+</rss>

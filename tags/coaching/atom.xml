@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coaching on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/coaching/</link>
+    <description>Recent content in Coaching on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 12 Feb 2013 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/coaching/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Coaching Architect</title>
+      <link>https://juristr.com/blog/2013/02/the-coaching-architect/</link>
+      <pubDate>Tue, 12 Feb 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/02/the-coaching-architect/</guid>
+      <description>In this talk, Roy Osherove speaks about how to become a better coach. A nice talk highlighting some of my personal principles I try to follow every day.</description>
+    </item>
+    
+  </channel>
+</rss>

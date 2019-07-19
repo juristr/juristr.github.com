@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interesting Apps on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/interesting-apps/</link>
+    <description>Recent content in Interesting Apps on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sun, 07 Feb 2010 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/interesting-apps/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reloaded: Clean up your folder. For MacOS</title>
+      <link>https://juristr.com/blog/2010/02/reloaded-clean-up-your-folder-for-osx/</link>
+      <pubDate>Sun, 07 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/reloaded-clean-up-your-folder-for-osx/</guid>
+      <description>When downloading files from the web I usually have a predefined folder where all the downloads from my different browsers are stored. It doesn&#39;t take long till that folder grows to quite a remarkable size.</description>
+    </item>
+    
+    <item>
+      <title>Annotation tools for the Mac</title>
+      <link>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</link>
+      <pubDate>Tue, 06 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</guid>
+      <description>When you create scientific reports or you just prepare for exams you usually have to go over a whole bunch of papers, lecture notes and websites.</description>
+    </item>
+    
+  </channel>
+</rss>

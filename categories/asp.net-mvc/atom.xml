@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asp.net Mvc on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/asp.net-mvc/</link>
+    <description>Recent content in Asp.net Mvc on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 14 Dec 2012 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/asp.net-mvc/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Programming ASP.net MVC4 by J. Chadwick, T. Snyder and H. Panda</title>
+      <link>https://juristr.com/blog/2012/12/programming-aspnet-mvc4/</link>
+      <pubDate>Fri, 14 Dec 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/12/programming-aspnet-mvc4/</guid>
+      <description>This is one of the recent books I got from O&amp;rsquo;Reilly. It is probably the most comprehensive and detailed one I&amp;rsquo;ve encountered so far regarding ASP.</description>
+    </item>
+    
+    <item>
+      <title>Output Caching in ASP.net MVC</title>
+      <link>https://juristr.com/blog/2012/10/output-caching-in-aspnet-mvc/</link>
+      <pubDate>Mon, 29 Oct 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/10/output-caching-in-aspnet-mvc/</guid>
+      <description>Although nowadays most of us have broadband connections, resource caching is important as loading a resource from your local HD is (by now) still faster than fetching it remotely.</description>
+    </item>
+    
+    <item>
+      <title>Lessons Learned: Don&#39;t Expose EF Entities to the Client Directly</title>
+      <link>https://juristr.com/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/</link>
+      <pubDate>Wed, 24 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/</guid>
+      <description>When we refactored our main application architecture, moving from an ASP.net WebForms app to a rich client JavaScript application with an ASP.net MVC REST backend, one of our main goals was to keep things as simple as possible.</description>
+    </item>
+    
+    <item>
+      <title>Strange Error When Downloading File in IE8 from SSL Site</title>
+      <link>https://juristr.com/blog/2012/07/strange-error-when-downloading-file-in/</link>
+      <pubDate>Mon, 16 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/strange-error-when-downloading-file-in/</guid>
+      <description>A couple of days ago, one of our clients called indicating that he wasn&amp;rsquo;t able to download a file from our server. The file was basically generated on the fly from our ASP.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net MVC3: Doesn&#39;t Deserialize Nullable Properties from Json</title>
+      <link>https://juristr.com/blog/2012/02/aspnet-mvc3-doesnt-deserialize-nullable/</link>
+      <pubDate>Tue, 07 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/02/aspnet-mvc3-doesnt-deserialize-nullable/</guid>
+      <description>A couple of days ago I noticed that the Nullable properties of a C# object were not properly deserialized when posting back a Json object to an MVC3 action.</description>
+    </item>
+    
+    <item>
+      <title>Why Did it Have to Be So Complicated Before??</title>
+      <link>https://juristr.com/blog/2011/08/why-did-it-have-to-be-so-complicated/</link>
+      <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/why-did-it-have-to-be-so-complicated/</guid>
+      <description>I started&amp;nbsp;web development using Java, basically during my studies at the university. When working on my bachelor degree thesis I needed a web server back-end system (to my mobile J2ME client); I decided to do it &#34;</description>
+    </item>
+    
+    <item>
+      <title>JavaScriptSerializer: Circular Reference was Detected While Serializing an Object of Type...</title>
+      <link>https://juristr.com/blog/2011/08/javascriptserializer-circular-reference/</link>
+      <pubDate>Fri, 12 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/javascriptserializer-circular-reference/</guid>
+      <description>Consider an ASP.net MVC web application where you use some Ajax for retrieving an object. Let&#39;s start from the server-side MVC controller:
+public class BaseDataController : Controller</description>
+    </item>
+    
+    <item>
+      <title>Posting JSON Data to an ASP.net MVC 3 Web Application</title>
+      <link>https://juristr.com/blog/2011/08/posting-json-data-to-aspnet-mvc-3-web/</link>
+      <pubDate>Thu, 04 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/posting-json-data-to-aspnet-mvc-3-web/</guid>
+      <description>The trend in today&#39;s web application development goes more and more in the direction of having rich, desktop-like applications. There are numerous examples on the web, just watch out while your navigating around (Google services are always a good place to look for such apps).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tooling on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/tooling/</link>
+    <description>Recent content in Tooling on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 23 May 2019 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/tooling/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Code Snippets for Visual Studio Code with ease</title>
+      <link>https://juristr.com/blog/2019/05/create-vscode-snippets/</link>
+      <pubDate>Thu, 23 May 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/05/create-vscode-snippets/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    When writing software, even when writing a blog post using Markdown, there are some pieces you have to write again and again. Either you&amp;rsquo;re lazy or you don&amp;rsquo;t remember the exact syntax, code snippets can really help here. Let&amp;rsquo;s see how.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setup your Workstation for JavaScript Development</title>
+      <link>https://juristr.com/blog/2019/04/setup-for-angular-dev/</link>
+      <pubDate>Fri, 26 Apr 2019 16:10:05 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/setup-for-angular-dev/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You want to learn about modern web development with JavaScript? Maybe Angular? Well, then it&amp;rsquo;s time to get you setup properly to get started. In this article we&amp;rsquo;ll go through some of the tools.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Blog Like a Hacker with Jekyll and Nitrous.IO</title>
+      <link>https://juristr.com/blog/2013/05/blog-like-a-hacker-with-jekyll-and-nitrousio/</link>
+      <pubDate>Wed, 08 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/05/blog-like-a-hacker-with-jekyll-and-nitrousio/</guid>
+      <description>One of the best moves I probably did about half a year ago was to move my Blog from blogger to Jekyll, hosted on GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Perfect Workflow in Sublime Text 2</title>
+      <link>https://juristr.com/blog/2013/05/perfect-workflow-in-sublime-text2/</link>
+      <pubDate>Mon, 06 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/05/perfect-workflow-in-sublime-text2/</guid>
+      <description>I previously wrote about my Sublime Text setup. Well, Tuts+ has published a quite nice Sublime Text tutorial showing most of Sublime&amp;rsquo;s features. Regardless of whether you&amp;rsquo;re a Sublime Text enthusiast or not, you should definitely take a look at the tutorial.</description>
+    </item>
+    
+    <item>
+      <title>My Sublime Text Setup</title>
+      <link>https://juristr.com/blog/2013/04/my-sublimetext-setup/</link>
+      <pubDate>Wed, 10 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/04/my-sublimetext-setup/</guid>
+      <description>I absolutely love this editor. A ridiculously fast editor which has everything you&amp;rsquo;d love to have, from a simple notepad to an advanced, extensible IDE with auto-completion and highlighting.</description>
+    </item>
+    
+    <item>
+      <title>Test Your App Under Slow Network Speeds</title>
+      <link>https://juristr.com/blog/2013/02/test-your-app-under-slow-network-speeds/</link>
+      <pubDate>Fri, 01 Feb 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/02/test-your-app-under-slow-network-speeds/</guid>
+      <description>I guess that I don&amp;rsquo;t have to start talking about the importance of testing in the software development process. There are couple of different kind of tests which I&amp;rsquo;m not going to mention now, but generally speaking a good test should verify the correct implementation of the business requirements but also test the software on its boundaries and edge cases.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Subscribe to Failed TFS Builds</title>
+      <link>https://juristr.com/blog/2012/11/howto-subscribe-to-failed-tfs-builds/</link>
+      <pubDate>Fri, 23 Nov 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/11/howto-subscribe-to-failed-tfs-builds/</guid>
+      <description>When you use a build server it is a must to get notified in case of build failures. Microsoft&amp;rsquo;s Team Foundation server has different possibilities to achieve this: using the Build Notification Tool or through so-called Alerts.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio: Where Did My Shelvesets Go?</title>
+      <link>https://juristr.com/blog/2012/11/visual-studio-where-did-my-shelvesets-go/</link>
+      <pubDate>Mon, 19 Nov 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/11/visual-studio-where-did-my-shelvesets-go/</guid>
+      <description>Do you use the TFS shelvesets?? I do, not regularly, but from now and then they&amp;rsquo;re quite useful for staging or even for sharing some unfinished work with others.</description>
+    </item>
+    
+    <item>
+      <title>Deploying: Git vs. TFS Showdown</title>
+      <link>https://juristr.com/blog/2012/11/deploying-git-vs-tfs-showdown/</link>
+      <pubDate>Fri, 16 Nov 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/11/deploying-git-vs-tfs-showdown/</guid>
+      <description>I think everyone agrees deployment should be as simple as possible. Seems like everyone talks about continuous integration/deployment/delivery. More and more people (and cloud providers) start using the source control mgmt system as their deployment solution.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio Tips</title>
+      <link>https://juristr.com/blog/2012/10/visual-studio-tips/</link>
+      <pubDate>Wed, 31 Oct 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/10/visual-studio-tips/</guid>
+      <description>At work, I spend a huge amount of my time working with Microsoft Technologies. As such, I also use Visual Studio. Here are some of the tipps and tricks to efficiently work with it.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio Tips</title>
+      <link>https://juristr.com/blog/2012/10/visual-studio-tips/</link>
+      <pubDate>Wed, 31 Oct 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/10/visual-studio-tips/</guid>
+      <description>At work, I spend a huge amount of my time working with Microsoft Technologies. As such, I also use Visual Studio. Here are some of the tipps and tricks to efficiently work with it.</description>
+    </item>
+    
+    <item>
+      <title>Find Code Duplicates with Sublime Text</title>
+      <link>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</guid>
+      <description>Code duplication is the worst practice ever, right? Well, actually there might be situations where duplicating can be better than factoring out, but these are very rare.</description>
+    </item>
+    
+    <item>
+      <title>UX: Why GitHub for Windows is better than VS TFS Integration</title>
+      <link>https://juristr.com/blog/2012/07/ux-why-github-for-windows-is-better/</link>
+      <pubDate>Tue, 24 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/ux-why-github-for-windows-is-better/</guid>
+      <description>Did you already try GitHub for Windows? It&#39;s created in a modern Win8 looking style. Initially it actually feels a little bit odd, but the more I use it, the more I like it.</description>
+    </item>
+    
+    <item>
+      <title>Setting up my Developer Machine</title>
+      <link>https://juristr.com/blog/2012/07/setting-up-my-developer-machine/</link>
+      <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/setting-up-my-developer-machine/</guid>
+      <description>Developers need to have fast&amp;nbsp;machines!&amp;nbsp;Today I just returned from a week of holidays at Kos (Greece). Amazing! So you might imagine that returning to work is usually less pleasant ;), but that changed when I opened Outlook and saw the email from our systems department that my new developer machine setup was ready.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio: Set the Build Action for an Entire Folder</title>
+      <link>https://juristr.com/blog/2012/05/visual-studio-set-build-action-for/</link>
+      <pubDate>Mon, 14 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/05/visual-studio-set-build-action-for/</guid>
+      <description>I&#39;m sure you already encountered this problem, right? In my specific case I have a folder called &#34;frontend&#34; with a bunch of JavaScript, CSS and view template (EJS) files; my rich JavaScript client basically.</description>
+    </item>
+    
+    <item>
+      <title>Eclipse: Importing existing project: &#34;Invalid project description&#34;</title>
+      <link>https://juristr.com/blog/2012/01/eclipse-importing-existing-project/</link>
+      <pubDate>Mon, 23 Jan 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/01/eclipse-importing-existing-project/</guid>
+      <description>Monday morning, 07:30 AM. Me, starting the computer after the weekend, executing a git pull from my repository&amp;nbsp;to fetch the latest src. Then I opened my freshly installed Eclipse JavaScript version followed by a nice &#34;</description>
+    </item>
+    
+    <item>
+      <title>Android Development Tools</title>
+      <link>https://juristr.com/blog/2011/06/android-development-tools/</link>
+      <pubDate>Thu, 23 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/android-development-tools/</guid>
+      <description>Till recently,&amp;nbsp;(IMHO)&amp;nbsp;Android Developers had a very bad experience in designing graphical UIs for their Android apps. Personally I never relied on the graphical designer that was provided with the Android Eclipse plugin.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio: The application cannot start</title>
+      <link>https://juristr.com/blog/2011/05/visual-studio-application-cannot-start/</link>
+      <pubDate>Wed, 25 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/visual-studio-application-cannot-start/</guid>
+      <description>Today I started my Visual Studio 2010 instance by using the &#34;Run as administrator&#34; option (as I often do when using the local IIS server for hosting my webapp).</description>
+    </item>
+    
+    <item>
+      <title>Trouble with the VS QualityTools.UnitTestFramework dll</title>
+      <link>https://juristr.com/blog/2011/04/trouble-with-vs-qualitytoolsunittestfra/</link>
+      <pubDate>Sat, 09 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/04/trouble-with-vs-qualitytoolsunittestfra/</guid>
+      <description>I recently build a tool that automates and simplifies the unit testing of large parts of our application&#39;s business layer. The system works by declaratively specifying scenarios in xml files which are read by using the MS test&#39;s data driven test cases and validated against a set of &#34;</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Teach Visual Studio to Remember Your TFS Password</title>
+      <link>https://juristr.com/blog/2010/08/howto-teach-visual-studio-to-remember/</link>
+      <pubDate>Wed, 11 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/08/howto-teach-visual-studio-to-remember/</guid>
+      <description>I often now ran into the problem of continuously getting queried for the TFS credentials when connecting to the company&#39;s TFS server from my personal notebook.</description>
+    </item>
+    
+    <item>
+      <title>Boost your productivity using shortcuts in Visual Studio</title>
+      <link>https://juristr.com/blog/2010/05/boost-your-productivity-using-shortcuts/</link>
+      <pubDate>Wed, 26 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/05/boost-your-productivity-using-shortcuts/</guid>
+      <description>A major aim of everyone is (or should be) to increase his personal productivity. Now productivity is a vast term actually. It can be related to individual programming productivity focusing on code quality problems but it can also be related to management issues and so on.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Prevent Visual Studio from auto-formatting your jQuery source</title>
+      <link>https://juristr.com/blog/2010/04/howto-prevent-visual-studio-from-auto/</link>
+      <pubDate>Wed, 07 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/04/howto-prevent-visual-studio-from-auto/</guid>
+      <description>When writing JavaScript code with Visual Studio 2008 it automatically formats your source code when going into a new line or placing the &#34;;&#34; delimiter.</description>
+    </item>
+    
+    <item>
+      <title>Visual Studio intellisense not working properly</title>
+      <link>https://juristr.com/blog/2009/11/visual-studio-intellisense-not-working_20/</link>
+      <pubDate>Fri, 20 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/visual-studio-intellisense-not-working_20/</guid>
+      <description>Recently a work mate pointed me out that my Visual Studio Intellisense seemed to not work correctly. When writing...
+this.Page.GetPostBackClientEvent(
+...the info with the remaining parameters should appear automatically which was not the case on my machine.</description>
+    </item>
+    
+    <item>
+      <title>Annotation tools for the Mac</title>
+      <link>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</link>
+      <pubDate>Tue, 06 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</guid>
+      <description>When you create scientific reports or you just prepare for exams you usually have to go over a whole bunch of papers, lecture notes and websites.</description>
+    </item>
+    
+    <item>
+      <title>Are C# regions a good thing??</title>
+      <link>https://juristr.com/blog/2009/09/are-c-regions-good-thing/</link>
+      <pubDate>Fri, 25 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/are-c-regions-good-thing/</guid>
+      <description>Well, I&#39;d say it depends. If you use regions to logically group your code in your class, then it may be a good thing &#39;cause people come to your class and see something like</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Changing TFS workitem type from task to bug</title>
+      <link>https://juristr.com/blog/2009/08/howto-changing-tfs-workitem-type-from/</link>
+      <pubDate>Fri, 07 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/howto-changing-tfs-workitem-type-from/</guid>
+      <description>Recently I found a bug while implementing another feature and in order to not forget it, I created a new work item for our Team Foundation bug tracking system.</description>
+    </item>
+    
+    <item>
+      <title>Page Speed: Firebug add-on for analyzing web page speed</title>
+      <link>https://juristr.com/blog/2009/06/page-speed-firebug-add-on-for-analyzing/</link>
+      <pubDate>Mon, 08 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/06/page-speed-firebug-add-on-for-analyzing/</guid>
+      <description>Google just released Page Speed, a Firefox add-on for analyzing web pages in terms of speed. The tool directly integrates into Firebug and automatically verifies your page against a set of best practices rules.</description>
+    </item>
+    
+    <item>
+      <title>Help, my MSTest DeploymentItem doesn&#39;t get deployed!</title>
+      <link>https://juristr.com/blog/2009/05/help-my-mstest-deploymentitem-doesnt/</link>
+      <pubDate>Sat, 23 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/help-my-mstest-deploymentitem-doesnt/</guid>
+      <description>MSTests allow you to define items you&#39;d like to deploy to the deployment directory when executing the test cases. There are different ways for achieving this, either to configure it in your LocalTestRun.</description>
+    </item>
+    
+    <item>
+      <title>Debugging and Testing the Web with Firebug</title>
+      <link>https://juristr.com/blog/2009/05/debugging-and-testing-web-with-firebug/</link>
+      <pubDate>Thu, 14 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/debugging-and-testing-web-with-firebug/</guid>
+      <description>Comment
+Rob Cambell, member of the Firebug working group gives a talk about Firebug, its history and a short intro to the newest features in the latest version and how to use them.</description>
+    </item>
+    
+    <item>
+      <title>Use Firebug everywhere!</title>
+      <link>https://juristr.com/blog/2009/04/use-firebug-everywhere/</link>
+      <pubDate>Fri, 17 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/use-firebug-everywhere/</guid>
+      <description>You&#39;re a web developer and you cannot live without Firebug? Understandable. Firebug provides such great facilities such as JavaScript debugging, direct content modification of CSS and HTML, DOM inspection and much more.</description>
+    </item>
+    
+    <item>
+      <title>Best practices: Deploying webapps (contd.)</title>
+      <link>https://juristr.com/blog/2009/03/best-practices-deploying-webapps-contd_20/</link>
+      <pubDate>Fri, 20 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/best-practices-deploying-webapps-contd_20/</guid>
+      <description>Some time ago I&#39;ve written a post about best practices in deploying web applications by mentioning the different environments
+ Development environment Testing environment Production environment</description>
+    </item>
+    
+    <item>
+      <title>Retrieving list of installed applications</title>
+      <link>https://juristr.com/blog/2008/05/retrieving-list-of-installed/</link>
+      <pubDate>Wed, 07 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/05/retrieving-list-of-installed/</guid>
+      <description>From now and then it happens that you have to reset your workstation, meaning to reformat your hard disk and install everything fresh. In this way you get rid of all the garbage on your PC.</description>
+    </item>
+    
+  </channel>
+</rss>

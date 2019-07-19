@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Design on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/software-design/</link>
+    <description>Recent content in Software Design on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 03 Nov 2015 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/software-design/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>REST Api Design - Resource Modeling</title>
+      <link>https://juristr.com/blog/2015/11/rest-api-design/</link>
+      <pubDate>Tue, 03 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/rest-api-design/</guid>
+      <description>Important note: this is not something I&#39;ve written up by myself, but it&#39;s rather a summary, some highlighting of the most important quotes with some of my comments for an awesome post on the Thoughtworks blog about API design.</description>
+    </item>
+    
+    <item>
+      <title>Breaking apart conceptions by Ayende Rahien</title>
+      <link>https://juristr.com/blog/2015/10/link-vid-breaking-apart-conceptions/</link>
+      <pubDate>Sun, 11 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/link-vid-breaking-apart-conceptions/</guid>
+      <description>Cool guy talking about the cost of abstractions and why you should often step out and critically look at what you do. Don&amp;rsquo;t do it because you always have done it like that.</description>
+    </item>
+    
+    <item>
+      <title>On Monoliths and Microservices</title>
+      <link>https://juristr.com/blog/2015/10/link-otto-monoliths-microservices/</link>
+      <pubDate>Fri, 02 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/link-otto-monoliths-microservices/</guid>
+      <description>Have cross-functional teams vertical decomposition: create vertical slices, being as independent from each other as possible (self-contained systems) vertical services may be even large -&amp;gt; split internally services don&amp;rsquo;t have a common DB as that would create a tight coupling between them good experiences with &amp;ldquo;Fat JARs&amp;rdquo; which can be executed via java -jar &amp;lt;file&amp;gt; (starting an embedded Jetty or something.</description>
+    </item>
+    
+    <item>
+      <title>Why You Should Avoid a Canonical Data Model</title>
+      <link>https://juristr.com/blog/2015/08/link-why-avoid-canonical-datamodels/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/link-why-avoid-canonical-datamodels/</guid>
+      <description>Stefan Tilkov writes about why canonical data models can be a bad thing. Totally agree as I&amp;rsquo;ve come across this by myself as well.
+Instead of trying to define one model for the entire application/service landscape, it would rather be a lot more productive to focus and define the data responsibility.</description>
+    </item>
+    
+    <item>
+      <title>Notes: Microservices by Martin Fowler</title>
+      <link>https://juristr.com/blog/2015/01/notes-microservices-fowler-xconf/</link>
+      <pubDate>Sat, 03 Jan 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/01/notes-microservices-fowler-xconf/</guid>
+      <description>I just watched Martin Fowler&amp;rsquo;s talk about Microservices at XConf. Here are some of my notes and related thoughts. The talk is heavily based upon Martin Fowler and James Lewis&amp;rsquo; article about Microservices, so you can find and read most of the information there.</description>
+    </item>
+    
+    <item>
+      <title>QCon London 2014 - Embracing Change - Building Adaptable Software with Events</title>
+      <link>https://juristr.com/blog/2014/04/building-adaptable-software-with-events/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/04/building-adaptable-software-with-events/</guid>
+      <description>Building adaptable software is what we continuously aim at achieving during our day to day work. However, at the same time, it&amp;rsquo;s probably the hardest part in software development.</description>
+    </item>
+    
+    <item>
+      <title>The narrow path between best practices and over-engineering</title>
+      <link>https://juristr.com/blog/2013/11/narrow-path-best-practices-overengineering/</link>
+      <pubDate>Tue, 19 Nov 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/11/narrow-path-best-practices-overengineering/</guid>
+      <description>A couple of days ago I read a post by Petri Kainulainen about The Dark Side of Best Practices. He really hit what - IMHO - on the one side should be totally obvious and common sense, but sadly, too often is not the case at all.</description>
+    </item>
+    
+    <item>
+      <title>Modularity in JavaScript MVC Frameworks</title>
+      <link>https://juristr.com/blog/2013/04/modularity-in-javascript-frameworks/</link>
+      <pubDate>Mon, 08 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/04/modularity-in-javascript-frameworks/</guid>
+      <description>JavaScript MVC architectures are a de-facto standard when you create complex single-page JavaScript applications. But it doesn&#39;t stop here. MVC helps to separate reponsibilities for coordinating the data (model) and visualization (view), but it doesn&#39;t have a concept for coordination among an application&#39;s modules or widgets as you might call them.</description>
+    </item>
+    
+    <item>
+      <title>The Coaching Architect</title>
+      <link>https://juristr.com/blog/2013/02/the-coaching-architect/</link>
+      <pubDate>Tue, 12 Feb 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/02/the-coaching-architect/</guid>
+      <description>In this talk, Roy Osherove speaks about how to become a better coach. A nice talk highlighting some of my personal principles I try to follow every day.</description>
+    </item>
+    
+    <item>
+      <title>Lessons Learned: Don&#39;t Expose EF Entities to the Client Directly</title>
+      <link>https://juristr.com/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/</link>
+      <pubDate>Wed, 24 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/10/lessions-learned-dont-expose-ef-entities-to-the-client-directly/</guid>
+      <description>When we refactored our main application architecture, moving from an ASP.net WebForms app to a rich client JavaScript application with an ASP.net MVC REST backend, one of our main goals was to keep things as simple as possible.</description>
+    </item>
+    
+    <item>
+      <title>Testing and the Single Responsibility Principle</title>
+      <link>https://juristr.com/blog/2012/07/testing-and-single-responsibility/</link>
+      <pubDate>Thu, 26 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/testing-and-single-responsibility/</guid>
+      <description>Automated testing is hard! Therefore, if you&#39;re about to learn it, just keep going. Resist the initial learning curve as afterwards it&#39;ll allow you to adopt a completely different programming style.</description>
+    </item>
+    
+    <item>
+      <title>Architecting for Failure at the Guardian</title>
+      <link>https://juristr.com/blog/2012/05/architecting-for-failure-at-guardian/</link>
+      <pubDate>Sun, 20 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/05/architecting-for-failure-at-guardian/</guid>
+      <description>Architecting for the Failure, a presentation of this year&#39;s QCon London 2012. Michael Brunton-Spall gives some insights into how they moved their architecture at the Guardian from a monolith system to a system composed of &#34;</description>
+    </item>
+    
+    <item>
+      <title>Sharpening the Tools</title>
+      <link>https://juristr.com/blog/2012/03/sharpening-tools/</link>
+      <pubDate>Wed, 14 Mar 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/03/sharpening-tools/</guid>
+      <description>This is a talk from Dan North about Sharpening the Tools at QCon 2010. I had the great pleasure to listen to this guy at this year&#39;s QCon (recap is in the drafts already and will be published soon btw).</description>
+    </item>
+    
+    <item>
+      <title>Questions for an Enterprise Architect</title>
+      <link>https://juristr.com/blog/2012/03/questions-for-enterprise-architect/</link>
+      <pubDate>Fri, 02 Mar 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/03/questions-for-enterprise-architect/</guid>
+      <description>Erik Dörnenburg answers: What is Enterprise and Evolutionary Architecture?, discussing 4 issues: Turning strategy into execution, Ensuring conformance, Where do the architects sit? Buying or building?</description>
+    </item>
+    
+    <item>
+      <title>Large-scale JavaScript Application Architecture</title>
+      <link>https://juristr.com/blog/2011/11/large-scale-javascript-application/</link>
+      <pubDate>Mon, 21 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/large-scale-javascript-application/</guid>
+      <description>JavaScript programming has evolved a lot over the past years and has somehow revolutionized the way you develop on the web. While many initially just used it as a scripting language to quickly hack in some dynamic behavior into traditional websites, it starts now to be used much more like a fully capable programming language (mainly also due to many emerging JavaScript libraries and more capable browsers).</description>
+    </item>
+    
+    <item>
+      <title>Some Usability Thoughts for the Weekend...</title>
+      <link>https://juristr.com/blog/2011/11/some-usability-thoughts-for-weekend/</link>
+      <pubDate>Fri, 18 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/some-usability-thoughts-for-weekend/</guid>
+      <description>A couple of days ago I got the order to write a very simple program that would take a bunch of XML input files with the task to elaborate them in terms of grouping them according to some identifier and then to output the result (grouped per directory) in a more user friendly and readable way.</description>
+    </item>
+    
+    <item>
+      <title>Integrating Jersey with Spring</title>
+      <link>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</link>
+      <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</guid>
+      <description>Spring provides a lot of benefits and promotes best practices with its dependency injection mechanism, application lifecycle management and Hibernate support (just to mention some).</description>
+    </item>
+    
+    <item>
+      <title>SmellyCode: A Classical Example of Non-Unittestable Code</title>
+      <link>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</link>
+      <pubDate>Mon, 20 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/smellycode-classical-example-of-non/</guid>
+      <description>I know there might be some degree of repetition in my posts when I speak about unit testing and mocking, but I always again come over similar problems in code I&#39;m reviewing.</description>
+    </item>
+    
+    <item>
+      <title>Smelly Code: Direct Object Instantiation as a Testability Killer</title>
+      <link>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</link>
+      <pubDate>Thu, 09 Dec 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/12/smelly-code-direct-object-instantiation/</guid>
+      <description>This Smelly Code post discusses mainly a testability issue without going into further detail on other things like readability which could be improved for sure as well.</description>
+    </item>
+    
+    <item>
+      <title>Design Tech Talk Series Presents: OO Design for Testability</title>
+      <link>https://juristr.com/blog/2010/08/design-tech-talk-series-presents-oo/</link>
+      <pubDate>Wed, 18 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/08/design-tech-talk-series-presents-oo/</guid>
+      <description>One of the main challenges in adopting TDD methodologies and automated testing with xUnit frameworks is to create an appropriate OO design that is testable.</description>
+    </item>
+    
+    <item>
+      <title>Practical example: Applying the Template Method design pattern</title>
+      <link>https://juristr.com/blog/2010/07/practical-example-applying-template/</link>
+      <pubDate>Tue, 13 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/practical-example-applying-template/</guid>
+      <description>As I already mentioned in my previous post I&#39;m currently doing domain objects to XSD generated object mapping. Monotonic, exactly, but I&#39;m approaching the end of the work.</description>
+    </item>
+    
+    <item>
+      <title>Why factories with configuration files are better for decoupling but still a testability killer</title>
+      <link>https://juristr.com/blog/2010/05/why-factories-with-configuration-files/</link>
+      <pubDate>Mon, 31 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/05/why-factories-with-configuration-files/</guid>
+      <description>As I already highlighted in several previous posts one of the most critical things when facing unit testing is an appropriate design. My sensation is that those rejecting unit tests.</description>
+    </item>
+    
+    <item>
+      <title>Unit testing asynchronous code</title>
+      <link>https://juristr.com/blog/2010/04/unit-testing-asynchronous-code/</link>
+      <pubDate>Sun, 04 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/04/unit-testing-asynchronous-code/</guid>
+      <description>Today I wrote on a first prototype for my current thesis research. I started coding just ahead however - at the same time - trying to find a good design which has a high potential to be reused for the final system.</description>
+    </item>
+    
+    <item>
+      <title>Tackle software dependencies with IoC and Dependency Injection</title>
+      <link>https://juristr.com/blog/2010/03/tackle-software-dependencies-with-ioc/</link>
+      <pubDate>Sun, 21 Mar 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/03/tackle-software-dependencies-with-ioc/</guid>
+      <description>Coupling between objects creates &#34;dependency&#34;, which per se is not bad at all. You will always have some dependencies among your objects. It becomes bad when it increases abnormally since that will make maintenance a nightmare.</description>
+    </item>
+    
+    <item>
+      <title>Are anonymous Lambda style event handlers a readability killer?</title>
+      <link>https://juristr.com/blog/2010/02/are-anonymous-lambda-style-event/</link>
+      <pubDate>Wed, 03 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/are-anonymous-lambda-style-event/</guid>
+      <description>A standard event handling method in C# looks something like this
+public void SomeOtherMethod()
+{
+MyClass aObj = new MyClass();
+aObj.MyCustomEventName += new EventHandler(OnMyCustomEventName);</description>
+    </item>
+    
+    <item>
+      <title>Comments smell! Replace them with more expressive code.</title>
+      <link>https://juristr.com/blog/2010/01/comments-smell-replace-them-with-more/</link>
+      <pubDate>Wed, 06 Jan 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/01/comments-smell-replace-them-with-more/</guid>
+      <description>As already pointed out in that post, here&#39;s another code example:
+...
+//300 = Italy
+if(aCompany.NationId == 300)
+{
+...
+}
+...
+The comment above the if clause is definitely a code smell.</description>
+    </item>
+    
+    <item>
+      <title>The power and simplicity of the Command pattern</title>
+      <link>https://juristr.com/blog/2009/12/power-and-simplicity-of-command-pattern/</link>
+      <pubDate>Thu, 10 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/power-and-simplicity-of-command-pattern/</guid>
+      <description>Never thought of how to implement an &#34;undo&#34; function? Not that easy, huh? People in our architecture class today came up with quite creative solutions: two separate stacks storing operations, versioning of the object to go back etc.</description>
+    </item>
+    
+    <item>
+      <title>Part 1: Writing testable code for the Android</title>
+      <link>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</link>
+      <pubDate>Tue, 20 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</guid>
+      <description>Creating testable code is one of the major aims when designing good, maintainable applications. I actually just started to take a look at developing for the Android and after playing a bit around with UI components, I started to develop a design that allows me to create a nicely testable Android app.</description>
+    </item>
+    
+    <item>
+      <title>Law of Demeter: Nice metaphor</title>
+      <link>https://juristr.com/blog/2009/09/law-of-demeter-nice-metaphor/</link>
+      <pubDate>Tue, 22 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/law-of-demeter-nice-metaphor/</guid>
+      <description>I just came across a nice metaphor for explaining the Law of Demeter. For those of you that didn&#39;t yet hear about it, the Law of Demeter is a object oriented design principle.</description>
+    </item>
+    
+    <item>
+      <title>Add semantic through your code, not through commenting</title>
+      <link>https://juristr.com/blog/2009/09/add-semantic-through-your-code-not/</link>
+      <pubDate>Sun, 13 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/add-semantic-through-your-code-not/</guid>
+      <description>Is it good to have a lot of code comments, explaining things s.t. your other team members know what was your intention when writing certain pieces?</description>
+    </item>
+    
+    <item>
+      <title>It is not about writing tests, its about writing stories</title>
+      <link>https://juristr.com/blog/2009/09/it-is-not-about-writing-tests-its-about/</link>
+      <pubDate>Fri, 04 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/it-is-not-about-writing-tests-its-about/</guid>
+      <description>Writing unit test and moreover having them in place when developing is a great thing. They give you some kind of assurance (if well done).</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t use negated method names!</title>
+      <link>https://juristr.com/blog/2009/08/dont-use-negated-method-names/</link>
+      <pubDate>Fri, 28 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/dont-use-negated-method-names/</guid>
+      <description>What does this mean. Don&#39;t write something like
+public bool IsNotCorrect(...)
+{
+...
+}
+but rather write
+public bool IsCorrect(...)
+{
+...
+}
+and the caller of the method then does the negation by calling it like</description>
+    </item>
+    
+    <item>
+      <title>Using code metrics as indicator for code refactoring</title>
+      <link>https://juristr.com/blog/2009/08/using-code-metrics-as-indicator-for/</link>
+      <pubDate>Sun, 02 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/using-code-metrics-as-indicator-for/</guid>
+      <description>Developing software is not just hacking in a solution, but to develop simple, well structured and therefore maintainable constructs. There are a couple of design guidelines that one should follow (some of them are here) to achieve this.</description>
+    </item>
+    
+    <item>
+      <title>ExecutableTask pattern to tackle J2ME multithreading</title>
+      <link>https://juristr.com/blog/2009/07/executabletask-pattern-to-tackle-j2me/</link>
+      <pubDate>Tue, 07 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/07/executabletask-pattern-to-tackle-j2me/</guid>
+      <description>Programming on the mobile device is quite different to more common environments like web or client-server desktop applications. Although mobile devices become always more and more powerful (i.</description>
+    </item>
+    
+    <item>
+      <title>jQuery plugin development pattern</title>
+      <link>https://juristr.com/blog/2009/04/jquery-plugin-development-pattern/</link>
+      <pubDate>Wed, 22 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/jquery-plugin-development-pattern/</guid>
+      <description>I&#39;m currently diving more and more into the jQuery library. First I&#39;m using it on a portlet I&#39;m developing for the Liferay portal server as the project for a university course and secondly I&#39;m planning to use jQuery on some ajax-enabled server controls I&#39;m designing (I&#39;m not yet 100% sure whether to use jQuery or Asp.</description>
+    </item>
+    
+    <item>
+      <title>Best practices: The challenge of designing software for wireless devices</title>
+      <link>https://juristr.com/blog/2009/04/best-practices-challenge-of-designing/</link>
+      <pubDate>Tue, 14 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/best-practices-challenge-of-designing/</guid>
+      <description>Designing good software for wireless devices such as mobile phones is not straightforward. Developers have to consider and address the device&#39;s constraints such as memory, processing power, input, screen etc.</description>
+    </item>
+    
+    <item>
+      <title>UML Use Case &#34;extend&#34; and &#34;include&#34; relationships</title>
+      <link>https://juristr.com/blog/2009/03/uml-use-case-extend-and-include/</link>
+      <pubDate>Tue, 17 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/uml-use-case-extend-and-include/</guid>
+      <description>From now and then I have to create UML diagrams to model certain parts of software projects, especially for the University. Initially, creating UML models, may seem annoying but in fact they can be very useful if they are applied correctly.</description>
+    </item>
+    
+    <item>
+      <title>Best practices: Deploying webapps</title>
+      <link>https://juristr.com/blog/2008/09/best-practices-deploying-webapps/</link>
+      <pubDate>Thu, 25 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/09/best-practices-deploying-webapps/</guid>
+      <description>I don&amp;rsquo;t really know whether you want to consider this a &amp;ldquo;best practices&amp;rdquo; or not, but I found the title appropriate. So the thing is how to deploy your webapp.</description>
+    </item>
+    
+    <item>
+      <title>Logical separation with MVC</title>
+      <link>https://juristr.com/blog/2008/03/logical-separation-with-mvc/</link>
+      <pubDate>Sat, 22 Mar 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/03/logical-separation-with-mvc/</guid>
+      <description>I&#39;m currently working on a personal project (which I&#39;ll publish here, so keep an eye on my blog ;) ) which I wanted to construct optimally in terms of the architecture.</description>
+    </item>
+    
+  </channel>
+</rss>

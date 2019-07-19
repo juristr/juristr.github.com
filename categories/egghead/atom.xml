@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Egghead on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/egghead/</link>
+    <description>Recent content in Egghead on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sun, 28 Apr 2019 12:00:09 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/egghead/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction to Angular Elements</title>
+      <link>https://juristr.com/blog/2019/04/intro-to-angular-elements/</link>
+      <pubDate>Sun, 28 Apr 2019 12:00:09 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/intro-to-angular-elements/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You didn&amp;rsquo;t yet get into Angular Elements? Then it&amp;rsquo;s time to give it a go! In this article we&amp;rsquo;re going to see what Angular Elements actually are, why they are useful and how to create our first Angular Element out of a plain component.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Productive Git for Developers</title>
+      <link>https://juristr.com/blog/2019/04/productive-git-for-developers/</link>
+      <pubDate>Tue, 16 Apr 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/productive-git-for-developers/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    With this Egghead course, I aim at a different goal. You will walk through a series of scenarios which you’ll most commonly encounter in your daily work life as a developer.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>RxJS finalize operator to execute logic on Observable termination</title>
+      <link>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</link>
+      <pubDate>Mon, 04 Mar 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In this article we&amp;rsquo;re going to have a look at the RxJS &lt;code&gt;finalize&lt;/code&gt; operator. To have a practical use case, let&amp;rsquo;s take a look at disabling/enabling a form submit button during an HTTP request.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Display Server Side Validation Errors with Angular</title>
+      <link>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</link>
+      <pubDate>Thu, 07 Feb 2019 20:30:31 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Input Validation is a big topic when it comes to forms. And even more in those large, enterprisey apps, where validation can become really crazy. Now, Angular forms of course provide different mechanisms for handling validation out of the box. However, in this article I won&amp;rsquo;t go into those details, I will rather show you a possible strategy for visualizing server side validation errors.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Guarantee Event Order with RxJS</title>
+      <link>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+  When you create dynamic UIs, you have to deal with async stuff a lot. Most often they are triggered by some user interaction. Things usually get tricky when you need to guarantee certain operations are executed in order. Since they are async we might not know which one returns first. Let&#39;s see how RxJS can help a lot here.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Egghead Lesson: Simple caching with RxJS</title>
+      <link>https://juristr.com/blog/2018/11/videolesson-rxjs-caching-angular/</link>
+      <pubDate>Sun, 11 Nov 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/11/videolesson-rxjs-caching-angular/</guid>
+      <description>This is the accompanying article for my latest Egghead video lesson on caching data in Angular by leveraging RxjS.     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>Egghead Lesson: Avoid memory leaks when subscribing to RxJS Observables in Angular Components</title>
+      <link>https://juristr.com/blog/2018/10/videolesson-avoid-memory-leaks/</link>
+      <pubDate>Mon, 29 Oct 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/10/videolesson-avoid-memory-leaks/</guid>
+      <description>RxJS is a first class citizen in every Angular application. It&#39;s extremely powerful, but there are also some things you should know and be aware of when using it.</description>
+    </item>
+    
+    <item>
+      <title>Demystifying dynamic Forms in Angular</title>
+      <link>https://juristr.com/blog/2017/10/demystify-dynamic-angular-forms/</link>
+      <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/10/demystify-dynamic-angular-forms/</guid>
+      <description>Heared about reactive Angular forms? Maybe even about dynamic forms? Never tried because you think it’s too complicated to setup and an overkill for your common use cases?</description>
+    </item>
+    
+    <item>
+      <title>Intercept HTTP Requests in Angular</title>
+      <link>https://juristr.com/blog/2017/08/intercept-http-requests-in-angular/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/08/intercept-http-requests-in-angular/</guid>
+      <description>Angular version 4.3.1 introduced one important new feature: the new HTTP client. Not only did it bring optimizations in how we can execute requests to backend APIs, but it made intercepting HTTP requests extremely easy.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Conditionally add styles to an element</title>
+      <link>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</link>
+      <pubDate>Mon, 25 Jan 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</guid>
+      <description>Here we&#39;re going through a couple of ways to conditionally apply some styles to a DOM element in Angular.     (adsbygoogle = window.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/angular/</link>
+    <description>Recent content in Angular on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 03 Jun 2019 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/angular/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Update to Angular Version 8 now!</title>
+      <link>https://juristr.com/blog/2019/06/angular-v8/</link>
+      <pubDate>Mon, 03 Jun 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/06/angular-v8/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Let&amp;rsquo;s dive into the latest Angular version 8 that just got released. We&amp;rsquo;ll quickly explore what&amp;rsquo;s new, why you should update, how that works and what you should watch out for.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular 8 and the Future - NGConf 2019 Roundup</title>
+      <link>https://juristr.com/blog/2019/05/Angular-8-and-the-Future-NGConf-2019-Roundup/</link>
+      <pubDate>Wed, 01 May 2019 17:30:08 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/05/Angular-8-and-the-Future-NGConf-2019-Roundup/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I&amp;rsquo;m not at NGConf 2019 (unfortunately). But I&amp;rsquo;m following along very closely with the Angular community (and as an Angular GDE) I&amp;rsquo;m particularly excited what&amp;rsquo;s currently being announced at Salt Lake City . As such I&amp;rsquo;m summarizing here my main takeaway from the conf.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lazy load Angular Components</title>
+      <link>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</link>
+      <pubDate>Mon, 29 Apr 2019 14:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</guid>
+      <description>Lazy loading is hot recently and for a good reason. It&amp;rsquo;s all about speed! The Chrome team at Google in specific (around Addy Osmani) tries to push out content (and new APIs) to optimize the heck out of web pages.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Angular Elements</title>
+      <link>https://juristr.com/blog/2019/04/intro-to-angular-elements/</link>
+      <pubDate>Sun, 28 Apr 2019 12:00:09 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/intro-to-angular-elements/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You didn&amp;rsquo;t yet get into Angular Elements? Then it&amp;rsquo;s time to give it a go! In this article we&amp;rsquo;re going to see what Angular Elements actually are, why they are useful and how to create our first Angular Element out of a plain component.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setup your Workstation for JavaScript Development</title>
+      <link>https://juristr.com/blog/2019/04/setup-for-angular-dev/</link>
+      <pubDate>Fri, 26 Apr 2019 16:10:05 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/setup-for-angular-dev/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You want to learn about modern web development with JavaScript? Maybe Angular? Well, then it&amp;rsquo;s time to get you setup properly to get started. In this article we&amp;rsquo;ll go through some of the tools.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>RxJS finalize operator to execute logic on Observable termination</title>
+      <link>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</link>
+      <pubDate>Mon, 04 Mar 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In this article we&amp;rsquo;re going to have a look at the RxJS &lt;code&gt;finalize&lt;/code&gt; operator. To have a practical use case, let&amp;rsquo;s take a look at disabling/enabling a form submit button during an HTTP request.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>A step-by-step guide to integrating a third party widget with Angular</title>
+      <link>https://juristr.com/blog/2019/02/ag-grid-integrating-with-angular/</link>
+      <pubDate>Thu, 14 Feb 2019 21:24:36 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/02/ag-grid-integrating-with-angular/</guid>
+      <description>When working on a complex project you will inevitably face the situation when you have to use a 3rd party widget in your project. Also, most of the web projects today use frameworks.</description>
+    </item>
+    
+    <item>
+      <title>Display Server Side Validation Errors with Angular</title>
+      <link>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</link>
+      <pubDate>Thu, 07 Feb 2019 20:30:31 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Input Validation is a big topic when it comes to forms. And even more in those large, enterprisey apps, where validation can become really crazy. Now, Angular forms of course provide different mechanisms for handling validation out of the box. However, in this article I won&amp;rsquo;t go into those details, I will rather show you a possible strategy for visualizing server side validation errors.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Explore Angular Router&#39;s  runGuardsAndResolvers</title>
+      <link>https://juristr.com/blog/2019/01/Explore-Angular-Routers-runGuardsAndResolvers/</link>
+      <pubDate>Thu, 31 Jan 2019 18:39:51 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/01/Explore-Angular-Routers-runGuardsAndResolvers/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Learn how we can use new options introduced for the &lt;code&gt;runGuardsAndResolvers&lt;/code&gt; setting for the Angular Router configuration to get a better control over when to run our resolvers and guards.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Guarantee Event Order with RxJS</title>
+      <link>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+  When you create dynamic UIs, you have to deal with async stuff a lot. Most often they are triggered by some user interaction. Things usually get tricky when you need to guarantee certain operations are executed in order. Since they are async we might not know which one returns first. Let&#39;s see how RxJS can help a lot here.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Learn Angular Router for Real-World Applications</title>
+      <link>https://juristr.com/blog/2018/12/egghead-learn-router-real-world-apps/</link>
+      <pubDate>Thu, 06 Dec 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/12/egghead-learn-router-real-world-apps/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Finally, it&#39;s out!!! My Angular router course is now available on Egghead, go grab it :)
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Better Redirects in Angular Route Guards</title>
+      <link>https://juristr.com/blog/2018/11/better-route-guard-redirects/</link>
+      <pubDate>Thu, 29 Nov 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/11/better-route-guard-redirects/</guid>
+      <description>Angular version 7.1 not only comes with bugfixes but includes also a bunch of new features. In this post I’d like to particularly take a look at the optimizations added to route guards.</description>
+    </item>
+    
+    <item>
+      <title>Egghead Lesson: Simple caching with RxJS</title>
+      <link>https://juristr.com/blog/2018/11/videolesson-rxjs-caching-angular/</link>
+      <pubDate>Sun, 11 Nov 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/11/videolesson-rxjs-caching-angular/</guid>
+      <description>This is the accompanying article for my latest Egghead video lesson on caching data in Angular by leveraging RxjS.     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>Egghead Lesson: Avoid memory leaks when subscribing to RxJS Observables in Angular Components</title>
+      <link>https://juristr.com/blog/2018/10/videolesson-avoid-memory-leaks/</link>
+      <pubDate>Mon, 29 Oct 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/10/videolesson-avoid-memory-leaks/</guid>
+      <description>RxJS is a first class citizen in every Angular application. It&#39;s extremely powerful, but there are also some things you should know and be aware of when using it.</description>
+    </item>
+    
+    <item>
+      <title>Simple State Management with RxJS’s scan operator</title>
+      <link>https://juristr.com/blog/2018/10/simple-state-management-with-scan/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/10/simple-state-management-with-scan/</guid>
+      <description>State management is a big topic currently in frontend development. For a reason: frontend frameworks/libraries got extremely powerful in the recent years, which led to more and more complex applications which need to be tamed.</description>
+    </item>
+    
+    <item>
+      <title>[object ErrorEvent] thrown by Karma in Angular Unit Tests</title>
+      <link>https://juristr.com/blog/2018/07/object-errorthrown-karma/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/07/object-errorthrown-karma/</guid>
+      <description>I’m pretty sure when you’ve already come across this exception: `[object ErrorEvent] thrown` when you execute your Karma tests in an Angular project. Not very helpful, right?</description>
+    </item>
+    
+    <item>
+      <title>In-depth: How do CDK Portals work?</title>
+      <link>https://juristr.com/blog/2018/06/how-cdk-portals-work/</link>
+      <pubDate>Tue, 26 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/06/how-cdk-portals-work/</guid>
+      <description>In the last article we were exploring how to leverage the Angular Material CDK portals for placing some piece of template from a component to some other location within our app.</description>
+    </item>
+    
+    <item>
+      <title>Dynamic UI with CDK TemplatePortal and DomPortalHost</title>
+      <link>https://juristr.com/blog/2018/05/dynamic-UI-with-cdk-portals/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/05/dynamic-UI-with-cdk-portals/</guid>
+      <description>Ever wanted to place some piece of UI dynamically from one component to another? But the component that owns the content doesn&#39;t have any connection to the component that should display the content.</description>
+    </item>
+    
+    <item>
+      <title>Extend the *ngIf Syntax to Create a Custom Permission Directive</title>
+      <link>https://juristr.com/blog/2018/02/angular-permission-directive/</link>
+      <pubDate>Wed, 21 Feb 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/02/angular-permission-directive/</guid>
+      <description>So our use case is to create a directive, which shows/hides elements on the page based on our currently authenticated user&#39;s permissions. In this article we will go over a very simple use case, but which could easily be extended and used in a real production application.</description>
+    </item>
+    
+    <item>
+      <title>Add Mocha reporter for Karma unit tests to your Angular CLI project</title>
+      <link>https://juristr.com/blog/2018/02/add-mocha-reporter-angular-cli-tests/</link>
+      <pubDate>Wed, 14 Feb 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/02/add-mocha-reporter-angular-cli-tests/</guid>
+      <description>Every Angular CLI generated project comes already with a test setup in place using Karma. I think the default &#34;progress&#34; test result report is not as nice however.</description>
+    </item>
+    
+    <item>
+      <title>Create a CD pipeline with Angular, GitLab and Firebase</title>
+      <link>https://juristr.com/blog/2018/02/cd-gitlab-angular-firebase/</link>
+      <pubDate>Thu, 08 Feb 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/02/cd-gitlab-angular-firebase/</guid>
+      <description>I’m a huge fan of automating all the stuff. Even if you’re a very precise and organized person, you’re likely to make mistakes. Be it because you do multiple things at the same time, you get distracted wherever.</description>
+    </item>
+    
+    <item>
+      <title>Create a ng-true-value &amp; ng-false-value directive for Angular</title>
+      <link>https://juristr.com/blog/2018/02/ng-true-value-directive/</link>
+      <pubDate>Thu, 01 Feb 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/02/ng-true-value-directive/</guid>
+      <description>If you come from AngularJS (v1.x) I&#39;m pretty sure you remember the `ng-true-value` and `ng-false-value` directive you could hook onto the checkbox elements in your forms.</description>
+    </item>
+    
+    <item>
+      <title>Compile-time vs. Runtime configuration of your Angular App</title>
+      <link>https://juristr.com/blog/2018/01/ng-app-runtime-config/</link>
+      <pubDate>Mon, 22 Jan 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/01/ng-app-runtime-config/</guid>
+      <description>When you develop a bigger application, chances are quite high that you need some kind of configuration. That can range from simply visualizing the app&#39;s version number to injecting custom themes etc.</description>
+    </item>
+    
+    <item>
+      <title>Three new Angular Courses to celebrate end of the Year 2017</title>
+      <link>https://juristr.com/blog/2017/12/egghead-three-ng-courses/</link>
+      <pubDate>Wed, 27 Dec 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/12/egghead-three-ng-courses/</guid>
+      <description>2017 has been AMAAAAZING (more in a later post..maybe). So before the year ends let&#39;s celebrate it with some new Angular courses. I&#39;ve just released 3 of them last week on egghead.</description>
+    </item>
+    
+    <item>
+      <title>Use Dynamic Components to render HTML for 3rd party libraries</title>
+      <link>https://juristr.com/blog/2017/11/dynamic-angular-components-for-rendering-html/</link>
+      <pubDate>Wed, 15 Nov 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/11/dynamic-angular-components-for-rendering-html/</guid>
+      <description>Dynamic components in Angular are very powerful and help you solve the trickiest problems. In this example we&#39;re going to learn how we can leverage dynamic Angular components to render the HTML of a popup controlled by a Leaflet map.</description>
+    </item>
+    
+    <item>
+      <title>Demystifying dynamic Forms in Angular</title>
+      <link>https://juristr.com/blog/2017/10/demystify-dynamic-angular-forms/</link>
+      <pubDate>Wed, 04 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/10/demystify-dynamic-angular-forms/</guid>
+      <description>Heared about reactive Angular forms? Maybe even about dynamic forms? Never tried because you think it’s too complicated to setup and an overkill for your common use cases?</description>
+    </item>
+    
+    <item>
+      <title>Understand How to Style Angular Components</title>
+      <link>https://juristr.com/blog/2017/08/understand-how-to-style-angular-components/</link>
+      <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/08/understand-how-to-style-angular-components/</guid>
+      <description>Here it is!!! 🔥 🔥 🔥 My very first Egghead.io course 😃. Learn everything you need to know about styling Angular components.  Contents are based on Angular version &amp;gt;=2  Last year I wrote an in depth article on how to conditionally style Angular components:</description>
+    </item>
+    
+    <item>
+      <title>Intercept HTTP Requests in Angular</title>
+      <link>https://juristr.com/blog/2017/08/intercept-http-requests-in-angular/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/08/intercept-http-requests-in-angular/</guid>
+      <description>Angular version 4.3.1 introduced one important new feature: the new HTTP client. Not only did it bring optimizations in how we can execute requests to backend APIs, but it made intercepting HTTP requests extremely easy.</description>
+    </item>
+    
+    <item>
+      <title>Create a dynamic tab component with Angular</title>
+      <link>https://juristr.com/blog/2017/07/ng2-dynamic-tab-component/</link>
+      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/07/ng2-dynamic-tab-component/</guid>
+      <description>The purpose of this article is to learn about the concept of dynamic components and template references in Angular by building a dynamic tab component.</description>
+    </item>
+    
+    <item>
+      <title>Enhanced *ngIf and *ngFor in Angular version 4.0.0</title>
+      <link>https://juristr.com/blog/2017/06/new-enhanced-ngIf-and-ngFor/</link>
+      <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/06/new-enhanced-ngIf-and-ngFor/</guid>
+      <description>Ever wanted an &#34;else&#34; statement in *ngIf? It&#39;s finally here, together with some other nice improvements around dealing with Observables in templates. Let&#39;s explore them here.</description>
+    </item>
+    
+    <item>
+      <title>Talks: Web meets Mobile powered by Angular</title>
+      <link>https://juristr.com/blog/2017/03/talks-web-meets-mobile/</link>
+      <pubDate>Thu, 23 Mar 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/03/talks-web-meets-mobile/</guid>
+      <description>I had the pleasure to bring 3 amazing speakers on board for our Software Craftsmanship South Tyrol Meetup group which I&#39;m organizing together with Christoph.</description>
+    </item>
+    
+    <item>
+      <title>Tuning Angular&#39;s Change Detection</title>
+      <link>https://juristr.com/blog/2017/03/angular-tuning-change-detection/</link>
+      <pubDate>Wed, 15 Mar 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/03/angular-tuning-change-detection/</guid>
+      <description>I recently prepared some course material for a modern web development workshop, which besides the nice features around ES6 obviously also included Angular. Change detection was part of that workshop and so I did some playing with it.</description>
+    </item>
+    
+    <item>
+      <title>Angular Modules vs ES6 Modules</title>
+      <link>https://juristr.com/blog/2017/03/angular-modules-vs-es6-modules/</link>
+      <pubDate>Thu, 09 Mar 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/03/angular-modules-vs-es6-modules/</guid>
+      <description>I often see people being confused when it comes to understanding Angular Modules vs. ES6 Modules. This happens especially for newcomers which enter the JavaScript and front-end development ecosystem and immediately get confronted with both of them.</description>
+    </item>
+    
+    <item>
+      <title>Video Course: Learning Angular Components</title>
+      <link>https://juristr.com/blog/2017/01/video-course-learning-ng-cmps/</link>
+      <pubDate>Mon, 23 Jan 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/01/video-course-learning-ng-cmps/</guid>
+      <description>I just released the 2nd edition of my video course for PacktPub on &#34;Learning Angular components&#34;.  Contents are based on Angular version &amp;gt;=2     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>Talk: Testing with Angular - Some Recipes</title>
+      <link>https://juristr.com/blog/2017/01/talk-angular-testing-recipes/</link>
+      <pubDate>Wed, 11 Jan 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/01/talk-angular-testing-recipes/</guid>
+      <description>I recently wanted to dive deeper into testing Angular applications, in specific on how to write proper unit tests for some common scenarious you might encounter.</description>
+    </item>
+    
+    <item>
+      <title>NG-BE Conf and the Angular Community &lt;3</title>
+      <link>https://juristr.com/blog/2016/12/angular-community-ngbe-conf/</link>
+      <pubDate>Sat, 31 Dec 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/12/angular-community-ngbe-conf/</guid>
+      <description>I was lucky enough to be part of the Belgium&#39;s first Angular conference: NG-BE conf. It was by far the best conference I&#39;ve attended so far!</description>
+    </item>
+    
+    <item>
+      <title>Interviewing Igor Minar and Adam Bradley for AngularBeers</title>
+      <link>https://juristr.com/blog/2016/12/ama-igor-angularbeers/</link>
+      <pubDate>Mon, 19 Dec 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/12/ama-igor-angularbeers/</guid>
+      <description>For the last meetup of 2016, AngularBeers organized an AMA session with Igor Minar (lead dev of Angular at Google) and Adam Bradley (lead dev of Ionic).</description>
+    </item>
+    
+    <item>
+      <title>Ok.. let me explain: it&#39;s going to be Angular 4.0, or simply Angular</title>
+      <link>https://juristr.com/blog/2016/12/let-me-explain-angular-release-cycles/</link>
+      <pubDate>Tue, 13 Dec 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/12/let-me-explain-angular-release-cycles/</guid>
+      <description>At the 8th and 9th of December 2016 was NG-BE, Belgium’s first Angular conference. Igor Minar (Angular lead dev) attended as the keynote speaker with some interesting announcements regarding Angular’s release schedule.</description>
+    </item>
+    
+    <item>
+      <title>Configure Ahead of Time (AoT) for your Angular app using the Angular CLI</title>
+      <link>https://juristr.com/blog/2016/12/configure-aot-with-angular-cli/</link>
+      <pubDate>Sat, 03 Dec 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/12/configure-aot-with-angular-cli/</guid>
+      <description>In our previous video we learned how to use the Angular CLI to create our first Angular application. Now it&#39;s time to prepare it for production.</description>
+    </item>
+    
+    <item>
+      <title>Safe Navigation Operator, RxJS and Async Pipe tinkering</title>
+      <link>https://juristr.com/blog/2016/11/safe-nav-operator-and-async-pipe/</link>
+      <pubDate>Wed, 16 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/safe-nav-operator-and-async-pipe/</guid>
+      <description>RxJS? Safe Navigation operator? Async pipes? Not sure what I&#39;m talking about? In this article I&#39;d like to explore some cool combination of Http, RxJS and Async Pipes.</description>
+    </item>
+    
+    <item>
+      <title>Custom validators in template driven Angular forms</title>
+      <link>https://juristr.com/blog/2016/11/ng2-template-driven-form-validators/</link>
+      <pubDate>Mon, 14 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/ng2-template-driven-form-validators/</guid>
+      <description>Angular version 2+ has two different kind of Forms API, the reactive and template driven approach. In this article we will focus on the template driven approach and learn how to use it as well as how to build a custom validator with it.</description>
+    </item>
+    
+    <item>
+      <title>Data bind radio button lists with Angular</title>
+      <link>https://juristr.com/blog/2016/11/ng2-binding-radiobutton-lists/</link>
+      <pubDate>Thu, 10 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/ng2-binding-radiobutton-lists/</guid>
+      <description>Assume you have a simple list or table of elements, each row having a radio button. The user can select one of the rows and your task is to determine the selected row entry.</description>
+    </item>
+    
+    <item>
+      <title>Configure a proxy for your API calls with Angular CLI</title>
+      <link>https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/</link>
+      <pubDate>Mon, 07 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/</guid>
+      <description>In this article (video included!) we will learn how to setup your Angular development server and how to configure it to properly communicate with your backend (REST) API.</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s create your first Angular app</title>
+      <link>https://juristr.com/blog/2016/10/lets-create-ur-first-ng2-app/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/10/lets-create-ur-first-ng2-app/</guid>
+      <description>Angular got released and so it&#39;s the perfect time to try it out. I totally understand it might be difficult to get started, but it doesn&#39;t have to.</description>
+    </item>
+    
+    <item>
+      <title>Angular: Using the JSONPipe for debugging</title>
+      <link>https://juristr.com/blog/2016/09/ng2-serialize-with-json-pipe/</link>
+      <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/09/ng2-serialize-with-json-pipe/</guid>
+      <description>A powerful way of debugging, especially templates, in Angular 1 was the JSON pipe (or filter) which could be used within a template. The pipe still natively exists in Angular.</description>
+    </item>
+    
+    <item>
+      <title>Angular: How do I get a reference to the window object?</title>
+      <link>https://juristr.com/blog/2016/09/ng2-get-window-ref/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/09/ng2-get-window-ref/</guid>
+      <description>Remember the $window object in Angular 1? Turned out to be quite useful from now and then. But what about Angular? $window doesn&#39;t exist there.</description>
+    </item>
+    
+    <item>
+      <title>Angular: How do I register an event listener on document?</title>
+      <link>https://juristr.com/blog/2016/09/ng2-event-registration-document/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/09/ng2-event-registration-document/</guid>
+      <description>I recently got asked by an Angular community member on Twitter how one can register an event on the document object. While it is totally possible to directly access the document object and hook up some listener, it is not suggested.</description>
+    </item>
+    
+    <item>
+      <title>Angular version 2.0.0 released!!</title>
+      <link>https://juristr.com/blog/2016/09/ng2-released/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/09/ng2-released/</guid>
+      <description>It was at the ng-Europe, on the 22-23 September 2014 when the Angular team came with a huge surprise: &#34;We&#39;re going to build Angular 2.</description>
+    </item>
+    
+    <item>
+      <title>Angular Forms - a first look</title>
+      <link>https://juristr.com/blog/2016/08/ng2-forms-first-look/</link>
+      <pubDate>Sat, 06 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/08/ng2-forms-first-look/</guid>
+      <description>Angular gets a brand new Forms API. It&#39;s fresh out of the compiler and since there&#39;s not much documentation around yet, @angular_zone powered by Gerard Sans and Wassim Chegham organized a Google Hangout with Kara Erickson, core contributor to the Forms Api.</description>
+    </item>
+    
+    <item>
+      <title>Angular 2&#43; - A Getting Started Guide for Beginners</title>
+      <link>https://juristr.com/blog/2016/06/ng2-getting-started-for-beginners/</link>
+      <pubDate>Mon, 06 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/06/ng2-getting-started-for-beginners/</guid>
+      <description>Since about half a year, I&#39;m organizing a local Meetup group around Software Craftsmanship. I recently also published a video course on &#34;Learning Angular 2 directives&#34;</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular 2 Directives</title>
+      <link>https://juristr.com/blog/2016/04/learning-angular2-directives-course/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/04/learning-angular2-directives-course/</guid>
+      <description>Finally 😆, I managed to finish and publish my very first video course: &#34;Learning Angular 2 Directives&#34; by Packt Publishing. So relieved, and I even managed to publish it before the official RC1 😉.</description>
+    </item>
+    
+    <item>
+      <title>Fine grained change detection with Angular</title>
+      <link>https://juristr.com/blog/2016/04/angular2-change-detection/</link>
+      <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/04/angular2-change-detection/</guid>
+      <description>Today, while working on my Angular screencast series (announcement coming soon), I discovered a strange behavior when dealing with Angular change detection. Here&#39;s what I found.</description>
+    </item>
+    
+    <item>
+      <title>Debugging Angular Applications from the Console</title>
+      <link>https://juristr.com/blog/2016/02/debugging-angular2-console/</link>
+      <pubDate>Wed, 10 Feb 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/02/debugging-angular2-console/</guid>
+      <description>There have been some quite useful articles for how to debug Angular 1.x applications from the browser&#39;s console. But how can we achieve the same in Angular?</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Creating a tabs component</title>
+      <link>https://juristr.com/blog/2016/02/learning-ng2-creating-tab-component/</link>
+      <pubDate>Tue, 02 Feb 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/02/learning-ng2-creating-tab-component/</guid>
+      <description>This is a follow-up article of thoughtram&#39;s excellent article on developing a tabs component with Angular, where we&#39;re going to explore an alternative way of creating a tab component by learning about @ContentChildren and AfterContentInit.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Conditionally add styles to an element</title>
+      <link>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</link>
+      <pubDate>Mon, 25 Jan 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</guid>
+      <description>Here we&#39;re going through a couple of ways to conditionally apply some styles to a DOM element in Angular.     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>Multi Content Projection aka Multiple Transclusion</title>
+      <link>https://juristr.com/blog/2016/01/ng2-multi-content-projection/</link>
+      <pubDate>Thu, 14 Jan 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/01/ng2-multi-content-projection/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  If you&amp;rsquo;re an AngularJS developer, I&amp;rsquo;m sure you heard about transclusion. Sounds really weird and mysterious, at least that&amp;rsquo;s what I thought when I first heard it.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading Angular from 1.x</title>
+      <link>https://juristr.com/blog/2015/12/link-upgrade-ng1-to-ng2/</link>
+      <pubDate>Wed, 16 Dec 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/12/link-upgrade-ng1-to-ng2/</guid>
+      <description>Yesterday the Angular team released Angular 2 in beta. With that, they also added an interesting step by step tutorial which guides you through upgrading an Angular 1.</description>
+    </item>
+    
+    <item>
+      <title>Componentizing Workflow for Angular</title>
+      <link>https://juristr.com/blog/2015/12/componentizing-workflow/</link>
+      <pubDate>Thu, 10 Dec 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/12/componentizing-workflow/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  $1  Yesterday I wrote a tweet about how I usually create components.
+Great workflow for refactoring unwieldy components :-) https://t.</description>
+    </item>
+    
+    <item>
+      <title>Use ngModelOptions to limit digest cycles</title>
+      <link>https://juristr.com/blog/2015/10/link-ng-model-options-speedup/</link>
+      <pubDate>Mon, 26 Oct 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/link-ng-model-options-speedup/</guid>
+      <description>Some good hints on how to speed up your Angular app by limiting digest cycles.</description>
+    </item>
+    
+    <item>
+      <title>Angular Connect London - Day 2</title>
+      <link>https://juristr.com/blog/2015/10/angular-connect-london-day2/</link>
+      <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/angular-connect-london-day2/</guid>
+      <description>I&amp;rsquo;m lucky enough to be able to attend AngularConnect here in London. This article is my notebook from the sessions I attended on day 2.</description>
+    </item>
+    
+    <item>
+      <title>Angular Connect London - Day 1</title>
+      <link>https://juristr.com/blog/2015/10/angular-connect-london/</link>
+      <pubDate>Mon, 19 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/angular-connect-london/</guid>
+      <description>I&amp;rsquo;m lucky enough to be able to attend AngularConnect here in London. This article is going to be my notebook while attending the conference. Also take a look at my notes from day 2!</description>
+    </item>
+    
+    <item>
+      <title>Easy testing with angular-spies</title>
+      <link>https://juristr.com/blog/2015/09/link-angular-spies/</link>
+      <pubDate>Sat, 26 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/09/link-angular-spies/</guid>
+      <description>Small useful lib by Shai Reznik (@shai_reznik) that aims at helping you to test your Angular apps.</description>
+    </item>
+    
+    <item>
+      <title>$q.defer: You&#39;re doing it wrong</title>
+      <link>https://juristr.com/blog/2015/09/link-angular-defer/</link>
+      <pubDate>Fri, 25 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/09/link-angular-defer/</guid>
+      <description>Nice article on Angular deferreds, promises and things you may do wrong.
+ use $q.when([&#39;detail&#39;, &#39;simple&#39;]) for simple defereds use promise chaining whenever possible, like return $http.</description>
+    </item>
+    
+    <item>
+      <title>Angular 2 survey results</title>
+      <link>https://juristr.com/blog/2015/09/link-ng2-survey-results/</link>
+      <pubDate>Fri, 25 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/09/link-ng2-survey-results/</guid>
+      <description>Jeff Whelpley presents the results of a survey he conducted on Angular 2 among Angular developers. Some interesting insights and potential predictions for the future direction.</description>
+    </item>
+    
+    <item>
+      <title>Angular 1 and Angular 2 integration: the path to seamless upgrade</title>
+      <link>https://juristr.com/blog/2015/08/link-angular-v1-mix-v2/</link>
+      <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/link-angular-v1-mix-v2/</guid>
+      <description>Since when the Angular team at Google announced the release of Angular 2, a total rewrite of Angular v1, hot debates started around whether there&amp;rsquo;ll be a migration path.</description>
+    </item>
+    
+    <item>
+      <title>Ultimate AngularJS and Ionic performance cheat sheet</title>
+      <link>https://juristr.com/blog/2015/08/link-angular-perf-cheatsheet/</link>
+      <pubDate>Tue, 25 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/link-angular-perf-cheatsheet/</guid>
+      <description>Interesting article that lists many performance tips and tricks for Angular v1.x.
+ $watch one-time binding track by use $log instead of console.log disable debug diagnostics -&amp;gt; $compileProvider.</description>
+    </item>
+    
+    <item>
+      <title>Host and Visibility in Angular 2&#39;s Dependency Injection</title>
+      <link>https://juristr.com/blog/2015/08/link-angular2-di/</link>
+      <pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/link-angular2-di/</guid>
+      <description>@PascalPrecht dives into the details of Angular 2&amp;rsquo;s dependency injection.
+ Angular 2&amp;rsquo;s DI to solve all current issues more flexible; concept of host and child injectors  Definition of a binding on a &amp;lt;video-player&amp;gt; component:</description>
+    </item>
+    
+  </channel>
+</rss>

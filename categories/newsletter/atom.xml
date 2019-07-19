@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newsletter on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/newsletter/</link>
+    <description>Recent content in Newsletter on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 16 Jul 2019 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/newsletter/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Challenging the Testing Pyramid</title>
+      <link>https://juristr.com/blog/2019/07/testing-cypress-intro/</link>
+      <pubDate>Tue, 16 Jul 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/07/testing-cypress-intro/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Writing automated tests has become like a standard practice in software development and (should be) an integral part of a healthy software development process. Testing (in particular automated testing) can come with different flavors and at different levels. In this article I&amp;rsquo;d like to provide a quick overview of automated UI or end-2-end testing with Cypress.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

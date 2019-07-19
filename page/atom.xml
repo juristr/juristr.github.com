@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on juri.strumpflohner</title>
+    <link>https://juristr.com/page/</link>
+    <description>Recent content in Pages on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    
+	<atom:link href="https://juristr.com/page/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://juristr.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/about/</guid>
+      <description>I&amp;rsquo;m Juri Strumpflohner, a  years old software developer. Currently I work as a software architect and frontend developer at R3-GIS, here in beautiful South Tyrol (Italy) where my main tasks are on the frontend, doing JavaScript, TypeScript, AngularJS and Angular.</description>
+    </item>
+    
+    <item>
+      <title>Newsletter</title>
+      <link>https://juristr.com/newsletter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/newsletter/</guid>
+      <description>Hey 👋
+Yes, I decided to launch a newsletter. Why? It&amp;rsquo;s an experiment I&amp;rsquo;d like to try. As a Google Developers Expert, software engineer and freelance trainer, I&amp;rsquo;m continously learning new things.</description>
+    </item>
+    
+    <item>
+      <title>Public Speaking</title>
+      <link>https://juristr.com/page/speaking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/page/speaking/</guid>
+      <description>Here are some of my public speaking events.
+ SFSCon Bolzano (November 2018) - &amp;ldquo;End-to-end testing done right!&amp;rdquo; Angular San Francisco Meetup (November 2018) - &amp;ldquo;Boost your Reactive Angular Forms&amp;rdquo; ngTalks 2018 (August 2018) - &amp;ldquo;Supercharge your Angular forms!</description>
+    </item>
+    
+    <item>
+      <title>Workshop: Angular Fundamentals</title>
+      <link>https://juristr.com/workshops/angular-fundamentals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/workshops/angular-fundamentals/</guid>
+      <description>This is a beginner level workshop, introducing the participants to developing modern web applications with Angular.
+Topics Some of the covered topics are the following:</description>
+    </item>
+    
+  </channel>
+</rss>

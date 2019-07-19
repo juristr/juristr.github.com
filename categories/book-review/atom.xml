@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Book Review on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/book-review/</link>
+    <description>Recent content in Book Review on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 18 Nov 2014 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/book-review/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript Promises Essentials</title>
+      <link>https://juristr.com/blog/2014/11/review-javascript-promises-essentials/</link>
+      <pubDate>Tue, 18 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/review-javascript-promises-essentials/</guid>
+      <description>JavaScript is asynchronous by definition which is what makes many server-side developers struggle initially. Many even try to avoid asynchronism as much as they can rather than to embrace it.</description>
+    </item>
+    
+    <item>
+      <title>JBoss Weld CDI for Java Platform</title>
+      <link>https://juristr.com/blog/2013/10/jboss-weld-cdi-for-java-platform/</link>
+      <pubDate>Tue, 29 Oct 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/10/jboss-weld-cdi-for-java-platform/</guid>
+      <description>CDI stands for Context and Dependency Injection and is the standardization of the process of dependency injection for Java EE. This article presents some of my comments and observations when reading &amp;ldquo;JBoss Weld CDI for Java Platform&amp;rdquo; which covers everything you need to successfully implement the new standard in your Java EE application.</description>
+    </item>
+    
+    <item>
+      <title>Developing Windows Store Apps with HTML5 and JavaScript</title>
+      <link>https://juristr.com/blog/2013/09/developing-win-store-apps-with-html5-and-javascript/</link>
+      <pubDate>Wed, 18 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/09/developing-win-store-apps-with-html5-and-javascript/</guid>
+      <description>After JavaScriptMVC, today the second book arrived where I participated in the technical review process: &amp;ldquo;Developing Windows Store Apps with HTML5 and JavaScript&amp;rdquo;.
+Doing the technical review was again a pleasant experience.</description>
+    </item>
+    
+    <item>
+      <title>Programming ASP.net MVC4 by J. Chadwick, T. Snyder and H. Panda</title>
+      <link>https://juristr.com/blog/2012/12/programming-aspnet-mvc4/</link>
+      <pubDate>Fri, 14 Dec 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/12/programming-aspnet-mvc4/</guid>
+      <description>This is one of the recent books I got from O&amp;rsquo;Reilly. It is probably the most comprehensive and detailed one I&amp;rsquo;ve encountered so far regarding ASP.</description>
+    </item>
+    
+    <item>
+      <title>HRT - Humility, Respect and Trust</title>
+      <link>https://juristr.com/blog/2012/10/hrt-humility-respect-and-trust/</link>
+      <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/10/hrt-humility-respect-and-trust/</guid>
+      <description>About a year ago someone told me: the hardest problems you&#39;ll face won&#39;t be of technical nature but rather they&#39;ll deal with interpersonal relationships. People are different (fortunately), different personalities, different capabilities, all mixed together.</description>
+    </item>
+    
+  </channel>
+</rss>

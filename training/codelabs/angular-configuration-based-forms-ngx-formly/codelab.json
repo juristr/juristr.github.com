@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "source": "1XwZyWni0xkz26jf2XBqAta0jPr0RLN70DUFq4EQCfF4",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-03-10T20:13:35Z",
+  "id": "angular-configuration-based-forms-ngx-formly",
+  "duration": 36,
+  "title": "Configuration Based Angular Forms with ngx-formly",
+  "author": "Juri Strumpflohner",
+  "summary": "In this codelab we're going to look at an alternative way for creating your Angular forms in a fully configuration based way.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "angular"
+  ],
+  "feedback": "https://github.com/juristr/ama/issues/new",
+  "url": "angular-configuration-based-forms-ngx-formly"
+}

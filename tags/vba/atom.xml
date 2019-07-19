@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vba on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/vba/</link>
+    <description>Recent content in Vba on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 02 Oct 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/vba/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HowTo: Create &#39;linked tables&#39; in MS Access</title>
+      <link>https://juristr.com/blog/2008/10/howto-create-linked-tables-in-ms-access/</link>
+      <pubDate>Thu, 02 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/10/howto-create-linked-tables-in-ms-access/</guid>
+      <description>Assume you have to migrate some historical data from an application which used an MS Access database to a new application which uses some other DB system (in my case an Oracle DB).</description>
+    </item>
+    
+  </channel>
+</rss>

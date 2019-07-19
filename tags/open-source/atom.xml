@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Source on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/open-source/</link>
+    <description>Recent content in Open Source on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Wed, 01 Feb 2012 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/open-source/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Don&#39;t rant! Become Social and Contribute back!</title>
+      <link>https://juristr.com/blog/2012/02/dont-rant-become-social-and-contribute/</link>
+      <pubDate>Wed, 01 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/02/dont-rant-become-social-and-contribute/</guid>
+      <description>Todays web experience has changed a lot and so has done coding as well. Everything is around being social, interacting with people through social networks, blogs or online communities.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Smelly Code: Eager Test | juri.strumpflohner</title>
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Smelly Code: Eager Test" />
+	
+
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Smelly Code: Eager Test" />
+	
+	
+	<meta property="og:url" content="https://juristr.com/blog/2010/09/smelly-code-eager-test" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2010%2f09%2fsmelly-code-eager-test%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2010%2f09%2fsmelly-code-eager-test%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Smelly Code: Eager Test</h1>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Sep 29, 2010
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">3 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+This post shows a common code smell in unit tests also mentioned in the <a href="http://books.google.com/books?id=y4JuQgAACAAJ&amp;dq=xunit+test+patterns&amp;hl=en&amp;ei=4TijTODyD4jDswauo7mKBQ&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=1&amp;ved=0CCoQ6AEwAA">xunit test patterns book</a>, namely "<a href="http://xunitpatterns.com/Obscure%20Test.html#Eager Test">Eager tests</a>".
+
+
+
+<h2>Original, smelly code</h2>
+<pre class="brush: java; highlight:[9,10,12,14,18]">public void testSaveSession(){<br /> MockSession mockSession = new MockSession("Test");<br /> mockSession.addParticipant(devices.get(0));<br /> mockSession.setSessionStart(DateUtils.createDateInstance("15.05.2010 12:00:00"));<br /><br /> assertTrue(dao.saveSession(mockSession));<br /> assertTrue("The id should have been assigned", mockSession.getId() &gt; 0); <br /><br /> mockSession.setSessionEnd(DateUtils.createDateInstance("15.05.2010 13:00"));<br /> assertTrue(dao.saveSession(mockSession));<br /> assertTrue("The id should have been assigned", mockSession.getId() &gt; 0);<br /> assertNotNull("The date should have been assigned", mockSession.getSessionStart());<br /> <br /> Cursor participantCursor = mockContentResolver.query(Participant.CONTENT_URI, null, Participant.DEVICES_ID + "=? AND " + Participant.SESSIONS_ID + "=?", new String[]{String.valueOf(devices.get(0).getId()), String.valueOf(mockSession.getId())}, null);<br /><br /> assertNotNull(participantCursor);<br /> assertTrue(participantCursor.moveToFirst());<br /> assertEquals("There should be 1 session", 1, participantCursor.getCount());<br />}<br /></pre><br />
+
+<h2>Objections and Comments</h2>
+The unit test shown above is a typical example of an <b><a href="http://xunitpatterns.com/Obscure%20Test.html#Eager Test">eager test</a></b>. The problem is that the test case does not only cover a single functionality, but several ones.<br /><br /><b>Line 9, 10 - </b>The code modifies the originally stored object and sets another property and persists everything again to the DB. In <b>line 12</b>&nbsp;a verification on the correct storing/retrieving of that value is being done. This actually&nbsp;<b>verifies an update</b>&nbsp;and is therefore out of scope of the "saveSession" test. It should be<b>&nbsp;extracted</b>&nbsp;to another one.<br /><br /><b>Line 12-18 - </b>&nbsp;The ContentProvider is queried on whether the participants associated to the session in <b>line 3</b>&nbsp;have been persisted properly. Again, this should not be done in this test case.<br /><br />
+
+<h2>Proposed Refactoring</h2>
+A possible refactoring is to split the test case into different ones, by using the <a href="http://www.refactoring.com/catalog/extractMethod.html">Extract Method</a> refactoring. I came up with three of them.<br /><br />The first is for testing just the <b>save</b>&nbsp;operation. All it needs to do is to verify whether the object got the according id associated from the DB.<br /><pre class="brush:java">public void testSaveSession(){<br /> //setup<br /> MockSession mockSession = new MockSession("Test");<br /> mockSession.setType(SessionType.MEETING);<br /> mockSession.setSessionStart(DateUtils.createDateInstance("15.05.2010 12:00:00"));<br /> mockSession.setSessionEnd(DateUtils.createDateInstance("15.05.2010 12:10:00"));<br /> mockSession.setDurationSeconds(5000);<br /><br /> //exercise<br /> assertTrue(dao.saveSession(mockSession));<br /> <br /> //verify<br /> assertTrue("The id should have been assigned", mockSession.getId() &gt; 0);<br />}</pre><br />The next one is responsible for verifying the update operations. It checks whether the object is being updated correctly and - for instance - it doesn't create a new record in the DB.<br /><br /><pre class="brush:java; highlight:[14]">public void testUpdateSession(){<br /> //setup (by inserting a session which can be updated subsequently)<br /> MockSession mockSession = new MockSession("Test");<br /> mockSession.setType(SessionType.MEETING);<br /> mockSession.setSessionStart(DateUtils.createDateInstance("15.05.2010 12:00:00"));<br /> dao.saveSession(mockSession);<br /> <br /> //exercise (do the update operation)<br /> mockSession.setSessionEnd(DateUtils.createDateInstance("15.05.2010 12:10:00"));<br /> dao.saveSession(mockSession);<br /> <br /> //verify<br /> Session updatedSession = dao.readSessionById(mockSession.getId());<br /> assertSessionEquals(mockSession, updatedSession);<br />}</pre><br />Note, in <b>line 14</b>&nbsp;I've factored out the comparison of the session object into a custom helper method which looks as follows<br /><pre class="brush:java">/*<br /> * Utility method for comparing session objects<br /> */<br />private void assertSessionEquals(Session expected, Session actual){<br /> assertEquals("The session id should match", expected.getId(), actual.getId());<br /> assertEquals("The session start date should match", expected.getSessionStart(), actual.getSessionStart());<br /> assertEquals("The session end date should match", expected.getSessionEnd(), actual.getSessionEnd());<br /> assertEquals("The session duration should match", expected.getDurationSeconds(), actual.getDurationSeconds());<br /> assertEquals("The session type should match", expected.getType(), actual.getType());<br /> assertEquals("The number of participants should match", expected.getParticipants().size(), actual.getParticipants().size());<br />}<br /></pre><br />Finally, the last one tests the persisting of a session with participants.<br /><pre class="brush:java">public void testSaveSession_WithParticipants(){<br /> //setup<br /> MockSession mockSession = new MockSession("Test");<br /> mockSession.addParticipant(devices.get(0));<br /> mockSession.addParticipant(devices.get(1));<br /> <br /> //exercise<br /> dao.saveSession(mockSession);<br /> <br /> //verify (by bypassing the Dao and directly querying the ContentProvider/DB<br /> Cursor participantCursor = mockContentResolver.query(Participant.CONTENT_URI, null, Participant.SESSIONS_ID + "=?", new String[]{ String.valueOf(mockSession.getId())}, null);<br /> assertTrue("The participant cursor should contain some participants", participantCursor.moveToFirst());<br /> assertEquals("There should be exactly 2 participants", 2, participantCursor.getCount());<br />}</pre><br />The resulting code is much better organized, readable and consequently also more maintainable.<br /><br /><i><span class="Apple-style-span" style="font-size: small;">This is one of a series of "smelly code" posts. <a href="http://blog.js-development.com/2010/09/introducing-smellycode.html">Read more here</a> or find them on <a href="http://search.twitter.com/search?q=%23smellycode">Twitter</a>.</span></i>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/lessons-learned">lessons learned</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2010/09/lessions-learned-make-your">Lessons Learned: Make your ListItemCollection Linq Queryable</a>
+        </h2>
+        <h4 class="card-text">
+            
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Sep 20, 2010</span><span class="dot"></span><span
+                                    class="post-read">3 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/_net.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

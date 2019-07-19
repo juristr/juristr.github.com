@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Es2015 on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/es2015/</link>
+    <description>Recent content in Es2015 on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Wed, 26 Aug 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/es2015/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ES2015 - Jump Start</title>
+      <link>https://juristr.com/blog/2015/08/jump-start-es2015/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/jump-start-es2015/</guid>
+      <description>Yes, this is another article about learning ES2015 (known as ES6). It&amp;rsquo;s my journey of learning it, as well as my personal notepad for new stuff I discover along the way.</description>
+    </item>
+    
+  </channel>
+</rss>

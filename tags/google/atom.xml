@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/google/</link>
+    <description>Recent content in Google on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 07 Jun 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/google/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Should Android Worry About the iOS 5 Update? Definitely Not!</title>
+      <link>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</link>
+      <pubDate>Tue, 07 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</guid>
+      <description>With the announcement of the new iOS 5 at the WWDC, the first articles emerge already on the web relating the new features with the existing Android OS.</description>
+    </item>
+    
+    <item>
+      <title>News Mapper: A mashup experience with the Google Mashup Editor</title>
+      <link>https://juristr.com/blog/2007/10/now-in-two-weeks-after-my-successful/</link>
+      <pubDate>Mon, 29 Oct 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/10/now-in-two-weeks-after-my-successful/</guid>
+      <description>Now in the two weeks after my successful graduation and before starting to work I found some space for doing some programming experiments. :) What I planned already for a longer time now has been to do some JavaScript coding since it becomes an always more important aspect in modern web technologies such as AJAX and so on.</description>
+    </item>
+    
+  </channel>
+</rss>

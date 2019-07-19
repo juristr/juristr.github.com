@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jquery on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/jquery/</link>
+    <description>Recent content in Jquery on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 13 Feb 2012 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/jquery/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sequential Asynchronous Processing with jQuery Deferreds</title>
+      <link>https://juristr.com/blog/2012/02/sequential-asynchronous-processing-with/</link>
+      <pubDate>Mon, 13 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/02/sequential-asynchronous-processing-with/</guid>
+      <description>Asynchronous processing is one of the most difficult things for devs to understand when switching from the more traditional web programming pattern to a more client-server like model when creating rich JavaScript single-page apps.</description>
+    </item>
+    
+    <item>
+      <title>jQuery Validation: Add a Required Field Marker</title>
+      <link>https://juristr.com/blog/2011/11/jquery-validation-add-required-field/</link>
+      <pubDate>Fri, 04 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/jquery-validation-add-required-field/</guid>
+      <description>When you use jQuery for validating input fields you might want to automatically (based on the validators) decorate your according field labels or input fields with appropriate markers that indicate required fields.</description>
+    </item>
+    
+    <item>
+      <title>Testing JavaScript: Mocking jQuery Ajax Calls</title>
+      <link>https://juristr.com/blog/2011/09/testing-javascript-mocking-jquery-ajax/</link>
+      <pubDate>Mon, 26 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/09/testing-javascript-mocking-jquery-ajax/</guid>
+      <description>When &#34;seriously&#34; developing JavaScript applications we obviously need to write tests. Being a fully dynamic language (similar as Ruby), tests are more necessary than ever since there is no compiler that checks for you all the silly mistakes before you run your code the first time.</description>
+    </item>
+    
+    <item>
+      <title>Experiencing the jQuery 1.6 Breaking Changes</title>
+      <link>https://juristr.com/blog/2011/08/experiencing-jquery-16-breaking-changes/</link>
+      <pubDate>Mon, 15 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/experiencing-jquery-16-breaking-changes/</guid>
+      <description>Unfortunately I did not actively follow the release of jQuery 1.6 as I would probably have noted that they introduced some breaking changes which would have prevented some issues at my side.</description>
+    </item>
+    
+    <item>
+      <title>Posting JSON Data to an ASP.net MVC 3 Web Application</title>
+      <link>https://juristr.com/blog/2011/08/posting-json-data-to-aspnet-mvc-3-web/</link>
+      <pubDate>Thu, 04 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/posting-json-data-to-aspnet-mvc-3-web/</guid>
+      <description>The trend in today&#39;s web application development goes more and more in the direction of having rich, desktop-like applications. There are numerous examples on the web, just watch out while your navigating around (Google services are always a good place to look for such apps).</description>
+    </item>
+    
+    <item>
+      <title>Create DOM Tree out of a Dynamic HTML String</title>
+      <link>https://juristr.com/blog/2011/06/create-dom-tree-out-of-dynamic-html/</link>
+      <pubDate>Tue, 21 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/create-dom-tree-out-of-dynamic-html/</guid>
+      <description>Just a very short post before I go to bed as I&#39;m really tired today. I just played around with some JavaScript code, building a Google Chrome extension when I came to the point where I needed to process the DOM tree of a HTML string.</description>
+    </item>
+    
+    <item>
+      <title>Load JavaScript Files Asynchronously</title>
+      <link>https://juristr.com/blog/2011/04/load-javascript-files-asynchronously/</link>
+      <pubDate>Sun, 03 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/04/load-javascript-files-asynchronously/</guid>
+      <description>I recently worked on a component for our single-sign-on system. As part of that work I also developed a small JavaScript file that was included in the top-header of the page for rendering the username, last access and session expiration or alternatively the login link in case the user wasn&#39;t logged on.</description>
+    </item>
+    
+    <item>
+      <title>&#39;\n&#39; will break your JSON jQuery - WCF service call</title>
+      <link>https://juristr.com/blog/2010/05/n-will-break-your-json-jquery-wcf/</link>
+      <pubDate>Fri, 07 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/05/n-will-break-your-json-jquery-wcf/</guid>
+      <description>I recently coded a WCF REST webservice that needed to be accessed from JavaScript. Basically it was a system to provide admins of websites with a real-time system for managing info messages, intended to be displayed beneath input fields.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Fade out div after some seconds using jQuery</title>
+      <link>https://juristr.com/blog/2009/12/howto-fade-out-div-after-some-seconds/</link>
+      <pubDate>Wed, 30 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/howto-fade-out-div-after-some-seconds/</guid>
+      <description>Today I made a quick change to my blog. I don&#39;t know whether many of my readers noticed the possibility of expanding the reading area by clicking on the gray vertical bar which separates the left column with the post content.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Ajax CDN</title>
+      <link>https://juristr.com/blog/2009/09/microsoft-ajax-cdn/</link>
+      <pubDate>Wed, 16 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/microsoft-ajax-cdn/</guid>
+      <description>Scott Gu&#39; just announced the launch of Microsoft Ajax Content Delivery Network. The name already explains mostly everything. It allows you to retrieve Ajax script libraries for your web application by specifying things like this</description>
+    </item>
+    
+    <item>
+      <title>jQuery plugin development pattern</title>
+      <link>https://juristr.com/blog/2009/04/jquery-plugin-development-pattern/</link>
+      <pubDate>Wed, 22 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/jquery-plugin-development-pattern/</guid>
+      <description>I&#39;m currently diving more and more into the jQuery library. First I&#39;m using it on a portlet I&#39;m developing for the Liferay portal server as the project for a university course and secondly I&#39;m planning to use jQuery on some ajax-enabled server controls I&#39;m designing (I&#39;m not yet 100% sure whether to use jQuery or Asp.</description>
+    </item>
+    
+    <item>
+      <title>Extended view reloaded</title>
+      <link>https://juristr.com/blog/2009/03/extended-view-reloaded/</link>
+      <pubDate>Wed, 25 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/extended-view-reloaded/</guid>
+      <description>With the transition to the complete new blog design I initially had to leave away some features which I had on my old blog layout.</description>
+    </item>
+    
+  </channel>
+</rss>

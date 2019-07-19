@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Compile-time vs. Runtime configuration of your Angular App | juri.strumpflohner</title>
+	
+	<meta name="description" content="Learn how to setup compile time as well as runtime configuration for your Angular application">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Compile-time vs. Runtime configuration of your Angular App" />
+	
+	<meta name="twitter:description" content="Learn how to setup compile time as well as runtime configuration for your Angular application" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/angular-cli-compiletime-config.png" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Compile-time vs. Runtime configuration of your Angular App" />
+	
+	<meta property="og:description" content="Learn how to setup compile time as well as runtime configuration for your Angular application" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/angular-cli-compiletime-config.png" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2018/01/ng-app-runtime-config" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2018%2f01%2fng-app-runtime-config%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2018%2f01%2fng-app-runtime-config%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Compile-time vs. Runtime configuration of your Angular App</h1>
+                
+                <h2 class="article-subtitle">Learn how to setup compile time as well as runtime configuration for your Angular application</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Jan 22, 2018
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">7 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+
+<div class="article-intro">
+    When you develop a bigger application, chances are quite high that you need some kind of configuration. That can range from simply visualizing the app's version number to injecting custom themes etc. In Angular you have different kind of approaches: compile-time and runtime configurations. Let's take a look at both of them.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#compile-time-configuration">Compile-time configuration</a></li>
+<li><a href="#runtime-configuration">Runtime configuration</a>
+<ul>
+<li><a href="#how-does-the-app-initializer-work">How does the APP_INITIALIZER work?</a></li>
+</ul></li>
+<li><a href="#which-one-to-choose">Which one to choose?</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<h2 id="compile-time-configuration">Compile-time configuration</h2>
+
+<div class="egghead-video-embed">
+    <iframe src="https://egghead.io/lessons/angular-configure-an-angular-app-at-compile-time-with-the-angular-cli/embed" width="100%" height="500px"> </iframe>
+    <a href="https://egghead.io/lessons/angular-configure-an-angular-app-at-compile-time-with-the-angular-cli" class="external-link" data-client="eggheadio" data-uid="lessons/angular-configure-an-angular-app-at-compile-time-with-the-angular-cli">View
+        on
+        Egghead.io</a>
+</div>
+
+<p><strong>What is compile-time configuration?</strong> It basically means that you compile your configuration into your app, at the time when you compile and bundle it. If you&rsquo;re using the Angular CLI there&rsquo;s already a preconfigured setup for having such compile-time configuration options.</p>
+
+<figure class="image--medium">
+    <img src="/blog/assets/imgs/angular-cli-compiletime-config.png">
+    <figcaption>environment.ts files generated by the Angular CLI</figcaption>
+</figure>
+
+<p>Inside the <code>environments</code> folder you have a <code>environment.ts</code> and <code>environment.prod.ts</code> file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// environment.ts
+</span><span class="c1"></span><span class="k">export</span> <span class="k">const</span> <span class="nx">environment</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">production</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">};</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// environment.prod.ts
+</span><span class="c1"></span><span class="k">export</span> <span class="k">const</span> <span class="nx">environment</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">production</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Since these are just plain JavaScript objects, you can add your environment specific properties on them.<br />
+The default <code>main.ts</code> file that is responsible for bootstrapping our Angular application uses those environment files to determine whether the app is running production mode, in order to apply some runtime optimizations such as calling <code>enableProdMode()</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">enableProdMode</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">platformBrowserDynamic</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/platform-browser-dynamic&#39;</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">AppModule</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./app/app.module&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">environment</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./environments/environment&#39;</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">environment</span><span class="p">.</span><span class="nx">production</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">enableProdMode</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">platformBrowserDynamic</span><span class="p">().</span><span class="nx">bootstrapModule</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">)</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
+</code></pre></div>
+<p>You can arbitrarily get a reference to that <code>environment</code> object by simply importing <code>environment.ts</code> into your file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">environment</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../environment/environment&#39;</span><span class="p">;</span>
+
+<span class="c1">// do something meaningful with `environment`
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">environment</span><span class="p">);</span>
+</code></pre></div>
+<p>Note, we&rsquo;re always importing <code>environment.ts</code> and never an environment specific file such as <code>environment.prod.ts</code>. The reason is that at compile time, the <strong>Angular CLI will take care of renaming the environment specific configuration file into <code>environment.ts</code></strong> and to compile it into your app accordingly.</p>
+
+<p>You can also create new files, say for your &ldquo;staging&rdquo; environment. Just create a new <code>environment.staging.ts</code> and make sure to configure it in your <code>angular.json</code> file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="err">//</span> <span class="err">...</span>
+  <span class="nt">&#34;projects&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;demo&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="err">//...</span>
+      <span class="nt">&#34;architect&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&#34;builder&#34;</span><span class="p">:</span> <span class="s2">&#34;@angular-devkit/build-angular:browser&#34;</span><span class="p">,</span>
+          <span class="err">//</span> <span class="err">...</span>
+          <span class="nt">&#34;configurations&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;staging&#34;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&#34;fileReplacements&#34;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&#34;replace&#34;</span><span class="p">:</span> <span class="s2">&#34;src/environments/environment.ts&#34;</span><span class="p">,</span>
+                  <span class="nt">&#34;with&#34;</span><span class="p">:</span> <span class="s2">&#34;src/environments/environment.staging.ts&#34;</span>
+                <span class="p">}</span>
+              <span class="p">],</span>
+              <span class="err">//...</span>
+            <span class="p">},</span>
+            <span class="nt">&#34;production&#34;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="nt">&#34;fileReplacements&#34;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                  <span class="nt">&#34;replace&#34;</span><span class="p">:</span> <span class="s2">&#34;src/environments/environment.ts&#34;</span><span class="p">,</span>
+                  <span class="nt">&#34;with&#34;</span><span class="p">:</span> <span class="s2">&#34;src/environments/environment.prod.ts&#34;</span>
+                <span class="p">}</span>
+              <span class="p">],</span>
+              <span class="err">//...</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="err">//...</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p>Finally, we need to tell the CLI which environment we&rsquo;re building for, s.t. it is able to pick up the proper configuration file. That happens in the scripts section of our <code>package.json</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;ng&#34;</span><span class="p">:</span> <span class="s2">&#34;ng&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;ng build --prod&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;build:staging&#34;</span><span class="p">:</span> <span class="s2">&#34;ng build --prod --env=staging&#34;</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span></code></pre></div>
+<p>Note, we&rsquo;re passing in the <code>--env=&lt;your-environment&gt;</code> flag. the <code>--prod</code> is a built-in command which automatically uses the production configuration already, if not specified otherwise. Moreover it also <strong>enables the AOT compilation</strong>.</p>
+
+<h2 id="runtime-configuration">Runtime configuration</h2>
+
+<div class="egghead-video-embed">
+    <iframe src="https://egghead.io/lessons/angular-configure-an-angular-app-at-runtime/embed" width="100%" height="500px"> </iframe>
+    <a href="https://egghead.io/lessons/angular-configure-an-angular-app-at-runtime" class="external-link" data-client="eggheadio" data-uid="lessons/angular-configure-an-angular-app-at-runtime">View
+        on
+        Egghead.io</a>
+</div>
+
+<p>If however you need to be able to change your app&rsquo;s configuration settings or maybe you even expose them via an API, then you need to use <strong>a runtime configuration approach</strong>. Normally you simply have some JSON file - say <code>appConfig.json</code> that contains the necessary configuration options which you then deploy with your app on your server. When your app runs, you execute an HTTP request to that JSON file and read the settings.</p>
+
+<p>What you want however, is to start your app only after your settings have been loaded and applied. A naive approach could be as follows. In your <code>app.component.ts</code> you simply add an <code>*ngIf</code> guard:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;app-root&#39;</span><span class="p">,</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">        &lt;div *ngIf=&#34;configLoaded&#34;&gt;
+</span><span class="sb">
+</span><span class="sb">        &lt;/div&gt;
+</span><span class="sb">    `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppComponent</span> <span class="kr">implements</span> <span class="nx">OnInit</span> <span class="p">{</span>
+    <span class="nx">configLoaded</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+    <span class="nx">ngOnInit</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;./assets/appConfig.json&#39;</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">config</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="c1">// do something with your configuration
+</span><span class="c1"></span>                <span class="p">...</span>
+
+                <span class="k">this</span><span class="p">.</span><span class="nx">configLoaded</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>That way your other components wouldn&rsquo;t start unless the <code>configLoaded</code> is true and consequently the <code>&lt;div&gt;</code> is being shown.</p>
+
+<p>While this would work, there&rsquo;s a more elegant way of doing things: we can hook into Angular&rsquo;s bootstrapping phase by using the <code>APP_INITIALIZER</code> token. We first <strong>create an Angular service that handles the fetching of our remote configuration</strong>, called <code>app-config.service.ts</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">HttpClient</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/common/http&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Injectable</span><span class="p">()</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppConfigService</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">appConfig</span><span class="p">;</span>
+
+  <span class="nx">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">http</span><span class="o">:</span> <span class="nx">HttpClient</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+  <span class="nx">loadAppConfig</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/assets/data/appConfig.json&#39;</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">toPromise</span><span class="p">()</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">appConfig</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+      <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="nx">getConfig</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">appConfig</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>That service is then imported in the <code>app.module.ts</code> together with the <code>APP_INITIALIZER</code> token.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// app.module.ts
+</span><span class="c1"></span><span class="p">...</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">NgModule</span><span class="p">,</span> <span class="nx">APP_INITIALIZER</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">AppConfigService</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./app-config.service&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+  <span class="p">...</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span>
+    <span class="nx">AppConfigService</span><span class="p">,</span>
+    <span class="p">{</span>
+      <span class="nx">provide</span><span class="o">:</span> <span class="nx">APP_INITIALIZER</span><span class="p">,</span>
+      <span class="nx">useFactory</span><span class="o">:</span> <span class="nx">appInitializerFn</span><span class="p">,</span>
+      <span class="nx">multi</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">deps</span><span class="o">:</span> <span class="p">[</span><span class="nx">AppConfigService</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppModule</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div>
+<p>We now need to implement the <code>appInitializerFn</code> factory function which we can define directly in the <code>app.module.ts</code> (or in a separate file, as you prefer).</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
+<span class="k">const</span> <span class="nx">appInitializerFn</span> <span class="o">=</span> <span class="p">(</span><span class="nx">appConfig</span><span class="o">:</span> <span class="nx">AppConfigService</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">appConfig</span><span class="p">.</span><span class="nx">loadAppConfig</span><span class="p">();</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+    <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppModule</span>
+</code></pre></div>
+<p>The important thing here - which you might have missed - is that the <code>app-config.service.ts</code>&rsquo;s <code>loadAppConfig()</code> <strong>returns a <code>Promise</code> rather than an <code>Observable</code></strong> as most of Angular&rsquo;s HTTP calls do. The reason is that the <code>APP_INITIALIZER</code> only supports promises as of now.</p>
+
+<p>The benefit of this approach is that when the application bootstraps, it gets our initializer function, and since we return a <code>Promise</code>, Angular will first resolve that <code>Promise</code> before it continues with the bootstrapping. As a result, within some other component, we can simply inject our <code>AppConfigService</code> and use its <code>getConfig()</code> function to access our configuration props.</p>
+
+<h3 id="how-does-the-app-initializer-work">How does the APP_INITIALIZER work?</h3>
+
+<p>The <code>APP_INITIALIZER</code> allows to defer the &ldquo;booting&rdquo; of your module, normally the <code>AppModule</code>. If you&rsquo;re curious how this is implemented behind the scenes, well Angular is open source, so you can just go and <a href="https://github.com/angular/angular/blob/master/packages/core/src/application_ref.ts#L269-L274">read the source</a> 😉.</p>
+
+<p>So what did I mean exactly by saying &ldquo;defer the booting of your module&rdquo;? It means Angular won&rsquo;t instantiate the components of that model and start rendering them before the initialization Promise resolves. That&rsquo;s exactly what we&rsquo;ve leveraged to implement the runtime configuration approach described in this article. A <strong>common mistake though is to place initialization code in a modules constructor</strong>. Assume we have a simple app with a module <code>SomeModule</code> (yes I know, I&rsquo;m very creative with names today).</p>
+
+<figure class="image--small">
+  <img src="/blog/assets/imgs/folder-structure-app-initializer.png">
+  <figcaption>Our sample app structure</figcaption>
+</figure>
+
+<p>Having an <code>APP_INITIALIZER</code> in the <code>AppModule</code> doesn&rsquo;t prevent Angular from executing the constructor of the <code>SomeModule</code>. In fact since <code>AppModule</code> imports that sub-module, <code>SomeModule</code>&rsquo;s constructor is called immediately, even before the <code>AppModule</code> constructor itself. Most probably though, the components of <code>SomeModule</code> won&rsquo;t be called. The reason being is that since <code>AppModule</code> has an <code>APP_INITIALIZER</code> defined, its <code>AppComponent</code> won&rsquo;t be instantiated until the that initializer resolves. Since <code>AppComponent</code> is the root component, loading the entire app, no other components will be instantiated either.</p>
+
+<p><strong>But what if I want to separate the config code per module?</strong> Normally such configuration code is global and per-app, which is why <code>AppModule</code> is the place to go. But nothing prevents you from adding a second <code>APP_INITIALIZER</code> also to <code>SomeModule</code>. I created a quick Stackblitz to better demonstrate the order with which these modules and components get instantiated:</p>
+
+<figure class="image--small">
+  <img src="/blog/assets/imgs/app-init-order-calling.png">
+</figure>
+
+<p>Here&rsquo;s the Stackblitz for you to play around with</p>
+
+<iframe src="https://stackblitz.com/edit/angular-czh7ca?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+
+<h2 id="which-one-to-choose">Which one to choose?</h2>
+
+<p>Of course it depends on your specific use case and needs. Personally I like to keep compile-time environment files as low as only having one for dev and one for production. All other settings should come in via some backend API or JSON file as we&rsquo;ve described here.</p>
+
+<p>The reason is that in a proper build and deployment pipeline, I don&rsquo;t want to recompile my Angular application every time I move from dev to staging to production. Rather, I want..</p>
+
+<ol>
+<li>to checkin my code to the repository</li>
+<li>my build/continuous integration server to pick up the change and create a production ready bundle (using &ndash;prod + AOT compilation).</li>
+<li>the build/server should deploy that to my development environment server (where automated tests, unit + UI get executed)</li>
+<li>whenever some QA person picks a build, he/she can move it over to the staging server for more concrete testing and</li>
+<li>if everything is fine, move it straight over to the production environment</li>
+</ol>
+
+<p>Between those steps, I don&rsquo;t want my application to be re-built from my repository, but rather I want to have the same binaries/javascript files to &ldquo;travel between the environments&rdquo;.</p>
+
+<p>My environment specific files come either from the backend API (i.e. the database or server environment variables), or they can be placed as <code>appConfig-dev.json</code>, <code>appConfig-staging.json</code>, <code>appConfig-prod.json</code> along with my other code. It would then be the deployment step on the build server to deploy the correct one as <code>appConfig.json</code> to the final destination on the server.</p>
+
+<p>But that&rsquo;s very much topic of another post 😉.</p>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

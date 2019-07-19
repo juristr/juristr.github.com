@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rxjs on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/rxjs/</link>
+    <description>Recent content in Rxjs on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 04 Mar 2019 10:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/rxjs/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RxJS finalize operator to execute logic on Observable termination</title>
+      <link>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</link>
+      <pubDate>Mon, 04 Mar 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In this article we&amp;rsquo;re going to have a look at the RxJS &lt;code&gt;finalize&lt;/code&gt; operator. To have a practical use case, let&amp;rsquo;s take a look at disabling/enabling a form submit button during an HTTP request.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Guarantee Event Order with RxJS</title>
+      <link>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+  When you create dynamic UIs, you have to deal with async stuff a lot. Most often they are triggered by some user interaction. Things usually get tricky when you need to guarantee certain operations are executed in order. Since they are async we might not know which one returns first. Let&#39;s see how RxJS can help a lot here.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Egghead Lesson: Simple caching with RxJS</title>
+      <link>https://juristr.com/blog/2018/11/videolesson-rxjs-caching-angular/</link>
+      <pubDate>Sun, 11 Nov 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/11/videolesson-rxjs-caching-angular/</guid>
+      <description>This is the accompanying article for my latest Egghead video lesson on caching data in Angular by leveraging RxjS.     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>Simple State Management with RxJS’s scan operator</title>
+      <link>https://juristr.com/blog/2018/10/simple-state-management-with-scan/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/10/simple-state-management-with-scan/</guid>
+      <description>State management is a big topic currently in frontend development. For a reason: frontend frameworks/libraries got extremely powerful in the recent years, which led to more and more complex applications which need to be tamed.</description>
+    </item>
+    
+    <item>
+      <title>My Journey replacing Promises with RxJS</title>
+      <link>https://juristr.com/blog/2018/10/journey-promises-to-rxjs/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/10/journey-promises-to-rxjs/</guid>
+      <description>In this post I’m going to tell you, step-by-step, how I used RxJS to refactor a method that was based on Promises.     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>Safe Navigation Operator, RxJS and Async Pipe tinkering</title>
+      <link>https://juristr.com/blog/2016/11/safe-nav-operator-and-async-pipe/</link>
+      <pubDate>Wed, 16 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/safe-nav-operator-and-async-pipe/</guid>
+      <description>RxJS? Safe Navigation operator? Async pipes? Not sure what I&#39;m talking about? In this article I&#39;d like to explore some cool combination of Http, RxJS and Async Pipes.</description>
+    </item>
+    
+    <item>
+      <title>RxJS first steps - Subject and ReplaySubject</title>
+      <link>https://juristr.com/blog/2016/06/rxjs-1st-steps-subject/</link>
+      <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/06/rxjs-1st-steps-subject/</guid>
+      <description>I&#39;m not sure you already heard about RxJS or Reactive Programming in general. There&#39;s currently a very strong movement towards such programming style in the modern JavaScript world, so you should definitely check it out.</description>
+    </item>
+    
+  </channel>
+</rss>

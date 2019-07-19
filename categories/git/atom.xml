@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/git/</link>
+    <description>Recent content in Git on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 16 Apr 2019 10:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/git/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Productive Git for Developers</title>
+      <link>https://juristr.com/blog/2019/04/productive-git-for-developers/</link>
+      <pubDate>Tue, 16 Apr 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/productive-git-for-developers/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    With this Egghead course, I aim at a different goal. You will walk through a series of scenarios which you’ll most commonly encounter in your daily work life as a developer.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>GitLab Flow</title>
+      <link>https://juristr.com/blog/2015/12/link-gitlab-flow/</link>
+      <pubDate>Thu, 03 Dec 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/12/link-gitlab-flow/</guid>
+      <description>I&amp;rsquo;ve already published a couple of Git guides on my blog here
+ Git Explained: For Beginners Implementing the &amp;ldquo;Git flow&amp;rdquo; Git Flow with Jenkins and GitLab  The main reason is because I needed it as a documentation for my work mates.</description>
+    </item>
+    
+    <item>
+      <title>GitHub: be Social, Contribute, Learn</title>
+      <link>https://juristr.com/blog/2015/06/github-social-contribute-learn/</link>
+      <pubDate>Thu, 04 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/06/github-social-contribute-learn/</guid>
+      <description>GitHub revolutionised the open source world by building - IMHO - the first true social coding site. It has never been that easy to contribute to a project, whether it is to simply discuss some new features, to file a bug or in the best case to submit a bug fix or new feature patch: a pull request (PR).</description>
+    </item>
+    
+    <item>
+      <title>Migrate from TFS to Git</title>
+      <link>https://juristr.com/blog/2015/03/migrate-tfs-to-git/</link>
+      <pubDate>Wed, 25 Mar 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/03/migrate-tfs-to-git/</guid>
+      <description>Are you using TFS and would like to switch to a distributed VCS like Git? Well then this article might be of help. I quickly wrote down the required steps and some hints for exporting an existing TFS repository to Git.</description>
+    </item>
+    
+    <item>
+      <title>Implementing the &#39;Git flow&#39;</title>
+      <link>https://juristr.com/blog/2014/09/implementing-the-git-flow/</link>
+      <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/09/implementing-the-git-flow/</guid>
+      <description>Git can be used in a variety of ways which is cool. But still, when working within a team, it is good to have a consensus on a common, shared approach in order to avoid conflicts.</description>
+    </item>
+    
+    <item>
+      <title>Git flow with Jenkins and GitLab</title>
+      <link>https://juristr.com/blog/2014/01/git-flow-jenkins-gitlab/</link>
+      <pubDate>Tue, 07 Jan 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/01/git-flow-jenkins-gitlab/</guid>
+      <description>At work I recently helped a team to transition from TFS to using Git as their source control management. After introducing the members to Git, we also established a common workflow on how we wanted to have Git integrate with Jenkins and GitLab.</description>
+    </item>
+    
+    <item>
+      <title>Git Explained: For Beginners</title>
+      <link>https://juristr.com/blog/2013/04/git-explained/</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/04/git-explained/</guid>
+      <description>I&amp;rsquo;m working with Git now for about two years but only for my personal projects and those I have on GitHub. At work we still use TFS and SVN (as of now).</description>
+    </item>
+    
+    <item>
+      <title>Choose Your Commit Messages Properly</title>
+      <link>https://juristr.com/blog/2012/06/choose-your-commit-messages-properly/</link>
+      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/06/choose-your-commit-messages-properly/</guid>
+      <description>I wrote already a couple of posts about version control stuff and best practices related with it. So today, what about proper commit messages?</description>
+    </item>
+    
+    <item>
+      <title>Juri Goes GIT - First Steps</title>
+      <link>https://juristr.com/blog/2010/11/juri-goes-git-first-steps/</link>
+      <pubDate>Tue, 30 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/juri-goes-git-first-steps/</guid>
+      <description>Yes, I&#39;m going &#34;git&#34; ;). An inherent part of structured, well organized working is to have your stuff under version control (1st point on the Joel Test).</description>
+    </item>
+    
+    <item>
+      <title>Best practices: VCS usage flowchart</title>
+      <link>https://juristr.com/blog/2008/05/best-practices-vcs-usage-flowchart/</link>
+      <pubDate>Fri, 23 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/05/best-practices-vcs-usage-flowchart/</guid>
+      <description>So now there&amp;rsquo;s the graphical representation of my yesterday&amp;rsquo;s post. Computer scientists usually understand these graphs better ;) Comments, critics or improvements are very welcome.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/angular/</link>
+    <description>Recent content in Angular on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 03 Jun 2019 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/angular/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Update to Angular Version 8 now!</title>
+      <link>https://juristr.com/blog/2019/06/angular-v8/</link>
+      <pubDate>Mon, 03 Jun 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/06/angular-v8/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Let&amp;rsquo;s dive into the latest Angular version 8 that just got released. We&amp;rsquo;ll quickly explore what&amp;rsquo;s new, why you should update, how that works and what you should watch out for.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular 8 and the Future - NGConf 2019 Roundup</title>
+      <link>https://juristr.com/blog/2019/05/Angular-8-and-the-Future-NGConf-2019-Roundup/</link>
+      <pubDate>Wed, 01 May 2019 17:30:08 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/05/Angular-8-and-the-Future-NGConf-2019-Roundup/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I&amp;rsquo;m not at NGConf 2019 (unfortunately). But I&amp;rsquo;m following along very closely with the Angular community (and as an Angular GDE) I&amp;rsquo;m particularly excited what&amp;rsquo;s currently being announced at Salt Lake City . As such I&amp;rsquo;m summarizing here my main takeaway from the conf.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lazy load Angular Components</title>
+      <link>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</link>
+      <pubDate>Mon, 29 Apr 2019 14:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</guid>
+      <description>Lazy loading is hot recently and for a good reason. It&amp;rsquo;s all about speed! The Chrome team at Google in specific (around Addy Osmani) tries to push out content (and new APIs) to optimize the heck out of web pages.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Angular Elements</title>
+      <link>https://juristr.com/blog/2019/04/intro-to-angular-elements/</link>
+      <pubDate>Sun, 28 Apr 2019 12:00:09 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/intro-to-angular-elements/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You didn&amp;rsquo;t yet get into Angular Elements? Then it&amp;rsquo;s time to give it a go! In this article we&amp;rsquo;re going to see what Angular Elements actually are, why they are useful and how to create our first Angular Element out of a plain component.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setup your Workstation for JavaScript Development</title>
+      <link>https://juristr.com/blog/2019/04/setup-for-angular-dev/</link>
+      <pubDate>Fri, 26 Apr 2019 16:10:05 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/setup-for-angular-dev/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You want to learn about modern web development with JavaScript? Maybe Angular? Well, then it&amp;rsquo;s time to get you setup properly to get started. In this article we&amp;rsquo;ll go through some of the tools.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>RxJS finalize operator to execute logic on Observable termination</title>
+      <link>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</link>
+      <pubDate>Mon, 04 Mar 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/rxjs-finalize-operator/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In this article we&amp;rsquo;re going to have a look at the RxJS &lt;code&gt;finalize&lt;/code&gt; operator. To have a practical use case, let&amp;rsquo;s take a look at disabling/enabling a form submit button during an HTTP request.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>A step-by-step guide to integrating a third party widget with Angular</title>
+      <link>https://juristr.com/blog/2019/02/ag-grid-integrating-with-angular/</link>
+      <pubDate>Thu, 14 Feb 2019 21:24:36 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/02/ag-grid-integrating-with-angular/</guid>
+      <description>When working on a complex project you will inevitably face the situation when you have to use a 3rd party widget in your project. Also, most of the web projects today use frameworks.</description>
+    </item>
+    
+    <item>
+      <title>Display Server Side Validation Errors with Angular</title>
+      <link>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</link>
+      <pubDate>Thu, 07 Feb 2019 20:30:31 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Input Validation is a big topic when it comes to forms. And even more in those large, enterprisey apps, where validation can become really crazy. Now, Angular forms of course provide different mechanisms for handling validation out of the box. However, in this article I won&amp;rsquo;t go into those details, I will rather show you a possible strategy for visualizing server side validation errors.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Explore Angular Router&#39;s  runGuardsAndResolvers</title>
+      <link>https://juristr.com/blog/2019/01/Explore-Angular-Routers-runGuardsAndResolvers/</link>
+      <pubDate>Thu, 31 Jan 2019 18:39:51 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/01/Explore-Angular-Routers-runGuardsAndResolvers/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Learn how we can use new options introduced for the &lt;code&gt;runGuardsAndResolvers&lt;/code&gt; setting for the Angular Router configuration to get a better control over when to run our resolvers and guards.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Guarantee Event Order with RxJS</title>
+      <link>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/01/Guarantee-Event-Order-with-RxJS/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+  When you create dynamic UIs, you have to deal with async stuff a lot. Most often they are triggered by some user interaction. Things usually get tricky when you need to guarantee certain operations are executed in order. Since they are async we might not know which one returns first. Let&#39;s see how RxJS can help a lot here.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Simple State Management with RxJS’s scan operator</title>
+      <link>https://juristr.com/blog/2018/10/simple-state-management-with-scan/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/10/simple-state-management-with-scan/</guid>
+      <description>State management is a big topic currently in frontend development. For a reason: frontend frameworks/libraries got extremely powerful in the recent years, which led to more and more complex applications which need to be tamed.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Conditionally add styles to an element</title>
+      <link>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</link>
+      <pubDate>Mon, 25 Jan 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</guid>
+      <description>Here we&#39;re going through a couple of ways to conditionally apply some styles to a DOM element in Angular.     (adsbygoogle = window.</description>
+    </item>
+    
+  </channel>
+</rss>

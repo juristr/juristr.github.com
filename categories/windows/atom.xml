@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/windows/</link>
+    <description>Recent content in Windows on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sun, 18 Jan 2015 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/windows/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backup your Win8 computer to your Synology NAS</title>
+      <link>https://juristr.com/blog/2015/01/backup-windows-to-synology/</link>
+      <pubDate>Sun, 18 Jan 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/01/backup-windows-to-synology/</guid>
+      <description>I love my Macbook Pro which I&amp;rsquo;ve been using now for about 6 years. At work I&amp;rsquo;m a PC user and lately I acquired a Surface Pro 3 as well.</description>
+    </item>
+    
+    <item>
+      <title>Win7: Windows Explorer Doesn&#39;t Refresh Elements</title>
+      <link>https://juristr.com/blog/2010/12/win7-windows-explorer-doesnt-refresh/</link>
+      <pubDate>Fri, 17 Dec 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/12/win7-windows-explorer-doesnt-refresh/</guid>
+      <description>This was a really weird problem. Overnight Windows Explorer on my Windows 7 Enterprise installation stopped refreshing items. For instance, I created a new file and/or renamed an existing one and nothing happened until I manually pressed F5 to refresh.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Teach Visual Studio to Remember Your TFS Password</title>
+      <link>https://juristr.com/blog/2010/08/howto-teach-visual-studio-to-remember/</link>
+      <pubDate>Wed, 11 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/08/howto-teach-visual-studio-to-remember/</guid>
+      <description>I often now ran into the problem of continuously getting queried for the TFS credentials when connecting to the company&#39;s TFS server from my personal notebook.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Run IIS 7 on Vista 64bit OS in 32bit mode</title>
+      <link>https://juristr.com/blog/2009/11/howto-run-iis-7-on-vista-64bit-os-in/</link>
+      <pubDate>Tue, 10 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/howto-run-iis-7-on-vista-64bit-os-in/</guid>
+      <description>A couple of days ago, I ran into a nice problem. I had to configure the setup of a new project using an old ASP based application as the entry point from which then the new ASP.</description>
+    </item>
+    
+    <item>
+      <title>Intel ProSet Wireless tool causing a lot of trouble</title>
+      <link>https://juristr.com/blog/2009/05/intel-proset-wireless-tool-causing-lot/</link>
+      <pubDate>Tue, 19 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/intel-proset-wireless-tool-causing-lot/</guid>
+      <description>Years ago I installed the Intel ProSet Wireless tool for managing my wireless network connections on my HP Compaq. Initially it worked quite well, but then updating it several times introduced a couple of bugs such as delaying the windows startup time because a related service waited till a certain timeout for proceeding etc.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: execute a file download from Windows command line</title>
+      <link>https://juristr.com/blog/2008/11/howto-execute-file-download-from/</link>
+      <pubDate>Mon, 10 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/howto-execute-file-download-from/</guid>
+      <description>Under Linux it is often very comfortable to download files quickly from within the shell by typing wget [some URL], especially if you do that from within a script.</description>
+    </item>
+    
+    <item>
+      <title>Extended User Management under XP</title>
+      <link>https://juristr.com/blog/2008/05/extended-user-management-under-xp/</link>
+      <pubDate>Thu, 15 May 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/05/extended-user-management-under-xp/</guid>
+      <description>This will become just a very short post since I&#39;m too tired to write a lot today. I just set up my little &#34;server&#34; the term is maybe not really appropriate, anyway.</description>
+    </item>
+    
+    <item>
+      <title>What now: Program Files or Programme??</title>
+      <link>https://juristr.com/blog/2007/04/what-now-program-file-or-programme/</link>
+      <pubDate>Sat, 28 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/04/what-now-program-file-or-programme/</guid>
+      <description>A friend of mine has recently acquired a new Dell notebook with a German copy of Windows Vista. On the German Windows version there exists a folder &#34;</description>
+    </item>
+    
+    <item>
+      <title>Vista and stability??</title>
+      <link>https://juristr.com/blog/2007/03/vista-and-stability/</link>
+      <pubDate>Wed, 28 Mar 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/03/vista-and-stability/</guid>
+      <description>I don&#39;t have yet installed the new - so much promoted - operating system of Microsoft: Windows Vista, codename: Longhorn. However I recently had the possibility to see it running on a Dell notebook which a friend of mine acquired.</description>
+    </item>
+    
+    <item>
+      <title>When Windows tray-icons disappear misteriously</title>
+      <link>https://juristr.com/blog/2007/03/when-windows-tray-icons-disappear_16/</link>
+      <pubDate>Fri, 16 Mar 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/03/when-windows-tray-icons-disappear_16/</guid>
+      <description>Recently when starting my computer, I noticed that some icons were missing in the notification area (how the tray-icon area is called on XP). Mainly AntiVir, Sygate Personal Firewall and the Intel PROSet Wireless tool were missing.</description>
+    </item>
+    
+  </channel>
+</rss>

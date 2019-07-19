@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Charity on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/charity/</link>
+    <description>Recent content in Charity on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 08 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/charity/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nepal: Help for Anil Joshi</title>
+      <link>https://juristr.com/blog/2015/05/nepal-help-for-anil/</link>
+      <pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/05/nepal-help-for-anil/</guid>
+      <description>This is not the kind of post you usually find on my site here. But it&amp;rsquo;s the story of a good friend of mine who tries to help Anil, a young Nepalese who lost his home during the big earthquake at the end of April.</description>
+    </item>
+    
+  </channel>
+</rss>

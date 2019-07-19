@@ -1,0 +1,294 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Advanced Angular Component Patterns</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Advanced Angular Component Patterns"
+                  environment="web"
+                  feedback-link="https://github.com/juristr/ama/issues/new">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>In this codelab we&#39;re going to explore some advanced Angular component patterns by building and playing around with a simple toggle component.</p>
+<p><img style="max-width: 171.53px" src="img/22c577a511501740.png"></p>
+<h2 class="checklist"><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>Container vs. presentational components</li>
+<li>Exchanging state between the parent and child component</li>
+<li>How to manage state with &#34;compound components&#34;</li>
+<li>Decoupling components with Dependency Injection</li>
+<li>Using Directives to manage state</li>
+<li>Customization via dynamic templating</li>
+</ul>
+<h2><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>A browser, ideally Chrome</li>
+<li>Preferably a GitHub account for saving the work being done</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Getting set up" duration="2">
+        <p>The exercises will be done directly in <a href="https://stackblitz.com" target="_blank">Stackblitz</a>, an online IDE. Make sure you have access to <a href="https://stackblitz.com" target="_blank">Stackblitz</a> and - although not strictly required - login with your GitHub account. This allows you to fork the exercises and save your intermediate state.</p>
+<p><img style="max-width: 624.00px" src="img/25d00ba61eb6c298.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Expose state to the parent via Input/Outputs" duration="3">
+        <p><a href="https://stackblitz.com/edit/codelab-adv-ng-patterns-expose-state-start" target="_blank"><paper-button class="colored" raised>Open starting Stackblitz example</paper-button></a></p>
+<aside class="special"><p>Some simple one to get warmed up ;)</p>
+</aside>
+<p>In this Stackblitz example we have already a fully functioning toggle component. </p>
+<pre><code>&lt;toggle&gt;&lt;/toggle&gt;</code></pre>
+<p>However, it isn&#39;t really usable since we cannot communicate the state to our parent.</p>
+<p>Modify the component to provide the state to the parent component.</p>
+<ul>
+<li>Allow to set the initial state via an input property <code>on</code> and</li>
+<li>to listen to the state changes via an output property <code>toggled</code>.</li>
+</ul>
+<p>In the end our component API should look like this</p>
+<pre><code>&lt;toggle [on]=&#34;true&#34; (toggled)=&#34;showMessage($event)&#34;&gt;&lt;/toggle&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Compound component (toggle-button)" duration="8">
+        <p>We want to get more control over how our toggle component is visualized. We want to change our current <code>&lt;toggle&gt;</code> component such that it allows to have inner content components that modify its appearance.</p>
+<p>The final outcome should look like this:</p>
+<pre><code>&lt;toggle (toggle)=&#34;onToggle($event)&#34;&gt;
+ &lt;toggle-button&gt;&lt;/toggle-button&gt;
+ &lt;toggle-on&gt;On&lt;/toggle-on&gt;
+ &lt;toggle-off&gt;Off&lt;/toggle-off&gt;
+&lt;/toggle&gt;</code></pre>
+<p>Let&#39;s start by building our <code>&lt;toggl-button&gt;</code> component. Create a new file <code>toggle/toggle-button.component.ts</code> and copy over the content of our current <code>toggle/toggle.component.ts</code>. With this we basically extract the functionality of the &#34;button&#34; into its own component. You can just inline the old template of the toggle.component.ts into the newly created toggle-button.component.ts. You should have something like this:</p>
+<pre><code>//toggle-button.component.ts
+
+import { Component, Input, Output, EventEmitter } from &#39;@angular/core&#39;;
+
+@Component({
+ selector: &#39;toggle-button&#39;,
+ template: &#39;&lt;switch [on]=&#34;on&#34; (click)=&#34;onClick()&#34; &gt;&lt;/switch&gt;&#39;,
+})
+export class ToggleButtonComponent  {
+ @Input() on: boolean;
+ @Output() toggle: EventEmitter&lt;boolean&gt; = new EventEmitter();
+
+ onClick() {
+   this.on = !this.on;
+   this.toggle.emit(this.on);
+ }
+}</code></pre>
+<aside class="special"><p><strong>Hint:</strong> Don&#39;t forget to register the newly created component on the app.module.ts.</p>
+</aside>
+<h2>Refactor the toggle component</h2>
+<p>So far we just did some refactoring and the application should still run. Let&#39;s now refactor our <code>toggle.component.ts</code> in such a way that it allows to have inline child components (so-called <code>ContentChildren</code>). Use the <code>ng-content</code> for that.</p>
+<p>After that change we should be able to inline our toggle-button component within our toggle component.</p>
+<pre><code>&lt;toggle [on]=&#34;true&#34; (toggled)=&#34;showMessage($event)&#34;&gt;
+   &lt;toggle-button&gt;&lt;/toggle-button&gt;
+&lt;/toggle&gt;</code></pre>
+<p>The app should still be running and the toggle-button also works. </p>
+<p><img style="max-width: 624.00px" src="img/4081d2c0f35de2ee.png"></p>
+<p>But note that in the console we <strong>don&#39;t get the messages printed</strong> when the toggle state changes and also the <strong>initial state doesn&#39;t get set properly.</strong> That&#39;s because our <code>&lt;toggle&gt;</code> and <code>&lt;toggle-button&gt;</code> are not connected and don&#39;t share the state. Let&#39;s fix that!</p>
+<h2>Connect the state</h2>
+<p>To grab the instance of our <code>toggle-button</code> from within our <code>toggle</code> component we can use the <code>@ContentChild(..)</code> decorator.</p>
+<pre><code>@ContentChild(ToggleButtonComponent) toggleButton: ToggleButtonComponent;</code></pre>
+<p>To connect the state between the <code>&lt;toggle&gt;</code> and <code>&lt;toggle-button&gt;</code> compnents we need to do two things:</p>
+<p><strong>a) Propagate the events from the toggle-button =&gt; toggle =&gt; parent</strong></p>
+<p>In the <code>ngAfterContentInit</code> lifecycle hook, subscribe to the <code>ToggleButtonComponent</code>&#39;s toggled event and properly propagate the state to our <code>ToggleComponent</code> (firing its EventEmitter).</p>
+<p><strong>b) Bind the input state parent =&gt; toggle =&gt; toggle-button</strong></p>
+<p>The <code>ToggleComponent</code> already has an input property on. Implement the <code>ngOnChanges</code> lifecycle hook to listen to its changes and set the on property on the <code>ToggleButtonComponent</code> accordingly.</p>
+<p>It might make sense to create an update() private function in our ToggleComponent that gets called from the ngOnChanges as well as when our ToggleButton fires. Just to make sure we are always in sync.</p>
+<pre><code>private update() {
+  this.toggleButton.on = this.on;
+}</code></pre>
+<p>Great! We should be all set now. When refreshing the preview window, our toggle should be active and when clicking back &amp; forth it should print out the current state to the console.</p>
+<p><img style="max-width: 381.10px" src="img/1112a9883550c76.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Compound component (toggle-on and toggle-off)" duration="3">
+        <p>Create two more components...</p>
+<ul>
+<li><code>&lt;toggle-on&gt;</code></li>
+<li><code>&lt;toggle-off&gt;</code></li>
+</ul>
+<p>...that simply visualize the state of the toggle in form of a text. Here&#39;s an example of the <code>toggle-on</code> component</p>
+<pre><code>import { Component, Input } from &#39;@angular/core&#39;;
+
+@Component({
+ selector: &#39;toggle-on&#39;,
+ template: &#39;&lt;ng-content *ngIf=&#34;on&#34;&gt;&lt;/ng-content&gt;&#39;,
+})
+export class ToggleOnComponent  {
+ @Input() on: boolean;
+}</code></pre>
+<p>They don&#39;t have any output, but rather just consume and visualize the state. Make sure both the <code>toggle-on</code> and <code>toggle-off</code> get the state passed on just as we did with the <code>toggle-button</code> before.</p>
+<p><strong>The final result</strong> should look like this:</p>
+<pre><code>&lt;toggle (toggle)=&#34;onToggle($event)&#34;&gt;
+ &lt;toggle-button&gt;&lt;/toggle-button&gt;
+ &lt;toggle-on&gt;On&lt;/toggle-on&gt;
+ &lt;toggle-off&gt;Off&lt;/toggle-off&gt;
+&lt;/toggle&gt;</code></pre>
+<table>
+<tr><td colspan="1" rowspan="1"><p><img style="max-width: 198.75px" src="img/5970f499009e5a75.png"></p>
+</td><td colspan="1" rowspan="1"><p><img style="max-width: 180.08px" src="img/31a0d7c30d07fc6d.png"></p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Communication with DI" duration="5">
+        <p>Right now the toggle component has a <strong>very tight coupling</strong> to its child components (toggle-button, toggle-on,...). This makes it hard to change components or add others, without having to modify the toggle component itself.</p>
+<p>Let&#39;s decouple them by using Angular&#39;s Dependency Injection like so:</p>
+<pre><code>// toggle-button.component.ts
+
+import { Component } from &#39;@angular/core&#39;;
+import { ToggleComponent } from &#39;./toggle.component&#39;;
+
+@Component({
+ selector: &#39;toggle-button&#39;,
+ template: &#39;&lt;switch [on]=&#34;toggle.on&#34; (click)=&#34;onClick()&#34; &gt;&lt;/switch&gt;&#39;,
+})
+export class ToggleButtonComponent  {
+ constructor(public toggle: ToggleComponent) {}
+
+ ...
+}</code></pre>
+<p>Right! We <strong>can also inject components</strong>, not only services! </p>
+<p>Refactor our components toggle-button, toggle-on, toggle-off, s.t. they use dependency injection to get/set the state from the parent component.</p>
+<p>Now the <code>&lt;toggle&gt;</code> component doesn&#39;t even know which child components are there. We inverted the dependencies.</p>
+<p><img style="max-width: 624.00px" src="img/778ed19c4e59303a.png"></p>
+<aside class="special"><p><strong>Optional:</strong> Add another, new component that consumes the state of the parent <code>toggle</code> component as well. Notice that you don&#39;t have to change the parent component for doing so.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Using Directives for State Management" duration="3">
+        <p>Right now, our ToggleComponent looks as follows:</p>
+<pre><code>// toggle-button.component.ts
+...
+@Component({
+ selector: &#39;toggle&#39;,
+ template: &#39;&lt;ng-content&gt;&lt;/ng-content&gt;&#39;,
+})
+export class ToggleComponent {
+ ...
+}</code></pre>
+<p>Note that it doesn&#39;t contain any kind of template, but rather just takes other child content components via the <code>ng-content</code> tag. As a result, let&#39;s <strong>refactor the component into a directive</strong>. You can use both, <code>toggle</code> and <code>[toggle]</code> as the corresponding selector. That allows us to still use it as a <code>&lt;toggle&gt;</code> element or as an attribute on some other existing DOM element.</p>
+<p>Verify that the app still runs as expected. After the refactoring, both of these should be possible:</p>
+<pre><code>&lt;div toggle (toggle)=&#34;onToggle($event)&#34;&gt;
+ &lt;toggle-on&gt;On&lt;/toggle-on&gt;
+ &lt;toggle-off&gt;Off&lt;/toggle-off&gt;
+ &lt;toggle-button&gt;&lt;/toggle-button&gt;
+ &lt;other-component&gt;&lt;/other-component&gt;
+&lt;/div&gt;</code></pre>
+<p>And</p>
+<pre><code>&lt;toggle (toggle)=&#34;onToggle($event)&#34;&gt;
+ &lt;toggle-on&gt;On&lt;/toggle-on&gt;
+ &lt;toggle-off&gt;Off&lt;/toggle-off&gt;
+ &lt;toggle-button&gt;&lt;/toggle-button&gt;
+ &lt;other-component&gt;&lt;/other-component&gt;
+&lt;/toggle&gt;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Flexibility via dynamic templates" duration="8">
+        <p>To save some time, use the following Stackblitz as starting point:</p>
+<p><a href="https://stackblitz.com/edit/codelab-adv-ng-patterns-ng-template-start" target="_blank"><paper-button class="colored" raised>Open starting Stackblitz example</paper-button></a></p>
+<p>We want to be able to fully customize the rendering of our <code>toggle</code> component, that is printing out a custom text, activating the toggle switch itself and even providing an alternative toggle button.</p>
+<p><img style="max-width: 624.00px" src="img/2997f0c55e74f742.png"></p>
+<h2>Creating an ng-template</h2>
+<p>Create a simple <code>ng-template</code> and pass it to the toggle component.</p>
+<pre><code>&lt;toggle&gt;
+ &lt;ng-template&gt;
+   Here goes the switch component
+ &lt;/ng-template&gt;
+&lt;/toggle&gt;</code></pre>
+<p>Make sure the passed in template gets rendered by the toggle component.</p>
+<aside class="special"><p><strong>Hint:</strong> Use the <code>@ContentChild</code>, <code>TemplateRef</code>, <code>ng-container</code> and <code>*ngTemplateOutlet</code> to achieve that task.</p>
+</aside>
+<p>You should get something like this:<img style="max-width: 624.00px" src="img/923f2c5962be55c1.png"></p>
+<h2>Expose the toggle state to the ng-template</h2>
+<p>We want to be able to render some text based on the state of the toggle</p>
+<pre><code>&lt;toggle [on]=&#34;true&#34;&gt;
+ &lt;ng-template let-on=&#34;on&#34;&gt;
+   {{ on
+       ? &#39;The button is on&#39;
+       : &#39;The button is off&#39;}}
+ &lt;/ng-template&gt;
+&lt;/toggle&gt;</code></pre>
+<p>Expose the <code>on</code> state to the template.</p>
+<p>You should get this result:</p>
+<p><img style="max-width: 624.00px" src="img/7ccd354dc3fb4333.png"></p>
+<h2>Expose the toggle function to the ng-template</h2>
+<p>Finally in order to also be able to change the state from within our ng-template, we need access to the toggle function. Expose it to the template s.t. we can use it as follows:</p>
+<pre><code>&lt;toggle [on]=&#34;true&#34;&gt;
+ &lt;ng-template let-on=&#34;on&#34; let-toggle=&#34;toggle&#34;&gt;
+   {{ on
+       ? &#39;The button is on&#39;
+       : &#39;The button is off&#39;}}
+
+   &lt;switch [on]=&#34;on&#34; (click)=&#34;toggle()&#34;&gt;&lt;/switch&gt;
+ &lt;/ng-template&gt;
+&lt;/toggle&gt;</code></pre>
+<p>You should now be able to toggle the state and see the text change accordingly.</p>
+<aside class="special"><p><strong>Optional:</strong> Add another toggle switch, by simply using a plain old button to change the toggle state. You should be able to add that without much effort.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>

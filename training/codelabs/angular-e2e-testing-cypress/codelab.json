@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "source": "13fdGPeHG0Z6B4C93pnwsdKi7uoGa5cHsg4_qy2Y3e_4",
+  "format": "html",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2019-03-20T17:15:21Z",
+  "id": "angular-e2e-testing-cypress",
+  "duration": 35,
+  "title": "E2e Testing with Cypress",
+  "author": "Juri Strumpflohner",
+  "summary": "This codelab gives you an introduction to the power of Angular Elements",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "angular"
+  ],
+  "feedback": "https://github.com/juristr/ama/issues/new",
+  "url": "angular-e2e-testing-cypress"
+}

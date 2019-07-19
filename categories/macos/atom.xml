@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Macos on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/macos/</link>
+    <description>Recent content in Macos on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sun, 04 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/macos/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>El Capitain Broke My Developer Stuff! Here&#39;s How to Fix It</title>
+      <link>https://juristr.com/blog/2015/10/link-fix-osx-devtools/</link>
+      <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/link-fix-osx-devtools/</guid>
+      <description>El Capitan might have messed up with your developer tools. This article shows how to fix it again.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Upgrade RAM of Your Macbook Pro</title>
+      <link>https://juristr.com/blog/2011/05/howto-upgrade-ram-of-your-macbook-pro/</link>
+      <pubDate>Thu, 26 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/howto-upgrade-ram-of-your-macbook-pro/</guid>
+      <description>Here&#39;s a nice video that clearly explains how you can upgrade your Macbook RAM:</description>
+    </item>
+    
+    <item>
+      <title>HowTo: MySQL Workbench to Remote Ubuntu Production Server Using SSH Port Forwarding</title>
+      <link>https://juristr.com/blog/2010/11/howto-mysql-workbench-to-remote-ubuntu/</link>
+      <pubDate>Mon, 15 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/howto-mysql-workbench-to-remote-ubuntu/</guid>
+      <description>Before starting, I&#39;m totally not the Linux command line guru, unfortunately. It feels like years of just using Windows base OS makes you a wizard-click-through guy ;).</description>
+    </item>
+    
+    <item>
+      <title>Reloaded: Clean up your folder. For MacOS</title>
+      <link>https://juristr.com/blog/2010/02/reloaded-clean-up-your-folder-for-osx/</link>
+      <pubDate>Sun, 07 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/reloaded-clean-up-your-folder-for-osx/</guid>
+      <description>When downloading files from the web I usually have a predefined folder where all the downloads from my different browsers are stored. It doesn&#39;t take long till that folder grows to quite a remarkable size.</description>
+    </item>
+    
+    <item>
+      <title>Time Machine backups to Windows shared network drive</title>
+      <link>https://juristr.com/blog/2010/01/time-machine-backups-to-windows-shared/</link>
+      <pubDate>Sun, 31 Jan 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/01/time-machine-backups-to-windows-shared/</guid>
+      <description>As some of you may have already read I acquired a MacBook Pro about half a year ago and I love it ;) . Now one of the really cool things OS X provides is Time Machine backups.</description>
+    </item>
+    
+    <item>
+      <title>Annotation tools for the Mac</title>
+      <link>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</link>
+      <pubDate>Tue, 06 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/annotation-tools-for-mac/</guid>
+      <description>When you create scientific reports or you just prepare for exams you usually have to go over a whole bunch of papers, lecture notes and websites.</description>
+    </item>
+    
+  </channel>
+</rss>

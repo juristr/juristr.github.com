@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular.js on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/angular.js/</link>
+    <description>Recent content in Angular.js on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 23 Jan 2017 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/angular.js/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Video Course: Learning Angular Components</title>
+      <link>https://juristr.com/blog/2017/01/video-course-learning-ng-cmps/</link>
+      <pubDate>Mon, 23 Jan 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/01/video-course-learning-ng-cmps/</guid>
+      <description>I just released the 2nd edition of my video course for PacktPub on &#34;Learning Angular components&#34;.  Contents are based on Angular version &amp;gt;=2     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>From ng-controller to components with Angular 1.5</title>
+      <link>https://juristr.com/blog/2016/06/from-ngcontroller-to-components/</link>
+      <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/06/from-ngcontroller-to-components/</guid>
+      <description>The web has moved forward and so should you. Learn how to upgrade your Angular 1 app from a more MV* architecture to a cleaner, more component oriented approach.</description>
+    </item>
+    
+    <item>
+      <title>Angular 2&#43; - A Getting Started Guide for Beginners</title>
+      <link>https://juristr.com/blog/2016/06/ng2-getting-started-for-beginners/</link>
+      <pubDate>Mon, 06 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/06/ng2-getting-started-for-beginners/</guid>
+      <description>Since about half a year, I&#39;m organizing a local Meetup group around Software Craftsmanship. I recently also published a video course on &#34;Learning Angular 2 directives&#34;</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular 2 Directives</title>
+      <link>https://juristr.com/blog/2016/04/learning-angular2-directives-course/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/04/learning-angular2-directives-course/</guid>
+      <description>Finally 😆, I managed to finish and publish my very first video course: &#34;Learning Angular 2 Directives&#34; by Packt Publishing. So relieved, and I even managed to publish it before the official RC1 😉.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading Angular from 1.x</title>
+      <link>https://juristr.com/blog/2015/12/link-upgrade-ng1-to-ng2/</link>
+      <pubDate>Wed, 16 Dec 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/12/link-upgrade-ng1-to-ng2/</guid>
+      <description>Yesterday the Angular team released Angular 2 in beta. With that, they also added an interesting step by step tutorial which guides you through upgrading an Angular 1.</description>
+    </item>
+    
+    <item>
+      <title>Improve your Angular 1.x startup time</title>
+      <link>https://juristr.com/blog/2015/12/perf-startup-ng1/</link>
+      <pubDate>Mon, 14 Dec 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/12/perf-startup-ng1/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  This neat and simple trick originally appeared about a year ago on this blog post, so it&amp;rsquo;s not something I came up with by myself.</description>
+    </item>
+    
+    <item>
+      <title>Exploring Components in Angular 1.5</title>
+      <link>https://juristr.com/blog/2015/11/link-ng1-components/</link>
+      <pubDate>Mon, 16 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/link-ng1-components/</guid>
+      <description>Todd Motto introduces the .component() function that will be out in Angular 1.5. This is a further step for facilitating the migration towards Angular 2.</description>
+    </item>
+    
+    <item>
+      <title>Preparing for Angular 2</title>
+      <link>https://juristr.com/blog/2015/07/learning-ng-prepare-ng2/</link>
+      <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/07/learning-ng-prepare-ng2/</guid>
+      <description>I&amp;rsquo;m sure you heard about Angular 2 and that it will be totally different. Forget everything you know and start from scratch 😮 . Jokes apart, if you have taken a closer look you already know that, yes, it will be new, things will be different (as it&amp;rsquo;s mostly the case with new stuff), but many concepts will still be there.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Testing $q promise resolves with Sinon and Jasmine</title>
+      <link>https://juristr.com/blog/2015/06/learning-ng-testing-promises/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/06/learning-ng-testing-promises/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  This article shows a brief example on how to properly mock and resolve a $q promise from within a Jasmine unit test.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Expose an API on your directives</title>
+      <link>https://juristr.com/blog/2015/06/learning-ng-expose-directive-api/</link>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/06/learning-ng-expose-directive-api/</guid>
+      <description>Ever wanted to not only create a nice, visually appealing directive or web component, but to also provide a more rich programmatic API with it?</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Set your language culture before any UI is displayed</title>
+      <link>https://juristr.com/blog/2015/03/learning-ng-angular-translate-promises/</link>
+      <pubDate>Tue, 03 Mar 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/03/learning-ng-angular-translate-promises/</guid>
+      <description>In this article I briefly outline an issue I had, namely to make sure that my language&amp;rsquo;s locale files are loaded by angular-translate before any UI is shown.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Verifying whether a function has been passed to my directive&#39;s isolated scope</title>
+      <link>https://juristr.com/blog/2015/02/learning-ng-verify-presence-of-directive-props/</link>
+      <pubDate>Thu, 26 Feb 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/02/learning-ng-verify-presence-of-directive-props/</guid>
+      <description>When you create isolated directives, you usually use the scope property to define your directive&#39;s external API. Some of the APIs properties might be mandatory while others are optional and based on that state, your directive might react differently.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Access directive scope variables from directive controllers and vice versa</title>
+      <link>https://juristr.com/blog/2015/01/learning-ng-directives-access-scope-controller/</link>
+      <pubDate>Mon, 26 Jan 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/01/learning-ng-directives-access-scope-controller/</guid>
+      <description>Angular directives can have a separate, isolated scope, which is even the suggested approach most of the time. And they can have directive controllers. But&amp;hellip;how do I access the directive&amp;rsquo;s scope variables from the directive controller and vice-versa?</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Useful utility functions</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-angularjs-utility-functions/</link>
+      <pubDate>Fri, 28 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-angularjs-utility-functions/</guid>
+      <description>Today a very short post. Angular has a series of utility functions which you should definitely take a look at. They are not as feature rich as those of underscore.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Unit Testing $watch expressions</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-testing-watch-expressions/</link>
+      <pubDate>Wed, 26 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-testing-watch-expressions/</guid>
+      <description>Today I wanted to write a unit test for a watch expression on my controller. What seemed quite obvious initially, turned out to be quite nasty.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: What is the scope of your directive??</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-what-is-your-directives-scope/</link>
+      <pubDate>Thu, 13 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-what-is-your-directives-scope/</guid>
+      <description>This might create quite some debugging headaches, especially in a larger application. Things don&amp;rsquo;t bind properly, have different data on the scope than you&amp;rsquo;d expect etc.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Gosh, my two-way binding doesn&#39;t seem to work properly!</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-databinding-doesnt-work/</link>
+      <pubDate>Fri, 07 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-databinding-doesnt-work/</guid>
+      <description>Angular data-binding seems magic, but obviously isn&#39;t. You have to give it a chance to do its work. As such, watch out and think about the difference &#34;</description>
+    </item>
+    
+    <item>
+      <title>Introducing the learning-ng series</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-series-intro/</link>
+      <pubDate>Thu, 06 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-series-intro/</guid>
+      <description>With this post I&amp;rsquo;d like to introduce to you the - what I&amp;rsquo;d like to call - learning-ng series; a number of short and concise posts that describe issues and solutions on my journey of climbing up the Angular.</description>
+    </item>
+    
+    <item>
+      <title>Avoid test code duplication in Jasmine tests</title>
+      <link>https://juristr.com/blog/2014/10/avoid-test-code-duplication-jasmine/</link>
+      <pubDate>Thu, 30 Oct 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/10/avoid-test-code-duplication-jasmine/</guid>
+      <description>Test code has to be treated like production code. Obviously we cannot charge the customer for it, it&amp;rsquo;s something that helps us developers to make sure we keep our codebase healthy, which ultimately is the responsibility we have towards our customers.</description>
+    </item>
+    
+    <item>
+      <title>Lazy Angular Modules</title>
+      <link>https://juristr.com/blog/2014/07/lazy-angular-modules/</link>
+      <pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/07/lazy-angular-modules/</guid>
+      <description>Startup time is crucial for a proper user experience and that&amp;rsquo;s where many JavaScript SPA really fail. Even though you might (and definitely should) apply code minification and bundling mechanisms, you wouldn&amp;rsquo;t want to load your entire application right upfront.</description>
+    </item>
+    
+    <item>
+      <title>First baby steps with Angular.js</title>
+      <link>https://juristr.com/blog/2014/05/angular-baby-steps/</link>
+      <pubDate>Sun, 11 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/05/angular-baby-steps/</guid>
+      <description>This article outlines some of my notes of a webinar about Angular.js I recently participated at. These are really just &amp;ldquo;baby steps&amp;rdquo; in that it covers the very basics that might help to get started.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guest Post on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/guest-post/</link>
+    <description>Recent content in Guest Post on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 14 Feb 2019 21:24:36 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/guest-post/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A step-by-step guide to integrating a third party widget with Angular</title>
+      <link>https://juristr.com/blog/2019/02/ag-grid-integrating-with-angular/</link>
+      <pubDate>Thu, 14 Feb 2019 21:24:36 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/02/ag-grid-integrating-with-angular/</guid>
+      <description>When working on a complex project you will inevitably face the situation when you have to use a 3rd party widget in your project. Also, most of the web projects today use frameworks.</description>
+    </item>
+    
+    <item>
+      <title>My Journey replacing Promises with RxJS</title>
+      <link>https://juristr.com/blog/2018/10/journey-promises-to-rxjs/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/10/journey-promises-to-rxjs/</guid>
+      <description>In this post I’m going to tell you, step-by-step, how I used RxJS to refactor a method that was based on Promises.     (adsbygoogle = window.</description>
+    </item>
+    
+  </channel>
+</rss>

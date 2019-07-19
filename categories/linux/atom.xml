@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/linux/</link>
+    <description>Recent content in Linux on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sun, 15 Jan 2012 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/linux/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Help, Ubuntu 11.10 won&#39;t boot!!</title>
+      <link>https://juristr.com/blog/2012/01/help-ubuntu-1110-wont-boot/</link>
+      <pubDate>Sun, 15 Jan 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/01/help-ubuntu-1110-wont-boot/</guid>
+      <description>Today I tried to start the new Ubuntu 11.10 from the live CD on the old desktop computer of my girlfriend. Her computer is quite slow and the old WinXP installation broken.</description>
+    </item>
+    
+    <item>
+      <title>Installing and configuring ATI graphics card drivers on Ubuntu Hardy</title>
+      <link>https://juristr.com/blog/2009/02/installing-and-configuring-ati-graphics/</link>
+      <pubDate>Sun, 15 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/installing-and-configuring-ati-graphics/</guid>
+      <description>For the &#34;Data Mining and Data Warehousing&#34; course at the university, we had to implement a spectral clustering algorithm (I&#39;ve already written another post related to it).</description>
+    </item>
+    
+    <item>
+      <title>Accidentally deleted the Ubuntu main menu bar!!</title>
+      <link>https://juristr.com/blog/2009/02/accidentally-deleted-ubuntu-main-menu/</link>
+      <pubDate>Tue, 03 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/accidentally-deleted-ubuntu-main-menu/</guid>
+      <description>I just clicked accidentally on the main top panel on the Ubuntu desktop and damn...I deleted the menu bar...shock!!
+But actually after some minutes of searching it&#39;s really easy to restore it actually.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; linking libraries to build configuration in Eclipse</title>
+      <link>https://juristr.com/blog/2008/11/c-linking-libraries-to-build/</link>
+      <pubDate>Thu, 27 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/c-linking-libraries-to-build/</guid>
+      <description>When programming in C++ you may often have to link at compile time to 3rd-party libraries which you&#39;re using.
+In Eclipse you can do that on the project properties dialog, as demonstrated in the screenshot below.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; experiences</title>
+      <link>https://juristr.com/blog/2008/11/c-experiences/</link>
+      <pubDate>Wed, 26 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/c-experiences/</guid>
+      <description>Most of the courses I attended during my Bachelor were Java oriented with some C#, C and Haskell programming. C++ never got really touched, and if, then just to illustrate some theoretical stuff, meaning some C++ code was used to describe a design pattern etc.</description>
+    </item>
+    
+    <item>
+      <title>Creating &#34;soft-links&#34; to folders on Linux</title>
+      <link>https://juristr.com/blog/2008/11/creating-soft-links-to-folders-on-linux/</link>
+      <pubDate>Tue, 11 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/creating-soft-links-to-folders-on-linux/</guid>
+      <description>If you&#39;re working on Linux, especially on the command line, you&#39;ll often have to navigate through a lot of directories. This clearly depends on your directory structure, but it may be the case.</description>
+    </item>
+    
+    <item>
+      <title>C/C&#43;&#43; programming on Linux</title>
+      <link>https://juristr.com/blog/2008/10/cc-programming-on-linux/</link>
+      <pubDate>Sat, 25 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/10/cc-programming-on-linux/</guid>
+      <description>For a course at the university we have to develop a system using C++ on Linux. Being from the Java and C# world this won&#39;t become an easy task, already by choosing the right development tools and environment (coding, debugging, deploying.</description>
+    </item>
+    
+    <item>
+      <title>Linux main menu bars (top and bottom) disappeared</title>
+      <link>https://juristr.com/blog/2008/10/linux-main-menu-bars-top-and-bottom/</link>
+      <pubDate>Sun, 05 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/10/linux-main-menu-bars-top-and-bottom/</guid>
+      <description>Linux (Ubuntu) is generally great...and still I must admit that most often ones habits are stronger I launch Windows. There are however many points that speak for Ubuntu.</description>
+    </item>
+    
+    <item>
+      <title>Fighting around with VIM</title>
+      <link>https://juristr.com/blog/2008/10/fighting-around-with-vim/</link>
+      <pubDate>Fri, 03 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/10/fighting-around-with-vim/</guid>
+      <description>Today I attended the first lectures of the Master in Computer Science. Yes, I decided to go back to University for attending the Master, I&#39;ll continue however to work part-time because I find it important to keep up with the &#34;</description>
+    </item>
+    
+    <item>
+      <title>Speakers don&#39;t mute when plugging in headphones!</title>
+      <link>https://juristr.com/blog/2007/12/speakers-dont-mute-when-plugging-in/</link>
+      <pubDate>Thu, 27 Dec 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/12/speakers-dont-mute-when-plugging-in/</guid>
+      <description>As you may have recognized from the last post I start using Linux more often. With the new upgrade to Gutsy, Ubuntu&#39;s performance is much better (that&#39;s at least my feeling on my notebook) and I really start liking it.</description>
+    </item>
+    
+    <item>
+      <title>Where has Beryl gone??</title>
+      <link>https://juristr.com/blog/2007/12/where-has-beryl-gone/</link>
+      <pubDate>Sun, 23 Dec 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/12/where-has-beryl-gone/</guid>
+      <description>Yesterday I upgraded Ubuntu to the new 7.10 (Gutsy) version. I don&#39;t know whether you&#39;ve read a post I&#39;ve written some time ago about Ubuntu&#39;s desktop and window effects?</description>
+    </item>
+    
+    <item>
+      <title>Beryl window manager</title>
+      <link>https://juristr.com/blog/2007/04/beryl-window-manager/</link>
+      <pubDate>Tue, 17 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/04/beryl-window-manager/</guid>
+      <description>Some time ago, I wrote a post regarding Ubuntu where I also mentioned about the nice visual effects produced by the Beryl window manager. The effects are actually great and they can compete without any problems with Vista.</description>
+    </item>
+    
+    <item>
+      <title>Diving into a new area</title>
+      <link>https://juristr.com/blog/2007/03/diving-into-new-area/</link>
+      <pubDate>Sun, 04 Mar 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/03/diving-into-new-area/</guid>
+      <description>I never really got into the Linux world. Last year I installed Suse Linux, but I used it rarely, mainly for programming C which we needed for the &#34;</description>
+    </item>
+    
+  </channel>
+</rss>

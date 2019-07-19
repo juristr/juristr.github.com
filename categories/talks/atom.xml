@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/talks/</link>
+    <description>Recent content in Talks on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Wed, 11 Jan 2017 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/talks/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Talk: Testing with Angular - Some Recipes</title>
+      <link>https://juristr.com/blog/2017/01/talk-angular-testing-recipes/</link>
+      <pubDate>Wed, 11 Jan 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2017/01/talk-angular-testing-recipes/</guid>
+      <description>I recently wanted to dive deeper into testing Angular applications, in specific on how to write proper unit tests for some common scenarious you might encounter.</description>
+    </item>
+    
+    <item>
+      <title>semantic-release - @kentcdodds talks to @boennemann</title>
+      <link>https://juristr.com/blog/2015/08/link-semantic-release-talk/</link>
+      <pubDate>Wed, 19 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/link-semantic-release-talk/</guid>
+      <description>Kent C. Dodds talks with Stephan Bönnemann, the creator of semantic-release. Semantic-release
+ automates the releasing process (to NPM,&amp;hellip;) automatically determines the correct semantic version based on conventional commit messages generates a nice changelog on GitHub is even able to detect breaking changes based on failing tests executed on Travis &amp;hellip; much more to come (just check out the official repo)  I didn&amp;rsquo;t yet watch the video, but I&amp;rsquo;m sure it&amp;rsquo;s worth it!</description>
+    </item>
+    
+  </channel>
+</rss>

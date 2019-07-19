@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gwt on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/gwt/</link>
+    <description>Recent content in Gwt on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 15 Mar 2010 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/gwt/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GWT Button with image AND text</title>
+      <link>https://juristr.com/blog/2010/03/gwt-button-with-image-and-text/</link>
+      <pubDate>Mon, 15 Mar 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/03/gwt-button-with-image-and-text/</guid>
+      <description>GWT just provides the basic widgets like check boxes, hyperlinks, buttons etc...and leave the more complex ones to the developer or to 3rd party providers.</description>
+    </item>
+    
+    <item>
+      <title>Client-server communication peculiarities with GWT and App Engine DataNucleus</title>
+      <link>https://juristr.com/blog/2010/03/client-server-communication/</link>
+      <pubDate>Fri, 12 Mar 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/03/client-server-communication/</guid>
+      <description>I just had to fight with a strange exception which got raised after a GWT-RPC call to the App Engine back-end server which had the purpose to persistently store an entity into the data store.</description>
+    </item>
+    
+    <item>
+      <title>GWT Hyperlink Widget with Image</title>
+      <link>https://juristr.com/blog/2010/02/gwt-hyperlink-widget-with-image/</link>
+      <pubDate>Sun, 28 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/gwt-hyperlink-widget-with-image/</guid>
+      <description>Standard GWT Hyperlink widgets don&#39;t seem to give the possibility to associate an image. This is quite awkward since you may want to provide nice icons along with your links.</description>
+    </item>
+    
+    <item>
+      <title>GWT, App Engine and App Engine Data Classes</title>
+      <link>https://juristr.com/blog/2010/02/gwt-app-engine-and-app-engine-data/</link>
+      <pubDate>Tue, 23 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/gwt-app-engine-and-app-engine-data/</guid>
+      <description>I currently have some time before starting with my Master thesis project which will bring me back to Android programming. So to make use of that, I started to develop a project I already wanted to implement a couple of years ago, but due to my Master studies I didn&#39;t have the time to.</description>
+    </item>
+    
+    <item>
+      <title>DockLayoutPanel doesn&#39;t work correctly??</title>
+      <link>https://juristr.com/blog/2010/02/docklayoutpanel-doesnt-work-correctly/</link>
+      <pubDate>Fri, 19 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/docklayoutpanel-doesnt-work-correctly/</guid>
+      <description>Suppose you&#39;d like to create a layout like the following using GWT:
+
+With GWT 2.0 the documentation suggests to use the DockLayoutPanel.
+&amp;lt;g:DockLayoutPanel unit=&#39;EM&#39;&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>GWT DecoratorPanel style problems</title>
+      <link>https://juristr.com/blog/2010/02/gwt-decoratorpanel-style-problems/</link>
+      <pubDate>Tue, 16 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/gwt-decoratorpanel-style-problems/</guid>
+      <description>I just experienced a nice side effect that happens if you use a DecoratorPanel. In my example it contained a list of items and everything is fine.</description>
+    </item>
+    
+    <item>
+      <title>GWT meets Spring</title>
+      <link>https://juristr.com/blog/2009/09/gwt-meets-spring/</link>
+      <pubDate>Tue, 29 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/gwt-meets-spring/</guid>
+      <description>GWT is quite evolving recently. There are a couple of reasons for that:
+Coding apps like Gmail and Google Wave
+We all appreciate the speed of the Gmail UI.</description>
+    </item>
+    
+    <item>
+      <title>First steps with Silverlight. What about GWT?</title>
+      <link>https://juristr.com/blog/2008/12/first-steps-with-silverlight-what-about/</link>
+      <pubDate>Tue, 23 Dec 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/12/first-steps-with-silverlight-what-about/</guid>
+      <description>Last week I had some time which allowed me to do some experiments with Microsoft Silverlight. I had to give it a try since you hear so much on the web about it, so I was quite curious, how it works out.</description>
+    </item>
+    
+    <item>
+      <title>Strange GWT compiler error when trying to serialize Java objects</title>
+      <link>https://juristr.com/blog/2008/08/strange-gwt-compiler-error-when-trying/</link>
+      <pubDate>Sat, 16 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/08/strange-gwt-compiler-error-when-trying/</guid>
+      <description>I&#39;m currently working on a project on my own where I&#39;m developing a rich client by using the Google Web toolkit and a server using the Spring application framework.</description>
+    </item>
+    
+  </channel>
+</rss>

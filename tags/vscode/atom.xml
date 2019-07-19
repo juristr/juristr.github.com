@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vscode on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/vscode/</link>
+    <description>Recent content in Vscode on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 23 May 2019 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/vscode/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Code Snippets for Visual Studio Code with ease</title>
+      <link>https://juristr.com/blog/2019/05/create-vscode-snippets/</link>
+      <pubDate>Thu, 23 May 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/05/create-vscode-snippets/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    When writing software, even when writing a blog post using Markdown, there are some pieces you have to write again and again. Either you&amp;rsquo;re lazy or you don&amp;rsquo;t remember the exact syntax, code snippets can really help here. Let&amp;rsquo;s see how.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

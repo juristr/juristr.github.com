@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Performance on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/performance/</link>
+    <description>Recent content in Performance on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 29 Apr 2019 14:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/performance/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lazy load Angular Components</title>
+      <link>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</link>
+      <pubDate>Mon, 29 Apr 2019 14:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</guid>
+      <description>Lazy loading is hot recently and for a good reason. It&amp;rsquo;s all about speed! The Chrome team at Google in specific (around Addy Osmani) tries to push out content (and new APIs) to optimize the heck out of web pages.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/java/</link>
+    <description>Recent content in Java on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 14 May 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/java/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jersey WebResource - Header don&#39;t get appended</title>
+      <link>https://juristr.com/blog/2015/05/jersey-webresource-ignores-headers/</link>
+      <pubDate>Thu, 14 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/05/jersey-webresource-ignores-headers/</guid>
+      <description>Yesterday I ran into a strange problem when using the Jersey WebResource class for doing HTTP calls: it seemed as if the headers I set, simply got ignored when executing the HTTP call.</description>
+    </item>
+    
+    <item>
+      <title>Packt Video: JBoss EAP Configuration, Deployment and Administration</title>
+      <link>https://juristr.com/blog/2014/03/Video-JBoss-EAP-Administration/</link>
+      <pubDate>Sun, 16 Mar 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/03/Video-JBoss-EAP-Administration/</guid>
+      <description>Packt Publishing recently approached me about quickly reviewing a video series on JBoss EAP and its configuration, deployment and administration. Although I&amp;rsquo;m primarily working with the .</description>
+    </item>
+    
+    <item>
+      <title>JBoss Weld CDI for Java Platform</title>
+      <link>https://juristr.com/blog/2013/10/jboss-weld-cdi-for-java-platform/</link>
+      <pubDate>Tue, 29 Oct 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/10/jboss-weld-cdi-for-java-platform/</guid>
+      <description>CDI stands for Context and Dependency Injection and is the standardization of the process of dependency injection for Java EE. This article presents some of my comments and observations when reading &amp;ldquo;JBoss Weld CDI for Java Platform&amp;rdquo; which covers everything you need to successfully implement the new standard in your Java EE application.</description>
+    </item>
+    
+    <item>
+      <title>Integrating Jersey with Spring</title>
+      <link>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</link>
+      <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</guid>
+      <description>Spring provides a lot of benefits and promotes best practices with its dependency injection mechanism, application lifecycle management and Hibernate support (just to mention some).</description>
+    </item>
+    
+    <item>
+      <title>JCG - Joining the Java Code Geeks Program</title>
+      <link>https://juristr.com/blog/2011/03/jcg-joining-java-code-geeks-program/</link>
+      <pubDate>Thu, 10 Mar 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/03/jcg-joining-java-code-geeks-program/</guid>
+      <description>A couple of days ago I was kindly invited to the Java Code Geeks program. Their goal is to build an online community for Java developers by aggregating and republishing content from different bloggers on their blog.</description>
+    </item>
+    
+    <item>
+      <title>Coding an Update Functionality for your Android App</title>
+      <link>https://juristr.com/blog/2011/02/coding-update-functionality-for-your/</link>
+      <pubDate>Mon, 07 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/coding-update-functionality-for-your/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  An immediate answer would be: why should I need that. I publish my app on the market which has a build-in update functionality.</description>
+    </item>
+    
+    <item>
+      <title>Android: HowTo Detect Installed SQLite DB Version</title>
+      <link>https://juristr.com/blog/2011/01/android-howto-detect-installed-sqlite/</link>
+      <pubDate>Fri, 21 Jan 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/01/android-howto-detect-installed-sqlite/</guid>
+      <description>As you might already know, Android comes with a preinstalled SQLite database. This is quite handy because you can rely on it without the need to care about installing a DB along with your application (although you can, standalone, small DB&#39;s of course like HSQLDB).</description>
+    </item>
+    
+    <item>
+      <title>Tomcat: IllegalStateException: No output folder</title>
+      <link>https://juristr.com/blog/2010/12/tomcat-illegalstateexception-no-output/</link>
+      <pubDate>Sun, 26 Dec 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/12/tomcat-illegalstateexception-no-output/</guid>
+      <description>Today, I started to create a couple of JSP pages for the server-side part of my MSc thesis project in order to be able to output some meaningful statistics of the underlying data in form of diagrams.</description>
+    </item>
+    
+    <item>
+      <title>Android: Attaching ClickListeners Declaratively</title>
+      <link>https://juristr.com/blog/2010/11/android-attaching-clicklisteners/</link>
+      <pubDate>Fri, 19 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/android-attaching-clicklisteners/</guid>
+      <description>If you define a click listener for - say - a button in an android Activity, then you basically have three different possibilities.
+The &#34;</description>
+    </item>
+    
+    <item>
+      <title>Smelly Code: Eager Test</title>
+      <link>https://juristr.com/blog/2010/09/smelly-code-eager-test/</link>
+      <pubDate>Wed, 29 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/smelly-code-eager-test/</guid>
+      <description>This post shows a common code smell in unit tests also mentioned in the xunit test patterns book, namely &#34;Eager tests&#34;. Original, smelly code public void testSaveSession(){</description>
+    </item>
+    
+    <item>
+      <title>Retrieve Selected Items on Checkable ListView: Differences in SDK Level 7 and 8</title>
+      <link>https://juristr.com/blog/2010/09/retrieve-selected-items-on-checkable/</link>
+      <pubDate>Tue, 14 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/retrieve-selected-items-on-checkable/</guid>
+      <description>I&#39;m currently testing my Android app that I&#39;m developing for my MSc thesis on different real devices. While I own a Nexus One with Android Froyo 2.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Install your Android app OTA on your device for testing</title>
+      <link>https://juristr.com/blog/2010/07/howto-install-your-android-app-ota-on/</link>
+      <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/07/howto-install-your-android-app-ota-on/</guid>
+      <description>A fundamental thing when developing Android apps but also in general when developing with device emulators is to test your app on real devices. Android makes this easy.</description>
+    </item>
+    
+    <item>
+      <title>Let tests guide you through development</title>
+      <link>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</link>
+      <pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</guid>
+      <description>I&#39;m currently working on my MSc thesis work which is divided into a project that has to be developed (in my case an Android application) and then the according paper that has to be written.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Get an Android app&#39;s database from the emulator</title>
+      <link>https://juristr.com/blog/2010/06/howto-get-android-apps-database-from/</link>
+      <pubDate>Thu, 03 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/06/howto-get-android-apps-database-from/</guid>
+      <description>Most apps need a database for storing their data onto the device in a structured form. Android&#39;s natively supported DB is SQLite. Now of course if you develop an app you&#39;ll probably have the need for inspecting the stored data during development.</description>
+    </item>
+    
+    <item>
+      <title>Unit testing asynchronous code</title>
+      <link>https://juristr.com/blog/2010/04/unit-testing-asynchronous-code/</link>
+      <pubDate>Sun, 04 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/04/unit-testing-asynchronous-code/</guid>
+      <description>Today I wrote on a first prototype for my current thesis research. I started coding just ahead however - at the same time - trying to find a good design which has a high potential to be reused for the final system.</description>
+    </item>
+    
+    <item>
+      <title>Client-server communication peculiarities with GWT and App Engine DataNucleus</title>
+      <link>https://juristr.com/blog/2010/03/client-server-communication/</link>
+      <pubDate>Fri, 12 Mar 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/03/client-server-communication/</guid>
+      <description>I just had to fight with a strange exception which got raised after a GWT-RPC call to the App Engine back-end server which had the purpose to persistently store an entity into the data store.</description>
+    </item>
+    
+    <item>
+      <title>GWT Hyperlink Widget with Image</title>
+      <link>https://juristr.com/blog/2010/02/gwt-hyperlink-widget-with-image/</link>
+      <pubDate>Sun, 28 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/gwt-hyperlink-widget-with-image/</guid>
+      <description>Standard GWT Hyperlink widgets don&#39;t seem to give the possibility to associate an image. This is quite awkward since you may want to provide nice icons along with your links.</description>
+    </item>
+    
+    <item>
+      <title>GWT, App Engine and App Engine Data Classes</title>
+      <link>https://juristr.com/blog/2010/02/gwt-app-engine-and-app-engine-data/</link>
+      <pubDate>Tue, 23 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/gwt-app-engine-and-app-engine-data/</guid>
+      <description>I currently have some time before starting with my Master thesis project which will bring me back to Android programming. So to make use of that, I started to develop a project I already wanted to implement a couple of years ago, but due to my Master studies I didn&#39;t have the time to.</description>
+    </item>
+    
+    <item>
+      <title>DockLayoutPanel doesn&#39;t work correctly??</title>
+      <link>https://juristr.com/blog/2010/02/docklayoutpanel-doesnt-work-correctly/</link>
+      <pubDate>Fri, 19 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/docklayoutpanel-doesnt-work-correctly/</guid>
+      <description>Suppose you&#39;d like to create a layout like the following using GWT:
+
+With GWT 2.0 the documentation suggests to use the DockLayoutPanel.
+&amp;lt;g:DockLayoutPanel unit=&#39;EM&#39;&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>GWT DecoratorPanel style problems</title>
+      <link>https://juristr.com/blog/2010/02/gwt-decoratorpanel-style-problems/</link>
+      <pubDate>Tue, 16 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/gwt-decoratorpanel-style-problems/</guid>
+      <description>I just experienced a nice side effect that happens if you use a DecoratorPanel. In my example it contained a list of items and everything is fine.</description>
+    </item>
+    
+    <item>
+      <title>Android SMS activity doesn&#39;t fill phone number</title>
+      <link>https://juristr.com/blog/2009/12/android-sms-activity-doesnt-fill-phone/</link>
+      <pubDate>Sat, 26 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/android-sms-activity-doesnt-fill-phone/</guid>
+      <description>Today while fixing a bug for our current project we develop for the Android phone I found a strange behavior when trying to launch the phone&#39;s SMS sender activity.</description>
+    </item>
+    
+    <item>
+      <title>Creating Test Suites with jUnit 4</title>
+      <link>https://juristr.com/blog/2009/12/creating-test-suites-with-junit-4/</link>
+      <pubDate>Fri, 25 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/creating-test-suites-with-junit-4/</guid>
+      <description>A while back I&#39;ve posted about how to enable the automatic (jUnit 3.8-style) creation of test suites in Eclipse. That was necessary for Eclipse 3.</description>
+    </item>
+    
+    <item>
+      <title>MapView doesn&#39;t fire onLongClick event</title>
+      <link>https://juristr.com/blog/2009/12/mapview-doesnt-fire-onlongclick-event/</link>
+      <pubDate>Wed, 02 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/mapview-doesnt-fire-onlongclick-event/</guid>
+      <description>Here&#39;s another curiosity I came across today while programming on my Android project. I was creating a MapView for displaying some interesting stuff on it.</description>
+    </item>
+    
+    <item>
+      <title>Implementing the onTouchEvent for the MapActivity</title>
+      <link>https://juristr.com/blog/2009/11/implementing-ontouchevent-for/</link>
+      <pubDate>Tue, 24 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/implementing-ontouchevent-for/</guid>
+      <description>Android View classes expose an onTouchEvent(MotionEvent ev) method. As the name already suggests, by overriding this method you can handle touch events done by the user on the current view.</description>
+    </item>
+    
+    <item>
+      <title>Instantiating object from generic type: Java vs. .Net</title>
+      <link>https://juristr.com/blog/2009/10/instantiating-object-from-generic-type/</link>
+      <pubDate>Fri, 30 Oct 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/instantiating-object-from-generic-type/</guid>
+      <description>Consider the following .Net code:
+public static class Processor
+{
+public static TItem CreateInstance&amp;lt;TItem&amp;gt;() where TItem:new()
+{
+TItem result = new TItem();
+return result;</description>
+    </item>
+    
+    <item>
+      <title>Accessing the host machine from your Android emulator</title>
+      <link>https://juristr.com/blog/2009/10/accessing-host-machine-from-your/</link>
+      <pubDate>Thu, 29 Oct 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/accessing-host-machine-from-your/</guid>
+      <description>I recently started a project where I develop an Android app (there will some posts later on ;) ) which accesses a remote server as its back-end, hosted on the Google Appengine.</description>
+    </item>
+    
+    <item>
+      <title>GWT meets Spring</title>
+      <link>https://juristr.com/blog/2009/09/gwt-meets-spring/</link>
+      <pubDate>Tue, 29 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/gwt-meets-spring/</guid>
+      <description>GWT is quite evolving recently. There are a couple of reasons for that:
+Coding apps like Gmail and Google Wave
+We all appreciate the speed of the Gmail UI.</description>
+    </item>
+    
+    <item>
+      <title>Around(J2)ME listed on Softpedia</title>
+      <link>https://juristr.com/blog/2009/08/aroundj2me-listed-on-softpedia/</link>
+      <pubDate>Mon, 03 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/aroundj2me-listed-on-softpedia/</guid>
+      <description>A project I developed together with my colleague Matthias Braunhofer during the course of Mobile Services at the university has now been listed on Softpedia.</description>
+    </item>
+    
+    <item>
+      <title>ExecutableTask pattern to tackle J2ME multithreading</title>
+      <link>https://juristr.com/blog/2009/07/executabletask-pattern-to-tackle-j2me/</link>
+      <pubDate>Tue, 07 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/07/executabletask-pattern-to-tackle-j2me/</guid>
+      <description>Programming on the mobile device is quite different to more common environments like web or client-server desktop applications. Although mobile devices become always more and more powerful (i.</description>
+    </item>
+    
+    <item>
+      <title>MIDlet for downloading image from the web</title>
+      <link>https://juristr.com/blog/2009/06/midlet-for-downloading-image-from-web/</link>
+      <pubDate>Mon, 29 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/06/midlet-for-downloading-image-from-web/</guid>
+      <description>J2ME provides several ways for creating an Image object:
+ Image.createImage(String) Image.createImage(byte[], int, int) Image.createImage(InputStream) &amp;nbsp;If you want to download an image from the web to your local J2ME application, you - of course - have to establish an HttpConnection and retrieve the image with a simple GET.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Getting started with JUnit testing for Liferay portlets with Netbeans (for Eclipse users)</title>
+      <link>https://juristr.com/blog/2009/06/howto-getting-started-with-junit/</link>
+      <pubDate>Wed, 10 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/06/howto-getting-started-with-junit/</guid>
+      <description>Besides at work, where I&#39;m developing in .Net using Visual Studio, I&#39;m a heavy Eclipse user. I use it for a lot of things, programming J2ME, J2EE, when developing Java desktop clients (using Eclipse RCP) or even when writing LaTeX documents.</description>
+    </item>
+    
+    <item>
+      <title>Best practices: The challenge of designing software for wireless devices</title>
+      <link>https://juristr.com/blog/2009/04/best-practices-challenge-of-designing/</link>
+      <pubDate>Tue, 14 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/best-practices-challenge-of-designing/</guid>
+      <description>Designing good software for wireless devices such as mobile phones is not straightforward. Developers have to consider and address the device&#39;s constraints such as memory, processing power, input, screen etc.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Bind an input field to a Date property using Spring&#39;s SimpleFormController</title>
+      <link>https://juristr.com/blog/2009/04/howto-bind-input-field-to-date-property/</link>
+      <pubDate>Fri, 10 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/howto-bind-input-field-to-date-property/</guid>
+      <description>If you&#39;re using the Spring SimpleFormController for binding your Java bean object to the UI, you may come across the case where you want to create a binding between an input field (where the user inputs a date) and your bean&#39;s Date property:</description>
+    </item>
+    
+    <item>
+      <title>Del.icio.us links and three new projects online</title>
+      <link>https://juristr.com/blog/2009/03/delicious-links-and-three-new-projects/</link>
+      <pubDate>Mon, 09 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/delicious-links-and-three-new-projects/</guid>
+      <description>My blog readers can now bookmark posts I&#39;ve written with delicious, by just clicking on the &#34;add to del.icio.us&#34; link on the bottom of each post.</description>
+    </item>
+    
+    <item>
+      <title>Getting ready for mobile development with Eclipse, WTK and EclipseME</title>
+      <link>https://juristr.com/blog/2009/02/getting-ready-for-mobile-development/</link>
+      <pubDate>Fri, 27 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/getting-ready-for-mobile-development/</guid>
+      <description>I just noticed that I did not post one topic about mobile development with J2ME, and that although my thesis was all about J2ME, location-based services and mobile client &amp;lt;-&amp;gt; server interaction.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: testing jFace Action class taking a StructuredSelection object</title>
+      <link>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</link>
+      <pubDate>Thu, 15 Jan 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</guid>
+      <description>Let&#39;s consider the following jFace Action class:
+public class RateAction extends Action {
+private final int fRating;
+private IStructuredSelection fSelection;
+/**
+* @param rating</description>
+    </item>
+    
+    <item>
+      <title>First steps with Silverlight. What about GWT?</title>
+      <link>https://juristr.com/blog/2008/12/first-steps-with-silverlight-what-about/</link>
+      <pubDate>Tue, 23 Dec 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/12/first-steps-with-silverlight-what-about/</guid>
+      <description>Last week I had some time which allowed me to do some experiments with Microsoft Silverlight. I had to give it a try since you hear so much on the web about it, so I was quite curious, how it works out.</description>
+    </item>
+    
+    <item>
+      <title>JFace Table API with Eclipse RCP</title>
+      <link>https://juristr.com/blog/2008/11/jface-table-api-with-eclipse-rcp/</link>
+      <pubDate>Thu, 20 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/jface-table-api-with-eclipse-rcp/</guid>
+      <description>Today I had to create a new view inside on an Eclipse RCP application representing data inside a table. I found the following article</description>
+    </item>
+    
+    <item>
+      <title>Persisting the current perspective state of an RCP</title>
+      <link>https://juristr.com/blog/2008/11/persisting-current-perspective-state-of/</link>
+      <pubDate>Sat, 15 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/persisting-current-perspective-state-of/</guid>
+      <description>If you&#39;re developing on Eclipse RCP applications it may be interesting to save the perspective layout and open views of the user s.t. when he launches the application the next time, everything looks as before.</description>
+    </item>
+    
+    <item>
+      <title>Strange GWT compiler error when trying to serialize Java objects</title>
+      <link>https://juristr.com/blog/2008/08/strange-gwt-compiler-error-when-trying/</link>
+      <pubDate>Sat, 16 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/08/strange-gwt-compiler-error-when-trying/</guid>
+      <description>I&#39;m currently working on a project on my own where I&#39;m developing a rich client by using the Google Web toolkit and a server using the Spring application framework.</description>
+    </item>
+    
+    <item>
+      <title>Logical separation with MVC</title>
+      <link>https://juristr.com/blog/2008/03/logical-separation-with-mvc/</link>
+      <pubDate>Sat, 22 Mar 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/03/logical-separation-with-mvc/</guid>
+      <description>I&#39;m currently working on a personal project (which I&#39;ll publish here, so keep an eye on my blog ;) ) which I wanted to construct optimally in terms of the architecture.</description>
+    </item>
+    
+    <item>
+      <title>Java Generics: C&#43;&#43; class templates vs. Java class generics</title>
+      <link>https://juristr.com/blog/2008/03/java-generics-c-class-templates-vs-java/</link>
+      <pubDate>Mon, 17 Mar 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/03/java-generics-c-class-templates-vs-java/</guid>
+      <description>Generics are a great thing. C++ already had already a similar mechanism called templates. This for instance allowed you to write completely abstract classes which could - theoretically - be of any type.</description>
+    </item>
+    
+    <item>
+      <title>Unknown protocol: d</title>
+      <link>https://juristr.com/blog/2007/12/unknown-protocol-d/</link>
+      <pubDate>Sun, 30 Dec 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/12/unknown-protocol-d/</guid>
+      <description>Today morning when starting a general build of the project I&#39;m currently working on, I got an error saying &#34;unknown protocol: d&#34;. It was strange since I couldn&#39;t remember of any big changes made and the build didn&#39;t also fail the last time.</description>
+    </item>
+    
+    <item>
+      <title>Clean up your folder</title>
+      <link>https://juristr.com/blog/2007/12/clean-up-your-folder/</link>
+      <pubDate>Thu, 06 Dec 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/12/clean-up-your-folder/</guid>
+      <description>It&#39;s actually not really worth to put a post about this...but anyway :) I recently coded just a simple one-class prog which deletes - or more specifically emtpies - a specified folder in certain time intervals.</description>
+    </item>
+    
+    <item>
+      <title>TDD, JUnit 3.8 and JUnit 4</title>
+      <link>https://juristr.com/blog/2007/11/tdd-junit-38-and-junit-4/</link>
+      <pubDate>Tue, 27 Nov 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/11/tdd-junit-38-and-junit-4/</guid>
+      <description>I don&#39;t know whether you already got in touch with Unit testing or TDD (Test-driven development). At least you should if you&#39;re developing software in a more &#34;</description>
+    </item>
+    
+    <item>
+      <title>Logging is useful</title>
+      <link>https://juristr.com/blog/2007/04/logging-is-useful/</link>
+      <pubDate>Tue, 03 Apr 2007 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/04/logging-is-useful/</guid>
+      <description>When I develop some application, I usually add a logging functionality to it. I find logging useful, especially for maintaining the application.
+Some bugs cannot be caught with tests and you often neither detect them when using the application.</description>
+    </item>
+    
+  </channel>
+</rss>

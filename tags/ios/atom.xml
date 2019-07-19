@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ios on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/ios/</link>
+    <description>Recent content in Ios on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 26 Apr 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/ios/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML5 vs Android: Apps or Web for mobile development??</title>
+      <link>https://juristr.com/blog/2012/04/html5-version-android-apps-or-web-for/</link>
+      <pubDate>Thu, 26 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/04/html5-version-android-apps-or-web-for/</guid>
+      <description>This is a hotly discussed topic recently. The web is now a fully-capable platform and it&#39;s getting better and better as the HTML5 standard advances.</description>
+    </item>
+    
+    <item>
+      <title>Should Android Worry About the iOS 5 Update? Definitely Not!</title>
+      <link>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</link>
+      <pubDate>Tue, 07 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</guid>
+      <description>With the announcement of the new iOS 5 at the WWDC, the first articles emerge already on the web relating the new features with the existing Android OS.</description>
+    </item>
+    
+  </channel>
+</rss>

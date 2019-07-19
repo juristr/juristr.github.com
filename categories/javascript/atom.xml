@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/javascript/</link>
+    <description>Recent content in Javascript on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 26 Apr 2019 16:10:05 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/javascript/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup your Workstation for JavaScript Development</title>
+      <link>https://juristr.com/blog/2019/04/setup-for-angular-dev/</link>
+      <pubDate>Fri, 26 Apr 2019 16:10:05 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/setup-for-angular-dev/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You want to learn about modern web development with JavaScript? Maybe Angular? Well, then it&amp;rsquo;s time to get you setup properly to get started. In this article we&amp;rsquo;ll go through some of the tools.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>NG-BE Conf and the Angular Community &lt;3</title>
+      <link>https://juristr.com/blog/2016/12/angular-community-ngbe-conf/</link>
+      <pubDate>Sat, 31 Dec 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/12/angular-community-ngbe-conf/</guid>
+      <description>I was lucky enough to be part of the Belgium&#39;s first Angular conference: NG-BE conf. It was by far the best conference I&#39;ve attended so far!</description>
+    </item>
+    
+    <item>
+      <title>Interviewing Igor Minar and Adam Bradley for AngularBeers</title>
+      <link>https://juristr.com/blog/2016/12/ama-igor-angularbeers/</link>
+      <pubDate>Mon, 19 Dec 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/12/ama-igor-angularbeers/</guid>
+      <description>For the last meetup of 2016, AngularBeers organized an AMA session with Igor Minar (lead dev of Angular at Google) and Adam Bradley (lead dev of Ionic).</description>
+    </item>
+    
+    <item>
+      <title>Ok.. let me explain: it&#39;s going to be Angular 4.0, or simply Angular</title>
+      <link>https://juristr.com/blog/2016/12/let-me-explain-angular-release-cycles/</link>
+      <pubDate>Tue, 13 Dec 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/12/let-me-explain-angular-release-cycles/</guid>
+      <description>At the 8th and 9th of December 2016 was NG-BE, Belgium’s first Angular conference. Igor Minar (Angular lead dev) attended as the keynote speaker with some interesting announcements regarding Angular’s release schedule.</description>
+    </item>
+    
+    <item>
+      <title>Configure Ahead of Time (AoT) for your Angular app using the Angular CLI</title>
+      <link>https://juristr.com/blog/2016/12/configure-aot-with-angular-cli/</link>
+      <pubDate>Sat, 03 Dec 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/12/configure-aot-with-angular-cli/</guid>
+      <description>In our previous video we learned how to use the Angular CLI to create our first Angular application. Now it&#39;s time to prepare it for production.</description>
+    </item>
+    
+    <item>
+      <title>Safe Navigation Operator, RxJS and Async Pipe tinkering</title>
+      <link>https://juristr.com/blog/2016/11/safe-nav-operator-and-async-pipe/</link>
+      <pubDate>Wed, 16 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/safe-nav-operator-and-async-pipe/</guid>
+      <description>RxJS? Safe Navigation operator? Async pipes? Not sure what I&#39;m talking about? In this article I&#39;d like to explore some cool combination of Http, RxJS and Async Pipes.</description>
+    </item>
+    
+    <item>
+      <title>Custom validators in template driven Angular forms</title>
+      <link>https://juristr.com/blog/2016/11/ng2-template-driven-form-validators/</link>
+      <pubDate>Mon, 14 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/ng2-template-driven-form-validators/</guid>
+      <description>Angular version 2+ has two different kind of Forms API, the reactive and template driven approach. In this article we will focus on the template driven approach and learn how to use it as well as how to build a custom validator with it.</description>
+    </item>
+    
+    <item>
+      <title>Data bind radio button lists with Angular</title>
+      <link>https://juristr.com/blog/2016/11/ng2-binding-radiobutton-lists/</link>
+      <pubDate>Thu, 10 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/ng2-binding-radiobutton-lists/</guid>
+      <description>Assume you have a simple list or table of elements, each row having a radio button. The user can select one of the rows and your task is to determine the selected row entry.</description>
+    </item>
+    
+    <item>
+      <title>Configure a proxy for your API calls with Angular CLI</title>
+      <link>https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/</link>
+      <pubDate>Mon, 07 Nov 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/11/configure-proxy-api-angular-cli/</guid>
+      <description>In this article (video included!) we will learn how to setup your Angular development server and how to configure it to properly communicate with your backend (REST) API.</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s create your first Angular app</title>
+      <link>https://juristr.com/blog/2016/10/lets-create-ur-first-ng2-app/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/10/lets-create-ur-first-ng2-app/</guid>
+      <description>Angular got released and so it&#39;s the perfect time to try it out. I totally understand it might be difficult to get started, but it doesn&#39;t have to.</description>
+    </item>
+    
+    <item>
+      <title>Angular: Using the JSONPipe for debugging</title>
+      <link>https://juristr.com/blog/2016/09/ng2-serialize-with-json-pipe/</link>
+      <pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/09/ng2-serialize-with-json-pipe/</guid>
+      <description>A powerful way of debugging, especially templates, in Angular 1 was the JSON pipe (or filter) which could be used within a template. The pipe still natively exists in Angular.</description>
+    </item>
+    
+    <item>
+      <title>Angular: How do I get a reference to the window object?</title>
+      <link>https://juristr.com/blog/2016/09/ng2-get-window-ref/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/09/ng2-get-window-ref/</guid>
+      <description>Remember the $window object in Angular 1? Turned out to be quite useful from now and then. But what about Angular? $window doesn&#39;t exist there.</description>
+    </item>
+    
+    <item>
+      <title>Angular: How do I register an event listener on document?</title>
+      <link>https://juristr.com/blog/2016/09/ng2-event-registration-document/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/09/ng2-event-registration-document/</guid>
+      <description>I recently got asked by an Angular community member on Twitter how one can register an event on the document object. While it is totally possible to directly access the document object and hook up some listener, it is not suggested.</description>
+    </item>
+    
+    <item>
+      <title>Angular version 2.0.0 released!!</title>
+      <link>https://juristr.com/blog/2016/09/ng2-released/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/09/ng2-released/</guid>
+      <description>It was at the ng-Europe, on the 22-23 September 2014 when the Angular team came with a huge surprise: &#34;We&#39;re going to build Angular 2.</description>
+    </item>
+    
+    <item>
+      <title>Angular Forms - a first look</title>
+      <link>https://juristr.com/blog/2016/08/ng2-forms-first-look/</link>
+      <pubDate>Sat, 06 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/08/ng2-forms-first-look/</guid>
+      <description>Angular gets a brand new Forms API. It&#39;s fresh out of the compiler and since there&#39;s not much documentation around yet, @angular_zone powered by Gerard Sans and Wassim Chegham organized a Google Hangout with Kara Erickson, core contributor to the Forms Api.</description>
+    </item>
+    
+    <item>
+      <title>RxJS first steps - Subject and ReplaySubject</title>
+      <link>https://juristr.com/blog/2016/06/rxjs-1st-steps-subject/</link>
+      <pubDate>Thu, 30 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/06/rxjs-1st-steps-subject/</guid>
+      <description>I&#39;m not sure you already heard about RxJS or Reactive Programming in general. There&#39;s currently a very strong movement towards such programming style in the modern JavaScript world, so you should definitely check it out.</description>
+    </item>
+    
+    <item>
+      <title>From ng-controller to components with Angular 1.5</title>
+      <link>https://juristr.com/blog/2016/06/from-ngcontroller-to-components/</link>
+      <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/06/from-ngcontroller-to-components/</guid>
+      <description>The web has moved forward and so should you. Learn how to upgrade your Angular 1 app from a more MV* architecture to a cleaner, more component oriented approach.</description>
+    </item>
+    
+    <item>
+      <title>Angular 2&#43; - A Getting Started Guide for Beginners</title>
+      <link>https://juristr.com/blog/2016/06/ng2-getting-started-for-beginners/</link>
+      <pubDate>Mon, 06 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/06/ng2-getting-started-for-beginners/</guid>
+      <description>Since about half a year, I&#39;m organizing a local Meetup group around Software Craftsmanship. I recently also published a video course on &#34;Learning Angular 2 directives&#34;</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular 2 Directives</title>
+      <link>https://juristr.com/blog/2016/04/learning-angular2-directives-course/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/04/learning-angular2-directives-course/</guid>
+      <description>Finally 😆, I managed to finish and publish my very first video course: &#34;Learning Angular 2 Directives&#34; by Packt Publishing. So relieved, and I even managed to publish it before the official RC1 😉.</description>
+    </item>
+    
+    <item>
+      <title>Fine grained change detection with Angular</title>
+      <link>https://juristr.com/blog/2016/04/angular2-change-detection/</link>
+      <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/04/angular2-change-detection/</guid>
+      <description>Today, while working on my Angular screencast series (announcement coming soon), I discovered a strange behavior when dealing with Angular change detection. Here&#39;s what I found.</description>
+    </item>
+    
+    <item>
+      <title>Debugging Angular Applications from the Console</title>
+      <link>https://juristr.com/blog/2016/02/debugging-angular2-console/</link>
+      <pubDate>Wed, 10 Feb 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/02/debugging-angular2-console/</guid>
+      <description>There have been some quite useful articles for how to debug Angular 1.x applications from the browser&#39;s console. But how can we achieve the same in Angular?</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Creating a tabs component</title>
+      <link>https://juristr.com/blog/2016/02/learning-ng2-creating-tab-component/</link>
+      <pubDate>Tue, 02 Feb 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/02/learning-ng2-creating-tab-component/</guid>
+      <description>This is a follow-up article of thoughtram&#39;s excellent article on developing a tabs component with Angular, where we&#39;re going to explore an alternative way of creating a tab component by learning about @ContentChildren and AfterContentInit.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Conditionally add styles to an element</title>
+      <link>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</link>
+      <pubDate>Mon, 25 Jan 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</guid>
+      <description>Here we&#39;re going through a couple of ways to conditionally apply some styles to a DOM element in Angular.     (adsbygoogle = window.</description>
+    </item>
+    
+    <item>
+      <title>Multi Content Projection aka Multiple Transclusion</title>
+      <link>https://juristr.com/blog/2016/01/ng2-multi-content-projection/</link>
+      <pubDate>Thu, 14 Jan 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/01/ng2-multi-content-projection/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  If you&amp;rsquo;re an AngularJS developer, I&amp;rsquo;m sure you heard about transclusion. Sounds really weird and mysterious, at least that&amp;rsquo;s what I thought when I first heard it.</description>
+    </item>
+    
+    <item>
+      <title>Improve your Angular 1.x startup time</title>
+      <link>https://juristr.com/blog/2015/12/perf-startup-ng1/</link>
+      <pubDate>Mon, 14 Dec 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/12/perf-startup-ng1/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  This neat and simple trick originally appeared about a year ago on this blog post, so it&amp;rsquo;s not something I came up with by myself.</description>
+    </item>
+    
+    <item>
+      <title>Componentizing Workflow for Angular</title>
+      <link>https://juristr.com/blog/2015/12/componentizing-workflow/</link>
+      <pubDate>Thu, 10 Dec 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/12/componentizing-workflow/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  $1  Yesterday I wrote a tweet about how I usually create components.
+Great workflow for refactoring unwieldy components :-) https://t.</description>
+    </item>
+    
+    <item>
+      <title>Egghead.io - Getting started with Redux</title>
+      <link>https://juristr.com/blog/2015/11/link-egghead-learn-redux/</link>
+      <pubDate>Mon, 30 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/link-egghead-learn-redux/</guid>
+      <description>Dan Abramov, creator of Redux has published 30 video lessions on Egghead.io explaining Redux.</description>
+    </item>
+    
+    <item>
+      <title>Angular Connect London - Day 2</title>
+      <link>https://juristr.com/blog/2015/10/angular-connect-london-day2/</link>
+      <pubDate>Tue, 20 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/angular-connect-london-day2/</guid>
+      <description>I&amp;rsquo;m lucky enough to be able to attend AngularConnect here in London. This article is my notebook from the sessions I attended on day 2.</description>
+    </item>
+    
+    <item>
+      <title>Angular Connect London - Day 1</title>
+      <link>https://juristr.com/blog/2015/10/angular-connect-london/</link>
+      <pubDate>Mon, 19 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/angular-connect-london/</guid>
+      <description>I&amp;rsquo;m lucky enough to be able to attend AngularConnect here in London. This article is going to be my notebook while attending the conference. Also take a look at my notes from day 2!</description>
+    </item>
+    
+    <item>
+      <title>Release your libs like a pro!</title>
+      <link>https://juristr.com/blog/2015/10/release-like-a-pro/</link>
+      <pubDate>Thu, 08 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/release-like-a-pro/</guid>
+      <description>Automate, automate, automate. That&#39;s what ultimately is our job, right? We automate the tedious processes of our end-users. So why don&#39;t we do it for ourselves as well?</description>
+    </item>
+    
+    <item>
+      <title>10 Interview Questions Every JavaScript Developer Should Know</title>
+      <link>https://juristr.com/blog/2015/10/link-10-javascript-interview-questions/</link>
+      <pubDate>Mon, 05 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/10/link-10-javascript-interview-questions/</guid>
+      <description>Good article, definitely worth reading. Here are the questions:
+ Can you name two programming paradigms important for JavaScript app developers? What is functional programming? What is the difference between classical inheritance and prototypal inheritance?</description>
+    </item>
+    
+    <item>
+      <title>12 Rules for Professional JavaScript in 2015</title>
+      <link>https://juristr.com/blog/2015/09/link-12-prof-js-tips/</link>
+      <pubDate>Mon, 28 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/09/link-12-prof-js-tips/</guid>
+      <description>Some good tips you should already be following if you want to code JavaScript as a professional.</description>
+    </item>
+    
+    <item>
+      <title>ES6 Features</title>
+      <link>https://juristr.com/blog/2015/09/link-es-features/</link>
+      <pubDate>Mon, 28 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/09/link-es-features/</guid>
+      <description>Want to learn about ES2015 (ES6)? The site provides a list of all features.
+Besides that I&amp;rsquo;m currently also writing an ongoing article on ES2015.</description>
+    </item>
+    
+    <item>
+      <title>What forces layout/reflow</title>
+      <link>https://juristr.com/blog/2015/09/link-list-layout-recalculations/</link>
+      <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/09/link-list-layout-recalculations/</guid>
+      <description>Googler and web development expert Paul Irish published a nice list of JavaScript functions which trigger a synchronous layout recalculation by the browser. Obviously these are common performance bottlenecks in rich JavaScript applications.</description>
+    </item>
+    
+    <item>
+      <title>ES2015 - Jump Start</title>
+      <link>https://juristr.com/blog/2015/08/jump-start-es2015/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/jump-start-es2015/</guid>
+      <description>Yes, this is another article about learning ES2015 (known as ES6). It&amp;rsquo;s my journey of learning it, as well as my personal notepad for new stuff I discover along the way.</description>
+    </item>
+    
+    <item>
+      <title>Why We Should Stop Using Bower – And How to Do It</title>
+      <link>https://juristr.com/blog/2015/08/link-why-stop-using-bower/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/link-why-stop-using-bower/</guid>
+      <description>Ya&amp;hellip;those package managers. Lot of people suggesting to move away. I like NPM, or even JSPM, but I&amp;rsquo;m not yet sure whether the latter is the new bower&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Host and Visibility in Angular 2&#39;s Dependency Injection</title>
+      <link>https://juristr.com/blog/2015/08/link-angular2-di/</link>
+      <pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/link-angular2-di/</guid>
+      <description>@PascalPrecht dives into the details of Angular 2&amp;rsquo;s dependency injection.
+ Angular 2&amp;rsquo;s DI to solve all current issues more flexible; concept of host and child injectors  Definition of a binding on a &amp;lt;video-player&amp;gt; component:</description>
+    </item>
+    
+    <item>
+      <title>Preparing for Angular 2</title>
+      <link>https://juristr.com/blog/2015/07/learning-ng-prepare-ng2/</link>
+      <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/07/learning-ng-prepare-ng2/</guid>
+      <description>I&amp;rsquo;m sure you heard about Angular 2 and that it will be totally different. Forget everything you know and start from scratch 😮 . Jokes apart, if you have taken a closer look you already know that, yes, it will be new, things will be different (as it&amp;rsquo;s mostly the case with new stuff), but many concepts will still be there.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Testing $q promise resolves with Sinon and Jasmine</title>
+      <link>https://juristr.com/blog/2015/06/learning-ng-testing-promises/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/06/learning-ng-testing-promises/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  This article shows a brief example on how to properly mock and resolve a $q promise from within a Jasmine unit test.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Expose an API on your directives</title>
+      <link>https://juristr.com/blog/2015/06/learning-ng-expose-directive-api/</link>
+      <pubDate>Wed, 17 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/06/learning-ng-expose-directive-api/</guid>
+      <description>Ever wanted to not only create a nice, visually appealing directive or web component, but to also provide a more rich programmatic API with it?</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Set your language culture before any UI is displayed</title>
+      <link>https://juristr.com/blog/2015/03/learning-ng-angular-translate-promises/</link>
+      <pubDate>Tue, 03 Mar 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/03/learning-ng-angular-translate-promises/</guid>
+      <description>In this article I briefly outline an issue I had, namely to make sure that my language&amp;rsquo;s locale files are loaded by angular-translate before any UI is shown.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Verifying whether a function has been passed to my directive&#39;s isolated scope</title>
+      <link>https://juristr.com/blog/2015/02/learning-ng-verify-presence-of-directive-props/</link>
+      <pubDate>Thu, 26 Feb 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/02/learning-ng-verify-presence-of-directive-props/</guid>
+      <description>When you create isolated directives, you usually use the scope property to define your directive&#39;s external API. Some of the APIs properties might be mandatory while others are optional and based on that state, your directive might react differently.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Access directive scope variables from directive controllers and vice versa</title>
+      <link>https://juristr.com/blog/2015/01/learning-ng-directives-access-scope-controller/</link>
+      <pubDate>Mon, 26 Jan 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/01/learning-ng-directives-access-scope-controller/</guid>
+      <description>Angular directives can have a separate, isolated scope, which is even the suggested approach most of the time. And they can have directive controllers. But&amp;hellip;how do I access the directive&amp;rsquo;s scope variables from the directive controller and vice-versa?</description>
+    </item>
+    
+    <item>
+      <title>Kudos for your site - powered by Firebase</title>
+      <link>https://juristr.com/blog/2014/12/kudos-for-your-site/</link>
+      <pubDate>Mon, 29 Dec 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/12/kudos-for-your-site/</guid>
+      <description>I don&amp;rsquo;t quite remember, guess it was about more than a year ago when I came across a Svbtle-hosted blog where I noticed a small little circle, bouncing when you hover it and showing a number followed by &amp;ldquo;Kudos&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Useful utility functions</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-angularjs-utility-functions/</link>
+      <pubDate>Fri, 28 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-angularjs-utility-functions/</guid>
+      <description>Today a very short post. Angular has a series of utility functions which you should definitely take a look at. They are not as feature rich as those of underscore.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Unit Testing $watch expressions</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-testing-watch-expressions/</link>
+      <pubDate>Wed, 26 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-testing-watch-expressions/</guid>
+      <description>Today I wanted to write a unit test for a watch expression on my controller. What seemed quite obvious initially, turned out to be quite nasty.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript Promises Essentials</title>
+      <link>https://juristr.com/blog/2014/11/review-javascript-promises-essentials/</link>
+      <pubDate>Tue, 18 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/review-javascript-promises-essentials/</guid>
+      <description>JavaScript is asynchronous by definition which is what makes many server-side developers struggle initially. Many even try to avoid asynchronism as much as they can rather than to embrace it.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: What is the scope of your directive??</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-what-is-your-directives-scope/</link>
+      <pubDate>Thu, 13 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-what-is-your-directives-scope/</guid>
+      <description>This might create quite some debugging headaches, especially in a larger application. Things don&amp;rsquo;t bind properly, have different data on the scope than you&amp;rsquo;d expect etc.</description>
+    </item>
+    
+    <item>
+      <title>Learning Angular: Gosh, my two-way binding doesn&#39;t seem to work properly!</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-databinding-doesnt-work/</link>
+      <pubDate>Fri, 07 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-databinding-doesnt-work/</guid>
+      <description>Angular data-binding seems magic, but obviously isn&#39;t. You have to give it a chance to do its work. As such, watch out and think about the difference &#34;</description>
+    </item>
+    
+    <item>
+      <title>Introducing the learning-ng series</title>
+      <link>https://juristr.com/blog/2014/11/learning-ng-series-intro/</link>
+      <pubDate>Thu, 06 Nov 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/11/learning-ng-series-intro/</guid>
+      <description>With this post I&amp;rsquo;d like to introduce to you the - what I&amp;rsquo;d like to call - learning-ng series; a number of short and concise posts that describe issues and solutions on my journey of climbing up the Angular.</description>
+    </item>
+    
+    <item>
+      <title>Avoid test code duplication in Jasmine tests</title>
+      <link>https://juristr.com/blog/2014/10/avoid-test-code-duplication-jasmine/</link>
+      <pubDate>Thu, 30 Oct 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/10/avoid-test-code-duplication-jasmine/</guid>
+      <description>Test code has to be treated like production code. Obviously we cannot charge the customer for it, it&amp;rsquo;s something that helps us developers to make sure we keep our codebase healthy, which ultimately is the responsibility we have towards our customers.</description>
+    </item>
+    
+    <item>
+      <title>Static code analysis for free</title>
+      <link>https://juristr.com/blog/2014/10/static-code-analyis-for-free/</link>
+      <pubDate>Tue, 21 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/10/static-code-analyis-for-free/</guid>
+      <description>Although JavaScript might be the world’s most misunderstood language, it is now among the most popular and most used ones. Thus you should also treat it as such.</description>
+    </item>
+    
+    <item>
+      <title>Hack: How to mimic a disabled checkbox</title>
+      <link>https://juristr.com/blog/2014/09/hack-mimic-disabled-checkboxes/</link>
+      <pubDate>Fri, 12 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/09/hack-mimic-disabled-checkboxes/</guid>
+      <description>The world is not always as we want it to be :). So from now and then you have to place a nice hack here and there.</description>
+    </item>
+    
+    <item>
+      <title>Node, Grunt, Bower and Yeoman - A Modern web dev&#39;s Toolkit</title>
+      <link>https://juristr.com/blog/2014/08/node-grunt-yeoman-bower/</link>
+      <pubDate>Fri, 15 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/08/node-grunt-yeoman-bower/</guid>
+      <description>This article aims at introducing you to some of the currently most popular tools when developing modern web applications with JavaScript. These are totally not new at all and have been around for a couple of years now.</description>
+    </item>
+    
+    <item>
+      <title>Lazy Angular Modules</title>
+      <link>https://juristr.com/blog/2014/07/lazy-angular-modules/</link>
+      <pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/07/lazy-angular-modules/</guid>
+      <description>Startup time is crucial for a proper user experience and that&amp;rsquo;s where many JavaScript SPA really fail. Even though you might (and definitely should) apply code minification and bundling mechanisms, you wouldn&amp;rsquo;t want to load your entire application right upfront.</description>
+    </item>
+    
+    <item>
+      <title>First baby steps with Angular.js</title>
+      <link>https://juristr.com/blog/2014/05/angular-baby-steps/</link>
+      <pubDate>Sun, 11 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/05/angular-baby-steps/</guid>
+      <description>This article outlines some of my notes of a webinar about Angular.js I recently participated at. These are really just &amp;ldquo;baby steps&amp;rdquo; in that it covers the very basics that might help to get started.</description>
+    </item>
+    
+    <item>
+      <title>Integrating Node.js with a C# dll</title>
+      <link>https://juristr.com/blog/2014/03/integrating-node-with-csharp/</link>
+      <pubDate>Mon, 31 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/03/integrating-node-with-csharp/</guid>
+      <description>Recently I had to integrate a Node.js based server application with a C# DLL. Our software (a web-app) offers the possibility to execute payments over a POS terminal.</description>
+    </item>
+    
+    <item>
+      <title>Automate your UI testing with Nightwatch</title>
+      <link>https://juristr.com/blog/2014/02/nightwatch-test-automation/</link>
+      <pubDate>Fri, 21 Feb 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/02/nightwatch-test-automation/</guid>
+      <description>Although I feel like I&#39;m repeating myself, automate **everything**. We&#39;re here to automate the processes and work of our clients. Why don&#39;t we do the same for our own stuff as well?</description>
+    </item>
+    
+    <item>
+      <title>JSConf.eu - React: Rethinking best practices</title>
+      <link>https://juristr.com/blog/2013/12/react-rethingking-best-practices/</link>
+      <pubDate>Fri, 20 Dec 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/12/react-rethingking-best-practices/</guid>
+      <description>Today I saw a tweet pointing to a JSConf talk by Pete Hunt from Facebook, talking about ReactJS, Facebook&amp;rsquo;s JavaScript frontend framework. Here are my notes.</description>
+    </item>
+    
+    <item>
+      <title>Boot your ajax app: Creating a splash screen with NProgress</title>
+      <link>https://juristr.com/blog/2013/12/nprogress-splash-screen/</link>
+      <pubDate>Fri, 06 Dec 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/12/nprogress-splash-screen/</guid>
+      <description>While single-page JavaScript apps tend to be more dynamic and usually more interactive from the user point of view, they also most often have a longer startup time compared to more classic, server-side rendered apps.</description>
+    </item>
+    
+    <item>
+      <title>Developing Windows Store Apps with HTML5 and JavaScript</title>
+      <link>https://juristr.com/blog/2013/09/developing-win-store-apps-with-html5-and-javascript/</link>
+      <pubDate>Wed, 18 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/09/developing-win-store-apps-with-html5-and-javascript/</guid>
+      <description>After JavaScriptMVC, today the second book arrived where I participated in the technical review process: &amp;ldquo;Developing Windows Store Apps with HTML5 and JavaScript&amp;rdquo;.
+Doing the technical review was again a pleasant experience.</description>
+    </item>
+    
+    <item>
+      <title>JSConfUS 2013 - Angelina Fabbor in JavaScript Masterclass</title>
+      <link>https://juristr.com/blog/2013/08/jsconfus-javascript-masterclass/</link>
+      <pubDate>Tue, 06 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/08/jsconfus-javascript-masterclass/</guid>
+      <description>Continuous improvement is an important concept. Everyone wants to get better, to learn new things. This is vital, especially in the software industry where things move at an extremely fast pace.</description>
+    </item>
+    
+    <item>
+      <title>How to add a reading time indicator to your blog in ten minutes</title>
+      <link>https://juristr.com/blog/2013/07/how-to-setup-reading-time-indicator-ten-minutes/</link>
+      <pubDate>Tue, 23 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/07/how-to-setup-reading-time-indicator-ten-minutes/</guid>
+      <description>Time is money, right, and given that nowadays we are continuously being flooded with an enormous amount of information, we need to be fast in consuming it and particularly good at filtering what&amp;rsquo;s worth and what isn&amp;rsquo;t.</description>
+    </item>
+    
+    <item>
+      <title>TypeScript: Application scale JavaScript</title>
+      <link>https://juristr.com/blog/2013/07/typescript-application-scale-javascript/</link>
+      <pubDate>Mon, 22 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/07/typescript-application-scale-javascript/</guid>
+      <description>This article is about Hejlsberg&amp;rsquo;s talk about TypeScript at the Build 2013 conference. TypeScript is now already around for about 9 months or so and I like the concept behind of being something to improve the tooling around JavaScript but not really re-inventing a(nother) new language that compiles to it.</description>
+    </item>
+    
+    <item>
+      <title>Code Coverage with QUnit in JavaScriptMVC</title>
+      <link>https://juristr.com/blog/2013/06/code-coverage-with-qunit-in-javascriptmvc/</link>
+      <pubDate>Tue, 25 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/06/code-coverage-with-qunit-in-javascriptmvc/</guid>
+      <description>Beside giving you an immediate feedback, unit tests are extremely useful as a regression test suite. They basically build a safety net around your code, giving you the freedom to apply changes without breaking anything existing.</description>
+    </item>
+    
+    <item>
+      <title>Learning JavaScriptMVC</title>
+      <link>https://juristr.com/blog/2013/06/learning-javascriptmvc/</link>
+      <pubDate>Tue, 18 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/06/learning-javascriptmvc/</guid>
+      <description>About half a year ago, Packt Publishing approached me for a technical review of a new book about JavaScriptMVC they were about to publish. I agreed and started to participate in the review process.</description>
+    </item>
+    
+    <item>
+      <title>Caching, jQuery Ajax and Other IE Fun</title>
+      <link>https://juristr.com/blog/2013/06/caching-jquery-ajax-and-other-ie-fun/</link>
+      <pubDate>Thu, 06 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/06/caching-jquery-ajax-and-other-ie-fun/</guid>
+      <description>In the last couple of days I had quite a fun time debugging problems of our JavaScript SPAs on oldIE (thanks God we got the Browserstack licenses).</description>
+    </item>
+    
+    <item>
+      <title>Modularity in JavaScript MVC Frameworks</title>
+      <link>https://juristr.com/blog/2013/04/modularity-in-javascript-frameworks/</link>
+      <pubDate>Mon, 08 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/04/modularity-in-javascript-frameworks/</guid>
+      <description>JavaScript MVC architectures are a de-facto standard when you create complex single-page JavaScript applications. But it doesn&#39;t stop here. MVC helps to separate reponsibilities for coordinating the data (model) and visualization (view), but it doesn&#39;t have a concept for coordination among an application&#39;s modules or widgets as you might call them.</description>
+    </item>
+    
+    <item>
+      <title>Interview with DZone</title>
+      <link>https://juristr.com/blog/2013/03/interview-with-dzone/</link>
+      <pubDate>Wed, 06 Mar 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/03/interview-with-dzone/</guid>
+      <description>DZone, where I&#39;m part as an MVB, recently contacted me for an interview for their weekly newsletter edition. Yesterday it got published. If you&#39;re interested in their newsletter, the best way is to follow DZone on their Facebook page.</description>
+    </item>
+    
+    <item>
+      <title>Find Code Duplicates with Sublime Text</title>
+      <link>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/09/find-code-duplicates-with-sublime-text/</guid>
+      <description>Code duplication is the worst practice ever, right? Well, actually there might be situations where duplicating can be better than factoring out, but these are very rare.</description>
+    </item>
+    
+    <item>
+      <title>Know Your Tools: Become a JavaScript Power-Developer</title>
+      <link>https://juristr.com/blog/2012/08/know-your-tools-become-javascript-power/</link>
+      <pubDate>Fri, 31 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/08/know-your-tools-become-javascript-power/</guid>
+      <description>One of the issues classical web developers have when diving into the rich JavaScript apps world is their tooling. They are accustomed to work in fully integrated environments where you fire up a webserver, you directly set breakpoints and live-inspect the state of the app.</description>
+    </item>
+    
+    <item>
+      <title>Fluent Conference: JavaScript &amp; Beyond Complete Video Compilation by O&#39;Reilly Media</title>
+      <link>https://juristr.com/blog/2012/08/fluent-conference-javascript-beyond_29/</link>
+      <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/08/fluent-conference-javascript-beyond_29/</guid>
+      <description>Missed this years Fluent Conference in San Francisco? Then this amazing video compilation is probably for you. It contains all of the sessions nicely bundled and in high quality.</description>
+    </item>
+    
+    <item>
+      <title>Jasmine - An Introduction</title>
+      <link>https://juristr.com/blog/2012/08/jasmine-an-introduction/</link>
+      <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/08/jasmine-an-introduction/</guid>
+      <description>This page is the result of taking notes from the session about Jasmine by Davis W. Frank at this years Fluent Conference in San Francisco.</description>
+    </item>
+    
+    <item>
+      <title>It&#39;s time to learn CoffeeScript</title>
+      <link>https://juristr.com/blog/2012/08/its-time-to-learn-coffeescript/</link>
+      <pubDate>Sun, 26 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/08/its-time-to-learn-coffeescript/</guid>
+      <description>Seing and reading all the stuff about CoffeeScript, I thought it might be useful to get into that &amp;ldquo;language&amp;rdquo; as well in order to get a better understanding.</description>
+    </item>
+    
+    <item>
+      <title>Mobile JavaScript Application Development by Adrian Kosmaczewski, O&#39;Reilly Media</title>
+      <link>https://juristr.com/blog/2012/08/mobile-javascript-application/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/08/mobile-javascript-application/</guid>
+      <description>If you are a JavaScript newbie eager to dive into creating rich mobile web applications, this book is for you. It is structured in a very clear and intuitive way, introducing the most useful HTML5 features, some JavaScript performance tips, jQuery mobile and Sencha Touch examples and illustrates even how PhoneGap works.</description>
+    </item>
+    
+    <item>
+      <title>An Example of Test-Driven Bugfixing</title>
+      <link>https://juristr.com/blog/2012/07/an-example-of-test-driven-bugfixing/</link>
+      <pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/an-example-of-test-driven-bugfixing/</guid>
+      <description>Unfortunately many people still don&amp;rsquo;t use a test-driven approach during development. That&amp;rsquo;s sad given the bunch of advantages automated tests give you. One of my favorite is regression testing.</description>
+    </item>
+    
+    <item>
+      <title>Why $.extend(someObj, anotherObj) might be dangerous!</title>
+      <link>https://juristr.com/blog/2012/07/why-extendsomeobj-anotherobj-might-be/</link>
+      <pubDate>Wed, 18 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/why-extendsomeobj-anotherobj-might-be/</guid>
+      <description>You often have the need to merge two objects. A common use case is that of combining parameters for a $.ajax call. jQuery has a nice function for that, namely jQuery.</description>
+    </item>
+    
+    <item>
+      <title>IE8 Trouble Continued...Hangs on Dropdown Selection</title>
+      <link>https://juristr.com/blog/2012/07/ie8-trouble-continuedhangs-on-dropdown/</link>
+      <pubDate>Mon, 16 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/07/ie8-trouble-continuedhangs-on-dropdown/</guid>
+      <description>The trouble seems to continue. In one of our apps, when clicking on a dropdown list, IE8 hang up completely. I quickly searched for similar problems and apparently IE has its issues with dropdowns.</description>
+    </item>
+    
+    <item>
+      <title>Detecting Location Redirects from JavaScript</title>
+      <link>https://juristr.com/blog/2012/05/detecting-location-redirects-from/</link>
+      <pubDate>Thu, 24 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/05/detecting-location-redirects-from/</guid>
+      <description>A common scenario for using the HTTP Location response header is during an authentication process where some kind of filter redirects to a login page in case when the user is not or no more authenticated.</description>
+    </item>
+    
+    <item>
+      <title>I Want the Cursor to be placed in the 1st empty Textbox!</title>
+      <link>https://juristr.com/blog/2012/02/i-want-cursor-to-be-placed-in-1st-empty/</link>
+      <pubDate>Fri, 17 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/02/i-want-cursor-to-be-placed-in-1st-empty/</guid>
+      <description>You develop a webapp, you have a couple of input fields and buttons on your page. Then the requirement arrives. The customer wants his data to be auto-filled once he enters some identification number (the italian fiscal code).</description>
+    </item>
+    
+    <item>
+      <title>Sequential Asynchronous Processing with jQuery Deferreds</title>
+      <link>https://juristr.com/blog/2012/02/sequential-asynchronous-processing-with/</link>
+      <pubDate>Mon, 13 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/02/sequential-asynchronous-processing-with/</guid>
+      <description>Asynchronous processing is one of the most difficult things for devs to understand when switching from the more traditional web programming pattern to a more client-server like model when creating rich JavaScript single-page apps.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net MVC3: Doesn&#39;t Deserialize Nullable Properties from Json</title>
+      <link>https://juristr.com/blog/2012/02/aspnet-mvc3-doesnt-deserialize-nullable/</link>
+      <pubDate>Tue, 07 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/02/aspnet-mvc3-doesnt-deserialize-nullable/</guid>
+      <description>A couple of days ago I noticed that the Nullable properties of a C# object were not properly deserialized when posting back a Json object to an MVC3 action.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t rant! Become Social and Contribute back!</title>
+      <link>https://juristr.com/blog/2012/02/dont-rant-become-social-and-contribute/</link>
+      <pubDate>Wed, 01 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/02/dont-rant-become-social-and-contribute/</guid>
+      <description>Todays web experience has changed a lot and so has done coding as well. Everything is around being social, interacting with people through social networks, blogs or online communities.</description>
+    </item>
+    
+    <item>
+      <title>Exploring JavaScript: Scope Pollution when instantiating JavaScript Objects</title>
+      <link>https://juristr.com/blog/2011/12/exploring-javascript-scope-pollution/</link>
+      <pubDate>Wed, 07 Dec 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/12/exploring-javascript-scope-pollution/</guid>
+      <description>John Resig has written a very interesting article (I&#39;m not able to find just now) on how the current scope might get polluted if you&#39;re accidentally invoking a function intended as an object constructor function without using the &#34;</description>
+    </item>
+    
+    <item>
+      <title>Large-scale JavaScript Application Architecture</title>
+      <link>https://juristr.com/blog/2011/11/large-scale-javascript-application/</link>
+      <pubDate>Mon, 21 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/large-scale-javascript-application/</guid>
+      <description>JavaScript programming has evolved a lot over the past years and has somehow revolutionized the way you develop on the web. While many initially just used it as a scripting language to quickly hack in some dynamic behavior into traditional websites, it starts now to be used much more like a fully capable programming language (mainly also due to many emerging JavaScript libraries and more capable browsers).</description>
+    </item>
+    
+    <item>
+      <title>jQuery Validation: Add a Required Field Marker</title>
+      <link>https://juristr.com/blog/2011/11/jquery-validation-add-required-field/</link>
+      <pubDate>Fri, 04 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/jquery-validation-add-required-field/</guid>
+      <description>When you use jQuery for validating input fields you might want to automatically (based on the validators) decorate your according field labels or input fields with appropriate markers that indicate required fields.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t Underestimate the Trouble Caused by URLs in Emails</title>
+      <link>https://juristr.com/blog/2011/11/dont-underestimate-trouble-caused-by/</link>
+      <pubDate>Thu, 03 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/dont-underestimate-trouble-caused-by/</guid>
+      <description>At a first glance, the title might seem strange, but wait. The company I&#39;m working at creates e-government solutions, so the target audience are the citizens, from the young, very computer-literate ones to the more elderly (and often, but not always) less computer-literate ones :).</description>
+    </item>
+    
+    <item>
+      <title>Exploring JavaScript: Iterating Over a Collection of Items</title>
+      <link>https://juristr.com/blog/2011/10/exploring-javascript-iterating-over/</link>
+      <pubDate>Thu, 27 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/10/exploring-javascript-iterating-over/</guid>
+      <description>If I manage to do it, I&#39;d like to write a series of introductory posts about programming in JavaScript as when listening to the latest hypes it is going to play a major role in programming the web but even desktop or mobile apps (see Microsoft&#39;s latest moves regarding Silverlight, HTML5 and their new Win8 OS).</description>
+    </item>
+    
+    <item>
+      <title>What? Model-View-Controller in JavaScript?</title>
+      <link>https://juristr.com/blog/2011/10/what-model-view-controller-in/</link>
+      <pubDate>Mon, 10 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/10/what-model-view-controller-in/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+At work I&#39;m currently working on a new web architecture composed of a rich client written in JavaScript and an ASP.net MVC server-side backend exposing a REST-like JSON api. An important part of that work is to also train developers on that, quite new way of programming web-apps. 
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>TechVid: Become a Javascript Console Power-User</title>
+      <link>https://juristr.com/blog/2011/10/techvid-become-javascript-console-power/</link>
+      <pubDate>Sat, 08 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/10/techvid-become-javascript-console-power/</guid>
+      <description> A nice 7 minute video showing some Chrome, Opera and Firefox power user commands for the JavaScript console.
+ </description>
+    </item>
+    
+    <item>
+      <title>The Similarity of C# and JavaScript Syntax</title>
+      <link>https://juristr.com/blog/2011/10/similarity-of-c-and-javascript-syntax/</link>
+      <pubDate>Mon, 03 Oct 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/10/similarity-of-c-and-javascript-syntax/</guid>
+      <description>I&#39;m currently diving deeply into creating rich JavaScript web applications. You cannot deny that they are now the must have for modern-looking web (2.0) apps.</description>
+    </item>
+    
+    <item>
+      <title>Testing JavaScript: Mocking jQuery Ajax Calls</title>
+      <link>https://juristr.com/blog/2011/09/testing-javascript-mocking-jquery-ajax/</link>
+      <pubDate>Mon, 26 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/09/testing-javascript-mocking-jquery-ajax/</guid>
+      <description>When &#34;seriously&#34; developing JavaScript applications we obviously need to write tests. Being a fully dynamic language (similar as Ruby), tests are more necessary than ever since there is no compiler that checks for you all the silly mistakes before you run your code the first time.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript Scoping by Example</title>
+      <link>https://juristr.com/blog/2011/09/javascript-scoping-by-example/</link>
+      <pubDate>Thu, 01 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/09/javascript-scoping-by-example/</guid>
+      <description>Understanding the scoping rules of JavaScript is one of the fundamental things to learn when getting started with the language. I just found this link posted by @codylindley on Twitter.</description>
+    </item>
+    
+    <item>
+      <title>Integrating Jersey with Spring</title>
+      <link>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</link>
+      <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</guid>
+      <description>Spring provides a lot of benefits and promotes best practices with its dependency injection mechanism, application lifecycle management and Hibernate support (just to mention some).</description>
+    </item>
+    
+    <item>
+      <title>Why Did it Have to Be So Complicated Before??</title>
+      <link>https://juristr.com/blog/2011/08/why-did-it-have-to-be-so-complicated/</link>
+      <pubDate>Fri, 26 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/why-did-it-have-to-be-so-complicated/</guid>
+      <description>I started&amp;nbsp;web development using Java, basically during my studies at the university. When working on my bachelor degree thesis I needed a web server back-end system (to my mobile J2ME client); I decided to do it &#34;</description>
+    </item>
+    
+    <item>
+      <title>Chrome Developer Tools: 12 Tricks to Develop Quicker</title>
+      <link>https://juristr.com/blog/2011/08/chrome-developer-tools-12-tricks-to/</link>
+      <pubDate>Thu, 25 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/chrome-developer-tools-12-tricks-to/</guid>
+      <description>This is definitely a &#34;must-have-seen&#34; video for every JavaScript developer. Chrome has some really nice features build into their developer tools which are being demonstrated in this short ~5 min video.</description>
+    </item>
+    
+    <item>
+      <title>Experiencing the jQuery 1.6 Breaking Changes</title>
+      <link>https://juristr.com/blog/2011/08/experiencing-jquery-16-breaking-changes/</link>
+      <pubDate>Mon, 15 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/experiencing-jquery-16-breaking-changes/</guid>
+      <description>Unfortunately I did not actively follow the release of jQuery 1.6 as I would probably have noted that they introduced some breaking changes which would have prevented some issues at my side.</description>
+    </item>
+    
+    <item>
+      <title>JavaScriptSerializer: Circular Reference was Detected While Serializing an Object of Type...</title>
+      <link>https://juristr.com/blog/2011/08/javascriptserializer-circular-reference/</link>
+      <pubDate>Fri, 12 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/javascriptserializer-circular-reference/</guid>
+      <description>Consider an ASP.net MVC web application where you use some Ajax for retrieving an object. Let&#39;s start from the server-side MVC controller:
+public class BaseDataController : Controller</description>
+    </item>
+    
+    <item>
+      <title>Posting JSON Data to an ASP.net MVC 3 Web Application</title>
+      <link>https://juristr.com/blog/2011/08/posting-json-data-to-aspnet-mvc-3-web/</link>
+      <pubDate>Thu, 04 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/posting-json-data-to-aspnet-mvc-3-web/</guid>
+      <description>The trend in today&#39;s web application development goes more and more in the direction of having rich, desktop-like applications. There are numerous examples on the web, just watch out while your navigating around (Google services are always a good place to look for such apps).</description>
+    </item>
+    
+    <item>
+      <title>Create DOM Tree out of a Dynamic HTML String</title>
+      <link>https://juristr.com/blog/2011/06/create-dom-tree-out-of-dynamic-html/</link>
+      <pubDate>Tue, 21 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/create-dom-tree-out-of-dynamic-html/</guid>
+      <description>Just a very short post before I go to bed as I&#39;m really tired today. I just played around with some JavaScript code, building a Google Chrome extension when I came to the point where I needed to process the DOM tree of a HTML string.</description>
+    </item>
+    
+    <item>
+      <title>Basta-On-Tour Wrap Up Day 2: EF Best Practices, JavaScript, MVC</title>
+      <link>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-2-ef-best/</link>
+      <pubDate>Tue, 24 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-2-ef-best/</guid>
+      <description>Day 2 at the BASTA! On Tour was dedicated to different kind of small workshops.
+Web 2.0 Applications with ASP.net MVC, Entity Framework and jQuery</description>
+    </item>
+    
+    <item>
+      <title>Load JavaScript Files Asynchronously</title>
+      <link>https://juristr.com/blog/2011/04/load-javascript-files-asynchronously/</link>
+      <pubDate>Sun, 03 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/04/load-javascript-files-asynchronously/</guid>
+      <description>I recently worked on a component for our single-sign-on system. As part of that work I also developed a small JavaScript file that was included in the top-header of the page for rendering the username, last access and session expiration or alternatively the login link in case the user wasn&#39;t logged on.</description>
+    </item>
+    
+    <item>
+      <title>&#39;\n&#39; will break your JSON jQuery - WCF service call</title>
+      <link>https://juristr.com/blog/2010/05/n-will-break-your-json-jquery-wcf/</link>
+      <pubDate>Fri, 07 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/05/n-will-break-your-json-jquery-wcf/</guid>
+      <description>I recently coded a WCF REST webservice that needed to be accessed from JavaScript. Basically it was a system to provide admins of websites with a real-time system for managing info messages, intended to be displayed beneath input fields.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Launch JavaScript after async postback of UpdatePanel</title>
+      <link>https://juristr.com/blog/2010/02/howto-launch-javascript-after-async/</link>
+      <pubDate>Thu, 18 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/howto-launch-javascript-after-async/</guid>
+      <description>Assume the scenario where you want to launch a JavaScript function after your UpdatePanel finished to do its async postback. This turns out to actually be quite simple.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Fade out div after some seconds using jQuery</title>
+      <link>https://juristr.com/blog/2009/12/howto-fade-out-div-after-some-seconds/</link>
+      <pubDate>Wed, 30 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/howto-fade-out-div-after-some-seconds/</guid>
+      <description>Today I made a quick change to my blog. I don&#39;t know whether many of my readers noticed the possibility of expanding the reading area by clicking on the gray vertical bar which separates the left column with the post content.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Include JavaScript file from JavaScript code</title>
+      <link>https://juristr.com/blog/2009/11/howto-include-javascript-file-from/</link>
+      <pubDate>Thu, 26 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/howto-include-javascript-file-from/</guid>
+      <description>Recently a colleague asked me on how to add a JavaScript file reference to an HTML document from within JavaScript code. It&#39;s actually quite easy.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net Ajax: Consuming webservice from client-side JavaScript</title>
+      <link>https://juristr.com/blog/2009/11/aspnet-ajax-consuming-webservice-from/</link>
+      <pubDate>Sat, 07 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/aspnet-ajax-consuming-webservice-from/</guid>
+      <description>Yesterday I answered a question on SO related to the problem of consuming an ASP.net webservice from JavaScript on the client-side. So I thought it might be a good idea to put it down in a downloadable example that can be used as a starting point for all those that didn&#39;t yet use this method.</description>
+    </item>
+    
+    <item>
+      <title>GWT meets Spring</title>
+      <link>https://juristr.com/blog/2009/09/gwt-meets-spring/</link>
+      <pubDate>Tue, 29 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/gwt-meets-spring/</guid>
+      <description>GWT is quite evolving recently. There are a couple of reasons for that:
+Coding apps like Gmail and Google Wave
+We all appreciate the speed of the Gmail UI.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Ajax CDN</title>
+      <link>https://juristr.com/blog/2009/09/microsoft-ajax-cdn/</link>
+      <pubDate>Wed, 16 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/microsoft-ajax-cdn/</guid>
+      <description>Scott Gu&#39; just announced the launch of Microsoft Ajax Content Delivery Network. The name already explains mostly everything. It allows you to retrieve Ajax script libraries for your web application by specifying things like this</description>
+    </item>
+    
+    <item>
+      <title>HTML list item background image disappears on IE</title>
+      <link>https://juristr.com/blog/2009/07/html-list-item-background-image/</link>
+      <pubDate>Mon, 20 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/07/html-list-item-background-image/</guid>
+      <description>I recently faced the problem that the background images that have been added to an HTML li tag over CSS disappeared on Internet Explorer (on Firefox and Webkit browsers everything worked fine).</description>
+    </item>
+    
+    <item>
+      <title>JsTestDriver - Easy unit testing for JavaScript code</title>
+      <link>https://juristr.com/blog/2009/05/jstestdriver-easy-unit-testing-for/</link>
+      <pubDate>Mon, 25 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/jstestdriver-easy-unit-testing-for/</guid>
+      <description>Today this video got my attention which is basically a short demo of JsTestDriver, a nice implementation of easy unit testing for JavaScript code. This allows to easily create automated test for multiple browsers.</description>
+    </item>
+    
+    <item>
+      <title>jQuery plugin development pattern</title>
+      <link>https://juristr.com/blog/2009/04/jquery-plugin-development-pattern/</link>
+      <pubDate>Wed, 22 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/jquery-plugin-development-pattern/</guid>
+      <description>I&#39;m currently diving more and more into the jQuery library. First I&#39;m using it on a portlet I&#39;m developing for the Liferay portal server as the project for a university course and secondly I&#39;m planning to use jQuery on some ajax-enabled server controls I&#39;m designing (I&#39;m not yet 100% sure whether to use jQuery or Asp.</description>
+    </item>
+    
+    <item>
+      <title>Extended view reloaded</title>
+      <link>https://juristr.com/blog/2009/03/extended-view-reloaded/</link>
+      <pubDate>Wed, 25 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/extended-view-reloaded/</guid>
+      <description>With the transition to the complete new blog design I initially had to leave away some features which I had on my old blog layout.</description>
+    </item>
+    
+    <item>
+      <title>Google AJAX APIs: The Google Visualization API</title>
+      <link>https://juristr.com/blog/2009/02/google-ajax-apis-google-visualization/</link>
+      <pubDate>Sun, 22 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/google-ajax-apis-google-visualization/</guid>
+      <description>From now and then I&#39;m always taking a quick look at Google&#39;s API page to see whether something new and interesting is there. Today I got stuck at the Google Visualization API, an API that may be especially be interesting for developers involved in web technologies.</description>
+    </item>
+    
+    <item>
+      <title>Problem: launching javascript from hyperlinks without redirecting</title>
+      <link>https://juristr.com/blog/2008/10/problem-launching-javascript-from/</link>
+      <pubDate>Wed, 29 Oct 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/10/problem-launching-javascript-from/</guid>
+      <description>When I&#39;m launching javascripts on a webpage I often use hyperlinks instead of buttons (it depends however on the context). So you may write something like the following</description>
+    </item>
+    
+    <item>
+      <title>JavaScript onChange event handling</title>
+      <link>https://juristr.com/blog/2008/08/javascript-onchange-event-handling/</link>
+      <pubDate>Mon, 25 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/08/javascript-onchange-event-handling/</guid>
+      <description>When you&#39;re developing web applications you&#39;ll often encounter a situation where you react on changes of a control&#39;s data due to some user interaction. How complicated :) , well a situation where some user types something inside a text-field.</description>
+    </item>
+    
+    <item>
+      <title>The Controls collection cannot be modified because...</title>
+      <link>https://juristr.com/blog/2008/08/controls-collection-cannot-be-modified/</link>
+      <pubDate>Sat, 02 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/08/controls-collection-cannot-be-modified/</guid>
+      <description>Programming on the web (JSP, ASP.net, etc..) is quite different than programming a desktop client. On the web, everything is characterized by the request/response paradigm due to the structure of the HTTP protocol.</description>
+    </item>
+    
+    <item>
+      <title>Dynamically modifying CSS class name attributes</title>
+      <link>https://juristr.com/blog/2008/07/dynamically-modifying-css-class-name/</link>
+      <pubDate>Thu, 24 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/07/dynamically-modifying-css-class-name/</guid>
+      <description>CSS allows you to not only define the style attributes directly like
+&amp;lt;span id=&#34;mySpan&#34; style=&#34;font-weight:bold; color:blue;&#34;&amp;gt;
+some text within the span container...
+&amp;lt;/span&amp;gt;but to define separate classes which is what is actually done in order to separate the design from the layout:</description>
+    </item>
+    
+    <item>
+      <title>Extending JavaScript objects with custom functions</title>
+      <link>https://juristr.com/blog/2008/07/extending-javascript-objects-with/</link>
+      <pubDate>Mon, 14 Jul 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/07/extending-javascript-objects-with/</guid>
+      <description>It is nice how JavaScript objects can be extended with additional custom functions. Today for instance I needed a &#34;contains&#34; function (as it exists already on Java String objects).</description>
+    </item>
+    
+    <item>
+      <title>Attaching client-side event handler to radio button list</title>
+      <link>https://juristr.com/blog/2008/06/attaching-client-side-event-handler-to/</link>
+      <pubDate>Fri, 06 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/attaching-client-side-event-handler-to/</guid>
+      <description>If you want to react to changes on a ASP.net radio button list from the client side you have to attach the appropriate JavaScript event handler.</description>
+    </item>
+    
+    <item>
+      <title>News Mapper experiences a revival</title>
+      <link>https://juristr.com/blog/2007/12/news-mapper-experiences-revival/</link>
+      <pubDate>Thu, 13 Dec 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/12/news-mapper-experiences-revival/</guid>
+      <description>After I first published my Google Mashup project &#34;News Mapper&#34;, it immediately got published first on the Google Code site of the GME project and then also on the Official GME blog.</description>
+    </item>
+    
+    <item>
+      <title>News Mapper: A mashup experience with the Google Mashup Editor</title>
+      <link>https://juristr.com/blog/2007/10/now-in-two-weeks-after-my-successful/</link>
+      <pubDate>Mon, 29 Oct 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/10/now-in-two-weeks-after-my-successful/</guid>
+      <description>Now in the two weeks after my successful graduation and before starting to work I found some space for doing some programming experiments. :) What I planned already for a longer time now has been to do some JavaScript coding since it becomes an always more important aspect in modern web technologies such as AJAX and so on.</description>
+    </item>
+    
+    <item>
+      <title>Smiley-support for blog-entries</title>
+      <link>https://juristr.com/blog/2007/02/smiley-support-for-blog-entries/</link>
+      <pubDate>Tue, 13 Feb 2007 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2007/02/smiley-support-for-blog-entries/</guid>
+      <description>I like it to add smileys to my posts, since I find they make it much more personally. On my old homepage I put smileys by simply inserting the according IMG HTML tag and function getElementsByClassName(class_name){</description>
+    </item>
+    
+  </channel>
+</rss>

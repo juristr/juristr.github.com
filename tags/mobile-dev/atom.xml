@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile Dev on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/mobile-dev/</link>
+    <description>Recent content in Mobile Dev on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 03 May 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/mobile-dev/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scaling Android Emulator Size: Without using Eclipse</title>
+      <link>https://juristr.com/blog/2012/05/scaling-android-emulator-size-without/</link>
+      <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/05/scaling-android-emulator-size-without/</guid>
+      <description>As you might have read following my previous post&amp;nbsp;I&#39;m currently experimenting with mobile web solutions. In such a case, having an Android emulator is quite comfortable for quickly testing your solution.</description>
+    </item>
+    
+    <item>
+      <title>HTML5 vs Android: Apps or Web for mobile development??</title>
+      <link>https://juristr.com/blog/2012/04/html5-version-android-apps-or-web-for/</link>
+      <pubDate>Thu, 26 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/04/html5-version-android-apps-or-web-for/</guid>
+      <description>This is a hotly discussed topic recently. The web is now a fully-capable platform and it&#39;s getting better and better as the HTML5 standard advances.</description>
+    </item>
+    
+    <item>
+      <title>Should Android Worry About the iOS 5 Update? Definitely Not!</title>
+      <link>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</link>
+      <pubDate>Tue, 07 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/06/should-android-worry-about-ios-5-update/</guid>
+      <description>With the announcement of the new iOS 5 at the WWDC, the first articles emerge already on the web relating the new features with the existing Android OS.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Android Development</title>
+      <link>https://juristr.com/blog/2011/02/getting-started-with-android/</link>
+      <pubDate>Wed, 23 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/getting-started-with-android/</guid>
+      <description>Android has become very popular recently, especially among developers which would like to create some nice apps for mobile environments. This trend can be noted also when looking at the Android category on Stackoverflow.</description>
+    </item>
+    
+    <item>
+      <title>Coding an Update Functionality for your Android App</title>
+      <link>https://juristr.com/blog/2011/02/coding-update-functionality-for-your/</link>
+      <pubDate>Mon, 07 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/coding-update-functionality-for-your/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  An immediate answer would be: why should I need that. I publish my app on the market which has a build-in update functionality.</description>
+    </item>
+    
+    <item>
+      <title>Android: HowTo Detect Installed SQLite DB Version</title>
+      <link>https://juristr.com/blog/2011/01/android-howto-detect-installed-sqlite/</link>
+      <pubDate>Fri, 21 Jan 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/01/android-howto-detect-installed-sqlite/</guid>
+      <description>As you might already know, Android comes with a preinstalled SQLite database. This is quite handy because you can rely on it without the need to care about installing a DB along with your application (although you can, standalone, small DB&#39;s of course like HSQLDB).</description>
+    </item>
+    
+    <item>
+      <title>Android: Attaching ClickListeners Declaratively</title>
+      <link>https://juristr.com/blog/2010/11/android-attaching-clicklisteners/</link>
+      <pubDate>Fri, 19 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/11/android-attaching-clicklisteners/</guid>
+      <description>If you define a click listener for - say - a button in an android Activity, then you basically have three different possibilities.
+The &#34;</description>
+    </item>
+    
+    <item>
+      <title>Retrieve Selected Items on Checkable ListView: Differences in SDK Level 7 and 8</title>
+      <link>https://juristr.com/blog/2010/09/retrieve-selected-items-on-checkable/</link>
+      <pubDate>Tue, 14 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/09/retrieve-selected-items-on-checkable/</guid>
+      <description>I&#39;m currently testing my Android app that I&#39;m developing for my MSc thesis on different real devices. While I own a Nexus One with Android Froyo 2.</description>
+    </item>
+    
+    <item>
+      <title>Let tests guide you through development</title>
+      <link>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</link>
+      <pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/06/let-tests-guide-you-through-development/</guid>
+      <description>I&#39;m currently working on my MSc thesis work which is divided into a project that has to be developed (in my case an Android application) and then the according paper that has to be written.</description>
+    </item>
+    
+    <item>
+      <title>MapView doesn&#39;t fire onLongClick event</title>
+      <link>https://juristr.com/blog/2009/12/mapview-doesnt-fire-onlongclick-event/</link>
+      <pubDate>Wed, 02 Dec 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/12/mapview-doesnt-fire-onlongclick-event/</guid>
+      <description>Here&#39;s another curiosity I came across today while programming on my Android project. I was creating a MapView for displaying some interesting stuff on it.</description>
+    </item>
+    
+    <item>
+      <title>Implementing the onTouchEvent for the MapActivity</title>
+      <link>https://juristr.com/blog/2009/11/implementing-ontouchevent-for/</link>
+      <pubDate>Tue, 24 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/implementing-ontouchevent-for/</guid>
+      <description>Android View classes expose an onTouchEvent(MotionEvent ev) method. As the name already suggests, by overriding this method you can handle touch events done by the user on the current view.</description>
+    </item>
+    
+    <item>
+      <title>Accessing the host machine from your Android emulator</title>
+      <link>https://juristr.com/blog/2009/10/accessing-host-machine-from-your/</link>
+      <pubDate>Thu, 29 Oct 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/accessing-host-machine-from-your/</guid>
+      <description>I recently started a project where I develop an Android app (there will some posts later on ;) ) which accesses a remote server as its back-end, hosted on the Google Appengine.</description>
+    </item>
+    
+    <item>
+      <title>Part 1: Writing testable code for the Android</title>
+      <link>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</link>
+      <pubDate>Tue, 20 Oct 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/part-1-writing-testable-code-for/</guid>
+      <description>Creating testable code is one of the major aims when designing good, maintainable applications. I actually just started to take a look at developing for the Android and after playing a bit around with UI components, I started to develop a design that allows me to create a nicely testable Android app.</description>
+    </item>
+    
+  </channel>
+</rss>

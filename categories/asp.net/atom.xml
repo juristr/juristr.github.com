@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asp.net on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/asp.net/</link>
+    <description>Recent content in Asp.net on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 12 Sep 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/asp.net/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hack: How to mimic a disabled checkbox</title>
+      <link>https://juristr.com/blog/2014/09/hack-mimic-disabled-checkboxes/</link>
+      <pubDate>Fri, 12 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/09/hack-mimic-disabled-checkboxes/</guid>
+      <description>The world is not always as we want it to be :). So from now and then you have to place a nice hack here and there.</description>
+    </item>
+    
+    <item>
+      <title>AutoFac: ASP.net WebForms UserControl Dependencies Only Available At Page_Load Event</title>
+      <link>https://juristr.com/blog/2011/11/autofac-aspnet-webforms-usercontrol/</link>
+      <pubDate>Tue, 15 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/autofac-aspnet-webforms-usercontrol/</guid>
+      <description>I&#39;m currently adapting the architecture of one of our old but core projects, still written in ASP.net WebForms and with our custom ORM mapper. Since we&#39;re currently starting to release a new version of the project, we decided took the opportunity to also exchange our custom ORM mapper with Entity Framework and at the same time I introduced AutoFac for providing dependency injection.</description>
+    </item>
+    
+    <item>
+      <title>Don&#39;t Underestimate the Trouble Caused by URLs in Emails</title>
+      <link>https://juristr.com/blog/2011/11/dont-underestimate-trouble-caused-by/</link>
+      <pubDate>Thu, 03 Nov 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/11/dont-underestimate-trouble-caused-by/</guid>
+      <description>At a first glance, the title might seem strange, but wait. The company I&#39;m working at creates e-government solutions, so the target audience are the citizens, from the young, very computer-literate ones to the more elderly (and often, but not always) less computer-literate ones :).</description>
+    </item>
+    
+    <item>
+      <title>Basta-On-Tour Wrap Up Day 2: EF Best Practices, JavaScript, MVC</title>
+      <link>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-2-ef-best/</link>
+      <pubDate>Tue, 24 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-2-ef-best/</guid>
+      <description>Day 2 at the BASTA! On Tour was dedicated to different kind of small workshops.
+Web 2.0 Applications with ASP.net MVC, Entity Framework and jQuery</description>
+    </item>
+    
+    <item>
+      <title>Basta-On-Tour Wrap Up Day 1: Entity Framework</title>
+      <link>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-1-entity/</link>
+      <pubDate>Fri, 20 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/05/basta-on-tour-wrap-up-day-1-entity/</guid>
+      <description>Well, this is a very short and brief wrap up of the 1st day here at the Basta! On Tour in Düsseldorf. The session was about Entity Framework, hold by Dr.</description>
+    </item>
+    
+    <item>
+      <title>A Test-Driven Dev&#39;s Nightmare: Meeting the HttpContext</title>
+      <link>https://juristr.com/blog/2011/03/test-driven-devs-nightmare-meeting/</link>
+      <pubDate>Wed, 16 Mar 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/03/test-driven-devs-nightmare-meeting/</guid>
+      <description>My main task for the coming weeks at work is to extend&amp;nbsp;one of our older but highly successful web application with new functionalities. The webapp has become quite complex over the years, as it happens with most applications when they&#39;re being extended.</description>
+    </item>
+    
+    <item>
+      <title>FriendlyBool Extender What?</title>
+      <link>https://juristr.com/blog/2011/02/friendlybool-extender-what/</link>
+      <pubDate>Thu, 03 Feb 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/02/friendlybool-extender-what/</guid>
+      <description>From now and then it happens that I have to databind some entities onto the UI, containing boolean datatypes like &#34;Married&#34; or &#34;Editable&#34; and so on.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net: Organize Your Resources the Correct Way!</title>
+      <link>https://juristr.com/blog/2011/01/aspnet-organize-your-resources-correct/</link>
+      <pubDate>Tue, 18 Jan 2011 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/01/aspnet-organize-your-resources-correct/</guid>
+      <description>ASP.net provides well-known mechanisms for localizing web applications, namely by extracting hard-coded strings into resources files. Localization for Pages and UserControls is fully automated and available from within Visual Studio.</description>
+    </item>
+    
+    <item>
+      <title>&#39;\n&#39; will break your JSON jQuery - WCF service call</title>
+      <link>https://juristr.com/blog/2010/05/n-will-break-your-json-jquery-wcf/</link>
+      <pubDate>Fri, 07 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/05/n-will-break-your-json-jquery-wcf/</guid>
+      <description>I recently coded a WCF REST webservice that needed to be accessed from JavaScript. Basically it was a system to provide admins of websites with a real-time system for managing info messages, intended to be displayed beneath input fields.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Launch JavaScript after async postback of UpdatePanel</title>
+      <link>https://juristr.com/blog/2010/02/howto-launch-javascript-after-async/</link>
+      <pubDate>Thu, 18 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/02/howto-launch-javascript-after-async/</guid>
+      <description>Assume the scenario where you want to launch a JavaScript function after your UpdatePanel finished to do its async postback. This turns out to actually be quite simple.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Use globally defined resources in your ASPX code</title>
+      <link>https://juristr.com/blog/2010/01/howto-use-globally-defined-resources-in/</link>
+      <pubDate>Fri, 08 Jan 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/01/howto-use-globally-defined-resources-in/</guid>
+      <description>When creating localized web applications using ASP.net you may often come across strings which are the same on many of your interface parts. Usually you probably use the VS functionality &#34;</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Run IIS 7 on Vista 64bit OS in 32bit mode</title>
+      <link>https://juristr.com/blog/2009/11/howto-run-iis-7-on-vista-64bit-os-in/</link>
+      <pubDate>Tue, 10 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/howto-run-iis-7-on-vista-64bit-os-in/</guid>
+      <description>A couple of days ago, I ran into a nice problem. I had to configure the setup of a new project using an old ASP based application as the entry point from which then the new ASP.</description>
+    </item>
+    
+    <item>
+      <title>ASP.net Ajax: Consuming webservice from client-side JavaScript</title>
+      <link>https://juristr.com/blog/2009/11/aspnet-ajax-consuming-webservice-from/</link>
+      <pubDate>Sat, 07 Nov 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/11/aspnet-ajax-consuming-webservice-from/</guid>
+      <description>Yesterday I answered a question on SO related to the problem of consuming an ASP.net webservice from JavaScript on the client-side. So I thought it might be a good idea to put it down in a downloadable example that can be used as a starting point for all those that didn&#39;t yet use this method.</description>
+    </item>
+    
+    <item>
+      <title>Repeater looses its data collection. ViewState problem?</title>
+      <link>https://juristr.com/blog/2009/10/repeater-looses-its-data-collection/</link>
+      <pubDate>Tue, 27 Oct 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/10/repeater-looses-its-data-collection/</guid>
+      <description>A while back I experienced a really strange problem in one of our ASP.net applications, namely my repeater control which was loosing its data collection after a postback to the server.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Ajax CDN</title>
+      <link>https://juristr.com/blog/2009/09/microsoft-ajax-cdn/</link>
+      <pubDate>Wed, 16 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/microsoft-ajax-cdn/</guid>
+      <description>Scott Gu&#39; just announced the launch of Microsoft Ajax Content Delivery Network. The name already explains mostly everything. It allows you to retrieve Ajax script libraries for your web application by specifying things like this</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Control the rendered Html tag on your custom, composite server controls</title>
+      <link>https://juristr.com/blog/2009/08/controlling-rendered-html-tag-on-your/</link>
+      <pubDate>Tue, 11 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/controlling-rendered-html-tag-on-your/</guid>
+      <description>Normally when you want to achieve that your custom server control is rendered inside a specific HTML tag you don&#39;t override the Render method, but you do something like</description>
+    </item>
+    
+    <item>
+      <title>Server Error: Validation of viewstate MAC failed.</title>
+      <link>https://juristr.com/blog/2009/07/server-error-validation-of-viewstate/</link>
+      <pubDate>Fri, 31 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/07/server-error-validation-of-viewstate/</guid>
+      <description>If you get the following error...
+Validation of viewstate MAC failed. If this application is hosted by a Web Farm or cluster, ensure that  configuration specifies the same validationKey and validation algorithm.</description>
+    </item>
+    
+    <item>
+      <title>VS Designer: &#39;X&#39; could not be set on property &#39;Y&#39;</title>
+      <link>https://juristr.com/blog/2009/07/vs-designer-x-coud-not-be-set-on/</link>
+      <pubDate>Mon, 27 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/07/vs-designer-x-coud-not-be-set-on/</guid>
+      <description>I&#39;m currently developing some custom ASP.net server controls. Internally I often have lists, where the user (programmer) can specify a variable number of sub-controls which are consumed/managed by the parent custom server control:</description>
+    </item>
+    
+    <item>
+      <title>Automatically find the Label associated to a WebControl through the AssociatedControlID</title>
+      <link>https://juristr.com/blog/2009/07/automatically-find-label-associated-to/</link>
+      <pubDate>Fri, 24 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/07/automatically-find-label-associated-to/</guid>
+      <description>ASP.net Label controls own the property &#34;AssociatedControlID&#34; which points to the control to which the label is associated. This property will then be rendered as &#34;</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Get localized string different from the current culture</title>
+      <link>https://juristr.com/blog/2009/05/howto-get-localized-string-different/</link>
+      <pubDate>Fri, 29 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/howto-get-localized-string-different/</guid>
+      <description>Localization is a key part of most applications. For this purpose you usually use resource files (property files in Java, actually they are the same) with the according culture extension, like &#34;</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Make your custom ASP.net server control validatable</title>
+      <link>https://juristr.com/blog/2009/05/howto-make-your-custom-aspnet-server/</link>
+      <pubDate>Mon, 11 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/howto-make-your-custom-aspnet-server/</guid>
+      <description>Content validation is a major issue of every application. It is an absolute &#34;must have&#34; to notify the user about invalid data he may have entered.</description>
+    </item>
+    
+    <item>
+      <title>Best practices: Deploying webapps (contd.)</title>
+      <link>https://juristr.com/blog/2009/03/best-practices-deploying-webapps-contd_20/</link>
+      <pubDate>Fri, 20 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/best-practices-deploying-webapps-contd_20/</guid>
+      <description>Some time ago I&#39;ve written a post about best practices in deploying web applications by mentioning the different environments
+ Development environment Testing environment Production environment</description>
+    </item>
+    
+    <item>
+      <title>Problems with character encoding on cookies</title>
+      <link>https://juristr.com/blog/2009/03/problems-with-character-encoding-on/</link>
+      <pubDate>Wed, 11 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/problems-with-character-encoding-on/</guid>
+      <description>For preserving the search&amp;nbsp;criteria on some page of our web application we&#39;re saving the different settings of the search filters into a cookie. So, when the user comes back next time we can restore the search filter settings that have been used previously.</description>
+    </item>
+    
+    <item>
+      <title>Observation: Selected value behaviour of the DropDown list control</title>
+      <link>https://juristr.com/blog/2009/02/observation-selected-value-behaviour-of/</link>
+      <pubDate>Mon, 23 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/observation-selected-value-behaviour-of/</guid>
+      <description>Today at work I observed a quite &#34;nice&#34; behaviour of the ASP.net DropDown list control. We usually have some kind of databinding mechanism for binding our domain model onto the UI.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Persist viewstate on the server-side</title>
+      <link>https://juristr.com/blog/2009/02/howto-persist-viewstate-on-server-side/</link>
+      <pubDate>Thu, 12 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/howto-persist-viewstate-on-server-side/</guid>
+      <description>In our last web project we had some performance issues, mainly caused by the extremely big page viewstate of our asp.net pages. If you then add Ajax capabilities to your site, using UpdatePanels, you really get in trouble.</description>
+    </item>
+    
+    <item>
+      <title>Accessing webcontrols inside the ProgressTemplate of an UpdateProgress</title>
+      <link>https://juristr.com/blog/2009/01/accessing-webcontrols-inside/</link>
+      <pubDate>Fri, 09 Jan 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/01/accessing-webcontrols-inside/</guid>
+      <description>Apparently it is not possible to access server-side web controls that are within the &#34;ProgressTemplate&#34; of an UpdateProgress control. If you have for instance the following code</description>
+    </item>
+    
+    <item>
+      <title>Strange focus behavior on Firefox 3&#43;</title>
+      <link>https://juristr.com/blog/2008/11/strange-focus-behavior-on-firefox-3/</link>
+      <pubDate>Thu, 06 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/strange-focus-behavior-on-firefox-3/</guid>
+      <description>Apparently it seems as if Firefox has changed the way the focus is set on the page starting with version 3+.
+When using the &amp;lt;yourcontrol&amp;gt;.</description>
+    </item>
+    
+    <item>
+      <title>Problem: launching javascript from hyperlinks without redirecting</title>
+      <link>https://juristr.com/blog/2008/10/problem-launching-javascript-from/</link>
+      <pubDate>Wed, 29 Oct 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/10/problem-launching-javascript-from/</guid>
+      <description>When I&#39;m launching javascripts on a webpage I often use hyperlinks instead of buttons (it depends however on the context). So you may write something like the following</description>
+    </item>
+    
+    <item>
+      <title>Best practices: Deploying webapps</title>
+      <link>https://juristr.com/blog/2008/09/best-practices-deploying-webapps/</link>
+      <pubDate>Thu, 25 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/09/best-practices-deploying-webapps/</guid>
+      <description>I don&amp;rsquo;t really know whether you want to consider this a &amp;ldquo;best practices&amp;rdquo; or not, but I found the title appropriate. So the thing is how to deploy your webapp.</description>
+    </item>
+    
+    <item>
+      <title>Revised: Changed values of readonly and disabled fields....</title>
+      <link>https://juristr.com/blog/2008/09/revised-changed-values-of-readonly-and/</link>
+      <pubDate>Thu, 18 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/09/revised-changed-values-of-readonly-and/</guid>
+      <description>In a previous post I wrote about the problem that the values of readonly or disabled fields are not retrieved after a postback because it appears as if ASP.</description>
+    </item>
+    
+    <item>
+      <title>Changed values of readonly and disabled fields not accessible after postback</title>
+      <link>https://juristr.com/blog/2008/09/changed-values-of-readonly-and-disabled/</link>
+      <pubDate>Tue, 09 Sep 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/09/changed-values-of-readonly-and-disabled/</guid>
+      <description>I don&#39;t know whether you noticed this problem already. ASP.net doesn&#39;t seem to handle the viewstate of disabled and readonly controls on the UI (i.</description>
+    </item>
+    
+    <item>
+      <title>The Controls collection cannot be modified because...</title>
+      <link>https://juristr.com/blog/2008/08/controls-collection-cannot-be-modified/</link>
+      <pubDate>Sat, 02 Aug 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/08/controls-collection-cannot-be-modified/</guid>
+      <description>Programming on the web (JSP, ASP.net, etc..) is quite different than programming a desktop client. On the web, everything is characterized by the request/response paradigm due to the structure of the HTTP protocol.</description>
+    </item>
+    
+    <item>
+      <title>Recursive version of the FindControl(..) method</title>
+      <link>https://juristr.com/blog/2008/06/recursive-version-of-findcontrol-method/</link>
+      <pubDate>Fri, 27 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/recursive-version-of-findcontrol-method/</guid>
+      <description>I don&#39;t know why there is none already implemented in the .NET framework. Anyway it wasn&#39;t too difficult to write one by myself:
+/// &amp;lt;summary&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Specifying the size of a FileUpload control on Firefox</title>
+      <link>https://juristr.com/blog/2008/06/specifying-size-of-fileupload-control/</link>
+      <pubDate>Fri, 27 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/specifying-size-of-fileupload-control/</guid>
+      <description>Apparently there seems to be a problem on Firefox when you want to specify a size for a file-upload box (which is an HTML input control of type &#34;</description>
+    </item>
+    
+    <item>
+      <title>IE problems with AjaxControl Toolkit&#39;s AutoComplete extender</title>
+      <link>https://juristr.com/blog/2008/06/ie-problems-with-ajaxcontrol-toolkits/</link>
+      <pubDate>Wed, 18 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/ie-problems-with-ajaxcontrol-toolkits/</guid>
+      <description>Microsoft&#39;s .Net AjaxControlToolkit provides a nice extender for doing Ajax-enabled auto-completion by calling a webservice on the server-side.
+Below is a sample:
+&amp;lt;cc1:AutoCompleteExtender2 ID=&#34;aceBirthPlace&#34; runat=&#34;</description>
+    </item>
+    
+    <item>
+      <title>The type [X] exists in both...</title>
+      <link>https://juristr.com/blog/2008/06/type-x-exists-in-both/</link>
+      <pubDate>Tue, 17 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/type-x-exists-in-both/</guid>
+      <description>You cannot imagine how fraught this compilation error was! On average every second launch of my web application I got a compilation error in Visual Studio 2008 saying</description>
+    </item>
+    
+    <item>
+      <title>The ViewState hell: controls loosing their values</title>
+      <link>https://juristr.com/blog/2008/06/viewstate-hell-controls-loosing-their/</link>
+      <pubDate>Thu, 12 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/viewstate-hell-controls-loosing-their/</guid>
+      <description>Recently at work I encountered severe problems with the ASP.net viewstate. We have build a very nice framework which we use on our web projects for dynamically adding validation controls to our text-fields or dropdown lists on the UI according to the validity of rules defined in the business logic.</description>
+    </item>
+    
+    <item>
+      <title>Attaching client-side event handler to radio button list</title>
+      <link>https://juristr.com/blog/2008/06/attaching-client-side-event-handler-to/</link>
+      <pubDate>Fri, 06 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/06/attaching-client-side-event-handler-to/</guid>
+      <description>If you want to react to changes on a ASP.net radio button list from the client side you have to attach the appropriate JavaScript event handler.</description>
+    </item>
+    
+  </channel>
+</rss>

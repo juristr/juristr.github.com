@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spring on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/spring/</link>
+    <description>Recent content in Spring on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sun, 28 Aug 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/spring/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Integrating Jersey with Spring</title>
+      <link>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</link>
+      <pubDate>Sun, 28 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2011/08/integrating-jersey-with-spring/</guid>
+      <description>Spring provides a lot of benefits and promotes best practices with its dependency injection mechanism, application lifecycle management and Hibernate support (just to mention some).</description>
+    </item>
+    
+    <item>
+      <title>Tackle software dependencies with IoC and Dependency Injection</title>
+      <link>https://juristr.com/blog/2010/03/tackle-software-dependencies-with-ioc/</link>
+      <pubDate>Sun, 21 Mar 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2010/03/tackle-software-dependencies-with-ioc/</guid>
+      <description>Coupling between objects creates &#34;dependency&#34;, which per se is not bad at all. You will always have some dependencies among your objects. It becomes bad when it increases abnormally since that will make maintenance a nightmare.</description>
+    </item>
+    
+    <item>
+      <title>GWT meets Spring</title>
+      <link>https://juristr.com/blog/2009/09/gwt-meets-spring/</link>
+      <pubDate>Tue, 29 Sep 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/09/gwt-meets-spring/</guid>
+      <description>GWT is quite evolving recently. There are a couple of reasons for that:
+Coding apps like Gmail and Google Wave
+We all appreciate the speed of the Gmail UI.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Keep request parameters on validation errors with Spring&#39;s SimpleFormController</title>
+      <link>https://juristr.com/blog/2009/05/howto-keep-request-parameters-on/</link>
+      <pubDate>Sun, 31 May 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/05/howto-keep-request-parameters-on/</guid>
+      <description>I recently had a problem when using Spring&#39;s SimpleFormController together with validation. So I posted on StackOverflow, got an answer, that didn&#39;t work out so I found a solution and answered to myself :)</description>
+    </item>
+    
+    <item>
+      <title>HowTo: Bind an input field to a Date property using Spring&#39;s SimpleFormController</title>
+      <link>https://juristr.com/blog/2009/04/howto-bind-input-field-to-date-property/</link>
+      <pubDate>Fri, 10 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/howto-bind-input-field-to-date-property/</guid>
+      <description>If you&#39;re using the Spring SimpleFormController for binding your Java bean object to the UI, you may come across the case where you want to create a binding between an input field (where the user inputs a date) and your bean&#39;s Date property:</description>
+    </item>
+    
+  </channel>
+</rss>

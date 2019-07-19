@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Videos on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/videos/</link>
+    <description>Recent content in Videos on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 23 May 2019 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/videos/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Code Snippets for Visual Studio Code with ease</title>
+      <link>https://juristr.com/blog/2019/05/create-vscode-snippets/</link>
+      <pubDate>Thu, 23 May 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/05/create-vscode-snippets/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    When writing software, even when writing a blog post using Markdown, there are some pieces you have to write again and again. Either you&amp;rsquo;re lazy or you don&amp;rsquo;t remember the exact syntax, code snippets can really help here. Let&amp;rsquo;s see how.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lazy load Angular Components</title>
+      <link>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</link>
+      <pubDate>Mon, 29 Apr 2019 14:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/</guid>
+      <description>Lazy loading is hot recently and for a good reason. It&amp;rsquo;s all about speed! The Chrome team at Google in specific (around Addy Osmani) tries to push out content (and new APIs) to optimize the heck out of web pages.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Angular Elements</title>
+      <link>https://juristr.com/blog/2019/04/intro-to-angular-elements/</link>
+      <pubDate>Sun, 28 Apr 2019 12:00:09 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/intro-to-angular-elements/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You didn&amp;rsquo;t yet get into Angular Elements? Then it&amp;rsquo;s time to give it a go! In this article we&amp;rsquo;re going to see what Angular Elements actually are, why they are useful and how to create our first Angular Element out of a plain component.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Productive Git for Developers</title>
+      <link>https://juristr.com/blog/2019/04/productive-git-for-developers/</link>
+      <pubDate>Tue, 16 Apr 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/productive-git-for-developers/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    With this Egghead course, I aim at a different goal. You will walk through a series of scenarios which you’ll most commonly encounter in your daily work life as a developer.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Display Server Side Validation Errors with Angular</title>
+      <link>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</link>
+      <pubDate>Thu, 07 Feb 2019 20:30:31 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/02/display-server-side-validation-errors-with-angular/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Input Validation is a big topic when it comes to forms. And even more in those large, enterprisey apps, where validation can become really crazy. Now, Angular forms of course provide different mechanisms for handling validation out of the box. However, in this article I won&amp;rsquo;t go into those details, I will rather show you a possible strategy for visualizing server side validation errors.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

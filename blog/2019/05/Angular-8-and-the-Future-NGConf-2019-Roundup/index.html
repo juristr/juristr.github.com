@@ -1,0 +1,2654 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Angular 8 and the Future - NGConf 2019 Roundup | juri.strumpflohner</title>
+	
+	<meta name="description" content="My core takeaway from NGConf 2019">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Angular 8 and the Future - NGConf 2019 Roundup" />
+	
+	<meta name="twitter:description" content="My core takeaway from NGConf 2019" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/ngconf2019/ngconf-post-cover.png" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Angular 8 and the Future - NGConf 2019 Roundup" />
+	
+	<meta property="og:description" content="My core takeaway from NGConf 2019" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/ngconf2019/ngconf-post-cover.png" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2019/05/Angular-8-and-the-Future-NGConf-2019-Roundup/" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2019%2f05%2fAngular-8-and-the-Future-NGConf-2019-Roundup%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2019%2f05%2fAngular-8-and-the-Future-NGConf-2019-Roundup%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Angular 8 and the Future - NGConf 2019 Roundup</h1>
+                
+                <h2 class="article-subtitle">My core takeaway from NGConf 2019</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            May 1, 2019
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">36 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                <div class="article-intro">
+    I&rsquo;m not at NGConf 2019 (unfortunately). But I&rsquo;m following along very closely with the Angular community (and as an Angular GDE) I&rsquo;m particularly excited what&rsquo;s currently being announced at Salt Lake City . As such I&rsquo;m summarizing here my main takeaway from the conf.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>Note, <em>I&rsquo;ll update this blog post as I catch up with talks from the conf, so don&rsquo;t forget to check back</em><br />
+<em>Last update: 8th May 2019 11:30pm GMT+2 - check my <a href="https://twitter.com/juristr">Twitter stream for more</a></em></p>
+
+<hr />
+
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#disclaimer">Disclaimer</a></li>
+<li><a href="#keynote-day-1">Keynote (day 1)</a>
+<ul>
+<li><a href="#differential-loading">Differential Loading</a></li>
+<li><a href="#builders">Builders</a></li>
+<li><a href="#deploy-from-the-cli">Deploy from the CLI</a></li>
+<li><a href="#web-workers-and-lazy-loading">Web Workers and Lazy Loading</a></li>
+<li><a href="#wip-bazel-and-ivy">WIP: Bazel and Ivy</a></li>
+<li><a href="#ivy-features">Ivy Features</a></li>
+<li><a href="#angular-everygreen">Angular Everygreen</a></li>
+<li><a href="#angular-scaling-in-the-industry">Angular Scaling in the Industry</a></li>
+<li><a href="#angular-and-oss">Angular and OSS</a></li>
+<li><a href="#angular-collaborators">Angular Collaborators</a></li>
+</ul></li>
+<li><a href="#keynote-day-3">Keynote (day 3)</a>
+<ul>
+<li><a href="#future-ideas">Future Ideas</a>
+<ul>
+<li><a href="#fastest-possible-apps">Fastest possible apps</a></li>
+<li><a href="#replayable-vs-resumable">Replayable vs. Resumable</a></li>
+<li><a href="#ideas-of-implementing-a-resumable-todo-app">Ideas of implementing a resumable Todo app</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#angular-for-the-enterprise">Angular for the Enterprise</a>
+<ul>
+<li><a href="#mobile-apps">Mobile Apps</a></li>
+<li><a href="#shared-components-and-open-source">Shared Components and Open Source</a></li>
+<li><a href="#hybrid-apps-mixed-environments">Hybrid Apps &amp; Mixed Environments</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#progressive-web-applications-pwa">Progressive Web Applications (PWA)</a></li>
+<li><a href="#a-b-testing-and-experiments">A/B Testing and Experiments</a></li>
+<li><a href="#staying-up-to-date">Staying Up to Date</a></li>
+<li><a href="#build-time">Build Time</a></li>
+<li><a href="#share-your-problems-solutions">Share your problems &amp; solutions</a></li>
+</ul></li>
+<li><a href="#these-are-the-angular-tips-you-are-looking-for">These are the Angular Tips You Are Looking For</a>
+<ul>
+<li><a href="#rxjs-how-to-deal-with-unsubscribing">RxJS - How to deal with unsubscribing</a></li>
+<li><a href="#state-management">State Management</a></li>
+</ul></li>
+<li><a href="#tools-for-fast-angular-applications">Tools For Fast Angular Applications</a>
+<ul>
+<li><a href="#strategies-for-reducing-javascript-load">Strategies for reducing JavaScript load</a></li>
+<li><a href="#automated-deploy-via-cli">Automated Deploy via CLI</a></li>
+</ul></li>
+<li><a href="#not-every-app-is-a-spa">Not Every App is a SPA</a>
+<ul>
+<li><a href="#small-medium-apps-demos-edu-apps">Small-medium Apps, Demos, Edu Apps</a></li>
+<li><a href="#scaling-up-or-what-is-project-angular-photon">Scaling Up - or What is project &ldquo;Angular Photon&rdquo;?</a></li>
+</ul></li>
+<li><a href="#cdk-is-the-coolest-thing-you-are-not-using-yet">CDK is the Coolest Thing You are Not Using (Yet)</a></li>
+<li><a href="#mastering-the-subject-communication-options-in-rxjs">Mastering the Subject: Communication options in RxJS</a>
+<ul>
+<li><a href="#communication-techniques-event-bus">Communication Techniques: Event Bus</a></li>
+<li><a href="#communication-techniques-observable-service">Communication Techniques: Observable Service</a></li>
+</ul></li>
+<li><a href="#bazel-opt-in-preview-is-here">Bazel Opt-in Preview is Here!</a></li>
+<li><a href="#angular-elements-everywhere">Angular Elements Everywhere</a></li>
+<li><a href="#before-ngrx-superpowers-with-rxjs-facades">Before NgRx: Superpowers with RxJS + Facades</a>
+<ul>
+<li><a href="#pull-based">Pull-based</a></li>
+<li><a href="#push-based">Push-based</a></li>
+</ul></li>
+<li><a href="#useful-links">Useful links</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<h2 id="disclaimer">Disclaimer</h2>
+
+<p>This is my personal summary of the sessions from ngconf. While I summarize the things with my own words, the material used such as images, graphs, source code examples are not my own. Most of them are from the Youtube videos or slide of the respective speakers of the various sessions.</p>
+
+<h2 id="keynote-day-1">Keynote (day 1)</h2>
+
+<p>_Brad Green &amp; Igor Minar - <a href="https://youtu.be/O0xx5SvjmnU">Youtube</a>, <a href="https://docs.google.com/presentation/d/19yTRqHT1v4SQz5kXCL6OrIWvH9M20029s_ri5Eil03Y/edit?usp=sharing">Slides</a>_</p>
+
+<p>First and foremost, before going ahead with &ldquo;tech details&rdquo;, this is what the Angular community stands for..</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/angular-values.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/angular-values.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>..and I can just confirm this 100%. Especially also the community aspect: I&rsquo;ve been in the community for a couple of years now, visited conferences, spoke at conferences and all are extremely welcoming, friendly and helpful.</p>
+
+<p><strong>Angular is a platform</strong>, no more just a framework, which comprises a number of products.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/angular-products.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/angular-products.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>You don&rsquo;t have to use all of them. You can plug them in based on your needs. The Angular team behind, makes sure they all fit together nicely and that the tooling around is built to be best integrated and makes you most productive.</p>
+
+<p>Angular version 8 is currently (as of writing this article) in RC mode and is to be released ~end of May.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/angular-release-timeline.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/angular-release-timeline.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Angular release timeline for v8 and v9</figcaption>
+</figure>
+
+
+
+<h3 id="differential-loading">Differential Loading</h3>
+
+<p>One of the main features that are coming in v8 is <strong>differential loading</strong>. Performance has high priority for the Angular team and the Chrome team at Google in general. Among other optimization techniques (i.e. <a href="/blog/2019/04/Lazy-Loading-Components-with-Angular-Elements/">see my lazy loading article</a>), differential loading creates two different bundles: one for legacy browsers and one (with reduced polyfills) for modern evergreen browsers.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/differential-loading.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/differential-loading.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>This allows to save ~7-20% of the current bundle size.</p>
+
+<p>But there are more features to come:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/features-v8.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/features-v8.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Angular v8 features</figcaption>
+</figure>
+
+
+
+<h3 id="builders">Builders</h3>
+
+<p><strong>Builders</strong> are a new feature of the stabilized API also known as &ldquo;Architect&rdquo; that allows to extend the current Angular CLI build process. Like Angular Schematic allow you to extend and hook into the code scaffolding process of the CLI, allowing you to provide your own generators, <em>builders allow you to customize the CLI</em>.<br />
+You see those builders already if you inspect your <code>angular.json</code> file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;$schema&#34;</span><span class="p">:</span> <span class="s2">&#34;./node_modules/@angular/cli/lib/config/schema.json&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&#34;newProjectRoot&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;projects&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;demoapp&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="err">...</span>
+      <span class="nt">&#34;architect&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&#34;builder&#34;</span><span class="p">:</span> <span class="s2">&#34;@angular-devkit/build-angular:browser&#34;</span><span class="p">,</span>
+          <span class="nt">&#34;options&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="err">...</span>
+          <span class="p">},</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;serve&#34;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&#34;builder&#34;</span><span class="p">:</span> <span class="s2">&#34;@angular-devkit/build-angular:dev-server&#34;</span><span class="p">,</span>
+          <span class="err">...</span>
+        <span class="p">},</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+<span class="p">}</span></code></pre></div>
+<p>This opens up a huge set of possibilities to decide by yourself which tools should run and you can orchestrate them by yourself. Like on top of builders you could create functionality to automatically deploy directly from the CLI.</p>
+
+<h3 id="deploy-from-the-cli">Deploy from the CLI</h3>
+
+<p>Minko also demonstrated this by deploying to Firebase. More <a href="#automated-deploy-via-cli">here</a>.</p>
+
+<h3 id="web-workers-and-lazy-loading">Web Workers and Lazy Loading</h3>
+
+<p><strong>Web Workers</strong> support has been improved, allowing to move some intense processing out into a separate worker thread to not interfere with the main UI thread of the browser.</p>
+
+<p><strong>Lazy Loading</strong> will also finally no more rely on &ldquo;magic strings&rdquo; that the Angular CLI has to know about, parse and apply code splitting. You see those strings for instance in the Router&rsquo;s lazy loading configuration:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// example lazy route
+</span><span class="c1"></span><span class="p">{</span>
+  <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;search&#39;</span><span class="p">,</span>
+  <span class="nx">loadChildren</span><span class="o">:</span> <span class="s1">&#39;./search/search.module#SearchModule&#39;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Starting from v8 you can use the native <code>import()</code> API and rewrite it like</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;search&#39;</span><span class="p">,</span>
+  <span class="nx">loadChildren</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">import</span><span class="p">(</span><span class="s1">&#39;./search/search.module&#39;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">mod</span> <span class="p">=&gt;</span> <span class="nx">mod</span><span class="p">.</span><span class="nx">LazyModule</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="wip-bazel-and-ivy">WIP: Bazel and Ivy</h3>
+
+<p>There&rsquo;s some work in progress as well:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/angular-version-9.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/angular-version-9.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p><strong>Bazel</strong> is one of those. It&rsquo;s the open source version of Google&rsquo;s internal &ldquo;Blaze&rdquo; build tool that powers its huge internal monorepo. Bazel is known for being extremely fast, especially due to its ability of allowing it to scale on the cloud as well (Google has an internal requirement that on average a rebuild of any codebase size should never take longer than ~3 secs 😱)</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-features.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-features.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Bazel features</figcaption>
+</figure>
+
+
+
+<p>A dedicated team within the Angular team is currently working on bringing Bazel to the Angular community s.t. we can all benefit from such a super-power build tool. Currently it&rsquo;s still an &ldquo;early version&rdquo; which can be used and works already, but is still a bit rough. By Q9 the goal is that everyone will be able to basically just enable a flag on the CLI configuration and Bazel will take care of the build rather than Webpack (something like that. details are still in the works ofc).</p>
+
+<p>So far internally at Google some really big improvements could be observed by using Bazel:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-build-time-reduction.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-build-time-reduction.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Build time improvements powered by Bazel</figcaption>
+</figure>
+
+
+
+<p>And of course the new <strong>Ivy renderer</strong>. Here are the goals for it:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ivy-features-overview.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ivy-features-overview.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The current focus for v8 was especially to guarantee <strong>backwards compatibility</strong>. Most important, <strong>Ivy won&rsquo;t be on by default in v8</strong>. The team ships it with v8 with the possibility to opt-in. Currently inside Google 97% of all of the unit, integration and screenshot tests are currently passing.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ivy-tests-google.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ivy-tests-google.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Passing unit, integration and screenshot tests @ Google</figcaption>
+</figure>
+
+
+
+<p>This makes the team quite confident, however they&rsquo;re using the time to Angular v9 (in Q4 this year) to get some further feedback from the community.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ivy-backwards-risks.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ivy-backwards-risks.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The Angular team is interested in getting feedback for projects with lots of different dependencies to see how well these work with Ivy</p>
+
+<p>That said, you can definitely opt-in your Angular v8 app. You can try Ivy today by generating a new v8 app with</p>
+
+<pre><code>$ ng new my-app --enable-ivy
+</code></pre>
+
+<p>..or enable it on an existing v8 app by adding the <code>enableIvy</code> in your <code>tsconfig.app.json</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="err">...</span> <span class="p">},</span>
+  <span class="nt">&#34;angularCompilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;enableIvy&#34;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p>All the details can be found on <a href="https://next.angular.io/guide/ivy">https://next.angular.io/guide/ivy</a>.</p>
+
+<h3 id="ivy-features">Ivy Features</h3>
+
+<p>So what does Ivy bring us most importantly? First of all <strong>smaller bundles</strong>.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ivy-size-chart.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ivy-size-chart.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>To explain this image:</p>
+
+<ul>
+<li>View Engine is the current rendering engine</li>
+<li>View Engine + Differential is to use the current renderer with the new differential loading being introduced in v8</li>
+<li>Ivy Compat + Differential is what you get when activating the <code>enableIvy</code> flag and this is where the team needs the most feedback.</li>
+<li>Ivy Future API + Differential is an experimental, not yet documented API that will dramatically reduce the size.</li>
+</ul>
+
+<p>Besides that, Ivy comes with some really nice side effects as well:</p>
+
+<ul>
+<li><strong>Lower memory requirements -</strong> the team has observed 30% reduction in application simulation and Angular Material library tests take 91% less memory</li>
+<li><strong>Faster tests -</strong> the Angular framework unit test time decreased by 38%, those of the material library by 80%</li>
+<li><em>plus a lot of outstanding bugs have been fixed</em></li>
+</ul>
+
+<h3 id="angular-everygreen">Angular Everygreen</h3>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/angular-evergreen.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/angular-evergreen.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>One of the goals of Angular straight from the beginning was to become an &ldquo;evergreen platform&rdquo;. If you think about the fast evolving web tech, this is quite a crazy goal, right? But now we&rsquo;re already at version 8 and we&rsquo;re getting reports from company&rsquo;s out there that upgrade across &ldquo;potentially breaking verions&rdquo; without hassle and in record time. Just read <a href="https://medium.com/airfrance-klm/how-we-upgraded-a-website-with-half-a-billion-annual-users-to-angular-7-in-less-then-a-day-71de33a1108e">Air France KLM&rsquo;s post</a>.</p>
+
+<h3 id="angular-scaling-in-the-industry">Angular Scaling in the Industry</h3>
+
+<p>In the following chart, we see the scaling Angular.js (v1) aimed for. It was for quickly building small to medium sized apps.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/scaling-angularjs.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/scaling-angularjs.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>AngularJS scaling from small to medium apps</figcaption>
+</figure>
+
+
+
+<p>However due to technical limits, it wasn&rsquo;t able to scale that beyond, which is the main reason Angular (2+) started. The goal was to have all of the reach of AngularJS + what Angular 2+ would bring. Instead, right now this is the situation, currently mostly suitable for the enterprise use case:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/scaling-current-angular.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/scaling-current-angular.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>With Angular Ivy and especially <a href="/blog/2019/04/intro-to-angular-elements/">Angular Elements</a> this can be extended to the small apps as well, where no full blown app is needed but just small integration points and components.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/scaling-angular-ivy.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/scaling-angular-ivy.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Scaling with Ivy and Angular Elements</figcaption>
+</figure>
+
+
+
+<p>A new project named &ldquo;Photon&rdquo; is targeting the upper part of the curve, where the really big enterprise apps lie.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/scaling-angular-photon.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/scaling-angular-photon.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Upper scaling with Photon</figcaption>
+</figure>
+
+
+
+<p>As you note, there&rsquo;s still a space in the very upper part (Billion user apps), and while the team cannot announce anything yet, they&rsquo;re collaborating with a Google internal team that is specifically designing those apps to evaluate whether Angular could expand into that space as well.</p>
+
+<h3 id="angular-and-oss">Angular and OSS</h3>
+
+<p>As most know, Angular is developed completely OSS on GitHub and brought into Google. Google actually runs on <strong>development HEAD</strong> (which sounds crazy). But at the same time, by continuously integrating Angular from GitHub over Google&rsquo;s CI into the Google monorepo, thousands of automated tests are triggered. Not just those of the framework itself, but of other apps running on Angular. This give the team further confidence about the stability of Angular.</p>
+
+<p>Also, there&rsquo;s a vivid exchange and a mutual benefit between Google and the OSS community.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/angular-oss.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/angular-oss.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Projects like Ivy came from the OSS community into Google and now have a major impact. Similar, build tools like Bazel started at Google and are now in the process of being open sourced.</p>
+
+<h3 id="angular-collaborators">Angular Collaborators</h3>
+
+<p>The Angular ecosystem grows and grows and more PRs come in from OSS contributors. In order to make sure the team doesn&rsquo;t get overwhelmed, but still helping those PRs successfully land, it needs to find a strategy for scaling these efforts. Thus, <strong>Angular Collaborators</strong> has been launched. They are basically in the following part of the &ldquo;hierarchy&rdquo; (what a bad word).</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/angular-collaborators.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/angular-collaborators.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The goal is to have a trusted set of collaborators which get mentoring from actual Angular team members, get invited to meetings etc, and which can then help other OSS contributors with their PRs.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/angular-collaborators-goals.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/angular-collaborators-goals.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>How do you join?</p>
+
+<ul>
+<li><strong>Community:</strong> be an awesome contributor</li>
+<li><strong>Enterprise:</strong> devrel [at] angular.io</li>
+</ul>
+
+<p>Finally&hellip;</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/empathy-respect.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/empathy-respect.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h2 id="keynote-day-3">Keynote (day 3)</h2>
+
+<p><em>Misko Hevery and Stephen Fluin - <a href="https://www.youtube.com/watch?v=-kYtw3CSe6s">Youtube</a>, <a href="http://bit.ly/angular-rd-report">Slides</a></em></p>
+
+<p>The Angular Team develops on GitHub, in public.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-innovate-open.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-innovate-open.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>As such they also <strong>innovate in the open</strong>, they make experiments, PRs containing proof of concepts they need in order to progress the platform and explore new ideas. As such <strong>not every line of code necessarily affects you</strong>. This often resuls in misinterpretation when those commits or PRs land on social media, on reddit etc, without further context.</p>
+
+<p>The process a new Angular feature goes through is more or less something like this:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-process.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-process.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Informal process from idea to implementation of new Angular features</figcaption>
+</figure>
+
+
+
+<p><strong>Ideas</strong> continuously emerge, mostly out of an existing problem. From that knowledge a <strong>theory</strong> evolves, exploration of what would happen if &ldquo;X&rdquo; is done/implemented (via proof of concepts, design docs,&hellip;). If that works out, the team starts to implement the underlying primitives that make it <strong>possible</strong>. Also initially not the full set of tooling is being implemented, but rather some of it is left to the community. If the community responds very well, the team starts to help <strong>make it easy</strong>, by adding documentation, higher the quality bar, via opt-in and self-run commands. Finally the goal is to make it <strong>automatic</strong>, i.e. via ng-update, schematics, fully integrate it into the platform and make it the &ldquo;only way&rdquo; (or suggested way of doing something).</p>
+
+<p>Such projects that are early experiments land as so-called Angular Labs project.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-ng-labs.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-ng-labs.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>For such projects, the goal might change, APIs might change and also failure is an option. Some of the projects that have gone through this Labs mode and graduated are for instance: CDK (2017), Elements (2018), Schematics (2018), Builders (with 8.0 - 2019).</p>
+
+<p>Current Labs projects are:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-current-ng-labs.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-current-ng-labs.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Current Angular Labs projects</figcaption>
+</figure>
+
+
+
+<h3 id="future-ideas">Future Ideas</h3>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-future-ideas.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-future-ideas.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h4 id="fastest-possible-apps">Fastest possible apps</h4>
+
+<p>The focus here is TTI (Time to Interactive). The best way to achieve better TTI is basically &ldquo;the less code, the better&rdquo;. The hard task is to understand the difference between the code you will need vs. the one you &ldquo;might need&rdquo;. Like if there is a button on the UI, the code executed for that button click is &ldquo;code you might need&rdquo;. If the user doesn&rsquo;t click it, you don&rsquo;t need it.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-code-needed.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-code-needed.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>This is really difficult to understand and tree shaking cannot solve this for us. Currently by default Angular provides lazy load boundaries around routes, which is something where Angular needs to improve. I did dig into the lazy loading part in one of my articles here:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2019/04/state-lazy-loading-components-angular/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2019/04/state-lazy-loading-components-angular/" target="_blank">Lazy load Angular Components</a></div>
+            <div class="description">Or better..how to lazy load Angular Modules. Learn about the state of lazy loading and lazy loading on steroids with Angular Elements</div>
+            <div class="link">
+                /blog/2019/04/state-lazy-loading-components-angular/
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="replayable-vs-resumable">Replayable vs. Resumable</h4>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-replayable-vs-resumable.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-replayable-vs-resumable.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Right now we have replayable apps. The server might perform some prerendering, the client takes over, does the bootstrap again, fetches the data again etc&hellip;Different to that, a resumable app just takes over and goes ahead, without the need to replicate certain steps.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-resumable-chart.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-resumable-chart.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Replayable is quite easy and we&rsquo;re comfortable doing it. Resumable is harder but totally worth it (for certain use cases). However, in order to be able to create resumable apps, Angular needs to be aware of the state it manages and provide ways to rehydrate the DOM.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-state.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-state.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The goal is basically if yo have various controls and components on your page (rendered via server side rendering), the logic behind the component (i.e. the JavaScript) is only loaded if the user starts interacting with it (i.e. by typing into an input field etc..). So lazy loading has to go further and not only for routes but rather for</p>
+
+<ul>
+<li>interactions</li>
+<li>injected services</li>
+<li>code for re-rendering</li>
+</ul>
+
+<p><strong>Ivy</strong> paves the way for starting to think about adding such features.</p>
+
+<h4 id="ideas-of-implementing-a-resumable-todo-app">Ideas of implementing a resumable Todo app</h4>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/key3-disclaimer.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/key3-disclaimer.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p><a href="https://youtu.be/-kYtw3CSe6s?t=1308">More here &raquo;</a></p>
+
+<h2 id="angular-for-the-enterprise">Angular for the Enterprise</h2>
+
+<p><em>Stephen Fluin - <a href="https://youtu.be/4d1HYKL2tt4">Youtube</a></em></p>
+
+<p>Stephen&rsquo;s goal with the talk is to reduce the information asymmetry. Although there&rsquo;s a quite extensive <a href="https://angular.io">documentation on the official Angular site</a>, certain question come up always again as core challenges. Moreover each of us developing Angular apps has different solutions and approaches. So let&rsquo;s share them, blog about it, create OSS libraries.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-information-asymmetry.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-information-asymmetry.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h3 id="mobile-apps">Mobile Apps</h3>
+
+<p>First of all &ldquo;Why do you need an app?&rdquo;. What&rsquo;s the goal? Answering these questions may influence also the technology you choose. There are currently these approaches available with Angular: PWAs, Ionic or go even native with NativeScript.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-mobileapps.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-mobileapps.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h3 id="shared-components-and-open-source">Shared Components and Open Source</h3>
+
+<p>According to Stephen there are currently these different layers of components within organizations:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-componentlayers.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-componentlayers.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>There are the UI level components that make up the design system of the company. And I totally agree with Stephen here. These emerge naturally. Even though you may not be building this intentionally, a design system might emerge to standardize the look &amp; feel across your applications. Business Components on the other side are components encapsulating entire, common business functionality that can be re-used across apps as well.<br />
+When developing these, don&rsquo;t forget about the <a href="https://material.angular.io/cdk/categories">Angular CDK</a> which is a collection of design-system agnostic components that can serve you as the foundation.</p>
+
+<p>It&rsquo;s key to <strong>facilitate the collaboration</strong> when building a shared component set. The best approach is to go Open Source (if possible). A good example is <a href="https://clarity.design/">VMWare&rsquo;s Clarity Design System</a>, completely build as OSS model.<br />
+Also consider using a monorepo approach, which allows you to move fast, see the impact of changes. It also helps develop the tooling to validate incoming PRs and stuff.</p>
+
+<h3 id="hybrid-apps-mixed-environments">Hybrid Apps &amp; Mixed Environments</h3>
+
+<p>In large organizations you have different teams which aren&rsquo;t necessarily all using Angular. Still you might want to have a common set of tools and organize your code in a monorepo environment. <a href="https://nx.dev">Nrwl&rsquo;s NX</a> allows to do exactly that. You can develop Angular Apps, TypeScript libraries, even React apps and server-side Node within a single monorepo supported by NX&rsquo;s tooling, a custom set of extensions built on top of the Angular CLI.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-nx.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-nx.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Another thing not to forget in this context are <strong>Angular Elements</strong>. It allows to create compile Angular components into standard &ldquo;web components&rdquo;, more specifically Custom Elements. If you wanna learn more about that, check out <a href="/blog/2019/04/intro-to-angular-elements/">my article on introducing Angular Elements</a>.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-ngelements.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-ngelements.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Angular Elements to share across teams and tech boundaries</figcaption>
+</figure>
+
+
+
+<h3 id="testing">Testing</h3>
+
+<p>Testing - although often underrated - is of extreme importance. Especially if you go the monorepo route and want to remain a high level of agility in your codebase. The Angular team officially supports Karma and Protractor and has some plans for improving them in the future.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-testing.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-testing.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Personally I&rsquo;m a big fan of <a href="https://www.cypress.io">Cypress</a> and have already used it successfully in multiple Angular projects, especially for the more integration level tests. I still have to look into Jest which looks very promising as well and I heared good things.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-testing-othertools.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-testing-othertools.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The message is: &ldquo;it&rsquo;s fine to use them as well&rdquo;, even though they&rsquo;re not officially promoted by the team as other tools are. Feel free what best fits your needs.</p>
+
+<p>Are you more into screenshot &amp; visual testing? Then these might be good candidates:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-visualtesting.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-visualtesting.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Tools for visual testing</figcaption>
+</figure>
+
+
+
+<h3 id="progressive-web-applications-pwa">Progressive Web Applications (PWA)</h3>
+
+<p>Do you need one? Most probably. It helps build faster, more resilient user experiences and allows for a deeper engagement with the user (through push notifications, installing it on the home screen etc&hellip;). Angular tries to make this extremely easy. Just to give you an example. In order to add service worker support, all you have to do to get started is to invoke the following command from your Angular CLI:</p>
+
+<pre><code>$ ng add @angular/pwa --project *project-name*
+</code></pre>
+
+<p>And if you have still doubts whether service workers and PWAs are actually being used? Go to this website on your browser: <code>chrome://serviceworker-internals/</code>. It gives you a list of all the service workers installed on your machine. Yes, it&rsquo;s no more a niche technology.</p>
+
+<h3 id="a-b-testing-and-experiments">A/B Testing and Experiments</h3>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-featureflags.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-featureflags.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>If you wanna realize feature flags that don&rsquo;t have an impact on the bundle size, you need to split at the lazy level (Modules, Components) and accordingly load them in. See my article on lazy loading components for more details on that:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2019/04/state-lazy-loading-components-angular/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2019/04/state-lazy-loading-components-angular/" target="_blank">Lazy load Angular Components</a></div>
+            <div class="description">Or better..how to lazy load Angular Modules. Learn about the state of lazy loading and lazy loading on steroids with Angular Elements</div>
+            <div class="link">
+                /blog/2019/04/state-lazy-loading-components-angular/
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="staying-up-to-date">Staying Up to Date</h3>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-keep-up-to-date.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-keep-up-to-date.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>One thing is to automatically upgrade via the Angular CLI commands (<code>ng update</code>) which work really well in the latest versions. Another problem however is how to keep everyone else in the organization motivated for updating. Some strategies are</p>
+
+<ul>
+<li>drive upgrades through shared components</li>
+<li>educate about semantic versioning</li>
+<li>pull out stories (like <a href="https://medium.com/airfrance-klm/how-we-upgraded-a-website-with-half-a-billion-annual-users-to-angular-7-in-less-then-a-day-71de33a1108e">the one from KLM</a>)</li>
+</ul>
+
+<p>My personal note on the update story: try to keep up with it. As mentioned, <code>ng update</code> really helps with it. Staying up to date not only gives you the benefit of keeping up with the community, new libraries, performance improvements, security bugs etc. But also, it is much less costly than not upgrading and then upgrading over multiple versions which might get hard / impossible.</p>
+
+<h3 id="build-time">Build Time</h3>
+
+<p>Improving the build time is crucial as it directly impacts developer productivity. As mentioned before, Ivy already comes with improvements not only in memory reduction but also better incremental build support. TypeScript also <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-4-rc/">recently announced support for better incremental builds</a>, so you see the topic is 🔥.</p>
+
+<p>Upgrading to Ivy will help already. In the long run Bazel will be the solution.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-bazel.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-bazel.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Bazel is build to scale and it&rsquo;s possible to opt-in with Ivy to use Bazel under the hood (read the details further up in the article).</p>
+
+<h3 id="share-your-problems-solutions">Share your problems &amp; solutions</h3>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-enterprise-share.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-enterprise-share.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Absolutely!!! It&rsquo;s the main reason I&rsquo;m <a href="https://juristr.com/blog">blogging</a>, <a href="https://egghead.io/instructors/juri-strumpflohner">create courses on Egghead</a> and on <a href="https://www.youtube.com/user/kitodzt">Youtube</a>. Go out there and become an active community member.</p>
+
+<p>Don&rsquo;t wanna set up your own blog or you simply don&rsquo;t have the time? Head over to <a href="https://dev.to">dev.to</a>, it&rsquo;s super simple and you&rsquo;re set up in minutes 😃.</p>
+
+<h2 id="these-are-the-angular-tips-you-are-looking-for">These are the Angular Tips You Are Looking For</h2>
+
+<p><em>John Papa - <a href="https://youtu.be/2ZFgcTOcnUg">Youtube</a></em></p>
+
+<p>John Papa walks through the following sections:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-papa-topics.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-papa-topics.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h3 id="rxjs-how-to-deal-with-unsubscribing">RxJS - How to deal with unsubscribing</h3>
+
+<p>Check out my article on that:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2018/10/videolesson-avoid-memory-leaks/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2018/10/videolesson-avoid-memory-leaks/" target="_blank">Avoid memory leaks when subscribing to RxJS Observables in Angular Components</a></div>
+            <div class="description"></div>
+            <div class="link">
+                /blog/2018/10/videolesson-avoid-memory-leaks/
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>In that article I mostly go into using what John calls the &ldquo;takeUntil Strategy&rdquo;, basically using a &ldquo;notification subject&rdquo; that you fire in the <code>ngOnDestroy</code> of you component combined with the <code>takeUntil</code> operator (more in the linked article). The <code>takeUntil</code> can have some strange side effects if you don&rsquo;t place it as the last operator in your pipe (and there are exceptions to that as well).</p>
+
+<p>John shows another way of doing this, using a <code>SubSink</code>. It&rsquo;s a <a href="https://www.npmjs.com/package/subsink">library developed by Ward Bell</a> for easy unsubscribing.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">SomeComponent</span> <span class="kr">implements</span> <span class="nx">OnDestroy</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">subs</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SubSink</span><span class="p">();</span>
+
+  <span class="p">...</span>
+
+  <span class="k">this</span><span class="p">.</span><span class="nx">subs</span><span class="p">.</span><span class="nx">sink</span> <span class="o">=</span> <span class="nx">observable$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(...);</span> <span class="c1">// easy syntax
+</span><span class="c1"></span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">subs</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">observable$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(...));</span> <span class="c1">// if you insist
+</span><span class="c1"></span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">subs</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span> <span class="c1">// can add multiple subcriptions
+</span><span class="c1"></span>    <span class="nx">observable$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(...),</span>
+    <span class="nx">anotherObservable$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(...)</span>
+  <span class="p">);</span> 
+
+  <span class="p">...</span>
+
+  <span class="c1">// Unsubscribe when the component dies
+</span><span class="c1"></span>  <span class="nx">ngOnDestroy() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subs</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<h3 id="state-management">State Management</h3>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-papa-state.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-papa-state.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>It is known that <a href="https://ngrx.io">NgRx</a> comes with boilerplate. It has been discussed a lot, it&rsquo;s a known thing and it&rsquo;s also known that you might not even need NgRx, so choose wisely. John presents a project he and Ward Bell have been working on lately and which is now an official package of ngrx (starting with Ngrx v8): <strong><a href="https://github.com/ngrx/platform/tree/master/modules/data">Ngrx Data</a></strong>.</p>
+
+<p>Unlike other state management solutions, Ngrx Data does not replace Ngrx but rather extends it with the aim of dramatically reducing boilerplate for handling entity related CRUD operations. All you have to do is the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@NgModule</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span>
+    <span class="nx">StoreModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">({}),</span>
+    <span class="nx">EffectsModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">([]),</span>
+    <span class="p">...,</span><span class="nx">dd</span>
+    <span class="nx">NgrxDataModule</span><span class="p">.</span><span class="nx">forRoot</span><span class="p">(</span><span class="nx">entityConfig</span><span class="p">)</span>
+  <span class="p">]</span>
+<span class="p">})</span></code></pre></div>
+<p>The <code>entityConfig</code> passed into the <code>NgrxDataModule</code> looks as follows:</p>
+
+<pre><code>const entityMetadata: EntityMetadataMap = {
+  Hero: {},
+  Villain: {},
+  Customers: {},
+  Products: {}
+}
+...
+</code></pre>
+
+<p>The remaining parts are <strong>based on conventions</strong>. These can of course also be overwritten:</p>
+
+<pre><code>const entityMetadata...
+
+const pluralNames = { Hero: 'Heroes' };
+
+export const entityConfig = {
+  entityMetadata,
+  pluralNames
+}
+</code></pre>
+
+<h2 id="tools-for-fast-angular-applications">Tools For Fast Angular Applications</h2>
+
+<p><em>Minko Gechev - <a href="https://youtu.be/5VlBaaXO6ok">Youtube</a>, <a href="https://speakerdeck.com/mgechev/tools-for-fast-angular-applications">Slides</a></em></p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/minko-network-perf.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/minko-network-perf.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The idea is to generally ship less JavaScript (or just enough) and don&rsquo;t penalize the user with JavaScript code he&rsquo;ll never even execute (because those parts are hidden behind permission flags or whatever). Addy Osmani has published the <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">Cost of JavaScript</a> where he shows how shipping the some amount of JavaScript costs much more than shipping the same amount of - say - images. This due to the parsing overhead.</p>
+
+<h3 id="strategies-for-reducing-javascript-load">Strategies for reducing JavaScript load</h3>
+
+<p>The strategies for reducing the amount of JavaScript we ship is:</p>
+
+<ul>
+<li>Minification/dead code elimination</li>
+<li>Differential loading</li>
+<li>Code-splitting</li>
+</ul>
+
+<p>Minification/dead code elimination is already in the current CLI. <strong>Differential loading</strong> (as described before) is landing in Angular v8.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/minko-differential-loading.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/minko-differential-loading.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The CLI basically produces 2 bundles, one for modern evergreen browsers, and one for legacy browsers. In the HTML file then you&rsquo;ll have something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="c">&lt;!-- modern browsers --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;app-es2015.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="c">&lt;!-- old, legacy browsers --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">nomodule</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;app.es5.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>The really nice thing here is that the browser on the client-side makes the decision which bundle to download. There&rsquo;s no magic required on the server side. So this <strong>will work out of the box with every backend framework</strong>.<br />
+Differential loading can be configured by setting the <code>target</code> in the <code>tsconfig.json</code> to <code>es2015</code> and by setting the minimum supported browsers in the <code>browserlist</code> property.</p>
+
+<p>Only ship what&rsquo;s really necessary with <strong>lazy loading</strong>.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/minko-lazy-loading.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/minko-lazy-loading.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>There&rsquo;s usually a component level or route level code splitting. I&rsquo;ve just written up a detailed article on that:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2019/04/state-lazy-loading-components-angular/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2019/04/state-lazy-loading-components-angular/" target="_blank">Lazy load Angular Components</a></div>
+            <div class="description">Or better..how to lazy load Angular Modules. Learn about the state of lazy loading and lazy loading on steroids with Angular Elements</div>
+            <div class="link">
+                /blog/2019/04/state-lazy-loading-components-angular/
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>But when talking about lazy loading, one also needs to think about <strong>prefetching strategies</strong>.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/minko-prefetching.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/minko-prefetching.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>In my <a href="https://egghead.io/courses/learn-angular-router-for-real-world-applications">Egghead router course</a> I&rsquo;m already showing how to <a href="https://egghead.io/lessons/angular-avoid-delays-for-lazy-modules-by-applying-a-preloading-strategy-with-the-angular-router">avoid delays for lazy modules by applying a preloading strategy</a> which can be either the default <code>PreloadAllModules</code> or customized <a href="https://egghead.io/lessons/angular-define-a-custom-preloading-strategy-for-the-angular-router">by defining a custom preloading strategy</a>.<br />
+Minko (as usual) brings this to a whole other level with libraries such as</p>
+
+<ul>
+<li><a href="https://github.com/mgechev/ngx-quicklink">ngx-quicklink</a> which automatically prefetches links on the page</li>
+<li>or with <a href="https://github.com/guess-js">Guess.js</a> which uses Google Analytics, applies machine learning to understand which links to prefetch</li>
+</ul>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/minko-predictive-prefetching.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/minko-predictive-prefetching.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Also, not to forget about Angular CLI&rsquo;s <a href="https://angular.io/guide/build#configure-size-budgets">performance budgets</a>.</p>
+
+<h3 id="automated-deploy-via-cli">Automated Deploy via CLI</h3>
+
+<p>Finally, some low hanging fruit. Turns out</p>
+
+<ul>
+<li>more than 27% do not apply content compression on static assets (SVG, images, JavaScript)</li>
+<li>more than 80% do not use CDNs to avoid latency</li>
+</ul>
+
+<p>As Brad announced in his keynote, the Angular team is working on optimizing deployments by providing automated deployment mechanisms directly from the Angular CLI. This happens in close collaboration with the big cloud providers.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/minko-ng-deploy-clouds.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/minko-ng-deploy-clouds.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Collaboration with cloud providers for automated deployments</figcaption>
+</figure>
+
+
+
+<p>See how that works <a href="https://youtu.be/5VlBaaXO6ok?t=991">here in Minko&rsquo;s talk</a>.</p>
+
+<h2 id="not-every-app-is-a-spa">Not Every App is a SPA</h2>
+
+<p>_Rob Wormald - <a href="https://www.youtube.com/watch?v=JX5GGu_7JKc">Youtube</a>_</p>
+
+<p>Rob targets the graph mentioned by Igor about the current field Angular apps are being adopted.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rob-graph-angular-adoption.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rob-graph-angular-adoption.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Going forward the team&rsquo;s goal is to target the two missing edges in this graph.</p>
+
+<h3 id="small-medium-apps-demos-edu-apps">Small-medium Apps, Demos, Edu Apps</h3>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rob-graph-small-apps.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rob-graph-small-apps.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>To target this left side of the graph, where small to medium apps reside, the answer is definitely Angular Elements.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rob-angular-elements.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rob-angular-elements.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>If this sounds new to you, check out my related article.</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2019/04/intro-to-angular-elements/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2019/04/intro-to-angular-elements/" target="_blank">Introduction to Angular Elements</a></div>
+            <div class="description">Learn how to automatically convert your Angular Components to native Custom Elements</div>
+            <div class="link">
+                /blog/2019/04/intro-to-angular-elements/
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>Mixed environments are also a good example where Angular Elements fits in nicely:</p>
+
+<ul>
+<li>Lots of different frameworks</li>
+<li>Not everyone can start from greenfield</li>
+<li>Google has this problem too (Angular, AngularJS, Dart, GWT, Polymer,&hellip;)</li>
+<li>Mini-apps running on 3rd party sites</li>
+<li>NgUpgrade</li>
+</ul>
+
+<p>In the context of Angular Elements, the registration process for bundling a single component as an Angular Element is currently (&lt; Angular v7) still quite verbose:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@NgModule</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span><span class="nx">BrowserModule</span><span class="p">,</span> <span class="nx">CommonModule</span><span class="p">],</span>
+  <span class="nx">declarations</span><span class="o">:</span> <span class="p">[</span><span class="nx">HelloWorld</span><span class="p">],</span>
+  <span class="nx">entryComponents</span><span class="o">:</span> <span class="p">[</span><span class="nx">HelloWorld</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="kr">class</span> <span class="nx">HelloWorldModule</span> <span class="p">{}</span></code></pre></div>
+<p>And then it needs to be registered as an Angular Element:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="nx">platformBrowser</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">bootstrapModule</span><span class="p">(</span><span class="nx">HelloWorldModule</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(({</span><span class="nx">injector</span><span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">HelloWorldElement</span> <span class="o">=</span> <span class="nx">createCustomElement</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">,</span> <span class="p">{</span><span class="nx">injector</span><span class="p">});</span>
+    <span class="nx">customElements</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;hello-world&#39;</span><span class="p">,</span> <span class="nx">HelloWorldElement</span><span class="p">);</span>
+  <span class="p">});</span></code></pre></div>
+<p>How is that going to change with Ivy?</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rob-elements-with-ivy.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rob-elements-with-ivy.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The simplest way of rendering a component in Ivy is the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">Input</span><span class="p">,</span> <span class="nx">Output</span><span class="p">,</span> <span class="nx">renderComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+
+<span class="kd">@Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;hello-world&#39;</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`...`</span>
+<span class="p">})</span>
+<span class="kr">class</span> <span class="nx">HelloWorld</span> <span class="p">{</span>
+  <span class="kd">@Input</span><span class="p">()</span> <span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="kd">@Output</span><span class="p">()</span> <span class="nx">nameChange</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="p">();</span>
+  <span class="nx">changeName</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">nameChange</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">renderComponent</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">);</span></code></pre></div>
+<p>So how can we make this an Angular Element in Ivy? Rob shows on stage how that will look like.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">renderComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">HelloWorld</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./hello-world.component&#39;</span><span class="p">;</span>
+
+<span class="c1">// manually define the host rather than let Angular look for it
+</span><span class="c1">// then pass it as a 2nd argument to the renderComponent
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">host</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;hello-world&#39;</span><span class="p">);</span>
+
+<span class="nx">renderComponent</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">,</span> <span class="p">{</span> <span class="nx">host</span> <span class="p">});</span>
+
+<span class="c1">// create a custom element using the native browser API
+</span><span class="c1"></span><span class="kr">class</span> <span class="nx">HelloWorldElement</span> <span class="kr">extends</span> <span class="nx">HTMLElement</span> <span class="p">{}</span></code></pre></div>
+<p>This is the first step. Next, we can create a Custom Element using the native browser API and invoke the <code>renderComponent</code> from there.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">renderComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">HelloWorld</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./hello-world.component&#39;</span><span class="p">;</span>
+
+<span class="c1">// create a custom element using the native browser API
+</span><span class="c1"></span><span class="kr">class</span> <span class="nx">HelloWorldElement</span> <span class="kr">extends</span> <span class="nx">HTMLElement</span> <span class="p">{</span>
+  <span class="nx">component</span>: <span class="kt">HelloWorld</span><span class="p">;</span>
+  <span class="kr">constructor</span><span class="p">()</span>  <span class="p">{</span>
+    <span class="kr">super</span><span class="p">();</span>
+    <span class="c1">// associate &#34;this&#34; as the host element
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">component</span> <span class="o">=</span> <span class="nx">renderComponent</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">,</span> <span class="p">{</span> <span class="nx">host</span>: <span class="kt">this</span> <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p>Note how we pass <code>this</code> (which is the Custom Element instance as the host to the render function). We can also add properties which we simply wrap.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">renderComponent</span><span class="p">,</span> <span class="nx">detectChanges</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">HelloWorld</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./hello-world.component&#39;</span><span class="p">;</span>
+
+<span class="c1">// create a custom element using the native browser API
+</span><span class="c1"></span><span class="kr">class</span> <span class="nx">HelloWorldElement</span> <span class="kr">extends</span> <span class="nx">HTMLElement</span> <span class="p">{</span>
+  <span class="nx">component</span>: <span class="kt">HelloWorld</span><span class="p">;</span>
+  <span class="kr">constructor</span><span class="p">()</span>  <span class="p">{</span>
+    <span class="kr">super</span><span class="p">();</span>
+    <span class="c1">// associate &#34;this&#34; as the host element
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">component</span> <span class="o">=</span> <span class="nx">renderComponent</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">,</span> <span class="p">{</span> <span class="nx">host</span>: <span class="kt">this</span> <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="nx">set</span> <span class="nx">name</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">component</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+    <span class="nx">detectChangs</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">component</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">get</span> <span class="nx">name() {</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">component</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p><code>detectChanges</code> can just be imported from Angular. It&rsquo;s just a function 💪 (no DI necessarily needed to inject the <code>ChangeDetectorRef</code> etc..)!</p>
+
+<p>To have attributes, we just continue using the native browser APIs.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">renderComponent</span><span class="p">,</span> <span class="nx">detectChanges</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">HelloWorld</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./hello-world.component&#39;</span><span class="p">;</span>
+
+<span class="c1">// create a custom element using the native browser API
+</span><span class="c1"></span><span class="kr">class</span> <span class="nx">HelloWorldElement</span> <span class="kr">extends</span> <span class="nx">HTMLElement</span> <span class="p">{</span>
+  <span class="kr">static</span> <span class="nx">observedAttributes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
+  <span class="nx">component</span>: <span class="kt">HelloWorld</span><span class="p">;</span>
+  <span class="kr">constructor</span><span class="p">()</span>  <span class="p">{</span>
+    <span class="kr">super</span><span class="p">();</span>
+    <span class="c1">// associate &#34;this&#34; as the host element
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">component</span> <span class="o">=</span> <span class="nx">renderComponent</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">,</span> <span class="p">{</span> <span class="nx">host</span>: <span class="kt">this</span> <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="nx">attributeChangedCallback</span><span class="p">(</span><span class="nx">attr</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">,</span> <span class="nx">newValue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">newValue</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">set</span> <span class="nx">name</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{...}</span>
+  <span class="nx">get</span> <span class="nx">name() {</span><span class="p">...}</span>
+<span class="p">}</span></code></pre></div>
+<p>Now this just to show how easy it is to build it by yourself with Ivy. You don&rsquo;t have to do this every time. Most likely this will look like this with Ivy:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">withNgComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/elements&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">HelloWorld</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./hello-world.component&#39;</span><span class="p">;</span>
+
+<span class="c1">// create a Custom Element that wraps the Angular Component
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">HelloWorldElement</span> <span class="o">=</span> <span class="nx">withNgComponent</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">);</span>
+
+<span class="c1">// register it
+</span><span class="c1"></span><span class="nx">customElements</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;hello-world&#39;</span><span class="p">,</span> <span class="nx">HelloWorldElement</span><span class="p">);</span></code></pre></div>
+<p>No platforms, no modules 🎉 🎉 You can of course still use the Injector if you want:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="p">...</span>
+<span class="c1">// create a Custom Element that wraps the Angular Component
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">HelloWorldElement</span> <span class="o">=</span> <span class="nx">withNgComponent</span><span class="p">(</span><span class="nx">HelloWorld</span><span class="p">,</span> <span class="p">{</span><span class="nx">injector</span><span class="p">});</span>
+<span class="p">...</span></code></pre></div>
+<p>In many cases you already have an Angular Component that you want to turn into an Element. <strong>But what if you don&rsquo;t want to have an Angular Component, but just an Angular Element?</strong> 🤔 Basically you just want the benefit the Angular templating system gives you. The &ldquo;problem&rdquo; right now is that we have the <code>NgModule</code> which tells the compiler which dependencies are needed and helps it optimize the final outcome. Technically Ivy doesn&rsquo;t need a <code>NgModule</code>, but still, we need to have a way to tell the component what other directives/components live in its template. One <strong>proposal</strong> (&lt;&lt; this is an EARLY PROPOSAL the team wants feedback on) is to allow to register the dependencies directly in the <code>@Component</code> tag, very much like you already can with <code>providers</code> and what was already there in <code>Angular RC4</code> (yes I remember 😅). Something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;hello-world&#39;</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`...`</span><span class="p">,</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">SomeService</span><span class="p">],</span>
+  <span class="nx">deps</span><span class="o">:</span> <span class="p">[</span><span class="nx">SomeDirective</span><span class="p">,</span> <span class="nx">SomePipe</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="kr">class</span> <span class="nx">HelloWorld</span> <span class="p">{}</span></code></pre></div>
+<p>This is definitely more verbose, but also more direct and &ldquo;simpler&rdquo; if you want. To achieve the final goal of just having an Ng Element (without an Angular Component) could look something like this (based on what we&rsquo;ve discussed before):</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">NgElement</span><span class="p">,</span> <span class="nx">withElement</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/elements&#39;</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="kd">@NgElement</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;hello-world&#39;</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`...`</span><span class="p">,</span>
+  <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">SomeService</span><span class="p">],</span>
+  <span class="nx">deps</span><span class="o">:</span> <span class="p">[</span><span class="nx">SomeDirective</span><span class="p">,</span> <span class="nx">SomePipe</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="kr">class</span> <span class="nx">HelloWorld</span> <span class="kr">extends</span> <span class="nx">withNgElement</span> <span class="p">{}</span></code></pre></div>
+<p>This gives you <strong>an Angular Element without an Angular Component</strong>. Something that might make sense in some scenarios, like when building a design system.</p>
+
+<h3 id="scaling-up-or-what-is-project-angular-photon">Scaling Up - or What is project &ldquo;Angular Photon&rdquo;?</h3>
+
+<p>To the other side of the chart: scaling up.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rob-graph-angular-scaleup.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rob-graph-angular-scaleup.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>In this context (during the keynote - see further up), the name **Angular Photon&rdquo; came up. Imporant:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rob-photon.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rob-photon.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>It&rsquo;s a research project for experimenting and &ldquo;deciding how to build the right tools for the next gen of Angular Developers&rdquo;. It&rsquo;s a project in collaboration with</p>
+
+<ul>
+<li>Google Shopping Express (build with Angular)</li>
+<li>Wiz</li>
+</ul>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rob-collaboration.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rob-collaboration.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Google Shopping Express and Wiz collaborating with the Angular Team</figcaption>
+</figure>
+
+
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rob-what-wanted.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rob-what-wanted.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Loading components as they are needed is a big part. As a sneak peek this is what it might look like</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">withLazyNgComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/elements&#39;</span><span class="p">;</span>
+
+<span class="c1">// create a Custom Element that wraps the Angular Component
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">HelloWorldElement</span> <span class="o">=</span> <span class="nx">withLazyNgComponent</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;./hellow-world.component&#39;</span><span class="p">));</span>
+
+<span class="c1">// register it
+</span><span class="c1"></span><span class="nx">customElements</span><span class="p">.</span><span class="nx">define</span><span class="p">(</span><span class="s1">&#39;hello-world&#39;</span><span class="p">,</span> <span class="nx">HelloWorldElement</span><span class="p">);</span></code></pre></div>
+<p>Note the <code>withLazyNgComponent</code> that fetches the necessary scripts only when really needed.</p>
+
+<h2 id="cdk-is-the-coolest-thing-you-are-not-using-yet">CDK is the Coolest Thing You are Not Using (Yet)</h2>
+
+<p><em>Jeremy Elbourn - <a href="https://youtu.be/4EXQKP-Sihw">Youtube</a>, <a href="http://g.co/ng/conf19-components-slides">Slides</a></em></p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/cdk.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/cdk.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The CDK is the basis for <a href="https://material.angular.io">Angular Material</a>. It is a set of design agnostic components and functionality you can use to build your own design system on top of it.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/cdk-capabilities.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/cdk-capabilities.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>So far, the CDK as well as Angular Material lived under <code>angular/material2</code> on GitHub. That <strong>name changed now to <a href="https://github.com/angular/components">angular/components</a></strong>, which IMHO communicates much better that it is not just about Material Design.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/cdk-components-team.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/cdk-components-team.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>New name of the former Angular Material team</figcaption>
+</figure>
+
+
+
+<p>Jeremy showcases some of the CDK capabilities, in specific <a href="https://material.angular.io/cdk/drag-drop/overview">Drag and Drop</a>.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/cdk-new-material.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/cdk-new-material.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption>Open Source library produced by the Material Design team at Google</figcaption>
+</figure>
+
+
+
+<p>Angular Material will include not only the CDK as basis going forward, but also strongly collaborate with the team developing the MDC web library.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/cdk-including-mdc-web.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/cdk-including-mdc-web.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>This helps the Angular Material library to be much more aligned with the Material Design spec.</p>
+
+<h2 id="mastering-the-subject-communication-options-in-rxjs">Mastering the Subject: Communication options in RxJS</h2>
+
+<p><em>Dan Wahlin - Youtube, <a href="https://www.dropbox.com/s/sfqyjksou18b399/Mastering%20the%20Subject%20-%20Communication%20Options%20in%20RxJS.pdf?dl=0">Slides</a></em></p>
+
+<p>When you need to communicate between different components that don&rsquo;t know each other, usually people tend to go straight into a full-blown state management library. But that&rsquo;s not always necessary: RxJS has some state management power as well. I actually wrote an article about that a while ago:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2018/10/simple-state-management-with-scan/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2018/10/simple-state-management-with-scan/" target="_blank">Simple State Management with RxJS’s scan operator</a></div>
+            <div class="description">Learn how you can build your own simple state management with just RxJS</div>
+            <div class="link">
+                /blog/2018/10/simple-state-management-with-scan/
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>So given the following scenario of components nested within each other, how can the inner component communicate with some upper one?</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rxjscomm-communicate-with-upper-cmp.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rxjscomm-communicate-with-upper-cmp.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Of course we can have a <code>@Output()</code> chain&hellip;which might soon go out of control. The alternative solution here are <strong>RxJS Subjects</strong>. There are 4 main <code>Subject</code> types in RxJS here.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rxjscomm-subjects.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rxjscomm-subjects.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The <code>Subject</code> is the most simple one. A particular behavior here is that you only get the data after you subscribed. What happened before is not known.</p>
+
+<p>The <code>BehaviorSubject</code> on the other side, keeps track of the previous values as well. So if a component B comes in later and subscribes, it will also get the last emitted piece of data and of course all future ones. I discussed some of this in my article (video included) on <a href="/blog/2016/06/rxjs-1st-steps-subject/">RxJS first steps - Subject and ReplaySubject</a>.</p>
+
+<p>So what is the <code>ReplaySubject</code> 🤔? Well the <code>ReplaySubject</code> is similar to the <code>BehaviorSubject</code> in that it replays the data that has been emitted also before a given component subscribes. While the <code>BehaviorSubject</code> only replays the last one, with <code>ReplaySubject</code> we can control how many of them we want to replay.</p>
+
+<p>Finally, the <code>AsyncSubject</code> returns always the &ldquo;freshest&rdquo; value. You get the last value before the Subject completes.</p>
+
+<h3 id="communication-techniques-event-bus">Communication Techniques: Event Bus</h3>
+
+<p>We can create something like an &ldquo;Event Bus&rdquo;. You can picture that as a pipe of data at a commonly known place, where interested listeners can subscribe to.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Injectable</span><span class="p">({</span>
+  <span class="nx">providedIn</span><span class="o">:</span> <span class="s1">&#39;root&#39;</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">EventBusService</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">subject$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Subject</span><span class="p">();</span>
+
+  <span class="nx">emit</span><span class="p">(</span><span class="nx">event</span>: <span class="kt">EmitEvent</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subject$</span><span class="p">.</span><span class="nx">next</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">on</span><span class="p">(</span><span class="nx">event</span>: <span class="kt">Events</span><span class="p">,</span> <span class="nx">action</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="nx">Subscription</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">subject$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+      <span class="nx">filter</span><span class="p">((</span><span class="nx">e</span>: <span class="kt">EmitEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="nx">event</span><span class="p">),</span>
+      <span class="nx">map</span><span class="p">((</span><span class="nx">e</span>: <span class="kt">EmitEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">e</span><span class="p">.</span><span class="nx">value</span><span class="p">))</span>
+    <span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span>
+  <span class="p">}</span>
+
+<span class="p">}</span></code></pre></div>
+<p>A component can now send data through that Event Bus as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">CustomersListComponent</span> <span class="p">{</span>
+  <span class="kd">@Input</span><span class="p">()</span> <span class="nx">customers</span>: <span class="kt">Customer</span><span class="p">[];</span>
+
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">eventbus</span>: <span class="kt">EventBusService</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+  <span class="nx">selectCustomer</span><span class="p">(</span><span class="nx">cust</span>: <span class="kt">Customer</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">eventbus</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="k">new</span> <span class="nx">EmitEvent</span><span class="p">(</span><span class="nx">Events</span><span class="p">.</span><span class="nx">CustomerSelected</span><span class="p">,</span> <span class="nx">cust</span><span class="p">));</span>
+  <span class="p">}</span>
+
+<span class="p">}</span></code></pre></div>
+<p>Other components can register and listen to these events like:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">HeaderComponent</span> <span class="kr">implements</span> <span class="nx">OnInit</span><span class="p">,</span> <span class="nx">OnDestroy</span> <span class="p">{</span>
+  <span class="nx">customer</span>: <span class="kt">Customer</span><span class="p">;</span>
+  <span class="nx">subsink</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SubSink</span><span class="p">();</span>
+
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">eventBus</span>: <span class="kt">EventBusService</span><span class="p">)</span> <span class="p">{}</span>
+
+  <span class="nx">ngOnInit() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subsink</span><span class="p">.</span><span class="nx">sink</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">eventBus</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span>
+      <span class="nx">Events</span><span class="p">.</span><span class="nx">CustomerSelected</span><span class="p">,</span> 
+      <span class="p">(</span><span class="nx">cust</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">customer</span> <span class="o">=</span> <span class="nx">cust</span><span class="p">))</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">ngOnDestroy() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subsink</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p>This technique is very loosely coupled, but if overused it can get messy as you have hundreds of events firing around and you have a hard time knowing where they come from.</p>
+
+<h3 id="communication-techniques-observable-service">Communication Techniques: Observable Service</h3>
+
+<p>I personally use this pattern a lot. Here&rsquo;s an example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Injectable</span><span class="p">({</span> 
+  <span class="nx">providedIn</span><span class="o">:</span> <span class="s1">&#39;root&#39;</span>
+<span class="p">})</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">InventoryService</span> <span class="p">{</span>
+  <span class="nx">latestProduct</span>: <span class="kt">Product</span><span class="p">;</span>
+
+  <span class="c1">// BehaviorSubject to not miss the last data if someone subscribes after
+</span><span class="c1"></span>  <span class="c1">// some data has &#34;nexted&#34; into this Subject
+</span><span class="c1"></span>  <span class="kr">private</span> <span class="nx">inventorySubject$</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BehaviorSubject</span><span class="o">&lt;</span><span class="nx">Product</span><span class="o">&gt;</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">latestProduct</span><span class="p">);</span>
+
+  <span class="c1">// only expose the Observable, otherwise others could also emit new data
+</span><span class="c1"></span>  <span class="c1">// which is not what we want. Should only allow for listening
+</span><span class="c1"></span>  <span class="nx">inventoryChanged$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">inventorySubject$</span><span class="p">.</span><span class="nx">asObservable</span><span class="p">();</span>
+
+  <span class="nx">addToInventory</span><span class="p">(</span><span class="nx">product</span>: <span class="kt">Product</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">latestProduct</span> <span class="o">=</span> <span class="nx">product</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">inventorySubject$</span><span class="p">.</span><span class="nx">next</span><span class="p">(</span><span class="nx">product</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p>Subscribing from a component is super simple.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">export</span> <span class="kr">class</span> <span class="nx">InventoryComponent</span> <span class="kr">implements</span> <span class="nx">OnInit</span><span class="p">,</span> <span class="nx">OnDestroy</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">subsink</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SubSink</span><span class="p">();</span>
+  <span class="kd">@Input</span><span class="p">()</span> <span class="nx">products</span>: <span class="kt">Products</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">inventoryService</span>: <span class="kt">InventoryService</span><span class="p">)</span> <span class="p">{}</span>
+
+  <span class="nx">ngOnInit() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subsink</span><span class="p">.</span><span class="nx">sink</span> <span class="o">=</span> 
+      <span class="k">this</span><span class="p">.</span><span class="nx">inventoryService</span><span class="p">.</span><span class="nx">inventoryChanged$</span>
+        <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">prod</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">prod</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="nx">ngOnDestroy() {</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">subsink</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p>If you want a simple store, you can <a href="/blog/2018/10/simple-state-management-with-scan/">read my article on how to implement that by yourself using the <code>scan</code> operator</a> or just head over to Dan&rsquo;s <a href="https://github.com/DanWahlin/Observable-Store">ObservableStore library</a>.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/rxjscomm-observable-store.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/rxjscomm-observable-store.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h2 id="bazel-opt-in-preview-is-here">Bazel Opt-in Preview is Here!</h2>
+
+<p><em>Alex Eagle - <a href="https://www.youtube.com/watch?v=J1lnp-nU4wM">Youtube</a></em></p>
+
+<p>Bazel is something I&rsquo;m most excited about 😍!</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-slow.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-slow.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>This diagram from Alex is super easy to clarify some confusion in people&rsquo;s mind. What&rsquo;s a build tool after all? No, it does not replace your Jenkins 😉.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-build-tools.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-build-tools.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Bazel simply orchestrates the different tools, so they don&rsquo;t have to be rewritten for Bazel as they have with some other tools like Webpack etc. Bazel simply invokes other tools like Rollup, the TypeScript compiler, a dev server,&hellip;</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-difference-bazel.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-difference-bazel.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Bazel is designed to</p>
+
+<ul>
+<li>be incremental</li>
+<li>allow full-stack build and test</li>
+<li>scales with the cloud easily</li>
+<li>extensible</li>
+</ul>
+
+<p>Bazel is the part where Google does not consume something from the OSS world, but rather contributes something back. Bazel comes out of Google&rsquo;s internal Blaze tool that powers its huge monorepo.</p>
+
+<p>So what&rsquo;s the current progress with Bazel?</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-current-state.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-current-state.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>With that, similar to Ivy (as mentioned before), Bazel is now available for opt-in preview starting with Angular v8.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-opt-in.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-opt-in.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>How does Bazel fit into the Angular CLI? It extends an Angular CLI Builder (a new feature I&rsquo;ve mentioned further up in the article). Right now the CLI uses the <code>@angular-devkit/build-angular</code> package (go check your <code>angular.json</code> and you&rsquo;ll see 😉). Bazel is simply another builder that can live side-by-side and can be activated by you to opt-in.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-builder.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-builder.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>That said, the priority #1 of course is to not break your app and provide stability. In a small app, opting in to Bazel won&rsquo;t bring any difference (no good, nor bad). You will only see improvements in the build/test speed starting from medium size apps.</p>
+
+<p>Right now many of the current build tools are monolithic. Bazel on the other side follows the Unix philosophy, piping results from one tool into another.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-unix-philosophy.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-unix-philosophy.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p><strong>How can you try that today?</strong> First, update to Angular 8. Then</p>
+
+<pre><code>// update to Angular 8
+$ ng update --next @angular/cli @angular/core
+
+// create a new app
+$ ng new --collection=@angular/bazel
+
+// existing app
+$ ng add @angular/bazel
+</code></pre>
+
+<p>What to expect: the same behavior as before, same sources, similar outputs. To scale up&hellip;</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-scaling-up.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-scaling-up.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Some results with 1000+ components:</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-results.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-results.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>This is already faster, but it only shards among the local available CPUs. This can be further scaled by <strong>sharing build caches between you and the CI and even co-workers</strong>. Meaning if your CI system (or one of your team mates) already built a given portion of the app, you won&rsquo;t have to do that again, but you&rsquo;ll just get the cache.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-share-cache.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-share-cache.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>With that, results get even better. This runs on the Remote Build Execution which is a &ldquo;Bazel backend service&rdquo; on the Google Cloud.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-results-cloud-share.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-results-cloud-share.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Here&rsquo;s the future timeline for Bazel. Focus is mainly on making some of the still manual steps fully automated.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/bazel-future-plan.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/bazel-future-plan.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>All the info on <a href="https://bazel.angular.io">bazel.angular.io</a>.</p>
+
+<h2 id="angular-elements-everywhere">Angular Elements Everywhere</h2>
+
+<p>Angular Elements have been around in a couple of talks at NGConf 2019.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/ng-elements.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/ng-elements.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=E9i3YBFxSSE">Web Components wth Angular Elements: Beyond the Basics - Manfred Steyer</a></li>
+<li><a href="https://www.youtube.com/watch?v=tHclHHs7nmo">Angular Elements Make The Best React Components - Brad Mcalister &amp; Ryan Chenkie</a></li>
+<li><a href="https://www.youtube.com/watch?v=JX5GGu_7JKc">Not Every App is a SPA - Rob Wormald</a></li>
+<li><a href="https://youtu.be/_QU0mpyF7bQ">A Deep Look at Angular Elements - Manfred Steyer</a></li>
+</ul>
+
+<p>If you wanna learn more, I have an introductory article and Egghead video on the topic:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2019/04/intro-to-angular-elements/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2019/04/intro-to-angular-elements/" target="_blank">Introduction to Angular Elements</a></div>
+            <div class="description">Learn how to automatically convert your Angular Components to native Custom Elements</div>
+            <div class="link">
+                /blog/2019/04/intro-to-angular-elements/
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 id="before-ngrx-superpowers-with-rxjs-facades">Before NgRx: Superpowers with RxJS + Facades</h2>
+
+<p><em>Thomas Burleson - <a href="https://www.youtube.com/watch?v=h-F5uYM69a4">Youtube</a>, <a href="http://bit.ly/2VgrxCX">Slides</a></em></p>
+
+<p>I&rsquo;m particularly interested in software architecture, in all fields, backend as well as frontend. And as the frontend grows and grows in terms of logic it includes, thinking about architecture is indispensable. Thomas talks about how to implement a <strong>push-based</strong> (rather than pull-based) approach with Angular and RxJS.</p>
+
+<p>Traditionally there is a pull-based approach:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">users$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="o">&lt;</span><span class="nx">Users</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span></code></pre></div>
+<p>This is a temporary stream that terminates once the data has arrived from the API. A different way of thinking would be to implement a pull-based service, such as:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">const</span> <span class="nx">users$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">(</span><span class="nx">state</span> <span class="o">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">users</span><span class="p">));</span></code></pre></div>
+<p>This is a long-lived stream that might be updated over time. This is definitely a <strong>reactive approach</strong> of implementing your architecture. Furthermore, Thomas hides the implementation logic behind &ldquo;Facades&rdquo; which are a software development pattern for abstracting and hiding implementation details. For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="c1">// synchronous
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">pagination$</span> <span class="o">=</span> <span class="nx">userFacade</span><span class="p">.</span><span class="nx">pagination$</span>
+<span class="kr">const</span> <span class="nx">criteria$</span> <span class="o">=</span> <span class="nx">userFacade</span><span class="p">.</span><span class="nx">updateCriteria</span><span class="p">(</span><span class="nx">searchCriteria</span><span class="p">);</span>
+
+<span class="c1">// async
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">users$</span> <span class="o">=</span> <span class="nx">userFacade</span><span class="p">.</span><span class="nx">users$</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">results$</span> <span class="o">=</span> <span class="nx">userFacade</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">criteria</span><span class="p">);</span></code></pre></div>
+<p>As you can see the Facade hides the implementation details. Also note, you cannot distinguish whether the stream is async or synchronous, which ultimately shouldn&rsquo;t even matter.</p>
+
+<h3 id="pull-based">Pull-based</h3>
+
+<p>In the talk, Thomas walks through a concrete example of implementing such pull-based approach.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/facades-pull-push.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/facades-pull-push.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>So generally speaking, all of the state &amp; logic should be kept out of the view as much as possible. That allows for better reusability and results in easier testing. So let&rsquo;s focus on the service part. Here&rsquo;s an example of a <em>pull-based</em> service:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">UserService</span> <span class="p">{</span>
+  <span class="nx">users</span>: <span class="kt">User</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nx">criteria</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;ngDominican&#39;</span><span class="p">;</span>
+  <span class="nx">pagination</span>: <span class="kt">Pagination</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">selectedSize</span>: <span class="kt">5</span><span class="p">,</span>
+    <span class="nx">currentPage</span>: <span class="kt">0</span><span class="p">,</span>
+    <span class="nx">pageSizes</span><span class="o">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+  <span class="p">};</span>
+
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">http</span>: <span class="kt">HttpClient</span><span class="p">)</span> <span class="p">{}</span>
+
+  <span class="nx">findAllUsers</span><span class="p">()</span><span class="o">:</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">User</span><span class="p">[]</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">buildUserUrl</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">criteria</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">pagination</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">request$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="o">&lt;</span><span class="nx">RandomUserResponse</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+        <span class="nx">map</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">results</span><span class="p">),</span>
+        <span class="nx">tap</span><span class="p">(</span><span class="nx">list</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">users</span> <span class="o">=</span> <span class="nx">list</span><span class="p">)</span>
+      <span class="p">);</span>
+
+    <span class="k">return</span> <span class="nx">requests$</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<p>Once the <code>findAllUsers()</code> is called, the stream is returned and terminated (because that&rsquo;s the nature of the streams returned from HTTP). Here&rsquo;s the Stackblitz for the example:</p>
+
+<iframe src="https://stackblitz.com/edit/facade-traditional-no-rxjs-4jdfwq?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+
+<h3 id="push-based">Push-based</h3>
+
+<p>A push-based approach would look more like this.</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/facades-push-based.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/facades-push-based.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>What I find particularly intersting when I first heard about Thomas&rsquo;s approach of Facades and push-based a while back, is to have streams not only go out of your service (as you usally have), but also to go into the service (i.e. via method calls for instance).</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/facades-stream-in-out.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/facades-stream-in-out.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>This makes up a very clear API of the Facade:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">UserFacade</span> <span class="p">{</span>
+  <span class="nx">criteria$</span>: <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">;</span>
+  <span class="nx">pagination$</span>: <span class="kt">Observable</span><span class="o">&lt;</span><span class="nx">Pagination</span><span class="o">&gt;</span><span class="p">;</span>
+  <span class="nx">users$</span>: <span class="kt">Observable</span><span class="o">&lt;</span><span class="nx">User</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
+
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">http</span>: <span class="kt">HttpClient</span><span class="p">){}</span>
+
+  <span class="nx">updateSearchCriteria</span><span class="p">(</span><span class="nx">criteria</span>: <span class="kt">string</span><span class="p">){}</span>
+  <span class="nx">updatePagination</span><span class="p">(</span><span class="nx">selectedSize</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">currentPage</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">}</span></code></pre></div>
+<p>Furthermore, state is managed with a simple <code>BehaviorSubject</code>. You can look up my article on <a href="/blog/2018/10/simple-state-management-with-scan/">Simple State Management with RxJS&rsquo;s scan operator</a>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">UserState</span> <span class="p">{</span>
+  <span class="nx">users</span>: <span class="kt">User</span><span class="p">[];</span>
+  <span class="nx">pagination</span>: <span class="kt">Pagination</span><span class="p">;</span>
+  <span class="nx">criteria</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">_state</span>: <span class="kt">UserState</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">users</span><span class="o">:</span> <span class="p">[],</span>
+  <span class="nx">criteria</span><span class="o">:</span> <span class="s1">&#39;ngDominican&#39;</span><span class="p">,</span>
+  <span class="nx">pagination</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">currentPage</span>: <span class="kt">0</span><span class="p">,</span>
+    <span class="nx">selectedSize</span>: <span class="kt">5</span><span class="p">,</span>
+    <span class="nx">pageSizes</span><span class="o">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">@Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">UserFacade</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BehaviorSubject</span><span class="o">&lt;</span><span class="nx">UserState</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">_state</span><span class="p">);</span>
+  <span class="kr">private</span> <span class="nx">state$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">asObservable</span><span class="p">();</span>
+<span class="p">}</span></code></pre></div>
+<p>Moreover the <code>BehaviorSubject</code> makes sure the latest value is kept and emitted whenever someone new subscribes. At startup the default state should be emitted, which is why <code>_state</code> is passed when instantiating the <code>BehaviorSubject</code>.<br />
+Since streams come into the service as well as go outwards, they can also be consumed and combined nternally to the UserFacade. That is, we can subscribe to the <code>criteria$</code> and <code>pagination$</code> and whenever either of the two changes, the backend can be invoked automatically and streamed back into the <code>findAllUsers$</code> stream. That&rsquo;s push-based at work 😃</p>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/ngconf2019/facades-stream-consuming.png" class="image--zoom">
+        <img src="/blog/assets/imgs/ngconf2019/facades-stream-consuming.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>How is this implemented? Something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="kd">@Injectable</span><span class="p">()</span>
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">UserFacade</span> <span class="p">{</span>
+  <span class="kr">private</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BehaviorSubject</span><span class="o">&lt;</span><span class="nx">UserState</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">_state</span><span class="p">);</span>
+  <span class="kr">private</span> <span class="nx">state$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">asObservable</span><span class="p">();</span>
+
+  <span class="nx">users$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">(</span><span class="nx">state</span> <span class="o">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">users</span><span class="p">),</span> <span class="nx">distinctUntilChanged</span><span class="p">());</span>
+  <span class="nx">criteria$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">(</span><span class="nx">state</span> <span class="o">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">criteria</span><span class="p">),</span> <span class="nx">distinctUntilChanged</span><span class="p">());</span>
+  <span class="nx">pagination$</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state$</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">map</span><span class="p">(</span><span class="nx">state</span> <span class="o">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">pagination</span><span class="p">),</span> <span class="nx">distinctUntilChanged</span><span class="p">());</span>
+
+  <span class="cm">/**
+</span><span class="cm">   * Watch 2 streams to trigger user loads and state updates
+</span><span class="cm">   */</span>
+  <span class="kr">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">http</span>: <span class="kt">HttpClient</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">combineLatest</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">criteria$</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">pagination$</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span>
+      <span class="nx">switchMap</span><span class="p">(([</span><span class="nx">criteria</span><span class="p">,</span> <span class="nx">pagination</span><span class="p">])</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">findAllUsers</span><span class="p">(</span><span class="nx">criteria</span><span class="p">,</span> <span class="nx">pagination</span><span class="p">);</span>
+      <span class="p">})</span>
+    <span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">users</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">updateState</span><span class="p">({</span> <span class="p">...</span><span class="nx">_state</span><span class="p">,</span> <span class="nx">users</span><span class="p">,</span>  <span class="nx">loading</span>: <span class="kt">false</span> <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="c1">// ------- Public Methods ------------------------
+</span><span class="c1"></span>
+  <span class="nx">updateSearchCriteria</span><span class="p">(</span><span class="nx">criteria</span>: <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">updateState</span><span class="p">({</span> <span class="p">...</span><span class="nx">_state</span><span class="p">,</span> <span class="nx">criteria</span><span class="p">,</span> <span class="nx">loading</span>: <span class="kt">true</span> <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="nx">updatePagination</span><span class="p">(</span><span class="nx">selectedSize</span>: <span class="kt">number</span><span class="p">,</span> <span class="nx">currentPage</span>: <span class="kt">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">pagination</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">_state</span><span class="p">.</span><span class="nx">pagination</span><span class="p">,</span> <span class="nx">currentPage</span><span class="p">,</span> <span class="nx">selectedSize</span> <span class="p">};</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">updateState</span><span class="p">({</span> <span class="p">...</span><span class="nx">_state</span><span class="p">,</span> <span class="nx">pagination</span><span class="p">,</span> <span class="nx">loading</span>: <span class="kt">true</span> <span class="p">});</span>
+  <span class="p">}</span>
+  <span class="p">...</span>
+<span class="p">}</span></code></pre></div>
+<p>I&rsquo;ve already implemented such an approach and the cool thing about it is that once you&rsquo;ve set up the streams and connected them together, you click the button, which triggers an emit into - say - the <code>pagination$</code> stream and you will automatically get a call triggered to the server and your list be updated with fresh data 😍.<br />
+In a traditional pull-based approach, you would click the button, in the click handler, invoke a function on your service passing the new pagination value, get back a stream and re-bind it to your list. Moreover, think about what this opens up for you. If your server is able to handle websockets or server sent events, you can actively even push down new data as other users change them.</p>
+
+<iframe src="https://stackblitz.com/edit/facades-with-rxjs-only-d82xvx?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+
+<h2 id="useful-links">Useful links</h2>
+
+<ul>
+<li><a href="https://github.com/samjulien/ngconf2019-slides">Collection of Slides by Sam Julien</a></li>
+</ul>
+
+<hr />
+
+<p><em>More coming soon&hellip;check <a href="https://twitter.com/juristr">my Twitter account to get notified</a></em></p>
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/angular">angular</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2019/04/state-lazy-loading-components-angular">Lazy load Angular Components</a>
+        </h2>
+        <h4 class="card-text">
+            Or better..how to lazy load Angular Modules. Learn about the state of lazy loading and lazy loading on steroids with Angular Elements
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Apr 29, 2019</span><span class="dot"></span><span
+                                    class="post-read">14 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/angular.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2019/04/intro-to-angular-elements">Introduction to Angular Elements</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to automatically convert your Angular Components to native Custom Elements
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Apr 28, 2019</span><span class="dot"></span><span
+                                    class="post-read">5 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/angular.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2019/04/setup-for-angular-dev">Setup your Workstation for JavaScript Development</a>
+        </h2>
+        <h4 class="card-text">
+            Learn about the required tools to get started with proper frontend dev
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Apr 26, 2019</span><span class="dot"></span><span
+                                    class="post-read">4 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            <div class="svgicon" style="width: 140px">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-cog"><path class="primary" d="M6.8 3.45c.87-.52 1.82-.92 2.83-1.17a2.5 2.5 0 0 0 4.74 0c1.01.25 1.96.65 2.82 1.17a2.5 2.5 0 0 0 3.36 3.36c.52.86.92 1.8 1.17 2.82a2.5 2.5 0 0 0 0 4.74c-.25 1.01-.65 1.96-1.17 2.82a2.5 2.5 0 0 0-3.36 3.36c-.86.52-1.8.92-2.82 1.17a2.5 2.5 0 0 0-4.74 0c-1.01-.25-1.96-.65-2.82-1.17a2.5 2.5 0 0 0-3.36-3.36 9.94 9.94 0 0 1-1.17-2.82 2.5 2.5 0 0 0 0-4.74c.25-1.01.65-1.96 1.17-2.82a2.5 2.5 0 0 0 3.36-3.36zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path><circle cx="12" cy="12" r="2" class="secondary"></circle></svg>
+    
+
+    
+
+    
+
+</div><div class="svgicon clean_code"></div>
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

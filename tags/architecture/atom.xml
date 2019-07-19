@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Architecture on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/architecture/</link>
+    <description>Recent content in Architecture on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Wed, 26 Aug 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/architecture/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why You Should Avoid a Canonical Data Model</title>
+      <link>https://juristr.com/blog/2015/08/link-why-avoid-canonical-datamodels/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/08/link-why-avoid-canonical-datamodels/</guid>
+      <description>Stefan Tilkov writes about why canonical data models can be a bad thing. Totally agree as I&amp;rsquo;ve come across this by myself as well.
+Instead of trying to define one model for the entire application/service landscape, it would rather be a lot more productive to focus and define the data responsibility.</description>
+    </item>
+    
+  </channel>
+</rss>

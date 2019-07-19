@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Create a dynamic tab component with Angular | juri.strumpflohner</title>
+	
+	<meta name="description" content="Learn about advanced topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef, ngTemplateOutlet and much more...">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Create a dynamic tab component with Angular" />
+	
+	<meta name="twitter:description" content="Learn about advanced topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef, ngTemplateOutlet and much more..." />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/ng-dynamic-tabs/multi-tab-editing.png" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Create a dynamic tab component with Angular" />
+	
+	<meta property="og:description" content="Learn about advanced topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef, ngTemplateOutlet and much more..." />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/ng-dynamic-tabs/multi-tab-editing.png" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2017/07/ng2-dynamic-tab-component" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2017%2f07%2fng2-dynamic-tab-component%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2017%2f07%2fng2-dynamic-tab-component%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Create a dynamic tab component with Angular</h1>
+                
+                <h2 class="article-subtitle">Learn about advanced topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef, ngTemplateOutlet and much more...</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Jul 27, 2017
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">12 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+
+<div class="article-intro">
+    The purpose of this article is to learn about the concept of dynamic components and template references in Angular by building a dynamic tab component. We will learn about <code>ComponentFactoryResolver</code>, <code>ViewContainerRef</code>, <code>ngTemplateOutlet</code> and <code>ngTemplateOutletContext</code>.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div class="warn-notice">
+    Contents are based on Angular version &gt;=4
+</div>
+
+<div class="warn-notice">
+    <strong>Update for Angular version 5:</strong> I just upgraded the article to match Angular version 5. You need to change <code>ngOutletContext</code> to <code>ngTemplateOutletContext</code>. Here&rsquo;s a very helpful app for upgrading btw: <a href='https://angular-update-guide.firebaseapp.com/'>Angular Update Guide</a>
+</div>
+
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#egghead-io-video-course">Egghead.io - Video Course</a></li>
+<li><a href="#the-setup">The setup</a>
+<ul>
+<li><a href="#tl-dr-gimme-a-running-code-example">TL;DR - Gimme a running code example!</a></li>
+</ul></li>
+<li><a href="#desired-api-for-our-dynamic-tabs">Desired API for our dynamic tabs</a></li>
+<li><a href="#reference-elements-from-the-view">Reference elements from the view</a></li>
+<li><a href="#define-an-anchor-point">Define an Anchor point</a>
+<ul>
+<li><a href="#alternative-use-a-template-variable-as-anchor">Alternative: use a template variable as anchor</a></li>
+</ul></li>
+<li><a href="#dynamically-instantiate-the-tab-component">Dynamically instantiate the Tab component</a></li>
+<li><a href="#render-the-dynamic-template-with-ngtemplateoutlet">Render the dynamic template with NgTemplateOutlet</a></li>
+<li><a href="#associate-data-to-dynamic-templates-with-ngtemplateoutletcontext">Associate data to dynamic templates with NgTemplateOutletContext</a></li>
+<li><a href="#register-the-dynamic-component-on-ngmodule">Register the dynamic component on NgModule</a></li>
+<li><a href="#destroy-a-dynamic-component">Destroy a dynamic component</a></li>
+<li><a href="#the-running-example">The running example</a></li>
+<li><a href="#conclusion-wrapping-up">Conclusion - Wrapping up</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<h2 id="egghead-io-video-course">Egghead.io - Video Course</h2>
+
+<p>Learn about dynamic components in my newest <strong>Egghead.io video course</strong>. Check it out now:</p>
+
+<p><a href="https://egghead.io/courses/create-dynamic-components-in-angular" class="external-link" data-client="eggheadio" data-uid="courses/create-dynamic-components-in-angular">
+  <img src="/blog/assets/imgs/banners/egghead-banner-dynamic-cmps.png" style="width:100%" />
+</a></p>
+
+<h2 id="the-setup">The setup</h2>
+
+<p>This article is based on a previous one I’ve written where I built a tab component by leveraging Angular’s <code>@ContentChildren</code> and content projection. For a better understanding of this article here, I suggest reading that one first:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2016/02/learning-ng2-creating-tab-component/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2016/02/learning-ng2-creating-tab-component/" target="_blank">Learning Angular: Creating a tabs component</a></div>
+            <div class="description">A follow up on thoughtram&#39;s excellent article on creating a tabs components with Angular</div>
+            <div class="link">
+                /blog/2016/02/learning-ng2-creating-tab-component/
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>Great, to get a quick overview, our tab component API currently looks as follows.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">my-tabs</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">my-tab</span> <span class="na">tabTitle</span><span class="o">=</span><span class="s">&#34;Tab 1&#34;</span><span class="p">&gt;</span>Tab 1 Content<span class="p">&lt;/</span><span class="nt">my-tab</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">my-tab</span> <span class="na">tabTitle</span><span class="o">=</span><span class="s">&#34;Tab 2&#34;</span><span class="p">&gt;</span>Tab 2 Content<span class="p">&lt;/</span><span class="nt">my-tab</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">my-tabs</span><span class="p">&gt;</span></code></pre></div>
+<p>As you can see, it is already possible to define tabs in a static manner, by using the <code>my-tab</code> component placed inside the <code>&lt;my-tabs&gt;</code>.
+We now want to extend this API in such a way that allows us to dynamically open new tab pages based on the user interaction. Assume for example that we have a first <strong>statically</strong> defined tab which contains a list of people.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/ng-dynamic-tabs/people-list.png" />
+  <figcaption>Our setup: tab with people list</figcaption>
+</figure>
+
+<p>Whenever we click the &ldquo;Add new person&rdquo; or &ldquo;edit&rdquo; button beneath an existing record, we want the editing to take place in a separate tab pages that gets added dynamically.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/ng-dynamic-tabs/people-list-edit-tab.png" />
+  <figcaption>Our setup: editing a person from the list in a dedicated tab</figcaption>
+</figure>
+
+<h3 id="tl-dr-gimme-a-running-code-example">TL;DR - Gimme a running code example!</h3>
+
+<p>Impatient? Jump to the end of the article for a running example of what we are building step by step in this article. Have fun!</p>
+
+<h2 id="desired-api-for-our-dynamic-tabs">Desired API for our dynamic tabs</h2>
+
+<p>So how does the API of our dynamic tabs look like. First, we need to be able to define the <strong>content</strong> of our dynamic tabs. We do this in the view of our <code>AppComponent</code> where we also have our <code>&lt;my-tabs&gt;</code> component. To define the so-called template of our dynamic tab we want to display, Angular gives us the <code>&lt;ng-template&gt;</code> tag.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ng-template</span><span class="p">&gt;</span>
+  Hi, I&#39;m the content of a dynamic tab.
+<span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span></code></pre></div>
+<p>So far so good. Remember the example we wanna build? So whenever the user clicks on that “edit” or “Add new person” button, obviously some handler in our component code is triggered. Inside there, we want to be able to invoke the creation of the new tab, something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+  <span class="p">...</span>
+
+  <span class="nx">onEditPerson</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">tabsComponent</span><span class="p">.</span><span class="nx">openTab</span><span class="p">(</span>
+      <span class="sb">`Editing </span><span class="si">${</span><span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">editPersonTemplate</span><span class="p">,</span>
+      <span class="nx">person</span><span class="p">,</span>
+      <span class="p">...</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>That’s it for the API we wanna have. Let’s continue now by digging deeper into the code and learn how the <code>tabsComponent.openTab(…)</code> function is implemented.</p>
+
+<h2 id="reference-elements-from-the-view">Reference elements from the view</h2>
+
+<p>As you may have noticed, in our <code>onEditPerson(…)</code> function we reference two parts which actually origin from the <code>AppComponent</code> view template: <code>this.tabsComponent</code> and also <code>this.editPersonTemplate</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- AppComponent view template --&gt;</span>
+...
+<span class="p">&lt;</span><span class="nt">my-tabs</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">my-tabs</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ng-template</span> <span class="err">#</span><span class="na">personEdit</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span></code></pre></div>
+<p>Note that we added a template variable to our <code>&lt;ng-template&gt;</code> from before. Within our <code>AppComponent</code> we can now reference our tabs component (<code>&lt;my-tabs&gt;</code>) as well as the <code>ng-template</code> by using Angular’s <code>@ViewChild</code> decorator.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">ViewChild</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">TabsComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./tabs.component&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
+<span class="k">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+  <span class="err">@</span><span class="nx">ViewChild</span><span class="p">(</span><span class="nx">TabsComponent</span><span class="p">)</span> <span class="nx">tabsComponent</span><span class="p">;</span>
+  <span class="err">@</span><span class="nx">ViewChild</span><span class="p">(</span><span class="s1">&#39;personEdit&#39;</span><span class="p">)</span> <span class="nx">editPersonTemplate</span><span class="p">;</span>
+
+  <span class="nx">onEditPerson</span><span class="p">(</span><span class="nx">person</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>We grab the template by its name which we defined in the view, namely &ldquo;personEdit&rdquo;, while we can reference the <code>TabsComponent</code> <strong>directly by its type,</strong> which is obviously much more convenient.</p>
+
+<p>Great, we now have all necessary variables to be passed to our <code>openTab(...)</code> function.</p>
+
+<h2 id="define-an-anchor-point">Define an Anchor point</h2>
+
+<p>Our plan is to dynamically inject new <code>TabComponent</code> instances into the <code>TabsComponent</code>. To do so we first of all have to define a region in our tab component where to place our dynamic tab pages. Currently our statically define ones are being loaded in via Angular&rsquo;s <strong>content projection</strong> mechanism.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- TabsComponent view template --&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs&#34;</span><span class="p">&gt;</span>
+  <span class="c">&lt;!-- nav tab headers are generated here --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ng-content</span><span class="p">&gt;&lt;/</span><span class="nt">ng-content</span><span class="p">&gt;</span></code></pre></div>
+<p>The static tabs get &ldquo;projected&rdquo; into the <code>&lt;ng-content&gt;&lt;/ng-content&gt;</code> section and referenced in the code via the <code>@ContentChildren</code>. For more details <a href="/blog/2016/02/learning-ng2-creating-tab-component/">read the according article I wrote a while back</a>.</p>
+
+<blockquote>
+<p>Note: we cannot reuse the same <code>@ContentChildren</code> mechanism because it only works for projected content which has to happen statically. Our tabs however are created dynamically on the fly, remember?</p>
+</blockquote>
+
+<p>Similarly, we need to create a dedicated <strong>anchor point</strong> for our dynamic tab components.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- TabsComponent view template --&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="err">...</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ng-content</span><span class="p">&gt;&lt;/</span><span class="nt">ng-content</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ng-template</span> <span class="na">dynamic-tabs</span><span class="p">&gt;&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span></code></pre></div>
+<p>To do so I&rsquo;m using an <code>&lt;ng-template&gt;</code> with a special directive attached to it: <code>dynamic-tabs</code>. Our so-called <strong>anchor directive</strong> is very simple:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">Directive</span><span class="p">,</span> <span class="nx">ViewContainerRef</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Directive</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;[dynamic-tabs]&#39;</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">DynamicTabsDirective</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="kr">public</span> <span class="nx">viewContainer</span><span class="o">:</span> <span class="nx">ViewContainerRef</span><span class="p">){}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>We only need this one for the purpose of getting hold of the <code>ViewContainerRef</code> later. By injecting it in the constructor of our directive and by using the <code>public</code> modifier, we can later simply access it through that <code>viewContainer</code> variable.</p>
+
+<h3 id="alternative-use-a-template-variable-as-anchor">Alternative: use a template variable as anchor</h3>
+
+<p>Instead of creating a dedicated anchor directive there is also the possibility to use a simple template variable and get its according view container via the <code>@ViewChild</code> decorator.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- TabsComponent view template --&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="err">...</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ng-content</span><span class="p">&gt;&lt;/</span><span class="nt">ng-content</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ng-template</span> <span class="err">#</span><span class="na">container</span><span class="p">&gt;&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span></code></pre></div>
+<p>In the <code>TabsComponent</code> class we then grab the view container of <code>#container</code> as follows.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">TabsComponent</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="err">@</span><span class="nx">ViewChild</span><span class="p">(</span><span class="s1">&#39;container&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">read</span><span class="o">:</span> <span class="nx">ViewContainerRef</span><span class="p">})</span> <span class="nx">dynamicTabPlaceholder</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>dynamicTabPlaceholder</code> directly references the <code>ViewContainerRef</code> instance which we can use right away.</p>
+
+<p>Both approaches can be used as there are no major advantages or disadvantages. In this article we will make use of a dedicated anchor directive.</p>
+
+<h2 id="dynamically-instantiate-the-tab-component">Dynamically instantiate the Tab component</h2>
+
+<p>Remember, each of our tab pages inside our tabs component is defined using the <code>&lt;my-tab&gt;</code> component. Normally the tab is defined within the template of some component like</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">my-tabs</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">my-tab</span> <span class="err">[</span><span class="na">tabTitle</span><span class="err">]=&#34;..&#34;</span><span class="p">&gt;</span>The content<span class="p">&lt;/</span><span class="nt">my-tab</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">my-tabs</span><span class="p">&gt;</span></code></pre></div>
+<p>However, in our scenario we want to instantiate the <code>&lt;my-tab&gt;</code> in our code dynamically and set the according properties of it. More specifically we instantiate the underlying component class <code>TabComponent</code>.
+For that purpose we need to <strong>get hold of a component factory</strong> matching our <code>TabComponent</code>. It’s as simple as injecting the <code>ComponentFactoryResolver</code> and then invoking its <code>resolveComponentFactory(…)</code> function passing in the type of component we want to instantiate: the <code>TabComponent</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">ComponentFactoryResolver</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">TabComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./tab.component&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">TabsComponent</span> <span class="p">{</span>
+  <span class="p">...</span>
+
+  <span class="nx">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">_componentFactoryResolver</span><span class="o">:</span> <span class="nx">ComponentFactoryResolver</span><span class="p">)</span> <span class="p">{}</span>
+
+  <span class="nx">openTab</span><span class="p">(...)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">componentFactory</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_componentFactoryResolver</span><span class="p">.</span><span class="nx">resolveComponentFactory</span><span class="p">(</span><span class="nx">TabComponent</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Next, we need to get a <code>ViewContainerRef</code> which is where our dynamically instantiated component will be placed. We can get that view container from our anchor component as we just discussed (or via the alternative approach of using a template variable).</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">DynamicTabsDirective</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./dynamic-tabs.directive&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="p">...</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">    ...
+</span><span class="sb">    &lt;ng-template dynamic-tabs&gt;&lt;/ng-template&gt;
+</span><span class="sb">  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">TabsComponent</span> <span class="p">{</span>
+  <span class="err">@</span><span class="nx">ViewChild</span><span class="p">(</span><span class="nx">DynamicTabDirective</span><span class="p">)</span> <span class="nx">dynamicTabPlaceholder</span><span class="p">;</span>
+
+  <span class="nx">openTab</span><span class="p">(...)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">componentFactory</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_componentFactoryResolver</span><span class="p">.</span><span class="nx">resolveComponentFactory</span><span class="p">(</span><span class="nx">TabComponent</span><span class="p">);</span>
+
+    <span class="c1">// get the viewcontainer
+</span><span class="c1"></span>    <span class="kd">let</span> <span class="nx">viewContainerRef</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dynamicTabPlaceholder</span><span class="p">.</span><span class="nx">viewContainer</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Once we have the component factory and the view container reference, we can finally instantiate our component by using the <code>createComponent(…)</code> function on the view container. Having the instance of the <code>TabComponent</code> we can then set its according properties.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">openTab</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">template</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">isCloseable</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">componentFactory</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">_componentFactoryResolver</span><span class="p">.</span><span class="nx">resolveComponentFactory</span><span class="p">(</span><span class="nx">TabComponent</span><span class="p">);</span>
+
+  <span class="c1">// get the viewcontainer
+</span><span class="c1"></span>  <span class="kd">let</span> <span class="nx">viewContainerRef</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dynamicTabPlaceholder</span><span class="p">.</span><span class="nx">viewContainer</span><span class="p">;</span>
+
+  <span class="c1">// instantiate the component
+</span><span class="c1"></span>  <span class="kd">let</span> <span class="nx">componentRef</span> <span class="o">=</span> <span class="nx">viewContainerRef</span><span class="p">.</span><span class="nx">createComponent</span><span class="p">(</span><span class="nx">componentFactory</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">instance</span><span class="o">:</span> <span class="nx">TabComponent</span> <span class="o">=</span> <span class="nx">componentRef</span><span class="p">.</span><span class="nx">instance</span> <span class="nx">as</span> <span class="nx">TabComponent</span><span class="p">;</span>
+
+  <span class="c1">// set the props
+</span><span class="c1"></span>  <span class="nx">instance</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">title</span><span class="p">;</span>
+  <span class="nx">instance</span><span class="p">.</span><span class="nx">template</span> <span class="o">=</span> <span class="nx">template</span><span class="p">;</span>
+  <span class="nx">instance</span><span class="p">.</span><span class="nx">dataContext</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+  <span class="nx">instance</span><span class="p">.</span><span class="nx">isCloseable</span> <span class="o">=</span> <span class="nx">isCloseable</span><span class="p">;</span>
+
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="render-the-dynamic-template-with-ngtemplateoutlet">Render the dynamic template with NgTemplateOutlet</h2>
+
+<p>Last but not least we need to render the template in our dynamically created tab page. Remember, in our <code>openTab(…)</code> function we did pass in the template reference <code>this.editPersonTemplate</code>…</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="err">@</span><span class="nx">ViewChild</span><span class="p">(</span><span class="s1">&#39;personEdit&#39;</span><span class="p">)</span> <span class="nx">editPersonTemplate</span><span class="p">;</span>
+
+  <span class="nx">openTab</span><span class="p">(...)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">tabsComponent</span><span class="p">.</span><span class="nx">openTab</span><span class="p">(</span>
+      <span class="sb">`Editing </span><span class="si">${</span><span class="nx">person</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">editPersonTemplate</span><span class="p">,</span>
+      <span class="nx">person</span><span class="p">,</span>
+      <span class="p">...</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>…which we have defined in our component view before:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ng-template</span> <span class="err">#</span><span class="na">personEdit</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span></code></pre></div>
+<p>You may have noticed that in the implementation of the <code>openTab(…)</code> function we pass that template along to the <code>TabComponent</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">openTab</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">template</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">isCloseable</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="kd">let</span> <span class="nx">componentRef</span> <span class="o">=</span> <span class="nx">viewContainerRef</span><span class="p">.</span><span class="nx">createComponent</span><span class="p">(</span><span class="nx">componentFactory</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">instance</span><span class="o">:</span> <span class="nx">TabComponent</span> <span class="o">=</span> <span class="nx">componentRef</span><span class="p">.</span><span class="nx">instance</span> <span class="nx">as</span> <span class="nx">TabComponent</span><span class="p">;</span>
+
+  <span class="c1">// set the props
+</span><span class="c1"></span>  <span class="p">...</span>
+  <span class="nx">instance</span><span class="p">.</span><span class="nx">template</span> <span class="o">=</span> <span class="nx">template</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Inside there we can now <strong>render the template into the view</strong> of our <code>TabComponent</code>. Currently the <code>TabComponent</code> is defined as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;my-tab&#39;</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">      &lt;div [hidden]=&#34;!active&#34;...&gt;
+</span><span class="sb">          &lt;ng-content&gt;&lt;/ng-content&gt;
+</span><span class="sb">      &lt;/div&gt;
+</span><span class="sb">  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">TabComponent</span> <span class="p">{</span>
+  <span class="err">@</span><span class="nx">Input</span><span class="p">(</span><span class="s1">&#39;tabTitle&#39;</span><span class="p">)</span> <span class="nx">title</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="err">@</span><span class="nx">Input</span><span class="p">()</span> <span class="nx">active</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Quite simple actually. It&rsquo;s a container with a couple of properties, the most prominent one being whether the tab is active or now which in turn shows or hides its content.</p>
+
+<p>To dynamically render the passed in template we use the <code>&lt;ng-container&gt;</code> and <code>ngTemplateOutlet</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;my-tab&#39;</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">      &lt;div [hidden]=&#34;!active&#34;...&gt;
+</span><span class="sb">          &lt;ng-content&gt;&lt;/ng-content&gt;
+</span><span class="sb">          &lt;ng-container *ngIf=&#34;template&#34;
+</span><span class="sb">            [ngTemplateOutlet]=&#34;template&#34;&gt;
+</span><span class="sb">          &lt;/ng-container&gt;
+</span><span class="sb">      &lt;/div&gt;
+</span><span class="sb">  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">TabComponent</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="err">@</span><span class="nx">Input</span><span class="p">()</span> <span class="nx">template</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="associate-data-to-dynamic-templates-with-ngtemplateoutletcontext">Associate data to dynamic templates with NgTemplateOutletContext</h2>
+
+<p>Obviously a template without some dynamic data is quite boring. In our example, we need to be able to pass in the person object we’re editing. So let’s take a closer look at our <code>&lt;ng-template&gt;</code> definition:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ng-template</span> <span class="err">#</span><span class="na">personEdit</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">person-edit</span> <span class="err">[</span><span class="na">person</span><span class="err">]=&#34;</span><span class="na">person</span><span class="err">&#34;</span> <span class="err">(</span><span class="na">savePerson</span><span class="err">)=&#34;</span><span class="na">onPersonFormSubmit</span><span class="err">($</span><span class="na">event</span><span class="err">)&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">person-edit</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span></code></pre></div>
+<p>Inside the template the <code>&lt;person-edit&gt;</code> component takes care of editing our person record by creating a proper form with bindings, events etc.</p>
+
+<blockquote>
+<p>Note: this is not scope of this article, but feel free to check out its implementation in the linked Plunker</p>
+</blockquote>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/ng-dynamic-tabs/person-edit-component.png" />
+  <figcaption>The person-edit component</figcaption>
+</figure>
+
+<p>The component takes an input binding <code>[person]</code> and has an outbound event <code>(savePerson)</code>. Let’s first look at the simpler outbound one. We can directly hook it to the <code>AppComponent</code> code where our <code>&lt;ng-template&gt;</code> is defined and just implement the event as we normally would. Templates can directly bind to the component where they are defined, although they may end up being rendered inside another component, just as in our case inside the <code>TabComponent</code>. Think about it, this is really powerful.</p>
+
+<p>But what about our input binding <code>[person]=&quot;person&quot;</code>? We could simply create a member variable <code>person</code> inside our <code>AppComponent</code> and assign it whenever we click on some person to edit. Sure, fair enough. But that wouldn’t allow us to edit multiple people simultaneously, such as:</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/ng-dynamic-tabs/multi-tab-editing.png" />
+  <figcaption>Editing in multiple tabs at the same time</figcaption>
+</figure>
+
+<p>Note, we have a tab open editing the person “Juri” while at the same time creating a new person record. As such, <strong>each template needs to get its own specific data</strong>. Luckily enough, there’s a way to do so.</p>
+
+<p>First of all we need to define the variable on our template using the <code>let-person=&quot;person&quot;</code> syntax:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ng-template</span> <span class="na">let-person</span><span class="o">=</span><span class="s">&#34;person&#34;</span> <span class="err">#</span><span class="na">personEdit</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">person-edit</span> <span class="err">[</span><span class="na">person</span><span class="err">]=&#34;</span><span class="na">person</span><span class="err">&#34;</span> <span class="err">(</span><span class="na">savePerson</span><span class="err">)=&#34;</span><span class="na">onPersonFormSubmit</span><span class="err">($</span><span class="na">event</span><span class="err">)&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">person-edit</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span></code></pre></div>
+<p>Next, within our <code>TabComponent</code> we need to bind the data using <code>ngTemplateOutletContext</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;my-tab&#39;</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">      &lt;div [hidden]=&#34;!active&#34;...&gt;
+</span><span class="sb">          &lt;ng-content&gt;&lt;/ng-content&gt;
+</span><span class="sb">          &lt;ng-container *ngIf=&#34;template&#34;
+</span><span class="sb">            [ngTemplateOutlet]=&#34;template&#34;
+</span><span class="sb">            [ngTemplateOutletContext]=&#34;{ person: dataContext }&#34;&gt;
+</span><span class="sb">          &lt;/ng-container&gt;
+</span><span class="sb">      &lt;/div&gt;
+</span><span class="sb">  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">TabComponent</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="err">@</span><span class="nx">Input</span><span class="p">()</span> <span class="nx">dataContext</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Note, we give <code>ngTemplateOutletContext</code> an JavaScript object, which has a property <code>person</code>, which is exactly the one we previously defined: <code>&lt;ng-template let-person=&quot;...&quot;&gt;</code>.
+The <code>dataContext</code> contains the person record that gets passed in via an <code>@Input</code> property to our <code>TabComponent</code>. Take a look at the <code>openTab(…)</code> implementation again.</p>
+
+<h2 id="register-the-dynamic-component-on-ngmodule">Register the dynamic component on NgModule</h2>
+
+<p>Finally, to make dynamic components work, we need to make sure to register them to the <code>entryComponents</code> array on our <code>NgModule</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">TabComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./tab.component&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+  <span class="nx">imports</span><span class="o">:</span> <span class="p">[</span> <span class="p">...</span> <span class="p">],</span>
+  <span class="nx">declarations</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">...,</span>
+    <span class="nx">TabComponent</span><span class="p">,</span>
+    <span class="p">...</span>
+  <span class="p">],</span>
+  <span class="p">...</span>
+  <span class="nx">entryComponents</span><span class="o">:</span> <span class="p">[</span> <span class="nx">TabComponent</span> <span class="p">]</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppModule</span> <span class="p">{}</span>
+</code></pre></div>
+<p>Obviously, there are some more details to make the whole tab component work properly, such as keeping track of the dynamic components in an array to render the tab headers etc. They don’t really matter for the purpose here of learning dynamic components, but obviously feel free to check the source code.</p>
+
+<h2 id="destroy-a-dynamic-component">Destroy a dynamic component</h2>
+
+<p>Well, whenever you’re creating something, especially in a dynamic way, make sure to also think about how to destroy it again. In our example, the user has the possibility to close a tab by clicking the “X” on the tab header. Moreover whenever the save button is clicked, the tab also closes automatically.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/ng-dynamic-tabs/destroying-tabs.png" />
+  <figcaption>Click the X to close the tab and destroy the component</figcaption>
+</figure>
+
+<p>Fortunately, the <code>ViewContainerRef</code> has a function <code>remove(idx)</code> which allows to remove a previously added component via an index.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">TabsComponent</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">closeTab</span><span class="p">(...)</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="k">this</span><span class="p">.</span><span class="nx">dynamicTabs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">...</span>
+        <span class="kd">let</span> <span class="nx">viewContainerRef</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">dynamicTabPlaceholder</span><span class="p">.</span><span class="nx">viewContainer</span><span class="p">;</span>
+        <span class="nx">viewContainerRef</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Also take a look at the official docs for <code>ViewContainerRef</code>: <a href="https://angular.io/api/core/ViewContainerRef">https://angular.io/api/core/ViewContainerRef</a></p>
+
+<h2 id="the-running-example">The running example</h2>
+
+<p>Check out the full example in this Plunker here:</p>
+
+<!-- <iframe src="https://embed.plnkr.co/wWKnXzpm8V31wlvu64od/?deferRun&show=preview" width="100%" height="400px"> </iframe>
+  -->
+
+<iframe src="https://stackblitz.com/edit/angular-dynamic-tabs?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+
+<h2 id="conclusion-wrapping-up">Conclusion - Wrapping up</h2>
+
+<p>Phew, that was quite long. Dynamic components in Angular initially seem like a mystery to many people. It’s not as easy as in AngularJS (version 1.x) where you could simply render in a DOM string containing a bunch of directives/components and they would automagically load up. Angular takes a more verbose approach as you have seen here. We talked about component factories, view containers and passing template references around. But it’s for a good purpose and once you played around with it, it isn’t that difficult after all. The main reasoning behind is to get static analysis by the Angular compiler. As you might have spotted, we used a well defined class, like the <code>TabComponent</code>, to get a dedicated factory for creating such components. Also, by having a view container, the compiler “knows” where your components will get placed. All this information helps the compiler to better reason about the application structure and thus to provide static analysis for better dev support, security and ultimately better performance.</p>
+
+<p><strong>Other examples</strong>
+Although this example is fully working, it was created for an academic purpose if you want, to learn more about dynamic components, view containers and how to pass around templates rather than to create a feature blown production read tab component. Of course, you&rsquo;re free to use it if you want, but there are probably more feature complete ones out there already available for you. Here are some examples:</p>
+
+<ul>
+<li><a href="https://material.angular.io/components/tabs/overview">Material design tab component</a></li>
+<li><a href="http://valor-software.com/ngx-bootstrap/#/tabs">ngx-bootstrap by Valor Software</a></li>
+<li><a href="https://ng-bootstrap.github.io/#/components/tabs/api">ng-bootstrap</a></li>
+</ul>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

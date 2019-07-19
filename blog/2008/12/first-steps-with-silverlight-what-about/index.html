@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>First steps with Silverlight. What about GWT? | juri.strumpflohner</title>
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="First steps with Silverlight. What about GWT?" />
+	
+
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="First steps with Silverlight. What about GWT?" />
+	
+	
+	<meta property="og:url" content="https://juristr.com/blog/2008/12/first-steps-with-silverlight-what-about" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2008%2f12%2ffirst-steps-with-silverlight-what-about%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2008%2f12%2ffirst-steps-with-silverlight-what-about%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">First steps with Silverlight. What about GWT?</h1>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Dec 23, 2008
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">7 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+Last week I had some time which allowed me to do some experiments with Microsoft Silverlight. I had to give it a try
+since you hear so much on the web about it, so I was quite curious, how it works out.<br />When searching for a
+tutorial, I watched a couple of videos and finally ended on Scott Guthrie's blog where he presents a <a href="http://weblogs.asp.net/scottgu/pages/silverlight-2-end-to-end-tutorial-building-a-digg-search-client.aspx">"End-to-End
+  tutorial" of creating a Digg search client with Silverlight 2</a>. I followed the tutorial and it's great, since it
+gives you quite a good feeling of the environment. The tutorial consists of the following eight parts:<br />
+<ul>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-1-creating-quot-hello-world-quot-with-silverlight-2-and-vs-2008.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-1-creating-quot-hello-world-quot-with-silverlight-2-and-vs-2008.aspx"
+      style="color: #3399ff;" target="_blank">Part 1: Creating "Hello World" with Silverlight 2 and VS 2008</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-2-using-layout-management.aspx" mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-2-using-layout-management.aspx"
+      style="color: #3399ff;" target="_blank">Part 2: Using Layout Management</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-3-using-networking-to-retrieve-data-and-populate-a-datagrid.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-3-using-networking-to-retrieve-data-and-populate-a-datagrid.aspx"
+      style="color: #3399ff;" target="_blank">Part 3: Using Networking to Retrieve Data and Populate a DataGrid</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-4-using-style-elements-to-better-encapsulate-look-and-feel.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-4-using-style-elements-to-better-encapsulate-look-and-feel.aspx"
+      style="color: #3399ff;" target="_blank">Part 4: Using Style Elements to Better Encapsulate Look and Feel</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-5-using-the-listbox-and-databinding-to-display-list-data.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-5-using-the-listbox-and-databinding-to-display-list-data.aspx"
+      style="color: #3399ff;" target="_blank">Part 5: Using the ListBox and DataBinding to Display List Data</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-6-using-user-controls-to-implement-master-detail-scenarios.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-6-using-user-controls-to-implement-master-detail-scenarios.aspx"
+      style="color: #3399ff;" target="_blank">Part 6: Using User Controls to Implement Master/Details Scenarios</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-7-using-control-templates-to-customize-a-control-s-look-and-feel.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-7-using-control-templates-to-customize-a-control-s-look-and-feel.aspx"
+      style="color: #3399ff;" target="_blank">Part 7: Using Templates to Customize Control Look and Feel</a></li>
+  <li><a href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-8-creating-a-digg-desktop-application-using-wpf.aspx"
+      mce_href="http://weblogs.asp.net/scottgu/pages/silverlight-tutorial-part-8-creating-a-digg-desktop-application-using-wpf.aspx"
+      style="color: #3399ff;" target="_blank">Part 8: Creating a Digg Desktop Version of our Application using WPF</a></li>
+</ul>And here's a screenshot of my outcome (basically the same as on Scott's tutorial obviously :) ):<br />
+<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/_tF6XjsUy87k/SUEvnXV-lCI/AAAAAAAABqU/40FdqPz79gQ/s1600-h/silverlightFirstSteps.jpg"
+    imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/_tF6XjsUy87k/SUEvnXV-lCI/AAAAAAAABqU/40FdqPz79gQ/s320/silverlightFirstSteps.jpg" /></a></div>I
+was really impressed of the environment. And you know...as most of us probably do, I'm personally always aiming to
+build highly user-friendly applications because at the end that's what counts, since that's the point where your users
+interact with your application. When we talk about web applications and user-friendliness, most often we have to speak
+about high-responsiveness of the web application, which again - on the web - is strongly connected with Ajax.
+Traditional Asp.net applications don't give you this value. Having the page refreshing on each action is somehow
+annoying because the user has to continuously wait till he sees the user interface again for being able to continue and
+this is somehow distracting.<br /><br />What regards Ajax technologies, Google is for sure one of the leaders in that
+field. They are able to build highly-interactive web applications (i.e. <a href="http://www.gmail.com/">Gmail</a> , <a
+  href="http://maps.google.com/">Google Maps</a> ,...) which don't feel any more like web applications but more like
+normal desktop apps. I did a couple of experiments also with the <a href="http://code.google.com/webtoolkit/">GWT
+  (Google Web Toolkit)</a> which allows you to program (quite) normal Java code which then gets translated into pure
+JavaScript by the GWT-compiler. Again these applications are great. GWT allows you to build desktop-like applications
+running on the browser that communicate with some server over web service calls (using XML, Json,...) or even with RPC
+(remote procedure calls). Programming GWT is cool and there are a couple of good online tutorials. Everything is
+perfectly integrated into <a href="http://www.eclipse.org/">Eclipse</a> , and you can even debug (!!) your application,
+your written Java code in Eclipse, which is not that straightforward if you think of debugging JavaScript code. Also
+the deployment process is easy, you've just to copy the compiled (generated) set of HTML and JavaScript files on your
+webserver. If you then combine your GWT client with advanced web frameworks like the Spring Web MVC framework you get
+even more benefits out of it. Although it is possible, that process of letting GWT communicate with your Spring
+application framework through GWT RPC calls is not that easy (I may post a short tutorial on that on some later posts).
+The point with GWT, as with most Java technologies, is the learning curve. You need to investigate quite a lot
+initially to really become productive (especially in designing good user-interfaces and user-interface components).<br />Now
+why did I mention GWT? Well because Silverlight seems to be somehow Microsoft's answer to it. Well not exactly because
+it is more similar to Flash than the GWT, but it is Microsoft's trial to provide a framework for easily developing
+highly interactive web applications. You can build Silverlight applications by using XAML files and the .Net framework.
+So you don't have to learn anything new and that will be one of the major advantages. Another point which is really
+cool, is how easily you can bind object properties on your interface (inside the XAML file). Scott Guthrie's tutorial
+points this out. The best is that you try the tutorial to get a feeling of Silverlight.<br /><br />If you compare
+Silverlight with GWT from the point of the prerequisites which you need to run the different kind of applications, GWT
+is for sure the winner. It uses the standard JavaScript which is supported by all of the commonly used browsers. The
+produced JavaScript is performance and cross-browser optimized. For being able to run Silverlight applications you need
+to download the framework to the client first (similar to Flash, where you first have to install the Flash Player).<br />From
+a "productivity" point of view, I think Silverlight will be better, but it very much depends on the situation. If you
+start from scratch, Silverlight will for sure be better, due to the Microsoft "visual" way of programming. You have
+your designer, where you can quickly compose several predefined components. By using Microsoft Expression Blend,
+designing UI's will even be more easy. Also the rendering of the object-data on the UI is straightforward due to the
+implemented data-binding mechanism. Moreover you can nearly continue programming like you were accustomed when building
+normal Asp.net apps. Here, GWT is (initially) a bit more complicated. For programming you can only use a subset of the
+Java programming language. This is due to the fact that GWT "compiles" Java into JavaScript and so the GWT team has to
+continuously implement the new Java features into their compiler. Designing the UI is a bit awkward. You have to keep a
+good overview and impose a good structure, by creating UI components which again you combine on the UI s.t. everything
+remains flexible and exchangeable. As I mentioned, this will produce some overhead, since initially you spend quite a
+lot of time in producing good UI's. Once you have your components, you may reuse them however on your other GWT apps.
+Unfortunately there don't exist any predefined "visual editors" for GWT integrated in Eclipse. <a href="http://www.instantiations.com/prods/docs/ajax.html">Instantiations</a>
+however provides one (you have to pay it), but I never tried it out. Another "disadvantage" is the databinding
+mechanism (binding your object-data to the UI). You have to create a data-binding mechanism yourself. There doesn't
+exist anything like in Silverlight. <a href="http://blog.js-development.com/2008/03/logical-separation-with-mvc.html">MVC</a>
+works out well here, and again, if you design your components in an intelligent and smart way, you're able to reuse
+them. The prerequisite here is that you have a good understanding of such design patterns as MVC, observer, mediator
+etc...everything it includes basically. In Silverlight you can get rid of these details which from a productive point
+of view may be an advantage, from a learning point of view however you loose some interesting aspects.<br /><br />Don't
+take this comparison too seriously, it's just a really informal description of what I experienced somehow...to do a
+better job, one would have to really program the same sample app with Silverlight and GWT and extract some metrics.<br /><br />Generally
+speaking, I think that Silverlight is as most of Microsofts technologies. Microsoft provides you with great and
+powerful tools, where you can quickly build and set-up a  running application, possibly already connected to some
+datasource. But that may be also a dangerous part, these "fast" solutions may not always be optimal from an
+architectural point of view, but again that would be enough stuff for another post (which may come :) ).<br />But I'm
+concluding this post now, it already became too long...btw with this post is number 100 for this year :D<br />I wish
+you Merry Christmas!!<br /><br /><span style="text-decoration: underline;">References:</span><br /><a href="http://www.microsoft.com/silverlight/resources/install.aspx">Install
+  Silverlight</a><br /><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=c22d6a7b-546f-4407-8ef6-d60c8ee221ed&amp;DisplayLang=en">Silverlight
+  tools for Visual Studio 2008</a><br /><a href="http://code.google.com/webtoolkit/">GWT main site</a><br /><a href="http://code.google.com/webtoolkit/app_gallery.html">http://code.google.com/webtoolkit/app_gallery.html</a>
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/Silverlight">Silverlight</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

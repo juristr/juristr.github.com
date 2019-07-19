@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Continuous Delivery on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/continuous-delivery/</link>
+    <description>Recent content in Continuous Delivery on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 08 Feb 2018 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/continuous-delivery/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create a CD pipeline with Angular, GitLab and Firebase</title>
+      <link>https://juristr.com/blog/2018/02/cd-gitlab-angular-firebase/</link>
+      <pubDate>Thu, 08 Feb 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2018/02/cd-gitlab-angular-firebase/</guid>
+      <description>I’m a huge fan of automating all the stuff. Even if you’re a very precise and organized person, you’re likely to make mistakes. Be it because you do multiple things at the same time, you get distracted wherever.</description>
+    </item>
+    
+    <item>
+      <title>Best practices: Deploying webapps (contd.)</title>
+      <link>https://juristr.com/blog/2009/03/best-practices-deploying-webapps-contd_20/</link>
+      <pubDate>Fri, 20 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/best-practices-deploying-webapps-contd_20/</guid>
+      <description>Some time ago I&#39;ve written a post about best practices in deploying web applications by mentioning the different environments
+ Development environment Testing environment Production environment</description>
+    </item>
+    
+  </channel>
+</rss>

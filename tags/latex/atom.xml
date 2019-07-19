@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latex on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/latex/</link>
+    <description>Recent content in Latex on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sun, 15 Mar 2009 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/latex/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Floating figures and tables with Latex</title>
+      <link>https://juristr.com/blog/2009/03/floating-figures-and-tables-with-latex/</link>
+      <pubDate>Sun, 15 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/floating-figures-and-tables-with-latex/</guid>
+      <description>Latex provides you with a lot of advantages when writing scientific papers. It allows you to fully focus on the content without having to worry to much about the formatting.</description>
+    </item>
+    
+  </channel>
+</rss>

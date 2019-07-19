@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/</link>
+    <description>Recent content in Tags on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 11 Jan 2019 10:53:38 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Agile</title>
+      <link>https://juristr.com/tags/agile/</link>
+      <pubDate>Fri, 11 Jan 2019 10:53:38 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android</title>
+      <link>https://juristr.com/tags/android/</link>
+      <pubDate>Thu, 26 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular</title>
+      <link>https://juristr.com/tags/angular/</link>
+      <pubDate>Mon, 03 Jun 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Antipatterns</title>
+      <link>https://juristr.com/tags/antipatterns/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/antipatterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apple</title>
+      <link>https://juristr.com/tags/apple/</link>
+      <pubDate>Tue, 07 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://juristr.com/tags/architecture/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Async</title>
+      <link>https://juristr.com/tags/async/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/async/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beginner</title>
+      <link>https://juristr.com/tags/beginner/</link>
+      <pubDate>Mon, 04 Mar 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/beginner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Best Practices</title>
+      <link>https://juristr.com/tags/best-practices/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/best-practices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://juristr.com/tags/c&#43;&#43;/</link>
+      <pubDate>Mon, 09 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Charity</title>
+      <link>https://juristr.com/tags/charity/</link>
+      <pubDate>Fri, 08 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/charity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coaching</title>
+      <link>https://juristr.com/tags/coaching/</link>
+      <pubDate>Tue, 12 Feb 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/coaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Concatmap</title>
+      <link>https://juristr.com/tags/concatmap/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/concatmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conferences</title>
+      <link>https://juristr.com/tags/conferences/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/conferences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Continuous Delivery</title>
+      <link>https://juristr.com/tags/continuous-delivery/</link>
+      <pubDate>Thu, 08 Feb 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/continuous-delivery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dev Setup</title>
+      <link>https://juristr.com/tags/dev-setup/</link>
+      <pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/dev-setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eclipse</title>
+      <link>https://juristr.com/tags/eclipse/</link>
+      <pubDate>Mon, 09 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/eclipse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eclipse Rcp</title>
+      <link>https://juristr.com/tags/eclipse-rcp/</link>
+      <pubDate>Mon, 09 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/eclipse-rcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Egghead</title>
+      <link>https://juristr.com/tags/egghead/</link>
+      <pubDate>Sun, 28 Apr 2019 12:00:09 +0200</pubDate>
+      
+      <guid>https://juristr.com/tags/egghead/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Es2015</title>
+      <link>https://juristr.com/tags/es2015/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/es2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Es6</title>
+      <link>https://juristr.com/tags/es6/</link>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/es6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forms</title>
+      <link>https://juristr.com/tags/forms/</link>
+      <pubDate>Thu, 07 Feb 2019 20:30:31 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/forms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functional Programming</title>
+      <link>https://juristr.com/tags/functional-programming/</link>
+      <pubDate>Wed, 19 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://juristr.com/tags/git/</link>
+      <pubDate>Fri, 26 Apr 2019 16:10:05 +0200</pubDate>
+      
+      <guid>https://juristr.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google</title>
+      <link>https://juristr.com/tags/google/</link>
+      <pubDate>Tue, 07 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guards</title>
+      <link>https://juristr.com/tags/guards/</link>
+      <pubDate>Thu, 31 Jan 2019 18:39:51 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/guards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guest Post</title>
+      <link>https://juristr.com/tags/guest-post/</link>
+      <pubDate>Thu, 14 Feb 2019 21:24:36 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/guest-post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Interesting Apps</title>
+      <link>https://juristr.com/tags/interesting-apps/</link>
+      <pubDate>Sun, 07 Feb 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/interesting-apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ios</title>
+      <link>https://juristr.com/tags/ios/</link>
+      <pubDate>Thu, 26 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iphone</title>
+      <link>https://juristr.com/tags/iphone/</link>
+      <pubDate>Thu, 28 Jan 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/iphone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://juristr.com/tags/javascript/</link>
+      <pubDate>Tue, 16 Jul 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jface</title>
+      <link>https://juristr.com/tags/jface/</link>
+      <pubDate>Thu, 15 Jan 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/jface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>https://juristr.com/tags/latex/</link>
+      <pubDate>Sun, 15 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lazy Loading</title>
+      <link>https://juristr.com/tags/lazy-loading/</link>
+      <pubDate>Mon, 29 Apr 2019 14:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/lazy-loading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lessons Learned</title>
+      <link>https://juristr.com/tags/lessons-learned/</link>
+      <pubDate>Tue, 23 Nov 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/lessons-learned/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mergemap</title>
+      <link>https://juristr.com/tags/mergemap/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/mergemap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microservices</title>
+      <link>https://juristr.com/tags/microservices/</link>
+      <pubDate>Sat, 03 Jan 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobile Dev</title>
+      <link>https://juristr.com/tags/mobile-dev/</link>
+      <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/mobile-dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>https://juristr.com/tags/notes/</link>
+      <pubDate>Mon, 30 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Source</title>
+      <link>https://juristr.com/tags/open-source/</link>
+      <pubDate>Wed, 01 Feb 2012 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ordering</title>
+      <link>https://juristr.com/tags/ordering/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/ordering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Osx</title>
+      <link>https://juristr.com/tags/osx/</link>
+      <pubDate>Thu, 28 Jan 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Performance</title>
+      <link>https://juristr.com/tags/performance/</link>
+      <pubDate>Mon, 29 Apr 2019 14:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resolvers</title>
+      <link>https://juristr.com/tags/resolvers/</link>
+      <pubDate>Thu, 31 Jan 2019 18:39:51 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/resolvers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Router</title>
+      <link>https://juristr.com/tags/router/</link>
+      <pubDate>Thu, 31 Jan 2019 18:39:51 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/router/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rxjs</title>
+      <link>https://juristr.com/tags/rxjs/</link>
+      <pubDate>Mon, 04 Mar 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/rxjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scrum</title>
+      <link>https://juristr.com/tags/scrum/</link>
+      <pubDate>Fri, 11 Jan 2019 10:53:38 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/scrum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Silverlight</title>
+      <link>https://juristr.com/tags/silverlight/</link>
+      <pubDate>Tue, 23 Dec 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/silverlight/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Architecture</title>
+      <link>https://juristr.com/tags/software-architecture/</link>
+      <pubDate>Sat, 03 Jan 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/software-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Process</title>
+      <link>https://juristr.com/tags/software-process/</link>
+      <pubDate>Fri, 11 Jan 2019 10:53:38 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/software-process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Standup Meeting</title>
+      <link>https://juristr.com/tags/standup-meeting/</link>
+      <pubDate>Fri, 11 Jan 2019 10:53:38 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/standup-meeting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Switchmap</title>
+      <link>https://juristr.com/tags/switchmap/</link>
+      <pubDate>Wed, 16 Jan 2019 15:03:22 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/switchmap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tech Vids</title>
+      <link>https://juristr.com/tags/tech-vids/</link>
+      <pubDate>Tue, 12 Feb 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/tech-vids/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://juristr.com/tags/testing/</link>
+      <pubDate>Tue, 16 Jul 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tooling</title>
+      <link>https://juristr.com/tags/tooling/</link>
+      <pubDate>Thu, 23 May 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/tags/tooling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Validation</title>
+      <link>https://juristr.com/tags/validation/</link>
+      <pubDate>Thu, 07 Feb 2019 20:30:31 +0100</pubDate>
+      
+      <guid>https://juristr.com/tags/validation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vba</title>
+      <link>https://juristr.com/tags/vba/</link>
+      <pubDate>Thu, 02 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/vba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Videos</title>
+      <link>https://juristr.com/tags/videos/</link>
+      <pubDate>Thu, 23 May 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/tags/videos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vscode</title>
+      <link>https://juristr.com/tags/vscode/</link>
+      <pubDate>Thu, 23 May 2019 12:00:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://juristr.com/tags/windows/</link>
+      <pubDate>Sun, 31 Jan 2010 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

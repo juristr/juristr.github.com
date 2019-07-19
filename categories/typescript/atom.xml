@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescript on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/typescript/</link>
+    <description>Recent content in Typescript on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 03 Nov 2015 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/typescript/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Screencast: TypeScript - Setup Your Working Environment</title>
+      <link>https://juristr.com/blog/2015/11/screencast-typescript-setup/</link>
+      <pubDate>Tue, 03 Nov 2015 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2015/11/screencast-typescript-setup/</guid>
+      <description>(adsbygoogle = window.adsbygoogle || []).push({});  First of all, this is my first screencast ever, so be patient 😉. The idea is to quickly demonstrate how you can setup your working environment s.</description>
+    </item>
+    
+  </channel>
+</rss>

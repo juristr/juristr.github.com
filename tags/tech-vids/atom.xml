@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech Vids on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/tech-vids/</link>
+    <description>Recent content in Tech Vids on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 12 Feb 2013 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/tech-vids/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Coaching Architect</title>
+      <link>https://juristr.com/blog/2013/02/the-coaching-architect/</link>
+      <pubDate>Tue, 12 Feb 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2013/02/the-coaching-architect/</guid>
+      <description>In this talk, Roy Osherove speaks about how to become a better coach. A nice talk highlighting some of my personal principles I try to follow every day.</description>
+    </item>
+    
+    <item>
+      <title>HTML5 vs Android: Apps or Web for mobile development??</title>
+      <link>https://juristr.com/blog/2012/04/html5-version-android-apps-or-web-for/</link>
+      <pubDate>Thu, 26 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/04/html5-version-android-apps-or-web-for/</guid>
+      <description>This is a hotly discussed topic recently. The web is now a fully-capable platform and it&#39;s getting better and better as the HTML5 standard advances.</description>
+    </item>
+    
+  </channel>
+</rss>

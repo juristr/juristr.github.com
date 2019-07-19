@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Thu, 27 Nov 2008 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/c++/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43; linking libraries to build configuration in Eclipse</title>
+      <link>https://juristr.com/blog/2008/11/c-linking-libraries-to-build/</link>
+      <pubDate>Thu, 27 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/c-linking-libraries-to-build/</guid>
+      <description>When programming in C++ you may often have to link at compile time to 3rd-party libraries which you&#39;re using.
+In Eclipse you can do that on the project properties dialog, as demonstrated in the screenshot below.</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; experiences</title>
+      <link>https://juristr.com/blog/2008/11/c-experiences/</link>
+      <pubDate>Wed, 26 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/c-experiences/</guid>
+      <description>Most of the courses I attended during my Bachelor were Java oriented with some C#, C and Haskell programming. C++ never got really touched, and if, then just to illustrate some theoretical stuff, meaning some C++ code was used to describe a design pattern etc.</description>
+    </item>
+    
+    <item>
+      <title>Verifying command line parameters on C&#43;&#43; main method</title>
+      <link>https://juristr.com/blog/2008/11/verifying-command-line-parameters-on-c/</link>
+      <pubDate>Tue, 04 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/verifying-command-line-parameters-on-c/</guid>
+      <description>Just a very quick example on how to verify the correct number of command-line parameters on a C++ (or C) main method:
+int main(int argc, char **argv) {</description>
+    </item>
+    
+    <item>
+      <title>C/C&#43;&#43; programming on Linux</title>
+      <link>https://juristr.com/blog/2008/10/cc-programming-on-linux/</link>
+      <pubDate>Sat, 25 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/10/cc-programming-on-linux/</guid>
+      <description>For a course at the university we have to develop a system using C++ on Linux. Being from the Java and C# world this won&#39;t become an easy task, already by choosing the right development tools and environment (coding, debugging, deploying.</description>
+    </item>
+    
+  </channel>
+</rss>

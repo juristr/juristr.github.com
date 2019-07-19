@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Use Dynamic Components to render HTML for 3rd party libraries | juri.strumpflohner</title>
+	
+	<meta name="description" content="Leverage dynamic components to render HTML for a Leaflet popup message">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Use Dynamic Components to render HTML for 3rd party libraries" />
+	
+	<meta name="twitter:description" content="Leverage dynamic components to render HTML for a Leaflet popup message" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/dyn-cmp-html/leaflet-marker.png" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Use Dynamic Components to render HTML for 3rd party libraries" />
+	
+	<meta property="og:description" content="Leverage dynamic components to render HTML for a Leaflet popup message" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/dyn-cmp-html/leaflet-marker.png" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2017/11/dynamic-angular-components-for-rendering-html" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2017%2f11%2fdynamic-angular-components-for-rendering-html%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2017%2f11%2fdynamic-angular-components-for-rendering-html%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Use Dynamic Components to render HTML for 3rd party libraries</h1>
+                
+                <h2 class="article-subtitle">Leverage dynamic components to render HTML for a Leaflet popup message</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Nov 15, 2017
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">8 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+
+<div class="article-intro">
+    Dynamic components in Angular are very powerful and help you solve the trickiest problems. In this example we're going to learn how we can leverage dynamic Angular components to render the HTML of a popup controlled by a Leaflet map. We'll go step by step and also learn about the things you need to watch for when instantiating components dynamically.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div class="warn-notice">
+    Contents are based on Angular version &gt;= 4.0.0
+</div>
+
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#the-use-case">The Use Case</a></li>
+<li><a href="#solution-approaches">Solution approaches</a></li>
+<li><a href="#step-1-create-our-dynamic-component">Step 1: Create our dynamic component</a></li>
+<li><a href="#step-2-register-the-dynamic-component">Step 2: Register the dynamic component</a></li>
+<li><a href="#step-3-dynamically-instantiate-our-htmlmarkercomponent">Step 3: Dynamically instantiate our HTMLMarkerComponent</a></li>
+<li><a href="#step-4-hook-up-change-detection">Step 4: Hook up Change Detection</a></li>
+<li><a href="#step-5-make-sure-to-clean-up">Step 5: Make sure to clean up</a></li>
+<li><a href="#final-running-example">Final Running Example</a></li>
+<li><a href="#conclusion-considerations">Conclusion &amp; Considerations</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<h2 id="the-use-case">The Use Case</h2>
+
+<p>Yesterday I got a question from a former workshop attendee about how to solve a given issue in Angular. He uses a <a href="http://leafletjs.com/">Leaflet</a> map in his component where he wants to display a series of markers, which, when clicked on them, open a popup window displaying some HTML.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/dyn-cmp-html/leaflet-marker.png" />
+  <figcaption>Render marker popup HTML with Angular components</figcaption>
+</figure>
+
+<p>Given the popup HTML could get arbitrarily complex, he clearly wanted to have an Angular component be responsible for rendering it and update the HTML accordingly whenever the data changes. Just as you would normally expect when dealing with Angular components.</p>
+
+<p>Now it&rsquo;s important to know that the placing of the markers as well as the displaying of the HTML inside is delegated to the Leaflet API. This looks approximately like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">marker</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;leaflet&#39;</span><span class="p">;</span>
+
+<span class="k">const</span> <span class="nx">marker</span> <span class="o">=</span> <span class="nx">marker</span><span class="p">(</span><span class="nx">latLngPosition</span><span class="p">);</span>
+<span class="k">const</span> <span class="nx">popupContent</span> <span class="o">=</span> <span class="sb">`Hi, some &lt;strong&gt;HTML&lt;/strong&gt; here`</span><span class="p">;</span>
+
+<span class="nx">marker</span><span class="p">.</span><span class="nx">bindPopup</span><span class="p">(</span><span class="nx">popupContent</span><span class="p">).</span><span class="nx">openPopup</span><span class="p">();</span>
+
+<span class="nx">marker</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+</code></pre></div>
+<p>I&rsquo;m not a Leaflet expert so there might be different approaches for achieving it, but you should get the idea. As you can see, the <code>popupContent</code> is some HTML string, which is <strong>what should come from our Angular component</strong>.<br />
+The point is that since Leaflet handles the whole rendering of the HTML, it&rsquo;s not something Angular &ldquo;knows&rdquo; about and thus we cannot simply add a component into the HTML string and it&rsquo;ll work out of the box.</p>
+
+<h2 id="solution-approaches">Solution approaches</h2>
+
+<p>Now of course there are different approaches how to solve this. First you could simply take care of the HTML rendering in your JavaScript code, via some &ldquo;intelligent&rdquo; template strings. Whenever the data changes, you could get notified via some Observable subscribes and make sure you re-create the HTML and update the according marker on the map.</p>
+
+<p>In this article however, our <strong>purpose is to learn about dynamic components</strong> and how we can delegate the whole HTML rendering and data binding to Angular. So let&rsquo;s see.</p>
+
+<h2 id="step-1-create-our-dynamic-component">Step 1: Create our dynamic component</h2>
+
+<p>First let&rsquo;s create the component which is responsible for rendering the data displayed inside the popup message. It&rsquo;s actually quite a simple component that gets it&rsquo;s data via an <code>@Input()</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">Input</span><span class="p">,</span> <span class="nx">OnInit</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">DataService</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./data.service&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({</span>
+  <span class="nx">selector</span><span class="o">:</span> <span class="s1">&#39;html-marker&#39;</span><span class="p">,</span>
+  <span class="nx">template</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">    &lt;h3&gt;{%raw%}{{ data.name }}%{%endraw%}&lt;/h3&gt;
+</span><span class="sb">    &lt;p&gt;
+</span><span class="sb">      {%raw%}{{ data.description }}{%endraw%}
+</span><span class="sb">    &lt;/p&gt;
+</span><span class="sb">  `</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">HTMLMarkerComponent</span> <span class="p">{</span>
+  <span class="err">@</span><span class="nx">Input</span><span class="p">()</span> <span class="nx">data</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="step-2-register-the-dynamic-component">Step 2: Register the dynamic component</h2>
+
+<p>Dynamic components need to be registered in the <code>entryComponents</code> property of <code>NgModule</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">NgModule</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">HTMLMarkerComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./html-marker.component&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">NgModule</span><span class="p">({</span>
+  <span class="p">...</span>
+  <span class="nx">entryComponents</span><span class="o">:</span> <span class="p">[</span><span class="nx">HTMLMarkerComponent</span><span class="p">],</span>
+  <span class="p">...</span>
+<span class="p">})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppModule</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div>
+<h2 id="step-3-dynamically-instantiate-our-htmlmarkercomponent">Step 3: Dynamically instantiate our HTMLMarkerComponent</h2>
+
+<p>Once we have registered our component, we can start and instantiate it. If you want to learn more about dynamic components you should definitely also take a look at this article:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2017/07/ng2-dynamic-tab-component/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2017/07/ng2-dynamic-tab-component/" target="_blank">Create a dynamic tab component with Angular</a></div>
+            <div class="description">Learn about advanced topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef, ngTemplateOutlet and much more...</div>
+            <div class="link">
+                /blog/2017/07/ng2-dynamic-tab-component/
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>In our simple example, <code>AppComponent (app.component.ts)</code> is responsible for handling the interaction with Leaflet. The interesting part is the <code>addMarker()</code> function which is hooked to a button click event. Inside there I simulate the fetching of the data from some <code>DataService</code> which in a real world example would expose an observable of data to be displayed, fetched over HTTP.</p>
+
+<p>For each entry to be displayed as a marker, I instantiate a new <code>HTMLMarkerComponent</code> by using the <code>ComponentFactoryResolver</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">ComponentFactoryResolver</span><span class="p">,</span> <span class="nx">Injector</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+
+<span class="k">import</span> <span class="p">{</span> <span class="nx">HTMLMarkerComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./html-marker.component.ts&#39;</span><span class="p">;</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppComponent</span> <span class="p">{</span>
+
+  <span class="nx">constructor</span><span class="p">(</span><span class="kr">private</span> <span class="nx">dataService</span><span class="o">:</span> <span class="nx">DataService</span><span class="p">,</span> <span class="kr">private</span> <span class="nx">resolver</span><span class="o">:</span> <span class="nx">CompnentFactoryResolver</span><span class="p">,</span> <span class="kr">private</span> <span class="nx">injector</span><span class="o">:</span> <span class="nx">Injector</span><span class="p">)</span> <span class="p">{}</span>
+
+  <span class="nx">addMarker</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">const</span> <span class="nx">entry</span> <span class="k">of</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">getMarkers</span><span class="p">())</span> <span class="p">{</span>
+      <span class="k">const</span> <span class="nx">factory</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">resolver</span><span class="p">.</span><span class="nx">resolveComponentFactory</span><span class="p">(</span><span class="nx">HTMLMarkerComponent</span><span class="p">);</span>
+      <span class="k">const</span> <span class="nx">component</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">injector</span><span class="p">);</span>
+      <span class="p">...</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>As you can see, we use the <code>ComponentFactoryResolver</code> to create a factory instance which is capable of producing instances of <code>HTMLMarkerComponent</code>. Note that at the point when we <strong>instantiate our component we need to pass in an Injector instance</strong> which we get injected in the constructor of our <code>AppComponent</code>. This is important to give the dynamic component the possibility to inject its dependencies as well.</p>
+
+<p>Then we need to pass in the data which the component has to render. In order for the component template to render properly, we need to <strong>manually trigger change detection</strong> on our component after we&rsquo;ve given it the data.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">addMarker</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="k">const</span> <span class="nx">entry</span> <span class="k">of</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">getMarkers</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="nx">factory</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">resolver</span><span class="p">.</span><span class="nx">resolveComponentFactory</span><span class="p">(</span><span class="nx">HTMLMarkerComponent</span><span class="p">);</span>
+    <span class="k">const</span> <span class="nx">component</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">injector</span><span class="p">);</span>
+    
+    <span class="nx">component</span><span class="p">.</span><span class="nx">instance</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">;</span>
+    <span class="nx">component</span><span class="p">.</span><span class="nx">changeDetectorRef</span><span class="p">.</span><span class="nx">detectChanges</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>What we&rsquo;re still missing is to <strong>create the actual marker</strong>. We use the Leaflet API for that.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">addMarker</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="k">const</span> <span class="nx">entry</span> <span class="k">of</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">getMarkers</span><span class="p">())</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="nx">component</span><span class="p">.</span><span class="nx">instance</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">entry</span><span class="p">;</span>
+    <span class="nx">component</span><span class="p">.</span><span class="nx">changeDetectorRef</span><span class="p">.</span><span class="nx">detectChanges</span><span class="p">();</span>
+
+    <span class="c1">// create a new Leaflet marker at the given position
+</span><span class="c1"></span>    <span class="k">const</span> <span class="nx">m</span> <span class="o">=</span> <span class="nx">marker</span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">position</span><span class="p">);</span>
+
+    <span class="c1">// associate the component element to the HTML part of the Popup
+</span><span class="c1"></span>    <span class="k">const</span> <span class="nx">popupContent</span> <span class="o">=</span> <span class="nx">component</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">;</span>
+
+    <span class="c1">// hook up the popup and add the marker to the map
+</span><span class="c1"></span>    <span class="nx">m</span><span class="p">.</span><span class="nx">bindPopup</span><span class="p">(</span><span class="nx">popupContent</span><span class="p">).</span><span class="nx">openPopup</span><span class="p">();</span>
+    <span class="nx">m</span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">map</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Note</strong> how we pass in the required HTML to the Leaflet popup using <code>component.location.nativeElement</code>.</p>
+
+<p>Finally I&rsquo;m adding a meta object to a local array to keep track of the markers and dynamic components we created. We&rsquo;ll need this in the next steps.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">addMarker</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="k">const</span> <span class="nx">entry</span> <span class="k">of</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataService</span><span class="p">.</span><span class="nx">getMarkers</span><span class="p">())</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="k">const</span> <span class="nx">m</span> <span class="o">=</span> <span class="nx">marker</span><span class="p">(</span><span class="nx">entry</span><span class="p">.</span><span class="nx">position</span><span class="p">);</span>
+    <span class="p">...</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">markers</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="nx">entry</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+      <span class="nx">markerInstance</span><span class="o">:</span> <span class="nx">m</span><span class="p">,</span>
+      <span class="nx">componentInstance</span><span class="o">:</span> <span class="nx">component</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="step-4-hook-up-change-detection">Step 4: Hook up Change Detection</h2>
+
+<p>What happens if our data changes behind the scenes? Well, our component is <strong>dynamically instantiated and outside of the control of Angular templates</strong> but instead inside the part controlled and rendered by Leaflet. That&rsquo;s why we need to hook up change detection by ourselves. But no worries, it&rsquo;s pretty straightforward (at least a naive implementation of it).</p>
+
+<p>All we need to do is to implement the <code>ngDoCheck()</code> lifecycle hook of our <code>AppComponent</code>. This lifecycle hook gets called whenever Angular dirty checks our component, so when change detection is performed.</p>
+
+<p>So basically we iterate over the array of metadata objects we&rsquo;ve saved previously (to track our markers and dynamic components) and invoke the change detection for each of our dynamic components.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="p">{</span> <span class="nx">DoCheck</span><span class="p">,</span> <span class="nx">ComponentRef</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Marker</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;leaflet&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">HTMLMarkerComponent</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./html-marker.component&#39;</span><span class="p">;</span>
+
+<span class="kr">interface</span> <span class="nx">MarkerMetaData</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="nb">String</span><span class="p">;</span>
+  <span class="nx">markerInstance</span><span class="o">:</span> <span class="nx">Marker</span><span class="p">;</span>
+  <span class="nx">componentInstance</span><span class="o">:</span> <span class="nx">ComponentRef</span><span class="o">&lt;</span><span class="nx">HTMLMarkerComponent</span><span class="o">&gt;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
+<span class="k">export</span> <span class="k">class</span> <span class="nx">AppComponent</span> <span class="kr">implements</span> <span class="nx">DoCheck</span> <span class="p">{</span>
+  <span class="nx">markers</span><span class="o">:</span> <span class="nx">MarkerMetaData</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="p">...</span>
+  <span class="nx">ngDoCheck</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">markers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">entry</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">entry</span><span class="p">.</span><span class="nx">componentInstance</span><span class="p">.</span><span class="nx">changeDetectorRef</span><span class="p">.</span><span class="nx">detectChanges</span><span class="p">();</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>You can see that happen if you click the &ldquo;Mutate data&rdquo; button in the example.</p>
+
+<p><strong>Note:</strong> For performance reasons you should obviously be as cautious as possible when it comes to tricker a change detection cycle. In this simple example I just hooked up on the <code>ngDoCheck()</code> but you could alternatively also trigger it whenever new values come along from the <code>DataService</code>, or at least just trigger the CD cycle for those dynamic components which may be target of an update.</p>
+
+<h2 id="step-5-make-sure-to-clean-up">Step 5: Make sure to clean up</h2>
+
+<p>Finally, a very important part whenever you create components dynamically by yourself is to <strong>make sure you clean up everything</strong> once the party is over. In the example I added a &ldquo;remove&rdquo; link button for each generated marker which invokes the <code>removeMarker(marker)</code> function inside our <code>AppComponent</code>.</p>
+
+<p>There we clean up our meta data array, remove the marker from the map and most importantly invoke the <code>destroy()</code> function of our dynamic component.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">removeMarker</span><span class="p">(</span><span class="nx">marker</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// remove it from the array meta objects
+</span><span class="c1"></span>  <span class="k">const</span> <span class="nx">idx</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">markers</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">marker</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">markers</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">idx</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="c1">// remove the marker from the map
+</span><span class="c1"></span>  <span class="nx">marker</span><span class="p">.</span><span class="nx">markerInstance</span><span class="p">.</span><span class="nx">removeFrom</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">map</span><span class="p">);</span>
+
+  <span class="c1">// destroy the component to avoid memory leaks
+</span><span class="c1"></span>  <span class="nx">marker</span><span class="p">.</span><span class="nx">componentInstance</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Note, although I didn&rsquo;t implement it in this example, make sure to <strong>implement the ngOnDestroy()</strong> lifecycle hook of the <code>AppComponent</code> to perform a cleanup of all dynamic components there as well.</p>
+
+<h2 id="final-running-example">Final Running Example</h2>
+
+<p>Here&rsquo;s the final running example to play around with. Have fun 😃</p>
+
+<iframe src="https://stackblitz.com/edit/angular-dyn-cmp-3rd-party?ctl=1&embed=1&file=app/app.component.ts" width="100%" height="400px"> </iframe>
+
+<h2 id="conclusion-considerations">Conclusion &amp; Considerations</h2>
+
+<p>Consider this is a very simple example to showcase how you can integrate a dynamic component with some external library such as Leaflet in this case.</p>
+
+<p>Whenever you create dynamic components you should pay attention to</p>
+
+<ul>
+<li><strong>Performance:</strong> what if we have hundreds of hundreds of markers on our map? You could find some other strategies, like only creating the component on the fly when the popup opens. Would perfectly work in our simple example, but not in others. What about change detection? Do we really need to run it on all of our dynamic components? Or can we limit it on the marker&rsquo;s content that changed?</li>
+<li><strong>Destroying &amp; cleanup:</strong> pay a lot of attention to this. Whenever you instantiate components dynamically yourself, you need to make sure you clean up everything in the end. Otherwise you could end up with some nasty memory leaks</li>
+<li><strong>Choose the right approach:</strong> initially I mentioned that you could perfectly render the HTML by yourself inside your JavaScript code (with some lightweight templating engine if needed) without having to delegate it to Angular components. Also consider such approaches as well.</li>
+</ul>
+
+<p>If this was useful, also check out my other article on dynamic components:</p>
+
+<div class="article-link card">
+    <div class="row">
+        <div class="col-2 share-link">
+            <a href="/blog/2017/07/ng2-dynamic-tab-component/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-external-window">
+                    <path class="primary" d="M12 8a1 1 0 0 1-1 1H5v10h10v-6a1 1 0 0 1 2 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9c0-1.1.9-2 2-2h6a1 1 0 0 1 1 1z"></path>
+                    <path class="secondary" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41z"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="col-10">
+            <div class="title"><a href="/blog/2017/07/ng2-dynamic-tab-component/" target="_blank">Create a dynamic tab component with Angular</a></div>
+            <div class="description">Learn about advanced topics such as dynamic components, ComponentFactoryResolver, ViewContainerRef, ngTemplateOutlet and much more...</div>
+            <div class="link">
+                /blog/2017/07/ng2-dynamic-tab-component/
+            </div>
+        </div>
+    </div>
+</div>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

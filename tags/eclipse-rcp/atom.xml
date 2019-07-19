@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eclipse Rcp on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/eclipse-rcp/</link>
+    <description>Recent content in Eclipse Rcp on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 09 Mar 2009 01:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/eclipse-rcp/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Del.icio.us links and three new projects online</title>
+      <link>https://juristr.com/blog/2009/03/delicious-links-and-three-new-projects/</link>
+      <pubDate>Mon, 09 Mar 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/03/delicious-links-and-three-new-projects/</guid>
+      <description>My blog readers can now bookmark posts I&#39;ve written with delicious, by just clicking on the &#34;add to del.icio.us&#34; link on the bottom of each post.</description>
+    </item>
+    
+    <item>
+      <title>HowTo: testing jFace Action class taking a StructuredSelection object</title>
+      <link>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</link>
+      <pubDate>Thu, 15 Jan 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/01/howto-testing-jface-action-class-taking/</guid>
+      <description>Let&#39;s consider the following jFace Action class:
+public class RateAction extends Action {
+private final int fRating;
+private IStructuredSelection fSelection;
+/**
+* @param rating</description>
+    </item>
+    
+    <item>
+      <title>JFace Table API with Eclipse RCP</title>
+      <link>https://juristr.com/blog/2008/11/jface-table-api-with-eclipse-rcp/</link>
+      <pubDate>Thu, 20 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/jface-table-api-with-eclipse-rcp/</guid>
+      <description>Today I had to create a new view inside on an Eclipse RCP application representing data inside a table. I found the following article</description>
+    </item>
+    
+    <item>
+      <title>Persisting the current perspective state of an RCP</title>
+      <link>https://juristr.com/blog/2008/11/persisting-current-perspective-state-of/</link>
+      <pubDate>Sat, 15 Nov 2008 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2008/11/persisting-current-perspective-state-of/</guid>
+      <description>If you&#39;re developing on Eclipse RCP applications it may be interesting to save the perspective layout and open views of the user s.t. when he launches the application the next time, everything looks as before.</description>
+    </item>
+    
+  </channel>
+</rss>

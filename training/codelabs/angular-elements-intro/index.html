@@ -1,0 +1,224 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Introduction to Angular Elements</title>
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../elements/codelab.html">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <style is="custom-style">
+    body {
+      font-family: "Roboto",sans-serif;
+      background: var(--google-codelab-background, #F8F9FA);
+    }
+  </style>
+  
+</head>
+<body unresolved class="fullbleed">
+
+  <google-codelab title="Introduction to Angular Elements"
+                  environment="web"
+                  feedback-link="https://github.com/juristr/ama/issues/new">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>In this codelab we&#39;re going to explore Angular Elements, a new way for creating <strong>Custom Elements</strong> out of plain normal Angular Components.</p>
+<h2 class="checklist"><strong>What you&#39;ll learn</strong></h2>
+<ul class="checklist">
+<li>How to setup your Angular project to create and run Angular Elements</li>
+<li>How to convert an Angular component into an Angular Element</li>
+<li>How to create a small script for building an Angular Element into a standalone library</li>
+</ul>
+<h2><strong>What you&#39;ll need</strong></h2>
+<ul>
+<li>A browser, ideally Chrome</li>
+<li><a href="https://code.visualstudio.com" target="_blank">VSCode</a> (or any other code editor of your preference with TypeScript &amp; Angular support)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Getting set up" duration="5">
+        <p>Download the starter project:</p>
+<p><a href="https://github.com/juristr/codelabs-angular-elements-intro/archive/master.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download project</paper-button></a></p>
+<p>Unzip the code and open it with Visual Studio Code (or your respective code editor of choice).</p>
+<h2><strong>Install npm packages and start the app</strong></h2>
+<p>After unpacking the files, open up a terminal (you can also do that from within Visual Studio Code) at the location where you unzipped your files.</p>
+<p>Execute <code>npm install</code> (from your command line) to download all the necessary packages.</p>
+<h2><strong>Run the app</strong></h2>
+<p>Once installed, open your terminal (also from within VSCode) and type</p>
+<pre><code>$ npm start</code></pre>
+<p>You should ideally see something like this in your browser:</p>
+<p><img style="max-width: 624.00px" src="img/797b83b0e2d49160.png"></p>
+<aside class="special"><p><strong>Tip:</strong> Setup a local git repo (<code>git init</code>) and commit when switching to the next steps to always have a backup copy ready in case something goes terribly wrong.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Install Angular Elements support" duration="3">
+        <p>As a first step we need to setup our project to use the @angular/elements package. For doing so, we can use the ng add CLI command.</p>
+<pre><code>$ npm i @angular/cli</code></pre>
+<p>Next we install some necessary polyfills:</p>
+<pre><code>$ npm i @webcomponents/webcomponentsjs</code></pre>
+<p>Add the following import to the end of the <code>polyfills.ts</code> file:</p>
+<pre><code>import &#39;@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js&#39;;</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Convert GreeterComponent to an Angular Element" duration="8">
+        <p>Currently we have a <code>GreeterComponent</code> registered as Angular element and referenced in the <code>app.component.html</code>. Let&#39;s try to dynamically add the greeter component to the template, rather than adding it directly.</p>
+<p>For that purpose, change the <code>app.component.html</code> template to the following:</p>
+<pre><code>&lt;h1&gt;Angular Elements&lt;/h1&gt;
+
+&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;
+&lt;button (click)=&#34;onAddGreeter()&#34;&gt;Add greeter&lt;/button&gt;</code></pre>
+<p>In the <code>onAddGreeter()</code> function, use the native DOM API to grab an instance of the <code>#container</code> and add the &#34;<code>&lt;do-greet&gt;&lt;/do-greet&gt;</code>&#34; tag. It will look something like this:</p>
+<pre><code>const container = document.getElementById(&#39;container&#39;);
+container.innerHTML = &#39;&lt;do-greet&gt;&lt;/do-greet&gt;&#39;;</code></pre>
+<p>If you run the app and click on the button, the do-greet is inserted correctly (as can be seen from the browser&#39;s devtools), however it won&#39;t be rendered.</p>
+<p><img style="max-width: 624.00px" src="img/ed962f1a6da02cb4.png"></p>
+<p>The reason is that Angular doesn&#39;t automatically interpret components that are inserted dynamically at runtime into the HTML (unless we instantiate them using the ComponentFactory etc..). <strong>With Angular Elements it is possible however</strong>.</p>
+<h2>Register GreeterComponent as Angular Element</h2>
+<p>To register a component as an Angular Element, we go to the app.module.ts and register the <code>GreeterComponent</code> as an <code>entryComponent</code> on our <code>@NgModule</code>.</p>
+<p>Next we import the <code>createCustomElement</code> function from <code>@angular/elements</code> and register our <code>GreeterComponent</code>.</p>
+<pre><code>export class AppModule {
+ constructor(injector: Injector) {
+   const el = createCustomElement(GreeterComponent, { injector: injector });
+   customElements.define(&#39;do-greet&#39;, el);
+ }
+}</code></pre>
+<p>Re-running the app again, after the button-click the <code>&lt;do-greet&gt;</code> component should be inserted and visualized properly.</p>
+<p><img style="max-width: 624.00px" src="img/4000351d31dfb3cb.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Preparing compilation as standalone Custom Element" duration="5">
+        <p>So far we have converted our GreeterComponent to an Angular Element. That allows us to use it in a very dynamic way inside our Angular app. It won&#39;t be usable outside of Angular, say, in a static HTML page. Let&#39;s adjust our build process to make that happen.</p>
+<p>First of all, let&#39;s refactor our current setup. We don&#39;t need the AppComponent, so let&#39;s just get rid of it. In the end we should just have the <code>app.module</code> and <code>greeter.component</code> files.</p>
+<p><img style="max-width: 624.00px" src="img/219e8907d479c8d6.png"></p>
+<p>Note, we also removed the bootstrap property from our @NgModule. This is because our compiled Angular Element needs to auto-bootstrap. For that purpose, we add the <code>ngOnBootstrap()</code> function to our AppModule and move the custom element registration into it.</p>
+<pre><code>export class AppModule {
+ constructor(private injector: Injector) {}
+
+ ngDoBootstrap() {
+   const el = createCustomElement(GreeterComponent, {
+     injector: this.injector
+   });
+   customElements.define(&#39;do-greet&#39;, el);
+ }
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuring the compilation process" duration="5">
+        <p>Create a new file build.js at the root of the project and paste the following content</p>
+<pre><code>const fs = require(&#39;fs-extra&#39;);
+const concat = require(&#39;concat&#39;);
+
+(async function build() {
+ const files = [
+   &#39;./dist/angular-elements-intro/runtime.js&#39;,
+   &#39;./dist/angular-elements-intro/runtime.js&#39;,
+   &#39;./dist/angular-elements-intro/polyfills.js&#39;,
+   &#39;./dist/angular-elements-intro/main.js&#39;
+ ];
+
+ await fs.ensureDir(&#39;demo&#39;);
+ await concat(files, &#39;demo/ngelements.js&#39;);
+})();</code></pre>
+<p>When we execute ng build --prod, we get a series of files. When deploying an Angular Element however, we want to have a single JavaScript file we can load into the browser.</p>
+<p>Change the current build script in the package.json to the following:</p>
+<pre><code>&#34;build&#34;: &#34;ng build --prod --output-hashing=none &amp;&amp; node build.js&#34;,</code></pre>
+<p>Execute &#34;npm run build&#34; and make sure you get a <code>ngelements.js</code> in the <code>demo</code> directory.</p>
+<aside class="special"><p><strong>Hint:</strong> This works for simple scenarios, but it is kind of a hack. You may want to use <a href="https://github.com/manfredsteyer/ngx-build-plus" target="_blank">ngx-build-plus</a> for extending the Angular CLI&#39;s behavior and have a more robust setup.</p>
+</aside>
+<h2>Run the Custom Element</h2>
+<p>We&#39;re now ready to run the custom element. Create an index.html file in the demo folder and load the <code>ngelements.js</code>.</p>
+<pre><code>&lt;html&gt;
+ &lt;body&gt;
+   &lt;do-greet&gt;&lt;/do-greet&gt;
+   &lt;script src=&#34;./ngelements.js&#34;&gt;&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>There is already a preconfigured script that launches live-server in your package.json that serves the <code>demo</code> directory on localhost:1234. Run it with</p>
+<p>$ npm run start:demo</p>
+<p><img style="max-width: 624.00px" src="img/17ffe4cfd84527cd.png"></p>
+<p>Congrats, you&#39;re running your Angular Component as standalone custom element in a static HTML page!</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="@Input and @Output with Angular Elements" duration="5">
+        <p>First of all, add an @Input() name as well as a @Output() greet to our GreeterComponent.</p>
+<pre><code>@Component({
+ // selector: &#39;do-greet&#39;,
+ template: `
+   &lt;div&gt;Hi, {{ name }}!&lt;/div&gt;
+   &lt;button (click)=&#34;doGreet()&#34;&gt;Greet&lt;/button&gt;
+ `,
+ styles: []
+})
+export class GreeterComponent implements OnInit {
+ @Input() name;
+ @Output() greet = new EventEmitter();
+
+ constructor() {}
+
+ doGreet() {
+   this.greet.emit(`Hi, ${this.name}`);
+ }
+
+ ngOnInit() {}
+}</code></pre>
+<p>Recompile our component and launch the <code>demo/index.html</code> page. It should now be possible to pass in our name to the custom element:</p>
+<pre><code>&lt;html&gt;
+ &lt;body&gt;
+   &lt;do-greet name=&#34;Juri&#34;&gt;&lt;/do-greet&gt;
+   &lt;script src=&#34;./ngelements.js&#34;&gt;&lt;/script&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p><strong>As an exercise</strong>, try to register to the &#34;greet&#34; output event we defined and log the result to the console of the browser.</p>
+<p><img style="max-width: 624.00px" src="img/5ff6cef7e1820d12.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-49880327-14', 'auto');
+
+    (function() {
+      var gaCodelab = '';
+      if (gaCodelab) {
+        ga('create', gaCodelab, 'auto', {name: 'codelab'});
+      }
+
+      var gaView;
+      var parts = location.search.substring(1).split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var param = parts[i].split('=');
+        if (param[0] === 'viewga') {
+          gaView = param[1];
+          break;
+        }
+      }
+      if (gaView && gaView !== gaCodelab) {
+        ga('create', gaView, 'auto', {name: 'view'});
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Lazy Angular Modules | juri.strumpflohner</title>
+	
+	<meta name="description" content="Modularization strategy for lazy Angular modules">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:title" content="Lazy Angular Modules" />
+	
+	<meta name="twitter:description" content="Modularization strategy for lazy Angular modules" />
+	
+
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Lazy Angular Modules" />
+	
+	<meta property="og:description" content="Modularization strategy for lazy Angular modules" />
+	
+	
+	<meta property="og:url" content="https://juristr.com/blog/2014/07/lazy-angular-modules" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+</head><body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://google-developers.appspot.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.strumpflohner</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2014%2f07%2flazy-angular-modules%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2014%2f07%2flazy-angular-modules%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops.</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Lazy Angular Modules</h1>
+                
+                <h2 class="article-subtitle">Modularization strategy for lazy Angular modules</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Jul 21, 2014
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">7 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                
+
+<p>Startup time is crucial for a proper user experience and that&rsquo;s where many JavaScript SPA really fail. Even though you might (and definitely should) apply code minification and bundling mechanisms, you wouldn&rsquo;t want to load your entire application right upfront. It simply isn&rsquo;t useful nor required. Unfortunately, as of now Angular doesn&rsquo;t natively support any kind of lazy loading approach. Thus, many devs started to create custom implementations and workarounds to circumvent such lack. This article aims to explore those implementations as well as to combine them with another interesting and hotly-debated topic: proper modularization.</p>
+
+<h2 id="feature-based-vs-mvc-based-organization">Feature based vs MVC based organization</h2>
+
+<p>Not only Angular but other frameworks as well propose the typical MVC kind of structuring and organization of your code, having a</p>
+
+<ul>
+<li><code>controller</code> folder</li>
+<li><code>model</code> folder</li>
+<li><code>view</code> folder</li>
+<li>&hellip;</li>
+</ul>
+
+<p>While this might seem to be a clean and well organized structure initially, you soon discover that it isn&rsquo;t quite as useful as it could be during development nor maintenance. When did you last open your project and say &ldquo;let&rsquo;s add a controller&rdquo;?? Instead, you normally implement or modify some feature.<br />
+Having a MVC structure implies a continuous, tedious searching for the corresponding controller, the model and view that belong to the feature in these three separate folders.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/lazy-angular/mvc-based-org.png" />
+  <figcaption>Contrary: MVC based structuring generated by the official Angular Yeoman generator</figcaption>
+</figure>
+
+<p>Thus, having  a &ldquo;feature-based&rdquo; organization and grouping of your code tends to be more useful and maintainable in the long run. Unfortunately, many Angular examples, even official ones, promote the MVC based folder structure (as of now). Take the <a href="https://github.com/angular/angular-seed/tree/master/app/js">angular-seed</a> project or the <a href="https://github.com/yeoman/generator-angular">official Yeoman generator</a>.<br />
+That seems to change, though. The latest official <a href="https://github.com/angular/angular.js/wiki/Best-Practices">Angular best practices guide on GitHub</a> proposes to &ldquo;group your code into related bundles&rdquo; and references the <a href="https://github.com/angular-app/angular-app/tree/master/client/src/app">Angular-app</a> demo which is the code example that accompanies the <a href="http://www.packtpub.com/angularjs-web-application-development/book">Mastering Web Application Development with AngularJS</a> book (must read!).</p>
+
+<p>What you read and hear across the community might not always be as consistent as you&rsquo;d like to have it. Anyway, my approach clearly follows the feature-based cut as it has already proven to be fruitful when developing JavaScript SPAs with JavaScriptMVC/CanJS as well as on a desktop application developed with PRISM.net.</p>
+
+<p>The projects to take a look at for a proper feature-based organization is the source for the Angular book: <a href="https://github.com/angular-app/angular-app/tree/master/client/src/app">GitHub link</a>. The image below illustrates this further.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/lazy-angular/feature-based-org.png" />
+  <figcaption>Feature based code organization by the angular-app sample.</figcaption>
+</figure>
+
+<p>Furthermore <a href="http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DEV-B420">John Papa held a session at this year&rsquo;s TechEd</a> about creating modular Angular applications with the .Net stack. While the backend is less interesting for this article, in <a href="https://github.com/johnpapa/ng-demos/tree/master/modular">his frontend</a> he nicely follows such feature based organization.</p>
+
+<h3 id="implementing-a-feature-based-approach-in-angular">Implementing a feature based approach in Angular</h3>
+
+<p>Angular already disposes of a &ldquo;module system&rdquo; which provides some sort of namespacing. That system naturally fits in the feature-based approach, so <a href="https://github.com/angular/angular.js/wiki/Best-Practices">instead of having modules like</a></p>
+
+<ul>
+<li><code>app.controllers</code>, <code>app.services</code> you have</li>
+<li><code>app.users</code>, <code>app.users.edit</code>, &hellip;</li>
+</ul>
+
+<p>Furthermore, <a href="https://github.com/johnpapa/ng-demos/tree/master/modular/client/app/dashboard">John Papa</a> structures each module to reside in its own folder..</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/lazy-angular/module-structure-papa.png" />
+  <figcaption>Example: a module's internal structure (by John Papa)</figcaption>
+</figure>
+
+<p>..and to contain a dedicated file that just contains the Angular module&rsquo;s definition and eventual dependencies loading: <code>&lt;modulename&gt;.module.js</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+    <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;app.dashboard&#39;</span><span class="p">,</span> <span class="p">[]);</span>
+<span class="p">})();</span>
+</code></pre></div>
+<p>The <a href="https://github.com/angular-app/angular-app/tree/master/client/src/app">official angular demo</a> <a href="https://github.com/angular-app/angular-app/tree/master/client/src/app/admin">follows a nearly identical approach</a>, but instead of having a file named <code>&lt;modulename&gt;.module.js</code> it defines it like <code>&lt;modulename&gt;.js</code>.</p>
+
+<figure class="image--medium">
+  <img src="/blog/assets/imgs/lazy-angular/module-structure-angapp.png" />
+  <figcaption>Example: a module's internal structure (by official Angular-app demo)</figcaption>
+</figure>
+
+<p>Internally that file specifies the module name and dependencies:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;admin-projects&#39;</span><span class="p">,</span> <span class="s1">&#39;admin-users&#39;</span><span class="p">]);</span>
+</code></pre></div>
+<p>The approach taken by both sounds reasonable and is what I ended up mirroring with RequireJS (as we&rsquo;ll see later). The only variable here is the <strong>name of the angular module which gets repeated as hardcoded strings</strong> among submodules. Related to that topic I found an interesting article by Avi Haiat about <a href="http://thaiat.github.io/blog/2014/02/26/angularjs-and-requirejs-for-very-large-applications/">AngularJS and RequireJS for Very Large Applications</a>. He follows an approach where each module has at least the following files:</p>
+
+<p><code>namespace.js</code> - defines the module&rsquo;s name as an AMD module, taking the root namespace (<code>../namespace</code>) and combines it with the current module&rsquo;s name.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">define</span><span class="p">([</span>
+    <span class="s1">&#39;../namespace&#39;</span>
+<span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">rootNamespace</span><span class="p">)</span> <span class="p">{</span>
+    <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="nx">rootNamespace</span> <span class="o">+</span> <span class="s1">&#39;.moduleone&#39;</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><code>module.js</code> - is the actual definition of the Angular module, importing the defined namespace.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">define</span><span class="p">([</span>
+    <span class="s1">&#39;angular&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;./namespace&#39;</span>
+<span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">angular</span><span class="p">,</span> <span class="nx">namespace</span><span class="p">){</span>
+    <span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+    <span class="c1">// module definition
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="nx">namespace</span><span class="p">,</span> <span class="p">[]);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><code>module.require.js</code> - is used for collecting all of the files needed for RequireJS to properly load the module. It basically bundles all of the module&rsquo;s files s.t. any user has just to &ldquo;require&rdquo; the this file to get everything.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">define</span><span class="p">([</span>
+    <span class="s1">&#39;./module&#39;</span><span class="p">,</span>
+    <span class="p">..,</span>
+<span class="p">],</span> <span class="kd">function</span><span class="p">(){</span> 
+<span class="p">});</span>
+</code></pre></div>
+<p>In this way you can change the module names at a single point without having to edit multiple files with hardcoded strings. Although it sounds great from a theoretical perspective, I&rsquo;m not yet sure about whether the overhead of having additional files just for carrying the namespace pays off. We&rsquo;ll see&hellip;</p>
+
+<h2 id="state-of-the-art-of-lazy-loading-in-javascript">State of the Art of Lazy Loading in JavaScript</h2>
+
+<p>Currently <a href="http://requirejs.org/">RequireJS</a> is definitely the state of the art in asynchronously (and lazy) loading of JavaScript files. It is based upon the <a href="http://requirejs.org/docs/whyamd.html">AMD (Asynchronous Module Definition)</a> API.</p>
+
+<p>The basic usage consists of defining an AMD module, say <code>myModule.js</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">define</span><span class="p">([</span><span class="s1">&#39;jquery&#39;</span><span class="p">,</span> <span class="s1">&#39;./logger.js&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">,</span> <span class="nx">logger</span><span class="p">){</span>
+    <span class="c1">// do something
+</span><span class="c1"></span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">doSomething</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hi&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>&hellip;which you can then &ldquo;require&rdquo; somewhere else.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">require</span><span class="p">([</span><span class="s1">&#39;./myModule.js&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(</span><span class="nx">myModule</span><span class="p">){</span>
+    <span class="c1">// do something interesting with it 
+</span><span class="c1"></span><span class="p">});</span>
+</code></pre></div>
+<p>The asynch and potentially even parallel loading of the necessary files is completely managed by RequireJS. Obviously you can also programmatically &ldquo;require&rdquo; some further resources inside your code dynamically:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">someFunction</span><span class="p">(</span><span class="nx">param</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">param</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">){</span>
+        <span class="nx">require</span><span class="p">([</span><span class="s1">&#39;./myModule.js&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">(){</span>
+            <span class="c1">// this callback will be invoked once the dependency has been loaded.
+</span><span class="c1"></span>        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This turns out to be quite useful for our lazy Angular loading implementation.</p>
+
+<h2 id="lazy-loading-and-dependency-injection">Lazy loading and dependency injection</h2>
+
+<p>But, Angular has already it&rsquo;s &ldquo;dependency injection&rdquo; mechanism. Why would I want to also use RequireJS? The two have different targets: <strong>RequireJS loads your physical script files</strong> into the browser while Angular&rsquo;s dependency injection mechanism loads a <strong>logical, runtime artifact by its name</strong>.</p>
+
+<p>In order to have Angular&rsquo;s DI mechanism work properly, all of the JavaScript code has to be loaded and known by the framework. Angular analyzes the code for definitions of controllers, services, directives etc. and injects them at other points when requested. For instance, you define your service:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// definition of a service on an existing Angular module
+</span><span class="c1"></span><span class="nx">myModule</span><span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s1">&#39;consolelogger&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">msg</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+    <span class="p">}</span>   
+<span class="p">});</span>
+</code></pre></div>
+<p>Then, somewhere else you specify your <code>consolelogger</code> as dependency.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">myModule</span><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;MyController&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;consolelogger&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">consolelogger</span><span class="p">){</span>
+    <span class="nx">consolelogger</span><span class="p">(</span><span class="s1">&#39;hi there&#39;</span><span class="p">);</span>
+<span class="p">}]);</span>
+</code></pre></div>
+<p class="notice fact">
+    In Angular's DI you don't have to specify the file location, but simply the name with which you defined your artifact!
+</p>
+
+<p>Thus, Angular&rsquo;s DI is good for testing and better modularity while RequireJS (or alternatives like <a href="http://www.dustindiaz.com/scriptjs">$scriptjs</a> and so on) is definitely the tool for lazy-on-demand loading. But attention, we cannot simply lazy-load some JavaScript files with RequireJS after our Angular app has started because the DI container simply wouldn&rsquo;t recognize those newly created artifacts. Instead, we need to manually tell Angular about those new files that arrived. More on that later.</p>
+
+<h2 id="angular-and-requirejs-for-lazy-loading">Angular and RequireJS for Lazy loading</h2>
+
+<h3 id="existing-approaches-for-lazy-loading">Existing approaches for lazy loading</h3>
+
+<p>When I researched for a proper appraoch on implementing lazy loading in Angular, (after googling a bit) I commented on the <a href="https://groups.google.com/forum/#!topic/angular/kJEgckFT19Y">AngularJS Googel Group</a>. The comments from others, revealed mostly the resources I already found on the web:</p>
+
+<ul>
+<li><a href="http://ify.io/lazy-loading-in-angularjs/">Ifeanyi Isitor on lazy loading with <code>$scriptjs</code></a>. He also added an implementation <a href="https://github.com/ifyio/angularjs-lazy-loading-with-requirejs">using RequireJS</a>.</li>
+<li>Bennadel on <a href="http://www.bennadel.com/blog/2554-loading-angularjs-components-with-requirejs-after-application-bootstrap.htm">his approach to using RequireJS for lazy loading</a>.</li>
+<li><a href="http://marcoslin.github.io/angularAMD/#/home">angularAMD</a> - a project that combines AngularJS+RequireJS in a library for better reusability.</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="http://www.packtpub.com/angularjs-web-application-development/book">Mastering Web Application Development with AngularJS</a></li>
+<li><a href="https://github.com/yeoman/generator-angular">Official Yeoman Angular generator</a></li>
+<li><a href="http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DEV-B420">John Papa TechEd 2014: Building Rich Apps with AngularJS on ASP.net</a> and <a href="https://github.com/johnpapa/ng-demos/tree/master/modular">demo code repository</a></li>
+<li><a href="http://requirejs.org/">RequireJS homepage</a></li>
+<li><a href="https://groups.google.com/forum/#!topic/angular/kJEgckFT19Y">Google Groups post on lazy loading</a></li>
+<li><a href="http://ify.io/lazy-loading-in-angularjs/">Ifeanyi Isitor&rsquo;s lazy loading using $scriptjs</a></li>
+</ul>
+
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    
+
+    
+    
+</body>
+
+</html>

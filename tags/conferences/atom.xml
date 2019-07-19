@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conferences on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/conferences/</link>
+    <description>Recent content in Conferences on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 03 Apr 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/conferences/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>QCon London - My Personal Recap</title>
+      <link>https://juristr.com/blog/2012/04/qcon-london-my-personal-recap/</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2012/04/qcon-london-my-personal-recap/</guid>
+      <description>From the previous posts (or from those on my Tumblr stream) you might have understood my participation at this year&#39;s QCon London. Actually it was my 1st QCon conference and I enjoyed it a lot.</description>
+    </item>
+    
+  </channel>
+</rss>

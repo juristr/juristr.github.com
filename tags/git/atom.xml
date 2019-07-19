@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on juri.strumpflohner</title>
+    <link>https://juristr.com/tags/git/</link>
+    <description>Recent content in Git on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 26 Apr 2019 16:10:05 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/git/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup your Workstation for JavaScript Development</title>
+      <link>https://juristr.com/blog/2019/04/setup-for-angular-dev/</link>
+      <pubDate>Fri, 26 Apr 2019 16:10:05 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/setup-for-angular-dev/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You want to learn about modern web development with JavaScript? Maybe Angular? Well, then it&amp;rsquo;s time to get you setup properly to get started. In this article we&amp;rsquo;ll go through some of the tools.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Productive Git for Developers</title>
+      <link>https://juristr.com/blog/2019/04/productive-git-for-developers/</link>
+      <pubDate>Tue, 16 Apr 2019 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/04/productive-git-for-developers/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    With this Egghead course, I aim at a different goal. You will walk through a series of scenarios which you’ll most commonly encounter in your daily work life as a developer.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/node.js/</link>
+    <description>Recent content in Node.js on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Fri, 15 Aug 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/node.js/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Node, Grunt, Bower and Yeoman - A Modern web dev&#39;s Toolkit</title>
+      <link>https://juristr.com/blog/2014/08/node-grunt-yeoman-bower/</link>
+      <pubDate>Fri, 15 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/08/node-grunt-yeoman-bower/</guid>
+      <description>This article aims at introducing you to some of the currently most popular tools when developing modern web applications with JavaScript. These are totally not new at all and have been around for a couple of years now.</description>
+    </item>
+    
+    <item>
+      <title>Integrating Node.js with a C# dll</title>
+      <link>https://juristr.com/blog/2014/03/integrating-node-with-csharp/</link>
+      <pubDate>Mon, 31 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/03/integrating-node-with-csharp/</guid>
+      <description>Recently I had to integrate a Node.js based server application with a C# DLL. Our software (a web-app) offers the possibility to execute payments over a POS terminal.</description>
+    </item>
+    
+    <item>
+      <title>Automate your UI testing with Nightwatch</title>
+      <link>https://juristr.com/blog/2014/02/nightwatch-test-automation/</link>
+      <pubDate>Fri, 21 Feb 2014 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2014/02/nightwatch-test-automation/</guid>
+      <description>Although I feel like I&#39;m repeating myself, automate **everything**. We&#39;re here to automate the processes and work of our clients. Why don&#39;t we do the same for our own stuff as well?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J2me on juri.strumpflohner</title>
+    <link>https://juristr.com/categories/j2me/</link>
+    <description>Recent content in J2me on juri.strumpflohner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Mon, 03 Aug 2009 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/j2me/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Around(J2)ME listed on Softpedia</title>
+      <link>https://juristr.com/blog/2009/08/aroundj2me-listed-on-softpedia/</link>
+      <pubDate>Mon, 03 Aug 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/08/aroundj2me-listed-on-softpedia/</guid>
+      <description>A project I developed together with my colleague Matthias Braunhofer during the course of Mobile Services at the university has now been listed on Softpedia.</description>
+    </item>
+    
+    <item>
+      <title>ExecutableTask pattern to tackle J2ME multithreading</title>
+      <link>https://juristr.com/blog/2009/07/executabletask-pattern-to-tackle-j2me/</link>
+      <pubDate>Tue, 07 Jul 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/07/executabletask-pattern-to-tackle-j2me/</guid>
+      <description>Programming on the mobile device is quite different to more common environments like web or client-server desktop applications. Although mobile devices become always more and more powerful (i.</description>
+    </item>
+    
+    <item>
+      <title>MIDlet for downloading image from the web</title>
+      <link>https://juristr.com/blog/2009/06/midlet-for-downloading-image-from-web/</link>
+      <pubDate>Mon, 29 Jun 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/06/midlet-for-downloading-image-from-web/</guid>
+      <description>J2ME provides several ways for creating an Image object:
+ Image.createImage(String) Image.createImage(byte[], int, int) Image.createImage(InputStream) &amp;nbsp;If you want to download an image from the web to your local J2ME application, you - of course - have to establish an HttpConnection and retrieve the image with a simple GET.</description>
+    </item>
+    
+    <item>
+      <title>Best practices: The challenge of designing software for wireless devices</title>
+      <link>https://juristr.com/blog/2009/04/best-practices-challenge-of-designing/</link>
+      <pubDate>Tue, 14 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/04/best-practices-challenge-of-designing/</guid>
+      <description>Designing good software for wireless devices such as mobile phones is not straightforward. Developers have to consider and address the device&#39;s constraints such as memory, processing power, input, screen etc.</description>
+    </item>
+    
+    <item>
+      <title>Getting ready for mobile development with Eclipse, WTK and EclipseME</title>
+      <link>https://juristr.com/blog/2009/02/getting-ready-for-mobile-development/</link>
+      <pubDate>Fri, 27 Feb 2009 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2009/02/getting-ready-for-mobile-development/</guid>
+      <description>I just noticed that I did not post one topic about mobile development with J2ME, and that although my thesis was all about J2ME, location-based services and mobile client &amp;lt;-&amp;gt; server interaction.</description>
+    </item>
+    
+  </channel>
+</rss>
