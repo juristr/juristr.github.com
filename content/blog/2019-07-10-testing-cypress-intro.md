@@ -22,8 +22,12 @@ tags:
 
 {{< postad >}}
 
+---
+
 _(from my newsletter. Go [subscribe here](/newsletter))_
 
+
+---
 
 As important as testing is, it is also a question of **cost vs. benefit**. We don't want to blindly test everything, but the most critical parts and create tests that give us most benefit (which we can also call **ROI - Return on Investment**). First of all, let's talk about manual vs. automated testing. I often think about it this way:
 
