@@ -1,6 +1,8 @@
 # remove previous publication
 #SHA=$(git rev-parse HEAD)
-#GIT_USER_ARGS="-c user.name='juristr' -c user.email='juri.strumpflohner@gmail.com'"
+# GIT_USER_ARGS="-c user.name='juristr' -c user.email='juri.strumpflohner@gmail.com'"
+git config user.email "juri.strumpflohner@gmail.com"
+git config user.name "Juri"
 
 echo "cleaning up previous deploy"
 rm -rf public
