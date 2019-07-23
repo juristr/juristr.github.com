@@ -31,7 +31,7 @@ enableInlineShortcodes = true
 [params.author]
   name = "Juri Strumpflohner"
   thumbnail = "https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&d=identicon&r=PG"
-  description = "Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for [Egghead.io](https://egghead.io/instructors/juri-strumpflohner), writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops."
+  description = "Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for [Egghead.io](https://egghead.io/instructors/juri-strumpflohner), writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops. Juri is also a recognized Google Developer Expert in Web Technologies"
   twitter = "@juristr"
   email = "&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;"
   url = "/about/"
