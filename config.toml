@@ -1,6 +1,6 @@
 baseURL = "https://juristr.com"
 languageCode = "en-us"
-title = "juri.strumpflohner"
+title = "juri.dev"
 #theme = "mediumish-gohugo-theme"
 theme = "mediuma"
 summaryLength = 25
