@@ -293,7 +293,17 @@
 
 <h3 id="multiple-parallel-node-versions-needed">Multiple parallel node versions needed?</h3>
 
-<p>Sometimes you need multiple node verions in parallel. In that case, take a look at <a href="https://github.com/nvm-sh/nvm">nvm</a>. (Note, for Windows use <a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a>).</p>
+<p>Sometimes you need multiple node verions in parallel. In that case, take a look at <a href="https://github.com/nvm-sh/nvm">nvm</a>. (Note, for Windows use <a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a>). The installation instructions are on the repo&rsquo;s readme (there&rsquo;s a <code>curl</code> that downloads a script that installs everything).</p>
+
+<p>It will install a <code>nvm</code> binary which allows you to issue commands like</p>
+
+<ul>
+<li><code>nvm list</code> - lists all installed versions of Node</li>
+<li><code>nvm install &lt;version&gt;</code> like <code>nvm install v10.16.0</code> for installing that specific version of node</li>
+<li><code>nvm alias default 10.16.0</code> to make that the default.</li>
+</ul>
+
+<p>Anyway, you can always just execute <code>nvm help</code> to get a list of available commands.</p>
 
 <h2 id="a-code-editor">A Code Editor</h2>
 
