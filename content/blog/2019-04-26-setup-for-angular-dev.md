@@ -52,7 +52,15 @@ Similarly, typing `npm -v` should give you the installed version of NPM.
 
 ### Multiple parallel node versions needed?
 
-Sometimes you need multiple node verions in parallel. In that case, take a look at [nvm](https://github.com/nvm-sh/nvm). (Note, for Windows use [nvm-windows](https://github.com/coreybutler/nvm-windows)).
+Sometimes you need multiple node verions in parallel. In that case, take a look at [nvm](https://github.com/nvm-sh/nvm). (Note, for Windows use [nvm-windows](https://github.com/coreybutler/nvm-windows)). The installation instructions are on the repo's readme (there's a `curl` that downloads a script that installs everything).
+
+It will install a `nvm` binary which allows you to issue commands like
+
+- `nvm list` - lists all installed versions of Node
+- `nvm install <version>` like `nvm install v10.16.0` for installing that specific version of node
+- `nvm alias default 10.16.0` to make that the default.
+
+Anyway, you can always just execute `nvm help` to get a list of available commands.
 
 ## A Code Editor
 
