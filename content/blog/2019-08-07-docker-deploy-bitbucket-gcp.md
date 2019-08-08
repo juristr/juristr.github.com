@@ -221,3 +221,7 @@ pipelines:
       - step: *build-image
       - step: *push-gcp
 ```
+
+### Possible improvements
+
+Encapsulate the various steps in a shell script that you include in the git repo and which you simply launch from the Bitbucket pipeline. That way you can also locally very easily build and push a new version if you need. Moreover the pipeline remains cleaner and more maintainable.
