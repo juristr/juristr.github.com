@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on juri.dev</title>
+    <link>https://juristr.com/categories/docker/</link>
+    <description>Recent content in Docker on juri.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Wed, 07 Aug 2019 14:55:26 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/categories/docker/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Publish a Docker container from Bitbucket to Google Cloud Container Registry</title>
+      <link>https://juristr.com/blog/2019/08/docker-deploy-bitbucket-ci-to-gcp/</link>
+      <pubDate>Wed, 07 Aug 2019 14:55:26 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/08/docker-deploy-bitbucket-ci-to-gcp/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Automation is key, I cannot repeat that often enough. In this article we&amp;rsquo;re going to explore how to setup and configure your Bitbucket pipeline, to automate the pushing of your Docker containers to the Google Cloud Container Registry.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
