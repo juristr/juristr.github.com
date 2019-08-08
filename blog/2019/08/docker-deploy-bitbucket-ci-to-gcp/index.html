@@ -268,7 +268,10 @@
 <li><a href="#login-and-push">Login and push</a></li>
 </ul></li>
 <li><a href="#passing-the-compiled-image-between-pipeline-steps">Passing the compiled image between pipeline steps</a></li>
-<li><a href="#conclusion-full-script">Conclusion &amp; Full script</a></li>
+<li><a href="#conclusion-full-script">Conclusion &amp; Full script</a>
+<ul>
+<li><a href="#possible-improvements">Possible improvements</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -468,6 +471,10 @@ pipelines:
       - step: *build-image
       - step: *push-gcp
 </code></pre>
+
+<h3 id="possible-improvements">Possible improvements</h3>
+
+<p>Encapsulate the various steps in a shell script that you include in the git repo and which you simply launch from the Bitbucket pipeline. That way you can also locally very easily build and push a new version if you need. Moreover the pipeline remains cleaner and more maintainable.</p>
 
 				<hr />
 
