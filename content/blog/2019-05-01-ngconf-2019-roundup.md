@@ -60,7 +60,25 @@ One of the main features that are coming in v8 is **differential loading**. Perf
 
 {{<figure url="/blog/assets/imgs/ngconf2019/differential-loading.png" size="full">}}
 
-This allows to save ~7-20% of the current bundle size.
+In your `index.html` this might then look similar to
+
+```html
+<html>
+<body>
+  ...
+  <script src="runtime-es2015.dad4acd01345fe10b787.js" type="module"></script>
+  <script src="runtime-es5.6cffd6705a5f1b5672ec.js" nomodule></script>
+  
+  <script src="polyfills-es2015.7a264d14fd7126ba8db0.js" type="module"></script>
+  <script src="polyfills-es5.e0a0858fa7791e140ae9.js" nomodule></script>
+  
+  <script src="main-es2015.10d662e5c82a4d9bdd45.js" type="module"></script>
+  <script src="main-es5.650a5faad890ed815a26.js" nomodule></script></body>
+</body>
+</html>
+```
+
+The `type="module"` will be interpreted by modern browsers, loading the `es2015` optimized bundles, while legacy browsers will fallback to the `nomodule` script tags. This allows to save ~7-20% of the current bundle size. And the best of all? No server-side infrastructure changes are needed. This is entirely handled by the browser 🎉.
 
 But there are more features to come:
 
