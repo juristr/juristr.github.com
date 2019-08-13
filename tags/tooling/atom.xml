@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Thu, 23 May 2019 12:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 11:37:24 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/tags/tooling/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>It’s time to say thank you to the Angular CLI Team!</title>
+      <link>https://juristr.com/blog/2019/08/thank-you-angular-cli-team/</link>
+      <pubDate>Tue, 13 Aug 2019 11:37:24 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/08/thank-you-angular-cli-team/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Nowadays, you can &lt;strong&gt;create&lt;/strong&gt;, and &lt;strong&gt;run a new Angular project&lt;/strong&gt; in minutes (!! 🔥). It really just depends how fast your internet is to download all the &lt;code&gt;node_modules&lt;/code&gt;. This wasn’t always the case in the Angular community but many forgot about it!
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Create Code Snippets for Visual Studio Code with ease</title>

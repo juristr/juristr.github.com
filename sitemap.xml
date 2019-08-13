@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2019/08/thank-you-angular-cli-team/</loc>
+    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2019/08/docker-deploy-bitbucket-ci-to-gcp/</loc>
     <lastmod>2019-08-07T14:55:26+02:00</lastmod>
   </url>
@@ -3822,7 +3830,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2019-08-07T14:55:26+02:00</lastmod>
+    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
   </url>
   
   
@@ -3873,7 +3881,7 @@
   
   <url>
     <loc>https://juristr.com/tags/angular/</loc>
-    <lastmod>2019-06-03T12:00:00+02:00</lastmod>
+    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3882,7 +3890,7 @@
   
   <url>
     <loc>https://juristr.com/categories/angular/</loc>
-    <lastmod>2019-06-03T12:00:00+02:00</lastmod>
+    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3979,7 +3987,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2019-08-07T14:55:26+02:00</lastmod>
+    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4294,7 +4302,7 @@
   
   <url>
     <loc>https://juristr.com/tags/javascript/</loc>
-    <lastmod>2019-07-16T12:00:00+02:00</lastmod>
+    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4658,7 +4666,7 @@
   
   <url>
     <loc>https://juristr.com/tags/tooling/</loc>
-    <lastmod>2019-05-23T12:00:00+02:00</lastmod>
+    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   

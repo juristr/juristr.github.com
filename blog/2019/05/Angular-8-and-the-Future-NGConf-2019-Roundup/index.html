@@ -396,7 +396,21 @@
 
 
 
-<p>This allows to save ~7-20% of the current bundle size.</p>
+<p>In your <code>index.html</code> this might then look similar to</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;runtime-es2015.dad4acd01345fe10b787.js&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;runtime-es5.6cffd6705a5f1b5672ec.js&#34;</span> <span class="na">nomodule</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;polyfills-es2015.7a264d14fd7126ba8db0.js&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;polyfills-es5.e0a0858fa7791e140ae9.js&#34;</span> <span class="na">nomodule</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;main-es2015.10d662e5c82a4d9bdd45.js&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;main-es5.650a5faad890ed815a26.js&#34;</span> <span class="na">nomodule</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
+<p>The <code>type=&quot;module&quot;</code> will be interpreted by modern browsers, loading the <code>es2015</code> optimized bundles, while legacy browsers will fallback to the <code>nomodule</code> script tags. This allows to save ~7-20% of the current bundle size. And the best of all? No server-side infrastructure changes are needed. This is entirely handled by the browser 🎉.</p>
 
 <p>But there are more features to come:</p>
 
