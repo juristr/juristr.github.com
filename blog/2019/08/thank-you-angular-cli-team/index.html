@@ -223,7 +223,7 @@
                             Aug 13, 2019
                         </time></span>
                     <span class="dot"></span>
-                    <span class="post-read">8 min read</span>
+                    <span class="post-read">10 min read</span>
                 </p>
             </div>
 
@@ -258,7 +258,33 @@
 
 <p>I think it is time to sometimes stop and simply say: <strong>thank you!</strong></p>
 
-<h2 id="thank-you-for-generating-a-new-project-in-minutes">Thank you for generating a new project in minutes</h2>
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#thank-you-for-letting-me-generate-a-new-project-in-minutes">Thank you for letting me generate a new project in minutes ⚡️</a></li>
+<li><a href="#thank-you-for-the-development-server">Thank you for the development server 👨‍💻👩‍💻</a></li>
+<li><a href="#thank-you-for-helping-me-scaffold-new-code">Thank you for helping me scaffold new code 👷‍♀️👷‍♂️</a></li>
+<li><a href="#thank-you-for-making-it-so-easy-to-run-tests">Thank you for making it so easy to run tests ✅</a></li>
+<li><a href="#thank-you-for-making-lazy-loading-a-breeze">Thank you for making lazy loading a breeze 😴</a></li>
+<li><a href="#thank-you-for-making-building-so-easy">Thank you for making building so easy 🏗</a></li>
+<li><a href="#thank-you-for-automated-upgrading">Thank you for automated upgrading 🚀</a></li>
+<li><a href="#thank-you-for-making-me-aware-of-performance-issues">Thank you for making me aware of performance issues 🚀</a></li>
+<li><a href="#thank-you-for-allowing-me-to-add-pwa-support-with-the-blink-of-an-eye">Thank you for allowing me to add PWA support with the blink of an eye 👀</a></li>
+<li><a href="#thank-you-for-making-it-extensible">Thank you for making it extensible 🔝</a></li>
+<li><a href="#thank-you-for-making-deploying-so-easy">Thank you for making deploying so easy 🚀</a></li>
+<li><a href="#thank-you-for-automatically-optimizing-my-build-for-the-browsers">Thank you for automatically optimizing my build for the browsers</a></li>
+<li><a href="#thank-you-for-what-s-coming-next">Thank you for what’s coming next!! 🔥</a></li>
+<li><a href="#thank-you-for">Thank you for&hellip;</a></li>
+<li><a href="#that-said">That said&hellip;</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<h2 id="thank-you-for-letting-me-generate-a-new-project-in-minutes">Thank you for letting me generate a new project in minutes ⚡️</h2>
 
 <p>You really just <a href="/blog/2019/04/setup-for-angular-dev/">need to have the basic JavaScript tooling</a> installed on your machine and type</p>
 
@@ -267,7 +293,7 @@
 
 <p>What you’ll get is a fully configured Angular app, following the latest best practices!! It is also automatically configured and setup to build, run, test and deploy your app.</p>
 
-<h2 id="thank-you-for-the-development-server">Thank you for the development server</h2>
+<h2 id="thank-you-for-the-development-server">Thank you for the development server 👨‍💻👩‍💻</h2>
 
 <p><em>Docs: <a href="https://angular.io/cli/serve">https://angular.io/cli/serve</a></em></p>
 
@@ -281,7 +307,7 @@
 <pre><code>$ ng serve
 </code></pre>
 
-<p>…and your project will be served on <code>http://localhost:4200</code> (by default, and this is customizable as well). Your TS code will be compiled on the fly (incrementally!), It will also automatically compile SASS code etc. The CLI even monitors your file system, recompiles and re-serves automatically on each change.</p>
+<p>…and your project will be served on <code>http://localhost:4200</code> (by default, and this is customizable as well). Your TS code will be compiled on the fly (incrementally!), It will also <strong>automatically compile SASS</strong> code etc and the CLI monitors your file system, recompiles and <strong>re-serves automatically on each change</strong>.</p>
 
 <p>Also, need to use <code>https</code> on localhost? Just use the <code>--ssl</code> flag and you’re good to go. Behind the scenes, local temporary certificates are being generated and all set up for you.</p>
 
@@ -313,7 +339,7 @@
 </div>
 
 
-<h2 id="thank-you-for-helping-me-scaffold-new-code">Thank you for helping me scaffold new code</h2>
+<h2 id="thank-you-for-helping-me-scaffold-new-code">Thank you for helping me scaffold new code 👷‍♀️👷‍♂️</h2>
 
 <p><em>Docs: <a href="https://angular.io/cli/generate">https://angular.io/cli/generate</a></em></p>
 
@@ -329,7 +355,7 @@
 
 <p>..and you’ll get a new Angular module, hooked up with lazy loading wrt. the <code>app.module.ts</code></p>
 
-<h2 id="thank-you-for-making-it-so-easy-to-run-tests">Thank you for making it so easy to run tests</h2>
+<h2 id="thank-you-for-making-it-so-easy-to-run-tests">Thank you for making it so easy to run tests ✅</h2>
 
 <p><em>Docs: <a href="https://angular.io/cli/test">https://angular.io/cli/test</a></em></p>
 
@@ -340,7 +366,7 @@
 
 <p>which internally invokes <code>ng test</code> to spin up <a href="https://karma-runner.github.io/latest/index.html">Karma</a> that’ll execute all of your test files and report it back to the terminal. Hooking this up with some build CI system is really easy. <em>(Note, you by default the CLI adds Karma &amp; Jasmine tests. But you can also use Jest if you want. Just quickly google for it)</em></p>
 
-<h2 id="thank-you-for-making-lazy-loading-a-breeze">Thank you for making lazy loading a breeze</h2>
+<h2 id="thank-you-for-making-lazy-loading-a-breeze">Thank you for making lazy loading a breeze 😴</h2>
 
 <p>Generate a new lazy loaded module, or write a path using the <code>import</code> statement, like</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">routes</span> <span class="o">=</span> <span class="p">[</span>
@@ -380,7 +406,7 @@
         Egghead.io</a>
 </div></p>
 
-<h2 id="thank-you-for-making-building-so-easy">Thank you for making building so easy</h2>
+<h2 id="thank-you-for-making-building-so-easy">Thank you for making building so easy 🏗</h2>
 
 <p><em>Doc: <a href="https://angular.io/cli/build">https://angular.io/cli/build</a></em></p>
 
@@ -399,7 +425,7 @@
 <li>TODO WRITE MORE FEATURES HERE</li>
 </ul>
 
-<h2 id="thank-you-for-automated-upgrading">Thank you for automated upgrading</h2>
+<h2 id="thank-you-for-automated-upgrading">Thank you for automated upgrading 🚀</h2>
 
 <p><em>Docs: <a href="https://angular.io/cli/update">https://angular.io/cli/update</a></em></p>
 
@@ -409,7 +435,70 @@
 
 <p>Check out <a href="https://update.angular.io/">https://update.angular.io</a> or my <a href="/blog/2019/06/angular-v8/">recent blog post about it</a>.</p>
 
-<h2 id="thank-you-for-making-it-extensible">Thank you for making it extensible</h2>
+<h2 id="thank-you-for-making-me-aware-of-performance-issues">Thank you for making me aware of performance issues 🚀</h2>
+
+<p><em>Docs: <a href="https://angular.io/guide/build#configure-size-budgets">https://angular.io/guide/build#configure-size-budgets</a></em></p>
+
+<p>By configuring size budgets the CLI will let you know when you&rsquo;re over the specified treshold. Just go to your project&rsquo;s <code>angular.json</code> and specify the corresponding budgets you&rsquo;d like to measure, for instance</p>
+
+<pre><code>{
+  ...
+  &quot;projects&quot;: {
+    &quot;ngperf&quot;: {
+      &quot;projectType&quot;: &quot;application&quot;,
+      ...
+      &quot;architect&quot;: {
+        &quot;build&quot;: {
+          &quot;builder&quot;: &quot;@angular-devkit/build-angular:browser&quot;,
+          ...
+          &quot;configurations&quot;: {
+            &quot;production&quot;: {
+              ...
+              &quot;budgets&quot;: [
+                {
+                  &quot;type&quot;: &quot;bundle&quot;,
+                  &quot;name&quot;: &quot;main&quot;,
+                  &quot;maximumWarning&quot;: &quot;350kb&quot;,
+                  &quot;maximumError&quot;: &quot;500kb&quot;
+                }
+              ]
+            }
+          }
+        },
+        ...
+      }
+    }
+  }
+}
+</code></pre>
+
+
+<figure class="image--full">
+
+    <a href="/blog/assets/imgs/performance-budgets.png" class="image--zoom">
+        <img src="/blog/assets/imgs/performance-budgets.png" loading="lazy" class="lazyload"/>
+    </a>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h2 id="thank-you-for-allowing-me-to-add-pwa-support-with-the-blink-of-an-eye">Thank you for allowing me to add PWA support with the blink of an eye 👀</h2>
+
+<p><em>Docs: <a href="https://angular.io/guide/service-worker-getting-started">https://angular.io/guide/service-worker-getting-started</a></em></p>
+
+<p>You may not even aim for a fully featured PWA (Progressive Web App), with push notifications and being installable and what not. But one feature is for sure pure gold: <strong>adding a service worker for client-side caching of resources</strong>. Now, the service worker API isn&rsquo;t super difficult, but it has its pitfalls and things you need to be aware of. Instead of going to use the native SW APIs you could also take a more high-level tool like <a href="https://developers.google.com/web/tools/workbox/">workbox</a>. I&rsquo;ve used that in combination with Angular projects and it works like charm.</p>
+
+<p>But even easier is to use the Angular built-in PWA support, by installing</p>
+
+<pre><code>$ ng add @angular/pwa --project *project-name*
+</code></pre>
+
+<p>With that, your project will be setup with a service worker and you can control its features via the <code>ngsw-config.json</code> as <a href="https://angular.io/guide/service-worker-config">described here</a>. The cool thing about this is that Angular will take care of the proper configuration of the SW based on your config. That helps you avoid certain traps. And if you should still fall into one, there are even <a href="https://angular.io/guide/service-worker-devops#fail-safe">fail-safe mechanisms built-in</a>.</p>
+
+<h2 id="thank-you-for-making-it-extensible">Thank you for making it extensible 🔝</h2>
+
+<p><em>Docs: <a href="https://angular.io/guide/cli-builder">https://angular.io/guide/cli-builder</a></em></p>
 
 <p>But what if you need more customization? Behind the scenes, the Angular CLI uses Webpack to run the build and serve the project. That configuration is abstracted and hidden away. That’s the whole point of having the CLI and taking away complexity. For a while there was an “eject command” which would reveal the configuration. But from that point on you were on your own.</p>
 
@@ -489,9 +578,9 @@
 </div>
 
 
-<h2 id="there-s-much-more">There’s much more…</h2>
+<h2 id="thank-you-for">Thank you for&hellip;</h2>
 
-<p>These are just some things the CLI does for us. Be curious and take the time to go have a look at your <code>angular.json</code> file from now and then and experiment with the various options. Or go to the <a href="https://angular.io/cli">CLI docs</a> and check out new commands and flags which may make your life so much easier.</p>
+<p>&hellip;all the things I don&rsquo;t even know are being handled behind the scenes for me. Suggestion: be curious and take the time to go have a look at your <code>angular.json</code> file from now and then and experiment with the various options. Or go to the <a href="https://angular.io/cli">CLI docs</a> and check out new commands and flags which may make your life so much easier. There&rsquo;s much more to explore than you would think of.</p>
 
 <h2 id="that-said">That said&hellip;</h2>
 
