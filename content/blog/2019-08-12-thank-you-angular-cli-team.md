@@ -30,7 +30,9 @@ When I first heard the Angular team talking about a CLI, I was like 🎉🎉🎉
 
 I think it is time to sometimes stop and simply say: **thank you!**
 
-## Thank you for generating a new project in minutes
+{{<toc>}}
+
+## Thank you for letting me generate a new project in minutes ⚡️
 
 You really just [need to have the basic JavaScript tooling](/blog/2019/04/setup-for-angular-dev/) installed on your machine and type
 
@@ -40,7 +42,7 @@ $ npx @angular/cli new my-first-app
 
 What you’ll get is a fully configured Angular app, following the latest best practices!! It is also automatically configured and setup to build, run, test and deploy your app.
 
-## Thank you for the development server
+## Thank you for the development server 👨‍💻👩‍💻
 
 *Docs: https://angular.io/cli/serve*
 
@@ -56,7 +58,7 @@ which will internally call
 $ ng serve
 ```
 
-…and your project will be served on `http://localhost:4200` (by default, and this is customizable as well). Your TS code will be compiled on the fly (incrementally!), It will also automatically compile SASS code etc. The CLI even monitors your file system, recompiles and re-serves automatically on each change.
+…and your project will be served on `http://localhost:4200` (by default, and this is customizable as well). Your TS code will be compiled on the fly (incrementally!), It will also **automatically compile SASS** code etc and the CLI monitors your file system, recompiles and **re-serves automatically on each change**.
 
 Also, need to use `https` on localhost? Just use the `--ssl` flag and you’re good to go. Behind the scenes, local temporary certificates are being generated and all set up for you.
 
@@ -71,7 +73,7 @@ Your backend is running on localhost as well, on a different port? You probably 
 
 {{<youtube OjmZPPKaj6A >}}
 
-## Thank you for helping me scaffold new code
+## Thank you for helping me scaffold new code 👷‍♀️👷‍♂️
 
 *Docs: https://angular.io/cli/generate*
 
@@ -89,7 +91,7 @@ $ ng g m people --route --m app.module.ts
 
 ..and you’ll get a new Angular module, hooked up with lazy loading wrt. the `app.module.ts`
 
-## Thank you for making it so easy to run tests
+## Thank you for making it so easy to run tests ✅
 
 *Docs: https://angular.io/cli/test*
 
@@ -101,7 +103,7 @@ $ npm test
 
 which internally invokes `ng test` to spin up [Karma](https://karma-runner.github.io/latest/index.html) that’ll execute all of your test files and report it back to the terminal. Hooking this up with some build CI system is really easy. _(Note, you by default the CLI adds Karma & Jasmine tests. But you can also use Jest if you want. Just quickly google for it)_
 
-## Thank you for making lazy loading a breeze
+## Thank you for making lazy loading a breeze 😴
 
 Generate a new lazy loaded module, or write a path using the `import` statement, like
 
@@ -126,7 +128,7 @@ const routes = [
 **Lazy load a route with the Angular router**
 {{<egghead-lesson uid="lessons/angular-lazy-load-a-route-with-the-angular-router" >}}
 
-## Thank you for making building so easy
+## Thank you for making building so easy 🏗
 
 *Doc: https://angular.io/cli/build*
 
@@ -145,7 +147,7 @@ and the CLI will automatically build your project, ready to be deployed. That in
 - TODO WRITE MORE FEATURES HERE
 
 
-## Thank you for automated upgrading
+## Thank you for automated upgrading 🚀
 
 *Docs: https://angular.io/cli/update*
 
@@ -155,7 +157,63 @@ Change is inevitable, so you better embrace it. The Angular team decided to have
 
 Check out [https://update.angular.io](https://update.angular.io/) or my [recent blog post about it](/blog/2019/06/angular-v8/).
 
-## Thank you for making it extensible
+## Thank you for making me aware of performance issues 🚀
+
+_Docs: https://angular.io/guide/build#configure-size-budgets_
+
+By configuring size budgets the CLI will let you know when you're over the specified treshold. Just go to your project's `angular.json` and specify the corresponding budgets you'd like to measure, for instance
+
+```
+{
+  ...
+  "projects": {
+    "ngperf": {
+      "projectType": "application",
+      ...
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          ...
+          "configurations": {
+            "production": {
+              ...
+              "budgets": [
+                {
+                  "type": "bundle",
+                  "name": "main",
+                  "maximumWarning": "350kb",
+                  "maximumError": "500kb"
+                }
+              ]
+            }
+          }
+        },
+        ...
+      }
+    }
+  }
+}
+```
+
+{{<figure url="/blog/assets/imgs/performance-budgets.png" size="full">}}
+
+## Thank you for allowing me to add PWA support with the blink of an eye 👀
+
+_Docs: https://angular.io/guide/service-worker-getting-started_
+
+You may not even aim for a fully featured PWA (Progressive Web App), with push notifications and being installable and what not. But one feature is for sure pure gold: **adding a service worker for client-side caching of resources**. Now, the service worker API isn't super difficult, but it has its pitfalls and things you need to be aware of. Instead of going to use the native SW APIs you could also take a more high-level tool like [workbox](https://developers.google.com/web/tools/workbox/). I've used that in combination with Angular projects and it works like charm.
+
+But even easier is to use the Angular built-in PWA support, by installing
+
+```
+$ ng add @angular/pwa --project *project-name*
+```
+
+With that, your project will be setup with a service worker and you can control its features via the `ngsw-config.json` as [described here](https://angular.io/guide/service-worker-config). The cool thing about this is that Angular will take care of the proper configuration of the SW based on your config. That helps you avoid certain traps. And if you should still fall into one, there are even [fail-safe mechanisms built-in](https://angular.io/guide/service-worker-devops#fail-safe).  
+
+## Thank you for making it extensible 🔝
+
+_Docs: https://angular.io/guide/cli-builder_
 
 But what if you need more customization? Behind the scenes, the Angular CLI uses Webpack to run the build and serve the project. That configuration is abstracted and hidden away. That’s the whole point of having the CLI and taking away complexity. For a while there was an “eject command” which would reveal the configuration. But from that point on you were on your own.
 
@@ -210,9 +268,9 @@ There's a lot still coming. For instance [Bazel](https://bazel.angular.io) is ar
 
 {{<youtube J1lnp-nU4wM >}}
 
-## There’s much more…
+## Thank you for...
 
-These are just some things the CLI does for us. Be curious and take the time to go have a look at your `angular.json` file from now and then and experiment with the various options. Or go to the [CLI docs](https://angular.io/cli) and check out new commands and flags which may make your life so much easier.
+...all the things I don't even know are being handled behind the scenes for me. Suggestion: be curious and take the time to go have a look at your `angular.json` file from now and then and experiment with the various options. Or go to the [CLI docs](https://angular.io/cli) and check out new commands and flags which may make your life so much easier. There's much more to explore than you would think of.
 
 ## That said...
 
