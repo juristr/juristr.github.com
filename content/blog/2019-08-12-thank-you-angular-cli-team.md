@@ -144,7 +144,7 @@ and the CLI will automatically build your project, ready to be deployed. That in
 - minification of your JS code
 - (compilation of your Sass code if you chose to use Sass)
 - minification of your CSS
-- TODO WRITE MORE FEATURES HERE
+- ...
 
 
 ## Thank you for automated upgrading 🚀
