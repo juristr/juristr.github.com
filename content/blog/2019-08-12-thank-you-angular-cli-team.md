@@ -24,7 +24,7 @@ draft: false
 
 Back in the days (and now I definitely start feeling old), we talked about **JavaScript fatigue**. I seem to hear that much less recently. Most of that fatigue was **centered around tooling**. When going to setup a new JS based project, you were searching around for good starters, for hours. Once you got one, you started customizing it to your needs. I remember to navigate through endless [GruntJS](https://gruntjs.com) scripts, later [GulpJS](https://gulpjs.com) then [Webpack](https://webpack.js.org). 
 
-Setting up a project to just get started took hours if not days. Configuring JS code compilation, CSS compilation (maybe SASS), hook in the test runner with Karma etc…and with that it wasn’t done. Most likely you continued to tweak the config over time as the project progresses. And most likely only you or one of your team mates knew what was going on, and all others were scared to touch the config.
+Setting up a project to just get started took hours if not days. Configuring JS code compilation, CSS compilation (maybe Sass), hook in the test runner with Karma etc…and with that it wasn’t done. Most likely you continued to tweak the config over time as the project progresses. And most likely only you or one of your team mates knew what was going on, and all others were scared to touch the config.
 
 When I first heard the Angular team talking about a CLI, I was like 🎉🎉🎉. I knew it was going to make life so much easier. The problem is, once you have it, you forget about how difficult it was before…and newcomers don’t even know how much is going on behind the scenes. 
 
@@ -58,7 +58,7 @@ which will internally call
 $ ng serve
 ```
 
-…and your project will be served on `http://localhost:4200` (by default, and this is customizable as well). Your TS code will be compiled on the fly (incrementally!), It will also **automatically compile SASS** code etc and the CLI monitors your file system, recompiles and **re-serves automatically on each change**.
+…and your project will be served on `http://localhost:4200` (by default, and this is customizable as well). Your TS code will be compiled on the fly (incrementally!), It will also **automatically compile Sass** code etc and the CLI monitors your file system, recompiles and **re-serves automatically on each change**.
 
 Also, need to use `https` on localhost? Just use the `--ssl` flag and you’re good to go. Behind the scenes, local temporary certificates are being generated and all set up for you.
 
@@ -142,7 +142,7 @@ and the CLI will automatically build your project, ready to be deployed. That in
 
 - Angular specific compilation (AoT, ...)
 - minification of your JS code
-- (compilation of your SASS code if you chose to use SASS)
+- (compilation of your Sass code if you chose to use Sass)
 - minification of your CSS
 - TODO WRITE MORE FEATURES HERE
 
