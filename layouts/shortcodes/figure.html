@@ -3,9 +3,14 @@
 {{ else }}
 <figure class="image--medium">
 {{ end }}
-    <a href="{{ .Get "url" }}" class="image--zoom">
+    {{ if .Get "nozoom" }}
         <img src="{{ .Get "url" }}" loading="lazy" class="lazyload"/>
-    </a>
+    {{ else }}
+        <!-- FIXME: if I use `image-zoom` the jQuery plugin loads all images eagerly -->
+        <a href="{{ .Get "url" }}" class="image--zoom">
+            <img src="{{ .Get "url" }}" loading="lazy" class="lazyload"/>
+        </a>
+    {{ end }}
     <figcaption>{{ .Get "caption" }}</figcaption>
 </figure>
 

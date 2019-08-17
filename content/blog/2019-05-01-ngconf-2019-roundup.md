@@ -39,26 +39,26 @@ _Brad Green & Igor Minar - [Youtube](https://youtu.be/O0xx5SvjmnU), [Slides](htt
 
 First and foremost, before going ahead with "tech details", this is what the Angular community stands for..
 
-{{<figure url="/blog/assets/imgs/ngconf2019/angular-values.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/angular-values.png" size="full" nozoom="true">}}
 
 ..and I can just confirm this 100%. Especially also the community aspect: I've been in the community for a couple of years now, visited conferences, spoke at conferences and all are extremely welcoming, friendly and helpful.
 
 
 **Angular is a platform**, no more just a framework, which comprises a number of products.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/angular-products.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/angular-products.png" size="full" nozoom="true">}}
 
 You don't have to use all of them. You can plug them in based on your needs. The Angular team behind, makes sure they all fit together nicely and that the tooling around is built to be best integrated and makes you most productive.
 
 Angular version 8 is currently (as of writing this article) in RC mode and is to be released ~end of May.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/angular-release-timeline.png" size="full" caption="Angular release timeline for v8 and v9">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/angular-release-timeline.png" size="full" caption="Angular release timeline for v8 and v9" nozoom="true">}}
 
 ### Differential Loading
 
 One of the main features that are coming in v8 is **differential loading**. Performance has high priority for the Angular team and the Chrome team at Google in general. Among other optimization techniques (i.e. [see my lazy loading article](/blog/2019/04/Lazy-Loading-Components-with-Angular-Elements/)), differential loading creates two different bundles: one for legacy browsers and one (with reduced polyfills) for modern evergreen browsers.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/differential-loading.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/differential-loading.png" size="full" nozoom="true">}}
 
 In your `index.html` this might then look similar to
 
@@ -82,7 +82,7 @@ The `type="module"` will be interpreted by modern browsers, loading the `es2015`
 
 But there are more features to come:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/features-v8.png" size="full" caption="Angular v8 features">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/features-v8.png" size="full" caption="Angular v8 features" nozoom="true">}}
 
 ### Builders
 
@@ -147,29 +147,29 @@ Starting from v8 you can use the native `import()` API and rewrite it like
 
 There's some work in progress as well:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/angular-version-9.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/angular-version-9.png" size="full" nozoom="true">}}
 
 **Bazel** is one of those. It's the open source version of Google's internal "Blaze" build tool that powers its huge internal monorepo. Bazel is known for being extremely fast, especially due to its ability of allowing it to scale on the cloud as well (Google has an internal requirement that on average a rebuild of any codebase size should never take longer than ~3 secs :scream:)
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-features.png" size="full" caption="Bazel features">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-features.png" size="full" caption="Bazel features" nozoom="true">}}
 
 A dedicated team within the Angular team is currently working on bringing Bazel to the Angular community s.t. we can all benefit from such a super-power build tool. Currently it's still an "early version" which can be used and works already, but is still a bit rough. By Q9 the goal is that everyone will be able to basically just enable a flag on the CLI configuration and Bazel will take care of the build rather than Webpack (something like that. details are still in the works ofc).
 
 So far internally at Google some really big improvements could be observed by using Bazel:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-build-time-reduction.png" size="full" caption="Build time improvements powered by Bazel">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-build-time-reduction.png" size="full" caption="Build time improvements powered by Bazel" nozoom="true">}}
 
 And of course the new **Ivy renderer**. Here are the goals for it:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ivy-features-overview.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ivy-features-overview.png" size="full" nozoom="true">}}
 
 The current focus for v8 was especially to guarantee **backwards compatibility**. Most important, **Ivy won't be on by default in v8**. The team ships it with v8 with the possibility to opt-in. Currently inside Google 97% of all of the unit, integration and screenshot tests are currently passing.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ivy-tests-google.png" size="full" caption="Passing unit, integration and screenshot tests @ Google">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ivy-tests-google.png" size="full" caption="Passing unit, integration and screenshot tests @ Google" nozoom="true">}}
 
 This makes the team quite confident, however they're using the time to Angular v9 (in Q4 this year) to get some further feedback from the community.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ivy-backwards-risks.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ivy-backwards-risks.png" size="full" nozoom="true">}}
 
 The Angular team is interested in getting feedback for projects with lots of different dependencies to see how well these work with Ivy
 
@@ -196,7 +196,7 @@ All the details can be found on [https://next.angular.io/guide/ivy](https://next
 
 So what does Ivy bring us most importantly? First of all **smaller bundles**.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ivy-size-chart.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ivy-size-chart.png" size="full" nozoom="true">}}
 
 To explain this image:
 
@@ -213,7 +213,7 @@ Besides that, Ivy comes with some really nice side effects as well:
 
 ### Angular Everygreen
 
-{{<figure url="/blog/assets/imgs/ngconf2019/angular-evergreen.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/angular-evergreen.png" size="full" nozoom="true">}}
 
 One of the goals of Angular straight from the beginning was to become an "evergreen platform". If you think about the fast evolving web tech, this is quite a crazy goal, right? But now we're already at version 8 and we're getting reports from company's out there that upgrade across "potentially breaking verions" without hassle and in record time. Just read [Air France KLM's post](https://medium.com/airfrance-klm/how-we-upgraded-a-website-with-half-a-billion-annual-users-to-angular-7-in-less-then-a-day-71de33a1108e).
 
@@ -221,19 +221,19 @@ One of the goals of Angular straight from the beginning was to become an "evergr
 
 In the following chart, we see the scaling Angular.js (v1) aimed for. It was for quickly building small to medium sized apps.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/scaling-angularjs.png" size="full" caption="AngularJS scaling from small to medium apps">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/scaling-angularjs.png" size="full" caption="AngularJS scaling from small to medium apps" nozoom="true">}}
 
 However due to technical limits, it wasn't able to scale that beyond, which is the main reason Angular (2+) started. The goal was to have all of the reach of AngularJS + what Angular 2+ would bring. Instead, right now this is the situation, currently mostly suitable for the enterprise use case:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/scaling-current-angular.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/scaling-current-angular.png" size="full" nozoom="true">}}
 
 With Angular Ivy and especially [Angular Elements](/blog/2019/04/intro-to-angular-elements/) this can be extended to the small apps as well, where no full blown app is needed but just small integration points and components.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/scaling-angular-ivy.png" size="full" caption="Scaling with Ivy and Angular Elements">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/scaling-angular-ivy.png" size="full" caption="Scaling with Ivy and Angular Elements" nozoom="true">}}
 
 A new project named "Photon" is targeting the upper part of the curve, where the really big enterprise apps lie.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/scaling-angular-photon.png" size="full" caption="Upper scaling with Photon">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/scaling-angular-photon.png" size="full" caption="Upper scaling with Photon" nozoom="true">}}
 
 As you note, there's still a space in the very upper part (Billion user apps), and while the team cannot announce anything yet, they're collaborating with a Google internal team that is specifically designing those apps to evaluate whether Angular could expand into that space as well. 
 
@@ -243,7 +243,7 @@ As most know, Angular is developed completely OSS on GitHub and brought into Goo
 
 Also, there's a vivid exchange and a mutual benefit between Google and the OSS community.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/angular-oss.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/angular-oss.png" size="full" nozoom="true">}}
 
 Projects like Ivy came from the OSS community into Google and now have a major impact. Similar, build tools like Bazel started at Google and are now in the process of being open sourced.
 
@@ -251,11 +251,11 @@ Projects like Ivy came from the OSS community into Google and now have a major i
 
 The Angular ecosystem grows and grows and more PRs come in from OSS contributors. In order to make sure the team doesn't get overwhelmed, but still helping those PRs successfully land, it needs to find a strategy for scaling these efforts. Thus, **Angular Collaborators** has been launched. They are basically in the following part of the "hierarchy" (what a bad word).
 
-{{<figure url="/blog/assets/imgs/ngconf2019/angular-collaborators.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/angular-collaborators.png" size="full" nozoom="true">}}
 
 The goal is to have a trusted set of collaborators which get mentoring from actual Angular team members, get invited to meetings etc, and which can then help other OSS contributors with their PRs.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/angular-collaborators-goals.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/angular-collaborators-goals.png" size="full" nozoom="true">}}
 
 How do you join?
 
@@ -264,7 +264,7 @@ How do you join?
 
 Finally...
 
-{{<figure url="/blog/assets/imgs/ngconf2019/empathy-respect.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/empathy-respect.png" size="full" nozoom="true">}}
 
 ## Keynote (day 3)
 
@@ -272,35 +272,35 @@ _Misko Hevery and Stephen Fluin - [Youtube](https://www.youtube.com/watch?v=-kYt
 
 The Angular Team develops on GitHub, in public.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-innovate-open.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-innovate-open.png" size="full" nozoom="true">}}
 
 As such they also **innovate in the open**, they make experiments, PRs containing proof of concepts they need in order to progress the platform and explore new ideas. As such **not every line of code necessarily affects you**. This often resuls in misinterpretation when those commits or PRs land on social media, on reddit etc, without further context.
 
 The process a new Angular feature goes through is more or less something like this:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-process.png" size="full" caption="Informal process from idea to implementation of new Angular features">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-process.png" size="full" caption="Informal process from idea to implementation of new Angular features" nozoom="true">}}
 
 **Ideas** continuously emerge, mostly out of an existing problem. From that knowledge a **theory** evolves, exploration of what would happen if "X" is done/implemented (via proof of concepts, design docs,...). If that works out, the team starts to implement the underlying primitives that make it **possible**. Also initially not the full set of tooling is being implemented, but rather some of it is left to the community. If the community responds very well, the team starts to help **make it easy**, by adding documentation, higher the quality bar, via opt-in and self-run commands. Finally the goal is to make it **automatic**, i.e. via ng-update, schematics, fully integrate it into the platform and make it the "only way" (or suggested way of doing something).
 
 Such projects that are early experiments land as so-called Angular Labs project.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-ng-labs.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-ng-labs.png" size="full" nozoom="true">}}
 
 For such projects, the goal might change, APIs might change and also failure is an option. Some of the projects that have gone through this Labs mode and graduated are for instance: CDK (2017), Elements (2018), Schematics (2018), Builders (with 8.0 - 2019).
 
 Current Labs projects are:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-current-ng-labs.png" size="full" caption="Current Angular Labs projects">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-current-ng-labs.png" size="full" caption="Current Angular Labs projects" nozoom="true">}}
 
 ### Future Ideas
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-future-ideas.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-future-ideas.png" size="full" nozoom="true">}}
 
 #### Fastest possible apps
 
 The focus here is TTI (Time to Interactive). The best way to achieve better TTI is basically "the less code, the better". The hard task is to understand the difference between the code you will need vs. the one you "might need". Like if there is a button on the UI, the code executed for that button click is "code you might need". If the user doesn't click it, you don't need it.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-code-needed.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-code-needed.png" size="full" nozoom="true">}}
 
 This is really difficult to understand and tree shaking cannot solve this for us. Currently by default Angular provides lazy load boundaries around routes, which is something where Angular needs to improve. I did dig into the lazy loading part in one of my articles here:
 
@@ -313,15 +313,15 @@ This is really difficult to understand and tree shaking cannot solve this for us
 
 #### Replayable vs. Resumable
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-replayable-vs-resumable.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-replayable-vs-resumable.png" size="full" nozoom="true">}}
 
 Right now we have replayable apps. The server might perform some prerendering, the client takes over, does the bootstrap again, fetches the data again etc...Different to that, a resumable app just takes over and goes ahead, without the need to replicate certain steps.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-resumable-chart.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-resumable-chart.png" size="full" nozoom="true">}}
 
 Replayable is quite easy and we're comfortable doing it. Resumable is harder but totally worth it (for certain use cases). However, in order to be able to create resumable apps, Angular needs to be aware of the state it manages and provide ways to rehydrate the DOM. 
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-state.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-state.png" size="full" nozoom="true">}}
 
 The goal is basically if yo have various controls and components on your page (rendered via server side rendering), the logic behind the component (i.e. the JavaScript) is only loaded if the user starts interacting with it (i.e. by typing into an input field etc..). So lazy loading has to go further and not only for routes but rather for
 
@@ -333,7 +333,7 @@ The goal is basically if yo have various controls and components on your page (r
 
 #### Ideas of implementing a resumable Todo app
 
-{{<figure url="/blog/assets/imgs/ngconf2019/key3-disclaimer.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/key3-disclaimer.png" size="full" nozoom="true">}}
 
 [More here &raquo;](https://youtu.be/-kYtw3CSe6s?t=1308)
 
@@ -344,19 +344,19 @@ _Stephen Fluin - [Youtube](https://youtu.be/4d1HYKL2tt4)_
 
 Stephen's goal with the talk is to reduce the information asymmetry. Although there's a quite extensive [documentation on the official Angular site](https://angular.io), certain question come up always again as core challenges. Moreover each of us developing Angular apps has different solutions and approaches. So let's share them, blog about it, create OSS libraries.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-information-asymmetry.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-information-asymmetry.png" size="full" nozoom="true">}}
 
 ### Mobile Apps
 
 First of all "Why do you need an app?". What's the goal? Answering these questions may influence also the technology you choose. There are currently these approaches available with Angular: PWAs, Ionic or go even native with NativeScript.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-mobileapps.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-mobileapps.png" size="full" nozoom="true">}}
 
 ### Shared Components and Open Source
 
 According to Stephen there are currently these different layers of components within organizations:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-componentlayers.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-componentlayers.png" size="full" nozoom="true">}}
 
 There are the UI level components that make up the design system of the company. And I totally agree with Stephen here. These emerge naturally. Even though you may not be building this intentionally, a design system might emerge to standardize the look & feel across your applications. Business Components on the other side are components encapsulating entire, common business functionality that can be re-used across apps as well.  
 When developing these, don't forget about the [Angular CDK](https://material.angular.io/cdk/categories) which is a collection of design-system agnostic components that can serve you as the foundation.
@@ -368,27 +368,27 @@ Also consider using a monorepo approach, which allows you to move fast, see the 
 
 In large organizations you have different teams which aren't necessarily all using Angular. Still you might want to have a common set of tools and organize your code in a monorepo environment. [Nrwl's NX](https://nx.dev) allows to do exactly that. You can develop Angular Apps, TypeScript libraries, even React apps and server-side Node within a single monorepo supported by NX's tooling, a custom set of extensions built on top of the Angular CLI.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-nx.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-nx.png" size="full" nozoom="true">}}
 
 Another thing not to forget in this context are **Angular Elements**. It allows to create compile Angular components into standard "web components", more specifically Custom Elements. If you wanna learn more about that, check out [my article on introducing Angular Elements](/blog/2019/04/intro-to-angular-elements/).
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-ngelements.png" size="full" caption="Angular Elements to share across teams and tech boundaries">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-ngelements.png" size="full" caption="Angular Elements to share across teams and tech boundaries" nozoom="true">}}
 
 ### Testing
 
 Testing - although often underrated - is of extreme importance. Especially if you go the monorepo route and want to remain a high level of agility in your codebase. The Angular team officially supports Karma and Protractor and has some plans for improving them in the future.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-testing.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-testing.png" size="full" nozoom="true">}}
 
 Personally I'm a big fan of [Cypress](https://www.cypress.io) and have already used it successfully in multiple Angular projects, especially for the more integration level tests. I still have to look into Jest which looks very promising as well and I heared good things.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-testing-othertools.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-testing-othertools.png" size="full" nozoom="true">}}
 
 The message is: "it's fine to use them as well", even though they're not officially promoted by the team as other tools are. Feel free what best fits your needs.
 
 Are you more into screenshot & visual testing? Then these might be good candidates:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-visualtesting.png" size="full" caption="Tools for visual testing">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-visualtesting.png" size="full" caption="Tools for visual testing" nozoom="true">}}
 
 ### Progressive Web Applications (PWA)
 
@@ -402,7 +402,7 @@ And if you have still doubts whether service workers and PWAs are actually being
 
 ### A/B Testing and Experiments
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-featureflags.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-featureflags.png" size="full" nozoom="true">}}
 
 If you wanna realize feature flags that don't have an impact on the bundle size, you need to split at the lazy level (Modules, Components) and accordingly load them in. See my article on lazy loading components for more details on that:
 
@@ -415,7 +415,7 @@ If you wanna realize feature flags that don't have an impact on the bundle size,
 
 ### Staying Up to Date
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-keep-up-to-date.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-keep-up-to-date.png" size="full" nozoom="true">}}
 
 One thing is to automatically upgrade via the Angular CLI commands (`ng update`) which work really well in the latest versions. Another problem however is how to keep everyone else in the organization motivated for updating. Some strategies are
 
@@ -431,14 +431,14 @@ Improving the build time is crucial as it directly impacts developer productivit
 
 Upgrading to Ivy will help already. In the long run Bazel will be the solution.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-bazel.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-bazel.png" size="full" nozoom="true">}}
 
 Bazel is build to scale and it's possible to opt-in with Ivy to use Bazel under the hood (read the details further up in the article).
 
 
 ### Share your problems & solutions
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-share.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-enterprise-share.png" size="full" nozoom="true">}}
 
 Absolutely!!! It's the main reason I'm [blogging](https://juristr.com/blog), [create courses on Egghead](https://egghead.io/instructors/juri-strumpflohner) and on [Youtube](https://www.youtube.com/user/kitodzt). Go out there and become an active community member.
 
@@ -451,7 +451,7 @@ _John Papa - [Youtube](https://youtu.be/2ZFgcTOcnUg)_
 
 John Papa walks through the following sections:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-papa-topics.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-papa-topics.png" size="full" nozoom="true">}}
 
 ### RxJS - How to deal with unsubscribing
 
@@ -494,7 +494,7 @@ export class SomeComponent implements OnDestroy {
 
 ### State Management
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-papa-state.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-papa-state.png" size="full" nozoom="true">}}
 
 It is known that [NgRx](https://ngrx.io) comes with boilerplate. It has been discussed a lot, it's a known thing and it's also known that you might not even need NgRx, so choose wisely. John presents a project he and Ward Bell have been working on lately and which is now an official package of ngrx (starting with Ngrx v8): **[Ngrx Data](https://github.com/ngrx/platform/tree/master/modules/data)**.
 
@@ -540,7 +540,7 @@ export const entityConfig = {
 
 _Minko Gechev - [Youtube](https://youtu.be/5VlBaaXO6ok), [Slides](https://speakerdeck.com/mgechev/tools-for-fast-angular-applications)_
 
-{{<figure url="/blog/assets/imgs/ngconf2019/minko-network-perf.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/minko-network-perf.png" size="full" nozoom="true">}}
 
 The idea is to generally ship less JavaScript (or just enough) and don't penalize the user with JavaScript code he'll never even execute (because those parts are hidden behind permission flags or whatever). Addy Osmani has published the [Cost of JavaScript](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4) where he shows how shipping the some amount of JavaScript costs much more than shipping the same amount of - say - images. This due to the parsing overhead.
 
@@ -554,7 +554,7 @@ The strategies for reducing the amount of JavaScript we ship is:
 
 Minification/dead code elimination is already in the current CLI. **Differential loading** (as described before) is landing in Angular v8.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/minko-differential-loading.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/minko-differential-loading.png" size="full" nozoom="true">}}
 
 The CLI basically produces 2 bundles, one for modern evergreen browsers, and one for legacy browsers. In the HTML file then you'll have something like this:
 
@@ -576,7 +576,7 @@ Differential loading can be configured by setting the `target` in the `tsconfig.
 
 Only ship what's really necessary with **lazy loading**.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/minko-lazy-loading.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/minko-lazy-loading.png" size="full" nozoom="true">}}
 
 There's usually a component level or route level code splitting. I've just written up a detailed article on that:
 
@@ -589,7 +589,7 @@ There's usually a component level or route level code splitting. I've just writt
 
 But when talking about lazy loading, one also needs to think about **prefetching strategies**.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/minko-prefetching.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/minko-prefetching.png" size="full" nozoom="true">}}
 
 In my [Egghead router course](https://egghead.io/courses/learn-angular-router-for-real-world-applications) I'm already showing how to [avoid delays for lazy modules by applying a preloading strategy](https://egghead.io/lessons/angular-avoid-delays-for-lazy-modules-by-applying-a-preloading-strategy-with-the-angular-router) which can be either the default `PreloadAllModules` or customized [by defining a custom preloading strategy](https://egghead.io/lessons/angular-define-a-custom-preloading-strategy-for-the-angular-router).  
 Minko (as usual) brings this to a whole other level with libraries such as 
@@ -597,7 +597,7 @@ Minko (as usual) brings this to a whole other level with libraries such as
 - [ngx-quicklink](https://github.com/mgechev/ngx-quicklink) which automatically prefetches links on the page
 - or with [Guess.js](https://github.com/guess-js) which uses Google Analytics, applies machine learning to understand which links to prefetch
 
-{{<figure url="/blog/assets/imgs/ngconf2019/minko-predictive-prefetching.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/minko-predictive-prefetching.png" size="full" nozoom="true">}}
 
 Also, not to forget about Angular CLI's [performance budgets](https://angular.io/guide/build#configure-size-budgets).
 
@@ -610,7 +610,7 @@ Finally, some low hanging fruit. Turns out
 
 As Brad announced in his keynote, the Angular team is working on optimizing deployments by providing automated deployment mechanisms directly from the Angular CLI. This happens in close collaboration with the big cloud providers.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/minko-ng-deploy-clouds.png" size="full" caption="Collaboration with cloud providers for automated deployments">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/minko-ng-deploy-clouds.png" size="full" caption="Collaboration with cloud providers for automated deployments" nozoom="true">}}
 
 See how that works [here in Minko's talk](https://youtu.be/5VlBaaXO6ok?t=991).
 
@@ -620,17 +620,17 @@ _Rob Wormald - [Youtube](https://www.youtube.com/watch?v=JX5GGu_7JKc)_
 
 Rob targets the graph mentioned by Igor about the current field Angular apps are being adopted.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rob-graph-angular-adoption.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rob-graph-angular-adoption.png" size="full" nozoom="true">}}
 
 Going forward the team's goal is to target the two missing edges in this graph.
 
 ### Small-medium Apps, Demos, Edu Apps
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rob-graph-small-apps.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rob-graph-small-apps.png" size="full" nozoom="true">}}
 
 To target this left side of the graph, where small to medium apps reside, the answer is definitely Angular Elements.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rob-angular-elements.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rob-angular-elements.png" size="full" nozoom="true">}}
 
 If this sounds new to you, check out my related article.
 
@@ -673,7 +673,7 @@ platformBrowser()
 
 How is that going to change with Ivy?
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rob-elements-with-ivy.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rob-elements-with-ivy.png" size="full" nozoom="true">}}
 
 The simplest way of rendering a component in Ivy is the following:
 
@@ -832,20 +832,20 @@ This gives you **an Angular Element without an Angular Component**. Something th
 
 To the other side of the chart: scaling up.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rob-graph-angular-scaleup.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rob-graph-angular-scaleup.png" size="full" nozoom="true">}}
 
 In this context (during the keynote - see further up), the name **Angular Photon" came up. Imporant:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rob-photon.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rob-photon.png" size="full" nozoom="true">}}
 
 It's a research project for experimenting and "deciding how to build the right tools for the next gen of Angular Developers". It's a project in collaboration with
 
 - Google Shopping Express (build with Angular)
 - Wiz
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rob-collaboration.png" size="full" caption="Google Shopping Express and Wiz collaborating with the Angular Team">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rob-collaboration.png" size="full" caption="Google Shopping Express and Wiz collaborating with the Angular Team" nozoom="true">}}
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rob-what-wanted.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rob-what-wanted.png" size="full" nozoom="true">}}
 
 Loading components as they are needed is a big part. As a sneak peek this is what it might look like
 
@@ -866,23 +866,23 @@ Note the `withLazyNgComponent` that fetches the necessary scripts only when real
 
 _Jeremy Elbourn - [Youtube](https://youtu.be/4EXQKP-Sihw), [Slides](http://g.co/ng/conf19-components-slides)_
 
-{{<figure url="/blog/assets/imgs/ngconf2019/cdk.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk.png" size="full" nozoom="true">}}
 
 The CDK is the basis for [Angular Material](https://material.angular.io). It is a set of design agnostic components and functionality you can use to build your own design system on top of it.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/cdk-capabilities.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk-capabilities.png" size="full" nozoom="true">}}
 
 So far, the CDK as well as Angular Material lived under `angular/material2` on GitHub. That **name changed now to [angular/components](https://github.com/angular/components)**, which IMHO communicates much better that it is not just about Material Design.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/cdk-components-team.png" size="full" caption="New name of the former Angular Material team">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk-components-team.png" size="full" caption="New name of the former Angular Material team" nozoom="true">}}
 
 Jeremy showcases some of the CDK capabilities, in specific [Drag and Drop](https://material.angular.io/cdk/drag-drop/overview).
 
-{{<figure url="/blog/assets/imgs/ngconf2019/cdk-new-material.png" size="full" caption="Open Source library produced by the Material Design team at Google">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk-new-material.png" size="full" caption="Open Source library produced by the Material Design team at Google" nozoom="true">}}
 
 Angular Material will include not only the CDK as basis going forward, but also strongly collaborate with the team developing the MDC web library.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/cdk-including-mdc-web.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/cdk-including-mdc-web.png" size="full" nozoom="true">}}
 
 This helps the Angular Material library to be much more aligned with the Material Design spec.
 
@@ -901,11 +901,11 @@ When you need to communicate between different components that don't know each o
 
 So given the following scenario of components nested within each other, how can the inner component communicate with some upper one?
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-communicate-with-upper-cmp.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-communicate-with-upper-cmp.png" size="full" nozoom="true">}}
 
 Of course we can have a `@Output()` chain...which might soon go out of control. The alternative solution here are **RxJS Subjects**. There are 4 main `Subject` types in RxJS here.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-subjects.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-subjects.png" size="full" nozoom="true">}}
 
 The `Subject` is the most simple one. A particular behavior here is that you only get the data after you subscribed. What happened before is not known.
 
@@ -1028,7 +1028,7 @@ export class InventoryComponent implements OnInit, OnDestroy {
 
 If you want a simple store, you can [read my article on how to implement that by yourself using the `scan` operator](/blog/2018/10/simple-state-management-with-scan/) or just head over to Dan's [ObservableStore library](https://github.com/DanWahlin/Observable-Store).
 
-{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-observable-store.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/rxjscomm-observable-store.png" size="full" nozoom="true">}}
 
 ## Bazel Opt-in Preview is Here!
 
@@ -1036,15 +1036,15 @@ _Alex Eagle - [Youtube](https://www.youtube.com/watch?v=J1lnp-nU4wM)_
 
 Bazel is something I'm most excited about :heart_eyes:!
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-slow.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-slow.png" size="full" nozoom="true">}}
 
 This diagram from Alex is super easy to clarify some confusion in people's mind. What's a build tool after all? No, it does not replace your Jenkins :wink:.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-build-tools.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-build-tools.png" size="full" nozoom="true">}}
 
 Bazel simply orchestrates the different tools, so they don't have to be rewritten for Bazel as they have with some other tools like Webpack etc. Bazel simply invokes other tools like Rollup, the TypeScript compiler, a dev server,...
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-difference-bazel.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-difference-bazel.png" size="full" nozoom="true">}}
 
 Bazel is designed to
 
@@ -1057,21 +1057,21 @@ Bazel is the part where Google does not consume something from the OSS world, bu
 
 So what's the current progress with Bazel?
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-current-state.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-current-state.png" size="full" nozoom="true">}}
 
 With that, similar to Ivy (as mentioned before), Bazel is now available for opt-in preview starting with Angular v8.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-opt-in.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-opt-in.png" size="full" nozoom="true">}}
 
 How does Bazel fit into the Angular CLI? It extends an Angular CLI Builder (a new feature I've mentioned further up in the article). Right now the CLI uses the `@angular-devkit/build-angular` package (go check your `angular.json` and you'll see :wink:). Bazel is simply another builder that can live side-by-side and can be activated by you to opt-in.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-builder.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-builder.png" size="full" nozoom="true">}}
 
 That said, the priority #1 of course is to not break your app and provide stability. In a small app, opting in to Bazel won't bring any difference (no good, nor bad). You will only see improvements in the build/test speed starting from medium size apps.
 
 Right now many of the current build tools are monolithic. Bazel on the other side follows the Unix philosophy, piping results from one tool into another.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-unix-philosophy.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-unix-philosophy.png" size="full" nozoom="true">}}
 
 **How can you try that today?** First, update to Angular 8. Then
 
@@ -1088,23 +1088,23 @@ $ ng add @angular/bazel
 
 What to expect: the same behavior as before, same sources, similar outputs. To scale up...
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-scaling-up.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-scaling-up.png" size="full" nozoom="true">}}
 
 Some results with 1000+ components:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-results.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-results.png" size="full" nozoom="true">}}
 
 This is already faster, but it only shards among the local available CPUs. This can be further scaled by **sharing build caches between you and the CI and even co-workers**. Meaning if your CI system (or one of your team mates) already built a given portion of the app, you won't have to do that again, but you'll just get the cache.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-share-cache.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-share-cache.png" size="full" nozoom="true">}}
 
 With that, results get even better. This runs on the Remote Build Execution which is a "Bazel backend service" on the Google Cloud.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-results-cloud-share.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-results-cloud-share.png" size="full" nozoom="true">}}
 
 Here's the future timeline for Bazel. Focus is mainly on making some of the still manual steps fully automated.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/bazel-future-plan.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/bazel-future-plan.png" size="full" nozoom="true">}}
 
 All the info on [bazel.angular.io](https://bazel.angular.io).
 
@@ -1113,7 +1113,7 @@ All the info on [bazel.angular.io](https://bazel.angular.io).
 
 Angular Elements have been around in a couple of talks at NGConf 2019.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/ng-elements.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/ng-elements.png" size="full" nozoom="true">}}
 
 - [Web Components wth Angular Elements: Beyond the Basics - Manfred Steyer](https://www.youtube.com/watch?v=E9i3YBFxSSE)
 - [Angular Elements Make The Best React Components - Brad Mcalister & Ryan Chenkie](https://www.youtube.com/watch?v=tHclHHs7nmo)
@@ -1166,7 +1166,7 @@ As you can see the Facade hides the implementation details. Also note, you canno
 
 In the talk, Thomas walks through a concrete example of implementing such pull-based approach.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/facades-pull-push.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/facades-pull-push.png" size="full" nozoom="true">}}
 
 So generally speaking, all of the state & logic should be kept out of the view as much as possible. That allows for better reusability and results in easier testing. So let's focus on the service part. Here's an example of a _pull-based_ service:
 
@@ -1204,11 +1204,11 @@ Once the `findAllUsers()` is called, the stream is returned and terminated (beca
 
 A push-based approach would look more like this.
 
-{{<figure url="/blog/assets/imgs/ngconf2019/facades-push-based.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/facades-push-based.png" size="full" nozoom="true">}}
 
 What I find particularly intersting when I first heard about Thomas's approach of Facades and push-based a while back, is to have streams not only go out of your service (as you usally have), but also to go into the service (i.e. via method calls for instance).
 
-{{<figure url="/blog/assets/imgs/ngconf2019/facades-stream-in-out.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/facades-stream-in-out.png" size="full" nozoom="true">}}
 
 This makes up a very clear API of the Facade:
 
@@ -1255,7 +1255,7 @@ export class UserFacade {
 Moreover the `BehaviorSubject` makes sure the latest value is kept and emitted whenever someone new subscribes. At startup the default state should be emitted, which is why `_state` is passed when instantiating the `BehaviorSubject`.  
 Since streams come into the service as well as go outwards, they can also be consumed and combined nternally to the UserFacade. That is, we can subscribe to the `criteria$` and `pagination$` and whenever either of the two changes, the backend can be invoked automatically and streamed back into the `findAllUsers$` stream. That's push-based at work :smiley:
 
-{{<figure url="/blog/assets/imgs/ngconf2019/facades-stream-consuming.png" size="full">}}
+{{<figure url="/blog/assets/imgs/ngconf2019/facades-stream-consuming.png" size="full" nozoom="true">}}
 
 How is this implemented? Something like this:
 
