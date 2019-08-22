@@ -350,7 +350,7 @@
 
 <p>Here&rsquo;s a Plunker that demoes how this works. Open your dev console to see according logs being printed out.</p>
 
-<iframe src="https://stackblitz.com/edit/angular-finegrained-cd-docheck-p1?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/angular-finegrained-cd-docheck-p1?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <h3 id="so-what-s-the-matter">So what&rsquo;s the matter?</h3>
 
@@ -376,7 +376,7 @@
 </code></pre></div>
 <p>Note that, in our <code>changePerson()</code> function, we now <strong>directly mutate the property</strong> of our <code>person</code> object which we pass on to our child component. All of a sudden, while the data binding still works, <code>ngOnChanges</code> <strong>is not being invoked any more</strong>. Check out the source here on this Plunker:</p>
 
-<iframe src="https://stackblitz.com/edit/angular-finegrained-cd-docheck-p2?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/angular-finegrained-cd-docheck-p2?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <p>Instead, <strong>if we make our <code>person</code> object immutable</strong>, it works just fine:</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="err">@</span><span class="nx">Component</span><span class="p">({...})</span>
@@ -451,7 +451,7 @@
 </code></pre></div>
 <p>Slick, isn&rsquo;t it 😃? Here&rsquo;s a Plunker to play around with it:</p>
 
-<iframe src="https://stackblitz.com/edit/angular-finegrained-cd-docheck-p3?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/angular-finegrained-cd-docheck-p3?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <p>Note, if you get a list as <code>@Input</code>, you can use <a href="https://angular.io/docs/ts/latest/api/core/IterableDiffers-class.html">IterableDiffers</a> rather than KeyValueDiffers.</p>
 

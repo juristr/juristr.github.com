@@ -255,7 +255,7 @@
 <h2 id="tl-dr-here-s-the-corresponding-egghead-lesson">TL;DR: Here&rsquo;s the corresponding Egghead lesson</h2>
 
 <div class="egghead-video-embed">
-    <iframe src="https://egghead.io/lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator/embed" width="100%" height="500px"> </iframe>
+    <iframe src="https://egghead.io/lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator/embed" width="100%" height="500px" loading="lazy"> </iframe>
     <a href="https://egghead.io/lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator" class="external-link" data-client="eggheadio" data-uid="lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator">View
         on
         Egghead.io</a>
@@ -330,7 +330,7 @@
   <span class="p">})</span></code></pre></div>
 <p>Here&rsquo;s an example of using <code>tap</code> like that:</p>
 
-<iframe src="https://stackblitz.com/edit/rxjs-finalize-operator-aabtcm?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/rxjs-finalize-operator-aabtcm?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <h3 id="option-2-using-the-finalize-operator">Option 2: Using the <code>finalize</code> operator!</h3>
 
@@ -352,7 +352,7 @@
   <span class="p">)</span></code></pre></div>
 <p>How does <code>finalize</code> work? It basically adds a callback to the teardown of the Observable, via <code>subscription.add(fn)</code>. This guarantees it will be called on <code>error</code>, <code>complete</code>, and <code>unsubscription</code>.</p>
 
-<iframe src="https://stackblitz.com/edit/rxjs-finalize-operator?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/rxjs-finalize-operator?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <h2 id="conclusion">Conclusion</h2>
 

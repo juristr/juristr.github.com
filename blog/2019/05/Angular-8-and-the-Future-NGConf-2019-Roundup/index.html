@@ -2217,7 +2217,7 @@ $ ng add @angular/bazel
 <span class="p">}</span></code></pre></div>
 <p>Once the <code>findAllUsers()</code> is called, the stream is returned and terminated (because that&rsquo;s the nature of the streams returned from HTTP). Here&rsquo;s the Stackblitz for the example:</p>
 
-<iframe src="https://stackblitz.com/edit/facade-traditional-no-rxjs-4jdfwq?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/facade-traditional-no-rxjs-4jdfwq?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <h3 id="push-based">Push-based</h3>
 
@@ -2333,7 +2333,7 @@ Since streams come into the service as well as go outwards, they can also be con
 <p>I&rsquo;ve already implemented such an approach and the cool thing about it is that once you&rsquo;ve set up the streams and connected them together, you click the button, which triggers an emit into - say - the <code>pagination$</code> stream and you will automatically get a call triggered to the server and your list be updated with fresh data 😍.<br />
 In a traditional pull-based approach, you would click the button, in the click handler, invoke a function on your service passing the new pagination value, get back a stream and re-bind it to your list. Moreover, think about what this opens up for you. If your server is able to handle websockets or server sent events, you can actively even push down new data as other users change them.</p>
 
-<iframe src="https://stackblitz.com/edit/facades-with-rxjs-only-d82xvx?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/facades-with-rxjs-only-d82xvx?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <h2 id="useful-links">Useful links</h2>
 

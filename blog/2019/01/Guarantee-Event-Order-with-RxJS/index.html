@@ -293,7 +293,7 @@
 <h2 id="tl-dr-here-s-the-corresponding-egghead-lesson">TL;DR: Here&rsquo;s the corresponding Egghead lesson</h2>
 
 <div class="egghead-video-embed">
-    <iframe src="https://egghead.io/lessons/angular-guarantee-ordering-of-events-with-rxjs/embed" width="100%" height="500px"> </iframe>
+    <iframe src="https://egghead.io/lessons/angular-guarantee-ordering-of-events-with-rxjs/embed" width="100%" height="500px" loading="lazy"> </iframe>
     <a href="https://egghead.io/lessons/angular-guarantee-ordering-of-events-with-rxjs" class="external-link" data-client="eggheadio" data-uid="lessons/angular-guarantee-ordering-of-events-with-rxjs">View
         on
         Egghead.io</a>
@@ -305,7 +305,7 @@
 
 <p>Well, try by yourself:</p>
 
-<iframe src="https://stackblitz.com/edit/blog-guarantee-order-wrong?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/blog-guarantee-order-wrong?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <p>As you can see, we might get an inconsistent state. When - for instance - quickly double-clicking on &ldquo;Option 1&rdquo; we get the option selected &amp; then unselected again, but the async call coming later still adds the option to the list.</p>
 
@@ -452,7 +452,7 @@ Not really satisfying and hacky.., and again, this is just a small simple fake e
 <span class="p">}</span></code></pre></div>
 <p>Here&rsquo;s the according Stackblitz example to play around with. Check it out, double-clicking works perfectly now!</p>
 
-<iframe src="https://stackblitz.com/edit/blog-guarantee-order-concatmap?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/blog-guarantee-order-concatmap?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <h2 id="optimizing-with-switchmap">Optimizing with <code>switchMap</code></h2>
 
@@ -466,7 +466,7 @@ Not really satisfying and hacky.., and again, this is just a small simple fake e
 
 <p>Here&rsquo;s a Stackblitz example. Pay particular attention to the console log. In the <code>setTimeout(..)</code> a log is written (<code>console.log('Returning data');</code>). If you double-click, that log doesn&rsquo;t even appear, proving that the async action is not even executed.</p>
 
-<iframe src="https://stackblitz.com/edit/blog-guarantee-order-switchmap?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/blog-guarantee-order-switchmap?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <h2 id="switchmap-potential-race-conditions"><code>switchMap</code> - potential race conditions</h2>
 
@@ -501,7 +501,7 @@ Not really satisfying and hacky.., and again, this is just a small simple fake e
 
 <p>And here&rsquo;s the according modified Stackblitz to play around with.</p>
 
-<iframe src="https://stackblitz.com/edit/blog-guarantee-order-mergemap?ctl=1&embed=1" width="100%" height="500px"> </iframe>
+<iframe src="https://stackblitz.com/edit/blog-guarantee-order-mergemap?ctl=1&embed=1" width="100%" height="500px" loading="lazy"> </iframe>
 
 <h2 id="conclusion">Conclusion</h2>
 

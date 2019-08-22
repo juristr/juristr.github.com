@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Tue, 13 Aug 2019 11:37:24 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 22 Aug 2019 12:42:15 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/tags/tooling/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dynamically Load CSS with the Angular CLI</title>
+      <link>https://juristr.com/blog/2019/08/dynamically-load-css-angular-cli/</link>
+      <pubDate>Thu, 22 Aug 2019 12:42:15 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/08/dynamically-load-css-angular-cli/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I’ve written about &lt;a href=&#34;https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/&#34;&gt;lazy loading&lt;/a&gt; in the past, as well as how to &lt;a href=&#34;https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles&#34;&gt;handle various styling issues in Angular&lt;/a&gt;. This time we’ll explore how to customize the Angular CLI s.t. we can lazy load CSS files on the fly.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>It’s time to say thank you to the Angular CLI Team!</title>
