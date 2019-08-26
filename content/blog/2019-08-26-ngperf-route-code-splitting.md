@@ -27,9 +27,9 @@ draft: false
 1. Route Level Code Splitting
 1. Preload Lazy Routes in Angular _(coming next...)_
 1. Performance budgets with the Angular CLI _(coming next...)_
-1. Optimize Angular's Change Detection
-1. Virtual Scrolling for large lists with the CDK
-1. Precaching with the Angular Service Worker
+1. Optimize Angular's Change Detection _(coming next...)_
+1. Virtual Scrolling for large lists with the CDK _(coming next...)_
+1. Precaching with the Angular Service Worker _(coming next...)_
 
 Don't miss the other videos [by subscribing to my newsletter](/newsletter).
 
