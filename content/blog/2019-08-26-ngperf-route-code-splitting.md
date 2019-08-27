@@ -24,8 +24,8 @@ draft: false
 
 ## Angular Performance Series
 
-1. Route Level Code Splitting
-1. Preload Lazy Routes in Angular _(coming next...)_
+1. **Route Level Code Splitting**
+1. [Preload Lazy Routes in Angular](/blog/2019/08/ngperf-preloading-lazy-routes)
 1. Performance budgets with the Angular CLI _(coming next...)_
 1. Optimize Angular's Change Detection _(coming next...)_
 1. Virtual Scrolling for large lists with the CDK _(coming next...)_
