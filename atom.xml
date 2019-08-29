@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 28 Aug 2019 12:45:59 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2019 12:45:59 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular Performance: Optimize Angular Change Detection</title>
+      <link>https://juristr.com/blog/2019/08/ngperf-optimize-change-detection/</link>
+      <pubDate>Thu, 29 Aug 2019 12:45:59 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/08/ngperf-optimize-change-detection/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    This article is part of my &amp;ldquo;Angular Performance Week&amp;rdquo; series, where I publish a new video each day based on the performance articles on web.dev/angular. Angular is fast, but we can make it even faster. One way is by tuning its change detection system. Let&amp;rsquo;s see how.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Angular Performance: Performance budgets with the Angular CLI</title>

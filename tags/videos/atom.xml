@@ -7,10 +7,54 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Thu, 23 May 2019 12:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2019 12:45:59 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/tags/videos/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular Performance: Optimize Angular Change Detection</title>
+      <link>https://juristr.com/blog/2019/08/ngperf-optimize-change-detection/</link>
+      <pubDate>Thu, 29 Aug 2019 12:45:59 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/08/ngperf-optimize-change-detection/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    This article is part of my &amp;ldquo;Angular Performance Week&amp;rdquo; series, where I publish a new video each day based on the performance articles on web.dev/angular. Angular is fast, but we can make it even faster. One way is by tuning its change detection system. Let&amp;rsquo;s see how.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular Performance: Performance budgets with the Angular CLI</title>
+      <link>https://juristr.com/blog/2019/08/ngperf-setting-performance-budgets/</link>
+      <pubDate>Wed, 28 Aug 2019 12:45:59 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/08/ngperf-setting-performance-budgets/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    This article is part of my &amp;ldquo;Angular Performance Week&amp;rdquo; series, where I publish a new video each day based on the performance articles on web.dev/angular. This article focuses on how we can define performance budgets with the Angular CLI.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular Performance: Preloading Lazy Routes</title>
+      <link>https://juristr.com/blog/2019/08/ngperf-preloading-lazy-routes/</link>
+      <pubDate>Tue, 27 Aug 2019 12:45:59 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/08/ngperf-preloading-lazy-routes/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    This article is part of my &amp;ldquo;Angular Performance Week&amp;rdquo; series, where I publish a new video each day based on the performance articles on web.dev/angular. Today we&amp;rsquo;re going to have a look at various ways to preload lazy routes in Angular: preloading all modules, custom preloading and with &lt;a href=&#34;https://github.com/mgechev/ngx-quicklink&#34;&gt;ngx-quicklink&lt;/a&gt;.
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular Performance: Route Level Code Splitting</title>
+      <link>https://juristr.com/blog/2019/08/ngperf-route-level-code-splitting/</link>
+      <pubDate>Mon, 26 Aug 2019 12:45:59 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/08/ngperf-route-level-code-splitting/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    This article is part of my &amp;ldquo;Angular Performance Week&amp;rdquo; series, where I publish a new video each day based on the performance articles on web.dev/angular. Today we&amp;rsquo;re taking a look at route-level code splitting to increase the TTI of our application.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Create Code Snippets for Visual Studio Code with ease</title>
