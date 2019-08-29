@@ -10,6 +10,7 @@ categories:
   - Angular
 tags:
   - angular
+  - videos
 draft: false
 ---
 
@@ -27,7 +28,7 @@ draft: false
 1. **Route Level Code Splitting**
 1. [Preload Lazy Routes in Angular](/blog/2019/08/ngperf-preloading-lazy-routes)
 1. [Performance budgets with the Angular CLI](/blog/2019/08/ngperf-setting-performance-budgets)
-1. Optimize Angular's Change Detection _(coming next...)_
+1. [Optimize Angular's Change Detection](/blog/2019/08/ngperf-optimize-change-detection)
 1. Virtual Scrolling for large lists with the CDK _(coming next...)_
 1. Precaching with the Angular Service Worker _(coming next...)_
 
