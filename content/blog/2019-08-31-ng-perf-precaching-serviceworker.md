@@ -1,7 +1,7 @@
 ---
 type: post
 title: "Angular Performance: Precaching with the Service Worker"
-lead: Reduce the amount of DOM nodes with CDK's virtual scrolling
+lead: Cache your app with Angular's integrated service worker package
 date: 2019-08-31T12:45:59+02:00
 comments: true
 url: /blog/2019/08/ngperf-precaching-serviceworker
@@ -11,11 +11,11 @@ categories:
 tags:
   - angular
   - videos
-draft: true
+draft: false
 ---
 
 {{<intro>}}
-  This article is part of my "Angular Performance Week" series, where I publish a new video each day based on the performance articles on web.dev/angular.
+  This article is part of my "Angular Performance Week" series, where I publish a new video each day based on the performance articles on web.dev/angular. Today we're diving into the service worker API, in specific by leveraging Angular's integrated service worker package.
 {{</intro>}}
 <!--more-->
 
@@ -34,7 +34,7 @@ draft: true
 
 Don't miss the other videos [by subscribing to my newsletter](/newsletter).
 
-## Leverage the Angular CDK to implement virtual scrolling
+## Caching with Angular's Service Worker Package
 
 To further speed up our app and to provide a more pleasant experience in flaky network conditions, we may want to use a service worker that allows us to apply precaching mechanisms. Luckily the Angular team already offers a service worker module that is well integrated with the framework. Let’s have a look at how to apply that to our application.
 

@@ -30,7 +30,7 @@ draft: false
 1. [Performance budgets with the Angular CLI](/blog/2019/08/ngperf-setting-performance-budgets)
 1. [Optimize Angular's Change Detection](/blog/2019/08/ngperf-optimize-change-detection)
 1. **Virtual Scrolling for large lists with the CDK**
-1. Precaching with the Angular Service Worker _(coming next...)_
+1. [Precaching with the Angular Service Worker](/blog/2019/08/ngperf-precaching-serviceworker)
 
 Don't miss the other videos [by subscribing to my newsletter](/newsletter).
 
