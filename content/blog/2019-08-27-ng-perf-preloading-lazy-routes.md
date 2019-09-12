@@ -38,20 +38,22 @@ Don't miss the other videos [by subscribing to my newsletter](/newsletter).
 
 In the [previous article](/blog/2019/08/ngperf-route-level-code-splitting) we talked about lazy loading Angular routes with the Angular CLI. When you lazy load a module the user gets the benefit of faster loading of the application. However this comes at the cost of a delay when the module gets loaded at runtime. To mitigate this issue, we can apply some preloading strategy. Angular comes with a default one, that preloads all lazy modules. Let's see how to implement that.
 
-{{<egghead-lesson uid="lessons/egghead-preload-all-lazy-loaded-modules-with-angular" >}}
+<!-- {{<egghead-lesson uid="lessons/egghead-preload-all-lazy-loaded-modules-with-angular" >}} -->
+{{<youtube 0kU-nC3umHQ>}}
 
 ## Custom Preloading Strategy
 
 [Preloading all modules](https://egghead.io/lessons/egghead-preload-all-lazy-loaded-modules-with-angular) is quite an extreme approach and might not always be desirable. For instance, you don't want to preload lazy routes a user might not even have access to. Therefore, in this lesson we're going to have a look at how to define a custom preloading strategy in Angular.
 
-{{<egghead-lesson uid="lessons/egghead-implement-a-custom-preloading-strategy-with-angular" >}}
-
+<!-- {{<egghead-lesson uid="lessons/egghead-implement-a-custom-preloading-strategy-with-angular" >}} -->
+{{<youtube ZGyTnHm_fa8>}}
 
 ## Preloading with ngx-quicklink
 
 In a [previous lesson we learned about implementing a custom preloading strategy](https://egghead.io/lessons/egghead-implement-a-custom-preloading-strategy-with-angular). That gives you a lot of control over which route to preload and which not, whether it is based on the user's permissions or some runtime app config. In this lesson we're using [ngx-quicklink](https://github.com/mgechev/ngx-quicklink), a library that drastically simplifies the custom preloading, by automatically loading all visible links on the page.
 
-{{<egghead-lesson uid="lessons/egghead-custom-route-preloading-with-ngx-quicklink-and-angular" >}}
+<!-- {{<egghead-lesson uid="lessons/egghead-custom-route-preloading-with-ngx-quicklink-and-angular" >}} -->
+{{<youtube fZAozYgYzhI>}}
 
 ### Original web.dev article
 

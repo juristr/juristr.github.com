@@ -38,7 +38,8 @@ Don't miss the other videos [by subscribing to my newsletter](/newsletter).
 
 Browsers become faster every day, but still, **DOM updates are costly**. If we have large lists, the browser needs to render them upfront, creating hundreds if not thousands of DOM nodes, even though the user might not scroll that far down the list. Not only does this slow down the scrolling itself, but even the page load of our app can suffer from it. To optimize this experience, we can use **virtual scrolling**, in particular, in this lesson we’re using Angular’s CDK to implement that.
 
-{{<egghead-lesson uid="lessons/egghead-apply-virtual-scrolling-to-large-lists-with-the-angular-cdk" >}}
+<!-- {{<egghead-lesson uid="lessons/egghead-apply-virtual-scrolling-to-large-lists-with-the-angular-cdk" >}} -->
+{{<youtube 5L4YTcSrRXs>}}
 
 ### Original web.dev article
 

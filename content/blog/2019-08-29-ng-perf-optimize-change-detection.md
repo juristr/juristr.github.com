@@ -38,7 +38,8 @@ Don't miss the other videos [by subscribing to my newsletter](/newsletter).
 
 Change Detection is the magic behind Angular that automatically recognizes when changes happen. That’s either due to manual triggering or through asynchronous events. Once a change is detected, it iterates through the various Angular Components and triggers a refresh. Usually it is very fast, however - especially in larger apps - it might trigger lots of computations and thus block the main browser thread. In this lesson we’re going to learn how to optimize Angular’s change detection mechanism by **reducing the amount of components it needs to update** and via **pure pipes**.
 
-{{<egghead-lesson uid="lessons/egghead-optimize-angular-s-change-detection" >}}
+<!-- {{<egghead-lesson uid="lessons/egghead-optimize-angular-s-change-detection" >}} -->
+{{<youtube Ki0V0DPCrzQ>}}
 
 ### Original web.dev article
 

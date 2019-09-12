@@ -40,11 +40,13 @@ TTI (Time to interactive) is an interesting metric that measures how long it tak
 
 In this video lesson we're going to implement route-level code splitting and lazy loading, step by step.
 
-{{<egghead-lesson uid="lessons/egghead-apply-route-level-code-splitting-and-lazy-loading-with-the-angular-cli" >}}
+<!-- {{<egghead-lesson uid="lessons/egghead-apply-route-level-code-splitting-and-lazy-loading-with-the-angular-cli" >}} -->
+{{<youtube gxlCl5P_PC8>}}
 
 ### Bonus: Showing a loading indicator for lazy routes
 
-{{<egghead-lesson uid="lessons/egghead-show-a-loading-indicator-for-lazy-routes-in-angular" >}}
+<!-- {{<egghead-lesson uid="lessons/egghead-show-a-loading-indicator-for-lazy-routes-in-angular" >}} -->
+{{<youtube C0FBR4EUqgk>}}
 
 ### Original web.dev article
 

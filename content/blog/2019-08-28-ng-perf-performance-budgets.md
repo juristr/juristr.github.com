@@ -38,8 +38,8 @@ Don't miss the other videos [by subscribing to my newsletter](/newsletter).
 
 Measuring is extremely important, without numbers we don’t know about potential problems and we don’t have a base we can improve upon. [Performance Budgets](https://web.dev/performance-budgets-101) are a way to impose limits on metrics that may affect our app’s performance. In this lesson we’ll learn how to configure the Angular CLI to configure performance budgets, to monitor them and to alert us when we violate them.
 
-{{<egghead-lesson uid="lessons/egghead-calculate-and-measure-performance-budgets-with-the-angular-cli" >}}
-
+<!-- {{<egghead-lesson uid="lessons/egghead-calculate-and-measure-performance-budgets-with-the-angular-cli" >}} -->
+{{<youtube xcV813dYEb0>}}
 
 ### Original web.dev article
 

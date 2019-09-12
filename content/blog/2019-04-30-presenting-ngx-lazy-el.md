@@ -15,7 +15,7 @@ draft: true
 ---
 
 {{<intro>}}
-  Your awesome intro here...
+  
 {{</intro>}}
 <!--more-->
 
