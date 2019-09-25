@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Sat, 31 Aug 2019 12:45:59 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2019 22:44:36 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/angular/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Debugging Angular Ivy Applications from the Devtools Console</title>
+      <link>https://juristr.com/blog/2019/09/debugging-angular-ivy-console/</link>
+      <pubDate>Wed, 25 Sep 2019 22:44:36 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/09/debugging-angular-ivy-console/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Do you remember how in AngularJS (v1.x) we could easily debug/change the state of our components from the browser&amp;rsquo;s devtools. Guess what: now with Ivy a new easy API returns that openes up a variety of new ways. Let&amp;rsquo;s see how that works.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Angular Performance: Precaching with the Service Worker</title>
