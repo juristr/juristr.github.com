@@ -22,7 +22,7 @@ image: /blog/assets/imgs/ng2-console-debugging/debugging-ng2-apps.png
 
 {{< postad >}}
 
-{{<warn-notice message="$1" >}}
+{{<warn-notice message="Contents are based on Angular version 2. There's a [**new version of the article**](/blog/2019/09/debugging-angular-ivy-console/) available for Angular 9+ with Ivy." >}}
  
 
 {{< toc >}}

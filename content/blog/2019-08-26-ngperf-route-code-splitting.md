@@ -43,6 +43,14 @@ In this video lesson we're going to implement route-level code splitting and laz
 <!-- {{<egghead-lesson uid="lessons/egghead-apply-route-level-code-splitting-and-lazy-loading-with-the-angular-cli" >}} -->
 {{<youtube gxlCl5P_PC8>}}
 
+### Protip: Generate lazy routes with the CLI
+
+Did you know you can use the following command to generate a new lazy route that will be hooked up on `app.module.ts`?
+
+```
+$ ng g m home --route=home --module=app.module.ts
+```
+
 ### Bonus: Showing a loading indicator for lazy routes
 
 <!-- {{<egghead-lesson uid="lessons/egghead-show-a-loading-indicator-for-lazy-routes-in-angular" >}} -->

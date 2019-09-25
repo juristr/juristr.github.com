@@ -38,7 +38,6 @@ Don't miss the other videos [by subscribing to my newsletter](/newsletter).
 
 To further speed up our app and to provide a more pleasant experience in flaky network conditions, we may want to use a service worker that allows us to apply precaching mechanisms. Luckily the Angular team already offers a service worker module that is well integrated with the framework. Let’s have a look at how to apply that to our application.
 
-<!-- {{<egghead-lesson uid="lessons/egghead-apply-precaching-with-the-angular-service-worker" >}} -->
 {{<youtube 2-SoCdPo4l8>}}
 
 ### Original web.dev article
