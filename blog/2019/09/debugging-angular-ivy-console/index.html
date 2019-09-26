@@ -255,11 +255,11 @@
 <pre><code>&gt; angular.element($0).scope()
 </code></pre>
 
-<p>&hellip;to your browser&rsquo;s devtools console and get access to the scope of your component to manipulate and inspect it? About 3 years ago (man time passes by), I wrote a blog post about <a href="/blog/2016/02/debugging-angular2-console/">Debugging Angular Applications</a>. It highlighted how you could easily inspect the component state from the browser devtools console with AngularJS and how that changed with the early versions of Angular (2+). In fact with one of the early versions of Angular 2+ there as an API called <code>ng.probe</code> that could be used to inspect the component state. It was dropped later.</p>
+<p>&hellip;to your browser&rsquo;s devtools console and get access to the scope of your component to manipulate and inspect it? About 3 years ago (man time passes by), I wrote a blog post about <a href="/blog/2016/02/debugging-angular2-console/">Debugging Angular Applications</a>. It highlighted how you could easily inspect the component state from the browser devtools console with AngularJS and how that changed with the early versions of Angular (2+). In fact starting from the early versions of Angular 2+ the <code>ng.probe</code> API has been introduced to allow you to interact with the component state from your console.</p>
 
 <blockquote class="emphasized">"Ivy is an enabler" <cite>Igor Minar</cite></blockquote>
 
-<p>With Ivy something similar comes again via the <code>ng</code> object that is exposed globally. If you open up your devtools (i.e. Chrome&rsquo;s Devtools) and type <code>ng</code>, you&rsquo;ll see something like this:</p>
+<p>With Ivy new APIs have been added to the global <code>ng</code> object. If you open up your devtools (i.e. Chrome&rsquo;s Devtools) and type <code>ng</code>, you&rsquo;ll see something like this:</p>
 
 
 <figure class="image--full">
