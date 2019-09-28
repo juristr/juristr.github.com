@@ -54,4 +54,4 @@ $ git reset HEAD~
 
 ## Conclusion
 
-As you can see, there's **no need to learn all the Git magic**. Just some simple commands can already improve your Git workflow a lot. Over the years I've worked with different teams and a lot of developers struggle with Git (although it has been around for more than a decade). As such I recorded a **video course** that collects a series of git commands that'll directly help you with your daily development tasks: https://egghead.io/courses/productive-git-for-developers
+As you can see, there's **no need to learn all the Git magic**. Just some simple commands can already improve your Git workflow a lot. Over the years I've worked with different teams and a lot of developers struggle with Git (although it has been around for more than a decade). As such I recorded a **video course** that collects a series of git commands that'll directly help you with your daily development tasks: [https://egghead.io/courses/productive-git-for-developers](https://egghead.io/courses/productive-git-for-developers?af=fj2vsx)

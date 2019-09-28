@@ -260,4 +260,4 @@ Here are some of my repositories where I've already set this up, as well as othe
 - [angular-formly](https://github.com/formly-js/angular-formly)
 - _feel free to let me know about others_
 
-Besides the article I mentioned above, [Kent C. Dodds](https://twitter.com/kentcdodds) has done a lot of research on how to best create an Open Source JavaScript library and shares his knowledge [in this series of Egghead.io videos](https://egghead.io/series/how-to-write-an-open-source-javascript-library). Definitely worth watching (I've not done it yet... :flushed:).
+Besides the article I mentioned above, [Kent C. Dodds](https://twitter.com/kentcdodds) has done a lot of research on how to best create an Open Source JavaScript library and shares his knowledge [in this series of Egghead.io videos](https://egghead.io/series/how-to-write-an-open-source-javascript-library?af=fj2vsx). Definitely worth watching (I've not done it yet... :flushed:).

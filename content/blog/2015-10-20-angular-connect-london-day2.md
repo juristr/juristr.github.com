@@ -529,7 +529,7 @@ It's to avoid bugs and errors. But they admit it's a bit bugging them as well.  
 
 ## Useful Links and stuff..
 
-*   Egghead Angular 2 fundamentals: [](https://egghead.io/series/angular-2-fundamentals)https://egghead.io/series/angular-2-fundamentals
+*   Egghead Angular 2 fundamentals: [](https://egghead.io/series/angular-2-fundamentals)https://egghead.io/series/angular-2-fundamentals?af=fj2vsx
 *   Building the Best Components: [](https://docs.google.com/presentation/d/10g3N69pRJezgpwCqttdDO7htYEAJRgKcLJ7wBpNPDyU/preview?slide=id.p)https://docs.google.com/presentation/d/10g3N69pRJezgpwCqttdDO7htYEAJRgKcLJ7wBpNPDyU/preview?slide=id.p
 *   Slides for MMaterial DDesign session: [](http://g.co/ng/ac-material)[http://](https://t.co/5kxW8nirEJ)g.co/ng/ac-material 
 *   [](https://github.com/rangle/batarangle)https://github.com/rangle/batarangle

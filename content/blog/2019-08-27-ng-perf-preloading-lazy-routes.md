@@ -43,14 +43,14 @@ In the [previous article](/blog/2019/08/ngperf-route-level-code-splitting) we ta
 
 ## Custom Preloading Strategy
 
-[Preloading all modules](https://egghead.io/lessons/egghead-preload-all-lazy-loaded-modules-with-angular) is quite an extreme approach and might not always be desirable. For instance, you don't want to preload lazy routes a user might not even have access to. Therefore, in this lesson we're going to have a look at how to define a custom preloading strategy in Angular.
+[Preloading all modules](https://egghead.io/lessons/egghead-preload-all-lazy-loaded-modules-with-angular?af=fj2vsx) is quite an extreme approach and might not always be desirable. For instance, you don't want to preload lazy routes a user might not even have access to. Therefore, in this lesson we're going to have a look at how to define a custom preloading strategy in Angular.
 
 <!-- {{<egghead-lesson uid="lessons/egghead-implement-a-custom-preloading-strategy-with-angular" >}} -->
 {{<youtube ZGyTnHm_fa8>}}
 
 ## Preloading with ngx-quicklink
 
-In a [previous lesson we learned about implementing a custom preloading strategy](https://egghead.io/lessons/egghead-implement-a-custom-preloading-strategy-with-angular). That gives you a lot of control over which route to preload and which not, whether it is based on the user's permissions or some runtime app config. In this lesson we're using [ngx-quicklink](https://github.com/mgechev/ngx-quicklink), a library that drastically simplifies the custom preloading, by automatically loading all visible links on the page.
+In a [previous lesson we learned about implementing a custom preloading strategy](https://egghead.io/lessons/egghead-implement-a-custom-preloading-strategy-with-angular?af=fj2vsx). That gives you a lot of control over which route to preload and which not, whether it is based on the user's permissions or some runtime app config. In this lesson we're using [ngx-quicklink](https://github.com/mgechev/ngx-quicklink), a library that drastically simplifies the custom preloading, by automatically loading all visible links on the page.
 
 <!-- {{<egghead-lesson uid="lessons/egghead-custom-route-preloading-with-ngx-quicklink-and-angular" >}} -->
 {{<youtube fZAozYgYzhI>}}

@@ -21,12 +21,6 @@ tags:
 {{< postad >}}
 
 
-Note, _I'll update this blog post as I catch up with talks from the conf, so don't forget to check back_  
-_Last update: 8th May 2019 11:30pm GMT+2 - check my [Twitter stream for more](https://twitter.com/juristr)_
-
----
-
-
 {{< toc >}}
 
 ## Disclaimer
@@ -591,7 +585,7 @@ But when talking about lazy loading, one also needs to think about **prefetching
 
 {{<figure url="/blog/assets/imgs/ngconf2019/minko-prefetching.png" size="full" nozoom="true">}}
 
-In my [Egghead router course](https://egghead.io/courses/learn-angular-router-for-real-world-applications) I'm already showing how to [avoid delays for lazy modules by applying a preloading strategy](https://egghead.io/lessons/angular-avoid-delays-for-lazy-modules-by-applying-a-preloading-strategy-with-the-angular-router) which can be either the default `PreloadAllModules` or customized [by defining a custom preloading strategy](https://egghead.io/lessons/angular-define-a-custom-preloading-strategy-for-the-angular-router).  
+In my [Egghead router course](https://egghead.io/courses/learn-angular-router-for-real-world-applications?af=fj2vsx) I'm already showing how to [avoid delays for lazy modules by applying a preloading strategy](https://egghead.io/lessons/angular-avoid-delays-for-lazy-modules-by-applying-a-preloading-strategy-with-the-angular-router?af=fj2vsx) which can be either the default `PreloadAllModules` or customized [by defining a custom preloading strategy](https://egghead.io/lessons/angular-define-a-custom-preloading-strategy-for-the-angular-router?af=fj2vsx).  
 Minko (as usual) brings this to a whole other level with libraries such as 
 
 - [ngx-quicklink](https://github.com/mgechev/ngx-quicklink) which automatically prefetches links on the page

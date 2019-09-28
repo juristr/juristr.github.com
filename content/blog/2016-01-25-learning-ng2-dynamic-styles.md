@@ -30,7 +30,7 @@ image: /blog/assets/imgs/conditional-add-styles.png
 
 ## Egghead.io Course: Understand How to Style Angular Components
 
-Check out [my Egghead.io course](https://egghead.io/courses/understand-how-to-style-angular-components) to get a full picture on styling Angular components. I hope you enjoy it :blush:
+Check out [my Egghead.io course](https://egghead.io/courses/understand-how-to-style-angular-components?af=fj2vsx) to get a full picture on styling Angular components. I hope you enjoy it :blush:
 
 {{<egghead-course uid="courses/understand-how-to-style-angular-components" lesson_img="/blog/assets/imgs/egghead-artwork-styling-components.png" >}}
 
@@ -404,7 +404,7 @@ This way you can deliberately modify the properties of the native DOM element. S
 
 ## More...
 
-There's more about styling such as style encapsulation, `ngStyle`, .... Learn about it with [my **10 lessons Egghead.io course** about "Understand How to Style Angular Components"](https://egghead.io/courses/understand-how-to-style-angular-components).
+There's more about styling such as style encapsulation, `ngStyle`, .... Learn about it with [my **10 lessons Egghead.io course** about "Understand How to Style Angular Components"](https://egghead.io/courses/understand-how-to-style-angular-components?af=fj2vsx).
 
 ## Conclusion
 

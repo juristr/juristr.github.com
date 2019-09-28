@@ -104,6 +104,8 @@ Let's assume we want to lazy load a component called `UserListComponent`. First,
 
 ### Compiling the module into a dedicated JS bundle
 
+{{<warn-notice message="**Update:** if you are on Angular v8+ and you use the new dynamic import feature (`import('./some.module').then(m => m.SomeModule)` the code splitting is done automatically and there's no need to specify the `lazyModules` array in the `angular.json`">}}
+
 Now we need to figure out how to **lazy load the Angular Module**. But before starting, we need to make sure our module gets compiled into a separate JS file that can then be lazy loaded. For the routing, the Angular CLI makes sure to create that bundle whenever it sees a `loadChildren` and according path. For our own non-routed NgModule, we need to take care about that part ourselves. We **need to tell the CLI explicitly** which modules should be bundled separately. This can be done in the `angular.json`, by adding the path of the lazy module to the `lazyModules` array. Here's an example.
 
 ```json
@@ -129,6 +131,8 @@ Now we need to figure out how to **lazy load the Angular Module**. But before st
 ```
 
 ### Loading the module at runtime
+
+{{<warn-notice message="**Update:** starting with Angular v8+ the `NgModuleFactoryLoader` has been deprecated. [Read this article](/blog/2019/10/lazyload-module-ivy-viewengine/) to see how to manually lazy load NgModules in ViewEngine and Ivy starting from Angular v8+.">}}
 
 Once the compilation process is configured, we need to make sure we're able to load the corresponding module JS file at runtime and boot it.  
 Angular gives us the `NgModuleFactoryLoader` for that. Here's a quick example of a `LazyModuleService` I created, that takes a path to a module and loads it accordingly.
@@ -243,7 +247,7 @@ export class AppComponent {
 }
 ```
 
-Once the tag is in the template, the browser interprets it, and if there's a corresponding custom element registered, it will instantiate it automatically for us. Obviously `do-greet` needs [to be an Angular Element](https://egghead.io/lessons/angular-transform-an-angular-component-into-a-native-custom-element). But [compared to dynamically instantiating a traditional Angular component dynamically](/blog/2017/07/ng2-dynamic-tab-component/), this is a looot easier. It's just using the **native DOM API**!
+Once the tag is in the template, the browser interprets it, and if there's a corresponding custom element registered, it will instantiate it automatically for us. Obviously `do-greet` needs [to be an Angular Element](https://egghead.io/lessons/angular-transform-an-angular-component-into-a-native-custom-element?af=fj2vsx). But [compared to dynamically instantiating a traditional Angular component dynamically](/blog/2017/07/ng2-dynamic-tab-component/), this is a looot easier. It's just using the **native DOM API**!
 
 Great, so now we know how to dynamically instantiate an Angular Element. However, in order that the Angular Element get properly instantiated when we insert the tag, it has to be registered. We simply package our Angular Element into a module and lazy load it (just as we learned in the previous section).
 
@@ -272,14 +276,7 @@ export class UsersModule {
 }
 ```
 
-We import a `UserListComponent` which is the one we want to lazy load and define it to be an Angular Element. We also need to declare the module to be bundled separately, s.t. we're able to properly lazy load it later (as we've read in the section before).
-
-```json
-// angular.json
-"lazyModules": ["src/app/users/users.module"]
-```
-
-Now that our "lazy component" gets bundled separately, we can start lazy loading it. For that I created a helper service `ComponentLoaderService`.
+We import a `UserListComponent` which is the one we want to lazy load and define it to be an Angular Element. We now need to lazy load the module programmatically for which I created a helper service `ComponentLoaderService`.
 
 ```typescript
 // core/component-loader.service.ts
@@ -291,48 +288,24 @@ Now that our "lazy component" gets bundled separately, we can start lazy loading
 export class ComponentLoaderService {
   private componentRegistry = {
     'app-user-list': {
-      modulePath: 'src/app/users/users.module#UsersModule',
+      modulePath: () =>
+        import('../users/users.module').then(m => m.UsersModule),
       moduleRef: null
     }
   };
 
-  constructor(
-    private loader: NgModuleFactoryLoader,
-    private injector: Injector
-  ) {}
+  constructor(private compiler: Compiler, private injector: Injector) {}
 
 }
 ```
 
 As you can see, the service has a component registry, which is nothing more than a map having the component selector as key and an object with the `modulePath` to load as well as the instantiated module reference (so that we don't re-fetch already instantiated modules). You could of course also use a different data structure such as a `Set`. This whole configuration map is just for having a nicer API later. It allows us basically to invoke a function `loadComponent('app-user-list')`, passing it the tag name of the component to load, rather than having to know the module and passing it the entire path to the module itself.
 
-
-I also inject the `NgModuleFactoryLoader` which we use to fetch and instantiate a lazy module. Note, we need to register it in the providers section of our `AppModule` (or where you need it).
-
-```typescript
-@NgModule({
-  ...
-  providers: [
-    { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader }
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule {}
-```
-
-Otherwise you might get an exception such as this one:
-
-```
-Error: StaticInjectorError(AppModule)[NgModuleFactoryLoader]: 
-  StaticInjectorError(Platform: core)[NgModuleFactoryLoader]: 
-    NullInjectorError: No provider for NgModuleFactoryLoader!
-```
-
 Finally the `loadComponent(...)` method. Let's paste it in here before explaining it:
 
 ```typescript
 // core/component-loader.service.ts
-import { Injectable, NgModuleFactoryLoader, Injector } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -357,8 +330,20 @@ export class ComponentLoaderService {
       const path = cmpRegistryEntry.modulePath;
 
       return new Promise((resolve, reject) => {
-        this.loader
-          .load(path)
+        (path() as Promise<NgModuleFactory<any> | Type<any>>)
+          .then(elementModuleOrFactory => {
+            if (elementModuleOrFactory instanceof NgModuleFactory) {
+              // if ViewEngine
+              return elementModuleOrFactory;
+            } else {
+              try {
+                // if Ivy
+                return this.compiler.compileModuleAsync(elementModuleOrFactory);
+              } catch (err) {
+                throw err;
+              }
+            }
+          })
           .then(moduleFactory => {
             const moduleRef = moduleFactory.create(this.injector).instance;
             cmpRegistryEntry.moduleRef = moduleRef;
@@ -392,7 +377,7 @@ if (cmpRegistryEntry.moduleRef) {
 
 ...verifies whether the `moduleRef` property has a value. If that's the case, the module has already been instantiated, so we just need to create an instance of our Angular Element using the native browser API and resolve the `Promise`.
 
-Otherwise we need to load the module that contains the component that should be lazy loaded. As you now know, we get the path of the module via the `modulePath` of our component registry. We pass that to the `NgModuleFactoryLoader` which we injected as `loader` into our service. Once the module is loaded, we create it using `moduleFactory.create(...)` passing it the injector. Finally, we again instantiate our Angular Element and return it (by resolving our Promise).
+Otherwise we need to load the module that contains the component that should be lazy loaded. The module can directly be lazy loaded by invoking the dynamic import function that is stored in the `modulePath` of our object. Once the module is loaded, we create it using `moduleFactory.create(...)` passing it the injector. Finally, we again instantiate our Angular Element and return it (by resolving our Promise).
 
 ```typescript
 ...
@@ -419,6 +404,8 @@ if (cmpRegistryEntry.moduleRef) {
   });
 }
 ```
+
+> **Note,** if you wanna learn more about how to programmatically load an Angular module, check out [my dedicated article here](/blog/2019/10/lazyload-module-ivy-viewengine/) that goes into the details how to lazy load modules s.t. they are compatible with ViewEngine and Ivy.
 
 **How do we use this?** At some other place of our app - for instance the `AppComponent` - we simply inject our `ComponentLoaderService` and invoke its `loadComponent` function passing the selector of the component we wish to lazy load. Once the returning Promise resolves, we have an instance of the component and can pass data to it. In the code below we pass an array of users to its `users` input property. Finally, using the `ElementRef` we query for some `<div id="user-container">` and append our Angular Element.
 

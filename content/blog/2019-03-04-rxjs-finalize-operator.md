@@ -148,7 +148,7 @@ How does `finalize` work? It basically adds a callback to the teardown of the Ob
 
 Note, the `finalize` operator is executed whenever **our Observable terminates**. This is important! For Angular HTTP this works perfectly, because the `Observable` returned by the Angular HTTP service "completes" once the request is done. That might not be the case if you have a custom Observable.
 
-Check out [my corresponding video explaining the finalize operator](https://egghead.io/lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator) or play directly with this Stackblitz code sample.
+Check out [my corresponding video explaining the finalize operator](https://egghead.io/lessons/angular-execute-code-when-the-rxjs-observable-terminates-with-the-finalize-operator?af=fj2vsx) or play directly with this Stackblitz code sample.
 
 Happy coding!
 

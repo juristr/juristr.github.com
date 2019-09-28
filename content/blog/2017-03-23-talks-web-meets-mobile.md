@@ -51,14 +51,14 @@ And even though Maxim had his birthday at 21st of March (the day we had our meet
 I first got to know Nathan when he offered to [review my video course on "Learning Angular Components"](https://goo.gl/zrGX8K). An absolute amazing guy. [Nathan Walker](https://twitter.com/wwwalkerrun) is a Telerik Developer Expert for NativeScript and active Angular community contributor, known for his amazing NativeScript libraries, contributions to angular-seed as well as for being the author of angular-seed-advanced. He's also an Egghead author and published a series of courses:
 
 {{<article-link
-    url="https://egghead.io/courses/create-native-mobile-apps-with-nativescript-for-angular"
+    url="https://egghead.io/courses/create-native-mobile-apps-with-nativescript-for-angular?af=fj2vsx"
     title="Create Native Mobile Apps with NativeScript for Angular"
     text="In this course, we will learn how to work with NativeScript for Angular."
     imageurl="https://d2eip9sf3oo6c2.cloudfront.net/series/covers/000/000/084/full/EGH_AngularNativeScript_Final-cover.png?1481827806"
 >}}
 
 {{<article-link
-    url="https://egghead.io/courses/use-objective-c-swift-and-java-api-s-in-nativescript-for-angular-ios-and-android-apps"
+    url="https://egghead.io/courses/use-objective-c-swift-and-java-api-s-in-nativescript-for-angular-ios-and-android-apps?af=fj2vsx"
     title="Use Objective C, Swift and Java api’s in NativeScript for Angular iOS and Android apps"
     text="NativeScript has the ability to write Objective C, Swift and Java apis directly from JavaScript and TypeScript."
     imageurl="https://d2eip9sf3oo6c2.cloudfront.net/series/covers/000/000/106/full/EGH_AngularNS_Mobile_Final-cover.png?1490043610"

@@ -27,7 +27,7 @@ tags:
 
 ## Egghead course: Getting Started with Angular Elements
 
-**Heads up!** I've created a 40min course on [Egghead.io](https://egghead.io/courses/getting-started-with-angular-elements) that introduces you to Angular Elements, step by step. 
+**Heads up!** I've created a 40min course on [Egghead.io](https://egghead.io/courses/getting-started-with-angular-elements?af=fj2vsx) that introduces you to Angular Elements, step by step. 
 
 Here's the intro video for the course:
 
@@ -35,16 +35,16 @@ Here's the intro video for the course:
 
 The course walks you through..
 
-- [Transform an Angular Component into a native Custom Element](https://egghead.io/lessons/angular-transform-an-angular-component-into-a-native-custom-element)
-- [Compile an Angular Component as standalone Custom Element](https://egghead.io/lessons/angular-compile-an-angular-component-as-standalone-custom-elements)
-- [Use ngx-build-plus to compile Angular Elements](https://egghead.io/lessons/angular-use-ngx-build-plus-to-compile-angular-elements)
-- [Communicate with Angular Elements using Inputs and Events](https://egghead.io/lessons/angular-communicate-with-angular-elements-using-inputs-and-events)
-- [Use an Angular component inside a React App with Angular Elements](https://egghead.io/lessons/react-use-an-angular-component-inside-a-react-app-with-angular-elements)
-- [Pass data from a React component to an Angular component with Angular Elements](https://egghead.io/lessons/react-pass-data-from-a-react-component-to-an-angular-component-with-angular-elements)
-- [Create multiple root components in Angular with Angular Elements](https://egghead.io/lessons/angular-create-multiple-root-components-in-angular-with-angular-elements)
-- [Use Angular components in AngularJS applications with Angular Elements](https://egghead.io/lessons/angular-use-angular-components-in-angularjs-applications-with-angular-elements)
+- [Transform an Angular Component into a native Custom Element](https://egghead.io/lessons/angular-transform-an-angular-component-into-a-native-custom-element?af=fj2vsx)
+- [Compile an Angular Component as standalone Custom Element](https://egghead.io/lessons/angular-compile-an-angular-component-as-standalone-custom-elements?af=fj2vsx)
+- [Use ngx-build-plus to compile Angular Elements](https://egghead.io/lessons/angular-use-ngx-build-plus-to-compile-angular-elements?af=fj2vsx)
+- [Communicate with Angular Elements using Inputs and Events](https://egghead.io/lessons/angular-communicate-with-angular-elements-using-inputs-and-events?af=fj2vsx)
+- [Use an Angular component inside a React App with Angular Elements](https://egghead.io/lessons/react-use-an-angular-component-inside-a-react-app-with-angular-elements?af=fj2vsx)
+- [Pass data from a React component to an Angular component with Angular Elements](https://egghead.io/lessons/react-pass-data-from-a-react-component-to-an-angular-component-with-angular-elements?af=fj2vsx)
+- [Create multiple root components in Angular with Angular Elements](https://egghead.io/lessons/angular-create-multiple-root-components-in-angular-with-angular-elements?af=fj2vsx)
+- [Use Angular components in AngularJS applications with Angular Elements](https://egghead.io/lessons/angular-use-angular-components-in-angularjs-applications-with-angular-elements?af=fj2vsx)
 
-**View the entire course [here](https://egghead.io/courses/getting-started-with-angular-elements)**.
+**View the entire course [here](https://egghead.io/courses/getting-started-with-angular-elements?af=fj2vsx)**.
 
 ## What are Angular Elements?
 

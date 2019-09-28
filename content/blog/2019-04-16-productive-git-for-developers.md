@@ -42,23 +42,23 @@ With this course, I aim at a different goal. You will walk through a series of s
 - moving a set of commits to another branch
 - undoing accidental commits
 
-The goal is not to cover everything, but those tasks that will greatly improve your daily productivity with Git. If you're interested, check it out [over on Egghead.io](https://egghead.io/courses/productive-git-for-developers).
+The goal is not to cover everything, but those tasks that will greatly improve your daily productivity with Git. If you're interested, check it out [over on Egghead.io](https://egghead.io/courses/productive-git-for-developers?af=fj2vsx).
 
 Here are the current lessons on the course (will be updated over time with new ones as well):
 
-- [Only commit some of my currently modified files into the repository](https://egghead.io/lessons/git-only-commit-some-of-my-currently-modified-files-into-the-repository)
-- [Make my git log look pretty and readable](https://egghead.io/lessons/git-make-my-git-log-look-pretty-and-readable)
-- [Move some commits to a separate branch that I have accidentally committed to master](https://egghead.io/lessons/git-move-some-commits-to-a-separate-branch-that-i-have-accidentally-committed-to-master)
-- [Update my feature branch with the latest changes from master](https://egghead.io/lessons/git-update-my-feature-branch-with-the-latest-changes-from-master)
-- [Push a rebased local branch by using `--force-with-lease`](https://egghead.io/lessons/git-push-a-rebased-local-branch-by-using-force-with-lease)
-- [Polish my git feature branch before merging or submitting for review](https://egghead.io/lessons/git-polish-my-git-feature-branch-before-merging-or-submitting-for-review)
-- [Automate the cleanup of my feature branch with Git Autosquash](https://egghead.io/lessons/git-automate-the-cleanup-of-my-feature-branch-with-git-autosquash)
-- [Squash all of my commits into a single one and merge into master](https://egghead.io/lessons/git-squash-all-of-my-commits-into-a-single-one-and-merge-into-master)
-- [Change the commit message of my last commit](https://egghead.io/lessons/git-change-the-commit-message-of-my-last-commit)
-- [Add a file I’ve forgotten to add to my last commit](https://egghead.io/lessons/git-add-a-file-i-ve-forgotten-to-add-to-my-last-commit)
-- [Undo my last commit and split it into two separate ones](https://egghead.io/lessons/git-undo-my-last-commit-and-split-it-into-two-separate-ones)
-- [Wipe a commit from my local branch](https://egghead.io/lessons/git-wipe-a-commit-from-my-local-branch)
-- [Undo a commit that has already been pushed to the remote repository](https://egghead.io/lessons/git-undo-a-commit-that-has-already-been-pushed-to-the-remote-repository)
-- [Temporarily store some work in progress because I have to jump to another branch](https://egghead.io/lessons/git-temporarily-store-some-work-in-progress-because-i-have-to-jump-to-another-branch)
+- [Only commit some of my currently modified files into the repository](https://egghead.io/lessons/git-only-commit-some-of-my-currently-modified-files-into-the-repository?af=fj2vsx)
+- [Make my git log look pretty and readable](https://egghead.io/lessons/git-make-my-git-log-look-pretty-and-readable?af=fj2vsx)
+- [Move some commits to a separate branch that I have accidentally committed to master](https://egghead.io/lessons/git-move-some-commits-to-a-separate-branch-that-i-have-accidentally-committed-to-master?af=fj2vsx)
+- [Update my feature branch with the latest changes from master](https://egghead.io/lessons/git-update-my-feature-branch-with-the-latest-changes-from-master?af=fj2vsx)
+- [Push a rebased local branch by using `--force-with-lease`](https://egghead.io/lessons/git-push-a-rebased-local-branch-by-using-force-with-lease?af=fj2vsx)
+- [Polish my git feature branch before merging or submitting for review](https://egghead.io/lessons/git-polish-my-git-feature-branch-before-merging-or-submitting-for-review?af=fj2vsx)
+- [Automate the cleanup of my feature branch with Git Autosquash](https://egghead.io/lessons/git-automate-the-cleanup-of-my-feature-branch-with-git-autosquash?af=fj2vsx)
+- [Squash all of my commits into a single one and merge into master](https://egghead.io/lessons/git-squash-all-of-my-commits-into-a-single-one-and-merge-into-master?af=fj2vsx)
+- [Change the commit message of my last commit](https://egghead.io/lessons/git-change-the-commit-message-of-my-last-commit?af=fj2vsx)
+- [Add a file I’ve forgotten to add to my last commit](https://egghead.io/lessons/git-add-a-file-i-ve-forgotten-to-add-to-my-last-commit?af=fj2vsx)
+- [Undo my last commit and split it into two separate ones](https://egghead.io/lessons/git-undo-my-last-commit-and-split-it-into-two-separate-ones?af=fj2vsx)
+- [Wipe a commit from my local branch](https://egghead.io/lessons/git-wipe-a-commit-from-my-local-branch?af=fj2vsx)
+- [Undo a commit that has already been pushed to the remote repository](https://egghead.io/lessons/git-undo-a-commit-that-has-already-been-pushed-to-the-remote-repository?af=fj2vsx)
+- [Temporarily store some work in progress because I have to jump to another branch](https://egghead.io/lessons/git-temporarily-store-some-work-in-progress-because-i-have-to-jump-to-another-branch?af=fj2vsx)
 
 Let me know what you think :smiley:

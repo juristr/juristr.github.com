@@ -160,6 +160,6 @@ _Thanks [Pisman Kwinten](https://twitter.com/KwintenP) for reviewing this articl
 
 - [NgRx + Facades: Better State Management](https://medium.com/@thomasburleson_11450/ngrx-facades-better-state-management-82a04b9a1e39)
 - [The sandbox pattern](https://blog.strongbrew.io/A-scalable-angular-architecture-part2/)
-- [Manage State in RxJS with StartWith and Scan](https://egghead.io/lessons/angular-manage-state-in-rxjs-with-startwith-and-scan)
+- [Manage State in RxJS with StartWith and Scan](https://egghead.io/lessons/angular-manage-state-in-rxjs-with-startwith-and-scan?af=fj2vsx)
 - [Do we really need Redux or @ngrx/store](https://blog.strongbrew.io/do-we-really-need-redux/)
 - [Angular Firebase: Redux from scratch](https://youtu.be/hG7v7quMMwM)
