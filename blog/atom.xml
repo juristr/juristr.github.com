@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 25 Sep 2019 22:44:36 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2019 00:09:59 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/blog/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Manually Lazy Load an Angular Module with ViewEngine and Ivy</title>
+      <link>https://juristr.com/blog/2019/10/lazyload-module-ivy-viewengine/</link>
+      <pubDate>Tue, 01 Oct 2019 00:09:59 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/10/lazyload-module-ivy-viewengine/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I have written about &lt;a href=&#34;https://juristr.com/blog/2019/04/state-lazy-loading-components-angular/#manual-lazy-loading-of-modules&#34;&gt;lazy loading components&lt;/a&gt; in the past, that covers some of the topics mentioned here as well. Today in this post I&amp;rsquo;d like to exclusively focus on how to approach lazy loading of an Angular Module in a way that is compatible with ViewEngine and Ivy.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Debugging Angular Ivy Applications from the Devtools Console</title>
