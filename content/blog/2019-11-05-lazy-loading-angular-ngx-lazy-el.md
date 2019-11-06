@@ -36,7 +36,7 @@ Loading indicators, as fancy as they might get, should really be avoided after a
 
 {{<youtube UhJuVN5KIFk >}}
 
-**Source code:** ...
+**Source code:** [https://github.com/juristr/ngx-lazy-el-demo](https://github.com/juristr/ngx-lazy-el-demo)
 
 ## Lazy Loading in Angular
 
