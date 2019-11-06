@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Tue, 01 Oct 2019 00:09:59 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 12:00:28 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/blog/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lazy Loading with Angular Elements and ngx-lazy-el</title>
+      <link>https://juristr.com/blog/2019/11/lazy-loading-angular-ngx-lazy-el/</link>
+      <pubDate>Wed, 06 Nov 2019 12:00:28 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/11/lazy-loading-angular-ngx-lazy-el/</guid>
+      <description>Modern web apps often suffer of bad startup time. This frustrates your users. Even worse (especially for public facing apps), it might even result in being penalized on the Google search index.</description>
+    </item>
     
     <item>
       <title>Manually Lazy Load an Angular Module with ViewEngine and Ivy</title>
