@@ -63,6 +63,14 @@ matDrawer.toggle();
 ng.markDirty(matDrawer);
 ```
 
+## What's happening to the `ng.probe` API?
+
+It most probably won't be supported by Ivy
+
+> In Ivy, we don't support NgProbe because we have our own set of testing utilities with more robust functionality. We shouldn't bring in NgProbe because it prevents DebugNode and friends from tree-shaking properly.
+
+[More details here](https://github.com/angular/angular/blob/master/packages/platform-browser/src/dom/debug/ng_probe.ts#L40-L47).
+
 ## Conclusion
 
 This new API allows us to quickly interact with components and test out things without having to go back and forth between our editor and browser. But even more, new devtools extensions can be developed on top of these APIs to facilitate our lifes even more. For instance, if you take a look at the components, they have a `__ngContext__` attached which has a `debug` object with lots of interesting methods to query the component and it's template properties. Note however, these APIs (or some of them) are only available in development mode and will be compiled away in production mode.
