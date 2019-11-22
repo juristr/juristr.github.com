@@ -133,7 +133,7 @@ export class GreeterModule {
 }
 ```
 
-Assume now we **lazy loading** the `GreeterModule` using the technique I described in [my related article]([https://juristr.com/blog/2019/10/lazyload-module-ivy-viewengine](/blog/2019/10/lazyload-module-ivy-viewengine)). Once the `GreeterModule` gets loaded on the fly and instantiated, the constructor will be called and as a consequence the Angular Element will be registered. Now, the **browser knows** about our tag and we can just literally paste it into the DOM to have it being instantiate and work.
+Assume now we **lazy loading** the `GreeterModule` using the technique I described in [my related article](/blog/2019/10/lazyload-module-ivy-viewengine). Once the `GreeterModule` gets loaded on the fly and instantiated, the constructor will be called and as a consequence the Angular Element will be registered. Now, the **browser knows** about our tag and we can just literally paste it into the DOM to have it being instantiate and work.
 
 ```html
 <hello-world></hello-world>
