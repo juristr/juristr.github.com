@@ -9,10 +9,13 @@ image: /assets/images/newsletter-bg.jpg
 
 Hey :wave:
 
-Yes, I decided to launch a newsletter. **Why?** It's an experiment I'd like to try. As a Google Developers Expert, software engineer and freelance trainer, I'm continously learning new things. And I've always had the passion to share those learnings, either by [writing articles](/blog) or creating [video courses on Egghead](https://egghead.io/instructors/juri-strumpflohner?af=fj2vsx) or on my [Youtube channel](http://www.youtube.com/c/JuriStrumpflohner).
+yes I launched a newsletter. Well, I don't like the term "newsletter" as it sounds like spammy advertising emails. Instead, think of it more like **having my brain connected to your inbox**. I like to send thoughts, new interesting articles I discover, some videos I create or blog posts I wrote or am about to write.
 
-Writing proper articles or creating video lessons takes time, and sometimes I'd just like to quickly share some thoughts, some cool article I found on the web or let you know about that new video course I just released. That's where a newsletter fits in perfectly. Moreover, I'd like to use it as an early feedback for articles and video courses I'm going to publish :wink:
+I like to see this as a more direct connection to you, different to my blog articles which is more broadcasting into the wild. So if this is something that sounds interesting to you, here's the form to subscribe :smiley:
 
-So if this is something that sounds interesting to you, here's the form to subscribe :smiley:
+You may also want to check out
+
+- [My video courses on Egghead](https://egghead.io/instructors/juri-strumpflohner?af=fj2vsx)
+- [My Youtube channel](http://www.youtube.com/c/JuriStrumpflohner)
 
 {{< newsletter-signup-embed >}}
