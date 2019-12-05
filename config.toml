@@ -70,13 +70,13 @@ alertbar = false
   twitter = "juristr"
 
 [params.entryAdlink]
-  link = "https://egghead.io/courses/getting-started-with-angular-elements"
+  link = "https://egghead.io/courses/getting-started-with-angular-elements?af=fj2vsx"
   image = "/assets/images/banners/egghead-banner-elements-course.png"
   client = "eggheadio"
   uid = "url"
 
 [params.adlink]
-  link = "https://egghead.io/courses/productive-git-for-developers"
+  link = "https://egghead.io/courses/productive-git-for-developers?af=fj2vsx"
   image = "/assets/images/banners/egghead-banner-productive-git.png"
   client = "eggheadio"
   uid = "url"
