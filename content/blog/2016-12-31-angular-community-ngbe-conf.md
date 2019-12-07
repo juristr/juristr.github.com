@@ -136,6 +136,10 @@ But there have been a lot of other interesting talks, like the intro to GraphQL 
 	text="All of the conference sessions at NG-BE 2016"
 >}}
 
+### My talk
+
+{{<youtube K4YMmwxGKjY>}}
+
 ## Conclusion
 
 I've been doing frontend development, even with Angular 1, for a longer time now. But it's been roughly since November last year when I started to be more active, on Twitter, by contributing to Angular open source projects, [and obviously by blogging more Angular specific stuff](/blog/collections/angular). It's been overwhelming how welcoming, friendly and open the community is.
