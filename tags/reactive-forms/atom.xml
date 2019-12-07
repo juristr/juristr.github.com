@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reactive Forms on juri.dev</title>
+    <link>https://juristr.com/tags/reactive-forms/</link>
+    <description>Recent content in Reactive Forms on juri.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Sat, 07 Dec 2019 08:48:08 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/reactive-forms/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Talk: Enterprise Grade Angular Reactive Forms</title>
+      <link>https://juristr.com/blog/2019/12/ng-be-2019-formly-talks/</link>
+      <pubDate>Sat, 07 Dec 2019 08:48:08 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/12/ng-be-2019-formly-talks/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    This year I again had the pleasure to come back to &lt;a href=&#34;https://ng-be.org/&#34;&gt;ng-be&lt;/a&gt; as a speaker. Since I see a lot of people struggle with creating proper forms, especially large forms, I gave a talk about how to optimize your Angular Reactive Forms with the help of &lt;a href=&#34;https://formly.dev/&#34;&gt;ngx-formly&lt;/a&gt;.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
