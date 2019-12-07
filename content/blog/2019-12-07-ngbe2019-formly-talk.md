@@ -1,7 +1,7 @@
 ---
 type: post
 title: "Talk: Enterprise Grade Angular Reactive Forms"
-lead: Learn about 
+lead: Learn about how using ngx-formly can drammatically improve your Angular reactive forms
 date: 2019-12-07T08:48:08+01:00
 comments: true
 url: /blog/2019/12/ng-be-2019-formly-talks
