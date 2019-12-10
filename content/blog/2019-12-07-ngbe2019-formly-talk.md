@@ -64,11 +64,11 @@ formlyFieldConfig = [
 
 ...and Formly will turn it into HTML and render it properly. Sounds crazy at first, but it has a lot of advantages in terms of maintainability, reusing of form configurations and guaranteeing consistency across your frontend forms. Moreover Formly is really flexible, has superb support for Observables and you can easily define custom form types and much more.
 
-So here are my slides an repository:
+{{<youtube xNiCHsSAsXo >}}
+
+Here are my slides an repository:
 
 - [Slides](http://bit.ly/ngbe2019-formly-slides)
 - [GitHub Repository](http://bit.ly/ngbe2019-formly-repo)
-
-> **Note:** I will upload the video of the talk as soon as it is online.
 
 Expect some more content to land on this blog about Formly in the next weeks :smiley.
