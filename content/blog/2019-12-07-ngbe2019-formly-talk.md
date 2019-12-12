@@ -71,4 +71,4 @@ Here are my slides an repository:
 - [Slides](http://bit.ly/ngbe2019-formly-slides)
 - [GitHub Repository](http://bit.ly/ngbe2019-formly-repo)
 
-Expect some more content to land on this blog about Formly in the next weeks :smiley.
+Expect some more content to land on this blog about Formly in the next weeks :smiley:.
