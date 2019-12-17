@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2019/12/jsbe-lazy-loading-ngelements/</loc>
+    <lastmod>2019-12-17T08:48:08+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2019/12/ng-be-2019-formly-talks/</loc>
     <lastmod>2019-12-07T08:48:08+01:00</lastmod>
   </url>
@@ -3926,7 +3934,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2019-12-07T08:48:08+01:00</lastmod>
+    <lastmod>2019-12-17T08:48:08+01:00</lastmod>
   </url>
   
   
@@ -3977,7 +3985,7 @@
   
   <url>
     <loc>https://juristr.com/tags/angular/</loc>
-    <lastmod>2019-12-07T08:48:08+01:00</lastmod>
+    <lastmod>2019-12-17T08:48:08+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -3986,7 +3994,16 @@
   
   <url>
     <loc>https://juristr.com/categories/angular/</loc>
-    <lastmod>2019-12-07T08:48:08+01:00</lastmod>
+    <lastmod>2019-12-17T08:48:08+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/angular-elements/</loc>
+    <lastmod>2019-12-17T08:48:08+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4083,7 +4100,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2019-12-07T08:48:08+01:00</lastmod>
+    <lastmod>2019-12-17T08:48:08+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4584,7 +4601,7 @@
   
   <url>
     <loc>https://juristr.com/tags/performance/</loc>
-    <lastmod>2019-04-29T14:00:00+01:00</lastmod>
+    <lastmod>2019-12-17T08:48:08+01:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Sat, 07 Dec 2019 08:48:08 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 08:48:08 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/angular/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Talk: Lazy Loading on Steroids with Angular Elements</title>
+      <link>https://juristr.com/blog/2019/12/jsbe-lazy-loading-ngelements/</link>
+      <pubDate>Tue, 17 Dec 2019 08:48:08 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/12/jsbe-lazy-loading-ngelements/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Last week I was invited to &lt;a href=&#34;https://jsbe.io&#34;&gt;jsbe.io&lt;/a&gt;, a JS meetup in Bruxelles (Belgium) to talk about lazy loading in Angular in combination with Angular Elements. Here is the recording and slides of my talk.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Talk: Enterprise Grade Angular Reactive Forms</title>
