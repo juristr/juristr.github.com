@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Tue, 17 Dec 2019 08:48:08 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 22:17:17 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/blog/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Rebase vs Merge</title>
+      <link>https://juristr.com/blog/2019/12/git-rebase-vs-merge/</link>
+      <pubDate>Wed, 18 Dec 2019 22:17:17 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2019/12/git-rebase-vs-merge/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Git is an &amp;ldquo;old&amp;rdquo; technology if you want that has been around for ages now. Still, when speaking or collaborating with other software developers, I always again see them struggle with apparently basic commands. But it doesn&amp;rsquo;t have to be scary. In this article I&amp;rsquo;m going to quickly walk you through the difference between &amp;ldquo;merge&amp;rdquo; and &amp;ldquo;rebase&amp;rdquo;.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Talk: Lazy Loading on Steroids with Angular Elements</title>
