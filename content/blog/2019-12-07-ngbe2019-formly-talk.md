@@ -22,6 +22,10 @@ draft: false
 
 {{< postad >}}
 
+## TL;DR
+
+Jump to the video of the talk at the very end of the article :wink:
+
 ## Little back story: NG-BE is my most favorite conf
 
 I came to NG-BE in 2016, at their very first edition. At that time as an attendee. Apart from AngularConnect, it was one of the first Angular only conferences at that point. And the whole experience was just amazing. I never felt that welcome at any other place. Although I didn't knew anyone, I immediately felt like home, cozy conference, welcoming people and a superb from the organizational point of view. Remember, that was their 1st time organizing it.  
