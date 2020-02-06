@@ -27,7 +27,8 @@ draft: false
 Here are my slides an repository:
 
 - [Slides](http://bit.ly/jsbe-lazy-elements)
-- [GitHub Repository](https://github.com/juristr/lazyapp)
+- [Demoapp: GitHub Repository](https://github.com/juristr/lazyapp)
+- [Library ngx-lazy-el: GitHub Repository](https://github.com/juristr/ngx-lazy-el)
 
 ## Related Resources
 
