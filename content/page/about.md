@@ -3,7 +3,9 @@ title: "About Me"
 url: "/about"
 ---
 
-I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work as a software architect and frontend developer at [R3-GIS](https://www.r3-gis.com/), [here in beautiful South Tyrol (Italy)](https://www.youtube.com/watch?v=YVFzw9QJegk&fmt=22) where my main tasks are on the frontend, doing JavaScript, TypeScript, AngularJS and Angular. I'm a [Google Developer Expert in Web Technologies](https://developers.google.com/experts/people/juri-strumpflohner), an [Egghead Instructor](https://egghead.io/instructors/juri-strumpflohner), speaker and happen to organize the [Software Craftsmanship Meetup](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/).
+Hey :wave:, I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work as a JavaScript Architect at [Nrwl](https://nrwl.io) where I work on Open Source projects such as [Nx](https://nx.dev) and help clients succeed with their projects.
+
+I'm a [Google Developer Expert in Web Technologies](https://developers.google.com/experts/people/juri-strumpflohner), an [Egghead Instructor](https://egghead.io/instructors/juri-strumpflohner), international speaker and happen to organize the [Software Craftsmanship Meetup](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/).
 
 <figure class="image--full">
   <a href="/about/imgs/speaking.jpg" class="image--zoom">
@@ -14,7 +16,7 @@ I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. C
 ## Contact
 <a name="contact"></a>
 
-Feel free to [ask me any question on my AMA repo](https://github.com/juristr/ama) or simply drop me a line at <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;" target="_blank">&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;</a>.
+Feel free to [ask me any question on my AMA repo](https://github.com/juristr/ama) or <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;" target="_blank">send me an email</a>
 
 You can find me also on 
 
@@ -23,9 +25,6 @@ You can find me also on
 - [LinkedIn](https://linkedin.com/in/juristr/)
 - [StackOverflow](http://stackoverflow.com/users/50109/juri)
 
-## Freelance Consulting
-
-I'm also a freelance trainer and consultant mostly around topics such as **frontend development**, **Angular** and **Git**. Interested? Feel free to <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#116;&#114;&#046;&#099;&#111;&#109;" target="_blank">reach out to me</a>.
 
 ## Current Interests
 <a name="interests"></a>

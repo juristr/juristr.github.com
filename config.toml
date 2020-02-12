@@ -14,6 +14,9 @@ disablePathToLower = true
 enableInlineShortcodes = true
 # googleAnalytics = "UA-416229-12"
 
+[markup.goldmark.renderer]
+unsafe= true
+
 [permalinks]
   blog = "/blog/:year/:month/:title/"
 
