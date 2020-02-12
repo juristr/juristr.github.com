@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 18 Dec 2019 22:17:17 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 10:20:14 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Joining Nrwl 🐳 🦄</title>
+      <link>https://juristr.com/blog/2020/02/joining-nrwl/</link>
+      <pubDate>Wed, 12 Feb 2020 10:20:14 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/02/joining-nrwl/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Alright, so yes, I joined Nrwl 😍!! The title should rather be: 5 weeks at Nrwl 🙂 as this week I’m starting my 6th one. Hugely delayed blog post, but hey time at Nrwl flies like mad! So here we go with the entire story.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Git Rebase vs Merge</title>
@@ -4583,7 +4594,7 @@ Some bugs cannot be caught with tests and you often neither detect them when usi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://juristr.com/about/</guid>
-      <description>I&amp;rsquo;m Juri Strumpflohner, a  years old software developer. Currently I work as a software architect and frontend developer at R3-GIS, here in beautiful South Tyrol (Italy) where my main tasks are on the frontend, doing JavaScript, TypeScript, AngularJS and Angular.</description>
+      <description>Hey 👋, I&amp;rsquo;m Juri Strumpflohner, a  years old software developer. Currently I work as a JavaScript Architect at Nrwl where I work on Open Source projects such as Nx and help clients succeed with their projects.</description>
     </item>
     
     <item>
