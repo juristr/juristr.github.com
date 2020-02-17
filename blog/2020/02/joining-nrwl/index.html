@@ -219,7 +219,7 @@
                             Feb 12, 2020
                         </time></span>
                     <span class="dot"></span>
-                    <span class="post-read">5 min read</span>
+                    <span class="post-read">6 min read</span>
                 </p>
             </div>
 
@@ -255,7 +255,8 @@
 <li><a href="#so-what-is-nrwl">So what is Nrwl? 🤔</a>
 <ul>
 <li><a href="#nx">Nx</a></li>
-<li><a href="#nx-console-formerly-known-as-angular-console">Nx Console (formerly known as Angular Console)</a></li>
+<li><a href="#nxconsole-formerly-known-as-angular-console">NxConsole (formerly known as Angular Console)</a></li>
+<li><a href="#nxcloud-formerly-known-as-angular-console">NxCloud (formerly known as Angular Console)</a></li>
 </ul></li>
 <li><a href="#how-is-it-to-work-at-nrwl-did-you-move-to-toronto">How is it to work at Nrwl? Did you move to Toronto?</a></li>
 <li><a href="#we-are-now-taking-on-new-clients-in-europe">We Are Now Taking On New Clients in Europe!</a></li>
@@ -272,7 +273,7 @@
 
 <p>We also heavily contribute to open source! Our two most known products are Nx Console and Nx (and more is coming 😍).</p>
 
-<p>Wanna learn more? Go visit <a href="https://nrwl.io">our website at nrwl.io</a></p>
+<p>Wanna learn more? Go visit <a href="https://nrwl.io">our website at nrwl.io</a>. Let me quickly also outline our main products (OSS &amp; not) which you might have heard or used already.</p>
 
 <h3 id="nx">Nx</h3>
 
@@ -285,7 +286,7 @@
 
 <p>Nx helps here! Nx understands your codebase and builds a dependency graph behind the scenes that allows it to only build your affected apps and libraries, thus dramatically reducing build times. Moreover v8.12 comes with an advanced distributed cache. But read more <a href="https://blog.nrwl.io/distributed-caching-in-nx-164edfbc68e0?source=collection_home---4------1-----------------------">about it on our blog</a>.</p>
 
-<h3 id="nx-console-formerly-known-as-angular-console">Nx Console (formerly known as Angular Console)</h3>
+<h3 id="nxconsole-formerly-known-as-angular-console">NxConsole (formerly known as Angular Console)</h3>
 
 <p><strong>Website:</strong> <a href="https://nx.dev/nx-console">https://nx.dev/nx-console</a><br />
 <strong>GitHub:</strong> <a href="https://github.com/nrwl/nx-console">https://github.com/nrwl/nx-console</a></p>
@@ -304,6 +305,50 @@
     <figcaption></figcaption>
 </figure>
 
+
+
+<h3 id="nxcloud-formerly-known-as-angular-console">NxCloud (formerly known as Angular Console)</h3>
+
+<p><strong>Website:</strong> <a href="https://nx.app">https://nx.app</a></p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nxcloud.jpg" class="image--zoom">
+            <img src="/blog/assets/imgs/nxcloud.jpg" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>NxCloud is our newest product that makes Nx even more powerful. Nx is already highly optimized for monorepos, having its dependency graph and &ldquo;affected&rdquo; commands, allowing to only build/test/lint whatever has really been affected by your changes in your GitHub branch. But still, if you have a large monorepo, or your branch simply changed a lot of different parts, running builds/tests locally or on CI can still take a long time. And <strong>developer time is precious</strong> as we know 😃.</p>
+
+<p>What NxCloud does is to enable caching for your workspace, not just locally but <strong>distributed caching</strong>. What that means basically is that whenever one of your co-workers has already built/tested/linted a given lib/app, you won&rsquo;t have to do it again (unless you changed something ofc). As a result, build times may go down drastically as can be seen in the next diagram</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/dist-caching-nx.png" class="image--zoom">
+            <img src="/blog/assets/imgs/dist-caching-nx.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption>Case study from the Nrwl blog</figcaption>
+</figure>
+
+
+
+<p>Curious? Sounds cool and something you definitely want to have? Read more on <a href="https://blog.nrwl.io/nx-cli-distributed-caching-improved-react-support-bazel-support-and-more-in-nx-9-8d55c4becdc4">our official blog announcement</a> or check out the NxCloud video</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/w1-GiB74ddc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 
 
 <h2 id="how-is-it-to-work-at-nrwl-did-you-move-to-toronto">How is it to work at Nrwl? Did you move to Toronto?</h2>
