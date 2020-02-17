@@ -29,7 +29,7 @@ If you haven't heard of us already, Nrwl has been founded by ex-Googlers and Ang
 
 We also heavily contribute to open source! Our two most known products are Nx Console and Nx (and more is coming :heart_eyes:).
 
-Wanna learn more? Go visit [our website at nrwl.io](https://nrwl.io)
+Wanna learn more? Go visit [our website at nrwl.io](https://nrwl.io). Let me quickly also outline our main products (OSS & not) which you might have heard or used already.
 
 ### Nx
 
@@ -42,7 +42,7 @@ As you might guess now, this also comes with downsides. If used at scale within 
 
 Nx helps here! Nx understands your codebase and builds a dependency graph behind the scenes that allows it to only build your affected apps and libraries, thus dramatically reducing build times. Moreover v8.12 comes with an advanced distributed cache. But read more [about it on our blog](https://blog.nrwl.io/distributed-caching-in-nx-164edfbc68e0?source=collection_home---4------1-----------------------).
 
-### Nx Console (formerly known as Angular Console)
+### NxConsole (formerly known as Angular Console)
 
 **Website:** [https://nx.dev/nx-console](https://nx.dev/nx-console)   
 **GitHub:** [https://github.com/nrwl/nx-console](https://github.com/nrwl/nx-console)
@@ -50,6 +50,23 @@ Nx helps here! Nx understands your codebase and builds a dependency graph behind
 Nx Console is a Visual Studio Code extension for Angular and Nx. If you're not the CLI type of person, then this might be for you. Nx Console automatically finds available schematics in your workspace, thus allowing you to easily control and execute Angular CLI / Nx commands from a nice UI interface.
 
 {{<figure url="/blog/assets/imgs/nx-console.png" size="full">}}
+
+### NxCloud (formerly known as Angular Console)
+
+**Website:** [https://nx.app](https://nx.app)   
+
+{{<figure url="/blog/assets/imgs/nxcloud.jpg" size="full">}}
+
+NxCloud is our newest product that makes Nx even more powerful. Nx is already highly optimized for monorepos, having its dependency graph and "affected" commands, allowing to only build/test/lint whatever has really been affected by your changes in your GitHub branch. But still, if you have a large monorepo, or your branch simply changed a lot of different parts, running builds/tests locally or on CI can still take a long time. And **developer time is precious** as we know :smiley:.
+
+What NxCloud does is to enable caching for your workspace, not just locally but **distributed caching**. What that means basically is that whenever one of your co-workers has already built/tested/linted a given lib/app, you won't have to do it again (unless you changed something ofc). As a result, build times may go down drastically as can be seen in the next diagram
+
+{{<figure url="/blog/assets/imgs/dist-caching-nx.png" size="full" caption="Case study from the Nrwl blog">}}
+
+Curious? Sounds cool and something you definitely want to have? Read more on [our official blog announcement](https://blog.nrwl.io/nx-cli-distributed-caching-improved-react-support-bazel-support-and-more-in-nx-9-8d55c4becdc4) or check out the NxCloud video
+
+{{< youtube w1-GiB74ddc >}}
+
 
 ## How is it to work at Nrwl? Did you move to Toronto?
 
