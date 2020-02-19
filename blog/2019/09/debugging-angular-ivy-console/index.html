@@ -322,8 +322,12 @@ let matDrawer = ng.getComponent($0);
 matDrawer.toggle();
 
 // trigger change detection on the component
-ng.markDirty(matDrawer);
+ng.applyChanges(matDrawer);
 </code></pre>
+
+<blockquote>
+<p><strong>Note:</strong> the video above shows a call to <code>ng.markDirty(...)</code> which was however changed to <code>.applyChanges(..)</code> in the final Angular 9 version</p>
+</blockquote>
 
 <h2 id="what-s-happening-to-the-ng-probe-api">What&rsquo;s happening to the <code>ng.probe</code> API?</h2>
 
