@@ -58,6 +58,10 @@ You know those nasty dialogs in MacOS with ("Don't save", "Cancel" and "Save") o
 <kbd>Ctrl</kbd>+<kbd>-</kbd> - Jump to last cursor position (use <kbd>Shift</kbd> to jump the other direction)
 
 <kbd>CMD</kbd>+<kbd>K</kbd> <kbd>CMD</kbd>+<kbd>-></kbd> - Focus editor group on the right (if split windows). Same for focusing editor group on the left (using the <kbd><=</kbd> arrow of course)
+  
+### Other links
+
+- https://twitter.com/erickwendel_/status/1238106068875718656?s=20
 
 ### Working with files
 
