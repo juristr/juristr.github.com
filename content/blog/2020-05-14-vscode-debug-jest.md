@@ -38,7 +38,10 @@ Here's a short video I recorded to walk you through.
 
 {{<youtube 9_lgM2nokLg>}}
 
+
 (Also, `console.log` works surprisingly well many times :wink:)
+
+**Note**, this also works with a plain normal Angular CLI project :smiley:.
 
 ## VSCode launch configuration
 
