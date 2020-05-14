@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 18 Dec 2019 22:17:17 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2020 14:54:27 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/tags/tooling/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Debug Jest with VSCode inside Nx</title>
+      <link>https://juristr.com/blog/2020/05/vscode-debug-jest/</link>
+      <pubDate>Thu, 14 May 2020 14:54:27 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/05/vscode-debug-jest/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Jest has become the goto testing framework in the frontend space, whether it is for React or for Angular. In Nx it is even the default choice when generating a new Angular app. Debugging can be a bit more cumbersome though, in contrast to Karma. Let&amp;rsquo;s see.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Git Rebase vs Merge</title>
