@@ -1,7 +1,7 @@
 ---
 type: post
-title: "Debug Jest with VSCode inside Nx"
-lead: Learn how to debug your Jest tests with VSCode inside an Nx monorepo
+title: "Debug Jest with VSCode"
+lead: Learn how to debug your Jest tests with VSCode using Nx and the Angular CLI
 date: 2020-05-14T14:54:27+02:00
 comments: true
 url: /blog/2020/05/vscode-debug-jest
