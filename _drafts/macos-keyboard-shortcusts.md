@@ -61,7 +61,7 @@ You know those nasty dialogs in MacOS with ("Don't save", "Cancel" and "Save") o
   
 ## WebStorm
 
-<kbd>Cmd</kbd>+<kbd><BACK></kbd> - Jump to last edit position
+<kbd>Cmd</kbd>+<kbd>&lt;BACK&gt;</kbd> - Jump to last edit position
   
 ### Other links
 
