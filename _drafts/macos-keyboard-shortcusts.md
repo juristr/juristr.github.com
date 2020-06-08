@@ -59,6 +59,10 @@ You know those nasty dialogs in MacOS with ("Don't save", "Cancel" and "Save") o
 
 <kbd>CMD</kbd>+<kbd>K</kbd> <kbd>CMD</kbd>+<kbd>-></kbd> - Focus editor group on the right (if split windows). Same for focusing editor group on the left (using the <kbd><=</kbd> arrow of course)
   
+## WebStorm
+
+<kbd>Cmd</kbd>+<kbd><BACK></kbd> - Jump to last edit position
+  
 ### Other links
 
 - https://twitter.com/erickwendel_/status/1238106068875718656?s=20
