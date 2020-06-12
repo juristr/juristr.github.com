@@ -3,7 +3,7 @@ title: "About Me"
 url: "/about"
 ---
 
-Hey :wave:, I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work as a JavaScript Architect at [Nrwl](https://nrwl.io) where I work on Open Source projects such as [Nx](https://nx.dev) and help clients succeed with their projects.
+Hey :wave:, I'm Juri Strumpflohner, a <span id="age"></span> years old software developer. Currently I work as a JavaScript Architect and Engineering Manager at [Nrwl](https://nrwl.io) where I work on Open Source projects such as [Nx](https://nx.dev) and [NxCloud](https://nx.app) and help clients succeed with their projects.
 
 I'm a [Google Developer Expert in Web Technologies](https://developers.google.com/experts/people/juri-strumpflohner), an [Egghead Instructor](https://egghead.io/instructors/juri-strumpflohner), international speaker and happen to organize the [Software Craftsmanship Meetup](http://www.meetup.com/Software-Craftsmanship-SouthTyrol/).
 
