@@ -1,8 +1,7 @@
 ---
 type: post
 title: "AskJuri: Learning about Angular Elements"
-lead: >-
-  Write some cool lead here
+lead: Where do I find learning material for Angular Elements
 date: 2020-07-03T17:13:18+02:00
 comments: true
 url: /blog/2020/06/askjuri-learning-angular-elements
@@ -16,7 +15,7 @@ draft: false
 ---
 
 {{<intro>}}
-  Hi Juri, could you perhaps point me in the right direction with respect to training material for Angular Elements. Also, what are the pros and cons?
+  About questions I'm getting asked online, on Twitter, in person...wherever and which I find useful to share with the general public :smiley:
 {{</intro>}}
 <!--more-->
 
