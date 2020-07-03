@@ -39,3 +39,5 @@ There's a downside though: building Angular Elements into a single JS file can g
 
 Therefore, for bundling and compiling I'd definitely take a look at Manfred Steyer's [ngx-build-plus](https://github.com/manfredsteyer/ngx-build-plus), especially how to exclude common things like the Angular Core, RxJs etc and only load them once. That's especially important if you load multiple Angular Elements on a page.
 
+To get a good overview you can always also go to the [Angular docs page for Angular Elements](https://angular.io/guide/elements)
+
