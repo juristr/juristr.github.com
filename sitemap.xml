@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2020/06/askjuri-learning-angular-elements/</loc>
+    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2020/05/nx-libs-with-assets/</loc>
     <lastmod>2020-05-21T00:01:04+02:00</lastmod>
   </url>
@@ -3966,7 +3974,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2020-05-21T00:01:04+02:00</lastmod>
+    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
   </url>
   
   
@@ -4017,7 +4025,7 @@
   
   <url>
     <loc>https://juristr.com/categories/angular/</loc>
-    <lastmod>2020-05-21T00:01:04+02:00</lastmod>
+    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4026,7 +4034,7 @@
   
   <url>
     <loc>https://juristr.com/tags/angular/</loc>
-    <lastmod>2020-05-21T00:01:04+02:00</lastmod>
+    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4072,6 +4080,15 @@
   <url>
     <loc>https://juristr.com/tags/architecture/</loc>
     <lastmod>2015-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/askjuri/</loc>
+    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4132,7 +4149,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2020-05-21T00:01:04+02:00</lastmod>
+    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
     <priority>0</priority>
   </url>
   
