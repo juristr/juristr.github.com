@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: site # Branch to update (optional; defaults to master)
+  site_domain: juristr.com
+publish_mode: editorial_workflow
+media_folder: static/blog/assets/img
+public_folder: /blog/assets/img
+site_url: https://juristr.com
+display_url: juristr.com
+collections:
+- name: 'blog'
+  label: 'Blog'
+  folder: 'content/blog'
+  create: true
+  slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+  editor:
+    preview: false
+  fields:
+    - { label: 'Title', name: 'title', widget: 'string' }
+    - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+    - { label: 'Lead', name: 'lead', widget: 'string' }
+    - { label: 'Url', name: 'url', widget: 'string', default: '/blog/2020/07/my-awesome-post' }
+    - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
+    - { label: 'Image', name: 'image', widget: 'image' }
+    - { label: 'Categories', name: 'categories', widget: 'list' } 
+    - { label: 'Tags', name: 'tags', widget: 'list' }
+    - { label: 'Body', name: 'body', widget: 'markdown' }
