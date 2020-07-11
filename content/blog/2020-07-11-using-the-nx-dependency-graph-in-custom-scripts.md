@@ -48,7 +48,11 @@ or by running `affected:dep-graph` to only visualize the affected nodes.
 
 Nx helps you automate and tailor your workspace to your needs. The best way to go is to create [custom workspace schematics](https://nx.dev/angular/workspace/schematics/workspace-schematics#workspace-schematics).
 
-...
+Inside a workspace schematic you can import the dep-graph as follows:
+
+```ts
+import { createProjectGraph } from '@nrwl/workspace/src/core/project-graph';
+```
 
 ## Leverage Dep-Graph in custom scripts
 
