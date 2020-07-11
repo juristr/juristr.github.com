@@ -87,24 +87,11 @@ const array = JSON.parse(
 
 ## Where to use it
 
+There are two primary use cases for this inside an Nx monorepo.
 
-
-## Leverage Dep-Graph in workspace schematics
-
-Nx helps you automate and tailor your workspace to your needs. The best way to go is to create [custom workspace schematics](https://nx.dev/angular/workspace/schematics/workspace-schematics#workspace-schematics).
-
-Inside a workspace schematic you can import the dep-graph as follows:
-
-```ts
-import { createProjectGraph } from '@nrwl/workspace/src/core/project-graph';
-
-const graph = createProjectGraph();
-```
-
-## Leverage Dep-Graph in custom scripts
-
-Another way to automate your
-
-## Output Dep-Graph to a file
+- **[Workspace schematics](https://nx.dev/angular/workspace/schematics/workspace-schematics#workspace-schematics) -** Schematics is a fancy word for “generators”, scripts that can be written in TypeScript and which are able to create, update or delete code from your workspace. Nx itself comes with a set of built-in schematics. Workspace schematics allow you to create ad-hoc schematics inside your monorepo
+- **Custom scripts -** These are usually placed in the `tools` folder of your Nx repo and can be shell scripts, Node.js scripts or whatever you really like.
 
 ## Conclusion
+
+In this article we’ve briefly looked into the [Nx](https://nx.dev) dependency graph, how it works and especially how you can leverage it from your own code.
