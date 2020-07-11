@@ -10,7 +10,7 @@ public_folder: /blog/assets/img
 collections:
 - name: 'blog'
   label: 'Blog'
-  identifier_field: url
+  #identifier_field: url
   folder: 'content/blog'
   create: true
   slug: '{{fields.url}}'
