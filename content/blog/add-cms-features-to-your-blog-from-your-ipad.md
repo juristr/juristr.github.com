@@ -20,7 +20,10 @@ bla bla
 
 ## Why?
 
-Blogging from iPad,...
+- love Git => GitHub => static site variant
+- Problem: git shell etc...locally on iPad doesn’t really work ...?
+- hosting a server? for a blog? nahh
+- best of both worlds: CMS => Git => static site (can still use the normal git push publishing flow if you want)
 
 ## Rolling your own solution
 
