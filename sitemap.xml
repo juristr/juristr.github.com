@@ -4006,15 +4006,6 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/android/</loc>
-    <lastmod>2013-01-06T01:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  
-  
-  
-  <url>
     <loc>https://juristr.com/tags/android/</loc>
     <lastmod>2012-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -4024,8 +4015,8 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/angular/</loc>
-    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
+    <loc>https://juristr.com/categories/android/</loc>
+    <lastmod>2013-01-06T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4034,6 +4025,15 @@
   
   <url>
     <loc>https://juristr.com/tags/angular/</loc>
+    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/angular/</loc>
     <lastmod>2020-07-03T17:13:18+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4175,8 +4175,8 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/c&#43;&#43;/</loc>
-    <lastmod>2008-11-27T01:00:00+00:00</lastmod>
+    <loc>https://juristr.com/tags/c&#43;&#43;/</loc>
+    <lastmod>2009-03-09T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4184,8 +4184,8 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/c&#43;&#43;/</loc>
-    <lastmod>2009-03-09T01:00:00+00:00</lastmod>
+    <loc>https://juristr.com/categories/c&#43;&#43;/</loc>
+    <lastmod>2008-11-27T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4265,7 +4265,7 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/docker/</loc>
+    <loc>https://juristr.com/tags/docker/</loc>
     <lastmod>2019-08-07T14:55:26+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4274,7 +4274,7 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/docker/</loc>
+    <loc>https://juristr.com/categories/docker/</loc>
     <lastmod>2019-08-07T14:55:26+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4292,15 +4292,6 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/eclipse-rcp/</loc>
-    <lastmod>2008-11-09T01:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  
-  
-  
-  <url>
     <loc>https://juristr.com/tags/eclipse-rcp/</loc>
     <lastmod>2009-03-09T01:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -4310,8 +4301,8 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/egghead/</loc>
-    <lastmod>2019-04-28T12:00:09+02:00</lastmod>
+    <loc>https://juristr.com/categories/eclipse-rcp/</loc>
+    <lastmod>2008-11-09T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4320,6 +4311,15 @@
   
   <url>
     <loc>https://juristr.com/tags/egghead/</loc>
+    <lastmod>2019-04-28T12:00:09+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/egghead/</loc>
     <lastmod>2019-04-28T12:00:09+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4373,7 +4373,7 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/git/</loc>
+    <loc>https://juristr.com/tags/git/</loc>
     <lastmod>2019-12-18T22:17:17+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4382,7 +4382,7 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/git/</loc>
+    <loc>https://juristr.com/categories/git/</loc>
     <lastmod>2019-12-18T22:17:17+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4472,8 +4472,8 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/javascript/</loc>
-    <lastmod>2019-04-26T16:10:05+02:00</lastmod>
+    <loc>https://juristr.com/tags/javascript/</loc>
+    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4481,8 +4481,8 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/javascript/</loc>
-    <lastmod>2019-08-13T11:37:24+02:00</lastmod>
+    <loc>https://juristr.com/categories/javascript/</loc>
+    <lastmod>2019-04-26T16:10:05+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4614,7 +4614,7 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/nx/</loc>
+    <loc>https://juristr.com/tags/nx/</loc>
     <lastmod>2020-05-21T00:01:04+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4623,7 +4623,7 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/nx/</loc>
+    <loc>https://juristr.com/categories/nx/</loc>
     <lastmod>2020-05-21T00:01:04+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4710,8 +4710,8 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/rxjs/</loc>
-    <lastmod>2019-03-04T10:00:00+01:00</lastmod>
+    <loc>https://juristr.com/tags/rxjs/</loc>
+    <lastmod>2020-05-21T00:01:04+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4719,8 +4719,8 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/rxjs/</loc>
-    <lastmod>2020-05-21T00:01:04+02:00</lastmod>
+    <loc>https://juristr.com/categories/rxjs/</loc>
+    <lastmod>2019-03-04T10:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4764,7 +4764,7 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/software-process/</loc>
+    <loc>https://juristr.com/tags/software-process/</loc>
     <lastmod>2019-01-11T10:53:38+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4773,7 +4773,7 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/software-process/</loc>
+    <loc>https://juristr.com/categories/software-process/</loc>
     <lastmod>2019-01-11T10:53:38+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4836,7 +4836,7 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/testing/</loc>
+    <loc>https://juristr.com/tags/testing/</loc>
     <lastmod>2019-07-16T12:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4845,7 +4845,7 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/testing/</loc>
+    <loc>https://juristr.com/categories/testing/</loc>
     <lastmod>2019-07-16T12:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4863,7 +4863,7 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/tooling/</loc>
+    <loc>https://juristr.com/tags/tooling/</loc>
     <lastmod>2020-05-14T14:54:27+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4872,7 +4872,7 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/tooling/</loc>
+    <loc>https://juristr.com/categories/tooling/</loc>
     <lastmod>2020-05-14T14:54:27+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4935,8 +4935,8 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/windows/</loc>
-    <lastmod>2015-01-18T01:00:00+00:00</lastmod>
+    <loc>https://juristr.com/tags/windows/</loc>
+    <lastmod>2010-01-31T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4944,8 +4944,8 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/windows/</loc>
-    <lastmod>2010-01-31T01:00:00+00:00</lastmod>
+    <loc>https://juristr.com/categories/windows/</loc>
+    <lastmod>2015-01-18T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
