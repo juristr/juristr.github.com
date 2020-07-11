@@ -6,7 +6,7 @@ coverimage: false
 category: null
 categories:
   - ".Net"
-  - 'C#'
+  - CSharp
   - testing
 reposts:
   - 'http://dotnet.dzone.com/articles/object-does-not-contain'

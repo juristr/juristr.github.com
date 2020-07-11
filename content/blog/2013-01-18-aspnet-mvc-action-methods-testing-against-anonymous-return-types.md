@@ -4,7 +4,7 @@ description: ''
 category: null
 categories:
   - testing
-  - 'C#'
+  - CSharp
 reposts:
   - 'http://dotnet.dzone.com/articles/aspnet-mvc-action-methods'
 date: 2013-01-18T01:00:00.000Z

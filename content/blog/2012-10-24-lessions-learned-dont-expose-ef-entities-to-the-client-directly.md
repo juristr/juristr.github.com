@@ -4,7 +4,7 @@ description: ''
 category: null
 categories:
   - Software Design
-  - 'C#'
+  - CSharp
   - ".Net"
   - ASP.net MVC
 reposts:

@@ -3,7 +3,7 @@ title: 'Don''t Create Your Own Mapper, Let AutoMapper Do The Job!'
 description: ''
 category: null
 categories:
-  - 'C#'
+  - CSharp
 date: 2012-11-14T01:00:00.000Z
 comments: true
 url: /blog/2012/11/dont-create-your-own-mapper-let-automapper-do-the-job

@@ -7,7 +7,7 @@ description: >-
 category: article
 categories:
   - ASP.net MVC
-  - 'C#'
+  - CSharp
 reposts:
   - 'http://dotnet.dzone.com/articles/output-caching-aspnet-mvc'
   - 'http://www.dotnetcodegeeks.com/2012/11/output-caching-in-asp-net-mvc.html'
