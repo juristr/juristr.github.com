@@ -9,6 +9,7 @@ categories:
 tags:
   - angular
   - tooling
+comments: true
 ---
 {{<intro>}}
   One of the powerful pilars of the open source [Nx monorepo toolkit](https://nx.dev) is its dependency graph. In this article we're going to look into how you can leverage it in your own scripts.
