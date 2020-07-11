@@ -10,10 +10,11 @@ public_folder: /blog/assets/img
 collections:
 - name: 'blog'
   label: 'Blog'
+  identifier_field: 'url'
   folder: 'content/blog'
   create: true
   slug: '{{slug}}'
-  preview_path: 'blog/{{url}}'
+  preview_path: '{{slug}}'
   editor:
     preview: true
   fields:
