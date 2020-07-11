@@ -630,6 +630,21 @@ var s=e.createElement(a),r=e.getElementsByTagName(a)[0];s.async=1,s.src=
 'https://insights.quiet.ly/app/analytics.min.js',r.parentNode.insertBefore(s,r)}
 (window,document,'script','87bcee90-0c51-4a68-a60b-e95df730d1ca','[]');
 </script>
+    
+    
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+ <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
