@@ -1,12 +1,12 @@
 backend:
   name: git-gateway
   branch: site # Branch to update (optional; defaults to master)
-  site_domain: juristr.com
+  # site_domain: juristr.com
 publish_mode: editorial_workflow
 media_folder: static/blog/assets/img
 public_folder: /blog/assets/img
-site_url: https://juristr.com
-display_url: juristr.com
+# site_url: https://juristr.com
+# display_url: juristr.com
 collections:
 - name: 'blog'
   label: 'Blog'

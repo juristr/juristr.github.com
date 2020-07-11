@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C# on juri.dev</title>
-    <link>https://juristr.com/categories/c/</link>
-    <description>Recent content in C# on juri.dev</description>
+    <title>Csharp on juri.dev</title>
+    <link>https://juristr.com/categories/csharp/</link>
+    <description>Recent content in Csharp on juri.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
     <lastBuildDate>Fri, 30 Aug 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://juristr.com/categories/c/atom.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://juristr.com/categories/csharp/atom.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

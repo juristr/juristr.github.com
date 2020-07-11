@@ -76,15 +76,6 @@
     </item>
     
     <item>
-      <title>C#</title>
-      <link>https://juristr.com/categories/c/</link>
-      <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://juristr.com/categories/c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>C&#43;&#43;</title>
       <link>https://juristr.com/categories/c&#43;&#43;/</link>
       <pubDate>Thu, 27 Nov 2008 01:00:00 +0000</pubDate>
@@ -99,6 +90,15 @@
       <pubDate>Fri, 18 Nov 2011 01:00:00 +0000</pubDate>
       
       <guid>https://juristr.com/categories/clean-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Csharp</title>
+      <link>https://juristr.com/categories/csharp/</link>
+      <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/categories/csharp/</guid>
       <description></description>
     </item>
     
