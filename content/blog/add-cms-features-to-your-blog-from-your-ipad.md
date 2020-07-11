@@ -14,6 +14,22 @@ comments: true
 ---
 bla bla
 
-## Customizing the Preview Link
+**Todos**
+
+- how to use a field as a preview link
+
+## Why?
+
+Blogging from iPad,...
+
+## Rolling your own solution
+
+Use git bridge etc.. (see T-Mobile styleguide)
+
+## Setup Netlify CMS
+
+...
+
+### Customizing the Preview Link
 
 https://www.netlifycms.org/docs/deploy-preview-links/
