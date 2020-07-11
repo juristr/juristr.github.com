@@ -14,14 +14,14 @@ collections:
   create: true
   slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
   editor:
-    preview: false
+    preview: true
   fields:
     - { label: 'Title', name: 'title', widget: 'string' }
     - { label: 'Publish Date', name: 'date', widget: 'datetime' }
     - { label: 'Lead', name: 'lead', widget: 'string' }
     - { label: 'Url', name: 'url', widget: 'string', default: '/blog/2020/07/my-awesome-post' }
     - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
-    - { label: 'Image', name: 'image', widget: 'image' }
+    - { label: 'Image', name: 'image', widget: 'image', required: false }
     - { label: 'Categories', name: 'categories', widget: 'list' } 
     - { label: 'Tags', name: 'tags', widget: 'list' }
     - { label: 'Body', name: 'body', widget: 'markdown' }
