@@ -46,7 +46,7 @@ or by running `affected:dep-graph` to only visualize the affected nodes.
 
 ## Leverage Dep-Graph in workspace schematics
 
-
+Using the `dep-graph` comand is just one possibility. You could even leverage the dependency graph programmatically, say from your workspace automation.
 
 If you create workspace schematics you may want to leverage the dependency graph for your own computation. You can import the nodes 
 
