@@ -13,7 +13,7 @@ collections:
   #identifier_field: url
   folder: 'content/blog'
   create: true
-  slug: '{{fields.url}}'
+  #slug: '{{fields.url}}'
   preview_path: '{{fields.url}}'
   editor:
     preview: true
