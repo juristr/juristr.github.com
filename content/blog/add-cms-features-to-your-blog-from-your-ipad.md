@@ -22,11 +22,11 @@ comments: true
 
 So I recently tweeted this:
 
-{{<tweet 1275898074787909634?s=20 >}}
+{{<tweet 1275898074787909634 >}}
 
-And it's true. I've probably never blogged so few
+And it's true. I've probably never blogged so few articles than in the last half year, which is sad for a couple of reasons: I love blogging & writing, I love content production, I love to engage with the community & ofc my page views dropped significantly :sad:
 
-bla bla
+So kids change your life, for the better, but obviously there's just so much time. A much bigger strike was Covid though. I've not been positive (yet), nor have family members (:pray:), but 
 
 **Todos**
 
