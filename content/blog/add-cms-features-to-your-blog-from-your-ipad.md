@@ -24,6 +24,7 @@ So I recently tweeted this:
 
 {{<tweet 1275898074787909634?s=20 >}}
 
+And it's true. I've probably never blogged so few
 
 bla bla
 
