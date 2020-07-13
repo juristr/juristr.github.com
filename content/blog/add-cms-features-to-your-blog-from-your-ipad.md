@@ -38,12 +38,12 @@ Over the years my site grew and using Jekyll became painful both, installation w
 
 In the intro I was mentioning the issue of not enough free time & having to optimize it. So something that happened always again is to have some 15 - 30 minutes in between (playing with the kid, sitting besides the buggy while the :baby: sleeps) where I could have continued to write on that blog post, to review it or even publish it out. But then, you don’t have the Macbook around...bringing along an iPad is super easy though.
 
-This, however, is where the Edit Markdown => Git commit & push falls short. Cloning repos on the iPad and editing markdown etc isn’t the easiest thing to do. Sure, there are a number of ways, but they are all non trivial or cumbersome. That’s when I played with the idea of adding a GUI on top of my blog. It wouldn’t be super hard:
+This, however, is where the Edit Markdown => Git commit & push falls short. Cloning repos on the iPad and editing markdown etc isn’t the easiest thing to do. Sure, there are a number of ways, but they are all non trivial or cumbersome. That’s when I played with the idea of adding a GUI on top of my blog. It wouldn’t be super hard. Something around...
 
-- host some webapp with a basic markdown editor
+- hosting some webapp with a basic markdown editor
 - use either a fully featured VPS or use isomorphic git to do the git pushing etc..
 
-But...time :sweat_smile:.
+But...time :sweat_smile:..and that’s exactly where Netlify CMS comes into play.
 
 ## Adding Netlify CMS
 
