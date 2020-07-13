@@ -34,6 +34,10 @@ I love the [JAM stack](https://jamstack.org/) and used it even before it was a t
 
 Over the years my site grew and using Jekyll became painful both, installation wise (when you get a new machine) but mostly in terms of build & refresh time. So I switched to [Hugo](https://gohugo.io/), a static site generate based on Go. The result: builds in ms :smiley:.
 
+## Time to write
+
+There’s time, again (see the intro section further above). You need to optimize it more, and something that happened always again is to have some 15min in between where
+
 ## Adding Netlify CMS
 
 **Todos**
