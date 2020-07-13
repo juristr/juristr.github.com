@@ -30,11 +30,11 @@ So..kids change your life, for the better :heart: and don't get me wrong, I'd ne
 
 ## My current blogging setup
 
+I love the [JAM stack](https://jamstack.org/) and used it even before it was a thing. Well...ok, to be fully honest it wasn’t really the full JAM stack. I moved my very first blog from Google’s Blogger to Jekyll + GitHub pages very soon. The flow of editing a markdown file, pushing it to a Git repo & the deployment + hosting will just be handled for you is something that I always loved and still do.
 
+Over the years my site grew and using Jekyll became painful both, installation wise (when you get a new machine) but mostly in terms of build & refresh time. So I switched to [Hugo](https://gohugo.io/), a static site generate based on Go. The result: builds in ms :smiley:.
 
 ## Adding Netlify CMS
-
-
 
 **Todos**
 
