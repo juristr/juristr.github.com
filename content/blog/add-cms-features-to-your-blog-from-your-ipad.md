@@ -24,9 +24,17 @@ So I recently tweeted this:
 
 {{<tweet 1275898074787909634 >}}
 
-And it's true. I've probably never blogged so few articles than in the last half year, which is sad for a couple of reasons: I love blogging & writing, I love content production, I love to engage with the community & ofc my page views dropped significantly :sad:
+And it's true. I've probably never blogged so few articles than in the last half year, which is sad for a couple of reasons: I love blogging & writing, I love content production, I love to engage with the community & ofc my page views dropped significantly :disappointed:
 
-So kids change your life, for the better, but obviously there's just so much time. A much bigger strike was Covid though. I've not been positive (yet), nor have family members (:pray:), but 
+So..kids change your life, for the better :heart: and don't get me wrong, I'd never change that. But obviously there's just so much time, so things need to be re-prioritized and most importantly your time needs another optimization boost :rocket:. A much bigger strike was Covid though. I've not been positive (yet), nor have family members (:pray:), but we had to re-arrange how we organize our house-hold and childcare time. While before we brought our little beloved one to his grandparents, during lock-down that was simply not possible. So me and my wife split our time which resulted in less free time + late hours working.
+
+## My current blogging setup
+
+
+
+## Adding Netlify CMS
+
+
 
 **Todos**
 
