@@ -20,8 +20,16 @@ comments: true
 
 {{< postad >}}
 
+I mostly use the command line when dealing with Git. It's simpler, you can easily replay previous commands..after all just more powerful and quicker. Btw, I have [an Egghead course that teaches the minimum set of Git commands a dev should know to be productive](https://egghead.io/courses/productive-git-for-developers).
 
+Anyhow, sometimes an UI can be helpful
+
+- when quickly looking through what changed and selectively add files to the commit
+- when doing **partial commits**
+
+And that latter one is exactly what I'd like to show you in this article.
 
 If you open up the WebStorm visual commit dialog you can ...dd
 
-{{<figure url="/blog/assets/img/webstorm-git-no-partialcommit.png" size="medium">}}
+{{<figure url="/blog/assets/img/webstorm-git-no-partialcommit.png" size="full">}}
+
