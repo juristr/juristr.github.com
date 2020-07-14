@@ -24,4 +24,4 @@ comments: true
 
 If you open up the WebStorm visual commit dialog you can ...dd
 
-![](/blog/assets/img/webstorm-git-no-partialcommit.png)
+{{<figure url="/blog/assets/img/webstorm-git-no-partialcommit.png" size="medium">}}
