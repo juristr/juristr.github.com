@@ -302,6 +302,15 @@
     </item>
     
     <item>
+      <title>Debugging Angular Applications from the Console</title>
+      <link>https://juristr.com/blog/2016/02/debugging-angular2-console/</link>
+      <pubDate>Wed, 10 Feb 2016 01:00:00 +0000</pubDate>
+      
+      <guid>https://juristr.com/blog/2016/02/debugging-angular2-console/</guid>
+      <description>There have been some quite useful articles for how to debug Angular 1.x applications from the browser&#39;s console. But how can we achieve the same in Angular?</description>
+    </item>
+    
+    <item>
       <title>Learning Angular: Conditionally add styles to an element</title>
       <link>https://juristr.com/blog/2016/01/learning-ng2-dynamic-styles/</link>
       <pubDate>Mon, 25 Jan 2016 01:00:00 +0000</pubDate>

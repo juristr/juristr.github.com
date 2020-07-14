@@ -226,7 +226,7 @@
                             Feb 10, 2016
                         </time></span>
                     <span class="dot"></span>
-                    <span class="post-read">3 min read</span>
+                    <span class="post-read">4 min read</span>
                 </p>
             </div>
 
@@ -339,7 +339,7 @@ bootstrap(HelloAngular2, [])
 
 <p>I dug through the <a href="https://github.com/angular/angular">Angular source</a> and this was the best way I could come up with to activate the change detection mechanism:</p>
 
-<pre><code>&gt; ng.probe($0)._debugInfo._view.changeDetectorRef.detectChanges()
+<pre><code>$ ng.probe($0)._debugInfo._view.changeDetectorRef.detectChanges()
 </code></pre>
 
 <p>Not sure if you noticed, but we invoked the change detector on our selected Angular component (<code>$0</code>) and not globally. This is because <strong>change detection is hierarchical</strong>, hence, <strong>every Angular component get its own change detector</strong>. <a href="https://twitter.com/victorsavkin">Victor Savkin</a> has written an <a href="http://victorsavkin.com/post/110170125256/change-detection-in-angular-2">awesome post on this</a>.</p>
@@ -351,6 +351,11 @@ bootstrap(HelloAngular2, [])
         <img src="/blog/assets/imgs/ng2-console-debugging/debug-detectchanges.gif" />
     </a>
 </figure>
+
+<p>If you want to globally trigger a CD run, you can use</p>
+
+<pre><code>$ ng.probe($0).injector.get(ng.coreTokens.ApplicationRef)
+</code></pre>
 
 <h2 id="augury-formerly-batarangle">Augury (formerly: Batarangle)</h2>
 
@@ -393,6 +398,10 @@ bootstrap(HelloAngular2, [])
             
             <div class="after-post-tags">
                 <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/angular">angular</a>
+                    </li>
                     
                 </ul>
             </div>
