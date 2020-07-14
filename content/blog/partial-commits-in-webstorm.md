@@ -13,3 +13,6 @@ comments: true
 ---
 test
 
+If you open up the WebStorm visual commit dialog you can ...
+
+![](/blog/assets/img/webstorm-git-no-partialcommit.png)
