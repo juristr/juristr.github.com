@@ -13,7 +13,7 @@ tags:
 comments: true
 ---
 {{<intro>}}
-  I think partial commits should be avoided as they might lead to inconsistent commits if you don't test them properly. But sometimes they're handy too. Let's see how to enable them in WebStorm in particular. 
+  I think partial commits should be avoided as they might lead to inconsistent commits if you don't test them properly. But sometimes they're handy too. In this quick article I'm quickly showing how partial commits can be done with article Let's see how to enable them in WebStorm in particular. 
 {{</intro>}}
 
 <!--more-->
