@@ -1,19 +1,21 @@
 ---
+reposts:
+  - https://dzone.com/articles/learning-angular-2-creating-a-tabs-component
+type: post
 title: Debugging Angular Applications from the Console
-lead: >-
-  Learn how to access useful information from your Angular components right from
-  your browser's console
-lastupdated: '2016-04-17'
+draft: false
+lastupdated: 2016-04-17
+date: 2016-02-10T01:00:00.000Z
+lead: Learn how to access useful information from your Angular components right
+  from your browser's console
+url: /blog/2016/02/debugging-angular2-console
+image: /blog/assets/imgs/ng2-console-debugging/debugging-ng2-apps.png
 categories:
   - Angular
   - JavaScript
-reposts:
-  - 'https://dzone.com/articles/learning-angular-2-creating-a-tabs-component'
-date: 2016-02-10T01:00:00.000Z
+tags:
+  - angular
 comments: true
-url: /blog/2016/02/debugging-angular2-console
-type: post
-image: /blog/assets/imgs/ng2-console-debugging/debugging-ng2-apps.png
 ---
 
 <div class="article-intro">
@@ -93,7 +95,7 @@ Strange enough, the UI won't reflect our changes. Well remember `$digest()` :win
 I dug through the [Angular source](https://github.com/angular/angular) and this was the best way I could come up with to activate the change detection mechanism:
 
 ```
-> ng.probe($0)._debugInfo._view.changeDetectorRef.detectChanges()
+$ ng.probe($0)._debugInfo._view.changeDetectorRef.detectChanges()
 ```
 
 Not sure if you noticed, but we invoked the change detector on our selected Angular component (`$0`) and not globally. This is because **change detection is hierarchical**, hence, **every Angular component get its own change detector**. [Victor Savkin](https://twitter.com/victorsavkin) has written an [awesome post on this](http://victorsavkin.com/post/110170125256/change-detection-in-angular-2).
@@ -105,6 +107,12 @@ Here's the result of executing the change detector:
         <img src="/blog/assets/imgs/ng2-console-debugging/debug-detectchanges.gif" />
     </a>
 </figure>
+
+If you want to globally trigger a CD run, you can use
+
+```
+$ ng.probe($0).injector.get(ng.coreTokens.ApplicationRef)
+```
 
 ## Augury (formerly: Batarangle)
 
