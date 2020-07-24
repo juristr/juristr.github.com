@@ -12,6 +12,10 @@ tags:
   - webstorm
 comments: true
 ---
+
+
+
+
 {{<intro>}}
   I think partial commits should be avoided as they might lead to inconsistent commits if you don't test them properly. But sometimes they're handy too. In this article I'm quickly showing how partial commits can be done in Webstorm.
 {{</intro>}}
@@ -29,11 +33,18 @@ Btw, I have [an Egghead course that teaches the minimum set of Git commands a de
 Generally, I think they should be avoided. Sometimes though, if you have lots of changes, even covering different responsibilities, it might be worthwile 
 to split them up. That's when partial commits come in handy. They allow you to only add certain lines of a file into the commit, rather than the entire file.
 
-## How to use partial commits in Webstorm
+## Enable partial commits in Webstorm
 
 Webstorm has a commit dialog which is handy for inspecting the changes. If you open up the dialog you see something like this:
 
 {{<figure url="/blog/assets/img/webstorm-git-no-partialcommit.png" size="full">}}
 
+The dialog shows you the differences, but there's no way to just include some of the lines. To configure that you have to enable the 
+
+{{<figure url="/blog/assets/img/webstorm-git-no-partialcommit-settingsaction.png" size="full">}}
 
 
+{{<figure url="/blog/assets/img/webstorm-git-no-partialcommit-enable.png" size="full">}}
+
+
+{{<figure url="/blog/assets/img/webstorm-git-no-partialcommit-result.png" size="full">}}
