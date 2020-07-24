@@ -13,19 +13,25 @@ tags:
 comments: true
 ---
 {{<intro>}}
-  I think partial commits should be avoided as they might lead to inconsistent commits if you don't test them properly. But sometimes they're handy too. In this quick article I'm quickly showing how partial commits can be done with article Let's see how to enable them in WebStorm in particular. 
+  I think partial commits should be avoided as they might lead to inconsistent commits if you don't test them properly. But sometimes they're handy too. In this article I'm quickly showing how partial commits can be done in Webstorm.
 {{</intro>}}
 
 <!--more-->
 
 {{< postad >}}
 
-I mostly use the command line when dealing with Git. It's simpler, you can easily replay previous commands..after all just more powerful and quicker. Btw, I have [an Egghead course that teaches the minimum set of Git commands a dev should know to be productive](https://egghead.io/courses/productive-git-for-developers).
+When interacting with Git, the command line is my goto place. I have a couple of aliases set up and installed [git-extras](https://github.com/tj/git-extras). That makes it a pretty powerful workflow. 
 
-Anyhow, sometimes an UI can be helpful
+Btw, I have [an Egghead course that teaches the minimum set of Git commands a dev should know to be productive](https://egghead.io/courses/productive-git-for-developers).
 
-- when quickly looking through what changed and selectively add files to the commit
-- when doing **partial commits**
+## Why partial commits?
+
+Generally, I think they should be avoided. Sometimes though, if you have lots of changes, even covering different responsibilities, it might be worthwile 
+to split them up. That's when partial commits come in handy. They allow you to only add certain lines of a file into the commit, rather than the entire file.
+
+## How to use partial commits in Webstorm
+
+Webstorm has a commit dialog which is handy for inspecting the changes.
 
 And that latter one is exactly what I'd like to show you in this article.
 
