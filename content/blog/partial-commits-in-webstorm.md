@@ -39,12 +39,14 @@ Webstorm has a commit dialog which is handy for inspecting the changes. If you o
 
 {{<figure url="/blog/assets/img/webstorm-git-no-partialcommit.png" size="full">}}
 
-The dialog shows you the differences, but there's no way to just include some of the lines. To configure that you have to enable the 
+The dialog shows you the differences, but there's no way to just include some of the lines. To configure that you have to enable the "Highlight modified lines in gutter" option.
 
 {{<figure url="/blog/assets/img/webstorm-git-no-partialcommit-settingsaction.png" size="full">}}
 
+This should open the Webstorm preferences dialog. Make sure you have the setting enabled there:
 
 {{<figure url="/blog/assets/img/webstorm-git-no-partialcommit-enable.png" size="full">}}
 
+Once that's done, re-open the commit dialog. You should now be able to click the gutter and add single lines.
 
 {{<figure url="/blog/assets/img/webstorm-git-no-partialcommit-result.png" size="full">}}
