@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webstorm on juri.dev</title>
+    <link>https://juristr.com/tags/webstorm/</link>
+    <description>Recent content in Webstorm on juri.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Tue, 14 Jul 2020 21:29:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/webstorm/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Partial Commits in WebStorm</title>
+      <link>https://juristr.com/blog/2020/07/partial-commits-webstorm/</link>
+      <pubDate>Tue, 14 Jul 2020 21:29:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/07/partial-commits-webstorm/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I think partial commits should be avoided as they might lead to inconsistent commits if you don&amp;rsquo;t test them properly. But sometimes they&amp;rsquo;re handy too. In this article I&amp;rsquo;m quickly showing how partial commits can be done in Webstorm.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

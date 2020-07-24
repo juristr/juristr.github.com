@@ -6,7 +6,9 @@
 	
 	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
 	
-	<title>Blogs | juri.dev</title>
+	<title>Partial Commits in WebStorm | juri.dev</title>
+	
+	<meta name="description" content="How to enable partial commits with WebStorm">
 	
 	
 	<meta name="robots" content="index, follow">
@@ -26,23 +28,29 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@juristr" />
 	<meta name="twitter:creator" content="@juristr" />
-	<meta name="twitter:title" content="Blogs" />
+	<meta name="twitter:title" content="Partial Commits in WebStorm" />
+	
+	<meta name="twitter:description" content="How to enable partial commits with WebStorm" />
 	
 
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/img/partial-commits-webstorm-banner.png" />
 	
 
 	
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="Blogs" />
+	<meta property="og:title" content="Partial Commits in WebStorm" />
+	
+	<meta property="og:description" content="How to enable partial commits with WebStorm" />
 	
 	
-	<meta property="og:url" content="https://juristr.com/blog/" />
+	<meta property="og:image" content="https://juristr.com/blog/assets/img/partial-commits-webstorm-banner.png" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2020/07/partial-commits-webstorm" />
 	<meta property="og:site_name" content="juristr.com" />
 
 	
 	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
-	
-	<link rel="alternate" type="application/rss+xml" href="https://juristr.com/blog/atom.xml" title="juri.dev" />
 	
 
 	
@@ -65,6 +73,9 @@
 
 	
 
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
 	
 
 	
@@ -151,221 +162,215 @@
 </header>
 
     <div class="site-content">
-<div class="container list-page blog">
-    <section class="featured-posts">
-    
-    <div class="listfeaturedtag">
 
+
+
+<div class="container page-container">
+    <div class="row">
         
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2020%2f07%2fpartial-commits-webstorm%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2020%2f07%2fpartial-commits-webstorm%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
         
-        <div class="card featured-card">
-            <div class="row">
-                <div class="col-md-5 wrapthumbnail">
-                    <a href="/blog/2020/07/partial-commits-webstorm">
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops. Juri is also a recognized Google Developer Expert in Web Technologies</span>
                         
-                        <div class="thumbnail" style="background-image:url('/blog/assets/img/partial-commits-webstorm-banner.png');">
-                        </div>
-                        
-                    </a>
+                    </div>
+                    
                 </div>
-                <div class="col-md-7 card-content">
-                    <div class="card-block">
-                        <h2 class="card-title">
-                            <a href="/blog/2020/07/partial-commits-webstorm">Partial Commits in WebStorm</a>
-                        </h2>
-                        <h4 class="card-text">
-                            How to enable partial commits with WebStorm
-                        </h4>
-                        <div class="summary">
-                            <div class="article-intro">
+                
+                
+                
+                
+
+                <h1 class="posttitle">Partial Commits in WebStorm</h1>
+                
+                <h2 class="article-subtitle">How to enable partial commits with WebStorm</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Jul 14, 2020
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">2 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers?af=fj2vsx" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                <div class="article-intro">
     I think partial commits should be avoided as they might lead to inconsistent commits if you don&rsquo;t test them properly. But sometimes they&rsquo;re handy too. In this article I&rsquo;m quickly showing how partial commits can be done in Webstorm.
 </div>
-                        </div>
-                        <div class="metafooter">
-                            <div class="wrapfooter">
-                                <div class="row">
-                                    <div class="col-10">
-                                        
-                                            <span class="meta-footer-thumb">
-                                                <a href="/about/">
-                                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
-                                                </a>
-                                            </span>
-                                            <span class="author-meta">
-                                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
-                                                <span class="post-date">Jul 14, 2020</span><span class="dot"></span><span
-                                                    class="post-read">2 min read</span>
-                                            </span>
-                                        
-                                    </div>
-                                    <div class="col-2">
-                                        
-                                        
-                                        
-                                        <span class="post-category-icon">
-                                            
-                                            <div class="svgicon" style="width: 140px">
-    
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>When interacting with Git, the command line is my goto place. I have a couple of aliases set up and installed <a href="https://github.com/tj/git-extras">git-extras</a>. That makes it a pretty powerful workflow.</p>
+
+<p>Btw, I have <a href="https://egghead.io/courses/productive-git-for-developers">an Egghead course that teaches the minimum set of Git commands a dev should know to be productive</a>.</p>
+
+<h2 id="why-partial-commits">Why partial commits?</h2>
+
+<p>Generally, I think they should be avoided. Sometimes though, if you have lots of changes, even covering different responsibilities, it might be worthwile
+to split them up. That&rsquo;s when partial commits come in handy. They allow you to only add certain lines of a file into the commit, rather than the entire file.</p>
+
+<h2 id="enable-partial-commits-in-webstorm">Enable partial commits in Webstorm</h2>
+
+<p>Webstorm has a commit dialog which is handy for inspecting the changes. If you open up the dialog you see something like this:</p>
+
+
+<figure class="image--full">
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-cog"><path class="primary" d="M6.8 3.45c.87-.52 1.82-.92 2.83-1.17a2.5 2.5 0 0 0 4.74 0c1.01.25 1.96.65 2.82 1.17a2.5 2.5 0 0 0 3.36 3.36c.52.86.92 1.8 1.17 2.82a2.5 2.5 0 0 0 0 4.74c-.25 1.01-.65 1.96-1.17 2.82a2.5 2.5 0 0 0-3.36 3.36c-.86.52-1.8.92-2.82 1.17a2.5 2.5 0 0 0-4.74 0c-1.01-.25-1.96-.65-2.82-1.17a2.5 2.5 0 0 0-3.36-3.36 9.94 9.94 0 0 1-1.17-2.82 2.5 2.5 0 0 0 0-4.74c.25-1.01.65-1.96 1.17-2.82a2.5 2.5 0 0 0 3.36-3.36zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path><circle cx="12" cy="12" r="2" class="secondary"></circle></svg>
-    
-
-    
-
-    
-
-</div><div class="svgicon clean_code"></div>
-                                            
-                                        </span>
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         
-
-        
-
-
-    </div>
-</section>
-    
-        <a href="https://egghead.io/courses/getting-started-with-angular-elements?af=fj2vsx" class="external-link" data-client="eggheadio" data-uid="url">
-            <img src="/assets/images/banners/egghead-banner-elements-course.png" style="width:100%" />
+        <a href="/blog/assets/img/webstorm-git-no-partialcommit.png" class="image--zoom">
+            <img src="/blog/assets/img/webstorm-git-no-partialcommit.png" loading="lazy" class="lazyload"/>
         </a>
     
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The dialog shows you the differences, but there&rsquo;s no way to just include some of the lines. To configure that you have to enable the &ldquo;Highlight modified lines in gutter&rdquo; option.</p>
+
+
+<figure class="image--full">
 
     
-    <section class="recent-posts">
-        <div class="section-title">
-            <h2>
-                <span>Latest Articles</span>
-                <span class="more-actions">
-                    <a href="/blog/archive">
-                        <svg style="height: 20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-collection">
-                            <rect width="20" height="12" x="2" y="10" class="primary" rx="2"></rect>
-                            <path class="secondary" d="M20 8H4c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2zm-2-4H6c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                        
-                    </a>
-                </span>
-            </h2>
-        </div>
-        <div class="listrecent">
-            
-            
-<div class="card">
+        
+        <a href="/blog/assets/img/webstorm-git-no-partialcommit-settingsaction.png" class="image--zoom">
+            <img src="/blog/assets/img/webstorm-git-no-partialcommit-settingsaction.png" loading="lazy" class="lazyload"/>
+        </a>
     
-    <div class="card-block">
-        <h2 class="card-title">
-            <a href="/blog/2020/06/askjuri-learning-angular-elements">AskJuri: Learning about Angular Elements</a>
-        </h2>
-        <h4 class="card-text">
-            Where do I find learning material for Angular Elements
-            
-        </h4>
-        <div class="metafooter">
-            <div class="wrapfooter">
-                <div class="row">
-                    <div class="col-10">
-                        
-                            <span class="meta-footer-thumb">
-                                <a href="/about/">
-                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
-                                </a>
-                            </span>
-                            <span class="author-meta">
-                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
-                                <span class="post-date">Jul 3, 2020</span><span class="dot"></span><span
-                                    class="post-read">2 min read</span>
-                            </span>
-                        
-                    </div>
-                    <div class="col-2">
-                        
-                        
-                        
-                        <span class="post-category-icon">
-                            
-                            
-                                <img src="/assets/images/categories/angular.svg" />
-                            
-                        </span>
-                        
-                        
-                    </div>
-                </div>
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>This should open the Webstorm preferences dialog. Make sure you have the setting enabled there:</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/img/webstorm-git-no-partialcommit-enable.png" class="image--zoom">
+            <img src="/blog/assets/img/webstorm-git-no-partialcommit-enable.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Once that&rsquo;s done, re-open the commit dialog. You should now be able to click the gutter and add single lines.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/img/webstorm-git-no-partialcommit-result.png" class="image--zoom">
+            <img src="/blog/assets/img/webstorm-git-no-partialcommit-result.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
             </div>
-        </div>
-    </div>
 
-    
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/tooling">tooling</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/webstorm">webstorm</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
 </div>
 
-<div class="card">
-    
-    <div class="card-block">
-        <h2 class="card-title">
-            <a href="/blog/2020/05/nx-libs-with-assets">Create Nx Libs with Assets</a>
-        </h2>
-        <h4 class="card-text">
-            Learn how to create Nx libraries don&#39;t only ship code but also assets
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
             
-        </h4>
-        <div class="metafooter">
-            <div class="wrapfooter">
-                <div class="row">
-                    <div class="col-10">
-                        
-                            <span class="meta-footer-thumb">
-                                <a href="/about/">
-                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
-                                </a>
-                            </span>
-                            <span class="author-meta">
-                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
-                                <span class="post-date">May 21, 2020</span><span class="dot"></span><span
-                                    class="post-read">2 min read</span>
-                            </span>
-                        
-                    </div>
-                    <div class="col-2">
-                        
-                        
-                        
-                        <span class="post-category-icon">
-                            
-                            
-                                <img src="/assets/images/categories/angular.svg" />
-                            
-                        </span>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            
 
-    
-</div>
-
+            <div class="col-md-4">
 <div class="card">
     
     <div class="card-block">
@@ -434,44 +439,11 @@
     
 </div>
 
-<div class="card">
-    
-    <div class="card-block">
-        <h2 class="card-title">
-            <a href="/blog/2020/02/joining-nrwl">Joining Nrwl 🐳 🦄</a>
-        </h2>
-        <h4 class="card-text">
-            
-            
-        </h4>
-        <div class="metafooter">
-            <div class="wrapfooter">
-                <div class="row">
-                    <div class="col-10">
-                        
-                            <span class="meta-footer-thumb">
-                                <a href="/about/">
-                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
-                                </a>
-                            </span>
-                            <span class="author-meta">
-                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
-                                <span class="post-date">Feb 12, 2020</span><span class="dot"></span><span
-                                    class="post-read">6 min read</span>
-                            </span>
-                        
-                    </div>
-                    <div class="col-2">
-                        
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
 
-    
-</div>
+            
 
+            <div class="col-md-4">
 <div class="card">
     
     <div class="card-block">
@@ -520,14 +492,19 @@
     
 </div>
 
+            </div>
+
+            
+
+            <div class="col-md-4">
 <div class="card">
     
     <div class="card-block">
         <h2 class="card-title">
-            <a href="/blog/2019/12/jsbe-lazy-loading-ngelements">Talk: Lazy Loading on Steroids with Angular Elements</a>
+            <a href="/blog/2019/09/resume-work-with-git">Resume your Work with Git</a>
         </h2>
         <h4 class="card-text">
-            Learn about how using ngx-formly can drammatically improve your Angular reactive forms
+            Learn some protip on how to get back to work after a long weekend.
             
         </h4>
         <div class="metafooter">
@@ -542,8 +519,8 @@
                             </span>
                             <span class="author-meta">
                                 <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
-                                <span class="post-date">Dec 17, 2019</span><span class="dot"></span><span
-                                    class="post-read">1 min read</span>
+                                <span class="post-date">Sep 23, 2019</span><span class="dot"></span><span
+                                    class="post-read">3 min read</span>
                             </span>
                         
                     </div>
@@ -554,7 +531,7 @@
                         <span class="post-category-icon">
                             
                             
-                                <img src="/assets/images/categories/angular.svg" />
+                                <img src="/assets/images/categories/git.svg" />
                             
                         </span>
                         
@@ -568,29 +545,45 @@
     
 </div>
 
+            </div>
+
+            
+            
+
         </div>
-    </section>
-<div class="bottompagination">
-  <div class="pointerup"><i class="fa fa-caret-up"></i></div>
-  <span class="navigation" role="navigation">
-    
-    <div class="pagination">
-      
-      <span>&laquo; Prev</span>
-      
-
-      <span class="ml-1 mr-1">1</span>
-
-      
-      <a class="ml-1 mr-1" href="/blog/page/2/">2</a>
-      <a class="ml-1 mr-1" href="/blog/page/2/">Next &raquo;</a>
-      
     </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
-  </span>
-</div></div>
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
 
 
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
 <div class="container">
     
 <div class="footer">
