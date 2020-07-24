@@ -31,11 +31,9 @@ to split them up. That's when partial commits come in handy. They allow you to o
 
 ## How to use partial commits in Webstorm
 
-Webstorm has a commit dialog which is handy for inspecting the changes.
-
-And that latter one is exactly what I'd like to show you in this article.
-
-If you open up the WebStorm visual commit dialog you can ...dd
+Webstorm has a commit dialog which is handy for inspecting the changes. If you open up the dialog you see something like this:
 
 {{<figure url="/blog/assets/img/webstorm-git-no-partialcommit.png" size="full">}}
+
+
 
