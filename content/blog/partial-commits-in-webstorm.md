@@ -4,7 +4,7 @@ title: Partial Commits in WebStorm
 date: 2020-07-14T00:00 +02:00
 lead: How to enable partial commits with WebStorm
 url: /blog/2020/07/partial-commits-webstorm
-draft: false
+draft: true
 categories:
   - tooling
 tags:
