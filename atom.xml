@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Tue, 14 Jul 2020 21:29:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2020 02:19:00 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Detect when node_modules are out of sync</title>
+      <link>https://juristr.com/blog/2020/09/detect-node_modules-out-of-sync/</link>
+      <pubDate>Wed, 02 Sep 2020 02:19:00 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/09/detect-node_modules-out-of-sync/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I&amp;rsquo;m pretty sure this already happened to you as well. You pull down the latest &lt;code&gt;main&lt;/code&gt; branch or jump to some feature branch and you start getting weird errors. Until only later you recognize you forgot to execute an &lt;code&gt;npm install&lt;/code&gt;. Let&amp;rsquo;s look into how we can avoid that.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Partial Commits in WebStorm</title>
