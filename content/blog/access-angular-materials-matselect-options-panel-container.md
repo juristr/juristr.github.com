@@ -29,7 +29,7 @@ comments: true
 
 In your directive, inject the reference to `MatSelect`, subscribe to the `openedChange` Observable and if it is open, access the `panel` property on the `MatSelect`.
 
-{{<youtube lZYYoSWcPeE >}}
+{{<youtube iWo68VE2zLY >}}
 
 ---
 
