@@ -5,6 +5,7 @@ date: 2020-09-12T10:47:22+02:00
 lead: Get programmatic access to the MatSelect Options Panel
 url: /blog/2020/06/access-material-select-options
 draft: false
+image: /blog/assets/imgs/bg-ng-select-panel.jpg
 categories:
   - angular
 tags:
