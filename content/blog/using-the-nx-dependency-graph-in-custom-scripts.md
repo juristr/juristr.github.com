@@ -49,7 +49,7 @@ $ nx dep-graph
 
 or by running `affected:dep-graph` to only visualize the affected nodes.
 
-[Isaac Mann](https://twitter.com/MannIsaac) has a nice video on Youtube walking you through the visualization of the dep-graph
+[Isaac Mann](https://twitter.com/MannIsaac) has a short video that walks you through the visualization of the dep-graph
 
 {{< youtube cMZ-ReC-jWU >}}
 
