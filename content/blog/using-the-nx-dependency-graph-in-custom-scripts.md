@@ -55,7 +55,7 @@ or by running `affected:dep-graph` to only visualize the affected nodes.
 
 ## Access the project-graph from code
 
-Nx comes with a set of built-in automations. But after all, each workspace is unique and you should customize it to your needs. For those custom automation scripts you might want to be able to access the dependency graph.
+Nx comes with a set of built-in automations. But after all, each workspace is unique and you should customize it to your needs. For those custom automation scripts it might be helpful to be able to leverage the dependency graph as well.
 
 ### Approach 1: From TypeScript
 
