@@ -27,7 +27,7 @@ comments: true
 * **[computational caching](https://nx.dev/angular/workspace/computation-caching#computation-caching) -** Victor Savkin also wrote a blog post on ["How to never build or test twice"](https://blog.nrwl.io/how-to-never-build-or-test-the-same-code-twice-2dc58e413279)
 * **it is tech agnostic -** while Nx currently focuses mostly on the JavaScript ecosystem, there's nothing in Nx that is particularly bound to it. As such even Java or .Net projects can be built with it
 
-In this article I'd like to focus on the **dependency graph** in particular. Behind the scenes, whenever you reference a libary within your workspace, Nx keeps track of that. By knowing the structure of the monorepo, Nx is able to provide so-called “affected” commands. For instance to run your tests:
+In this article I'd like to focus on the **dependency graph** in particular. Behind the scenes, whenever you reference a libary within your workspace, Nx keeps track of that. By knowing the structure of the monorepo, Nx is able to provide significant improvements to the developer experience. One such improvement are the so-called “affected” commands. For instance to run your tests:
 
 ```
 $ nx affected:test
