@@ -2,7 +2,7 @@
 type: post
 title: Access Selenium Test Screenshots on failed GitLab Pipeline Steps
 date: 2020-09-15T18:30:01+02:00
-lead: bla bla
+lead: Quick recipe how to enable GitLab artifact storage on failed CI pipeline steps
 url: /blog/2020/09/upload-failed-artifacts-gitlab
 draft: false
 categories:
@@ -12,12 +12,14 @@ tags:
 comments: true
 ---
 {{<intro>}}
-  ...
+  You know those moments when your Selenium based test succeeds locally, but for some weird reason fails on CI? The only hope: screenshots of the failed run! Let's quickly have a look how we can tell GitLab specifically to store those screenshots on a failed run.
 {{</intro>}}
 <!--more-->
 
 {{< postad >}}
 
+
+on_failure
 
 ```
 e2e_tests:
@@ -29,7 +31,7 @@ e2e_tests:
   retry: 1
   allow_failure: true
   artifacts:
-    when: always
+    when: on_failure
     paths:
       - target/
   rules:
