@@ -19,7 +19,7 @@ comments: true
 {{< postad >}}
 
 
-```yml
+```
 e2e_tests:
   image: cypress/browsers:node12.18.0-chrome83-ff77
   stage: verify
