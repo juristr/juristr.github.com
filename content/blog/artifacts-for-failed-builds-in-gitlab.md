@@ -1,6 +1,6 @@
 ---
 type: post
-title: Artifacts for failed builds in GitLab
+title: Access Selenium Test Screenshots on failed GitLab Pipeline Steps
 date: 2020-09-15T18:30:01+02:00
 lead: bla bla
 url: /blog/2020/09/upload-failed-artifacts-gitlab
