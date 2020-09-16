@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2020/06/access-material-select-options/</loc>
+    <lastmod>2020-09-12T10:47:22+02:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2020/09/detect-node_modules-out-of-sync/</loc>
     <lastmod>2020-09-02T02:19:00+02:00</lastmod>
   </url>
@@ -3990,7 +3998,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2020-09-02T02:19:00+02:00</lastmod>
+    <lastmod>2020-09-12T10:47:22+02:00</lastmod>
   </url>
   
   
@@ -4041,7 +4049,7 @@
   
   <url>
     <loc>https://juristr.com/tags/angular/</loc>
-    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
+    <lastmod>2020-09-12T10:47:22+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4050,7 +4058,7 @@
   
   <url>
     <loc>https://juristr.com/categories/angular/</loc>
-    <lastmod>2020-07-03T17:13:18+02:00</lastmod>
+    <lastmod>2020-09-12T10:47:22+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4060,6 +4068,15 @@
   <url>
     <loc>https://juristr.com/tags/angular-elements/</loc>
     <lastmod>2019-12-17T08:48:08+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/angular-material/</loc>
+    <lastmod>2020-09-12T10:47:22+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4165,7 +4182,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2020-09-02T02:19:00+02:00</lastmod>
+    <lastmod>2020-09-12T10:47:22+02:00</lastmod>
     <priority>0</priority>
   </url>
   

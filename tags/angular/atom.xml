@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Fri, 03 Jul 2020 17:13:18 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2020 10:47:22 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/tags/angular/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Access Angular Material&#39;s MatSelect Options Panel Container</title>
+      <link>https://juristr.com/blog/2020/06/access-material-select-options/</link>
+      <pubDate>Sat, 12 Sep 2020 10:47:22 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/06/access-material-select-options/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In this article we&amp;rsquo;re going to explore how you can programmatically access the Angular Material Select panel, without doing strange global DOM queries . Let&amp;rsquo;s dive in!
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>AskJuri: Learning about Angular Elements</title>
