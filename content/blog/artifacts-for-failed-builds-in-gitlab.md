@@ -14,12 +14,22 @@ comments: true
 {{<intro>}}
   You know those moments when your Selenium based test succeeds locally, but for some weird reason fails on CI? The only hope: screenshots of the failed run! Let's quickly have a look how we can tell GitLab specifically to store those screenshots on a failed run.
 {{</intro>}}
+
 <!--more-->
 
 {{< postad >}}
 
+## Storing Artifacts in GitLab
 
-on_failure
+Storing artifacts is a common thing, especially for `node_modules`. Since the installation takes a lot of time, the usual approach is to have an installation step in your pipeline that does the `npm install` and then caches the `node_modules` accordingly.
+
+This might look as follows:
+
+```
+...
+```
+
+![](/blog/assets/imgs/download-gitlab-artifacts.png)
 
 ```
 e2e_tests:
