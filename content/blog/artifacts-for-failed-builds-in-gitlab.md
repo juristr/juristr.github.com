@@ -37,7 +37,7 @@ install:
     - when: always
 ```
 
-{{<figure url="/blog/assets/imgs/download-gitlab-artifacts.png" size="medium">}}
+{{<figure url="/blog/assets/imgs/download-gitlab-artifacts.png" size="medium" caption="bla bla" >}}
 
 
 ```
