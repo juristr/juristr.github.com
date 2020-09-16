@@ -37,7 +37,8 @@ install:
     - when: always
 ```
 
-![](/blog/assets/imgs/download-gitlab-artifacts.png)
+{{<figure url="/blog/assets/imgs/download-gitlab-artifacts.png" size="medium">}}
+
 
 ```
 e2e_tests:
