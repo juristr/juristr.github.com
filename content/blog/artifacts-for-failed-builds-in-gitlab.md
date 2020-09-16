@@ -26,7 +26,15 @@ Storing artifacts is a common thing, especially for `node_modules`. Since the in
 This might look as follows:
 
 ```
-...
+install:
+  stage: setup
+  script:
+    - npm ci --prefer-offline
+  artifacts:
+    paths:
+      - node_modules/
+  rules:
+    - when: always
 ```
 
 ![](/blog/assets/imgs/download-gitlab-artifacts.png)
