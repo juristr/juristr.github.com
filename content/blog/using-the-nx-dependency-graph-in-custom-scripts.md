@@ -5,6 +5,7 @@ date: 2020-09-12T11:09:52+02:00
 lead: Unleash the power of the Nx dep-graph
 url: /blog/2020/09/use-nx-dep-graph-in-custom-scripts
 draft: false
+image: /blog/assets/imgs/dependency-graph.png
 categories:
   - tooling
 tags:
