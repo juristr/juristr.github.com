@@ -68,6 +68,8 @@ import { createProjectGraph } from '@nrwl/workspace/src/core/project-graph';
 const graph = createProjectGraph();
 ```
 
+**Note,** the import is a deep import grabbing the function from the `core/project-graph` file. Since that is not part of the public API, it might be subject to changes. Just be aware of that.
+
 ### Approach 2: Output to JSON
 
 You can also **output the graph into a json file** like
@@ -94,12 +96,25 @@ const array = JSON.parse(
   ).tasks.map((t) => t.target.project);
 ```
 
+## Approach 4: Print Affected Apps & Libs
+
+The above mentioned **approach 3** gives you already a lot of flexibility because it allows you to filter and manipulate the resulting JSON output.
+
+As an alternative you can also use `affected:apps` and `affected:libs`. Especially if you pass the `—-plain` flag, it gives you a plain space separated list of apps/libs you can again parse from a custom script.
+
+```
+$ nx affected:apps —-base=master —-plain
+```
+
+More can be [found on the Nx docs](https://nx.dev/angular/cli/affected-apps).
+
 ## Where to use it
 
 There are two primary use cases for this inside an Nx monorepo.
 
 - **[Workspace schematics](https://nx.dev/angular/workspace/schematics/workspace-schematics#workspace-schematics) -** Schematics is a fancy word for “generators”, scripts that can be written in TypeScript and which are able to create, update or delete code from your workspace. Nx itself comes with a set of built-in schematics. Workspace schematics allow you to create ad-hoc schematics inside your monorepo
 - **Custom scripts -** These are usually placed in the `tools` folder of your Nx repo and can be shell scripts, Node.js scripts or whatever you really like.
+- **Optimize your CI setup -** by implementing [distributed builds](https://nx.dev/angular/guides/ci/distributed-builds) that parallelize across multiple nodes. 
 
 ## Conclusion
 
