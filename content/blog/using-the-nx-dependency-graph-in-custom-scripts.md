@@ -1,7 +1,7 @@
 ---
 type: post
 title: Using the Nx Dependency Graph in Custom Scripts
-date: 2020-09-12T11:09:52+02:00
+date: 2020-09-30T11:09:52+02:00
 lead: Unleash the power of the Nx dep-graph
 url: /blog/2020/09/use-nx-dep-graph-in-custom-scripts
 draft: false
