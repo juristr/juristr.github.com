@@ -14,21 +14,21 @@ tags:
 comments: true
 ---
 {{<intro>}}
-  One of the powerful pilars of the open source [Nx monorepo toolkit](https://nx.dev) is its dependency graph. In this article we're going to look into how we can leverage it in our own scripts.
+  One of the powerful pillars of the open-source [Nx monorepo toolkit](https://nx.dev) is its dependency graph. In this article, we're going to look into how we can leverage it in our own scripts.
 {{</intro>}}
 
 <!--more-->
 
 {{< postad >}}
 
-[Nx](https://nx.dev) is an open source dev toolkit to help you scale development with monorepos. What makes Nx stand out is
+[Nx](https://nx.dev) is an open source dev toolkit to help you scale development with monorepos. What makes Nx particularly stand out is
 
 * **dependency graph -** Nx understands your workspace
 * **["affected" commands](https://nx.dev/angular/guides/ci/monorepo-affected#rebuilding-and-retesting-what-is-affected) -** that allow you to only build what really changed
 * **[computational caching](https://nx.dev/angular/workspace/computation-caching#computation-caching) -** Victor Savkin also wrote a blog post on ["How to never build or test twice"](https://blog.nrwl.io/how-to-never-build-or-test-the-same-code-twice-2dc58e413279)
 * **it is tech agnostic -** while Nx currently focuses mostly on the JavaScript ecosystem, there's nothing in Nx that is particularly bound to it. As such even Java or .Net projects can be built with it
 
-In this article I'd like to focus on the **dependency graph** in particular. Behind the scenes, whenever you reference a libary within your workspace, Nx keeps track of that. By knowing the structure of the monorepo, Nx is able to provide significant improvements to the developer experience. One such improvement are the so-called “affected” commands. For instance to run your tests:
+In this article I'd like to focus on the **dependency graph** in particular. Behind the scenes, whenever you reference a library within your workspace, Nx keeps track of that. By knowing the structure of the monorepo, Nx is able to provide significant improvements to the developer experience. One such improvement are the so-called “affected” commands. For instance to run your tests:
 
 ```
 $ nx affected:test
@@ -42,7 +42,7 @@ $ nx affected:build
 
 to run the build of your apps and libs. Affected commands only execute the test/build/... on the changed apps and libs. As you can imagine, such commands can help you speed up your CI pipeline time quite a bit. Read more [about it on the Nx docs](https://nx.dev/angular/guides/ci/monorepo-affected#rebuilding-and-retesting-what-is-affected).
 
-The intersting part is that the graph can also be visualized by running
+The interesting part is that the graph can also be visualized by running
 
 ```
 $ nx dep-graph
@@ -56,7 +56,7 @@ or by running `affected:dep-graph` to only visualize the affected nodes.
 
 ## Access the project-graph from code
 
-Nx comes with a set of built-in automations. But after all, each workspace is unique and you should customize it to your needs. For those custom automation scripts it might be helpful to be able to leverage the dependency graph as well. There are several ways this can be done.
+Nx comes with a set of built-in automation. But after all, each workspace is unique and you should customize it to your needs. For those custom automation scripts, it might be helpful to be able to leverage the dependency graph as well. There are several ways this can be done.
 
 ### Approach 1: From TypeScript
 
@@ -72,7 +72,7 @@ const graph = createProjectGraph();
 
 ### Approach 2: Output to JSON
 
-You can also **output the graph into a json file** like
+You can also **output the graph into a JSON file** like
 
 ```
 nx dep-graph --file=testgraph.json
@@ -118,4 +118,4 @@ There are two primary use cases for this inside an Nx monorepo.
 
 ## Conclusion
 
-In this article we’ve briefly looked into the [Nx](https://nx.dev) dependency graph, how it works and especially how you can leverage it from your own code.
+We’ve briefly looked into the [Nx](https://nx.dev) dependency graph, how it works, and especially how you can leverage it from your own code.
