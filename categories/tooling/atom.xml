@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 02 Sep 2020 02:19:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2020 11:09:52 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/tooling/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using the Nx Dependency Graph in Custom Scripts</title>
+      <link>https://juristr.com/blog/2020/09/use-nx-dep-graph-in-custom-scripts/</link>
+      <pubDate>Wed, 30 Sep 2020 11:09:52 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/09/use-nx-dep-graph-in-custom-scripts/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    One of the powerful pillars of the open-source &lt;a href=&#34;https://nx.dev&#34;&gt;Nx monorepo toolkit&lt;/a&gt; is its dependency graph. In this article, we&amp;rsquo;re going to look into how we can leverage it in our own scripts.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Detect when node_modules are out of sync</title>
