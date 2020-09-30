@@ -90,7 +90,7 @@ This is an excerpt from that Node.js script:
 const execSync = require('child_process').execSync;
 
 const array = JSON.parse(
-    execSync(`npx nx print-affected --base=${baseSha} --target=${target}`)
+    execSync(`npx nx print-affected --base=${baseSha}`)
       .toString()
       .trim()
   ).tasks.map((t) => t.target.project);
@@ -100,7 +100,7 @@ const array = JSON.parse(
 
 The above mentioned **approach 3** gives you already a lot of flexibility because it allows you to filter and manipulate the resulting JSON output.
 
-As an alternative you can also use `affected:apps` and `affected:libs`. Especially if you pass the `—-plain` flag, it gives you a plain space separated list of apps/libs you can again parse from a custom script.
+As an alternative you can also use `affected:apps` and `affected:libs`. Especially if you pass the `—-plain` flag, it gives you a plain space-separated list of apps/libs you can again parse from a custom script.
 
 ```
 $ nx affected:apps —-base=master —-plain
