@@ -17,3 +17,6 @@ tags:
 comments: true
 ---
 bla bla
+
+
+![](/blog/assets/imgs/aspnetprojectstructure.jpg)
