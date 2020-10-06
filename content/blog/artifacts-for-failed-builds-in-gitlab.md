@@ -12,7 +12,7 @@ tags:
 comments: true
 ---
 {{<intro>}}
-  You know those moments when your Selenium based test succeeds locally, but for some weird reason fails on CI? The only hope: screenshots of the failed run! Let's quickly have a look how we can tell GitLab specifically to store those screenshots on a failed run.
+  You know those moments when your Selenium based test succeeds locally, but for some weird reason fails on CI? The only hope: screenshots of the failed run! Let's quickly have a look at how we can tell GitLab to store those screenshots on a failed run.
 {{</intro>}}
 
 <!--more-->
@@ -33,8 +33,7 @@ install:
   artifacts:
     paths:
       - node_modules/
-  rules:
-    - when: always
+  ...
 ```
 
 {{<figure url="/blog/assets/imgs/download-gitlab-artifacts.png" size="medium" caption="bla bla" >}}
