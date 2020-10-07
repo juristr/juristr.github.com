@@ -4,7 +4,7 @@ title: Access Selenium Test Screenshots on failed GitLab Pipeline Steps
 date: 2020-09-15T18:30:01+02:00
 lead: Quick recipe how to enable GitLab artifact storage on failed CI pipeline steps
 url: /blog/2020/09/upload-failed-artifacts-gitlab
-draft: false
+draft: true
 categories:
   - tooling
 tags:
