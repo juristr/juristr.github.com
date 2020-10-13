@@ -45,17 +45,13 @@ Take for instance this e2e test configuration. It uses Protractor (a Selenium ba
 ```
 e2e_tests:
   image: cypress/browsers:node12.18.0-chrome83-ff77
-  stage: verify
+  stage: test
   script:
     - npx webdriver-manager update --versions.chrome=$CHROME_VERSION
     - npx nx affected:e2e --base=origin/$CI_MERGE_REQUEST_TARGET_BRANCH_NAME --configuration=headless --webdriverUpdate=false
-  retry: 1
-  allow_failure: true
   artifacts:
     when: on_failure
     paths:
       - target/
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-      when: on_success
+  ...
 ```
