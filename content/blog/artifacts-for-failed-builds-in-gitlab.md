@@ -36,8 +36,11 @@ install:
   ...
 ```
 
-{{<figure url="/blog/assets/imgs/download-gitlab-artifacts.png" size="medium" caption="bla bla" >}}
+{{<figure url="/blog/assets/imgs/download-gitlab-artifacts.png" size="medium" caption="Panel on the right hand side that allows to browse/download stored artifacts" >}}
 
+The above configuration configures the GitLab pipeline step to only store the artifact if the step succeeds. **Sometimes however you want the exact contrary**, namely to store it when the step fails.
+
+Take for instance this e2e test configuration. It uses Protractor (a Selenium based e2e test runner), but note how I use the [Cypress](https://www.cypress.io/) Docker image because it has a handy setup of Node.js & Chrome configuration (or was it due to nostalgia of not being able to use Cypress for my e2e in this project :thinking:)
 
 ```
 e2e_tests:
