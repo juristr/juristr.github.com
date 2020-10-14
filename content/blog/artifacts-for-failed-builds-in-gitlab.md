@@ -44,6 +44,10 @@ The above configuration configures the GitLab pipeline step to only store the ar
 
 Take for instance this e2e test configuration. It uses Protractor (a Selenium based e2e test runner), but note how I use the [Cypress](https://www.cypress.io/) Docker image because it has a handy setup of Node.js & Chrome configuration (or was it due to nostalgia of not being able to use Cypress for my e2e in this project :thinking:)
 
+Anyhow, you can add a `when` condition to the `artifacts:` section that allows you to specify either `on_success` (which is the default), `always` or `on_failure`. 
+
+The last one is the one we would want to have of course. Here's an example
+
 ```
 e2e_tests:
   image: cypress/browsers:node12.18.0-chrome83-ff77
