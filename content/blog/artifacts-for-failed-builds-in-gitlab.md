@@ -5,6 +5,7 @@ date: 2020-10-14T14:25:12+02:00
 lead: Quick recipe how to enable GitLab artifact storage on failed CI pipeline steps
 url: /blog/2020/10/upload-failed-artifacts-gitlab
 draft: false
+image: /blog/assets/imgs/download-gitlab-artifacts.png
 categories:
   - tooling
 tags:
