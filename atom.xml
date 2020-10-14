@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 30 Sep 2020 11:09:52 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2020 14:25:12 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Access Selenium Test Screenshots on failed GitLab Pipeline Steps</title>
+      <link>https://juristr.com/blog/2020/10/upload-failed-artifacts-gitlab/</link>
+      <pubDate>Wed, 14 Oct 2020 14:25:12 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/10/upload-failed-artifacts-gitlab/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    You know those moments when your Selenium based test succeeds locally, but for some weird reason fails on CI? The only hope: screenshots of the failed run! Let&amp;rsquo;s quickly have a look at how we can tell GitLab to store those screenshots on a failed run.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Using the Nx Dependency Graph in Custom Scripts</title>
