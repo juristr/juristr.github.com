@@ -18,5 +18,11 @@ comments: true
 ---
 bla bla
 
+Why would someone want to use Nx in a smaller project?
+
+* **creating stronger feature boundaries -** structuring features in folders is much looser and gives you less constraints. Plus, generating a library you have to explicitly esport things in the main `index.ts` file, thus you have to think more about your feature library’s API than you probably would in a folder
+* **Generators help you set up the configuration** stuff and thus you can focus on what matters: shipping code. Also it sets you up with **best practices**, like generating a Unit test setup, e2e test setup for you etc..
+* **The dependency graph** can even help in smaller projects getting to understand better what your project’s structure looks like. You often see architectural diagrams which are basically outdated the moment you create them ![:sweat_smile:](https://a.slack-edge.com/production-standard-emoji-assets/10.2/apple-medium/1f605@2x.png) . This is generated each time out of your source code and thus reflects the actual reality
+* **Things like “affected” commands or the computation cache** are already beneficial in a small project. If your build doesn’t take half an hour but 10 mins you already get a lot of
 
 ![](/blog/assets/imgs/aspnetprojectstructure.jpg)
