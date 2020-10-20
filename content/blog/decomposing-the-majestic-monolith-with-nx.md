@@ -18,6 +18,9 @@ comments: true
 ---
 bla bla
 
+https://twitter.com/LayZeeDK/status/1317927987845734414?s=20
+
+
 Why would someone want to use Nx in a smaller project?
 
 * **creating stronger feature boundaries -** structuring features in folders is much looser and gives you less constraints. Plus, generating a library you have to explicitly esport things in the main `index.ts` file, thus you have to think more about your feature library’s API than you probably would in a folder
