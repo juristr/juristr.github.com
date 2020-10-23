@@ -34,10 +34,15 @@ If you generate a plain normal Angular app nowadays, you'll get what I call a mo
 
 {{<figure url="/blog/assets/imgs/angular-monolith.png" size="full" >}}
 
-As shown in the picture above, the app structure is monolithic. 
+As shown in the picture above, the app structure is monolithic. Let's explore some of the potential issues you might face as a team when following such structure, especially when you have to scale it.
+
+### Feature Boundaries
+
 
 
 https://twitter.com/LayZeeDK/status/1317927987845734414?s=20
+
+## Conclusion
 
 Why would someone want to use Nx in a smaller project?
 
