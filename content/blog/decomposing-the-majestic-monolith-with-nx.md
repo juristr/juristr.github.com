@@ -32,7 +32,7 @@ comments: true
 
 If you generate a plain normal Angular app nowadays, you'll get what I call a monolithic structure. If you follow the [folder by feature principle](https://angular.io/guide/styleguide#folders-by-feature-structure), then you'll have a single application, with a bunch of folders, each of which contains the corresponding feature in it.
 
-{{<figure url="/blog/assets/imgs/angular-monolith.png" size="full" >}}
+{{<figure url="/blog/assets/imgs/angular-monolith.png" size="medium" >}}
 
 As shown in the picture above, the app structure is monolithic. Let's explore some of the potential issues you might face as a team when following such structure, especially when you have to scale it.
 
