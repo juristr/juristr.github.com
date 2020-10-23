@@ -16,10 +16,10 @@ tags:
   - reactjs
 comments: true
 ---
-
 {{<intro>}}
   In this article, we're going to have a look at how we can improve our application architecture by splitting it up into a more modular structure. 
 {{</intro>}}
+
 <!--more-->
 
 {{< postad >}}
@@ -32,10 +32,10 @@ comments: true
 
 If you generate a plain normal Angular app nowadays, you'll get what I call a monolithic structure. If you follow the [folder by feature principle](https://angular.io/guide/styleguide#folders-by-feature-structure), then you'll have a single application, with a bunch of folders, each of which contains the corresponding feature in it.
 
+{{<figure url="blog/assets/imgs/angular-monolith.png" >}}
 
 
 https://twitter.com/LayZeeDK/status/1317927987845734414?s=20
-
 
 Why would someone want to use Nx in a smaller project?
 
