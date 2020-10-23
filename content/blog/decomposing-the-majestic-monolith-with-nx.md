@@ -16,7 +16,23 @@ tags:
   - reactjs
 comments: true
 ---
-bla bla
+
+{{<intro>}}
+  In this article, we're going to have a look at how we can improve our application architecture by splitting it up into a more modular structure. 
+{{</intro>}}
+<!--more-->
+
+{{< postad >}}
+
+{{<toc>}}
+
+> Note, while in this article I'm mostly talking about Angular, these concepts apply the same to React or other frameworks as well. Even to backend frameworks like Node.js.
+
+## The (majestic) Monolith
+
+If you generate a plain normal Angular app nowadays, you'll get what I call a monolithic structure. If you follow the [folder by feature principle](https://angular.io/guide/styleguide#folders-by-feature-structure), then you'll have a single application, with a bunch of folders, each of which contains the corresponding feature in it.
+
+
 
 https://twitter.com/LayZeeDK/status/1317927987845734414?s=20
 
