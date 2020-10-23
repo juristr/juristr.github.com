@@ -38,8 +38,10 @@ As shown in the picture above, the app structure is monolithic. Let's explore so
 
 ### Feature Boundaries
 
+Most of the CLIs generate simple folder structures for separating features from each other. That defines only a very loose boundary, though. From the perspective of a developer that didn't develop a given feature, it is very hard to understand what parts of the feature constitutes to the public API, and what is only intended to be used privately within that same feature folder.
 
 
+ii
 https://twitter.com/LayZeeDK/status/1317927987845734414?s=20
 
 ## Conclusion
