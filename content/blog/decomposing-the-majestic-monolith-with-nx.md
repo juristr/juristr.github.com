@@ -32,7 +32,7 @@ comments: true
 
 If you generate a plain normal Angular app nowadays, you'll get what I call a monolithic structure. If you follow the [folder by feature principle](https://angular.io/guide/styleguide#folders-by-feature-structure), then you'll have a single application, with a bunch of folders, each of which contains the corresponding feature in it.
 
-{{<figure url="blog/assets/imgs/angular-monolith.png" >}}
+{{<figure url="blog/assets/imgs/angular-monolith.png" size="full" >}}
 
 
 https://twitter.com/LayZeeDK/status/1317927987845734414?s=20
