@@ -24,6 +24,10 @@ comments: true
 
 {{< postad >}}
 
+
+
+
+
 {{<toc>}}
 
 > Note, while in this article I'm mostly talking about Angular, these concepts apply the same to React or other frameworks as well. Even to backend frameworks like Node.js.
