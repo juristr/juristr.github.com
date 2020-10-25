@@ -24,10 +24,6 @@ comments: true
 
 {{< postad >}}
 
-
-
-
-
 {{<toc>}}
 
 > Note, while in this article I'm mostly talking about Angular, these concepts apply the same to React or other frameworks as well. Even to backend frameworks like Node.js.
@@ -36,7 +32,7 @@ comments: true
 
 If you generate a plain normal Angular app nowadays, you'll get what I call a monolithic structure. If you follow the [folder by feature principle](https://angular.io/guide/styleguide#folders-by-feature-structure), then you'll have a single application, with a bunch of folders, each of which contains the corresponding feature in it.
 
-{{<figure url="/blog/assets/imgs/angular-monolith.png" size="medium" >}}
+{{<figure url="/blog/assets/imgs/angular-monolith.png" size="small" >}}
 
 As shown in the picture above, the app structure is monolithic. Let's explore some of the potential issues you might face as a team when following such structure, especially when you have to scale it.
 
@@ -45,7 +41,6 @@ As shown in the picture above, the app structure is monolithic. Let's explore so
 Most of the CLIs generate simple folder structures for separating features from each other. That defines only a very loose boundary, though. From the perspective of a developer that didn't develop a given feature, it is very hard to understand what parts of the feature constitutes to the public API, and what is only intended to be used privately within that same feature folder.
 
 
-ii
 https://twitter.com/LayZeeDK/status/1317927987845734414?s=20
 
 ## Conclusion
