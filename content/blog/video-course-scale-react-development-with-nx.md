@@ -42,7 +42,7 @@ The logo represents a coral reef as an analogy to Nx bundling together different
 
 <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/6f83d912-2595-4d5b-9851-aaeb46232951?dark=true"></iframe>
 
-On the surface, starting a project sounds easy. First you make some directories, install some dependencies, then you write some code. But there's a bit more to it than just those three steps.
+On the surface, starting a project sounds easy. First, you make some directories, install some dependencies, then you write some code. But there's a bit more to it than just those three steps.
 
 The type of project you're working on impacts the decisions you make. It gets more complicated when you're working on multiple projects that are related. For example, maybe you have a customer-facing frontend app, an admin dashboard app, and a single backend used for both.
 
@@ -53,10 +53,19 @@ Nx is a tool that aims to solve these problems for you, whether you're working s
 One of the coolest features of Nx is its Dependency Graph. The graph can visually show you the relationship between the parts of your application, and is optimized to ensure that compiling, testing, and linting only happens in the affected areas of your project.
 
 
+## What do you mean by scaling?
+
+
+
 ## I'm a React.js dev, why should I watch this?
 
 Nope, Nx is a general purpose development tool, designed to help scale development especially on large monorepos. It actually emerged as an extension to the Angular CLI, but evolved to be much more than just an improved CLI on top of the Angular ecosystem. As of writing this article, Nx supports the Angular and React ecosystem out of the box, with more coming.
 
-I targeted the course specifically to React.js developers because thye 
- 
-https://egghead.io/playlists/scale-react-development-with-nx-4038
+## I Wanna learn more!
+
+Sure! Here are some resources you should definitely check out:
+
+- [nx.dev documentation site](https://nx.dev)
+- [Nrwl Youtube Channel](https://www.youtube.com/c/Nrwl_io/videos)
+- [Nx GitHub repository](https://github.com/nrwl/nx)
+- [Nx Cloud for distributed caching](https://nx.app)
