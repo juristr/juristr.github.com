@@ -27,6 +27,7 @@ I'm super happy to announce the release of my latest Egghead course on scaling R
 
 > *Disclaimer 1:* I actually work at Nrwl since January and was able to record this course as part of our 20% time, where we work on open source and other stuff. 
 
+
 > *Disclaimer 2:* I've been an Nx user for much longer, even before joining Nrwl, simply because I'm convinced it helps developers in a variety of different ways be more productive and create higher quality outcomes.
 
 {{<figure url="/blog/assets/imgs/egh_scalingreactnx.png" size="small" >}}
