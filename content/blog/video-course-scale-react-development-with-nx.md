@@ -53,7 +53,7 @@ If you think that was all, then you should definitely have a look at the last se
 
 All in all, Nx helps
 
-- generate code and configuration, s.t. you don't have to deal with that
+- generate code and configuration, s.t. you don't have to bother about it
 - combines modern tools like React, Storybook and Cypress to a cohesive and modern developer experience
 - helps design scalable architectures by dividing your code into apps and libs
 - understand your workspace via a powerful dependency graph tool
