@@ -42,6 +42,14 @@ The logo represents a coral reef as an analogy to Nx bundling together different
 
 <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/6f83d912-2595-4d5b-9851-aaeb46232951?dark=true"></iframe>
 
+This is a super **beginner-friendly** course, so if you never heard about Nx before, don't worry. In the course I start with showing you how to install Nx, how to generate and setup a new "Nx workspace", and I'll walk you through the various configuration options.
+
+To have a more real world scenario, I'm actually building a small tiny React.js application and as we go, we use Nx CLI commands to make our life easier in building that app. That includes **code generation** with the so-called "schematics" that scaffold a new React application as well as Node backend application for us. The result: we don't have to worry about the actual configuration, **it just works**.
+
+Since in the course we build multiple apps, a React.js frontend and Node backend, I'll walk you through how Nx structures such architectures into **apps** and **libs**. That's one powerful concept that helps you scale development as things get more complex.  
+Another core concept is the **dependency graph** which not only allows you to visualize the structure of your workspace but also helps Nx to optimize build/test/lint runs and to make sure they're as fast as possible.
+
+
 On the surface, starting a project sounds easy. First, you make some directories, install some dependencies, then you write some code. But there's a bit more to it than just those three steps.
 
 The type of project you're working on impacts the decisions you make. It gets more complicated when you're working on multiple projects that are related. For example, maybe you have a customer-facing frontend app, an admin dashboard app, and a single backend used for both.
