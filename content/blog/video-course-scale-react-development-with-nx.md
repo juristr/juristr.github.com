@@ -40,6 +40,21 @@ The logo represents a coral reef as an analogy to Nx bundling together different
 
 ## What's in the course?
 
+On the surface, starting a project sounds easy. First you make some directories, install some dependencies, then you write some code.
+
+But there's a bit more to it than just those three steps.
+
+The type of project you're working on impacts the decisions you make. It gets more complicated when you're working on multiple projects that are related. For example, maybe you have a customer-facing frontend app, an admin dashboard app, and a single backend used for both.
+
+How does this change your directory structures? How should you share code between projects? What happens when you add a Design System into the mix?
+
+It can get hard to keep things straight in your head.
+
+Nx is a tool that aims to solve these problems for you, whether you're working solo on a small full-stack app or on a dev team of thousands.
+
+It's not just an opinionated folder structure. When you create an app with Nx, it generates unit and e2e test setups as well as preparing bundling and code-splitting with Webpack, and stubbing out common features like routing.
+
+One of the coolest features of Nx is its Dependency Graph. The graph can visually show you the relationship between the parts of your application, and is optimized to ensure that compiling, testing, and linting only happens in the affected areas of your project.
 
 
 ## Is Nx specifically for React.js?
