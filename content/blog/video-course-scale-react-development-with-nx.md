@@ -49,21 +49,19 @@ To have a more real world scenario, I'm actually building a small tiny React.js 
 Since in the course we build multiple apps, a React.js frontend and Node backend, I'll walk you through how Nx structures such architectures into **apps** and **libs**. That's one powerful concept that helps you scale development as things get more complex.  
 Another core concept is the **dependency graph** which not only allows you to visualize the structure of your workspace but also helps Nx to optimize build/test/lint runs and to make sure they're as fast as possible.
 
+If you think that was all, then you should definitely have a look at the last set of lessons of the course, where we dive into how **affected commands** and **distributed computation caching** can help you speed up your CI and developer productivity :wink:.
 
-On the surface, starting a project sounds easy. First, you make some directories, install some dependencies, then you write some code. But there's a bit more to it than just those three steps.
+All in all, Nx helps
 
-The type of project you're working on impacts the decisions you make. It gets more complicated when you're working on multiple projects that are related. For example, maybe you have a customer-facing frontend app, an admin dashboard app, and a single backend used for both.
-
-How does this change your directory structures? How should you share code between projects? What happens when you add a Design System into the mix? It can get hard to keep things straight in your head.
-
-Nx is a tool that aims to solve these problems for you, whether you're working solo on a small full-stack app or on a dev team of thousands. It's not just an opinionated folder structure. When you create an app with Nx, it generates unit and e2e test setups as well as preparing bundling and code-splitting with Webpack, and stubbing out common features like routing.
-
-One of the coolest features of Nx is its Dependency Graph. The graph can visually show you the relationship between the parts of your application, and is optimized to ensure that compiling, testing, and linting only happens in the affected areas of your project.
-
+- generate code and configuration, s.t. you don't have to deal with that
+- combines modern tools like React, Storybook and Cypress to a cohesive and modern developer experience
+- helps design scalable architectures by dividing your code into apps and libs
+- understand your workspace via a powerful dependency graph tool
+- optimize your command execution time, via smart commands and computation caching
 
 ## What do you mean by scaling?
 
-
+...
 
 ## I'm a React.js dev, why should I watch this?
 
