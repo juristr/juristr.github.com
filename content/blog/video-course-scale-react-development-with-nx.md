@@ -28,7 +28,7 @@ I'm super happy to announce the release of my latest Egghead course on scaling R
 > **Disclaimer 1:** I actually work at Nrwl since January and was able to record this course as part of our 20% time, where we work on open source and other stuff. 
 
 
-> **Disclaimer 2:** I've been an Nx user for much longer, even before joining Nrwl, simply because I'm convinced it helps developers in a variety of different ways be more productive and create higher quality outcomes.
+> **Disclaimer 2:** I've been an Nx user for much longer, even before joining Nrwl, simply because I'm convinced it helps developers in a variety of different ways to be more productive and create higher quality outcomes.
 
 ## Click to check out the course
 
@@ -51,7 +51,7 @@ Nx is a tool that aims to solve these problems for you, whether you're working s
 One of the coolest features of Nx is its Dependency Graph. The graph can visually show you the relationship between the parts of your application, and is optimized to ensure that compiling, testing, and linting only happens in the affected areas of your project.
 
 
-## Is Nx specifically for React.js?
+## I'm a React.js dev, why should I watch this?
 
 Nope, Nx is a general purpose development tool, designed to help scale development especially on large monorepos. It actually emerged as an extension to the Angular CLI, but evolved to be much more than just an improved CLI on top of the Angular ecosystem. As of writing this article, Nx supports the Angular and React ecosystem out of the box, with more coming.
 
