@@ -25,18 +25,22 @@ I'm super happy to announce the release of my latest Egghead course on scaling R
 
 {{<toc>}}
 
-> *Disclaimer 1:* I actually work at Nrwl since January and was able to record this course as part of our 20% time, where we work on open source and other stuff. 
+> **Disclaimer 1:** I actually work at Nrwl since January and was able to record this course as part of our 20% time, where we work on open source and other stuff. 
 
 
-> *Disclaimer 2:* I've been an Nx user for much longer, even before joining Nrwl, simply because I'm convinced it helps developers in a variety of different ways be more productive and create higher quality outcomes.
+> **Disclaimer 2:** I've been an Nx user for much longer, even before joining Nrwl, simply because I'm convinced it helps developers in a variety of different ways be more productive and create higher quality outcomes.
 
 ## Click to check out the course
 
 {{<egghead-course uid="playlists/scale-react-development-with-nx-4038" lesson_img="/blog/assets/imgs/egh_scalingreactnx.png" >}}
 
-*What does the illustration represent?* I'm a huge fan of the Egghead illustrations, designed by Egghead's Art Directory [Maggie Appleton](https://twitter.com/Mappletons). And so I asked her about the story behind the illustration and what drove her inspiration when creating it.
+I'm a huge fan of the Egghead illustrations, designed by Egghead's Art Directory [Maggie Appleton](https://twitter.com/Mappletons). And so I asked her about the story behind the illustration and what drove her inspiration when creating it.
 
 The logo represents a coral reef as an analogy to Nx bundling together different organisms (technologies) into one cohesive ecosystem. You can think of the various sea organisms as being the different technologies around Angular, React.js and Node. Also, given Nrwl is themed around Narwhals this is really on point :smiley:.
+
+## What's in the course?
+
+
 
 ## Is Nx specifically for React.js?
 
