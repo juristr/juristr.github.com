@@ -40,6 +40,8 @@ The logo represents a coral reef as an analogy to Nx bundling together different
 
 ## What's in the course?
 
+<iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/6f83d912-2595-4d5b-9851-aaeb46232951?dark=true"></iframe>
+
 On the surface, starting a project sounds easy. First you make some directories, install some dependencies, then you write some code. But there's a bit more to it than just those three steps.
 
 The type of project you're working on impacts the decisions you make. It gets more complicated when you're working on multiple projects that are related. For example, maybe you have a customer-facing frontend app, an admin dashboard app, and a single backend used for both.
