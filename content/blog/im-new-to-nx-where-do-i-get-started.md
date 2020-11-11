@@ -11,4 +11,12 @@ tags:
   - tooling
 comments: true
 ---
-bla bla
+{{<intro>}}
+  If you are new to [Nx](https://nx.dev), but curious, here are a couple of pointers and links where and how to get started.
+{{</intro>}}
+
+<!--more-->
+
+{{< postad >}}
+
+
