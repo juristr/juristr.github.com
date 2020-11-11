@@ -7,10 +7,12 @@ url: /blog/2020/11/get-started-with-nx
 draft: false
 image: /blog/assets/imgs/nx-gettingstarted-bg.png
 categories:
+  - Nx
   - tooling
   - angular
   - react
 tags:
+  - Nx
   - tooling
   - angular
   - react
