@@ -29,6 +29,10 @@ comments: true
 - **[Weekly Office hours](https://www.youtube.com/channel/UCF8luR7ORJTCwSNA9yZksCw) -** Register on Nrwls Youtube channel
 - **[Nrwl Newsletter](https://go.nrwl.io/nrwl-news) -** subscribe to get the latest Nrwl & Nx news, links to community resources, office hours and other important info  
 
+## Repo README: Instructions, talks, podcasts,...
+
+The Nx GitHub repo's [README.md](https://github.com/nrwl/nx/blob/master/README.md#getting-started) has a ton of useful and up-to-date info on how to best get started, including talks, podcasts and blog posts.
+
 ## Video Courses
 
 If you like watching videos rather than reading through articles and the docs, here are some options:
@@ -37,13 +41,12 @@ If you like watching videos rather than reading through articles and the docs, h
 - **[Nx Playbook](https://nxplaybook.com/) -** the Nx Playbook site is Nrwls channel for official Nx videos. It comes with some free intro course as well as a paid more advanced Nx course
 - **[Nrwls Youtube Channel](https://www.youtube.com/channel/UCF8luR7ORJTCwSNA9yZksCw) -** Nrwls official Youtube channel where the team regularly shares tutorial videos about Nx as well as the recordings of the regular office hours
 
-## Talks
+## Community
 
-I wouldn't probably be able to keep all the talks up to date here, so I'm linking directly to the Nx readme which has an up-to-date list on it
+There are various possibilities:
 
-[https://github.com/nrwl/nx#talks](https://github.com/nrwl/nx#talks)
-
-The [README.md](https://github.com/nrwl/nx/blob/master/README.md) on the repo is probably the best way to get started in general.
+- [Nrwl Community Slack](https://bit.ly/2ZApcSo)
+- [Angular Discord](http://discord.gg/angular) which has a dedicated Nx channel
 
 ## How to best learn
 
