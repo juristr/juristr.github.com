@@ -45,6 +45,10 @@ I wouldn't probably be able to keep all the talks up to date here, so I'm linkin
 
 ## How to best learn
 
+Go through some of the docs and videos to get the general idea, but then jump straight into actually trying it out and playing around with some of the concepts.
 
+```
+$ npx create-nx-workspace myorg
+```
 
 
