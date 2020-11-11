@@ -35,9 +35,13 @@ If you like watching videos rather than reading through articles and the docs, h
 
 - **[Scale React Development with Nx](https://egghead.io/playlists/scale-react-development-with-nx-4038) -** completely free course with over 1h 30min of content. It focuses on React, but since Nx is a tech agnostic CLI, most of the shown commands can be easily translated to Angular as well.
 - **[Nx Playbook](https://nxplaybook.com/) -** the Nx Playbook site is Nrwls channel for official Nx videos. It comes with some free intro course as well as a paid more advanced Nx course
-- **[Nrwls Youtube Channel](https://www.youtube.com/channel/UCF8luR7ORJTCwSNA9yZksCw) -** Nrwls official Youtube channel which has lots of free tutorial videos about Nx as well as the recordings of the regular office hours
+- **[Nrwls Youtube Channel](https://www.youtube.com/channel/UCF8luR7ORJTCwSNA9yZksCw) -** Nrwls official Youtube channel where the team regularly shares tutorial videos about Nx as well as the recordings of the regular office hours
 
 ## Talks
+
+I wouldn't probably be able to keep all the talks up to date here, so I'm linking directly to the Nx readme which has an up-to-date list on it
+
+[https://github.com/nrwl/nx#talks](https://github.com/nrwl/nx#talks)
 
 ## How to best learn
 
