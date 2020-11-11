@@ -5,6 +5,7 @@ date: 2020-11-11T20:49:05+01:00
 lead: Best resources to get up to speed with Nx
 url: /blog/2020/11/get-started-with-nx
 draft: false
+image: /blog/assets/imgs/nx-gettingstarted-bg.png
 categories:
   - tooling
 tags:
