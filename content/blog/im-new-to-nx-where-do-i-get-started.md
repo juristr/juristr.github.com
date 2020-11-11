@@ -26,14 +26,15 @@ comments: true
 
 - **[Nrwl Twitter](https://twitter.com/nrwl) -** join Nrwl on Twitter for company news and around its products such as Nx, Nx Cloud and more
 - **[Nx Twitter](https://twitter.com/NxDevTools) -** follow Nx on Twitter to get the latest news
+- **[Nrwl Newsletter](https://go.nrwl.io/nrwl-news) -** subscribe to get the latest Nrwl & Nx news, links to community resources, office hours and other important info
+- **[Follow Nrwlians](https://nrwl.io/about-us)**  
 
-## Website, Sourcecode and Documentation
+## Nx Website, Sourcecode and Documentation
 
 - **[Nrwl Website](https://nrwl.io) -** Nrwl is the company behind the open source tool Nx
 - **[Nx Documentation](https://nx.dev) -** this is the official documentation for Nx.
 - **[Nx Github](https://github.com/nrwl/nx) -** Nx is open source, so all of the code is up here
 - **[Weekly Office hours](https://www.youtube.com/channel/UCF8luR7ORJTCwSNA9yZksCw) -** Register on Nrwls Youtube channel
-- **[Nrwl Newsletter](https://go.nrwl.io/nrwl-news) -** subscribe to get the latest Nrwl & Nx news, links to community resources, office hours and other important info  
 
 ## Repo README: Instructions, talks, podcasts,...
 
