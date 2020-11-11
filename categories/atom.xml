@@ -33,7 +33,7 @@
     <item>
       <title>Angular</title>
       <link>https://juristr.com/categories/angular/</link>
-      <pubDate>Sat, 12 Sep 2020 10:47:22 +0200</pubDate>
+      <pubDate>Wed, 11 Nov 2020 20:49:05 +0100</pubDate>
       
       <guid>https://juristr.com/categories/angular/</guid>
       <description></description>
@@ -222,9 +222,18 @@
     <item>
       <title>Nx</title>
       <link>https://juristr.com/categories/nx/</link>
-      <pubDate>Thu, 21 May 2020 00:01:04 +0200</pubDate>
+      <pubDate>Wed, 11 Nov 2020 20:49:05 +0100</pubDate>
       
       <guid>https://juristr.com/categories/nx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://juristr.com/categories/react/</link>
+      <pubDate>Wed, 11 Nov 2020 20:49:05 +0100</pubDate>
+      
+      <guid>https://juristr.com/categories/react/</guid>
       <description></description>
     </item>
     
@@ -294,7 +303,7 @@
     <item>
       <title>Tooling</title>
       <link>https://juristr.com/categories/tooling/</link>
-      <pubDate>Wed, 14 Oct 2020 14:25:12 +0200</pubDate>
+      <pubDate>Wed, 11 Nov 2020 20:49:05 +0100</pubDate>
       
       <guid>https://juristr.com/categories/tooling/</guid>
       <description></description>

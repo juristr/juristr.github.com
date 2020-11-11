@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 14 Oct 2020 14:25:12 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2020 20:49:05 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/tooling/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>I&#39;m new to Nx. Where do I get started?</title>
+      <link>https://juristr.com/blog/2020/11/get-started-with-nx/</link>
+      <pubDate>Wed, 11 Nov 2020 20:49:05 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/11/get-started-with-nx/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    If you are new to &lt;a href=&#34;https://nx.dev&#34;&gt;Nx&lt;/a&gt;, but curious, here are a couple of pointers and links where and how to get started.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Access Selenium Test Screenshots on failed GitLab Pipeline Steps</title>

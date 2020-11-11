@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2020/11/get-started-with-nx/</loc>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2020/10/upload-failed-artifacts-gitlab/</loc>
     <lastmod>2020-10-14T14:25:12+02:00</lastmod>
   </url>
@@ -4014,7 +4022,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2020-10-14T14:25:12+02:00</lastmod>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
   </url>
   
   
@@ -4065,7 +4073,7 @@
   
   <url>
     <loc>https://juristr.com/categories/angular/</loc>
-    <lastmod>2020-09-12T10:47:22+02:00</lastmod>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4074,7 +4082,7 @@
   
   <url>
     <loc>https://juristr.com/tags/angular/</loc>
-    <lastmod>2020-09-30T11:09:52+02:00</lastmod>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4198,7 +4206,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2020-10-14T14:25:12+02:00</lastmod>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4673,7 +4681,7 @@
   
   <url>
     <loc>https://juristr.com/categories/nx/</loc>
-    <lastmod>2020-05-21T00:01:04+02:00</lastmod>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4682,7 +4690,7 @@
   
   <url>
     <loc>https://juristr.com/tags/nx/</loc>
-    <lastmod>2020-05-21T00:01:04+02:00</lastmod>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4735,6 +4743,24 @@
   
   <url>
     <loc>https://juristr.com/page/speaking/</loc>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/categories/react/</loc>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/react/</loc>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
+    <priority>0</priority>
   </url>
   
   
@@ -4931,7 +4957,7 @@
   
   <url>
     <loc>https://juristr.com/categories/tooling/</loc>
-    <lastmod>2020-10-14T14:25:12+02:00</lastmod>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4940,7 +4966,7 @@
   
   <url>
     <loc>https://juristr.com/tags/tooling/</loc>
-    <lastmod>2020-10-14T14:25:12+02:00</lastmod>
+    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
