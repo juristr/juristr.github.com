@@ -20,3 +20,9 @@ comments: true
 {{< postad >}}
 
 
+## Website, Sourcecode and Documentation
+
+- **[Nrwl Website](https://nrwl.io) -** Nrwl is the company behind the open source tool Nx
+- **[Nx Documentation](https://nx.dev) -** this is the official documentation for Nx.
+- **[Nx Github](https://github.com/nrwl/nx) -** Nx is open source, so all of the code is up here
+
