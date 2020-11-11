@@ -8,8 +8,12 @@ draft: false
 image: /blog/assets/imgs/nx-gettingstarted-bg.png
 categories:
   - tooling
+  - angular
+  - react
 tags:
   - tooling
+  - angular
+  - react
 comments: true
 ---
 {{<intro>}}
