@@ -22,6 +22,11 @@ comments: true
 
 {{< toc >}}
 
+## Follow Nrwl
+
+- **[Nrwl Twitter](https://twitter.com/nrwl) -** join Nrwl on Twitter for company news and around its products such as Nx, Nx Cloud and more
+- **[Nx Twitter](https://twitter.com/NxDevTools) -** follow Nx on Twitter to get the latest news
+
 ## Website, Sourcecode and Documentation
 
 - **[Nrwl Website](https://nrwl.io) -** Nrwl is the company behind the open source tool Nx
