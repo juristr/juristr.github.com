@@ -43,6 +43,8 @@ I wouldn't probably be able to keep all the talks up to date here, so I'm linkin
 
 [https://github.com/nrwl/nx#talks](https://github.com/nrwl/nx#talks)
 
+The [README.md](https://github.com/nrwl/nx/blob/master/README.md) on the repo is probably the best way to get started in general.
+
 ## How to best learn
 
 Go through some of the docs and videos to get the general idea, but then jump straight into actually trying it out and playing around with some of the concepts.
