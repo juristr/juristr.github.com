@@ -19,6 +19,7 @@ comments: true
 
 {{< postad >}}
 
+{{< toc >}}
 
 ## Website, Sourcecode and Documentation
 
@@ -36,6 +37,9 @@ If you like watching videos rather than reading through articles and the docs, h
 
 
 ## Talks
+
+## How to best learn
+
 
 
 
