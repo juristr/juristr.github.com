@@ -1,8 +1,9 @@
 ---
 title: "Public Speaking"
+url: "/appearances"
 ---
 
-Here are some of my public speaking events.
+Here are some of my appearances on conferences, online talks, workshops and podcasts.
 
 - [**SFSCon Bolzano**](https://www.sfscon.it) (November 2018) - "End-to-end testing done right!"
 - [**Angular San Francisco Meetup**](https://www.meetup.com/Angular-SF/events/255253396/) (November 2018) - "Boost your Reactive Angular Forms"
@@ -21,3 +22,4 @@ Talk: [Youtube](https://www.youtube.com/watch?v=K4YMmwxGKjY)
 - [**Testing with Angular**](https://www.youtube.com/watch?v=Uw_XomCJaGQ) (January 2017) - A talk for [Hamburg AngularJS Meetup](https://www.meetup.com/Hamburg-AngularJS-Meetup/) on recipes for testing with Angular (2+).
 - [**AngularBeers: Interviewing Igor Minar and Adam Bradley**](https://www.youtube.com/watch?v=i2XloM6Q5wc) (December 2016) - I was given the opportunity to moderate the AMA session with Igor Minar and Adam Bradley for [AngularBeers](https://angularbeers.org/).
 - [**Angular 2 Special**](https://www.meetup.com/Software-Craftsmanship-SouthTyrol/events/230807221/) (May 2016)- Introducing interested software developers to Angular 2. The event consisted of a short 20min introductory talk followed by a guided exercise where developers were given the opportunity to write their first Angular 2 apps. You couldn't attend? I later created an intro video out of the exercise which you can watch yourself: [Ready to create your first Angular app? Let's do it together. (Angular 2+) ](https://www.youtube.com/watch?v=fXHyqSIIF9Q)
+
