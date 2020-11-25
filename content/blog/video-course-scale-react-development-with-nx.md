@@ -63,9 +63,7 @@ While Nx works for small projects, it has been designed from the very beginning 
 
 ## I'm a React.js dev, why should I watch this?
 
-Nx is more than just a CLI tool that helps you kick-start your new React project. It will rather help you in the challenge of developing your project as you progress. Nx is extending its native React support, already supporting \[Next.js](https://nx.dev/latest/react/plugins/next/overview) natively, and having plugins for \[Gatsby](https://github.com/nrwl/gatsby) and \[React Native](https://github.com/nrwl/nx-react-native). 
-
-
+Nx is more than just a CLI tool that helps you kick-start your new React project. It will rather help you in the challenge of developing your project as you progress. Nx is extending its native React support, already supporting [Next.js](https://nx.dev/latest/react/plugins/next/overview) natively, and having plugins for [Gatsby](https://github.com/nrwl/gatsby) and [React Native](https://github.com/nrwl/nx-react-native). 
 
 All in all, Nx helps
 
@@ -74,7 +72,6 @@ All in all, Nx helps
 * helps design scalable architectures by dividing your code into apps and libs
 * understand your workspace via a powerful dependency graph tool
 * optimize your command execution time, via smart commands and computation caching
-
 
 
 Nope, Nx is a general purpose development tool, designed to help scale development especially on large monorepos. It actually emerged as an extension to the Angular CLI, but evolved to be much more than just an improved CLI on top of the Angular ecosystem. As of writing this article, Nx supports the Angular and React ecosystem out of the box, with more coming.
