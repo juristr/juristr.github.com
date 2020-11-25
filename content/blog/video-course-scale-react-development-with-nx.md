@@ -40,6 +40,10 @@ Since Nrwl is themed around Narwhals. Maggie searched for some ocean-themed appr
 
 <iframe height="200px" width="100%" frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/6f83d912-2595-4d5b-9851-aaeb46232951?dark=true"></iframe>
 
+**Nx?**
+
+{{<youtube 9nDjLYXBCYM >}}
+
 This is a super **beginner-friendly** course, so if you never heard about Nx before, don't worry. In the course I start with showing you how to install Nx, how to generate and setup a new "Nx workspace", and I'll walk you through the various configuration options.
 
 To have a more real world scenario, I'm actually building a small tiny React.js application and as we go, we use Nx CLI commands to make our life easier in building that app. That includes **code generation** with the so-called "schematics" that scaffold a new React application as well as Node backend application for us. The result: we don't have to worry about the actual configuration, **it just works**.
