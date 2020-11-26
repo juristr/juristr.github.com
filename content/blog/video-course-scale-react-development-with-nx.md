@@ -55,13 +55,23 @@ If you think that was all, then you should definitely have a look at the last se
 
 > Tremendously detailed exploration for people who want to delve into the non-angular side of Nx.
 
+---
+
 > short and sweet but still comprehensive!
+
+---
 
 > I liked the content and the sequence of the lessons in order to explain how powerful this tool is. I liked the pace as well. Thanks, Juri!
 
+---
+
 > Well this is first time I'm learning about NX and instructor really made it easy to understand what does NX do and what you can make with it. As much as he talks, i got more and more amazed by the NX project <3
 
+---
+
 > I've  working with a Nx monorepo for more than 1 year and surpassingly I discovered I've made mistakes in simple things and still learned new tricks. Super good course, this is the type of content I love.
+
+---
 
 > Very practical, high-level tour of Nx with enough detail to dig in wherever seems most relevant to one's own needs.
 
