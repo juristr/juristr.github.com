@@ -24,7 +24,6 @@ I'm super happy to announce the release of my latest Egghead course on scaling R
 
 {{<toc>}}
 
-> **Disclaimer 1:** I actually work at Nrwl since January. But I've actually been an Nx user for much longer, even before joining Nrwl. Simply because I'm convinced it helps developers in a variety of different ways to be more productive and create higher quality outcomes.
 
 ## Click to check out the course
 
