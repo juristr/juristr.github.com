@@ -9,4 +9,9 @@ categories:
   - nx
 comments: true
 ---
-dasdfasdf
+{{<intro>}}
+When people start using an [Nx workspace](https://nx.dev) with multiple apps, they often get confused when it comes to deployment. How do I deploy just a single application?
+{{</intro>}}
+
+<!--more--> 
+
