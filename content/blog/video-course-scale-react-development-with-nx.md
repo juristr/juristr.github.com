@@ -24,9 +24,7 @@ I'm super happy to announce the release of my latest Egghead course on scaling R
 
 {{<toc>}}
 
-> **Disclaimer 1:** I actually work at Nrwl since January and was able to record this course as part of our 20% time, where we work on open source and other stuff. 
->
-> **Disclaimer 2:** I've been an Nx user for much longer, even before joining Nrwl, simply because I'm convinced it helps developers in a variety of different ways to be more productive and create higher quality outcomes.
+> **Disclaimer 1:** I actually work at Nrwl since January. But I've actually been an Nx user for much longer, even before joining Nrwl. Simply because I'm convinced it helps developers in a variety of different ways to be more productive and create higher quality outcomes.
 
 ## Click to check out the course
 
@@ -52,6 +50,21 @@ Since in the course we build multiple apps, a React.js frontend and Node backend
 Another core concept is the **dependency graph** which not only allows you to visualize the structure of your workspace but also helps Nx to optimize build/test/lint runs and to make sure they're as fast as possible.
 
 If you think that was all, then you should definitely have a look at the last set of lessons of the course, where we dive into how **affected commands** and **distributed computation caching** can help you speed up your CI and developer productivity :wink:.
+
+## What people are saying about the course
+
+> Tremendously detailed exploration for people who want to delve into the non-angular side of Nx.
+
+> short and sweet but still comprehensive!
+
+> I liked the content and the sequence of the lessons in order to explain how powerful this tool is. I liked the pace as well. Thanks, Juri!
+
+> Well this is first time I'm learning about NX and instructor really made it easy to understand what does NX do and what you can make with it. As much as he talks, i got more and more amazed by the NX project <3
+
+> I've  working with a Nx monorepo for more than 1 year and surpassingly I discovered I've made mistakes in simple things and still learned new tricks. Super good course, this is the type of content I love.
+
+> Very practical, high-level tour of Nx with enough detail to dig in wherever seems most relevant to one's own needs.
+
 
 ## What do you mean by scaling?
 
