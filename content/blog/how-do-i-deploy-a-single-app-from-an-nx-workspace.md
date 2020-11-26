@@ -15,3 +15,4 @@ When people start using an [Nx workspace](https://nx.dev) with multiple apps, th
 
 <!--more--> 
 
+{{<egghead-lesson uid="lessons/javascript-scale-ci-runs-with-nx-affected-commands" >}}
