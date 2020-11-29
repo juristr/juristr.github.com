@@ -15,7 +15,7 @@ tags:
 comments: true
 ---
 {{<intro>}}
-I'm super happy to announce the release of my latest Egghead course on scaling React development with Nx. Let me briefly dive into what the course is about, why I targeted it specifically to React.js developers and who should watch it!
+I'm happy to announce the release of my latest Egghead course on “Scale React development with Nx”. Let me briefly dive into what the course is about, why I targeted it to React.js developers and who should watch it!
 {{</intro>}}
 
 <!--more-->
@@ -29,7 +29,9 @@ I'm super happy to announce the release of my latest Egghead course on scaling R
 
 {{<egghead-course uid="playlists/scale-react-development-with-nx-4038" lesson_img="/blog/assets/imgs/egh_scalingreactnx.png" >}}
 
-I'm a huge fan of the Egghead illustrations, designed by Egghead's Art Directory [Maggie Appleton](https://twitter.com/Mappletons). And so I asked her about the story behind the illustration and what drove her inspiration when creating it.
+[Maggie Appleton](https://twitter.com/Mappletons) is the Art Director at Egghead and 
+
+I'm a huge fan of the Egghead illustrations, designed by Egghead's Art Directory . And so I asked her about the story behind the illustration and what drove her inspiration when creating it.
 
 Since Nrwl is themed around Narwhals. Maggie searched for some ocean-themed approach. Thus, the base of the logo represents a coral reef, as an analogy to Nx bundling together different organisms (technologies) into one cohesive ecosystem. You can think of the various sea organisms as being the different technologies around Angular, React.js and Node. Also, given Nrwl is themed around Narwhals this is really on point :smiley:.
 
