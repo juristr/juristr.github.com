@@ -84,7 +84,7 @@ In a traditional setup with tools like CRA or the Angular CLI, you tend to gener
 
 As your application grows in size and features, you might get more people and teams to work on it, and very soon you'll realize that it becomes difficult to scale the development, first because of the "monolithic" structure, and second because your build, test and lint times start to take increasingly more time.
 
-While Nx works for small projects, it has been designed from the very beginning to really **shine for large monorepos**. If I would have to break it down into just a couple of points, then Nx helps to scale by
+While **Nx works for small projects**, it has been designed from the very beginning to really **shine for large monorepos**. If I would have to break it down into just a couple of points, then Nx helps to scale by
 
 * dividing workspaces into apps and libs
 * making code sharing trivial via that app & lib structure
