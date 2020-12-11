@@ -103,8 +103,6 @@ All in all, Nx helps
 * optimize your command execution time, via smart commands and computation caching
 
 
-Nope, Nx is a general purpose development tool, designed to help scale development especially on large monorepos. It actually emerged as an extension to the Angular CLI, but evolved to be much more than just an improved CLI on top of the Angular ecosystem. As of writing this article, Nx supports the Angular and React ecosystem out of the box, with more coming.
-
 ## I Wanna learn more!
 
 Sure! Here are some resources you should definitely check out:
