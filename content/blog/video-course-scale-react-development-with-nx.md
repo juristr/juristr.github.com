@@ -111,3 +111,5 @@ Sure! Here are some resources you should definitely check out:
 * [Nrwl Youtube Channel](https://www.youtube.com/c/Nrwl_io/videos)
 * [Nx GitHub repository](https://github.com/nrwl/nx)
 * [Nx Cloud for distributed caching](https://nx.app)
+
+Also feel free to ping me on [Twitter](https://twitter.com/juristr)
