@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 11 Nov 2020 20:49:05 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 11 Dec 2020 10:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/nx/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scale React Development with Nx</title>
+      <link>https://juristr.com/blog/2020/12/scale-react-dev-with-nx/</link>
+      <pubDate>Fri, 11 Dec 2020 10:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/12/scale-react-dev-with-nx/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I&amp;rsquo;m happy to announce the release of my latest Egghead course on “Scale React development with Nx”. Let me briefly dive into what the course is about, why I targeted it to React.js developers and who should watch it!
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>I&#39;m new to Nx. Where do I get started?</title>

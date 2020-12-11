@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reactjs on juri.dev</title>
-    <link>https://juristr.com/tags/reactjs/</link>
+    <link>https://juristr.com/categories/reactjs/</link>
     <description>Recent content in Reactjs on juri.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
     <lastBuildDate>Fri, 11 Dec 2020 10:40:00 +0100</lastBuildDate>
     
-	<atom:link href="https://juristr.com/tags/reactjs/atom.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://juristr.com/categories/reactjs/atom.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,17 +20,6 @@
       <guid>https://juristr.com/blog/2020/12/scale-react-dev-with-nx/</guid>
       <description>&lt;div class=&#34;article-intro&#34;&gt;
     I&amp;rsquo;m happy to announce the release of my latest Egghead course on “Scale React development with Nx”. Let me briefly dive into what the course is about, why I targeted it to React.js developers and who should watch it!
-&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Using the Nx Dependency Graph in Custom Scripts</title>
-      <link>https://juristr.com/blog/2020/09/use-nx-dep-graph-in-custom-scripts/</link>
-      <pubDate>Wed, 30 Sep 2020 11:09:52 +0200</pubDate>
-      
-      <guid>https://juristr.com/blog/2020/09/use-nx-dep-graph-in-custom-scripts/</guid>
-      <description>&lt;div class=&#34;article-intro&#34;&gt;
-    One of the powerful pillars of the open-source &lt;a href=&#34;https://nx.dev&#34;&gt;Nx monorepo toolkit&lt;/a&gt; is its dependency graph. In this article, we&amp;rsquo;re going to look into how we can leverage it in our own scripts.
 &lt;/div&gt;</description>
     </item>
     
