@@ -30,7 +30,7 @@ comments: true
 
 ## Follow Nrwl
 
-- **[Nrwl Twitter](https://twitter.com/nrwl) -** join Nrwl on Twitter for company news and around its products such as Nx, Nx Cloud and more
+- **[Nrwl Twitter](https://twitter.com/nrwl_io) -** join Nrwl on Twitter for company news and around its products such as Nx, Nx Cloud and more
 - **[Nx Twitter](https://twitter.com/NxDevTools) -** follow Nx on Twitter to get the latest news
 - **[Nrwl Newsletter](https://go.nrwl.io/nrwl-news) -** subscribe to get the latest Nrwl & Nx news, links to community resources, office hours and other important info
 - **[Follow Nrwlians](https://nrwl.io/about-us)**  
