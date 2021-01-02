@@ -14,4 +14,14 @@ tags:
   - nx
 comments: true
 ---
-test
+{{<intro>}}
+  
+{{</intro>}}
+
+<!--more-->
+
+{{< postad >}}
+
+{{<toc>}}
+
+...
