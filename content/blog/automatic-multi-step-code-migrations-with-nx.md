@@ -11,6 +11,7 @@ categories:
 tags:
   - angular
   - tooling
+  - nx
 comments: true
 ---
 test
