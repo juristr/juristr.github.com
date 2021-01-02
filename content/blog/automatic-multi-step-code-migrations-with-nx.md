@@ -26,5 +26,15 @@ comments: true
 
 ...
 
+- breaking changes are necessary for pushing innovation
+- can be problematic for teams as fixing breaking changes doesn't deliver end-user value; no one pays for that, but still needed to delivery value in the long run => maintainance work
+- Updating software a no-brainer nowadays -> e.g. Chrome for instance has become evergreen
+- Angular team tries to change that by applying the evergreen concept to code
+
+## Automated code migrations with large scale teams
+
+- problem: you have to run multiple times, cannot just run once
+
+
 ## Nx Multi-step migration process
 
