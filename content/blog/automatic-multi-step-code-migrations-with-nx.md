@@ -15,7 +15,7 @@ tags:
 comments: true
 ---
 {{<intro>}}
-  
+  Besides the actual framework, the Angular team has introduced a lot of tooling around Angular with the goal of giving devs more time to focus on the actual code rather than fighting with tooling itself. One such feature is the ability to automatically upgrade the framework across breaking changes.
 {{</intro>}}
 
 <!--more-->
@@ -23,6 +23,10 @@ comments: true
 {{< postad >}}
 
 {{<toc>}}
+
+## Ng update
+
+
 
 ...
 
