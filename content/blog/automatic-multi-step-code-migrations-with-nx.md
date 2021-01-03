@@ -74,7 +74,7 @@ runs all the migration scripts to upgrade the codebase.
 
 ### Migrating multiple times
 
-The key of this migration process is that first, it **allows to inspect** the intermediate steps of the upgrade and allows to **adjust** if needed. And second the `migrations.json` allows to **run migrations multiple times**.
+The key of this migration process is that first, it **allows to inspect** the intermediate steps of the upgrade and allows to **adjust** if needed. And second, the `migrations.json` allows to **run migrations multiple times**.
 
 As such, the `migrations.json` can be checked into the repository. All open PRs and branches can rebase with the latest `main` branch and re-execute the `nx migrate --run-migrations=migrations.json` command to migrate their own branch as well. That way we avoid dead code or huge merge conflicts.
 
