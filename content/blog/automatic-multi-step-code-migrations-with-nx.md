@@ -45,5 +45,7 @@ While this works most of the time, it isn't ideal for large teams. If you work o
 
 ## Nx Multi-step migration process
 
+
+
 {{<egghead-lesson uid="/lessons/egghead-update-your-nx-workspace-with-nx-migrations" >}}
 
