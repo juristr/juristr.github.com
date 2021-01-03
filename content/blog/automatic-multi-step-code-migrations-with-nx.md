@@ -42,7 +42,6 @@ The [Angular Update site](https://update.angular.io) has useful instructions on 
 
 While this works most of the time, it isn't ideal for large teams. If you work on a large repository (maybe even in a monorepo), the moment you upgrade it to the next Angular version **you're not really done**. At any moment in time, there are dozens of PRs open, waiting to be merged. Those branches _didn't run the Angular migrations_ and you'll run into merge conflicts and even dead code or wrong configuration files.
 
-
 ## Nx Multi-step migration process
 
 [Nx](https://nx.dev) comes with its own migration command: `nx migrate`. While it is inspired by how the Angular CLI does the upgrade, it works slightly differently with the aim to make it easier to upgrade especially for large-scale environments.
