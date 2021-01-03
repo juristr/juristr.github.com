@@ -28,7 +28,7 @@ comments: true
 
 When the Angular team initially announced the concept of "evergreen framework", developers were kinda skeptical as well as worried. The plan: weekly bugfix releases, monthly features with larger, potentially breaking changes **every 6 months**.
 
-To be able to innovate, breaking changes are necessary at some point. However, that only works if the community is also able to keep up and stay close to the latest releases.
+To be able to innovate, breaking changes are necessary at some point. However, that only works if the community is able to keep up with the latest releases.
 
 ## Ng update
 
