@@ -60,7 +60,7 @@ At this point the upgrade process halts, allowing the developer to **inspect and
 
 If the changes look reasonable, the developer installs the packages with
 
-```bash
+```
 $ yarn install # or npm install
 ```
 
