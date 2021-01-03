@@ -79,7 +79,7 @@ The key of this migration process is that first, it **allows to inspect** the in
 
 As such, the `migrations.json` can be checked into the repository. All open PRs and branches can rebase with the latest `main` branch and re-execute the `nx migrate --run-migrations=migrations.json` command to migrate their own branch as well. That way we avoid dead code or huge merge conflicts.
 
-### See it in action 
+### Egghead lesson: Upgrading with Nx migrate
 
 {{<egghead-lesson uid="/lessons/egghead-update-your-nx-workspace-with-nx-migrations" >}}
 
