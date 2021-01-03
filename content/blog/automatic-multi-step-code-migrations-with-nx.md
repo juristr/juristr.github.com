@@ -28,23 +28,15 @@ comments: true
 
 When the Angular team initially announced the concept of "evergreen framework", developers were kinda skeptical as well as worried. The plan: weekly bugfix releases, monthly features with larger, potentially breaking changes **every 6 months**.
 
-To be able to innovate, breaking changes are necessary at some point. 
-
+To be able to innovate, breaking changes are necessary at some point. However, that only works if the community is also able to keep up and stay close to the latest releases.
 
 ## Ng update
 
-When the Angular team initially announced a breaking change every 6 months, the developer community 
+The solution to that is "ng update", a process that automatically updates not only the npm packages, but also runs migration scripts (Code schematics aka generators) to migrate the code and configuration files to the new version in the event of breaking changes.
 
-Innovation needs breaking changes at some point.
+The [Angular Update site](https://update.angular.io) has useful instructions on what to run in order to properly update to the next version of Angular.
 
-...
-
-- breaking changes are necessary for pushing innovation
-- can be problematic for teams as fixing breaking changes doesn't deliver end-user value; no one pays for that, but still needed to delivery value in the long run => maintainance work
-- Updating software a no-brainer nowadays -> e.g. Chrome for instance has become evergreen
-- Angular team tries to change that by applying the evergreen concept to code
-
-## Automated code migrations with large scale teams
+## Automated code migrations at scale
 
 - problem: you have to run multiple times, cannot just run once
 
