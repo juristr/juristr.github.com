@@ -59,5 +59,19 @@ $ nx migrate latest
 
 At this point the upgrade process halts, allowing the developer to **inspect and in case adjust** the changes made to the `package.json` as well as the content of the `migrations.json`.
 
+If the changes look reasonable, the developer installs the packages with
+
+```bash
+$ yarn install # or npm install
+```
+
+Finally, executing
+
+```
+$ nx migrate --run-migrations=migrations.json
+```
+
+runs all the migration scripts to upgrade the codebase.
+
 {{<egghead-lesson uid="/lessons/egghead-update-your-nx-workspace-with-nx-migrations" >}}
 
