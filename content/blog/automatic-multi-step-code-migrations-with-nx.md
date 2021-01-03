@@ -47,8 +47,17 @@ While this works most of the time, it isn't ideal for large teams. If you work o
 
 [Nx](https://nx.dev) comes with its own migration command: `nx migrate`. While it is inspired by how the Angular CLI does the upgrade, it works slightly differently with the aim to make it easier to upgrade especially for large-scale environments.
 
-Nx migrate 
+Nx migrate's goal is to automate the process up to a certain point and then to leave the rest to the developer, allowing them to influence and adjust the migration process. It works as follows.
 
+```
+$ nx migrate latest
+```
+
+1. triggers the analysis of the local workspace to determine the packages that need to be updated. 
+1. It then **updates the `package.json`** with the new version numbers, without however installing them.
+1. It generates a `migration.json` containing pointers to the scripts that need to be exected to migrate the code and configuration files to the next version.
+
+At this point the upgrade process halts, allowing the developer to **inspect and in case adjust** the changes made to the `package.json` as well as the content of the `migrations.json`.
 
 {{<egghead-lesson uid="/lessons/egghead-update-your-nx-workspace-with-nx-migrations" >}}
 
