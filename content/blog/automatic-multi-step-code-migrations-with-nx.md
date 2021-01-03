@@ -45,6 +45,9 @@ While this works most of the time, it isn't ideal for large teams. If you work o
 
 ## Nx Multi-step migration process
 
+[Nx](https://nx.dev) comes with its own migration command: `nx migrate`. While it is inspired by how the Angular CLI does the upgrade, it works slightly differently with the aim to make it easier to upgrade especially for large-scale environments.
+
+Nx migrate 
 
 
 {{<egghead-lesson uid="/lessons/egghead-update-your-nx-workspace-with-nx-migrations" >}}
