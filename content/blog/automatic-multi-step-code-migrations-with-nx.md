@@ -38,7 +38,9 @@ The [Angular Update site](https://update.angular.io) has useful instructions on 
 
 ## Automated code migrations at scale
 
-- problem: you have to run multiple times, cannot just run once
+`ng update` works fully automated, analyzing the workspace and then upgrading Angular and other Angular related packages.
+
+While this works most of the time, it isn't ideal for large teams. If you work on a large repository (maybe even in a monorepo), the moment you upgrade it to the next Angular version **you're not really done**. At any moment in time, there are dozens of PRs open, waiting to be merged. Those branches _didn't run the Angular migrations_ and you'll run into merge conflicts and even dead code or wrong configuration files.
 
 
 ## Nx Multi-step migration process
