@@ -26,7 +26,10 @@ comments: true
 
 ## Evergreen framework
 
-When the Angular team initially announced the concept of "evergreen framework", developers were kinda skeptical as well as worried. The plan: weekly bugfix releases, monthly features with larger, potentially breaking changes **every 6 month**.
+When the Angular team initially announced the concept of "evergreen framework", developers were kinda skeptical as well as worried. The plan: weekly bugfix releases, monthly features with larger, potentially breaking changes **every 6 months**.
+
+To be able to innovate, breaking changes are necessary at some point. 
+
 
 ## Ng update
 
