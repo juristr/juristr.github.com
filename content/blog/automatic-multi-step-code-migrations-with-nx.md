@@ -38,3 +38,5 @@ comments: true
 
 ## Nx Multi-step migration process
 
+{{<egghead-lesson uid="/lessons/egghead-update-your-nx-workspace-with-nx-migrations" >}}
+
