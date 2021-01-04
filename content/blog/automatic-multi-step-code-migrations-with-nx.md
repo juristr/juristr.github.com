@@ -46,7 +46,7 @@ Thus, at any moment in time, there are potentially dozens of PRs open, waiting t
 
 ## Nx Multi-step migration process
 
-To solve the above issue, [Nx](https://nx.dev) comes with its own, multi-step migration command: `nx migrate`. While it is inspired by how the Angular CLI does the upgrade, it works slightly differently with the aim to make it easier to upgrade especially for large-scale environments.
+To solve the above issue, [Nx](https://nx.dev) comes with its own, multi-step migration command: `nx migrate` ([check out the docs](https://nx.dev/latest/cli/migrate). While it is inspired by how the Angular CLI does the upgrade, it works slightly differently with the aim to make it easier to upgrade especially for large-scale environments.
 
 Nx migrate's goal is to automate the process up to a certain point and then to leave the rest to the developer, allowing them to take control over the migration process. It works as follows:
 
