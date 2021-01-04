@@ -82,7 +82,7 @@ As such, the `migrations.json` can be checked into the repository. All open PRs 
 
 ### Egghead lesson: Upgrading with Nx migrate
 
-{{<egghead-lesson uid="/lessons/egghead-update-your-nx-workspace-with-nx-migrations" >}}
+{{<egghead-lesson uid="lessons/egghead-update-your-nx-workspace-with-nx-migrations" >}}
 
 - [Nx migrate docs](https://nx.dev/latest/cli/migrate)
 
