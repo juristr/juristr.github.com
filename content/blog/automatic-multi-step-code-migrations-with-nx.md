@@ -40,16 +40,15 @@ The [Angular Update site](https://update.angular.io) has useful instructions on 
 
 `ng update` works fully automated, analyzing the workspace and then upgrading Angular and other Angular related packages in one go.
 
-While this works most of the time, it isn't ideal for large teams. If you work on a large repository (maybe even in a monorepo), the moment you upgrade it to the next Angular version **you're not really done**. At any moment in time, there are dozens of PRs open, waiting to be merged. Stopping the development during the migration isn't feasible in a real-world project.
+While this works most of the time, it isn't ideal for large teams. If you work on a large repository (maybe even in a monorepo), the moment you upgrade to the next Angular version **you're not really done**. The development is still ongoing as it isn't really feasible to stop development during the upgrade period. Instead, the migration needs to happen alongside development.
 
-
-
+Thus, at any moment in time, there are potentially dozens of PRs open, waiting to be merged. Those branches haven't executed the Angular migration and might therefore be behind, leading to stale files and outdated config files, not to speak about the merge conflicts when we try to merge back into the main branch.
 
 ## Nx Multi-step migration process
 
-[Nx](https://nx.dev) comes with its own migration command: `nx migrate`. While it is inspired by how the Angular CLI does the upgrade, it works slightly differently with the aim to make it easier to upgrade especially for large-scale environments.
+To solve the above issue, [Nx](https://nx.dev) comes with its own, multi-step migration command: `nx migrate`. While it is inspired by how the Angular CLI does the upgrade, it works slightly differently with the aim to make it easier to upgrade especially for large-scale environments.
 
-Nx migrate's goal is to automate the process up to a certain point and then to leave the rest to the developer, allowing them to influence and adjust the migration process. It works as follows.
+Nx migrate's goal is to automate the process up to a certain point and then to leave the rest to the developer, allowing them to take control over the migration process. It works as follows:
 
 ```
 $ nx migrate latest
