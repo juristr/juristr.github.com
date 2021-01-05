@@ -82,55 +82,6 @@ The key of this migration process is that first, it **allows to inspect** the in
 {
   "migrations": [
     {
-      "version": "10.3.0-beta.0",
-      "description": "Migrate to the new ESLint builder and ESLint config style",
-      "factory": "./src/migrations/update-10-3-0/update-eslint-builder-and-config",
-      "package": "@nrwl/linter",
-      "name": "update-eslint-builder-and-config"
-    },
-    {
-      "version": "10.3.0-beta.2",
-      "description": "Add explicit .json file extension to .eslintrc files, not using an extension is deprecated",
-      "factory": "./src/migrations/update-10-3-0/add-json-ext-to-eslintrc",
-      "package": "@nrwl/linter",
-      "name": "add-json-ext-to-eslintrc"
-    },
-    {
-      "version": "10.3.0-beta.3",
-      "description": "Update implicitDependencies within nx.json to include root .eslintrc.json",
-      "factory": "./src/migrations/update-10-3-0/add-root-eslintrc-json-to-workspace-implicit-deps",
-      "package": "@nrwl/linter",
-      "name": "add-root-eslintrc-json-to-workspace-implicit-deps"
-    },
-    {
-      "version": "10.3.1-beta.1",
-      "description": "Revert any node_modules lintFilesPatterns that were accidentally included by update-eslint-builder-and-config",
-      "factory": "./src/migrations/update-10-3-1/revert-node-modules-files-in-eslint-builder-options",
-      "package": "@nrwl/linter",
-      "name": "revert-node-modules-files-in-eslint-builder-options"
-    },
-    {
-      "version": "10.4.0-beta.0",
-      "description": "Update ESLint config files to use preset configs which eslint-plugin-nx exports",
-      "factory": "./src/migrations/update-10-4-0/update-eslint-configs-to-use-nx-presets",
-      "package": "@nrwl/linter",
-      "name": "update-eslint-configs-to-use-nx-presets"
-    },
-    {
-      "version": "10.4.0-beta.1",
-      "description": "Update root ESLint config to use overrides",
-      "factory": "./src/migrations/update-10-4-0/update-root-eslint-config-to-use-overrides",
-      "package": "@nrwl/linter",
-      "name": "update-root-eslint-config-to-use-overrides"
-    },
-    {
-      "version": "10.4.0-beta.1",
-      "description": "Update libraries",
-      "factory": "./src/migrations/update-10-4-0/update-10-4-0",
-      "package": "@nrwl/react",
-      "name": "update-10.4.0"
-    },
-    {
       "version": "11.0.0-beta.0",
       "description": "Rename emotion packages to match new 11.0.0 package names",
       "factory": "./src/migrations/update-11-0-0/rename-emotion-packages-11-0-0",
