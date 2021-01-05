@@ -60,142 +60,27 @@ $ nx migrate latest
 
 At this point the upgrade process halts, allowing the developer to **inspect and in case adjust** the changes made to the `package.json` as well as the content of the `migrations.json`.
 
+If the changes look reasonable, the developer installs the packages with
+
+```
+$ yarn install # or npm install
+```
+
+Finally, executing
+
+```
+$ nx migrate --run-migrations=migrations.json
+```
+
+runs all the migration scripts to upgrade the codebase.
+
+### Migrating multiple times
+
+The key of this migration process is that first, it **allows to inspect** the intermediate steps of the upgrade and allows to **adjust** if needed. And second, the `migrations.json` allows to **run migrations multiple times**. Here's the content of a potential `migrations.json` file.
+
 ```json
 {
   "migrations": [
-    {
-      "version": "10.1.0-beta.0",
-      "description": "Migrate .eslintrc files to use tsconfig with a wildcard",
-      "factory": "./src/migrations/update-10-1-0/migrate-eslintrc-tsconfig-wildcard",
-      "package": "@nrwl/workspace",
-      "name": "migrate-eslintrc-tsconfig-wildcard"
-    },
-    {
-      "version": "10.3.0-beta.0",
-      "description": "Add @nrwl/cli as dependency",
-      "factory": "./src/migrations/update-10-3-0/add-cli-dependency",
-      "package": "@nrwl/workspace",
-      "name": "add-cli-dependency"
-    },
-    {
-      "version": "10.3.0-beta.0",
-      "description": "Update typescript to v4",
-      "factory": "./src/migrations/update-10-3-0/update-typescript",
-      "package": "@nrwl/workspace",
-      "name": "update-10-3-0"
-    },
-    {
-      "version": "10.3.0-beta.1",
-      "description": "Adds .vscode/extensions.json to a workspace",
-      "factory": "./src/migrations/update-10-3-0/add-vscode-extensions",
-      "package": "@nrwl/workspace",
-      "name": "add-vscode-extensions"
-    },
-    {
-      "version": "10.3.0-beta.0",
-      "description": "Adds `buildableProjectDepsInPackageJsonType` for web and angular package builders",
-      "factory": "./src/migrations/update-10-3-0/add-buildable-project-deps-in-package-json-type",
-      "package": "@nrwl/workspace",
-      "name": "add-buildable-project-deps-in-package-json-type"
-    },
-    {
-      "version": "10.4.0-beta.5",
-      "description": "Add an explicit dependency on @nrwl/tao",
-      "factory": "./src/migrations/update-10-4-0/add-explicit-dep-on-tao",
-      "package": "@nrwl/workspace",
-      "name": "add-explicit-dep-on-tao"
-    },
-    {
-      "version": "10.4.5",
-      "description": "Update the 'update' npm script to invoke nx migrate",
-      "factory": "./src/migrations/update-10-4-0/update-script-to-invoke-nx-migrate",
-      "package": "@nrwl/workspace",
-      "name": "update-script-to-invoke-nx-migrate"
-    },
-    {
-      "version": "11.0.0-beta.3",
-      "description": "Update the decoration script when using Angular CLI",
-      "factory": "./src/migrations/update-11-0-0/update-decorate-angular-cli",
-      "package": "@nrwl/workspace",
-      "name": "update-decorate-angular-cli"
-    },
-    {
-      "version": "11.0.0-beta.3",
-      "description": "Update the @types/node package",
-      "factory": "./src/migrations/update-11-0-0/update-node-types",
-      "package": "@nrwl/workspace",
-      "name": "update-node-types"
-    },
-    {
-      "version": "11.0.0-beta.3",
-      "description": "Rename tools/schematics into tools/generators",
-      "factory": "./src/migrations/update-11-0-0/rename-workspace-schematics",
-      "package": "@nrwl/workspace",
-      "name": "rename-workspace-schematics"
-    },
-    {
-      "version": "11.0.0-beta.15",
-      "description": "Adds `outputs` based on builders",
-      "factory": "./src/migrations/update-11-0-0/add-outputs-in-workspace",
-      "package": "@nrwl/workspace",
-      "name": "add-outputs-in-workspace"
-    },
-    {
-      "version": "11.0.0",
-      "description": "Check that the right update command is used",
-      "factory": "./src/migrations/update-11-0-0/update-command-check",
-      "package": "@nrwl/workspace",
-      "name": "update-command-check"
-    },
-    {
-      "version": "11.0.2",
-      "description": "Rename the workspace-schematic script into workspace-generator script",
-      "factory": "./src/migrations/update-11-0-0/rename-workspace-schematic-script",
-      "package": "@nrwl/workspace",
-      "name": "rename-workspace-schematic-script"
-    },
-    {
-      "version": "10.1.0-beta.4",
-      "description": "Update jest to v26",
-      "factory": "./src/migrations/update-10-1-0/update-10-1-0",
-      "package": "@nrwl/jest",
-      "name": "update-10.1.0"
-    },
-    {
-      "version": "10.2.0",
-      "description": "Remove deprecated jest builder options",
-      "factory": "./src/migrations/update-10-2-0/update-10-2-0",
-      "package": "@nrwl/jest",
-      "name": "update-10.2.0"
-    },
-    {
-      "version": "10.3.0-beta.1",
-      "description": "Adds all jest projects into the root jest config",
-      "factory": "./src/migrations/update-10-3-0/update-projects-property",
-      "package": "@nrwl/jest",
-      "name": "update-projects-property"
-    },
-    {
-      "version": "10.3.1-beta.1",
-      "description": "Fix ts-jest migration",
-      "factory": "./src/migrations/update-10-3-0/update-ts-jest",
-      "package": "@nrwl/jest",
-      "name": "update-ts-jest"
-    },
-    {
-      "version": "10.3.0-beta.1",
-      "description": "Adds a jest extension to the recommended extensions for vscode",
-      "factory": "./src/migrations/update-10-3-0/add-jest-extension",
-      "package": "@nrwl/jest",
-      "name": "add-jest-extension"
-    },
-    {
-      "version": "10.3.0-beta.1",
-      "description": "Update @typescript-eslint to v4.3",
-      "factory": "./src/migrations/update-10-3-0/update-10-3-0",
-      "package": "@nrwl/linter",
-      "name": "update-10.3.0"
-    },
     {
       "version": "10.3.0-beta.0",
       "description": "Migrate to the new ESLint builder and ESLint config style",
@@ -283,24 +168,6 @@ At this point the upgrade process halts, allowing the developer to **inspect and
   ]
 }
 ```
-
-If the changes look reasonable, the developer installs the packages with
-
-```
-$ yarn install # or npm install
-```
-
-Finally, executing
-
-```
-$ nx migrate --run-migrations=migrations.json
-```
-
-runs all the migration scripts to upgrade the codebase.
-
-### Migrating multiple times
-
-The key of this migration process is that first, it **allows to inspect** the intermediate steps of the upgrade and allows to **adjust** if needed. And second, the `migrations.json` allows to **run migrations multiple times**.
 
 As such, the `migrations.json` can be checked into the repository. All open PRs and branches can rebase with the latest `main` branch and re-execute the `nx migrate --run-migrations=migrations.json` command to migrate their own branch as well. That way we avoid dead code or huge merge conflicts.
 
