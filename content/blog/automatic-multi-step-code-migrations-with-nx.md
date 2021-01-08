@@ -26,16 +26,13 @@ comments: true
 
 ## Evergreen framework
 
-This idea came with the dream of the "evergreen framework". Very much like you never
+This idea came with the dream of the "evergreen framework" where the majority of people would always have the latest version of the framework installed. This obviously allows to innovate faster. For realizing such concept however, upgrading needs to be easy and straightforward, otherwise the developer community won't be able to keep pace and fragmentation would start.
 
-
-When the Angular team initially announced the concept of "evergreen framework", developers were kinda skeptical as well as worried. The plan: weekly bugfix releases, monthly features with larger, potentially breaking changes **every 6 months**.
-
-To be able to innovate, breaking changes are necessary at some point. However, that only works if the community is able to keep up with the latest releases.
+Upgrading however is rarely easy, especially when breaking changes are involved. And sooner or later those will be required.
 
 ## Ng update
 
-The solution to that is "ng update", a process that automatically updates not only the npm packages, but also runs migration scripts (Code schematics aka generators) to migrate the code and configuration files to the new version in the event of breaking changes.
+As a solution to that, the Angular team released "ng update", a process that automatically updates not only the npm packages, but also runs migration scripts (Code schematics aka generators) to migrate the code and configuration files to the new version in the event of breaking changes.
 
 The [Angular Update site](https://update.angular.io) has useful instructions on what to run in order to properly update to the next version of Angular.
 
