@@ -15,7 +15,7 @@ tags:
 comments: true
 ---
 {{<intro>}}
-  Besides the actual framework, the Angular team has introduced a lot of tooling around Angular with the goal of giving devs more time to focus on the actual code rather than fighting with tooling itself. One such feature is the ability to automatically upgrade the framework across breaking changes.
+  Apart from the framework itself, one outcome from Google's Angular team is for sure the tooling. One important tooling feature is the ability to automatically upgrade Angular codebases across breaking changes. Let's see how that works and why it is important.
 {{</intro>}}
 
 <!--more-->
@@ -25,6 +25,9 @@ comments: true
 {{<toc>}}
 
 ## Evergreen framework
+
+This idea came with the dream of the "evergreen framework". Very much like you never
+
 
 When the Angular team initially announced the concept of "evergreen framework", developers were kinda skeptical as well as worried. The plan: weekly bugfix releases, monthly features with larger, potentially breaking changes **every 6 months**.
 
