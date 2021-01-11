@@ -6,6 +6,7 @@ lead: How the Angular CLI changed the way we think about breaking changes & how
   Nx is different with its multi-step migration command
 url: /blog/2020/11/multi-step-automatic-code-migrations
 draft: false
+image: /blog/assets/imgs/update-background.jpg
 categories:
   - angular
 tags:
