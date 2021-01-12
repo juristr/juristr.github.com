@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Automatic Multi-Step Code Migrations with Nx | juri.dev</title>
+	
+	<meta name="description" content="How the Angular CLI changed the way we think about breaking changes &amp; how Nx is different with its multi-step migration command">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:creator" content="@juristr" />
+	<meta name="twitter:title" content="Automatic Multi-Step Code Migrations with Nx" />
+	
+	<meta name="twitter:description" content="How the Angular CLI changed the way we think about breaking changes &amp; how Nx is different with its multi-step migration command" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/update-background.jpg" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Automatic Multi-Step Code Migrations with Nx" />
+	
+	<meta property="og:description" content="How the Angular CLI changed the way we think about breaking changes &amp; how Nx is different with its multi-step migration command" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/update-background.jpg" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2020/11/multi-step-automatic-code-migrations" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://developers.google.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.dev</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2020%2f11%2fmulti-step-automatic-code-migrations%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2020%2f11%2fmulti-step-automatic-code-migrations%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops. Juri is also a recognized Google Developer Expert in Web Technologies</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Automatic Multi-Step Code Migrations with Nx</h1>
+                
+                <h2 class="article-subtitle">How the Angular CLI changed the way we think about breaking changes &amp; how Nx is different with its multi-step migration command</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Jan 8, 2021
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">4 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers?af=fj2vsx" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                <div class="article-intro">
+    Apart from the framework itself, one outcome from Google&rsquo;s Angular team is for sure the tooling. One important tooling feature is the ability to automatically upgrade Angular codebases across breaking changes. Let&rsquo;s see how that works and why it is important.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#evergreen-framework">Evergreen framework</a></li>
+<li><a href="#ng-update">Ng update</a></li>
+<li><a href="#automated-code-migrations-at-scale">Automated code migrations at scale</a></li>
+<li><a href="#nx-multi-step-migration-process">Nx Multi-step migration process</a>
+<ul>
+<li><a href="#migrating-multiple-times">Migrating multiple times</a></li>
+<li><a href="#egghead-lesson-upgrading-with-nx-migrate">Egghead lesson: Upgrading with Nx migrate</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+
+<h2 id="evergreen-framework">Evergreen framework</h2>
+
+<p>This idea came with the dream of the &ldquo;evergreen framework&rdquo; where the majority of people would always have the latest version of the framework installed. This obviously allows to innovate faster. For realizing such concept however, upgrading needs to be easy and straightforward, otherwise the developer community won&rsquo;t be able to keep pace and fragmentation would start.</p>
+
+<p>Upgrading however is rarely easy, especially when breaking changes are involved. And sooner or later those will be required.</p>
+
+<h2 id="ng-update">Ng update</h2>
+
+<p>As a solution to that, the Angular team released &ldquo;ng update&rdquo;, a process that automatically updates not only the npm packages, but also runs migration scripts (Code schematics aka generators) to migrate the code and configuration files to the new version in the event of breaking changes.</p>
+
+<p>The <a href="https://update.angular.io">Angular Update site</a> has useful instructions on what to run in order to properly update to the next version of Angular.</p>
+
+<h2 id="automated-code-migrations-at-scale">Automated code migrations at scale</h2>
+
+<p><code>ng update</code> works fully automated, analyzing the workspace and then upgrading Angular and other Angular related packages in one go.</p>
+
+<p>While this works most of the time, it isn&rsquo;t ideal for large teams. If you work on a large repository (maybe even in a monorepo), the moment you upgrade to the next Angular version <strong>you&rsquo;re not really done</strong>. The development is still ongoing as it isn&rsquo;t really feasible to stop development during the upgrade period. Instead, the migration needs to happen alongside development.</p>
+
+<p>Thus, at any moment in time, there are potentially dozens of PRs open, waiting to be merged. Those branches haven&rsquo;t executed the Angular migration and might therefore be behind, leading to stale files and outdated config files, not to speak about the merge conflicts when we try to merge back into the main branch.</p>
+
+<h2 id="nx-multi-step-migration-process">Nx Multi-step migration process</h2>
+
+<p>To solve the above issue, <a href="https://nx.dev">Nx</a> comes with its own, multi-step migration command: <code>nx migrate</code> (<a href="https://nx.dev/latest/cli/migrate">check out the docs</a>). While it is inspired by how the Angular CLI does the upgrade, it works slightly differently with the aim to make it easier to upgrade especially for large-scale environments.</p>
+
+<p>Nx migrate&rsquo;s goal is to automate the process up to a certain point and then to leave the rest to the developer, allowing them to take control over the migration process. It works as follows:</p>
+
+<pre><code>$ nx migrate latest
+</code></pre>
+
+<ol>
+<li>triggers the analysis of the local workspace to determine the packages that need to be updated.</li>
+<li>It then <strong>updates the <code>package.json</code></strong> with the new version numbers, without however installing them.</li>
+<li>It generates a <code>migration.json</code> containing pointers to the scripts that need to be exected to migrate the code and configuration files to the next version.</li>
+</ol>
+
+<p>At this point the upgrade process halts, allowing the developer to <strong>inspect and in case adjust</strong> the changes made to the <code>package.json</code> as well as the content of the <code>migrations.json</code>.</p>
+
+<p>If the changes look reasonable, the developer installs the packages with</p>
+
+<pre><code>$ yarn install # or npm install
+</code></pre>
+
+<p>Finally, executing</p>
+
+<pre><code>$ nx migrate --run-migrations=migrations.json
+</code></pre>
+
+<p>runs all the migration scripts to upgrade the codebase.</p>
+
+<h3 id="migrating-multiple-times">Migrating multiple times</h3>
+
+<p>The key of this migration process is that first, it <strong>allows to inspect</strong> the intermediate steps of the upgrade and allows to <strong>adjust</strong> if needed. And second, the <code>migrations.json</code> allows to <strong>run migrations multiple times</strong>. Here&rsquo;s the content of a potential <code>migrations.json</code> file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;migrations&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;11.0.0-beta.0&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Rename emotion packages to match new 11.0.0 package names&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;factory&#34;</span><span class="p">:</span> <span class="s2">&#34;./src/migrations/update-11-0-0/rename-emotion-packages-11-0-0&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;package&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/react&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;rename-emotion-packages-11.0.0&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;11.0.0-beta.0&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Update libraries&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;factory&#34;</span><span class="p">:</span> <span class="s2">&#34;./src/migrations/update-11-0-0/update-11-0-0&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;package&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/react&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;update-11.0.0&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;10.2.1-beta.1&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Adjusts the tsconfig mapping&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;factory&#34;</span><span class="p">:</span> <span class="s2">&#34;./src/migrations/update-10-2-1/update-10-2-1&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;package&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/storybook&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;update-10.2.1&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;10.3.1-beta.1&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Add missing storybook config to lint target&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;factory&#34;</span><span class="p">:</span> <span class="s2">&#34;./src/migrations/update-10-3-0/update-10-3-0&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;package&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/storybook&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;update-10.3.1&#34;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;11.0.12&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Update storybook if installed and above 6&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;factory&#34;</span><span class="p">:</span> <span class="s2">&#34;./src/migrations/update-11-0-12/update-storybook&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;package&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/storybook&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;update-11-0-12&#34;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span></code></pre></div>
+<p>As such, the <code>migrations.json</code> can be checked into the repository. All open PRs and branches can rebase with the latest <code>main</code> branch and re-execute the <code>nx migrate --run-migrations=migrations.json</code> command to migrate their own branch as well. That way we avoid dead code or huge merge conflicts.</p>
+
+<h3 id="egghead-lesson-upgrading-with-nx-migrate">Egghead lesson: Upgrading with Nx migrate</h3>
+
+<div class="egghead-video-embed">
+    <iframe src="https://egghead.io/lessons/egghead-update-your-nx-workspace-with-nx-migrations/embed?af=fj2vsx" width="100%" height="500px" loading="lazy"> </iframe>
+    <a href="https://egghead.io/lessons/egghead-update-your-nx-workspace-with-nx-migrations?af=fj2vsx" class="external-link" data-client="eggheadio" data-uid="lessons/egghead-update-your-nx-workspace-with-nx-migrations">View
+        on
+        Egghead.io</a>
+</div>
+
+<p>Other resources:</p>
+
+<ul>
+<li><a href="https://nx.dev/latest/cli/migrate">Nx migrate docs</a></li>
+</ul>
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/angular">angular</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/tooling">tooling</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/nx">nx</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2020/11/get-started-with-nx">I&#39;m new to Nx. Where do I get started?</a>
+        </h2>
+        <h4 class="card-text">
+            Best resources to get up to speed with Nx
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Nov 11, 2020</span><span class="dot"></span><span
+                                    class="post-read">2 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            <div class="svgicon" style="width: 140px">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div><div class="svgicon clean_code"></div>
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2020/09/use-nx-dep-graph-in-custom-scripts">Using the Nx Dependency Graph in Custom Scripts</a>
+        </h2>
+        <h4 class="card-text">
+            Unleash the power of the Nx dep-graph
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Sep 30, 2020</span><span class="dot"></span><span
+                                    class="post-read">4 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            <div class="svgicon" style="width: 140px">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-cog"><path class="primary" d="M6.8 3.45c.87-.52 1.82-.92 2.83-1.17a2.5 2.5 0 0 0 4.74 0c1.01.25 1.96.65 2.82 1.17a2.5 2.5 0 0 0 3.36 3.36c.52.86.92 1.8 1.17 2.82a2.5 2.5 0 0 0 0 4.74c-.25 1.01-.65 1.96-1.17 2.82a2.5 2.5 0 0 0-3.36 3.36c-.86.52-1.8.92-2.82 1.17a2.5 2.5 0 0 0-4.74 0c-1.01-.25-1.96-.65-2.82-1.17a2.5 2.5 0 0 0-3.36-3.36 9.94 9.94 0 0 1-1.17-2.82 2.5 2.5 0 0 0 0-4.74c.25-1.01.65-1.96 1.17-2.82a2.5 2.5 0 0 0 3.36-3.36zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path><circle cx="12" cy="12" r="2" class="secondary"></circle></svg>
+    
+
+    
+
+    
+
+</div><div class="svgicon clean_code"></div>
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2020/05/nx-libs-with-assets">Create Nx Libs with Assets</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to create Nx libraries don&#39;t only ship code but also assets
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">May 21, 2020</span><span class="dot"></span><span
+                                    class="post-read">2 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/angular.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js" defer></script>
+    
+
+    
+    
+    
+    <script>
+!function(t,e,a,c,x){var s='q';t[s]={publication_id:c,tags:x};
+var s=e.createElement(a),r=e.getElementsByTagName(a)[0];s.async=1,s.src=
+'https://insights.quiet.ly/app/analytics.min.js',r.parentNode.insertBefore(s,r)}
+(window,document,'script','87bcee90-0c51-4a68-a60b-e95df730d1ca','[]');
+</script>
+    
+ <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

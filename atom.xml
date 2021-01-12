@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Fri, 11 Dec 2020 10:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 08 Jan 2021 10:00:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Automatic Multi-Step Code Migrations with Nx</title>
+      <link>https://juristr.com/blog/2020/11/multi-step-automatic-code-migrations/</link>
+      <pubDate>Fri, 08 Jan 2021 10:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2020/11/multi-step-automatic-code-migrations/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Apart from the framework itself, one outcome from Google&amp;rsquo;s Angular team is for sure the tooling. One important tooling feature is the ability to automatically upgrade Angular codebases across breaking changes. Let&amp;rsquo;s see how that works and why it is important.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Scale React Development with Nx</title>
