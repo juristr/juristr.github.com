@@ -9,10 +9,12 @@ draft: false
 comments: true
 ---
 {{<intro>}}
-  In this article, we're going to have a look at how we can improve our application architecture by splitting it up into a more modular structure. 
+  Since I get this question often, why not write it down! What we're going to look at in this article is lazy loading in Angular, but in specific about the "common chunk" and the "commonChunk" option in the Angular builder configuration.
 {{</intro>}}
 
 <!--more-->
 
 {{< postad >}}
+
+
 
