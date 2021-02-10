@@ -16,5 +16,28 @@ comments: true
 
 {{< postad >}}
 
+## Lazy loading in Angular
 
+Simplest way is to use the Angular Router's built-in way
+
+```typescript
+const routes: Routes = [
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./products/products.module').then((m) => m.ProductsModule),
+  },
+  {
+    path: 'orders',
+    loadChildren: () =>
+      import('./orders/orders.module').then((m) => m.OrdersModule),
+  },
+];
+```
+
+Rather than referencing the modules, an `import` statement is being used, based on which Webpack (which is currently used as the Angular builder and bundler underneath) knows how to split the JS files s.t. they can be loaded on a as-needed basis. In fact if you serve or compile your application, you should see these code-splitted JS files (chunks) being printed out on the console:
+
+![](/blog/assets/imgs/ng-lazy-chunks.png)
+
+## Common chunk
 
