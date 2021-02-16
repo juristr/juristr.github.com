@@ -47,14 +47,15 @@ Here's a free Egghead video that demonstrates that
 
 Here are some articles and talks I gave about other ways to lazy load things in Angular:
 
-- [Talk: Lazy Loading on Steroids with Angular Elements](/blog/2019/12/jsbe-lazy-loading-ngelements/)
-- [Manually Lazy Load an Angular Module with ViewEngine and Ivy](/blog/2019/10/lazyload-module-ivy-viewengine/)
-- [Lazy Loading with Angular Elements and ngx-lazy-el](/blog/2019/11/lazy-loading-angular-ngx-lazy-el/)
-- [Angular Performance Series: list of articles about perf optimizations including lazy loading, preloading etc..](/blog/2019/08/ngperf-route-level-code-splitting/)
+* [Talk: Lazy Loading on Steroids with Angular Elements](/blog/2019/12/jsbe-lazy-loading-ngelements/)
+* [Manually Lazy Load an Angular Module with ViewEngine and Ivy](/blog/2019/10/lazyload-module-ivy-viewengine/)
+* [Lazy Loading with Angular Elements and ngx-lazy-el](/blog/2019/11/lazy-loading-angular-ngx-lazy-el/)
+* [Angular Performance Series: list of articles about perf optimizations including lazy loading, preloading etc..](/blog/2019/08/ngperf-route-level-code-splitting/)
 
 ## Common chunk
 
 What is the "common.js" chunk? As we discussed when using lazy loading we get these different bundles being created automatically, in our simple example above it is the `products-products-module.js` and `orders-orders.module.js`.
 
+However, as soon as you have some shared piece, some shared module with a couple of components that both, the products and orders lazy loaded modules use, you suddenly get this
 
-
+![](/blog/assets/imgs/ng-lazy-chunks-common.png)
