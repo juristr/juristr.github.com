@@ -59,3 +59,5 @@ What is the "common.js" chunk? As we discussed when using lazy loading we get th
 However, as soon as you have some shared piece, some shared module with a couple of components that both, the products and orders lazy loaded modules use, you suddenly get this
 
 ![](/blog/assets/imgs/ng-lazy-chunks-common.png)
+
+What happens here is that the Angular CLI by default, groups all shared code (used in at least 2 locations) into a `common.js` chunk. This JS file **is loaded at startup**.
