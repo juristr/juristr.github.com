@@ -41,7 +41,16 @@ Rather than referencing the modules, an `import` statement is being used, based 
 
 Here's a free Egghead video that demonstrates that
 
-{{<egghead uid="lessons/angular-apply-route-level-code-splitting-and-lazy-loading-with-the-angular-cli" >}}
+{{<egghead-lesson uid="lessons/angular-apply-route-level-code-splitting-and-lazy-loading-with-the-angular-cli" >}}
+
+### Other ways to lazy load?
+
+Here are some articles and talks I gave about other ways to lazy load things in Angular:
+
+- [Talk: Lazy Loading on Steroids with Angular Elements](/blog/2019/12/jsbe-lazy-loading-ngelements/)
+- [Manually Lazy Load an Angular Module with ViewEngine and Ivy](/blog/2019/10/lazyload-module-ivy-viewengine/)
+- [Lazy Loading with Angular Elements and ngx-lazy-el](/blog/2019/11/lazy-loading-angular-ngx-lazy-el/)
+- [Angular Performance Series: list of articles about perf optimizations including lazy loading, preloading etc..](/blog/2019/08/ngperf-route-level-code-splitting/)
 
 ## Common chunk
 
