@@ -84,4 +84,4 @@ But you have the option. If in your specific scenario you're better off duplicat
 }
 ```
 
-**Be careful though, this means that shared code is duplicated throughout the lazy-loaded JS files. Hence choose wisely based on your situation**
+**Be careful though,** this means that shared code is duplicated throughout the lazy-loaded JS files. Hence choose wisely based on your situation.
