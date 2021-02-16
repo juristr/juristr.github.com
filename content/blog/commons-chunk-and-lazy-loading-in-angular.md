@@ -18,7 +18,7 @@ comments: true
 
 ## Lazy loading in Angular
 
-Simplest way is to use the Angular Router's built-in way
+The simplest do apply lazy loading is to use the Angular Router's built-in functionality.
 
 ```typescript
 const routes: Routes = [
@@ -35,9 +35,13 @@ const routes: Routes = [
 ];
 ```
 
-Rather than referencing the modules, an `import` statement is being used, based on which Webpack (which is currently used as the Angular builder and bundler underneath) knows how to split the JS files s.t. they can be loaded on a as-needed basis. In fact if you serve or compile your application, you should see these code-splitted JS files (chunks) being printed out on the console:
+Rather than referencing the modules, an `import` statement is being used, based on which, Webpack (which is currently used as the Angular builder and bundler underneath) knows how to split the JS files s.t. they can be loaded on an as-needed basis. In fact, if you serve or compile your application, you should see these code-splitted JS files (chunks) being printed out on the console:
 
 ![](/blog/assets/imgs/ng-lazy-chunks.png)
+
+Here's a free Egghead video that demonstrates that
+
+{{<egghead uid="lessons/angular-apply-route-level-code-splitting-and-lazy-loading-with-the-angular-cli" >}}
 
 ## Common chunk
 
