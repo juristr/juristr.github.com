@@ -60,4 +60,26 @@ However, as soon as you have some shared piece, some shared module with a couple
 
 ![](/blog/assets/imgs/ng-lazy-chunks-common.png)
 
-What happens here is that the Angular CLI by default, groups all shared code (used in at least tw locations) into a `common.js` chunk. This JS file **is loaded at startup**.
+What happens here is that the Angular CLI by default, groups all shared code (used in at least two locations) into a `common.js` chunk. This is usually a good idea in that shared code is de-duplicated. However, keep in mind that this JS file **is loaded at startup**. Hence it might influence your app's startup speed.
+
+But you have the option. If in your specific scenario you're better off duplicating some code, you can set `commonChunk` to `false` in the `angular.json` config to avoid generating the `common.js` file.
+
+```json
+{
+  "projects": {
+    "codesplitting": {
+      "projectType": "application",
+      ...
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            ...
+            "commonChunk": true
+          }
+        }
+      }
+    }
+  }
+}
+```
