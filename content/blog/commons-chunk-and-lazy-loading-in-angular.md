@@ -54,3 +54,7 @@ Here are some articles and talks I gave about other ways to lazy load things in 
 
 ## Common chunk
 
+What is the "common.js" chunk? As we discussed when using lazy loading we get these different bundles being created automatically, in our simple example above it is the `products-products-module.js` and `orders-orders.module.js`.
+
+
+
