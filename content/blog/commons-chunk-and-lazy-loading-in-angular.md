@@ -1,7 +1,7 @@
 ---
 type: post
 title: Common Chunk and Lazy Loading in Angular
-date: 2021-02-10T21:54:00+01:00
+date: 2021-02-17T15:00:00+01:00
 lead: What is the common chunk, why is it there and how can it be disabled with
   the Angular CLI
 url: /blog/2021/02/common-chunk-lazy-loading-angular-cli
