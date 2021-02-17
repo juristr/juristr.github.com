@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Fri, 08 Jan 2021 10:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 17 Feb 2021 15:00:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/tags/angular/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Common Chunk and Lazy Loading in Angular</title>
+      <link>https://juristr.com/blog/2021/02/common-chunk-lazy-loading-angular-cli/</link>
+      <pubDate>Wed, 17 Feb 2021 15:00:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/02/common-chunk-lazy-loading-angular-cli/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Since I get this question often, why not write it down! What we&amp;rsquo;re going to look at in this article is lazy loading in Angular, but in specific about the &amp;ldquo;common chunk&amp;rdquo; and the &amp;ldquo;commonChunk&amp;rdquo; option in the Angular builder configuration.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Automatic Multi-Step Code Migrations with Nx</title>
