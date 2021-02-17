@@ -7,6 +7,11 @@ lead: What is the common chunk, why is it there and how can it be disabled with
 url: /blog/2021/02/common-chunk-lazy-loading-angular-cli
 draft: false
 image: /blog/assets/imgs/ng-lazy-chunk-bg.png
+categories:
+  - angular
+tags:
+  - angular
+  - performance
 comments: true
 ---
 {{<intro>}}
