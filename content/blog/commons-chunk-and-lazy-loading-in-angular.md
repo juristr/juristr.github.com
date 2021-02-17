@@ -19,7 +19,7 @@ comments: true
 
 ## Lazy loading in Angular
 
-The simplest do apply lazy loading is to use the Angular Router's built-in functionality.
+The easiest way of applying lazy loading is to use the Angular Router's built-in functionality.
 
 ```typescript
 const routes: Routes = [
