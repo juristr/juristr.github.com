@@ -42,13 +42,24 @@ But then looking into the sleep details via Fitbit the amount of deep sleep vs R
 
 ![](/blog/assets/imgs/sleep-cycle.png)
 
-In general I feel lucky because I rarely have issues with either falling asleep nor issues with sleeplessness.
+In general I feel lucky because I rarely have issues with either falling asleep nor issues with sleeplessness or being awake at night. (btw, the awake times Fitbit shows in the previous graph are probably either miscalculations or I don’t really notice them consciously)
 
 Obviously, these metrics only help if you’re actually taking action based on them. I see a lot of people use health trackers, but then they don’t do anything about it. Sure, that’s the hard part. The trackers just emphasize where we’re lacking. The actual work still needs to be done :smiley:.
 
 ## Why are you telling me all this?
 
-Because - as you might already have heard quite often - **sleep matters!**.
+Because - as you might already have heard quite often - **sleep matters!**. It affects your
+
+- performance
+- concentration
+- creativity
+- ...
+
+And that’s what a lot of software development is about, right? We are in front of our machines the whole day, needing to be able to sometimes deeply focus on tasks to be able to tackle them properly.
+
+Here are some good resources if you want to dig deeper:
+
+- [https://peterattiamd.com/matthewwalker4/](https://peterattiamd.com/matthewwalker4/)
 
 ## Improvements
 
