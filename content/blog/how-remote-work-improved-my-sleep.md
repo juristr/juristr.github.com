@@ -53,19 +53,27 @@ Because - as you might already have heard quite often - **sleep matters!**. It a
 - performance
 - concentration
 - creativity
+- strengths
 - ...
 
 And that’s what a lot of software development is about, right? We are in front of our machines the whole day, needing to be able to sometimes deeply focus on tasks to be able to tackle them properly.
 
 Here are some good resources if you want to dig deeper. Matthew Walker has some pretty good content:
 
-- [Youtube: Joe Rogan Experience #1109 with Matthew Walker](https://youtu.be/pwaWilO_Pig](https://youtu.be/pwaWilO_Pig)
+- [Youtube: Joe Rogan Experience #1109 with Matthew Walker](https://youtu.be/pwaWilO_Pig)
 - [Podcast: https://peterattiamd.com/matthewwalker4/](https://peterattiamd.com/matthewwalker4/)
 
 ## How remote work improved my sleep
 
-* not having a hard deadline in the morning aka no alarm that wakes you up
-* going to bed at 11pm and waking up at 7am (on average)
+As I mentioned initially, when I had to go to work on-site, I had to get up at 6am, but still having difficulties getting into bed before 11pm. Hence, my **avg sleep time suffered**. At the same time, I got pulled out of my sleep by an alarm in the morning, regardless of my sleep phase.
+
+Since I started working remotely
+
+- I still get to bed around 11pm
+- I get up in the morning at around 7 to 7:30 am
+- I don’t have an alarm set, I get up whenever I wake up (okay, also depends on whether the :baby: wakes me up earlier..that’s reality kicking in :sweat_smile:)
+
+
 
 ## Challenging
 
