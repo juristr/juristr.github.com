@@ -57,11 +57,12 @@ Because - as you might already have heard quite often - **sleep matters!**. It a
 
 And that’s what a lot of software development is about, right? We are in front of our machines the whole day, needing to be able to sometimes deeply focus on tasks to be able to tackle them properly.
 
-Here are some good resources if you want to dig deeper:
+Here are some good resources if you want to dig deeper. Matthew Walker has some pretty good content:
 
-- [https://peterattiamd.com/matthewwalker4/](https://peterattiamd.com/matthewwalker4/)
+- [Youtube: Joe Rogan Experience #1109 with Matthew Walker](https://youtu.be/pwaWilO_Pig](https://youtu.be/pwaWilO_Pig)
+- [Podcast: https://peterattiamd.com/matthewwalker4/](https://peterattiamd.com/matthewwalker4/)
 
-## Improvements
+## How remote work improved my sleep
 
 * not having a hard deadline in the morning aka no alarm that wakes you up
 * going to bed at 11pm and waking up at 7am (on average)
