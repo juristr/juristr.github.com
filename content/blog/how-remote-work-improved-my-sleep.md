@@ -24,7 +24,9 @@ And I think that’s fine and sometimes needed as you have to push harder to get
 
 ## Monitoring Health and Sleep
 
-I’m 
+I love all kinds of stats, graphs and stuff. I’ve been using [Gyroscope](https://gyrosco.pe/) for a while. It is kinda an aggregator for metrics all around you body and health, pulling data from various sources such as Fitbit (or others) for fitness related metrics, using [RescueTime](https://www.rescuetime.com/) to track things like productivity when in front of the computer etc. The goal is to give you a complete picture of your body state.
+
+Some people may think it’s crazy, but “what you cannot measure, you cannot improve”, right? Gyroscope also tracks sleep (via it’s sleep AI, or pulled from Fitbit, Apple Watch,...). That gives you a pretty good overview of how much you get and whether you should work on it.
 
 ## Improvements
 
