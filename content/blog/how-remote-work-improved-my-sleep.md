@@ -48,7 +48,7 @@ Obviously, these metrics only help if you’re actually taking action based on t
 
 ## Why are you telling me all this?
 
-Because - as you might already heard quite often - **sleep matters!**.
+Because - as you might already have heard quite often - **sleep matters!**.
 
 ## Improvements
 
