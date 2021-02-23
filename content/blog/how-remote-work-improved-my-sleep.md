@@ -88,5 +88,3 @@ So to wrap up
 - tracking and having metrics in place might help to locate potential issues and highlight areas for improvement
 - remote work helps, at least me, in that even though I get to bed late, I still get enough sleep
 - having children might make it a bit more difficult sometimes
-
-Curious what you think. Ping me [on Twitter](https://twitter.com/juristr)
