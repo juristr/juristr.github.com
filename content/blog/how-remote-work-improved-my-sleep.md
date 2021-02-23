@@ -2,13 +2,13 @@
 type: post
 title: How Remote Work Improved My Sleep
 date: 2021-02-23T17:39:49+01:00
-lead: ...
+lead: Why sleep is important and how remote work might actually help
 url: /blog/2021/02/remote-work-and-sleep
 draft: false
 categories: []
 comments: true
 ---
-..
+Today a less tech focused article. Rather let’s talk about sleep and it’s importance for us software developers to stay focused and remain performant during the day.
 
 Before starting to work remotely, I did work on-site at a company. That meant getting up at around 6am, breakfast, prepping myself and then drive for 20min to the main town where the company I worked for was located. That’s not too bad, right, people have to drive even up to an hour to get to work sometimes. 
 
