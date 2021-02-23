@@ -18,6 +18,12 @@ The bad thing is the “hard deadline” in the morning at 6am, when the alarm s
 
 Yep, I definitely had that phase. I still stay up late sometimes after work, to finish that blog post (just as right now) which has been in the drafts for a while, or play around with that side project. But it happens less often (maybe I’m just getting old...and yes, kids play a role as well :smiley:)
 
+And there was no way around that. When I switched to my last work, I also did some freelancing on the side mainly as a coach giving workshops. What that means is to work 8 hours a day at your job and then in the evening preparing an upcoming workshop or some talk for a conference. 
+
+And I think that’s fine and sometimes needed as you have to push harder to get things through and reach some goals. The important part is to keep in mind it’s only for a limited time, and **that you have something to balance that**. Especially regarding the latter, I usually recovered sleep over the weekend, where I often got up to 10hrs a night. In addition I did work out a lot, to be able to deal with the additional stress and give the body a way to release it.
+
+## 
+
 ## Improvements
 
 - not having a hard deadline in the morning aka no alarm that wakes you up
@@ -25,7 +31,7 @@ Yep, I definitely had that phase. I still stay up late sometimes after work, to 
 
 ## Challenging
 
-- kids :)
+- kids :
 
 
 
