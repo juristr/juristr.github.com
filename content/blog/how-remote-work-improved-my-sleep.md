@@ -5,6 +5,7 @@ date: 2021-02-23T17:39:49+01:00
 lead: Why sleep is important and how remote work might actually help
 url: /blog/2021/02/remote-work-and-sleep
 draft: false
+image: https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=kate-stone-matheson-uy5t-CJuIK4-unsplash.jpg
 categories: []
 comments: true
 ---
