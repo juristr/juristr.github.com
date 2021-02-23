@@ -28,16 +28,15 @@ I love all kinds of stats, graphs and stuff. I’ve been using [Gyroscope](https
 
 Some people may think it’s crazy, but “what you cannot measure, you cannot improve”, right? Gyroscope also tracks sleep (via it’s sleep AI, or pulled from Fitbit, Apple Watch,...). That gives you a pretty good overview of how much you get and whether you should work on it.
 
+![](/blog/assets/imgs/67718bff-ec62-4110-b76e-a7165f6a4e47.jpeg)
+
 ## Improvements
 
-- not having a hard deadline in the morning aka no alarm that wakes you up
-- going to bed at 11pm and waking up at 7am (on average)
+* not having a hard deadline in the morning aka no alarm that wakes you up
+* going to bed at 11pm and waking up at 7am (on average)
 
 ## Challenging
 
-- kids :
-
-
-
+* kids :
 
 ![](/blog/assets/imgs/sleep-cycle.png)
