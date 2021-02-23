@@ -53,7 +53,7 @@ Because - as you might already have heard quite often - **sleep matters!**. It a
 - performance
 - concentration
 - creativity
-- strengths
+- strength
 - ...
 
 And that’s what a lot of software development is about, right? We are in front of our machines the whole day, needing to be able to sometimes deeply focus on tasks to be able to tackle them properly.
@@ -73,9 +73,13 @@ Since I started working remotely
 - I get up in the morning at around 7 to 7:30 am
 - I don’t have an alarm set, I get up whenever I wake up (okay, also depends on whether the :baby: wakes me up earlier..that’s reality kicking in :sweat_smile:)
 
+## Conclusion
 
+So to wrap up
 
-## Challenging
+- you should care about getting enough sleep, it will help performance overall
+- tracking and having metrics in place might help to locate potential issues and highlight areas for improvement
+- remote work helps, at least me, in that even though I get to bed late, I still get enough sleep
+- having children might make it a bit more difficult sometimes
 
-* kids :
-
+Curious what you think. Ping me [on Twitter](https://twitter.com/juristr)
