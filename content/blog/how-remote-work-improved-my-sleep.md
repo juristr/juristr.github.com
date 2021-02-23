@@ -22,7 +22,9 @@ And there was no way around that. When I switched to my last work, I also did so
 
 And I think that’s fine and sometimes needed as you have to push harder to get things through and reach some goals. The important part is to keep in mind it’s only for a limited time, and **that you have something to balance that**. Especially regarding the latter, I usually recovered sleep over the weekend, where I often got up to 10hrs a night. In addition I did work out a lot, to be able to deal with the additional stress and give the body a way to release it.
 
-## 
+## Monitoring Health and Sleep
+
+I’m 
 
 ## Improvements
 
