@@ -8,7 +8,9 @@ draft: false
 categories: []
 comments: true
 ---
+{{<intro>}}
 Today a less tech focused article. Rather let’s talk about sleep and it’s importance for us software developers to stay focused and remain performant during the day.
+{{</intro>}}
 
 Before starting to work remotely, I did work on-site at a company. That meant getting up at around 6am, breakfast, prepping myself and then drive for 20min to the main town where the company I worked for was located. That’s not too bad, right, people have to drive even up to an hour to get to work sometimes. 
 
