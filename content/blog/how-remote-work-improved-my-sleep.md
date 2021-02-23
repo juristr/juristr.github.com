@@ -12,6 +12,10 @@ comments: true
 Today a less tech focused article. Rather let’s talk about sleep and it’s importance for us software developers to stay focused and remain performant during the day.
 {{</intro>}}
 
+<!--more-->
+
+{{< postad >}}
+
 Before starting to work remotely, I did work on-site at a company. That meant getting up at around 6am, breakfast, prepping myself and then drive for 20min to the main town where the company I worked for was located. That’s not too bad, right, people have to drive even up to an hour to get to work sometimes. 
 
 The bad thing is the “hard deadline” in the morning at 6am, when the alarm started! Why? Well because you have to get up early :sweat_smile:, but mainly because at that time I usually just averaged around 6 to 6.5 hours of sleep per night. I tried to get to bed before 11pm, but that turned out to be hard as you have dinner, talk with you partner, watch some TV and bam, it’s 11pm.
