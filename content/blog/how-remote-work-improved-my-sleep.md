@@ -26,9 +26,29 @@ And I think that’s fine and sometimes needed as you have to push harder to get
 
 I love all kinds of stats, graphs and stuff. I’ve been using [Gyroscope](https://gyrosco.pe/) for a while. It is kinda an aggregator for metrics all around you body and health, pulling data from various sources such as Fitbit (or others) for fitness related metrics, using [RescueTime](https://www.rescuetime.com/) to track things like productivity when in front of the computer etc. The goal is to give you a complete picture of your body state.
 
-Some people may think it’s crazy, but “what you cannot measure, you cannot improve”, right? Gyroscope also tracks sleep (via it’s sleep AI, or pulled from Fitbit, Apple Watch,...). That gives you a pretty good overview of how much you get and whether you should work on it.
+Some people may think it’s crazy, but “what you cannot measure, you cannot improve”, right? Gyroscope also tracks sleep (via it’s sleep AI, or pulled from Fitbit, Apple Watch,...). The main goal is to have metrics and graphs in place that give you a good overview of how you’re performing and whether you should take action to improve things.
+
+So for instance I can see how I perform on average as the weeks pass by..
 
 ![](/blog/assets/imgs/67718bff-ec62-4110-b76e-a7165f6a4e47.jpeg)
+
+...and understand how my bedtime/wakeup patterns are.
+
+![](/blog/assets/imgs/857f6573-4536-47b6-9097-71d910d7ba8e.jpeg)
+
+Regular sleep/wakeup schedules help improve the overall sleep quality. And tbh, based on the above, I should probably look into moving my bedtime a bit earlier as it got pretty late recently.
+
+But then looking into the sleep details via Fitbit the amount of deep sleep vs REM look pretty good.
+
+![](/blog/assets/imgs/sleep-cycle.png)
+
+In general I feel lucky because I rarely have issues with either falling asleep nor issues with sleeplessness.
+
+Obviously, these metrics only help if you’re actually taking action based on them. I see a lot of people use health trackers, but then they don’t do anything about it. Sure, that’s the hard part. The trackers just emphasize where we’re lacking. The actual work still needs to be done :smiley:.
+
+## Why are you telling me all this?
+
+Because - as you might already heard quite often - **sleep matters!**.
 
 ## Improvements
 
@@ -39,4 +59,3 @@ Some people may think it’s crazy, but “what you cannot measure, you cannot i
 
 * kids :
 
-![](/blog/assets/imgs/sleep-cycle.png)
