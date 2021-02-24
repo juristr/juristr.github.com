@@ -93,8 +93,8 @@ They specifically go into details about the effect of "social jetlag", sleep dur
 
 [https://www.cell.com/current-biology/pdf/S0960-9822(20)30837-X.pdf](https://www.cell.com/current-biology/pdf/S0960-9822(20)30837-X.pdf)
 
-As also discussed in the podcast, I think we need to be careful with going to a conclusion though. I think it might have improved for the very same reasons it has helped me in terms of WFH.
-However, many people are afraid of potentially losing their job (or have lost it), about not having regular social interactions and so on. All of which might lead to anxiety and hence bad sleep or sleeplessness.
+As also discussed in the podcast, I think we need to **be careful with coming to a quick conclusion though**. It might have improved sleep for some, for the very same reasons it has helped me in terms of WFH.
+However, many people have to be afraid of potentially losing their job (or have lost it), about not having regular social interactions and so on. All of which, lead to **anxiety and hence bad sleep** or sleeplessness.
 
 ## Conclusion
 
