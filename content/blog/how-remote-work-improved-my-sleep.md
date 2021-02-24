@@ -57,18 +57,18 @@ Obviously, these metrics only help if you’re actually taking action based on t
 
 Because - as you might already have heard quite often - **sleep matters!**. It affects your
 
-- performance
-- concentration
-- creativity
-- strength
-- ...
+* performance
+* concentration
+* creativity
+* strength
+* ...
 
 And that’s what a lot of software development is about, right? We are in front of our machines the whole day, needing to be able to sometimes deeply focus on tasks to be able to tackle them properly.
 
 Here are some good resources if you want to dig deeper. Matthew Walker has some pretty good content:
 
-- [Youtube: Joe Rogan Experience #1109 with Matthew Walker](https://youtu.be/pwaWilO_Pig)
-- [Podcast: https://peterattiamd.com/matthewwalker4/](https://peterattiamd.com/matthewwalker4/)
+* [Youtube: Joe Rogan Experience #1109 with Matthew Walker](https://youtu.be/pwaWilO_Pig)
+* [Podcast: https://peterattiamd.com/matthewwalker4/](https://peterattiamd.com/matthewwalker4/)
 
 ## How remote work improved my sleep
 
@@ -76,19 +76,29 @@ As I mentioned initially, when I had to go to work on-site, I had to get up at 6
 
 Since I started working remotely
 
-- I still get to bed around 11pm
-- I get up in the morning at around 7 to 7:30 am
-- I don’t have an alarm set, I get up whenever I wake up (okay, also depends on whether the :baby: wakes me up earlier..that’s reality kicking in :sweat_smile:)
+* I still get to bed around 11pm
+* I get up in the morning at around 7 to 7:30 am
+* I don’t have an alarm set, I get up whenever I wake up (okay, also depends on whether the :baby: wakes me up earlier..that’s reality kicking in :sweat_smile:)
 
 ## Covid apparently helped as well
 
 Well, this might not be a surprise, given I just mentioned work from home helped me. Covid forced many people to switch to a WFH scenario.
 
+Matthew Walker talks about it in the podcast I linked before. The exact same effect I experienced has been found in studies to improve the overall sleep of people. There have been various studies, one from the "Current Biology" magazine which published a study about the effect of COVID lockdowns on sleep.
+
+![](/blog/assets/imgs/sleep-current-biology-study.png)
+
+They specifically go into details about the effect of "social jetlag", sleep duration, and quality. But read yourself:
+
+[https://www.cell.com/current-biology/pdf/S0960-9822(20)30837-X.pdf](https://www.cell.com/current-biology/pdf/S0960-9822(20)30837-X.pdf)
+
+It has to be noted though, that I think many people also experienced the exact contrary during COVID, basically, higher sleeplessness potentially caused due to anxiety.
+
 ## Conclusion
 
 So to wrap up
 
-- you should care about getting enough sleep, it will help performance overall
-- tracking and having metrics in place might help to locate potential issues and highlight areas for improvement
-- remote work helps, at least me, in that even though I get to bed late, I still get enough sleep
-- having children might make it a bit more difficult sometimes
+* you should care about getting enough sleep, it will help performance overall
+* tracking and having metrics in place might help to locate potential issues and highlight areas for improvement
+* remote work helps, at least me, in that even though I get to bed late, I still get enough sleep
+* having children might make it a bit more difficult sometimes
