@@ -42,13 +42,13 @@ So for instance I can see how I perform on average as the weeks pass by..
 
 ...and understand how my bedtime/wakeup patterns are.
 
-{{<figure url="/blog/assets/imgs/857f6573-4536-47b6-9097-71d910d7ba8e.jpeg">}}
+{{<figure url="/blog/assets/imgs/857f6573-4536-47b6-9097-71d910d7ba8e.jpeg" size="full">}}
 
 Regular sleep/wakeup schedules help improve the overall sleep quality. And tbh, based on the above, I should probably look into moving my bedtime a bit earlier as it got pretty late recently.
 
 But then looking into the sleep details via Fitbit the amount of deep sleep vs REM look pretty good.
 
-{{<figure url="/blog/assets/imgs/sleep-cycle.png">}}
+{{<figure url="/blog/assets/imgs/sleep-cycle.png" size="full">}}
 
 In general, I feel lucky because I rarely have issues with either falling asleep or issues with sleeplessness or being awake at night. _(btw, the awake times Fitbit shows in the previous graph are probably either miscalculations or I don’t really notice them consciously)_
 
@@ -87,7 +87,7 @@ Well, this might not be a surprise, given I just mentioned work from home helped
 
 Matthew Walker talks about it in the podcast I linked before. The exact same effect I experienced has been found in studies to improve the overall sleep of people. There have been various studies, one from the "Current Biology" magazine which published a study about the effect of COVID lockdowns on sleep.
 
-{{<figure url="/blog/assets/imgs/sleep-current-biology-study.png">}}
+{{<figure url="/blog/assets/imgs/sleep-current-biology-study.png" size="full">}}
 
 They specifically go into details about the effect of "social jetlag", sleep duration, and quality. But read yourself:
 
