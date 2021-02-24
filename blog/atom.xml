@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 17 Feb 2021 15:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 23 Feb 2021 17:39:49 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/blog/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How Remote Work Improved My Sleep</title>
+      <link>https://juristr.com/blog/2021/02/remote-work-and-sleep/</link>
+      <pubDate>Tue, 23 Feb 2021 17:39:49 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/02/remote-work-and-sleep/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    Today a less tech focused article. Rather let’s talk about sleep and it’s importance for us software developers to stay focused and remain performant during the day.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Common Chunk and Lazy Loading in Angular</title>
