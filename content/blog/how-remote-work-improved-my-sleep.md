@@ -80,6 +80,10 @@ Since I started working remotely
 - I get up in the morning at around 7 to 7:30 am
 - I don’t have an alarm set, I get up whenever I wake up (okay, also depends on whether the :baby: wakes me up earlier..that’s reality kicking in :sweat_smile:)
 
+## Covid apparently helped as well
+
+Well, this might not be a surprise, given I just mentioned work from home helped me. Covid forced many people to switch to a WFH scenario.
+
 ## Conclusion
 
 So to wrap up
