@@ -81,11 +81,9 @@ Since I started working remotely
 * I get up in the morning at around 7 to 7:30 am
 * I don’t have an alarm set, I get up whenever I wake up (okay, also depends on whether the :baby: wakes me up earlier..that’s reality kicking in :sweat_smile:)
 
-Note, remote work might also have its downsides, but that's maybe something for another article.
-
 ## Covid apparently helped as well
 
-Well, this might not be a surprise, given I just mentioned work from home helped me. Covid forced many people to switch to a WFH scenario.
+Well, this might not be a surprise, given I just mentioned work from home helped me. Covid forced many people to switch to a WFH (Work From Home) scenario.
 
 Matthew Walker talks about it in the podcast I linked before. The exact same effect I experienced has been found in studies to improve the overall sleep of people. There have been various studies, one from the "Current Biology" magazine which published a study about the effect of COVID lockdowns on sleep.
 
@@ -95,7 +93,8 @@ They specifically go into details about the effect of "social jetlag", sleep dur
 
 [https://www.cell.com/current-biology/pdf/S0960-9822(20)30837-X.pdf](https://www.cell.com/current-biology/pdf/S0960-9822(20)30837-X.pdf)
 
-It has to be noted though, that I think many people also experienced the exact contrary during COVID, basically, higher sleeplessness potentially caused due to anxiety.
+As also discussed in the podcast, I think we need to be careful with going to a conclusion though. I think it might have improved for the very same reasons it has helped me in terms of WFH.
+However, many people are afraid of potentially losing their job (or have lost it), about not having regular social interactions and so on. All of which might lead to anxiety and hence bad sleep or sleeplessnes.
 
 ## Conclusion
 
@@ -105,3 +104,11 @@ So to wrap up
 * tracking and having metrics in place might help to locate potential issues and highlight areas for improvement
 * remote work helps, at least me, in that even though I get to bed late, I still get enough sleep
 * having children might make it a bit more difficult sometimes
+
+Also, keep in mind that it might not be that easy. Staying inside whether being forced due to Covid lockdowns or WFH might also have their negative sides like
+
+- less exposure to sunlight
+- potentially walk less and less physical activity
+- lack of social interactions
+
+So, watch out for these.
