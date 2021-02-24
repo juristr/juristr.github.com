@@ -23,15 +23,15 @@ The bad thing is the “hard deadline” in the morning at 6am, when the alarm s
 
 ## Sleep less, get more done!
 
-Yep, I definitely had that phase. I still stay up late sometimes after work, to finish that blog post (just as right now) which has been in the drafts for a while, or play around with that side project. But it happens less often (maybe I’m just getting old...and yes, kids play a role as well :smiley:)
+Yep, I definitely had that phase. I still stay up late sometimes after work, to finish that blog post (just as right now) which has been in the drafts for a while, or play around with that side project. But it happens less often (maybe I’m just getting old...and yes, kids play a role there as well :smiley:)
 
 And there was no way around that. When I switched to my last work, I also did some freelancing on the side mainly as a coach giving workshops. What that means is to work 8 hours a day at your job and then in the evening preparing an upcoming workshop or some talk for a conference. 
 
-And I think that’s fine and sometimes needed as you have to push harder to get things through and reach some goals. The important part is to keep in mind it’s only for a limited time, and **that you have something to balance that**. Especially regarding the latter, I usually recovered sleep over the weekend, where I often got up to 10hrs a night. In addition I did work out a lot, to be able to deal with the additional stress and give the body a way to release it.
+And I think that’s fine and sometimes needed as you have to push harder to get things through and reach some goals. The important part is to keep in mind it’s only for a limited time, and **that you have something to balance that**. Especially regarding the latter, I usually recovered sleep over the weekend, where I often got up to 10hrs a night. In addition, I did work out a lot, to be able to deal with the additional stress and give the body a way to release it.
 
 ## Monitoring Health and Sleep
 
-I love all kinds of stats, graphs and stuff. I’ve been using [Gyroscope](https://gyrosco.pe/) for a while. It is kinda an aggregator for metrics all around you body and health, pulling data from various sources such as Fitbit (or others) for fitness related metrics, using [RescueTime](https://www.rescuetime.com/) to track things like productivity when in front of the computer etc. The goal is to give you a complete picture of your body state.
+I love all kinds of stats and graphs. I’ve been using [Gyroscope](https://gyrosco.pe/) for a while. It is kinda an aggregator for metrics all around your body and health, pulling data from various sources such as Fitbit (or others) for fitness related metrics, using [RescueTime](https://www.rescuetime.com/) to track things like productivity when in front of the computer etc. The goal is to give you a complete picture of your body state.
 
 Some people may think it’s crazy, but “what you cannot measure, you cannot improve”, right? Gyroscope also tracks sleep (via it’s sleep AI, or pulled from Fitbit, Apple Watch,...). The main goal is to have metrics and graphs in place that give you a good overview of how you’re performing and whether you should take action to improve things.
 
@@ -49,7 +49,7 @@ But then looking into the sleep details via Fitbit the amount of deep sleep vs R
 
 ![](/blog/assets/imgs/sleep-cycle.png)
 
-In general I feel lucky because I rarely have issues with either falling asleep nor issues with sleeplessness or being awake at night. (btw, the awake times Fitbit shows in the previous graph are probably either miscalculations or I don’t really notice them consciously)
+In general, I feel lucky because I rarely have issues with either falling asleep or issues with sleeplessness or being awake at night. _(btw, the awake times Fitbit shows in the previous graph are probably either miscalculations or I don’t really notice them consciously)_
 
 Obviously, these metrics only help if you’re actually taking action based on them. I see a lot of people use health trackers, but then they don’t do anything about it. Sure, that’s the hard part. The trackers just emphasize where we’re lacking. The actual work still needs to be done :smiley:.
 
@@ -79,6 +79,8 @@ Since I started working remotely
 * I still get to bed around 11pm
 * I get up in the morning at around 7 to 7:30 am
 * I don’t have an alarm set, I get up whenever I wake up (okay, also depends on whether the :baby: wakes me up earlier..that’s reality kicking in :sweat_smile:)
+
+Note, remote work might also have its downsides, but that's maybe something for another article.
 
 ## Covid apparently helped as well
 
