@@ -38,7 +38,7 @@ Some people may think it’s crazy, but “what you cannot measure, you cannot i
 
 So for instance I can see how I perform on average as the weeks pass by..
 
-{{<figure url="/blog/assets/imgs/67718bff-ec62-4110-b76e-a7165f6a4e47.jpeg">}}
+{{<figure url="/blog/assets/imgs/67718bff-ec62-4110-b76e-a7165f6a4e47.jpeg" size="full">}}
 
 ...and understand how my bedtime/wakeup patterns are.
 
