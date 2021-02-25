@@ -49,5 +49,9 @@ $ npx nx build thelib --prod
 
 ## Publishable libraries with multiple entry points
 
+---
+
+https://github.com/juristr/nx-publishable-libs
+
 
 
