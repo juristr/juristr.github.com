@@ -47,3 +47,7 @@ $ npx nx build thelib --prod
 
 ..it produces a folder in `dist/` with the bundled and minified resources, ready to publish to npm or some other package registry.
 
+## Publishable libraries with multiple entry points
+
+
+
