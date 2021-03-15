@@ -29,7 +29,11 @@ The search for the “right” tool often feels to me like the search for the Ho
 
 For me this is kinda a back and forth. I enjoy to write on nice paper with some proper pen (even got a fountain pen from Nrwl recently). I used to do this for a while (see the next section about using the BestSelf Journal), but in the long run I still prefer a digital version as I can quickly add more context via links and references to my notes.
 
-I’m using a paper notebook on a daily basis to do a mini retrospective about what I’m grateful for, what went well, what I disliked etc. Writing someting on paper has for sure a deeper impact than when you add it to some digital notebook.
+### Paper Notebook for daily reflection
+
+- it's about the process of writing things down (you already know)
+- take time, sit down, reflect, write it down
+- pleasant to go over past notes as well
 
 ## BestSelf Journal - Getting a Structure
 
@@ -37,12 +41,6 @@ A couple of years ago, I found the [BestSelf Journal](https://bestself.co/). Tha
 
 - structuring your thoughts
 - defining goals
-
-## Paper Notebook for daily reflection
-
-- it's about the process of writing things down (you already know)
-- take time, sit down, reflect, write it down
-- pleasant to go over past notes as well
 
 ## Using Notion
 
