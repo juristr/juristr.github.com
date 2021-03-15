@@ -9,7 +9,7 @@ categories:
   - The Desk
 comments: true
 ---
-{{<intro>}}
+1{{<intro>}}
   ...
 {{</intro>}}
 
@@ -19,9 +19,18 @@ comments: true
 
 ## It's not about the tool, it's about the habit!
 
+The search for the “right” tool often feels to me like the search for the Holy Grail. I’ve used several over the years (I even used a self-built one for storing and finding frequent code snippets before Gists were a thing). [Trello](https://trello.com) did an awesome job for many years. I had an overall tasks/goals board where I added thins to a backlog, prioritized them and moved them into a weekly board as they were ready to go. As a good engineer :D I even automated most of the stuff with [Trello Butler](https://help.trello.com/article/1198-an-intro-to-butler) rules.
+
+
+
+I’ve tried different tools over time. The main reason was to 
+
 ...but tools can help sometimes
 
-What tool => digital vs analog (e.g. paper notebook)
+## What tool => digital vs analog (e.g. paper notebook)
+
+A difficult choice
+
 
 ## BestSelf - Getting a Structure
 
@@ -41,8 +50,14 @@ What tool => digital vs analog (e.g. paper notebook)
 - power of having it everywhere
 - link information
 
-### Current setup
+### Goal planning
 
 - objectives
 - key results => mathematical calculation of achieving something => make it measurable (what you cannot measure, you cannot control)
 - progress visualization
+
+### No Backlog
+
+- backlogs create peace initially because you know you’ve noted that important thing you want to do somewhere...but then create anxiety when you come back and see how much stuff you were not able to do and probably will never be
+- something comes up -> match against Goals for the current cycle
+- if it matches, add to the key results page in Notion as a reminder
