@@ -33,6 +33,8 @@ I’m using a paper notebook on a daily basis to do a mini retrospective about w
 
 ## BestSelf Journal - Getting a Structure
 
+A couple of years ago, I found the [BestSelf Journal](https://bestself.co/). That’s when I started to properly plan and write down my goals and progress on a daily basis.
+
 - structuring your thoughts
 - defining goals
 
