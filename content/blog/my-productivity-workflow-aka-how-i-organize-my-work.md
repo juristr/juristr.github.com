@@ -9,7 +9,7 @@ categories:
   - The Desk
 comments: true
 ---
-1{{<intro>}}
+{{<intro>}}
   ...
 {{</intro>}}
 
