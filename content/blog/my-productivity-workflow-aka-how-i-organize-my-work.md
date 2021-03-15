@@ -19,20 +19,19 @@ comments: true
 
 ## It's not about the tool, it's about the habit!
 
-The search for the “right” tool often feels to me like the search for the Holy Grail. I’ve used several over the years (I even used a self-built one for storing and finding frequent code snippets before Gists were a thing). [Trello](https://trello.com) did an awesome job for many years. I had an overall tasks/goals board where I added thins to a backlog, prioritized them and moved them into a weekly board as they were ready to go. As a good engineer :D I even automated most of the stuff with [Trello Butler](https://help.trello.com/article/1198-an-intro-to-butler) rules.
+The search for the “right” tool often feels to me like the search for the Holy Grail. I’ve used several over the years (I even used a self-built one for storing and finding frequent code snippets before Gists were a thing). [Trello](https://trello.com) did an awesome job for many years. I had an overall tasks/goals board where I added thins to a backlog, prioritized them and moved them into a weekly board as they were ready to go. As a good engineer :smiley: I even automated most of the stuff with [Trello Butler](https://help.trello.com/article/1198-an-intro-to-butler) rules.
 
+**But it’s not about the tool**, it’s about how you use it.
 
+**TODO: ADD SOME MORE DETAILS**
 
-I’ve tried different tools over time. The main reason was to 
+## Digital vs Paper
 
-...but tools can help sometimes
+For me this is kinda a back and forth. I enjoy to write on nice paper with some proper pen (even got a fountain pen from Nrwl recently). I used to do this for a while (see the next section about using the BestSelf Journal), but in the long run I still prefer a digital version as I can quickly add more context via links and references to my notes.
 
-## What tool => digital vs analog (e.g. paper notebook)
+I’m using a paper notebook on a daily basis to do a mini retrospective about what I’m grateful for, what went well, what I disliked etc. Writing someting on paper has for sure a deeper impact than when you add it to some digital notebook.
 
-A difficult choice
-
-
-## BestSelf - Getting a Structure
+## BestSelf Journal - Getting a Structure
 
 - structuring your thoughts
 - defining goals
