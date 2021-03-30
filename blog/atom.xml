@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Tue, 23 Feb 2021 17:39:49 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 30 Mar 2021 19:07:14 +0200</lastBuildDate>
     
 	<atom:link href="https://juristr.com/blog/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SoloCoder Podcast: About Coding and Martial Arts</title>
+      <link>https://juristr.com/blog/2021/03/solocoder-coding-and-martial-arts/</link>
+      <pubDate>Tue, 30 Mar 2021 19:07:14 +0200</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/03/solocoder-coding-and-martial-arts/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I recently had the pleasure to be on the SoloCoder podcast hosted by Aderson Oliveira.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>How Remote Work Improved My Sleep</title>
