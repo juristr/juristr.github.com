@@ -18,3 +18,5 @@ comments: true
 {{< postad >}}
 
 ....
+
+<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/18529307/height/90/theme/custom/thumbnail/yes/direction/backward/render-playlist/no/custom-color/ed1c24/" height="90" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
