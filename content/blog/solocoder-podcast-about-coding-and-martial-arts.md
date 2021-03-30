@@ -19,7 +19,7 @@ comments: true
 
 Aderson Oliveira teaches coding at a local college in Toronto, Canada. He is the host of the podcast [SoloCoder](https://solocoder.com), where he talks to professionals in tech about their careers, their daily tech life, what they enjoy and what not. His main goal is to inspire his (around 1100) students in his department.
 
-I had the pleasure to be on the podcast and share my thoughts and career path so far. I talk about how I got into programming, what I’m most excited about, why I think learning in the open and blogging was a game changer for me and also how martial arts relates to all of that :smiley:.
+I had the pleasure to be on the podcast and share my thoughts and career path so far. I talk about how I got into programming, what I’m most excited about, why I think learning in the open and blogging was a game changer for me and also how martial arts relate to all of that :smiley:.
 
 So if you’re curious, feel free to listen in, or check out other editions on [solocoder.com](https://solocoder.com).
 
