@@ -36,6 +36,10 @@ If you generate a plain normal Angular app nowadays, you'll get what I call a mo
 
 As shown in the picture above, the app structure is monolithic. Let's explore some of the potential issues you might face as a team when following such structure, especially when you have to scale it.
 
+## Why have libs in the first place if the code is app specific?
+
+https://nrwlcommunity.slack.com/archives/C016ASCS683/p1616514445019800
+
 ### Feature Boundaries
 
 Most of the CLIs generate simple folder structures for separating features from each other. That defines only a very loose boundary, though. From the perspective of a developer that didn't develop a given feature, it is very hard to understand what parts of the feature constitutes to the public API, and what is only intended to be used privately within that same feature folder.
