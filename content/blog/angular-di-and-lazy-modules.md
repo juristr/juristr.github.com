@@ -1,7 +1,7 @@
 ---
 type: post
 title: Angular Services, providedIn and Lazy Modules
-date: 2021-04-21T08:40:00+01:00
+date: 2021-04-20T08:40:00+01:00
 lead: Let's explore some of the particularities of the Angular dependency injection mechanism
 url: /blog/2021/04/angular-di-and-lazy-modules
 draft: false
