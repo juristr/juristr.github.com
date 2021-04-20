@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 17 Feb 2021 15:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 20 Apr 2021 08:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/tags/angular/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular Services, providedIn and Lazy Modules</title>
+      <link>https://juristr.com/blog/2021/04/angular-di-and-lazy-modules/</link>
+      <pubDate>Tue, 20 Apr 2021 08:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/04/angular-di-and-lazy-modules/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    I often see people confused about how the DI works, in particular with lazy loaded modules. In this article we’re going to explore some dependency injection particularities with Angular, specifically in combination with lazy loaded modules.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Common Chunk and Lazy Loading in Angular</title>
