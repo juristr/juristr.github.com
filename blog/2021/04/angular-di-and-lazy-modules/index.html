@@ -363,6 +363,12 @@
 
 <h3 id="runtime-situation">Runtime situation</h3>
 
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/OPKMq1vXZi0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
 <p>When you search for Angular injectors you&rsquo;ll most probably came across the hierarchical nature of injectors in Angular. There&rsquo;s basically a NgModule injector (<code>ModuleInjector</code>) and an element level injector (<code>ElementInjector</code>) scoped to DOM elements and used by Directives or Components. You can read more on the <a href="https://angular.io/guide/hierarchical-dependency-injection">official docs here</a>.</p>
 
 <p>Those things are important and useful for scoping Angular services in their visibility and lifetime. In our specific example there&rsquo;s another mechanism that kicks in though.</p>
@@ -417,6 +423,12 @@
 
 <h3 id="bundling-situation">Bundling situation</h3>
 
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/OPKMq1vXZi0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
 <p>What does that mean at <strong>build time?</strong> Since the <code>commonChunk</code> is enabled by default, we&rsquo;d get the following bundles if we lazy load both feature modules:</p>
 
 <ul>
@@ -458,6 +470,12 @@
 <p>Then the user navigates to <code>feature2</code> which again triggers the lazy loading of <code>Feature2Module</code> and the corresponding <code>Feature2Component</code>. Again, the latter requires an instance of the <code>DataService</code> which at this point already exists globally and thus the in-memory instance will be returned.</p>
 
 <h3 id="bundling-situation-1">Bundling situation</h3>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/cLTMCaiquxc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 
 <p>When using the <code>providedIn</code> syntax, the bundling situation depends on how things are referenced.</p>
 
