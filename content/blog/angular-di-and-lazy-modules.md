@@ -99,6 +99,8 @@ This should **absolutely be avoided!** Angular modules have most often a 1-1 cor
 
 ### Runtime situation
 
+{{<youtube OPKMq1vXZi0>}}
+
 When you search for Angular injectors you'll most probably came across the hierarchical nature of injectors in Angular. There's basically a NgModule injector (`ModuleInjector`) and an element level injector (`ElementInjector`) scoped to DOM elements and used by Directives or Components. You can read more on the [official docs here](https://angular.io/guide/hierarchical-dependency-injection).
 
 Those things are important and useful for scoping Angular services in their visibility and lifetime. In our specific example there's another mechanism that kicks in though.
@@ -126,6 +128,8 @@ So far so good, but what happens if we decide to **lazy load both of the feature
 Since both of them import the `DataAccessModule` the `DataService` on the `providers` array gets registered to the created child injector for each of the two lazy loaded feature modules. Hence **we end up with 2 instances at runtime**. This might not be a problem but definitely should be considered, especially if the services are stateful.
 
 ### Bundling situation
+
+{{<youtube OPKMq1vXZi0>}}
 
 What does that mean at **build time?** Since the `commonChunk` is enabled by default, we'd get the following bundles if we lazy load both feature modules:
 
@@ -172,6 +176,8 @@ Assume the user navigates to `/feature1` which triggers the lazy loading of `Fea
 Then the user navigates to `feature2` which again triggers the lazy loading of `Feature2Module` and the corresponding `Feature2Component`. Again, the latter requires an instance of the `DataService` which at this point already exists globally and thus the in-memory instance will be returned.
 
 ### Bundling situation
+
+{{<youtube cLTMCaiquxc >}}
 
 When using the `providedIn` syntax, the bundling situation depends on how things are referenced.
 
