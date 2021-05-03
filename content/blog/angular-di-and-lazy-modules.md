@@ -129,7 +129,7 @@ Since both of them import the `DataAccessModule` the `DataService` on the `provi
 
 ### Bundling situation
 
-{{<youtube OPKMq1vXZi0>}}
+{{<youtube cLTMCaiquxc>}}
 
 What does that mean at **build time?** Since the `commonChunk` is enabled by default, we'd get the following bundles if we lazy load both feature modules:
 
