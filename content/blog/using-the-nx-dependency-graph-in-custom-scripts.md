@@ -97,7 +97,17 @@ const array = JSON.parse(
   ).tasks.map((t) => t.target.project);
 ```
 
-## Approach 4: Print Affected Apps & Libs
+### Approach 4: Use the cached version of the dep-graph
+
+Nx caches the dependency graph from previous operations in the `node_modules/.cache/nx/nxdeps.json`. Hence, we can directly use that cached version:
+
+```javascript
+const nxDeps = require('.cache/nx/nxdeps.json');
+...
+```
+
+Obviously, be aware that this file might change and thus break your code.
+## Approach 5: Print Affected Apps & Libs
 
 The above mentioned **approach 3** gives you already a lot of flexibility because it allows you to filter and manipulate the resulting JSON output.
 
