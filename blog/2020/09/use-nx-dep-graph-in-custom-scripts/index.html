@@ -323,7 +323,15 @@
       <span class="p">.</span><span class="nx">trim</span><span class="p">()</span>
   <span class="p">).</span><span class="nx">tasks</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">t</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">t</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">project</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="approach-4-print-affected-apps-libs">Approach 4: Print Affected Apps &amp; Libs</h2>
+<h3 id="approach-4-use-the-cached-version-of-the-dep-graph">Approach 4: Use the cached version of the dep-graph</h3>
+
+<p>Nx caches the dependency graph from previous operations in the <code>node_modules/.cache/nx/nxdeps.json</code>. Hence, we can directly use that cached version:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">const</span> <span class="nx">nxDeps</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;.cache/nx/nxdeps.json&#39;</span><span class="p">);</span>
+<span class="p">...</span>
+</code></pre></div>
+<p>Obviously, be aware that this file might change and thus break your code.</p>
+
+<h2 id="approach-5-print-affected-apps-libs">Approach 5: Print Affected Apps &amp; Libs</h2>
 
 <p>The above mentioned <strong>approach 3</strong> gives you already a lot of flexibility because it allows you to filter and manipulate the resulting JSON output.</p>
 
