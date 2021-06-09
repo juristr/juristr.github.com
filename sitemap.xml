@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2021/06/create-nextjs-webapp-nx/</loc>
+    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2021/04/angular-di-and-lazy-modules/</loc>
     <lastmod>2021-04-20T08:40:00+01:00</lastmod>
   </url>
@@ -4070,7 +4078,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2021-04-20T08:40:00+01:00</lastmod>
+    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
   </url>
   
   
@@ -4254,7 +4262,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2021-04-20T08:40:00+01:00</lastmod>
+    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4701,6 +4709,24 @@
   
   
   <url>
+    <loc>https://juristr.com/categories/nextjs/</loc>
+    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/nextjs/</loc>
+    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/categories/node.js/</loc>
     <lastmod>2020-09-02T02:19:00+02:00</lastmod>
     <priority>0</priority>
@@ -4834,7 +4860,7 @@
   
   <url>
     <loc>https://juristr.com/tags/reactjs/</loc>
-    <lastmod>2020-12-11T10:40:00+01:00</lastmod>
+    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   

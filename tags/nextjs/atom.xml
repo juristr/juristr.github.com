@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nextjs on juri.dev</title>
+    <link>https://juristr.com/tags/nextjs/</link>
+    <description>Recent content in Nextjs on juri.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Juri Strumpflohner - All rights reserved</copyright>
+    <lastBuildDate>Wed, 09 Jun 2021 08:40:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://juristr.com/tags/nextjs/atom.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create a Next.js web app with Nx</title>
+      <link>https://juristr.com/blog/2021/06/create-nextjs-webapp-nx/</link>
+      <pubDate>Wed, 09 Jun 2021 08:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/06/create-nextjs-webapp-nx/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In this article, we&amp;rsquo;re going to explore how to create our very first web application with Next.js and Nx. We&amp;rsquo;re going to learn about the anatomy of a Nx based workspace, how to generate one, and specifically how to setup our Next.js application. Finally, we&amp;rsquo;re also going to create our blog&amp;rsquo;s about page and learn about some handy Next.js features.
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
