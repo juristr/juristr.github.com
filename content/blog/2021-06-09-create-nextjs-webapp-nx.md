@@ -4,8 +4,8 @@ title: Create a Next.js web app with Nx
 date: 2021-06-09T08:40:00+01:00
 lead: Let's explore some of the particularities of the Angular dependency injection mechanism
 url: /blog/2021/06/create-nextjs-webapp-nx
-draft: true
-image: /blog/assets/imgs/di-lazy-modules.png
+draft: false
+image: /blog/assets/imgs/nextjs-nx-series/bg-create-nextjs-nx.jpg
 categories:
   - nextjs
 tags:
@@ -20,6 +20,21 @@ In this article, we're going to explore how to create our very first web applica
 <!--more-->
 
 {{< postad >}}
+
+#### Building a blog with Next.js and Nx Series
+
+This article is part of a series around building a blog with Nx, Next.js, Tailwind, Storybook and Cypress.
+
+- **Create a Next.js web app with Nx**
+-  Setup Next.js to use Tailwind with Nx _(soon)_
+-  Read and render Markdown files with Next.js and Nx _(soon)_
+-  Component hydration with MDX in Next.js and Nx _(soon)_
+-  Hot Reload MDX changes in Next.js with Nx _(soon)_
+-  Use Storybook with Next.js, Tailwind and Nx to develop components in isolation  _(soon)_
+-  Use Cypress with Next.js and Nx to battle test your React Components _(soon)_
+-  Publishing a Next.js site to Vercel with Nx _(soon)_
+
+_Check back later, [follow me on Twitter](https://twitter.com/juristr) or [subscribe to the Newsletter](/newsletter) to get updates about upcoming articles_
 
 {{<toc>}}
 
@@ -137,8 +152,6 @@ npx nx generate @nrwl/next:page --name=about --style=css
 ..generates a new `about.tsx` (with its according styling file).
 
 ```tsx
-import React from 'react';
-
 import './about.module.scss';
 
 /* eslint-disable-next-line */
@@ -157,7 +170,7 @@ export default About;
 
 > Btw, if you're not the terminal kind of person, you can also use the [Nx Console VSCode](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console) plugin.
 
-If we now open up our about page, we should see something like the following:
+If we now serve our app with `npx nx serve site` and navigate to `/about`, we should see something like the following:
 
 {{<figure url="/blog/assets/imgs/nextjs-nx-series/next-webapp-running.png" size="full">}}
 
@@ -176,6 +189,15 @@ return {
 We can write our `getStaticProps` as follows:
 
 ```tsx
+// apps/site/pages/about.tsx
+import { GetStaticProps } from 'next';
+...
+
+export interface AboutProps {
+  name: string;
+}
+...
+
 export const getStaticProps: GetStaticProps<AboutProps> = async (context) => {
   return {
     props: {
@@ -212,7 +234,7 @@ export const getStaticProps: GetStaticProps<AboutProps> = async (context) => {
 If we want to create a blog, we'll want to load pages dynamically. So we cannot really give them a static name as we did with our About page (`about.tsx`).
 
 ```bash
-nx generate @nrwl/next:page --name=[slug] --style=scss --directory=articles
+nx generate @nrwl/next:page --name=[slug] --style=none --directory=articles
 ```
 
 This generates a new `articles` folder with a new `[slug].tsx` file. The `[slug]` part is where Next.js understands it is dynamic and needs to be filled accordingly. Let's also clean up the generated part a bit, changing the React component name to `Article` as well as the corresponding TS interface.
@@ -220,7 +242,14 @@ This generates a new `articles` folder with a new `[slug].tsx` file. The `[slug]
 So first of all let's focus on the `getStaticPaths` function which we define as follows:
 
 ```tsx
-export const getStaticPaths: GetStaticPaths<StaticPathProps> = async () => {
+// apps/site/pages/articles/[slug].tsx
+import { ParsedUrlQuery } from 'querystring';
+
+interface ArticleProps extends ParsedUrlQuery {
+  slug: string;
+}
+
+export const getStaticPaths: GetStaticPaths<ArticleProps> = async () => {
   ...
 }
 ```
@@ -257,7 +286,7 @@ From a mental model, this would instruct Next.js to "generate" (obviously it doe
 This would be the place where you would go and read your file system or query the API for all the pages you wanna render. But more about that later. To simplify things, let us just generate a set of "pages":
 
 ```tsx
-export const getStaticPaths: GetStaticPaths<StaticPathProps> = async () => {
+export const getStaticPaths: GetStaticPaths<ArticleProps> = async () => {
   return {
     paths: [1, 2, 3].map((idx) => {
       return {
@@ -279,7 +308,7 @@ In this simple scenario we just pass it along:
 export const getStaticProps: GetStaticProps<ArticleProps> = async ({
   params,
 }: {
-  params: StaticPathProps;
+  params: ArticleProps;
 }) => {
   return {
     props: {
@@ -362,3 +391,6 @@ So here's what we learned:
 - About the Nx workspace anatomy
 - How to generate new pages such as our site's about page
 - How to generate pages dynamically based on some slug and what role `getStaticProps` and `getStaticPaths` play with that. This part will be particularly useful to generate our blog post articles
+
+**GitHub repository**  
+All the sources for this article can be found in this GitHub repository's branch: https://github.com/juristr/blog-series-nextjs-nx
