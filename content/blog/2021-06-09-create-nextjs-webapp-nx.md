@@ -21,8 +21,7 @@ In this article, we're going to explore how to create our very first web applica
 
 {{< postad >}}
 
-#### Building a blog with Next.js and Nx Series
-
+**Building a blog with Next.js and Nx Series**  
 This article is part of a series around building a blog with Nx, Next.js, Tailwind, Storybook and Cypress.
 
 - **Create a Next.js web app with Nx**
