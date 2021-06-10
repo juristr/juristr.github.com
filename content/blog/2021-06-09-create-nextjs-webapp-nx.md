@@ -2,7 +2,7 @@
 type: post
 title: Create a Next.js web app with Nx
 date: 2021-06-09T08:40:00+01:00
-lead: Let's explore some of the particularities of the Angular dependency injection mechanism
+lead: Learn about the powerful combination of Next.js and Nx
 url: /blog/2021/06/create-nextjs-webapp-nx
 draft: false
 image: /blog/assets/imgs/nextjs-nx-series/bg-create-nextjs-nx.jpg
