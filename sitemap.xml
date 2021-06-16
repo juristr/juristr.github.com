@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2021/06/setup-tailwind-nextjs-and-nx/</loc>
+    <lastmod>2021-06-15T08:40:00+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2021/06/create-nextjs-webapp-nx/</loc>
     <lastmod>2021-06-09T08:40:00+01:00</lastmod>
   </url>
@@ -4078,7 +4086,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
+    <lastmod>2021-06-15T08:40:00+01:00</lastmod>
   </url>
   
   
@@ -4262,7 +4270,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
+    <lastmod>2021-06-15T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4710,7 +4718,7 @@
   
   <url>
     <loc>https://juristr.com/categories/nextjs/</loc>
-    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
+    <lastmod>2021-06-15T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4719,7 +4727,7 @@
   
   <url>
     <loc>https://juristr.com/tags/nextjs/</loc>
-    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
+    <lastmod>2021-06-15T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4860,7 +4868,7 @@
   
   <url>
     <loc>https://juristr.com/tags/reactjs/</loc>
-    <lastmod>2021-06-09T08:40:00+01:00</lastmod>
+    <lastmod>2021-06-15T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4987,6 +4995,15 @@
   <url>
     <loc>https://juristr.com/tags/</loc>
     <lastmod>2019-01-11T10:53:38+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/tailwindcss/</loc>
+    <lastmod>2021-06-15T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   

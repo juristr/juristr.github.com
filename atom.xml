@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 09 Jun 2021 08:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jun 2021 08:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Setup Next.js to use Tailwind with Nx</title>
+      <link>https://juristr.com/blog/2021/06/setup-tailwind-nextjs-and-nx/</link>
+      <pubDate>Tue, 15 Jun 2021 08:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/06/setup-tailwind-nextjs-and-nx/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In the &lt;a href=&#34;https://juristr.com/blog/2021/06/create-nextjs-webapp-nx&#34;&gt;previous article&lt;/a&gt; we learned how to setup Next.js in an Nx workspace. In this article we carry that forward, by adding &lt;a href=&#34;https://tailwindcss.com/&#34;&gt;TailwindCSS&lt;/a&gt; support to our setup.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Create a Next.js web app with Nx</title>
