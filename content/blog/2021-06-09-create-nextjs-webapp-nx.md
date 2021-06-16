@@ -25,7 +25,7 @@ In this article, we're going to explore how to create our very first web applica
 This article is part of a series around building a blog with Nx, Next.js, Tailwind, Storybook and Cypress.
 
 - **Create a Next.js web app with Nx**
--  Setup Next.js to use Tailwind with Nx _(soon)_
+-  [Setup Next.js to use Tailwind with Nx](/blog/2021/06/setup-tailwind-nextjs-and-nx)
 -  Read and render Markdown files with Next.js and Nx _(soon)_
 -  Component hydration with MDX in Next.js and Nx _(soon)_
 -  Hot Reload MDX changes in Next.js with Nx _(soon)_
