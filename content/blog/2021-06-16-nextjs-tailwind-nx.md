@@ -27,7 +27,7 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 
 - [Create a Next.js web app with Nx](/blog/2021/06/create-nextjs-webapp-nx)
 -  **Setup Next.js to use Tailwind with Nx**
--  Read and render Markdown files with Next.js and Nx _(soon)_
+- [Read and render Markdown files with Next.js and Nx](/blog/2021/06/read-render-markdown-nextjs-and-nx)
 -  Component hydration with MDX in Next.js and Nx _(soon)_
 -  Hot Reload MDX changes in Next.js with Nx _(soon)_
 -  Use Storybook with Next.js, Tailwind and Nx to develop components in isolation  _(soon)_
