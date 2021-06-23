@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Tue, 15 Jun 2021 08:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 23 Jun 2021 08:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/blog/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Read and render MD files with Next.js and Nx</title>
+      <link>https://juristr.com/blog/2021/06/read-render-markdown-nextjs-and-nx/</link>
+      <pubDate>Wed, 23 Jun 2021 08:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/06/read-render-markdown-nextjs-and-nx/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In the previous article, we looked into how to setup &lt;a href=&#34;https://juristr.com/blog/2021/06/setup-tailwind-nextjs-and-nx&#34;&gt;Tailwind with Next.js and Nx workspace&lt;/a&gt;.
+In this article we are going to learn how to use Next.js to read files from the file system, to parse the Markdown, and to render it to HTML. In particular, we&amp;rsquo;re going to see how Nx helps us generate code and organize the features into Nx libraries. Rendering Markdown files is an essential part of creating a JAMStack application. For our blog platform, we are going to write articles in Markdown, which should then be parsed and rendered properly.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Setup Next.js to use Tailwind with Nx</title>
