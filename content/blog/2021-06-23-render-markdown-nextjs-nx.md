@@ -4,7 +4,7 @@ title: Read and render MD files with Next.js and Nx
 date: 2021-06-23T08:40:00+01:00
 lead: Learn how to use Next.js, Nx and Tailwind together
 url: /blog/2021/06/read-render-markdown-nextjs-and-nx
-draft: true
+draft: false
 image: /blog/assets/imgs/nextjs-nx-series/bg-nextjs-md-rendering.jpg
 categories:
   - nextjs
