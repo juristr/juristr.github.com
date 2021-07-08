@@ -260,7 +260,7 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 <li><a href="/blog/2021/06/create-nextjs-webapp-nx">Create a Next.js web app with Nx</a></li>
 <li><strong>Setup Next.js to use Tailwind with Nx</strong></li>
 <li><a href="/blog/2021/06/read-render-markdown-nextjs-and-nx">Read and render Markdown files with Next.js and Nx</a></li>
-<li>Component hydration with MDX in Next.js and Nx <em>(soon)</em></li>
+<li><a href="/blog/2021/07/component-hydration-nextjs-nx">Component hydration with MDX in Next.js and Nx</a></li>
 <li>Hot Reload MDX changes in Next.js with Nx <em>(soon)</em></li>
 <li>Use Storybook with Next.js, Tailwind and Nx to develop components in isolation  <em>(soon)</em></li>
 <li>Use Cypress with Next.js and Nx to battle test your React Components <em>(soon)</em></li>
@@ -487,14 +487,17 @@ import <span class="s1">&#39;tailwindcss/tailwind.css&#39;</span><span class="p"
 <p>To solve this, we can dynamically calculate the glob pattern based on which <code>libs</code> our Next.js app depends on. <a href="https://nx.dev/latest/react/structure/dependency-graph">Nx has a dependency graph</a>, which can not only be used to visualize, but we can also <a href="https://juristr.com/blog/2020/09/use-nx-dep-graph-in-custom-scripts/">leverage it in our custom scripts</a>. Luckily we don&rsquo;t have to create our own script since in <strong>Nx v12.4.0</strong> we added some utility functions that allow us to easily generate glob patterns based on the apps&rsquo; dependencies.</p>
 
 <p>Change your <code>tailwind.config.js</code> to the following:</p>
-<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="k">const</span> <span class="p">{</span> <span class="nx">createGlobPatternsOfDependentProjects</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nrwl/next&#39;</span><span class="p">);</span>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">// apps/site/tailwind.config.js
+</span><span class="c1"></span>
+<span class="c1">// available since Nx v 12.5
+</span><span class="c1"></span><span class="k">const</span> <span class="p">{</span> <span class="nx">createGlobPatternsForDependencies</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nrwl/next/tailwind&#39;</span><span class="p">);</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../../tailwind-workspace-preset.js&#39;</span><span class="p">)],</span>
   <span class="nx">purge</span><span class="o">:</span> <span class="p">[</span>
     <span class="s1">&#39;./apps/site/pages/**/*.{js,ts,jsx,tsx}&#39;</span><span class="p">,</span>
     <span class="s1">&#39;./apps/site/components/**/*.{js,ts,jsx,tsx}&#39;</span><span class="p">,</span>
-    <span class="p">...</span><span class="nx">createGlobPatternsOfDependentProjects</span><span class="p">(</span><span class="s1">&#39;site&#39;</span><span class="p">),</span>
+    <span class="p">...</span><span class="nx">createGlobPatternsForDependencies</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">),</span>
   <span class="p">],</span>
   <span class="nx">darkMode</span><span class="o">:</span> <span class="s1">&#39;media&#39;</span><span class="p">,</span> <span class="c1">// or &#39;media&#39; or &#39;class&#39;
 </span><span class="c1"></span>  <span class="nx">theme</span><span class="o">:</span> <span class="p">{</span>
@@ -505,12 +508,12 @@ import <span class="s1">&#39;tailwindcss/tailwind.css&#39;</span><span class="p"
   <span class="p">},</span>
   <span class="nx">plugins</span><span class="o">:</span> <span class="p">[],</span>
 <span class="p">};</span></code></pre></div>
-<p>Note how we import the <code>createGlobPatternsOfDependentPojects</code> function from <code>@nrwl/next</code> and pass it the project name. What the function does is simply create a list of paths of potential libs our app depends on. For example, consider we depend on a lib <code>ui</code> and <code>core</code> the resulting generated paths would look like</p>
+<p>Note how we import the <code>createGlobPatternsForDependencies</code> function from <code>@nrwl/next/tailwind</code> and pass it the current directory. What the function does is simply create a list of paths of potential libs our app depends on. For example, consider we depend on a lib <code>ui</code> and <code>core</code> the resulting generated paths would look like</p>
 <div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="err">/Users/yourname/juridev/libs/ui/src/**/!(*.stories|*.spec).tsx</span>
 <span class="err">/Users/yourname/juridev/libs/core/src/**/!(*.stories|*.spec).tsx</span></code></pre></div>
 <p><em>(The exact path obviously depends on your username, Nx workspace name and operating system)</em></p>
 
-<p>The glob pattern can be customized by specifying the 2nd parameter of the <code>createGlobPatternsOfDependentProjects</code> function.</p>
+<p>The glob pattern can be customized by specifying the 2nd parameter of the <code>createGlobPatternsForDependencies</code> function.</p>
 
 <p>Finally, to verify the purging works as intended, execute the build or export target on our app (<code>nx run site:build</code>). The resulting CSS file should be only a couple of KBs.</p>
 
@@ -583,6 +586,10 @@ All the sources for this article can be found in this GitHub repository&rsquo;s 
                     
                     <li>
                         <a href="/tags/reactjs">reactjs</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/markdown">markdown</a>
                     </li>
                     
                 </ul>

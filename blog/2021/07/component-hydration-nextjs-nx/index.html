@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Component hydration with MDX in Next.js and Nx | juri.dev</title>
+	
+	<meta name="description" content="Learn how to use Next.js, Nx and Tailwind together">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:creator" content="@juristr" />
+	<meta name="twitter:title" content="Component hydration with MDX in Next.js and Nx" />
+	
+	<meta name="twitter:description" content="Learn how to use Next.js, Nx and Tailwind together" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/nextjs-nx-series/next-mdx-bg.jpg" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Component hydration with MDX in Next.js and Nx" />
+	
+	<meta property="og:description" content="Learn how to use Next.js, Nx and Tailwind together" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/nextjs-nx-series/next-mdx-bg.jpg" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2021/07/component-hydration-nextjs-nx" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://developers.google.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.dev</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2021%2f07%2fcomponent-hydration-nextjs-nx%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2021%2f07%2fcomponent-hydration-nextjs-nx%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops. Juri is also a recognized Google Developer Expert in Web Technologies</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Component hydration with MDX in Next.js and Nx</h1>
+                
+                <h2 class="article-subtitle">Learn how to use Next.js, Nx and Tailwind together</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Jul 8, 2021
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">10 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers?af=fj2vsx" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                <div class="article-intro">
+    In the <a href="/blog/2021/06/read-render-markdown-nextjs-and-nx/">previous article</a>, we explored how to render Markdown with Next.js as well as how Nx can help by moving the markdown-related processing logic into its own library. In this article, we&rsquo;re going to explore how to dynamically hydrate React components with MDX and Next.js.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p><strong>Building a blog with Next.js and Nx Series</strong><br />
+This article is part of a series around building a blog with Nx, Next.js, Tailwind, Storybook and Cypress.</p>
+
+<ul>
+<li><a href="/blog/2021/06/create-nextjs-webapp-nx">Create a Next.js web app with Nx</a></li>
+<li><a href="/blog/2021/06/setup-tailwind-nextjs-and-nx/">Setup Next.js to use Tailwind with Nx</a></li>
+<li><a href="/blog/2021/06/read-render-markdown-nextjs-and-nx/">Read and render Markdown files with Next.js and Nx</a></li>
+<li><strong>Component hydration with MDX in Next.js and Nx</strong></li>
+<li>Hot Reload MDX changes in Next.js with Nx <em>(soon)</em></li>
+<li>Use Storybook with Next.js, Tailwind and Nx to develop components in isolation  <em>(soon)</em></li>
+<li>Use Cypress with Next.js and Nx to battle test your React Components <em>(soon)</em></li>
+<li>Publishing a Next.js site to Vercel with Nx <em>(soon)</em></li>
+</ul>
+
+<p><em>Check back later, <a href="https://twitter.com/juristr">follow me on Twitter</a> or <a href="/newsletter">subscribe to the Newsletter</a> to get updates about upcoming articles</em></p>
+
+<hr />
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#generate-a-youtube-component">Generate a Youtube Component</a></li>
+<li><a href="#mdx-options-with-next-js">MDX options with Next.js</a></li>
+<li><a href="#install-dependencies">Install dependencies</a></li>
+<li><a href="#render-mdx-files-to-html">Render MDX files to HTML</a></li>
+<li><a href="#rehydrating-components-with-mdx">Rehydrating components with MDX</a></li>
+<li><a href="#interesting-next-mdx-remote-and-next-js-features">Interesting next-mdx-remote and Next.js features</a>
+<ul>
+<li><a href="#dynamic-loading-of-components">Dynamic loading of components</a></li>
+<li><a href="#overriding-existing-html-elements">Overriding existing HTML elements</a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<hr />
+
+<p>Markdown already gives a lot of flexibility in that you can use both, the Markdown syntax as well as plain HTML for links or embedded content. Many of the common static site generators such as <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://gohugo.io/">Hugo</a> (just to name a few), provide so-called &ldquo;includes&rdquo;. These are basically snippets or macros that get executed during the static site generation and usually produce a piece of HTML that gets embedded into the existing markdown rendered content. Take for instance the following Hugo snippet which allows to embed an <a href="http://egghead.io">Egghead.io</a> video into a page.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- egghead-lesson.html --&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;egghead-video-embed&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://egghead.io/{{ .Get &#34;</span><span class="na">uid</span><span class="err">&#34;</span> <span class="err">}}/</span><span class="na">embed</span><span class="err">&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;500px&#34;</span> <span class="na">loading</span><span class="o">=</span><span class="s">&#34;lazy&#34;</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://egghead.io/{{ .Get &#34;</span><span class="na">uid</span><span class="err">&#34;</span> <span class="err">}}&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;external-link&#34;</span> <span class="na">data-client</span><span class="o">=</span><span class="s">&#34;eggheadio&#34;</span> <span class="na">data-uid</span><span class="o">=</span><span class="s">&#34;{{ .Get &#34;</span><span class="na">uid</span><span class="err">&#34;</span> <span class="err">}}&#34;</span><span class="p">&gt;</span>View on Egghead.io<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Within the markdown content, it can be used as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gu">##</span> Styling Angular HTML Elements
+<span class="err">
+</span><span class="err"></span>This is a recent video lesson I created:<span class="err">
+</span><span class="err">
+</span><span class="err"></span>{ {&lt;egghead-lesson uid=&#34;lessons/style-html-elements-in-angular-using-the-style-property&#34; &gt;}}</code></pre></div>
+<p>If we want to implement something similar with Next.js, the closest we’d go with is probably <a href="https://mdxjs.com/">MDX</a>.</p>
+
+<p>It basically is like JSX but allowing you to embed React components into a Markdown file.</p>
+
+<h2 id="generate-a-youtube-component">Generate a Youtube Component</h2>
+
+<p>Let&rsquo;s create a Youtube component that we can easily embed in our Markdown articles.</p>
+
+<p>To host the code for our components we could simply create a folder “components” within the Next.js app <code>site</code>to host all these reusable components. However, as we previously discussed, Nx recommends to move logic to the <code>libs</code> folder. Also, given these components are most probably highly reusable, and could also be used in other Next.js or React apps which might live in our Nx workspace (now or in the future), we&rsquo;re going to create a Nx React library under the <code>libs/shared</code> folder.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx g @nrwl/react:lib mdx-elements --directory<span class="o">=</span>shared --style<span class="o">=</span>css</code></pre></div>
+<blockquote>
+<p>Note, we use the <code>—directory</code> flag and pass <code>shared</code> to it because we want our new library to live within that subfolder. Using this flag allows you to futher structure your libs folder into some app specific features or components and more generally reusable ones.</p>
+</blockquote>
+
+<p>This command should generate the following structure:</p>
+
+
+<figure class="image--small">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/mdx-lib-folderdir.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/mdx-lib-folderdir.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<blockquote>
+<p>Note, apart from using <a href="https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console">Nx Console</a> to visually construct these commands, you can also always append <code>--dry-run</code> to see what the command would produce, without actually writing anything to the file system.</p>
+</blockquote>
+
+<p>The Nx React library generator already adds a default component <code>shared-mdx-elements</code>. We can remove it as we&rsquo;re not going to require it. That said, you can also directly append <code>-no-component</code> to the generator command to not have this default component generated.</p>
+
+<p>We want to generate a new React component <code>youtube</code> into our <code>mdx-elements</code> library. Again we can use Nx.</p>
+
+<p>Using Nx Console, we search for &ldquo;React component&rdquo;</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/nx-console-react-component.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/nx-console-react-component.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>And we fill in the necessary details into the form:</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/nx-console-react-cmp-detail.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/nx-console-react-cmp-detail.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>In the terminal you can also see the according command that would have led to the same result:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx generate @nrwl/react:component --name<span class="o">=</span>Youtube --project<span class="o">=</span>shared-mdx-elements --no-interactive </code></pre></div>
+<p>Finally, let&rsquo;s implement the component.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/shared/mdx-elements/src/lib/youtube/youtube.tsx
+</span><span class="c1"></span><span class="kr">import</span> <span class="s1">&#39;./youtube.module.css&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">interface</span> <span class="nx">YoutubeProps</span> <span class="p">{</span>
+  <span class="nx">title</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">uid</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">Youtube</span><span class="p">(</span><span class="nx">props</span>: <span class="kt">YoutubeProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;youtube-embed&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">iframe</span>
+        <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="sb">`https://www.youtube.com/embed/</span><span class="si">${</span><span class="nx">props</span><span class="p">.</span><span class="nx">uid</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span>
+        <span class="nx">width</span><span class="o">=</span><span class="s2">&#34;100%&#34;</span>
+        <span class="nx">height</span><span class="o">=</span><span class="s2">&#34;500px&#34;</span>
+        <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span>
+      <span class="o">&gt;&lt;</span><span class="err">/iframe&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Youtube</span><span class="p">;</span></code></pre></div>
+<p>In addition, we create a new file <code>mdx-elements.ts</code> to group all the components we want to use within our MDX files and export them.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/shared/mdx-elements/src/lib/mdx-elements.ts
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Youtube</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./youtube/youtube&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">mdxElements</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">Youtube</span><span class="p">,</span>
+<span class="p">};</span></code></pre></div>
+<p>Note, you can also re-map the components, like</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">mdxElements</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="nx">video</span>: <span class="kt">Youtube</span>
+<span class="p">}</span></code></pre></div>
+<p>With this change, you basically created an &ldquo;alias&rdquo; and hence you could use <code>&lt;video...&gt;</code> in your markdown file rather than <code>&lt;Youtube ...&gt;</code>.</p>
+
+<p>In order to be able to use our <code>mdxEements</code> and import it from within other JavaScript modules, we export them in the <code>index.ts</code> file of our library, which represents our public API for other libs and apps within our Nx workspace. We will need those <code>mdxElements</code> later in the article.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/shared/mdx-elements/src/index.ts
+</span><span class="c1"></span><span class="kr">export</span> <span class="o">*</span> <span class="nx">from</span> <span class="s1">&#39;./lib/mdx-elements&#39;</span><span class="p">;</span></code></pre></div>
+<p>With that, we can now import them in other components like</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">import</span> <span class="p">{</span> <span class="nx">mdxElements</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@juridev/shared/mdx-elements&#39;</span><span class="p">;</span></code></pre></div>
+<p>Alright, our shared components we want to use within our Markdown files are ready now. But before being able to use them, we need to make a couple of changes to our current Markdown rendering implementation. Mainly we now need to make sure these embedded components get hydrated properly.</p>
+
+<h2 id="mdx-options-with-next-js">MDX options with Next.js</h2>
+
+<p>Now that we have a component to use in our MDX content, let&rsquo;s actually implement the loading of MDX files with Next.js.</p>
+
+<p>As of writing this article there are basically two options for using MDX with Next.js</p>
+
+<ul>
+<li><code>@next/mdx</code></li>
+<li><code>next-mdx-remote</code></li>
+</ul>
+
+<p>From the <a href="https://nextjs.org/blog/markdown">official Next.js docs</a>:</p>
+
+<blockquote>
+<p>To use MDX with Next.js, your approach will differ based on your data source location. For local content, you can use the <code>@next/mdx</code> package. This allows you to create pages directly with the <code>.mdx</code> extension inside your pages/ folder. For remote data, one option is to use <code>next-mdx-remote</code> (a community project) to fetch your Markdown content inside getStaticProps / getStaticPaths.</p>
+</blockquote>
+
+<p>In this article I&rsquo;ll use <code>next-mdx-remote</code>, not necessarily because we&rsquo;re loading it remotely but we have an <code>_article</code> folder outside our <code>pages</code> folder, which we want to load in our <code>getStaticProps</code> page.</p>
+
+<h2 id="install-dependencies">Install dependencies</h2>
+
+<p>First of, let&rsquo;s install a couple of libraries which we&rsquo;re gonna need as we develop this new functionality.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="nx">yarn</span> <span class="nx">add</span> <span class="nx">next</span><span class="o">-</span><span class="nx">mdx</span><span class="o">-</span><span class="nx">remote</span> 
+<span class="nx">yarn</span> <span class="nx">add</span> <span class="nx">next</span><span class="o">-</span><span class="nx">remote</span><span class="o">-</span><span class="nx">watch</span></code></pre></div>
+<h2 id="render-mdx-files-to-html">Render MDX files to HTML</h2>
+
+<p>We don&rsquo;t need to change anything in our <code>GetStaticProps</code> function in <code>apps/site/pages/articles/[slug].txs</code> . That&rsquo;s because we previously extracted all markdown rendering logic into a dedicated library located in <code>libs/markdown</code>. That&rsquo;s where the change is going to happen.</p>
+
+<p>Open  <code>libs/markdown/src/lib/markdown.ts</code> which is where we have our <code>renderMarkdown</code> function. Right now we&rsquo;re calling <code>markdownToHtml</code> which lives in a separate file in our library that uses <code>remark</code>. We can delete <code>libs/markdown/src/lib/markdownToHtml.ts</code> entirely as we won&rsquo;t need any more and remove the two packages from our dependencies:</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="nx">yarn</span> <span class="nx">remove</span> <span class="nx">remark</span>
+<span class="nx">yarn</span> <span class="nx">remove</span> <span class="nx">remark</span><span class="o">-</span><span class="nx">html</span></code></pre></div>
+<p>Furthermore, our <code>renderMarkdown</code> function is going to be very simple, by just importing the <code>serialize</code> function from <code>next-mdx-remote/serialize</code> and passing the content to it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/markdown/src/lib/markdown.ts
+</span><span class="c1"></span><span class="p">...</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">serialize</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next-mdx-remote/serialize&#39;</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">renderMarkdown</span> <span class="o">=</span> <span class="p">(</span><span class="nx">markdownContent</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">serialize</span><span class="p">(</span><span class="nx">markdownContent</span> <span class="o">||</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="p">};</span></code></pre></div>
+<p>We also now don&rsquo;t return HTML anymore, but rather a <code>MDXRemoteSerializeResult</code> type. Let&rsquo;s adjust the interface in <code>types.ts</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/markdown/src/lib/types.ts
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">MDXRemoteSerializeResult</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next-mdx-remote&#39;</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="kr">export</span> <span class="kr">interface</span> <span class="nx">MarkdownRenderingResult</span> <span class="p">{</span>
+  <span class="nx">frontMatter</span>: <span class="kt">FrontMatter</span><span class="p">;</span>
+  <span class="nx">html</span>: <span class="kt">MDXRemoteSerializeResult</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="rehydrating-components-with-mdx">Rehydrating components with MDX</h2>
+
+<p>Inside the React page component, we can then use that <code>mdxSource</code> (note that it gets exported as <code>html</code> inside <code>props</code>) to rehydrate the react components potentially present in the MDX content.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// apps/site/pages/articles/[slug].tsx
+</span><span class="c1"></span>
+<span class="p">...</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">MDXRemote</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next-mdx-remote&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">mdxElements</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@juridev/shared/mdx-elements&#39;</span><span class="p">;</span>
+
+<span class="p">...</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">Article</span><span class="p">({</span> <span class="nx">frontMatter</span><span class="p">,</span> <span class="nx">html</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;md:container md:mx-auto&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">article</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;text-3xl font-bold hover:text-gray-700 pb-4&#34;</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="nx">frontMatter</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="err">/h1&gt;</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">by</span> <span class="p">{</span><span class="nx">frontMatter</span><span class="p">.</span><span class="nx">author</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+        <span class="o">&lt;</span><span class="nx">hr</span> <span class="err">/&gt;</span>
+
+        <span class="o">&lt;</span><span class="nx">MDXRemote</span> <span class="p">{...</span><span class="nx">html</span><span class="p">}</span> <span class="nx">components</span><span class="o">=</span><span class="p">{</span><span class="nx">mdxElements</span><span class="p">}</span> <span class="err">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/article&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span></code></pre></div>
+<p>Note the <code>MDXRemote</code> component we now use to embed the content into our page as well as the components we pass to the <code>MDXRemote</code> which are those we want to have hydrated.</p>
+
+<p>To finally see the hydrated component, let&rsquo;s <strong>rename</strong> our <code>*.md</code> files to <code>*.mdx</code> which is the usual extension you&rsquo;d use for MDX files. By doing that we also need to make sure to change the file extensions in</p>
+
+<ul>
+<li><code>libs/markdown/src/lib/markdown.ts:getParsedFileContentBySlug</code> function which currently reads the posts by searching for just <code>md</code> files.
+<code>const postFilePath = join(postsPath, ${slug}.mdx);</code></li>
+<li><code>apps/site/pages/articles/[slug].tsx:getStaticPaths</code> where we clean the file extension. We should change it to <code>.map((path) =&gt; path.replace(/\.mdx?$/, ''))</code></li>
+</ul>
+
+<p>Finally, we should now be able to use the Youtube component we initially created in our <code>_articles/dynamic-content.mdx</code> file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="o">---</span>
+<span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Dynamic Routing and Static Generation&#39;</span>
+<span class="nx">excerpt</span><span class="o">:</span> <span class="s1">&#39;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.&#39;</span>
+<span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2020-03-16T05:35:07.322Z&#39;</span>
+<span class="nx">author</span>:
+  <span class="kt">name</span><span class="o">:</span> <span class="nx">JJ</span> <span class="nx">Kasper</span>
+<span class="o">---</span>
+
+<span class="nx">Lorem</span> <span class="nx">ipsum</span> <span class="nx">dolor</span> <span class="nx">sit</span> <span class="nx">amet</span><span class="p">,</span> <span class="nx">consectetur</span> <span class="nx">adipiscing</span> <span class="nx">elit</span><span class="p">,</span> <span class="nx">sed</span> <span class="k">do</span> <span class="nx">eiusmod</span> <span class="nx">tempor</span> <span class="nx">incididunt</span> <span class="nx">ut</span> <span class="nx">labore</span> <span class="nx">et</span> <span class="nx">dolore</span> <span class="nx">magna</span> <span class="nx">aliqua</span><span class="p">.</span> <span class="nx">Praesent</span> <span class="nx">elementum</span> <span class="nx">facilisis</span> <span class="nx">leo</span> <span class="nx">vel</span> <span class="p">...</span>
+
+<span class="o">&lt;</span><span class="nx">Youtube</span> <span class="nx">uid</span><span class="o">=</span><span class="s2">&#34;9nDjLYXBCYM&#34;</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&#34;Nx for React in under 3 minutes&#34;</span> <span class="err">/&gt;</span></code></pre></div>
+<p>R<strong>unning our blog</strong> should now properly embed the Youtube video:</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/mdx-component-rendering.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/mdx-component-rendering.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h2 id="interesting-next-mdx-remote-and-next-js-features">Interesting next-mdx-remote and Next.js features</h2>
+
+<h3 id="dynamic-loading-of-components">Dynamic loading of components</h3>
+
+<p>Next.js also supports <a href="https://nextjs.org/docs/advanced-features/dynamic-import">dynamic loading of components</a>, using the <code>dynamic</code> function</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">import</span> <span class="nx">dynamic</span> <span class="nx">from</span> <span class="s1">&#39;next/dynamic&#39;</span></code></pre></div>
+<p>In our <code>libs/shared/mdx-elements/src/lib/mdx-elements.ts</code> we could rewrite our import to use the dynamic loading feature</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">import</span> <span class="nx">dynamic</span> <span class="nx">from</span> <span class="s1">&#39;next/dynamic&#39;</span><span class="p">;</span>
+
+<span class="c1">// import { Youtube } from &#39;./youtube/youtube&#39;;
+</span><span class="c1"></span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">mdxElements</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">Youtube</span>: <span class="kt">dynamic</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;./youtube/youtube&#39;</span><span class="p">)),</span>
+<span class="p">};</span></code></pre></div>
+<p><a href="https://github.com/vercel/next.js/tree/canary/examples/with-mdx-remote#conditional-custom-components">This GitHub example</a> from the official docs explains how this could be used together with <code>next-mdx-remote</code> to conditionally load heavy components, only when they are present in the Markdown. This is really handy when you have components loaded on just some pages and you wouldn&rsquo;t want to instantiate them always again, but rather just when they&rsquo;re used.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// https://github.com/vercel/next.js/tree/canary/examples/with-mdx-remote
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">dynamic</span> <span class="nx">from</span> <span class="s1">&#39;next/dynamic&#39;</span>
+<span class="kr">import</span> <span class="nx">Test</span> <span class="nx">from</span> <span class="s1">&#39;../components/test&#39;</span>
+
+<span class="kr">const</span> <span class="nx">SomeHeavyComponent</span> <span class="o">=</span> <span class="nx">dynamic</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;SomeHeavyComponent&#39;</span><span class="p">))</span>
+
+<span class="kr">const</span> <span class="nx">defaultComponents</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">Test</span> <span class="p">}</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">SomePage</span><span class="p">({</span> <span class="nx">mdxSource</span><span class="p">,</span> <span class="nx">componentNames</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">components</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">defaultComponents</span><span class="p">,</span>
+    <span class="nx">SomeHeavyComponent</span>: <span class="kt">componentNames.includes</span><span class="p">(</span><span class="s1">&#39;SomeHeavyComponent&#39;</span><span class="p">)</span>
+      <span class="o">?</span> <span class="nx">SomeHeavyComponent</span>
+      : <span class="kt">null</span><span class="p">,</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">MDXRemote</span> <span class="p">{...</span><span class="nx">mdxSource</span><span class="p">}</span> <span class="nx">components</span><span class="o">=</span><span class="p">{</span><span class="nx">components</span><span class="p">}</span> <span class="err">/&gt;</span>
+<span class="p">}</span></code></pre></div>
+<h3 id="overriding-existing-html-elements">Overriding existing HTML elements</h3>
+
+<p>Not only can we define new elements, but we can also override existing HTML elements. That way, for instance, we could override all links (<code>&lt;a&gt;</code> tags) on the page to add custom behavior to them. Let&rsquo;s try.</p>
+
+<p>First we create a new component which we can generate again:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx generate @nrwl/react:component --name<span class="o">=</span>CustomLink --project<span class="o">=</span>shared-mdx-elements --style<span class="o">=</span>css</code></pre></div>
+<p>And we implement it as follows:</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/shared/mdx-elements/src/lib/custom-link/custom-link.tsx
+</span><span class="c1"></span>
+<span class="kr">import</span> <span class="nx">Link</span> <span class="nx">from</span> <span class="s1">&#39;next/link&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;./custom-link.module.css&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">interface</span> <span class="nx">CustomLinkProps</span> <span class="p">{</span>
+  <span class="kr">as</span><span class="o">:</span> <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">href</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">CustomLink</span><span class="p">({</span> <span class="kr">as</span><span class="p">,</span> <span class="nx">href</span><span class="p">,</span> <span class="p">...</span><span class="nx">otherProps</span> <span class="p">}</span><span class="o">:</span> <span class="nx">CustomLinkProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Link</span> <span class="kr">as</span><span class="o">=</span><span class="p">{</span><span class="kr">as</span><span class="p">}</span> <span class="nx">href</span><span class="o">=</span><span class="p">{</span><span class="nx">href</span><span class="p">}</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">a</span> <span class="p">{...</span><span class="nx">otherProps</span><span class="p">}</span> <span class="err">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/Link&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">CustomLink</span><span class="p">;</span></code></pre></div>
+<p>Again in the <code>mdx-elements.tsx</code> we map it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">import</span> <span class="p">{</span> <span class="nx">MdxRemote</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next-mdx-remote/types&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">dynamic</span> <span class="nx">from</span> <span class="s1">&#39;next/dynamic&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CustomLink</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./custom-link/custom-link&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">mdxElements</span>: <span class="kt">MdxRemote.Components</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">a</span>: <span class="kt">CustomLink</span><span class="p">,</span>
+  <span class="nx">Youtube</span>: <span class="kt">dynamic</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="s1">&#39;./youtube/youtube&#39;</span><span class="p">)),</span>
+<span class="p">};</span></code></pre></div>
+<p>As a result, for every <code>&lt;a&gt;</code> tag in the rendered HTML, our custom <code>CustomLink</code> React component will be instantiated and will allow us to manipulate the logic. Obviously, this also works with any other HTML element.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this article, we learned:</p>
+
+<ul>
+<li>About the various MDX options we have with Next.js</li>
+<li>How to use Nx to generate a React library in our workspace as well as React components</li>
+<li>How to organize our components and export them s.t. they can be consumed from our Next.js application</li>
+<li>How to adjust the markdown rendering to add MDX support</li>
+</ul>
+
+<p>See also:</p>
+
+<ul>
+<li><a href="https://nextjs.org/blog/markdown">https://nextjs.org/blog/markdown</a></li>
+<li><a href="https://github.com/vercel/next.js/tree/canary/examples/with-mdx-remote">https://github.com/vercel/next.js/tree/canary/examples/with-mdx-remote</a></li>
+</ul>
+
+<p><strong>GitHub repository</strong><br />
+All the sources for this article can be found in this GitHub repository&rsquo;s branch: <a href="https://github.com/juristr/blog-series-nextjs-nx/tree/04-dynamic-markdown-mdx">https://github.com/juristr/blog-series-nextjs-nx/tree/04-dynamic-markdown-mdx</a></p>
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/nextjs">nextjs</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/TailwindCSS">TailwindCSS</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/reactjs">reactjs</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/markdown">markdown</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2021/06/read-render-markdown-nextjs-and-nx">Read and render MD files with Next.js and Nx</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to use Next.js, Nx and Tailwind together
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Jun 23, 2021</span><span class="dot"></span><span
+                                    class="post-read">12 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            <div class="svgicon" style="width: 140px">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div><div class="svgicon clean_code"></div>
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2021/06/setup-tailwind-nextjs-and-nx">Setup Next.js to use Tailwind with Nx</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to use Next.js, Nx and Tailwind together
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Jun 15, 2021</span><span class="dot"></span><span
+                                    class="post-read">8 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            <div class="svgicon" style="width: 140px">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div><div class="svgicon clean_code"></div>
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2021/06/create-nextjs-webapp-nx">Create a Next.js web app with Nx</a>
+        </h2>
+        <h4 class="card-text">
+            Learn about the powerful combination of Next.js and Nx
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Jun 9, 2021</span><span class="dot"></span><span
+                                    class="post-read">11 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            <div class="svgicon" style="width: 140px">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div><div class="svgicon clean_code"></div>
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js" defer></script>
+    
+
+    
+    
+    
+    <script>
+!function(t,e,a,c,x){var s='q';t[s]={publication_id:c,tags:x};
+var s=e.createElement(a),r=e.getElementsByTagName(a)[0];s.async=1,s.src=
+'https://insights.quiet.ly/app/analytics.min.js',r.parentNode.insertBefore(s,r)}
+(window,document,'script','87bcee90-0c51-4a68-a60b-e95df730d1ca','[]');
+</script>
+    
+ <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
