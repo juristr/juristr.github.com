@@ -8,9 +8,12 @@ draft: false
 image: /blog/assets/imgs/nextjs-nx-series/bg-create-nextjs-nx.jpg
 categories:
   - nextjs
+  - nx
 tags:
   - nextjs
+  - TailwindCSS
   - reactjs
+  - markdown
 comments: true
 ---
 {{<intro>}}
@@ -27,7 +30,7 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 - **Create a Next.js web app with Nx**
 - [Setup Next.js to use Tailwind with Nx](/blog/2021/06/setup-tailwind-nextjs-and-nx/)
 - [Read and render Markdown files with Next.js and Nx](/blog/2021/06/read-render-markdown-nextjs-and-nx)
--  Component hydration with MDX in Next.js and Nx _(soon)_
+- [Component hydration with MDX in Next.js and Nx](/blog/2021/07/component-hydration-nextjs-nx)
 -  Hot Reload MDX changes in Next.js with Nx _(soon)_
 -  Use Storybook with Next.js, Tailwind and Nx to develop components in isolation  _(soon)_
 -  Use Cypress with Next.js and Nx to battle test your React Components _(soon)_

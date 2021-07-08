@@ -8,10 +8,12 @@ draft: false
 image: /blog/assets/imgs/nextjs-nx-series/bg-tailwind-next-nx.jpg
 categories:
   - nextjs
+  - nx
 tags:
   - nextjs
   - TailwindCSS
   - reactjs
+  - markdown
 comments: true
 ---
 {{<intro>}}
@@ -28,7 +30,7 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 - [Create a Next.js web app with Nx](/blog/2021/06/create-nextjs-webapp-nx)
 -  **Setup Next.js to use Tailwind with Nx**
 - [Read and render Markdown files with Next.js and Nx](/blog/2021/06/read-render-markdown-nextjs-and-nx)
--  Component hydration with MDX in Next.js and Nx _(soon)_
+- [Component hydration with MDX in Next.js and Nx](/blog/2021/07/component-hydration-nextjs-nx)
 -  Hot Reload MDX changes in Next.js with Nx _(soon)_
 -  Use Storybook with Next.js, Tailwind and Nx to develop components in isolation  _(soon)_
 -  Use Cypress with Next.js and Nx to battle test your React Components _(soon)_
@@ -250,14 +252,17 @@ To solve this, we can dynamically calculate the glob pattern based on which `lib
 Change your `tailwind.config.js` to the following:
 
 ```jsx
-const { createGlobPatternsOfDependentProjects } = require('@nrwl/next');
+// apps/site/tailwind.config.js
+
+// available since Nx v 12.5
+const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 
 module.exports = {
   presets: [require('../../tailwind-workspace-preset.js')],
   purge: [
     './apps/site/pages/**/*.{js,ts,jsx,tsx}',
     './apps/site/components/**/*.{js,ts,jsx,tsx}',
-    ...createGlobPatternsOfDependentProjects('site'),
+    ...createGlobPatternsForDependencies(__dirname),
   ],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
@@ -270,7 +275,7 @@ module.exports = {
 };
 ```
 
-Note how we import the `createGlobPatternsOfDependentPojects` function from `@nrwl/next` and pass it the project name. What the function does is simply create a list of paths of potential libs our app depends on. For example, consider we depend on a lib `ui` and `core` the resulting generated paths would look like
+Note how we import the `createGlobPatternsForDependencies` function from `@nrwl/next/tailwind` and pass it the current directory. What the function does is simply create a list of paths of potential libs our app depends on. For example, consider we depend on a lib `ui` and `core` the resulting generated paths would look like
 
 ```tsx
 /Users/yourname/juridev/libs/ui/src/**/!(*.stories|*.spec).tsx
@@ -278,7 +283,7 @@ Note how we import the `createGlobPatternsOfDependentPojects` function from `@nr
 ```
 _(The exact path obviously depends on your username, Nx workspace name and operating system)_
 
-The glob pattern can be customized by specifying the 2nd parameter of the `createGlobPatternsOfDependentProjects` function.
+The glob pattern can be customized by specifying the 2nd parameter of the `createGlobPatternsForDependencies` function.
 
 Finally, to verify the purging works as intended, execute the build or export target on our app (`nx run site:build`). The resulting CSS file should be only a couple of KBs.
 
