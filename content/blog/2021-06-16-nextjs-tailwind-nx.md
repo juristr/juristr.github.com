@@ -64,16 +64,18 @@ That should generate both of the configuration files directly into the root of o
 Make sure you adjust our `postcss.config.js` to properly point to our tailwind config file.
 
 ```js
+// apps/site/postcss.config.js
+const { join } = require('path');
+
 module.exports = {
   plugins: {
     tailwindcss: {
-      config: './apps/site/tailwind.config.js',
+      config: join(__dirname, 'tailwind.config.js'),
     },
     autoprefixer: {},
   },
 };
 ```
-
 ## Include the TailwindCSS styles
 
 There are two options for including the Tailwind CSS files:
@@ -192,6 +194,7 @@ yarn add @tailwindcss/typography
 Next, we add it to our `tailwind-workspace-preset.js`
 
 ```tsx
+// tailwind-workspace-preset.js
 module.exports = {
   theme: {
     extend: {},
@@ -236,10 +239,11 @@ To enable purging, open the `tailwind.config.js` for the `site` app and add the 
 
 ```jsx
 // apps/site/tailwind.config.js
+const { join } = require('path');
+
 module.exports = {
   purge: [
-    './apps/site/pages/**/*.{js,ts,jsx,tsx}',
-    './apps/site/components/**/*.{js,ts,jsx,tsx}'
+    join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}')
   ],
   ...
 };
@@ -253,6 +257,7 @@ Change your `tailwind.config.js` to the following:
 
 ```jsx
 // apps/site/tailwind.config.js
+const { join } = require('path');
 
 // available since Nx v 12.5
 const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
@@ -260,8 +265,7 @@ const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 module.exports = {
   presets: [require('../../tailwind-workspace-preset.js')],
   purge: [
-    './apps/site/pages/**/*.{js,ts,jsx,tsx}',
-    './apps/site/components/**/*.{js,ts,jsx,tsx}',
+    join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   darkMode: 'media', // or 'media' or 'class'
