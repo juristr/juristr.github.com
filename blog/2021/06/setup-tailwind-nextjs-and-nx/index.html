@@ -308,10 +308,13 @@ npx tailwindcss init -p </code></pre></div>
 <p>That should generate both of the configuration files directly into the root of our Next.js application.</p>
 
 <p>Make sure you adjust our <code>postcss.config.js</code> to properly point to our tailwind config file.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// apps/site/postcss.config.js
+</span><span class="c1"></span><span class="k">const</span> <span class="p">{</span> <span class="nx">join</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">plugins</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">tailwindcss</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">config</span><span class="o">:</span> <span class="s1">&#39;./apps/site/tailwind.config.js&#39;</span><span class="p">,</span>
+      <span class="nx">config</span><span class="o">:</span> <span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;tailwind.config.js&#39;</span><span class="p">),</span>
     <span class="p">},</span>
     <span class="nx">autoprefixer</span><span class="o">:</span> <span class="p">{},</span>
   <span class="p">},</span>
@@ -427,7 +430,8 @@ import <span class="s1">&#39;tailwindcss/tailwind.css&#39;</span><span class="p"
 <p>Let&rsquo;s add the <a href="https://blog.tailwindcss.com/tailwindcss-typography">Tailwind Typography package</a>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="nx">yarn</span> <span class="nx">add</span> <span class="kd">@tailwindcss</span><span class="err">/typography</span></code></pre></div>
 <p>Next, we add it to our <code>tailwind-workspace-preset.js</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">module</span><span class="nx">.exports</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// tailwind-workspace-preset.js
+</span><span class="c1"></span><span class="kr">module</span><span class="nx">.exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">theme</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">extend</span><span class="o">:</span> <span class="p">{},</span>
   <span class="p">},</span>
@@ -475,10 +479,11 @@ import <span class="s1">&#39;tailwindcss/tailwind.css&#39;</span><span class="p"
 
 <p>To enable purging, open the <code>tailwind.config.js</code> for the <code>site</code> app and add the globs to the <code>purge</code> property. For our application <code>site</code> it might look as follows:</p>
 <div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">// apps/site/tailwind.config.js
-</span><span class="c1"></span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class="c1"></span><span class="k">const</span> <span class="p">{</span> <span class="nx">join</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">purge</span><span class="o">:</span> <span class="p">[</span>
-    <span class="s1">&#39;./apps/site/pages/**/*.{js,ts,jsx,tsx}&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;./apps/site/components/**/*.{js,ts,jsx,tsx}&#39;</span>
+    <span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;pages/**/*.{js,ts,jsx,tsx}&#39;</span><span class="p">)</span>
   <span class="p">],</span>
   <span class="p">...</span>
 <span class="p">};</span></code></pre></div>
@@ -488,15 +493,15 @@ import <span class="s1">&#39;tailwindcss/tailwind.css&#39;</span><span class="p"
 
 <p>Change your <code>tailwind.config.js</code> to the following:</p>
 <div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">// apps/site/tailwind.config.js
-</span><span class="c1"></span>
+</span><span class="c1"></span><span class="k">const</span> <span class="p">{</span> <span class="nx">join</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+
 <span class="c1">// available since Nx v 12.5
 </span><span class="c1"></span><span class="k">const</span> <span class="p">{</span> <span class="nx">createGlobPatternsForDependencies</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nrwl/next/tailwind&#39;</span><span class="p">);</span>
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../../tailwind-workspace-preset.js&#39;</span><span class="p">)],</span>
   <span class="nx">purge</span><span class="o">:</span> <span class="p">[</span>
-    <span class="s1">&#39;./apps/site/pages/**/*.{js,ts,jsx,tsx}&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;./apps/site/components/**/*.{js,ts,jsx,tsx}&#39;</span><span class="p">,</span>
+    <span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;pages/**/*.{js,ts,jsx,tsx}&#39;</span><span class="p">),</span>
     <span class="p">...</span><span class="nx">createGlobPatternsForDependencies</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">),</span>
   <span class="p">],</span>
   <span class="nx">darkMode</span><span class="o">:</span> <span class="s1">&#39;media&#39;</span><span class="p">,</span> <span class="c1">// or &#39;media&#39; or &#39;class&#39;
