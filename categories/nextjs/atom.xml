@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Thu, 08 Jul 2021 08:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jul 2021 08:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/nextjs/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hot Reload MDX changes in Next.js and Nx</title>
+      <link>https://juristr.com/blog/2021/07/fast-refresh-mdx-files-next-and-nx/</link>
+      <pubDate>Thu, 15 Jul 2021 08:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/07/fast-refresh-mdx-files-next-and-nx/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In the &lt;a href=&#34;https://juristr.com/blog/2021/07/component-hydration-nextjs-nx/&#34;&gt;previous article&lt;/a&gt; we learned how to use &lt;code&gt;next-mdx-remote&lt;/code&gt; to load and hydrate MDX content. In this article, we&amp;rsquo;re going to learn how to implement a custom server for our Next.js app with Nx, that allows us to auto-refresh the rendering whenever something in our MDX files changes.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Component hydration with MDX in Next.js and Nx</title>
