@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Thu, 15 Jul 2021 08:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jul 2021 08:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/nx/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using Nx Workspace generators to scaffold new blog posts</title>
+      <link>https://juristr.com/blog/2021/07/nextjs-workspace-generator-blog-draft/</link>
+      <pubDate>Wed, 28 Jul 2021 08:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/07/nextjs-workspace-generator-blog-draft/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In the &lt;a href=&#34;https://juristr.com/blog/2021/07/fast-refresh-mdx-files-next-and-nx/&#34;&gt;previous article&lt;/a&gt; we talked about how to leverage Nx capabilities to create a custom Next server that allows us to perform a fast refresh not only when our React components change, but also whenever we change something in our MDX files. This is especially interesting as we&amp;rsquo;re writing a new article and want to see the changes live immediately in our browser. This week we&amp;rsquo;ll continue by looking at how to leverage Nx Workspace generators to scaffold new blog drafts.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Hot Reload MDX changes in Next.js and Nx</title>
