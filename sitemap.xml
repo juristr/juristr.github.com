@@ -4767,7 +4767,7 @@
   
   
   <url>
-    <loc>https://juristr.com/categories/nextjs/</loc>
+    <loc>https://juristr.com/categories/next/</loc>
     <lastmod>2021-07-28T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4776,7 +4776,7 @@
   
   
   <url>
-    <loc>https://juristr.com/tags/nextjs/</loc>
+    <loc>https://juristr.com/tags/next/</loc>
     <lastmod>2021-07-28T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
@@ -4882,7 +4882,7 @@
   
   <url>
     <loc>https://juristr.com/categories/react/</loc>
-    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
+    <lastmod>2020-12-11T10:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4891,7 +4891,7 @@
   
   <url>
     <loc>https://juristr.com/tags/react/</loc>
-    <lastmod>2020-11-11T20:49:05+01:00</lastmod>
+    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4901,24 +4901,6 @@
   <url>
     <loc>https://juristr.com/tags/reactive-forms/</loc>
     <lastmod>2019-12-07T08:48:08+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  
-  
-  
-  <url>
-    <loc>https://juristr.com/categories/reactjs/</loc>
-    <lastmod>2020-12-11T10:40:00+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  
-  
-  
-  <url>
-    <loc>https://juristr.com/tags/reactjs/</loc>
-    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
