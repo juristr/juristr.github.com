@@ -7,11 +7,11 @@ url: /blog/2020/12/scale-react-dev-with-nx
 draft: false
 image: /blog/assets/imgs/egh_scalingreactnx.png
 categories:
-  - reactjs
+  - React
   - tooling
-  - nx
+  - Nx
 tags:
-  - reactjs
+  - React
   - tooling
 comments: true
 ---

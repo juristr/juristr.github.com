@@ -7,12 +7,12 @@ url: /blog/2021/07/fast-refresh-mdx-files-next-and-nx
 draft: false
 image: /blog/assets/imgs/nextjs-nx-series/hot-reload-background.jpg
 categories:
-  - nextjs
-  - nx
+  - Next
+  - Nx
 tags:
-  - nextjs
+  - Next
   - TailwindCSS
-  - reactjs
+  - React
   - markdown
   - mdx
 comments: true

@@ -7,12 +7,12 @@ url: /blog/2021/06/create-nextjs-webapp-nx
 draft: false
 image: /blog/assets/imgs/nextjs-nx-series/bg-create-nextjs-nx.jpg
 categories:
-  - nextjs
-  - nx
+  - Next
+  - Nx
 tags:
-  - nextjs
+  - Next
   - TailwindCSS
-  - reactjs
+  - React
   - markdown
 comments: true
 ---

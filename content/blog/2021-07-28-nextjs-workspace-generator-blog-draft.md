@@ -7,12 +7,12 @@ url: /blog/2021/07/nextjs-workspace-generator-blog-draft/
 draft: false
 image: /blog/assets/imgs/nextjs-nx-series/workspace-gen-bg.jpg
 categories:
-  - nextjs
-  - nx
+  - Next
+  - Nx
 tags:
-  - nextjs
+  - Next
   - TailwindCSS
-  - reactjs
+  - React
   - markdown
   - mdx
 comments: true

@@ -10,7 +10,7 @@ categories:
   - tooling
 tags:
   - angular
-  - reactjs
+  - React
   - tooling
 comments: true
 ---

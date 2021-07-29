@@ -7,12 +7,12 @@ url: /blog/2021/06/setup-tailwind-nextjs-and-nx
 draft: false
 image: /blog/assets/imgs/nextjs-nx-series/bg-tailwind-next-nx.jpg
 categories:
-  - nextjs
-  - nx
+  - Next
+  - Nx
 tags:
-  - nextjs
+  - Next
   - TailwindCSS
-  - reactjs
+  - React
   - markdown
 comments: true
 ---

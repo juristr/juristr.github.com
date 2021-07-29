@@ -7,12 +7,12 @@ url: /blog/2021/07/component-hydration-nextjs-nx
 draft: false
 image: /blog/assets/imgs/nextjs-nx-series/next-mdx-bg.jpg
 categories:
-  - nextjs
-  - nx
+  - Next
+  - Nx
 tags:
-  - nextjs
+  - Next
   - TailwindCSS
-  - reactjs
+  - React
   - markdown
 comments: true
 ---

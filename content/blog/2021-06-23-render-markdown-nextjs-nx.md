@@ -7,12 +7,12 @@ url: /blog/2021/06/read-render-markdown-nextjs-and-nx
 draft: false
 image: /blog/assets/imgs/nextjs-nx-series/bg-nextjs-md-rendering.jpg
 categories:
-  - nextjs
-  - nx
+  - Next
+  - Nx
 tags:
-  - nextjs
+  - Next
   - TailwindCSS
-  - reactjs
+  - React
   - markdown
 comments: true
 ---

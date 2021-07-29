@@ -12,7 +12,7 @@ categories:
 tags:
   - angular
   - tooling
-  - nx
+  - Nx
 comments: true
 ---
 {{<intro>}}

@@ -10,12 +10,12 @@ categories:
   - Nx
   - tooling
   - angular
-  - react
+  - React
 tags:
   - Nx
   - tooling
   - angular
-  - react
+  - React
 comments: true
 ---
 {{<intro>}}

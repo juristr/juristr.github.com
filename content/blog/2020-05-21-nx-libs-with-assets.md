@@ -12,7 +12,7 @@ categories:
 tags:
   - rxjs
   - angular
-  - nx
+  - Nx
 draft: false
 ---
 
