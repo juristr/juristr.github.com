@@ -35,7 +35,7 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 - [Component hydration with MDX in Next.js and Nx](/blog/2021/07/component-hydration-nextjs-nx/)
 - **Hot Reload MDX changes in Next.js with Nx**
 - [Using Nx Workspace generators to scaffold new blog posts](/blog/2021/07/nextjs-workspace-generator-blog-draft/)
--  Use Storybook with Next.js, Tailwind and Nx to develop components in isolation  _(soon)_
+- [Use Storybook with Tailwind in an Nx Workspace](/blog/2021/08/nextjs-storybook-tailwind-nx/)
 -  Use Cypress with Next.js and Nx to battle test your React Components _(soon)_
 -  Publishing a Next.js site to Vercel with Nx _(soon)_
 
