@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>Use Storybook with Tailwind in an Nx Workspace | juri.dev</title>
+	
+	<meta name="description" content="Learn how to use Next.js, Nx and Tailwind together">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:creator" content="@juristr" />
+	<meta name="twitter:title" content="Use Storybook with Tailwind in an Nx Workspace" />
+	
+	<meta name="twitter:description" content="Learn how to use Next.js, Nx and Tailwind together" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/nextjs-nx-series/nextjs-nx-storybook-cover.jpg" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Use Storybook with Tailwind in an Nx Workspace" />
+	
+	<meta property="og:description" content="Learn how to use Next.js, Nx and Tailwind together" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/nextjs-nx-series/nextjs-nx-storybook-cover.jpg" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2021/08/nextjs-storybook-tailwind-nx" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://developers.google.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.dev</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2021%2f08%2fnextjs-storybook-tailwind-nx%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2021%2f08%2fnextjs-storybook-tailwind-nx%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops. Juri is also a recognized Google Developer Expert in Web Technologies</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">Use Storybook with Tailwind in an Nx Workspace</h1>
+                
+                <h2 class="article-subtitle">Learn how to use Next.js, Nx and Tailwind together</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Aug 12, 2021
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">10 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers?af=fj2vsx" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                <div class="article-intro">
+    In the <a href="/blog/2021/07/nextjs-workspace-generator-blog-draft/">previous article</a>, we talked about Nx workspace generators and how they can help be more efficient in automating repetitive tasks. In this article, we&rsquo;re going to leverage Nx&rsquo;s excellent support for Storybook to develop our components in isolation before using them in our Next.js app.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p><strong>Building a blog with Next.js and Nx Series</strong><br />
+This article is part of a series around building a blog with Nx, Next.js, Tailwind, Storybook and Cypress.</p>
+
+<ul>
+<li><a href="/blog/2021/06/create-nextjs-webapp-nx">Create a Next.js web app with Nx</a></li>
+<li><a href="/blog/2021/06/setup-tailwind-nextjs-and-nx/">Setup Next.js to use Tailwind with Nx</a></li>
+<li><a href="/blog/2021/06/read-render-markdown-nextjs-and-nx/">Read and render Markdown files with Next.js and Nx</a></li>
+<li><a href="/blog/2021/07/component-hydration-nextjs-nx/">Component hydration with MDX in Next.js and Nx</a></li>
+<li><a href="/blog/2021/07/fast-refresh-mdx-files-next-and-nx/">Hot Reload MDX changes in Next.js with Nx</a></li>
+<li><a href="/blog/2021/07/nextjs-workspace-generator-blog-draft/">Using Nx Workspace generators to scaffold new blog posts</a></li>
+<li><strong>Use Storybook with Next.js, Tailwind and Nx to develop components in isolation</strong></li>
+<li>Use Cypress with Next.js and Nx to battle test your React Components <em>(soon)</em></li>
+<li>Publishing a Next.js site to Vercel with Nx <em>(soon)</em></li>
+</ul>
+
+<p><em>Check back later, <a href="https://twitter.com/juristr">follow me on Twitter</a> or <a href="/newsletter">subscribe to the Newsletter</a> to get updates about upcoming articles</em></p>
+
+<hr />
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#generate-a-new-library-to-host-our-page-ui-components">Generate a new library to host our page UI components</a></li>
+<li><a href="#add-storybook-support-to-our-shared-ui-library">Add Storybook Support to our Shared UI Library</a></li>
+<li><a href="#launch-storybook-for-our-shared-ui-library">Launch Storybook for our shared UI library</a></li>
+<li><a href="#setup-storybook-to-use-tailwind">Setup Storybook to use Tailwind</a></li>
+<li><a href="#creating-our-topic-button-react-component">Creating our Topic Button React Component</a></li>
+<li><a href="#developing-our-storybook-story">Developing our Storybook story</a></li>
+<li><a href="#running-storybook">Running Storybook</a></li>
+<li><a href="#building-storybook">Building Storybook</a></li>
+<li><a href="#using-our-react-topic-button-component-in-our-next-js-app">Using our React Topic Button component in our Next.js app</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<hr />
+
+<h2 id="generate-a-new-library-to-host-our-page-ui-components">Generate a new library to host our page UI components</h2>
+
+<p>We want to have a library where to host our UI components s.t. they can be easily shared within our Nx workspace. Obviously, in our simple example of a blog platform, right now we don&rsquo;t really have other apps in our workspace. In many cases a Nx workspace starts like this, and then over time we add new applications, either because new projects start or even because we split up existing projects into multiple ones for a better scalability. Furthermore, having a shared UI library is a common scenario especially in larger real-world applications to encapsulate the corporate design components.</p>
+
+<p>To generate a new library, simply refer to the <code>@nrwl/react:lib</code> generator:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">npx</span> <span class="err">nx</span> <span class="err">g</span> <span class="err">@nrwl/react:lib</span> <span class="err">ui</span> <span class="err">--directory=shared</span> <span class="err">--style=css</span></code></pre></div>
+<p>Notice, by passing the <code>--directory=shared</code>, Nx generates the library into a subfolder <code>libs/shared/ui</code>. Grouping libraries into sub-folders helps to further structure them.</p>
+
+<p>In addition to generating the library setup, the above command also pre-generates a component <code>shared-ui.tsx</code> for us. Since we won&rsquo;t use that one right now, we can  that we can just remove it.</p>
+
+<p>So what do we want to achieve? Currently, on <a href="https://juri.dev/blog">my blog</a>, I have a &ldquo;<a href="https://juri.dev/categories">collection page</a>&rdquo; that contains small tiles for each type of topic I&rsquo;ve been writing on the site. It looks something like this:</p>
+
+
+<figure class="image--medium">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/topic-button-example.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/topic-button-example.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>We want to replicate that as a React component. So let&rsquo;s create a new component named &ldquo;topic-button&rdquo;</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">npx</span> <span class="err">nx</span> <span class="err">g</span> <span class="err">@nrwl/react:component</span> <span class="err">topic-button</span> <span class="err">--project=shared-ui</span> <span class="err">--style=css</span></code></pre></div>
+<p>By providing <code>--project</code> we make sure it gets generated into our new <code>shared/ui</code> library. Confirm the question about exporting the component. We definitely want to do that as we plan to use it in our Next app&rsquo;s page.</p>
+
+<p>Notice also the <code>/</code> is changed to <code>-</code> when providing the project. You can also always look up the <code>workspace.json</code> for the corresponding name of the project. Or use <a href="https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console">Nx Console</a> and get a nice autocomplete 😀.</p>
+
+<h2 id="add-storybook-support-to-our-shared-ui-library">Add Storybook Support to our Shared UI Library</h2>
+
+<p>Let&rsquo;s add Storybook support to our library, such that we can develop our components in isolation. Let&rsquo;s use Nx Console this time. Activate the VSCode command palette and type &ldquo;Nx: &ldquo;</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/nxconsole-generator-dropdown.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/nxconsole-generator-dropdown.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Choose &ldquo;Nx generate (ui)&rdquo; and search for &ldquo;@nrwl/react:storybook-configuration&rdquo;.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/nxconsole-storybook-generator-dropdown.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/nxconsole-storybook-generator-dropdown.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Provide the <code>shared-ui</code> in the project name to make sure the Storybook configuration gets generated for our UI library. In addition, I like to group my storybook related e2e tests into a dedicated folder, which is why I specify <code>storybook-e2e</code> for the <code>cypressDirectory</code>.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/nxconsole-storybook-detail.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/nxconsole-storybook-detail.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>For those of you not using VSCode or simply preferring the CLI, here&rsquo;s the generate command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">npx</span> <span class="err">nx</span> <span class="err">generate</span> <span class="err">@nrwl/react:storybook-configuration</span> <span class="err">--name=shared-ui</span> <span class="err">--cypressDirectory=storybook-e</span><span class="mi">2</span><span class="err">e</span></code></pre></div>
+<p>What we get is the following:</p>
+
+
+<figure class="image--small">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/nxconsole-storybook-generation-result.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/nxconsole-storybook-generation-result.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<ol>
+<li>Storybook configured for our <code>shared/ui</code> library</li>
+<li>A workspace-level Storybook configuration. Such configuration is particularly handy if you want to apply some specific configuration to all of your Storybooks within the Nx workspace. The project-level storybook setup simply imports the global Webpack configuration (as well as Storybook Add-ons and more) and applies them to the project-level Storybook configuration.</li>
+<li>A new Storybook story was generated automatically for our <code>topic-button.tsx</code> component. Note, you can always again trigger this by invoking the <code>stories</code> generator in the very same fashion as we did for the Storybook configuration setup</li>
+<li>A Cypress-based e2e test including test files for our <code>topic-button.stories.tsx</code>. We&rsquo;re going to cover this in more detail in the next article of the series. So stay tuned!</li>
+</ol>
+
+<h2 id="launch-storybook-for-our-shared-ui-library">Launch Storybook for our shared UI library</h2>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">npx</span> <span class="err">nx</span> <span class="err">storybook</span> <span class="err">shared-ui</span></code></pre></div>
+<p>This launches Storybook and you should see the pre-generated Topic Button React component is visualized.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/storybook-generated-rendering.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/storybook-generated-rendering.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h2 id="setup-storybook-to-use-tailwind">Setup Storybook to use Tailwind</h2>
+
+<p>By using the <code>@nrwl/react/plugin/storybook</code> preset in your configuration (which is automatically preconfigured by the Nx Storybook generator), you&rsquo;re already set up to use Tailwind.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/shared/ui/.storybook/main.js
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">rootMain</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../../../../.storybook/main&#39;</span><span class="p">);</span>
+
+<span class="kr">module</span><span class="nx">.exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">addons</span><span class="o">:</span> <span class="p">[...</span><span class="nx">rootMain</span><span class="p">.</span><span class="nx">addons</span><span class="p">,</span> <span class="s1">&#39;@nrwl/react/plugins/storybook&#39;</span><span class="p">],</span>
+  <span class="p">...</span>
+<span class="p">};</span></code></pre></div>
+<p>We only need to actually create the <code>tailwind.config.js</code> and <code>postcss.config.js</code> within our <code>shared/ui</code> library.</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="err">cd</span> <span class="err">libs/shared/ui</span>
+<span class="err">npx</span> <span class="err">tailwindcss</span> <span class="err">init</span> <span class="err">-p</span></code></pre></div>
+
+<figure class="image--small">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/storybook-tailwind-config-filestructure.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/storybook-tailwind-config-filestructure.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Adjust the <code>tailwind.config.js</code> similarly to what we did for the Next application:</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/shared/ui/tailwind.config.js
+</span><span class="c1"></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">createGlobPatternsForDependencies</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nrwl/next/tailwind&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">join</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+
+<span class="kr">module</span><span class="nx">.exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../../../tailwind-workspace-preset.js&#39;</span><span class="p">)],</span>
+  <span class="nx">purge</span><span class="o">:</span> <span class="p">[</span>
+    <span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;../src/**/*.{js,ts,jsx,tsx}&#39;</span><span class="p">),</span>
+    <span class="p">...</span><span class="nx">createGlobPatternsForDependencies</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">),</span>
+  <span class="p">],</span>
+  <span class="nx">darkMode</span>: <span class="kt">false</span><span class="p">,</span> <span class="c1">// or &#39;media&#39; or &#39;class&#39;
+</span><span class="c1"></span>  <span class="nx">theme</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">extend</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="p">},</span>
+  <span class="nx">variants</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">extend</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="p">},</span>
+  <span class="nx">plugins</span><span class="o">:</span> <span class="p">[],</span>
+<span class="p">};</span></code></pre></div>
+<p>Again, we&rsquo;d want to extend from the root-level Tailwind configuration to make sure we get repository-wide settings (e.g. your corporate-wide Tailwind settings).</p>
+
+<p>Similarly we adjust the <code>postcss.config.js</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/shared/ui/postcss.config.js
+</span><span class="c1"></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">join</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
+
+<span class="kr">module</span><span class="nx">.exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">plugins</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">tailwindcss</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">config</span>: <span class="kt">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">&#39;tailwind.config.js&#39;</span><span class="p">),</span>
+    <span class="p">},</span>
+    <span class="nx">autoprefixer</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="p">},</span>
+<span class="p">};</span></code></pre></div>
+<p>Finally, in order to leverage the Tailwind styles in all our Storybook stories, let&rsquo;s create a new <code>tailwind-imports.css</code>in <code>libs/shared/ui/.storybook</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* libs/shared/ui/.storybook/tailwind-imports.css */</span>
+<span class="p">@</span><span class="k">tailwind</span> <span class="nt">base</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span> <span class="nt">components</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span> <span class="nt">utilities</span><span class="p">;</span></code></pre></div>
+<p>Once we have that file, we can import it into our <code>preview.js</code> file</p>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">// libs/shared/ui/.storybook/preview.js
+</span><span class="c1"></span><span class="k">import</span> <span class="s1">&#39;./tailwind-imports.css&#39;</span><span class="p">;</span></code></pre></div>
+<p>With that, we should be set up!</p>
+
+<h2 id="creating-our-topic-button-react-component">Creating our Topic Button React Component</h2>
+
+<p>Without going too much into the details, here&rsquo;s what the content of the button would look like.</p>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">// libs/shared/ui/src/lib/topic-button/topic-button.tsx
+</span><span class="c1"></span><span class="k">import</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="k">export</span> <span class="kr">interface</span> <span class="nx">TopicButtonProps</span> <span class="p">{</span>
+  <span class="nx">topicName</span><span class="o">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="nx">onClick</span><span class="o">?:</span> <span class="p">(</span><span class="nx">topicName</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">void</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="kd">function</span> <span class="nx">TopicButton</span><span class="p">(</span><span class="nx">props</span><span class="o">:</span> <span class="nx">TopicButtonProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="p">[</span><span class="nx">icon</span><span class="p">,</span> <span class="nx">setIcon</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="nx">fetchData</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">const</span> <span class="nx">cleanedSvgName</span> <span class="o">=</span> <span class="nx">props</span><span class="p">.</span><span class="nx">topicName</span>
+        <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/[^a-zA-Z0-9]/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">toLocaleLowerCase</span><span class="p">();</span>
+      <span class="k">const</span> <span class="nx">topicSvgIcon</span> <span class="o">=</span> <span class="kr">await</span> <span class="k">import</span><span class="p">(</span><span class="sb">`./</span><span class="si">${</span><span class="nx">cleanedSvgName</span><span class="si">}</span><span class="sb">.svg`</span><span class="p">);</span>
+      <span class="nx">setIcon</span><span class="p">(</span><span class="nx">topicSvgIcon</span><span class="p">.</span><span class="k">default</span><span class="p">);</span>
+    <span class="p">};</span>
+    <span class="nx">fetchData</span><span class="p">();</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">props</span><span class="p">.</span><span class="nx">topicName</span><span class="p">]);</span>
+
+  <span class="k">const</span> <span class="nx">onClickHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">onClick</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">props</span><span class="p">.</span><span class="nx">onClick</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">topicName</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span>
+        <span class="sb">`no click handler defined on topic button with topic </span><span class="si">${</span><span class="nx">props</span><span class="p">.</span><span class="nx">topicName</span><span class="si">}</span><span class="sb">`</span>
+      <span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span>
+      <span class="na">className</span><span class="o">=</span><span class="s">&#34;bg-white pl-4 rounded-lg shadow flex max-w-md min-w-max hover:shadow-md transition-shadow&#34;</span>
+      <span class="na">onClick</span><span class="o">=</span><span class="s">{onClickHandler}</span>
+    <span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">{icon}</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;w-12&#34;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;p-5&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">className</span><span class="o">=</span><span class="s">&#34;font-bold text-4xl&#34;</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">topicName</span><span class="p">}&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">TopicButton</span><span class="p">;</span></code></pre></div>
+<p>A quick explanation of what this component does:</p>
+
+<ul>
+<li>It renders the Topic button mentioned previously</li>
+<li>The SVG icons are placed directly at the same level as the <code>topic-button.tsx</code> in the <code>shared/ui/src/lib/topic-button</code> folder.</li>
+<li>Based on the passed <code>topicName</code>, a similar SVG is searched and dynamically imported (see the <code>useEffect</code> logic. As a result each topic will have its corresponding SVG icon displayed.</li>
+</ul>
+
+<blockquote>
+<p>You can find the icons <a href="https://github.com/juristr/blog-series-nextjs-nx/tree/07-storybook-tailwind/libs/shared/ui/src/lib/topic-button">here</a>.</p>
+</blockquote>
+
+<h2 id="developing-our-storybook-story">Developing our Storybook story</h2>
+
+<p>Nx automatically generates a Storybook story for your React components when you create the initial Storybook configuration for the library.</p>
+
+<p>You can also re-run it afterwards:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">nx g @nrwl/react:stories shared-ui</code></pre></div>
+<p>Let&rsquo;s use that pre-generated setup and implement our story:</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// libs/shared/ui/src/lib/topic-button/topic-button.stories.tsx
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Story</span><span class="p">,</span> <span class="nx">Meta</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@storybook/react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">TopicButton</span><span class="p">,</span> <span class="nx">TopicButtonProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./topic-button&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">component</span>: <span class="kt">TopicButton</span><span class="p">,</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;TopicButton&#39;</span><span class="p">,</span>
+  <span class="nx">argTypes</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">onClick</span><span class="o">:</span> <span class="p">{</span> <span class="nx">action</span><span class="o">:</span> <span class="s1">&#39;onClick executed!&#39;</span> <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">}</span> <span class="kr">as</span> <span class="nx">Meta</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">Template</span>: <span class="kt">Story</span><span class="o">&lt;</span><span class="nx">TopicButtonProps</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">clickedTopic</span><span class="p">,</span> <span class="nx">setClickedTopic</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="o">&lt;</span><span class="kt">string</span> <span class="o">|</span> <span class="kc">null</span><span class="o">&gt;</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;bg-gray-100 p-20&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">TopicButton</span>
+        <span class="p">{...</span><span class="nx">args</span><span class="p">}</span>
+        <span class="nx">onClick</span><span class="o">=</span><span class="p">{(</span><span class="nx">topicName</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">setClickedTopic</span><span class="p">(</span><span class="nx">topicName</span><span class="p">)}</span>
+      <span class="err">/&gt;</span>
+      <span class="p">{</span><span class="nx">clickedTopic</span> <span class="o">&amp;&amp;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+          <span class="nx">Button</span> <span class="nx">has</span> <span class="nx">been</span> <span class="nx">clicked</span><span class="o">:</span> <span class="p">{</span><span class="nx">clickedTopic</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+      <span class="p">)}</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">Primary</span> <span class="o">=</span> <span class="nx">Template</span><span class="p">.</span><span class="nx">bind</span><span class="p">({});</span>
+<span class="nx">Primary</span><span class="p">.</span><span class="nx">args</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">topicName</span><span class="o">:</span> <span class="s1">&#39;Next.js&#39;</span><span class="p">,</span>
+<span class="p">};</span></code></pre></div>
+<p>A couple of things to notice here:</p>
+
+<ul>
+<li>I wrap the <code>TopicButton</code> component in a div and set the background color to make shadows etc more evident. Our main site would probably also have some background color, so ideally we would want to reuse that one here.</li>
+<li>I setup a React state hook to record when we click the button and render that into our story. That makes it easy to see whether it worked or didn&rsquo;t. Notice the default export also has an <code>argTypes</code> property, which logs the click output on the Storybook action panel. So you could also use that if you prefer to inspect the action result.</li>
+</ul>
+
+<h2 id="running-storybook">Running Storybook</h2>
+
+<p>If you now run the Storybook</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx storybook shared-ui</code></pre></div>
+<p>we see our Topic Button rendered properly, using TailwindCSS for the styling part. Changing the <code>topicName</code> in the Storybook controls panel to &ldquo;React&rdquo; also changes the icon accordingly</p>
+
+<video width="620" height="540" autoplay muted loop>
+  <source src="/blog/assets/imgs/nextjs-nx-series/storybook-rendering-topicbutton.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<h2 id="building-storybook">Building Storybook</h2>
+
+<p>You can also build and deploy Storybook separately. This is especially interesting for documentation purposes, say when you&rsquo;re building some shared UI components for your corporate design system.</p>
+
+<p>To build Storybook run</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx build-storybook shared-ui</code></pre></div>
+<p>This creates a compiled bundle in <code>dist/storybook/shared-ui</code> which could be directly deployed to some static server. To test it, simply use a local http server and point it to the directory. For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx http-server dist/storybook/shared-ui</code></pre></div>
+<p>Opening that in the browser would render Storybook just as it did during development mode:</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/storybook-build-rendering.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/storybook-build-rendering.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h2 id="using-our-react-topic-button-component-in-our-next-js-app">Using our React Topic Button component in our Next.js app</h2>
+
+<p>Storybook is very neat for developing and documenting your components in isolation. But ultimately we want to use the component in our Next powered blog platform application.</p>
+
+<p>Without building the full topic list page, let&rsquo;s generate a &ldquo;Topics page&rdquo; in our Next app and use the newly <code>TopicButton</code> there.</p>
+
+<p>First, we generate a new Next page:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx generate @nrwl/next:page --name<span class="o">=</span>topics --project<span class="o">=</span>site</code></pre></div>
+<p>Next, let&rsquo;s implement the page component:</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// apps/site/pages/topics.tsx
+</span><span class="c1"></span><span class="kr">import</span> <span class="s1">&#39;./topics.module.css&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">TopicButton</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@juridev/shared/ui&#39;</span><span class="p">;</span>
+
+<span class="cm">/* eslint-disable-next-line */</span>
+<span class="kr">export</span> <span class="kr">interface</span> <span class="nx">TopicsProps</span> <span class="p">{}</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">Topics</span><span class="p">(</span><span class="nx">props</span>: <span class="kt">TopicsProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;md:container md:mx-auto p-20 bg-gray-100&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">TopicButton</span> <span class="nx">topicName</span><span class="o">=</span><span class="s2">&#34;Next.js&#34;</span> <span class="err">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Topics</span><span class="p">;</span></code></pre></div>
+<p>Notice how we import the <code>TopicButton</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// apps/site/pages/topics.tsx
+</span><span class="c1"></span><span class="p">...</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">TopicButton</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@juridev/shared/ui&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="kd">function</span> <span class="nx">Topics</span><span class="p">(</span><span class="nx">props</span>: <span class="kt">TopicsProps</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="p">...</span>
+      <span class="o">&lt;</span><span class="nx">TopicButton</span> <span class="nx">topicName</span><span class="o">=</span><span class="s2">&#34;Next.js&#34;</span> <span class="err">/&gt;</span>
+    <span class="p">...</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Topics</span><span class="p">;</span></code></pre></div>
+<p>Since Nx automatically maps libraries to paths in <code>tsconfig.base.json</code>, we can just import it from the local libs folder as if it was an npm package.</p>
+
+<p>Finally launching the app properly renders the button on our Next app&rsquo;s page:</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/nextjs-nx-series/nextjs-rendering-storybook-component.png" class="image--zoom">
+            <img src="/blog/assets/imgs/nextjs-nx-series/nextjs-rendering-storybook-component.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Note, you want to make sure to have <code>svgr</code> support enabled in your <code>next.config.js</code> in order to render SVGs properly.</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// apps/site/next.config.js
+</span><span class="c1"></span>
+<span class="c1">// eslint-disable-next-line @typescript-eslint/no-var-requires
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">withNx</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nrwl/next/plugins/with-nx&#39;</span><span class="p">);</span>
+
+<span class="kr">module</span><span class="nx">.exports</span> <span class="o">=</span> <span class="nx">withNx</span><span class="p">({</span>
+  <span class="nx">nx</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">// Set this to false if you do not want to use SVGR
+</span><span class="c1"></span>    <span class="c1">// See: https://github.com/gregberge/svgr
+</span><span class="c1"></span>    <span class="nx">svgr</span>: <span class="kt">true</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">});</span></code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this article we learned</p>
+
+<ul>
+<li>How to generate a new React library within our Nx workspace to host the shared UI components</li>
+<li>How to add Storybook support to the React library</li>
+<li>How to configure Storybook to support TailwindCSS</li>
+<li>How to develop a React component in isolation with Storybook</li>
+<li>How to use our shared React component in our Next.js application</li>
+</ul>
+
+<p><strong>GitHub repository</strong></p>
+
+<p>All the sources for this article can be found in this GitHub repository&rsquo;s branch: <a href="https://github.com/juristr/blog-series-nextjs-nx/tree/07-storybook-tailwind">https://github.com/juristr/blog-series-nextjs-nx/tree/07-storybook-tailwind</a></p>
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/Next">Next</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/TailwindCSS">TailwindCSS</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/React">React</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/Storybook">Storybook</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2021/07/nextjs-workspace-generator-blog-draft/">Using Nx Workspace generators to scaffold new blog posts</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to use Next.js, Nx and Tailwind together
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Jul 28, 2021</span><span class="dot"></span><span
+                                    class="post-read">11 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/next.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2021/07/fast-refresh-mdx-files-next-and-nx">Hot Reload MDX changes in Next.js and Nx</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to use Next.js, Nx and Tailwind together
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Jul 15, 2021</span><span class="dot"></span><span
+                                    class="post-read">8 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/next.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2021/07/component-hydration-nextjs-nx">Component hydration with MDX in Next.js and Nx</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to use Next.js, Nx and Tailwind together
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Jul 8, 2021</span><span class="dot"></span><span
+                                    class="post-read">10 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/next.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js" defer></script>
+    
+
+    
+    
+    
+    <script>
+!function(t,e,a,c,x){var s='q';t[s]={publication_id:c,tags:x};
+var s=e.createElement(a),r=e.getElementsByTagName(a)[0];s.async=1,s.src=
+'https://insights.quiet.ly/app/analytics.min.js',r.parentNode.insertBefore(s,r)}
+(window,document,'script','87bcee90-0c51-4a68-a60b-e95df730d1ca','[]');
+</script>
+    
+ <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

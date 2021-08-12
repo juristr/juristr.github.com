@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 28 Jul 2021 08:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 12 Aug 2021 07:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/nx/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Use Storybook with Tailwind in an Nx Workspace</title>
+      <link>https://juristr.com/blog/2021/08/nextjs-storybook-tailwind-nx/</link>
+      <pubDate>Thu, 12 Aug 2021 07:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/08/nextjs-storybook-tailwind-nx/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In the &lt;a href=&#34;https://juristr.com/blog/2021/07/nextjs-workspace-generator-blog-draft/&#34;&gt;previous article&lt;/a&gt;, we talked about Nx workspace generators and how they can help be more efficient in automating repetitive tasks. In this article, we&amp;rsquo;re going to leverage Nx&amp;rsquo;s excellent support for Storybook to develop our components in isolation before using them in our Next.js app.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Using Nx Workspace generators to scaffold new blog posts</title>

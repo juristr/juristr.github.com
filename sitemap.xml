@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2021/08/nextjs-storybook-tailwind-nx/</loc>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2021/07/nextjs-workspace-generator-blog-draft/</loc>
     <lastmod>2021-07-28T08:40:00+01:00</lastmod>
   </url>
@@ -4118,7 +4126,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
   </url>
   
   
@@ -4302,7 +4310,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4768,7 +4776,7 @@
   
   <url>
     <loc>https://juristr.com/categories/next/</loc>
-    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4777,7 +4785,7 @@
   
   <url>
     <loc>https://juristr.com/tags/next/</loc>
-    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4813,7 +4821,7 @@
   
   <url>
     <loc>https://juristr.com/categories/nx/</loc>
-    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4891,7 +4899,7 @@
   
   <url>
     <loc>https://juristr.com/tags/react/</loc>
-    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -5016,6 +5024,15 @@
   
   
   <url>
+    <loc>https://juristr.com/tags/storybook/</loc>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/tags/switchmap/</loc>
     <lastmod>2019-01-16T15:03:22+01:00</lastmod>
     <priority>0</priority>
@@ -5035,7 +5052,7 @@
   
   <url>
     <loc>https://juristr.com/tags/tailwindcss/</loc>
-    <lastmod>2021-07-28T08:40:00+01:00</lastmod>
+    <lastmod>2021-08-12T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
