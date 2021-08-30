@@ -328,11 +328,14 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 
 <p>Something like</p>
 <div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="nx">chokidar</span>
-  <span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">watchPath</span><span class="p">,</span> <span class="p">{</span> <span class="nx">usePolling</span>: <span class="kt">false</span> <span class="p">})</span>
+  <span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">articlePath</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">usePolling</span>: <span class="kt">false</span><span class="p">,</span>
+    <span class="nx">ignoreInitial</span>: <span class="kt">true</span><span class="p">,</span>
+  <span class="p">})</span>
   <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">filePathContext</span><span class="p">,</span> <span class="nx">eventContext</span> <span class="o">=</span> <span class="s1">&#39;change&#39;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-		<span class="c1">// &#34;hotReloader&#34; is a private property on the Next app
-</span><span class="c1"></span>    <span class="nx">app</span><span class="p">[</span><span class="s1">&#39;hotReloader&#39;</span><span class="p">].</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;building&#39;</span><span class="p">);</span>
-    <span class="nx">app</span><span class="p">[</span><span class="s1">&#39;hotReloader&#39;</span><span class="p">].</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;reloadPage&#39;</span><span class="p">);</span>
+    <span class="c1">// CAUTION: accessing private APIs
+</span><span class="c1"></span>    <span class="nx">app</span><span class="p">[</span><span class="s1">&#39;server&#39;</span><span class="p">][</span><span class="s1">&#39;hotReloader&#39;</span><span class="p">].</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;building&#39;</span><span class="p">);</span>
+    <span class="nx">app</span><span class="p">[</span><span class="s1">&#39;server&#39;</span><span class="p">][</span><span class="s1">&#39;hotReloader&#39;</span><span class="p">].</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;reloadPage&#39;</span><span class="p">);</span>
   <span class="p">});</span></code></pre></div>
 <p><strong>Note:</strong> As you can see, using such a private API is quite risky, so make sure you freeze the Next.js version and you test things accordingly when you upgrade to a new Next.js release.</p>
 
@@ -357,12 +360,10 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 <span class="p">}</span></code></pre></div>
 <p>Nx passes the instantiated Next.js app, the settings passed to the executor (these are the options configured in <code>workspace.json</code>) and the proxyConfig (if provided). These properties can then be used to implement the watch logic:</p>
 <div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="c1">// tools/next-watch-server/next-watch-server.ts
-</span><span class="c1"></span>
-<span class="kr">import</span> <span class="p">{</span> <span class="nx">NextServer</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next/dist/server/next&#39;</span><span class="p">;</span>
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">NextServer</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next/dist/server/next&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">NextServerOptions</span><span class="p">,</span> <span class="nx">ProxyConfig</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@nrwl/next&#39;</span><span class="p">;</span>
 
-<span class="c1">//@ts-check
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
 <span class="kr">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">);</span>
 <span class="kr">const</span> <span class="nx">chokidar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;chokidar&#39;</span><span class="p">);</span>
 
@@ -374,15 +375,19 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
   <span class="kr">const</span> <span class="nx">handle</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">getRequestHandler</span><span class="p">();</span>
   <span class="nx">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">prepare</span><span class="p">();</span>
 
-	<span class="kr">const</span> <span class="nx">articlesPath</span> <span class="o">=</span> <span class="s1">&#39;_articles&#39;</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">articlePath</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">articleMarkdownPath</span><span class="p">;</span>
 
   <span class="c1">// watch folders if specified
-</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">articlesPath</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">articlePath</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">chokidar</span>
-      <span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">articlesPath</span><span class="p">,</span> <span class="p">{</span> <span class="nx">usePolling</span>: <span class="kt">false</span><span class="p">,</span> <span class="nx">ignoreInitial</span>: <span class="kt">true</span> <span class="p">})</span>
+      <span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">articlePath</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">usePolling</span>: <span class="kt">false</span><span class="p">,</span>
+        <span class="nx">ignoreInitial</span>: <span class="kt">true</span><span class="p">,</span>
+      <span class="p">})</span>
       <span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">filePathContext</span><span class="p">,</span> <span class="nx">eventContext</span> <span class="o">=</span> <span class="s1">&#39;change&#39;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="nx">app</span><span class="p">[</span><span class="s1">&#39;hotReloader&#39;</span><span class="p">].</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;building&#39;</span><span class="p">);</span>
-        <span class="nx">app</span><span class="p">[</span><span class="s1">&#39;hotReloader&#39;</span><span class="p">].</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;reloadPage&#39;</span><span class="p">);</span>
+        <span class="c1">// CAUTION: accessing private APIs
+</span><span class="c1"></span>        <span class="nx">app</span><span class="p">[</span><span class="s1">&#39;server&#39;</span><span class="p">][</span><span class="s1">&#39;hotReloader&#39;</span><span class="p">].</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;building&#39;</span><span class="p">);</span>
+        <span class="nx">app</span><span class="p">[</span><span class="s1">&#39;server&#39;</span><span class="p">][</span><span class="s1">&#39;hotReloader&#39;</span><span class="p">].</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;reloadPage&#39;</span><span class="p">);</span>
       <span class="p">});</span>
   <span class="p">}</span>
 
