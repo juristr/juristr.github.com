@@ -79,11 +79,14 @@ Something like
 
 ```tsx
 chokidar
-  .watch(settings.watchPath, { usePolling: false })
+  .watch(articlePath, {
+    usePolling: false,
+    ignoreInitial: true,
+  })
   .on('all', async (filePathContext, eventContext = 'change') => {
-		// "hotReloader" is a private property on the Next app
-    app['hotReloader'].send('building');
-    app['hotReloader'].send('reloadPage');
+    // CAUTION: accessing private APIs
+    app['server']['hotReloader'].send('building');
+    app['server']['hotReloader'].send('reloadPage');
   });
 ```
 
@@ -116,11 +119,9 @@ Nx passes the instantiated Next.js app, the settings passed to the executor (the
 
 ```tsx
 // tools/next-watch-server/next-watch-server.ts
-
 import { NextServer } from 'next/dist/server/next';
 import { NextServerOptions, ProxyConfig } from '@nrwl/next';
 
-//@ts-check
 const express = require('express');
 const path = require('path');
 const chokidar = require('chokidar');
@@ -133,15 +134,19 @@ export default async function nextWatchServer(
   const handle = app.getRequestHandler();
   await app.prepare();
 
-	const articlesPath = '_articles';
+  const articlePath = process.env.articleMarkdownPath;
 
   // watch folders if specified
-  if (articlesPath) {
+  if (articlePath) {
     chokidar
-      .watch(articlesPath, { usePolling: false, ignoreInitial: true })
+      .watch(articlePath, {
+        usePolling: false,
+        ignoreInitial: true,
+      })
       .on('all', async (filePathContext, eventContext = 'change') => {
-        app['hotReloader'].send('building');
-        app['hotReloader'].send('reloadPage');
+        // CAUTION: accessing private APIs
+        app['server']['hotReloader'].send('building');
+        app['server']['hotReloader'].send('reloadPage');
       });
   }
 
