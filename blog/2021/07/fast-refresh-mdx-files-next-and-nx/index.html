@@ -328,7 +328,7 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 
 <p>Something like</p>
 <div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="nx">chokidar</span>
-  <span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">articlePath</span><span class="p">,</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">articlesPath</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">usePolling</span>: <span class="kt">false</span><span class="p">,</span>
     <span class="nx">ignoreInitial</span>: <span class="kt">true</span><span class="p">,</span>
   <span class="p">})</span>
@@ -375,12 +375,12 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
   <span class="kr">const</span> <span class="nx">handle</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">getRequestHandler</span><span class="p">();</span>
   <span class="nx">await</span> <span class="nx">app</span><span class="p">.</span><span class="nx">prepare</span><span class="p">();</span>
 
-  <span class="kr">const</span> <span class="nx">articlePath</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">articleMarkdownPath</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">articlesPath</span> <span class="o">=</span> <span class="s1">&#39;_articles&#39;</span><span class="p">;</span>
 
   <span class="c1">// watch folders if specified
-</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">articlePath</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">articlesPath</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">chokidar</span>
-      <span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">articlePath</span><span class="p">,</span> <span class="p">{</span>
+      <span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">articlesPath</span><span class="p">,</span> <span class="p">{</span>
         <span class="nx">usePolling</span>: <span class="kt">false</span><span class="p">,</span>
         <span class="nx">ignoreInitial</span>: <span class="kt">true</span><span class="p">,</span>
       <span class="p">})</span>
