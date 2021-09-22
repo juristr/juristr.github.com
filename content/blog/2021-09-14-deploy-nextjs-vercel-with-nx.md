@@ -5,7 +5,7 @@ date: 2021-09-14T07:40:00+01:00
 lead: Learn how to use Next.js, Nx and Tailwind together
 url: /blog/2021/09/nextjs-deploy-vercel-with-nx
 draft: false
-image: /blog/assets/imgs/nextjs-nx-series/nextjs-nx-storybook-cypress-cover.jpg
+image: /blog/assets/imgs/nextjs-nx-series/bg-deploy-vercel.jpg
 categories:
   - Next
   - Nx
