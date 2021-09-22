@@ -5,6 +5,14 @@
   
   
   <url>
+    <loc>https://juristr.com/blog/2021/09/nextjs-deploy-vercel-with-nx/</loc>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
+  </url>
+  
+  
+  
+  
+  <url>
     <loc>https://juristr.com/blog/2021/08/nextjs-storybook-cypress-nx/</loc>
     <lastmod>2021-08-18T07:40:00+01:00</lastmod>
   </url>
@@ -4134,7 +4142,7 @@
   
   <url>
     <loc>https://juristr.com/</loc>
-    <lastmod>2021-08-18T07:40:00+01:00</lastmod>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
   </url>
   
   
@@ -4318,7 +4326,7 @@
   
   <url>
     <loc>https://juristr.com/blog/</loc>
-    <lastmod>2021-08-18T07:40:00+01:00</lastmod>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4784,7 +4792,7 @@
   
   <url>
     <loc>https://juristr.com/categories/next/</loc>
-    <lastmod>2021-08-18T07:40:00+01:00</lastmod>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4793,7 +4801,7 @@
   
   <url>
     <loc>https://juristr.com/tags/next/</loc>
-    <lastmod>2021-08-18T07:40:00+01:00</lastmod>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4829,7 +4837,7 @@
   
   <url>
     <loc>https://juristr.com/categories/nx/</loc>
-    <lastmod>2021-08-18T07:40:00+01:00</lastmod>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -4907,7 +4915,7 @@
   
   <url>
     <loc>https://juristr.com/tags/react/</loc>
-    <lastmod>2021-08-18T07:40:00+01:00</lastmod>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -5033,7 +5041,7 @@
   
   <url>
     <loc>https://juristr.com/tags/storybook/</loc>
-    <lastmod>2021-08-18T07:40:00+01:00</lastmod>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -5060,7 +5068,7 @@
   
   <url>
     <loc>https://juristr.com/tags/tailwindcss/</loc>
-    <lastmod>2021-08-18T07:40:00+01:00</lastmod>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -5151,6 +5159,15 @@
   <url>
     <loc>https://juristr.com/tags/vba/</loc>
     <lastmod>2008-10-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  
+  
+  
+  <url>
+    <loc>https://juristr.com/tags/vercel/</loc>
+    <lastmod>2021-09-14T07:40:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   

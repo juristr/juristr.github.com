@@ -266,7 +266,7 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 <li><a href="/blog/2021/07/nextjs-workspace-generator-blog-draft/">Using Nx Workspace generators to scaffold new blog posts</a></li>
 <li><a href="/blog/2021/08/nextjs-storybook-tailwind-nx/">Use Storybook with Tailwind in an Nx Workspace</a></li>
 <li><a href="/blog/2021/08/nextjs-storybook-cypress-nx/">Use Cypress with Next.js and Nx to battle test your React Components</a></li>
-<li>Publishing a Next.js site to Vercel with Nx <em>(soon)</em></li>
+<li><a href="/blog/2021/09/nextjs-deploy-vercel-with-nx/">Publishing a Next.js app to Vercel with Nx</a></li>
 </ul>
 
 <p><em>Check back later, <a href="https://twitter.com/juristr">follow me on Twitter</a> or <a href="/newsletter">subscribe to the Newsletter</a> to get updates about upcoming articles</em></p>
@@ -306,7 +306,7 @@ This article is part of a series around building a blog with Nx, Next.js, Tailwi
 <h2 id="install-dependencies">Install dependencies</h2>
 
 <p>First of all, let&rsquo;s install a couple of libraries which we&rsquo;re gonna need as we develop this new functionality.</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ yarn add gray-matter add remark remark-html</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ yarn add gray-matter remark remark-html</code></pre></div>
 <h2 id="create-the-markdown-file">Create the markdown file</h2>
 
 <p>We want to have all of our article markdown files in a single <code>_articles</code> directory at the root of our workspace. For now, let&rsquo;s keep things simple and place a single markdown demo file there: <code>_articles/dynamic-routing.md</code>.</p>

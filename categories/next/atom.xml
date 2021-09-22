@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Wed, 18 Aug 2021 07:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 14 Sep 2021 07:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/next/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Publishing a Next.js app to Vercel with Nx</title>
+      <link>https://juristr.com/blog/2021/09/nextjs-deploy-vercel-with-nx/</link>
+      <pubDate>Tue, 14 Sep 2021 07:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2021/09/nextjs-deploy-vercel-with-nx/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    During this journey from &lt;a href=&#34;https://juristr.com/blog/2021/06/create-nextjs-webapp-nx/&#34;&gt;setting up our Next.js app within an Nx workspace&lt;/a&gt;, to &lt;a href=&#34;https://juristr.com/blog/2021/06/setup-tailwind-nextjs-and-nx/&#34;&gt;configuring Tailwind&lt;/a&gt;, &lt;a href=&#34;https://juristr.com/blog/2021/06/read-render-markdown-nextjs-and-nx/&#34;&gt;Markdown rendering&lt;/a&gt;, &lt;a href=&#34;https://juristr.com/blog/2021/08/nextjs-storybook-tailwind-nx/&#34;&gt;Storybook&lt;/a&gt; and &lt;a href=&#34;https://juristr.com/blog/2021/08/nextjs-storybook-cypress-nx/&#34;&gt;Cypress&lt;/a&gt; we&amp;rsquo;re now at the point where we should look at the deployment of our site. Let&amp;rsquo;s learn how to deploy to some static environment as well as leverage the rich features when deploying to &lt;a href=&#34;https://vercel.com/&#34;&gt;Vercel&lt;/a&gt;.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Use Cypress with Next.js and Nx to battle test your React Components</title>
