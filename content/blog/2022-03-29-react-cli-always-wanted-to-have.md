@@ -4,7 +4,7 @@ title: The React CLI you always wanted but didn’t know about
 date: 2022-03-29T07:40:00+01:00
 lead: Learn about Nx and how you can benefit from its features for developing your React application
 url: /blog/2022/03/react-cli-always-wanted-but-didnt-know-about
-# canonical_url: https://blog.nrwl.io/publishing-a-next-js-app-to-vercel-with-nx-df81916548f5
+canonical_url: https://blog.nrwl.io/the-react-cli-you-always-wanted-but-didnt-know-about-eaa2494aab9e
 draft: false
 image: /blog/assets/imgs/react-cli-nx/nx-react-cli-cover.png
 categories:
@@ -116,7 +116,7 @@ If you're curious and want to learn more, check out the docs page on [computatio
 
 ### Code Generators!
 
-One of the core parts of Nx are code generators. As the name already suggests, code generators generate source code and configuration. That can range from a single React component file to an entire project with all that is needed. You basically already saw them in action when you created the initial project setup. But there’s more to explore! Every Nx plugin (e.g. `@nrwl/react`, `@nrwl/next`,...) come with their own set of generators.  All of them are invoked with the `npx nx generate` or short `npx nx g` command.
+One of the core parts of Nx is code generators. As the name already suggests, code generators generate source code and configuration. That can range from a single React component file to an entire project with all that is needed. You basically already saw them in action when you created the initial project setup. But there’s more to explore! Every Nx plugin (e.g. `@nrwl/react`, `@nrwl/next`,...) come with their own set of generators.  All of them are invoked with the `npx nx generate` or short `npx nx g` command.
 
 Let’s for instance generate a new component for our React application:
 
@@ -136,7 +136,7 @@ Many of these generators come with a rich set of flags. For example, passing `--
 
 **How do we find all these generators though?** There are different options:
 
-- **Nx documentation -** use the search function there or just navigate the docs. All the reference pages are structured like `nx.dev/packages/<packagename>``. As an example for React that would look like: [https://nx.dev/packages/react](https://nx.dev/packages/react).
+- **Nx documentation -** use the search function there or just navigate the docs. All the reference pages are structured like `nx.dev/packages/<packagename>`. As an example for React that would look like: [https://nx.dev/packages/react](https://nx.dev/packages/react).
 - `npx nx list` - lists a set of installed plugins as well as other available plugins that can be installed. To get a list of generators for a specific plugin - say for the `@nrwl/react` plugin - run `npx nx list @nrwl/react`. Similarly, you can then run `npx nx g @nrwl/react:lib --help` to get help for a particular generator
 
 However, the absolute easiest way to explore the potential and even use Nx if you are not the “terminal type of person” is [Nx Console](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)! I’ll go a bit deeper into that in a later section.
@@ -244,7 +244,7 @@ Nx really is an advanced CLI based development tool. But regardless of whether y
 > For [Webstorm](https://www.jetbrains.com/webstorm/) there are two community extensions that can be used: [nx-webstorm](https://plugins.jetbrains.com/plugin/15000-nx-webstorm) and [Nx Console Idea](https://plugins.jetbrains.com/plugin/15101-nx-console-idea).
 > 
 
-Once you have the extension installed, you can click it’s icon in the VSCode Activity Bar (1) which reveals the Nx Console UI. 
+Once you have the extension installed, you can click its icon in the VSCode Activity Bar (1) which reveals the Nx Console UI. 
 
 {{<figure url="/blog/assets/imgs/react-cli-nx/nx-console-dashboard.png" size="full">}}
 
