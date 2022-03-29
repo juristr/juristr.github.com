@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Juri Strumpflohner - All rights reserved</copyright>
-    <lastBuildDate>Tue, 14 Sep 2021 07:40:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 29 Mar 2022 07:40:00 +0100</lastBuildDate>
     
 	<atom:link href="https://juristr.com/categories/nx/atom.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The React CLI you always wanted but didn’t know about</title>
+      <link>https://juristr.com/blog/2022/03/react-cli-always-wanted-but-didnt-know-about/</link>
+      <pubDate>Tue, 29 Mar 2022 07:40:00 +0100</pubDate>
+      
+      <guid>https://juristr.com/blog/2022/03/react-cli-always-wanted-but-didnt-know-about/</guid>
+      <description>&lt;div class=&#34;article-intro&#34;&gt;
+    In this article, I’d like to specifically talk about developer tooling, why it is so massively important and how you might have missed out on &lt;a href=&#34;https://nx.dev&#34;&gt;Nx&lt;/a&gt; as your main React CLI for kickstarting new awesome projects.
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Publishing a Next.js app to Vercel with Nx</title>

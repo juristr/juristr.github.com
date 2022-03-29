@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.53" />
+	
+	<link rel="shortcut icon" href="/assets/images/sitelogo.jpeg">
+	
+	<title>The React CLI you always wanted but didn’t know about | juri.dev</title>
+	
+	<meta name="description" content="Learn about Nx and how you can benefit from its features for developing your React application">
+	
+	
+	<meta name="robots" content="index, follow">
+
+	
+	<meta name="author" content="Juri Strumpflohner">
+	<link rel="me" href="https://profiles.google.com/104904743888756261987" />
+	<link rel="publisher" href='https://plus.google.com/104904743888756261987' />
+	<meta property="twitter:account_id" content="14407063" />
+
+
+	
+	<meta name="google-site-verification" content="0_vyoIaeMG1kXR0h-48gy3OaGl8xoiSJsFDxxCTIBMs" />
+	<meta name="google-site-verification" content="AvmssSjl_nchNXIqBW8Agb_UjGqvvLP7HXSxBZ9d0cg" />
+
+	
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@juristr" />
+	<meta name="twitter:creator" content="@juristr" />
+	<meta name="twitter:title" content="The React CLI you always wanted but didn’t know about" />
+	
+	<meta name="twitter:description" content="Learn about Nx and how you can benefit from its features for developing your React application" />
+	
+
+	
+	<meta name="twitter:image:src" content="https://juristr.com/blog/assets/imgs/react-cli-nx/nx-react-cli-cover.png" />
+	
+
+	
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="The React CLI you always wanted but didn’t know about" />
+	
+	<meta property="og:description" content="Learn about Nx and how you can benefit from its features for developing your React application" />
+	
+	
+	<meta property="og:image" content="https://juristr.com/blog/assets/imgs/react-cli-nx/nx-react-cli-cover.png" />
+	
+	<meta property="og:url" content="https://juristr.com/blog/2022/03/react-cli-always-wanted-but-didnt-know-about" />
+	<meta property="og:site_name" content="juristr.com" />
+
+	
+		<link rel="canonical" href="https://blog.nrwl.io/the-react-cli-you-always-wanted-but-didnt-know-about-eaa2494aab9e" />
+	
+
+	
+	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
+	
+
+	
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+	
+	
+	<link href='//fonts.googleapis.com/css?family=Righteous|Roboto:400,700,900|Source+Code+Pro|Lora:400,700,400italic|Material+Icons'
+	 rel='stylesheet' type='text/css'>
+	
+
+	
+
+	
+	
+	
+	<link rel="stylesheet" href="/scss/main.min.css" integrity="" media="screen">
+
+	
+
+	
+
+	
+	
+	<link rel="stylesheet" href="/scss/article.min.css" integrity="" media="screen">
+	
+
+	
+	
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container">
+
+        
+        <div class="row justify-content-center align-items-center brandrow">
+
+            <div class="col-lg-4 col-md-4 col-xs-12 d-none d-md-block hidden-xs customarea">
+                <img src="/assets/images/gde.svg" style="height:23px">
+                <a href="https://developers.google.com/community/experts/directory/profile/profile-juri_strumpflohner" style="
+                    padding-left: 5px;
+                    font-size: 15pt;
+                ">GDE
+                    for Web Tech</a>
+                
+
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-center logoarea">
+                <a class="navbar-brand" href="https://juristr.com/">
+                    
+                    <span style="font-family:Righteous;">juri.dev</span>
+                    
+                </a>
+                
+            </div>
+
+            <div class="col-lg-4 col-md-4  col-xs-12 text-right d-none d-md-block">
+                <a href="https://twitter.com/juristr" class="twitter-follow-button" data-show-count="true">Follow me!</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+        </div>
+        
+
+        <div class="navarea">
+
+            <nav class="navbar navbar-toggleable-sm">
+                
+                <div id="bs4navbar" class="navbar-collapse">
+                    
+                    <ul id="menu-top-menu" class="navbar-nav col-md-12 justify-content-center">
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/categories">Collections</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/newsletter">Newsletter</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="https://github.com/juristr/ama">AMA</a>
+                        </li>
+                        
+                        <li class="menu-item ">
+                            <a class="nav-link" href="/about">About Me</a>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <div class="site-content">
+
+
+
+<div class="container page-container">
+    <div class="row">
+        
+        <div class="col-md-2 pl-0"><div class="share">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li>
+            <a target="_blank" href="https://twitter.com/home?status=Check out this post by @juristr https%3a%2f%2fjuristr.com%2fblog%2f2022%2f03%2freact-cli-always-wanted-but-didnt-know-about%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuristr.com%2fblog%2f2022%2f03%2freact-cli-always-wanted-but-didnt-know-about%2f">
+                <svg class="svgIcon-use" width="29" height="29" viewbox="0 0 29 29">
+                    <path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path>
+                </svg>
+            </a>
+        </li>
+    </ul>
+    
+</div></div>
+        
+        <div class="col-md-9 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+                
+                
+                
+                <div class="row post-top-meta">
+                    
+                    <div class="col-md-2">
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                    </div>
+                    <div class="col-md-10">
+                        <a class="link-dark" href="/about/">Juri Strumpflohner</a><a href="https://twitter.com/@juristr"
+                            class="btn follow">Follow</a>
+                        <span class="author-description">Juri is a full stack developer and tech lead with a special passion for the web and frontend development. He creates online videos for <a href="https://egghead.io/instructors/juri-strumpflohner">Egghead.io</a>, writes articles on his blog and for tech magazines, speaks at conferences and holds training workshops. Juri is also a recognized Google Developer Expert in Web Technologies</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+
+                <h1 class="posttitle">The React CLI you always wanted but didn’t know about</h1>
+                
+                <h2 class="article-subtitle">Learn about Nx and how you can benefit from its features for developing your React application</h2>
+                
+                <p>
+                    <span class="post-date">
+                        <time class="post-date">
+                            Mar 29, 2022
+                        </time></span>
+                    <span class="dot"></span>
+                    <span class="post-read">18 min read</span>
+                </p>
+            </div>
+
+            
+            
+            
+
+            
+            <a href="https://egghead.io/courses/productive-git-for-developers?af=fj2vsx" class="external-link" data-client="eggheadio" data-uid="url">
+                <img src="/assets/images/banners/egghead-banner-productive-git.png" style="width:100%" />
+            </a>
+            
+
+            
+            <div class="article-post">
+                <div class="article-intro">
+    In this article, I’d like to specifically talk about developer tooling, why it is so massively important and how you might have missed out on <a href="https://nx.dev">Nx</a> as your main React CLI for kickstarting new awesome projects.
+</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9669473064376287" data-ad-slot="2496274486"
+    data-ad-format="auto"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>It is awesome to be a JavaScript developer nowadays. The JavaScript ecosystem has evolved a lot in recent years. For the better! Speed has become a major focus, both from the framework perspective of running the app in production, as well as the speed of developing, testing, and building JavaScript/TypeScript from a developer tooling point of view. Frameworks and libraries such as Next.js, Astro, Qwik and Remix (just to name a few) have brought some great innovations to push the web even further.</p>
+
+<p>While speed is of major importance, developer ergonomics shouldn’t be left behind. Both of them greatly contribute to the overall productivity and also developer happiness 🙂. Let&rsquo;s see how Nx can help with that.</p>
+
+<hr />
+<div class="article-toc">
+    <strong>Table of contents</strong>
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#why-use-a-devtool-cli">Why use a devtool CLI?</a></li>
+<li><a href="#nx-from-a-bird-s-eye-view">Nx - from a bird’s eye view</a></li>
+<li><a href="#using-nx">Using Nx</a>
+<ul>
+<li><a href="#creating-a-new-nx-react-project">Creating a new Nx React project</a></li>
+<li><a href="#serving-our-react-app">Serving our React app</a></li>
+<li><a href="#build-our-react-app">Build our React app</a></li>
+<li><a href="#code-generators">Code Generators!</a></li>
+</ul></li>
+<li><a href="#state-of-the-art-tooling-preconfigured">State of the Art Tooling Preconfigured</a>
+<ul>
+<li><a href="#typescript-as-a-first-class-citizen">TypeScript as a first-class citizen!</a></li>
+<li><a href="#eslint-preconfigured">ESLint preconfigured!</a></li>
+<li><a href="#jest-preconfigured">Jest preconfigured!</a></li>
+<li><a href="#cypress-preconfigured">Cypress preconfigured!</a></li>
+<li><a href="#don-t-argue-over-code-formatting-use-prettier">Don’t argue over code formatting - use Prettier!</a></li>
+</ul></li>
+<li><a href="#nx-console-a-dedicated-vscode-extension-for-nx">Nx Console - A dedicated VSCode extension for Nx</a></li>
+<li><a href="#evergreen-workspace-setup">Evergreen Workspace Setup</a></li>
+<li><a href="#common-questions">Common Questions</a>
+<ul>
+<li><a href="#q-how-can-i-customize-how-my-project-is-built-and-served">Q: How can I customize how my project is built and served?</a></li>
+<li><a href="#q-can-i-customize-my-webpack-config-used-to-build-my-react-app">Q: Can I customize my Webpack config used to build my React app?</a></li>
+<li><a href="#q-why-is-there-an-apps-folder-can-i-change-it">Q: Why is there an “apps” folder? Can I change it?</a></li>
+<li><a href="#q-is-there-a-way-to-migrate-from-cra">Q: Is there a way to migrate from CRA?</a></li>
+<li><a href="#q-this-looks-like-a-lot-do-i-really-need-it-from-the-get-go">Q: This looks like a lot 🤯. Do I really need it from the get go?</a></li>
+<li><a href="#q-isn-t-nx-just-for-monorepos">Q: Isn’t Nx just for monorepos?</a></li>
+<li><a href="#q-isn-t-nx-just-for-angular-projects">Q: Isn’t Nx just for Angular projects?</a></li>
+</ul></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<hr />
+
+<h2 id="why-use-a-devtool-cli">Why use a devtool CLI?</h2>
+
+<p>Regardless of whether you’re a seasoned developer or someone new just getting started with React: the last thing you want to have to deal with is to manually set up all the tooling to actually get started and be productive. You want to be able to focus on the actual task, like learning React or kicking off that new shiny project.</p>
+
+<p>Still, we definitely want to <strong>have good defaults set up for us</strong>. Things like the latest build tooling, tooling for writing unit tests as well as e2e tests, code quality tools like linters, and we definitely also don’t want to argue about tabs vs spaces or spend time formatting our code: Prettier can help with that.</p>
+
+<p>Taking the time to set up a starter kit or template would work. But it is time-consuming, requires a lot of knowledge and especially needs maintenance to update the tools over time. That rarely works out well in the long run, unless this is your job.</p>
+
+<h2 id="nx-from-a-bird-s-eye-view">Nx - from a bird’s eye view</h2>
+
+<p>What you usually want is a CLI, a command-line interface that helps you develop and deal with the underlying build infrastructure, something that sets you up with modern up-to-date tooling and also keeps those updated!</p>
+
+<p>Nx comes with such a CLI, it is widely adopted by the Angular, React and Node community currently being downloaded more than 1.3 million times a week. Nx is <a href="https://github.com/nrwl/nx">fully open source</a> (MIT licensed), baked by <a href="https://nrwl.io">Nrwl</a> and the <a href="https://go.nrwl.io/join-slack">community</a>.</p>
+
+<p>From a bird’s eye view, Nx comes with</p>
+
+<ul>
+<li>Code generators to generate new projects, configuration but also components, Redux setup, routes&hellip;</li>
+<li>Out of the box support for modern tools such as TypeScript, Webpack, Babel, SWC, Jest, Cypress, ESLint, Prettier, Storybook and more</li>
+<li>It keeps tooling up to date via dedicated migration commands</li>
+<li>Speed! Nx uses local computation caching that can be extended with Nx Cloud (which <a href="https://blog.nrwl.io/more-time-saved-for-free-with-nx-cloud-d7079b95f7ca">is basically free</a>) to remote caching and DTE (Distributed Task Execution).</li>
+</ul>
+
+<p>But let’s have a deeper look at how Nx works exactly.</p>
+
+<h2 id="using-nx">Using Nx</h2>
+
+<p>Let me give you an overview of the most used functionality that Nx gives you such that you get a good understanding of whether it might suit your needs.</p>
+
+<h3 id="creating-a-new-nx-react-project">Creating a new Nx React project</h3>
+
+<p>Open your favorite terminal window and type:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx create-nx-workspace@latest myorg</code></pre></div>
+<blockquote>
+<p>Note, I’m using <code>npx</code> to not have to install the Nx CLI globally. If you want to, you totally can: <code>npm i nx -g</code></p>
+</blockquote>
+
+<p><code>myorg</code> is the scope of your Nx workspace. Think of it as your NPM scope in case you’d publish an npm package. In the case you create libraries in this new Nx workspace (more about that later), it would be used to import those, like</p>
+<div class="highlight"><pre class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">import</span> <span class="p">{</span> <span class="nx">someFunc</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@myorg/somelib&#39;</span><span class="p">;</span></code></pre></div>
+<p>What you’ll get is a setup wizard that guides you through creating your application. We would most likely choose “React” in this case.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/workspace-setup.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/workspace-setup.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>As part of this process, you’ll be asked to pick an “Application name”. This is simply the application Nx is going to generate for us to get started: <code>happynrwl</code> would be a nice name 🙂.</p>
+
+<p>You should end up with a new Nx workspace and our <code>happynrwl</code> React app in the <code>apps/</code> folder.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/vscode-workspace-layout.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/vscode-workspace-layout.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h3 id="serving-our-react-app">Serving our React app</h3>
+
+<p>To serve our React app, run</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx serve happynrwl</code></pre></div>
+<blockquote>
+<p>Note I prefix the commands with <code>npx</code>, which is just a way to use the local <code>nx</code> binary from the <code>node_modules</code> folder of our workspace. Also, this way we don’t have to install Nx globally. If you prefer doing that, run <code>npm install -g nx</code>.</p>
+</blockquote>
+
+<p>Going to <a href="http://localhost:4200">http://localhost:4200</a> should show the running React app located in <code>apps/happynrwl</code>.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/react-app-welcome-screen.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/react-app-welcome-screen.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h3 id="build-our-react-app">Build our React app</h3>
+
+<p>Similarly, to build our React application, run</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx build happynrwl</code></pre></div>
+<p>This should build the app into <code>dist/apps/happynrwl</code>, which we can then take and deploy to wherever we want to deploy it.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/output-folder.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/output-folder.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Nx has another nice feature that basically comes for free: <a href="https://nx.dev/using-nx/caching">computation caching</a>. For every command Nx runs, it computes a unique hash that contains information about the involved source code, environment variables and the command itself. Next time the same conditions are met, the command is not executed again, but rather pulled out of a cache. As you can imagine, this drammatically speeds up things.<br />
+If you&rsquo;re curious and want to learn more, check out the docs page on <a href="https://nx.dev/using-nx/caching">computation caching</a> and how to leverage <a href="https://nx.app">Nx Cloud</a> to store the cache remotely for sharing it with your team members. Also, Nx Cloud pricing recently changed, which <a href="https://blog.nrwl.io/more-time-saved-for-free-with-nx-cloud-d7079b95f7ca">makes it basically free for everyone</a>.</p>
+
+<h3 id="code-generators">Code Generators!</h3>
+
+<p>One of the core parts of Nx is code generators. As the name already suggests, code generators generate source code and configuration. That can range from a single React component file to an entire project with all that is needed. You basically already saw them in action when you created the initial project setup. But there’s more to explore! Every Nx plugin (e.g. <code>@nrwl/react</code>, <code>@nrwl/next</code>,&hellip;) come with their own set of generators.  All of them are invoked with the <code>npx nx generate</code> or short <code>npx nx g</code> command.</p>
+
+<p>Let’s for instance generate a new component for our React application:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx generate @nrwl/react:component HelloWorld</code></pre></div>
+<p>This generates a new component in our <code>happynrwl</code> application</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/react-component-example.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/react-component-example.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<blockquote>
+<p>Note, you can also use <code>nx g @nrwl/react...</code> as a shorthand for <code>generate</code>. Also, if you attach <code>--dry-run</code> to the end of the command it will just simulate the run without touching the file system.</p>
+</blockquote>
+
+<p>Many of these generators come with a rich set of flags. For example, passing <code>--routing</code> to our component generator from before, generates a component with routes already set up, adds <code>react-router-dom</code> to the <code>package.json</code> and executes a <code>npm install</code>.</p>
+
+<p><strong>How do we find all these generators though?</strong> There are different options:</p>
+
+<ul>
+<li><strong>Nx documentation -</strong> use the search function there or just navigate the docs. All the reference pages are structured like <code>nx.dev/packages/&lt;packagename&gt;</code>. As an example for React that would look like: <a href="https://nx.dev/packages/react">https://nx.dev/packages/react</a>.</li>
+<li><code>npx nx list</code> - lists a set of installed plugins as well as other available plugins that can be installed. To get a list of generators for a specific plugin - say for the <code>@nrwl/react</code> plugin - run <code>npx nx list @nrwl/react</code>. Similarly, you can then run <code>npx nx g @nrwl/react:lib --help</code> to get help for a particular generator</li>
+</ul>
+
+<p>However, the absolute easiest way to explore the potential and even use Nx if you are not the “terminal type of person” is <a href="https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console">Nx Console</a>! I’ll go a bit deeper into that in a later section.</p>
+
+<h2 id="state-of-the-art-tooling-preconfigured">State of the Art Tooling Preconfigured</h2>
+
+<p>When setting up a new React project (that also holds for Angular, Node, Next.js,&hellip;), you do not only get the React project, but also a set of tools preconfigured that help you stay productive and produce higher quality code. These are</p>
+
+<ul>
+<li>TypeScript</li>
+<li>ESLint</li>
+<li>Jest</li>
+<li>Cypress</li>
+<li>Prettier</li>
+</ul>
+
+<p>The Nx core team closely collaborates with these open source projects to not only make sure they integrate seamlessly with the React setup but also to keep them updated over time as those tools evolve. In fact, by using <a href="https://egghead.io/lessons/javascript-update-your-nx-workspace-with-nx-migrations">automated code migrations</a> updating your Nx workspace will automatically also update those tools and the corresponding config files for you.</p>
+
+<p>Let’s have a closer look.</p>
+
+<h3 id="typescript-as-a-first-class-citizen">TypeScript as a first-class citizen!</h3>
+
+<p>The Nx core team strongly believes in the benefits of TypeScript (in fact, check out the <a href="https://nx.dev/getting-started/nx-and-typescript">new Nx and TypeScript setup</a>). As such, by default every project is automatically set up and configured to use TypeScript, making sure builds, as well as IDEs, are able to properly pick up TypeScript definitions. All without you having to worry about it.</p>
+
+<p>Now, if you really want to use pure JavaScript you totally can. Just pass the <code>--js</code> when running a generator. Read <a href="https://nx.dev/guides/js-and-ts">more on the docs</a>.</p>
+
+<h3 id="eslint-preconfigured">ESLint preconfigured!</h3>
+
+<p>Every new Nx workspace comes with <a href="https://eslint.org/">ESLint</a> already preconfigured. Having proper linting in place is a great way to help contribute to overall better code quality by statically analyzing your source code and finding potential issues early in the process.</p>
+
+<p>Every project generated by Nx comes with a <code>.eslintrc.json</code> file. That configuration extends from an ESLint plugin <code>@nrwl/nx/react</code> , containing a set of best practices rules, and at the same time allows you to add further rules that are specific to your needs.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/eslint-setup.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/eslint-setup.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Linting can be run similarly to the other commands:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx lint happynrwl</code></pre></div>
+<h3 id="jest-preconfigured">Jest preconfigured!</h3>
+
+<p>Similar to the linting setup, every project in an Nx workspace has a test runner preconfigured already. By default, Nx comes with <a href="https://jestjs.io/">Jest</a>.</p>
+
+<p>At the root of every project, there’s a <code>jest.config.js</code> which already comes with proper transformers to support TypeScript and TSX/JSX. If you need to further customize how Jest should behave for this project, this is the place to do that.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/jest-setup.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/jest-setup.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Running Jest tests is as easy as</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx <span class="nb">test</span> happynrwl</code></pre></div>
+<p>Obviously, you can pass parameters to customize the Jest run, like</p>
+
+<ul>
+<li><code>--watch</code> for interactive mode</li>
+<li><code>--t</code> to execute tests that match a given pattern</li>
+<li><code>--testFile=&quot;apps/happynrwl/src/app/hello-world/hello-world.spec.tsx”</code> to run a specific file</li>
+<li>&hellip;</li>
+</ul>
+
+<p>If you happen to use <a href="https://code.visualstudio.com/">VSCode</a>, the easiest way however is to install <a href="https://marketplace.visualstudio.com/items?itemName=firsttris.vscode-jest-runner">Jest Runner</a> and leverage its code lens feature to run and debug Jest tests:</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/vscode-jest-runner.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/vscode-jest-runner.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h3 id="cypress-preconfigured">Cypress preconfigured!</h3>
+
+<p><a href="https://www.cypress.io/">Cypress</a> has revolutionized e2e testing by making it more developer-friendly. Who likes to write tests after all. That just gets even worse if the DX sucks. Cypress successfully tackled that by listening and addressing the pain of existing e2e testing solutions.</p>
+
+<p>Whenever you generate a new project in an Nx workspace, you have the option to automatically also create a Cypress-based e2e project alongside it. In our case, it is called <code>happynrwl-e2e</code>.</p>
+
+
+<figure class="image--medium">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/cypress-e2e-app.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/cypress-e2e-app.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>The awesome part of this is that you don’t have to configure anything at all. No need to</p>
+
+<ul>
+<li>make sure TypeScript runs smoothly with Cypress</li>
+<li>set up linting for our e2e project (yes writing good quality test code is just as important)</li>
+<li>spinning up our development server manually first that serves our React app such that we are able to load it in our Cypress tests environment</li>
+</ul>
+
+<p>Just execute</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx e2e happynrwl-e2e</code></pre></div>
+<p>You can also pass <code>--watch</code> to run it interactively with the Cypress test runner such that the tests get re-executed whenever we change our source.</p>
+
+<h3 id="don-t-argue-over-code-formatting-use-prettier">Don’t argue over code formatting - use Prettier!</h3>
+
+<p>Are you a <code>tabs</code> or <code>spaces</code> person? Use semicolons or not? What about trailing commas? We all know that we devs can have some strong opinions on this 😅. But honestly, there are probably more important things to focus on. Luckily <a href="https://prettier.io/">Prettier</a> can help a ton with these issues. It is opinionated with just very few configuration options and just takes away the burden of formatting the code.</p>
+
+<p>When you set up a new Nx workspace, it has Prettier already preconfigured. The best way is to integrate it with your code editor such that formatting is run on every save of a file. Alternatively, you can also run</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx format</code></pre></div>
+<h2 id="nx-console-a-dedicated-vscode-extension-for-nx">Nx Console - A dedicated VSCode extension for Nx</h2>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/nx-console-banner.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/nx-console-banner.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Nx really is an advanced CLI based development tool. But regardless of whether you are a command line person or not, if you happen to use <a href="https://code.visualstudio.com/">VSCode</a> make sure you install the <a href="https://nx.dev/using-nx/console">Nx Console extension</a> from the <a href="https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console">marketplace</a>.</p>
+
+<blockquote>
+<p>For <a href="https://www.jetbrains.com/webstorm/">Webstorm</a> there are two community extensions that can be used: <a href="https://plugins.jetbrains.com/plugin/15000-nx-webstorm">nx-webstorm</a> and <a href="https://plugins.jetbrains.com/plugin/15101-nx-console-idea">Nx Console Idea</a>.</p>
+</blockquote>
+
+<p>Once you have the extension installed, you can click its icon in the VSCode Activity Bar (1) which reveals the Nx Console UI.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/nx-console-dashboard.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/nx-console-dashboard.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>A couple of things:</p>
+
+<ul>
+<li>(2) is the panel where you see a fixed command “Generate” to invoke the Nx generator for creating new projects, libraries etc as we mentioned before. In addition you see a list of available commands to run.</li>
+<li>(3) shows additional commands that are commonly used in an Nx workspace. Feel free to click and explore them.</li>
+<li>(4) shows a list of projects in your workspace. We really just have our React app and Cypress e2e application, but potentially you could add more. See <a href="https://nx.dev/structure/applications-and-libraries">Nx applications and libraries</a> for more.</li>
+</ul>
+
+<p>Let’s take the example of generating a new React component, just as we did before, but this time using Nx Console. This is how you’d do that:</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/nx-console-generate-cmp.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/nx-console-generate-cmp.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Once you click the entry in the dropdown list, the Nx Console generate form opens, showing all the options the Nx generator supports:</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/nx-console-generate-cmp-detail.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/nx-console-generate-cmp-detail.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<p>Whenever you change something in the form (1), you’ll automatically see a dry-run in the console that opens below (2). That shows what would happen if you run the command and is equivalent of adding the <code>--dry-run</code> flag whenever you’d run the command on the terminal. Once you’re ready, hit the “Run” button (3), or click the copy symbol (4) to copy the full command into your clipboard s.t. you can then paste it into your terminal.</p>
+
+<p>As you can see this approach is also really powerful for exploring different commands and their corresponding options.</p>
+
+<p>Besides running generators, Nx Console also adds <a href="https://code.visualstudio.com/blogs/2017/02/12/code-lens-roundup">VSCode Code Lens</a> abilities to the configuration files that help you navigate more quickly across the workspace. This is particularly useful if you happen to add more <a href="https://nx.dev/structure/applications-and-libraries">apps and libraries</a> to the workspace at some point.</p>
+
+
+<figure class="image--full">
+
+    
+        
+        <a href="/blog/assets/imgs/react-cli-nx/nx-console-easy-navigation.png" class="image--zoom">
+            <img src="/blog/assets/imgs/react-cli-nx/nx-console-easy-navigation.png" loading="lazy" class="lazyload"/>
+        </a>
+    
+    <figcaption></figcaption>
+</figure>
+
+
+
+<h2 id="evergreen-workspace-setup">Evergreen Workspace Setup</h2>
+
+<p>One of the advantages of using Nx over - say CRA or a custom starter template - is that your <strong>Nx workspace is evergreen</strong>. What do I mean by that: by now we all know how fast the frontend space is moving, and so are the corresponding devtools. Today you might be using <a href="https://rollupjs.org/">Rollup</a> to build your libraries, tomorrow you use <a href="https://swc.rs/">swc</a>, <a href="https://vitejs.dev/">vite</a> or <a href="https://esbuild.github.io/">esbuild</a>. Same with <a href="https://webpack.js.org/">Webpack</a>. Webpack 5 has been around for a while already, and still, a lot of projects are stuck at v4.</p>
+
+<p>Just to mention an example: when upgrading Nx to v13, all Nx users automatically got migrated to Webpack 5.</p>
+
+<p>This is possible with Nx’s <a href="https://nx.dev/cli/migrate">migrate command</a> that allows you to keep up to date with your framework in a mostly automated fashion. Whenever you upgrade Nx, you run</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx migrate latest</code></pre></div>
+<p>Running this command, Nx</p>
+
+<ul>
+<li>analyzes the current packages</li>
+<li>fetches the latest Nx packages and plugins (or whatever version was specified in the migration command)</li>
+<li>creates a <code>migrations.json</code> file containing all migration scripts that need to be executed</li>
+<li>updates the <code>package.json</code> to the new package versions</li>
+</ul>
+
+<p>The <code>migrations.json</code> file can be inspected and potentially modified. Once it is ready, running the following command executes the migration:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npx nx migrate --run-migrations<span class="o">=</span>migrations.json</code></pre></div>
+<p>These migrations not only update the <code>package.json</code> version. They also update corresponding configuration files and even source code by leveraging ASTs to query and manipulate files.</p>
+
+<p>It is not even only about upgrading the frameworks such as React or Angular themselves, though. A common pain point is their integration with other tools, such as Jest, Storybook, ESLint etc. The Nx core team closely collaborates with these communities to make sure that a particular combination of versions works and is tested before migrating your workspace.</p>
+
+<p>You can see it in action in this Egghead lesson:</p>
+
+<div class="egghead-video-embed">
+    <iframe src="https://egghead.io/lessons/javascript-update-your-nx-workspace-with-nx-migrations/embed?af=fj2vsx" width="100%" height="500px" loading="lazy"> </iframe>
+    <a href="https://egghead.io/lessons/javascript-update-your-nx-workspace-with-nx-migrations?af=fj2vsx" class="external-link" data-client="eggheadio" data-uid="lessons/javascript-update-your-nx-workspace-with-nx-migrations">View
+        on
+        Egghead.io</a>
+</div>
+
+<h2 id="common-questions">Common Questions</h2>
+
+<p>Here are some common questions developers have. Have some more? Feel free to ping me on Twitter (<a href="https://twitter.com/juristr">@juristr</a>), the official Nx account (<a href="https://twitter.com/nxdevtools">@NxDevtools</a>) or in the <a href="https://go.nrwl.io/join-slack">Nx community Slack</a>.</p>
+
+<h3 id="q-how-can-i-customize-how-my-project-is-built-and-served">Q: How can I customize how my project is built and served?</h3>
+
+<p>Every Nx project comes with a <code>project.json</code> which contains the basic setup of targets (example: <code>build</code>, <code>serve</code>, <code>test</code>, <code>lint</code>,..) that can be run against the project.</p>
+
+<p>Here’s the <code>project.json</code> for our <code>happynrwl</code> React application. I clipped out the non-relevant parts here:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&#34;targets&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&#34;executor&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/web:webpack&#34;</span><span class="p">,</span>
+      <span class="err">...</span>
+      <span class="nt">&#34;options&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;compiler&#34;</span><span class="p">:</span> <span class="s2">&#34;babel&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;outputPath&#34;</span><span class="p">:</span> <span class="s2">&#34;dist/apps/happynrwl&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;index&#34;</span><span class="p">:</span> <span class="s2">&#34;apps/happynrwl/src/index.html&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;baseHref&#34;</span><span class="p">:</span> <span class="s2">&#34;/&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;apps/happynrwl/src/main.tsx&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;polyfills&#34;</span><span class="p">:</span> <span class="s2">&#34;apps/happynrwl/src/polyfills.ts&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;tsConfig&#34;</span><span class="p">:</span> <span class="s2">&#34;apps/happynrwl/tsconfig.app.json&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;assets&#34;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&#34;apps/happynrwl/src/favicon.ico&#34;</span><span class="p">,</span>
+          <span class="s2">&#34;apps/happynrwl/src/assets&#34;</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;styles&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;apps/happynrwl/src/styles.css&#34;</span><span class="p">],</span>
+        <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="nt">&#34;webpackConfig&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/react/plugins/webpack&#34;</span>
+      <span class="p">},</span>
+      <span class="nt">&#34;configurations&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;production&#34;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="err">...</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&#34;serve&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="err">...</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span></code></pre></div>
+<p>As you can see, all these “targets” (<code>build</code>, <code>serve</code>,&hellip;) have a so-called <code>options</code> property that allows you to configure how the target behaves. The actual configuration is abstracted behind the “<a href="https://nx.dev/executors/using-builders#executor-definitions">Nx Executor</a>”, in our case <code>@nrwl/web:webpack</code>. You can find the details of how to configure that on the Nx docs in the CLI reference for the <code>@nrwl/web</code> package: <a href="https://nx.dev/web/build">https://nx.dev/web/build</a>.</p>
+
+<p>To read more about how the <code>project.json</code>, its executors, and configuration options are structured, check out the official docs: <a href="https://nx.dev/configuration/projectjson">https://nx.dev/configuration/projectjson</a>.</p>
+
+<blockquote>
+<p>Note, Nx is also able to just pick up NPM scripts registered in the <code>package.json</code> of your project root. This scenario is most useful if you’re adding Nx to an existing monorepo (see <a href="https://www.npmjs.com/package/add-nx-to-monorepo">add-nx-to-monorepo</a>). Read more here: <a href="https://nx.dev/configuration/packagejson">https://nx.dev/configuration/packagejson</a></p>
+</blockquote>
+
+<p>Nx’s extensibility and customizability have really no limits, allowing it to really adapt to your needs. Here are some resources to learn more if you need some advanced features.</p>
+
+<ul>
+<li><a href="https://nx.dev/executors/creating-custom-builders#creating-custom-executors">Custom workspace executors</a></li>
+<li><a href="https://nx.dev/generators/workspace-generators">Custom workspace generators</a></li>
+<li><a href="https://nx.dev/nx-plugin/overview">Create Nx plugins</a></li>
+<li>Control the entire workspace setup with <a href="https://nx.dev/nx-plugin/overview#preset">custom presets</a></li>
+</ul>
+
+<h3 id="q-can-i-customize-my-webpack-config-used-to-build-my-react-app">Q: Can I customize my Webpack config used to build my React app?</h3>
+
+<p>As mentioned previously, the underlying build machinery is usually hidden by a so-called <a href="https://nx.dev/executors/using-builders#executor-definitions">Nx Executor</a>. As we have seen you can customize its behavior via the corresponding <code>options</code> property. By abstracting the underlying build tool, Nx is able to fulfill its evergreen promise as mentioned previously and allows to seamlessly upgrade workspaces to the latest versions of the build tooling that is being used.</p>
+
+<p>If the available <code>options</code> are not enough, you can further customize the Webpack configuration using the <code>webpackConfig</code> property:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&#34;targets&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&#34;executor&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/web:webpack&#34;</span><span class="p">,</span>
+      <span class="err">...</span>
+      <span class="nt">&#34;options&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="err">...</span>
+        <span class="nt">&#34;webpackConfig&#34;</span><span class="p">:</span> <span class="s2">&#34;@nrwl/react/plugins/webpack&#34;</span>
+      <span class="p">},</span>
+      <span class="err">...</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span></code></pre></div>
+<p>By default it links to <code>@nrwl/react/plugins/webpack</code>, but you can point to your own custom file in the Nx workspace. The file needs to look like the following:</p>
+<div class="highlight"><pre class="chroma"><code class="language-jsx" data-lang="jsx"><span class="c1">// apps/my-app/webpack.config.js
+</span><span class="c1"></span><span class="k">const</span> <span class="nx">fromNrwlReact</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nrwl/react/plugins/webpack&#39;</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">getWebpackConfig</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+   <span class="c1">// invoke the Nrwl specific config to preserve the original
+</span><span class="c1"></span>   <span class="c1">// behavior
+</span><span class="c1"></span>   <span class="nx">config</span> <span class="o">=</span> <span class="nx">fromNrwlReact</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
+
+   <span class="c1">// add your own customizations HERE
+</span><span class="c1"></span>
+   <span class="k">return</span> <span class="nx">config</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">getWebpackConfig</span><span class="p">;</span></code></pre></div>
+<p>Notice how the default Nrwl provided Webpack configuration is invoked first to not lose the default behavior, followed by your own customizations.</p>
+
+<h3 id="q-why-is-there-an-apps-folder-can-i-change-it">Q: Why is there an “apps” folder? Can I change it?</h3>
+
+<p>Sure! Nx allows to host multiple applications and libraries in a single workspace: a monorepo scenario basically. In fact, even in our simple setup we have two applications: <code>happynrwl</code> and the corresponding e2e application, <code>happynrwl-e2e</code>.</p>
+
+<p>In a default setup Nx generates an <code>apps</code> folder for hosting applications, and <code>libs</code> folder for hosting libraries. Read more about <a href="https://nx.dev/structure/applications-and-libraries">“Apps and Libs” on the Nx docs</a>.</p>
+
+<p>You can change this setup in <code>nx.json</code> by adjustijng the <code>workspaceLayout</code> property which has an <code>appsDir</code> and <code>libsDir</code> configuration.</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&#34;workspaceLayout&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;appsDir&#34;</span><span class="p">:</span> <span class="s2">&#34;apps&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;libsDir&#34;</span><span class="p">:</span> <span class="s2">&#34;libs&#34;</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span></code></pre></div>
+<h3 id="q-is-there-a-way-to-migrate-from-cra">Q: Is there a way to migrate from CRA?</h3>
+
+<p>Absolutely. Check out this guide on the Nx docs that has all the details (including a video walkthrough): <a href="https://nx.dev/migration/migration-cra">https://nx.dev/migration/migration-cra</a></p>
+
+<h3 id="q-this-looks-like-a-lot-do-i-really-need-it-from-the-get-go">Q: This looks like a lot 🤯. Do I really need it from the get go?</h3>
+
+<p>Agreed. Luckily Nx is plugin based, so you can start with the bare minimum (see using <a href="https://nx.dev/getting-started/nx-core">Nx without plugins</a>) and then slowly add them as you need them. Similarly you can add Nx to an existing workspace (say a Yarn workspace) by using the <a href="https://www.npmjs.com/package/add-nx-to-monorepo">add-nx-to-monorepo</a> package.</p>
+
+<p>From my own experience, what usually happens is that teams start light and then over time end up with a similar stack, but hand-woven and therefore loosing out on a lot of the benefits Nx comes with.</p>
+
+<h3 id="q-isn-t-nx-just-for-monorepos">Q: Isn’t Nx just for monorepos?</h3>
+
+<p>Nx has been designed to support monorepo scenarios, and it really shines at scale. However, a lot of the features I’ve been mentioning in this article, such as generators, out of the box setup of best practices development tools, automated migrations and more make it an excellent choice, even if your intention is not to create a monorepo.</p>
+
+<p>From my experience, I’ve often seen teams start with a single application, which then over time gets company by other apps, in the form of React applications, also Node based backends or even a React Native application. Mainly because adding new applications is easy and the possibility to <a href="https://blog.nrwl.io/share-code-between-react-web-react-native-mobile-with-nx-fe5e22b5a755">share functionality (even across platforms)</a> is appealing.</p>
+
+<blockquote>
+<p>If you’re interested in monorepos or want to learn more about it, check out <a href="https://monorepo.tools">https://monorepo.tools</a>.</p>
+</blockquote>
+
+<h3 id="q-isn-t-nx-just-for-angular-projects">Q: Isn’t Nx just for Angular projects?</h3>
+
+<p>This is a common but understandable misconception. Although Nx was heavily inspired by the Angular CLI initially, it is now a completely independent build system and CLI with first-class support for Angular, React, Node, Next.js, TypeScript and more. And with tons of <a href="https://nx.dev/community">community plugins</a> that extend Nx beyond that.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Congrats, you made it to the end of this article. By now you should have gotten a pretty good overview of what Nx is about, its strengths and how it can be useful in your next React project. If you still got questions or are hesitant to adopt Nx, <a href="https://twitter.com/juristr">reach out to me on Twitter</a>!</p>
+
+<p>Where to go from here?</p>
+
+<ul>
+<li><a href="https://go.nrwl.io/join-slack">join the community Slack</a></li>
+<li><a href="https://twitter.com/juristr">follow me on Twitter</a></li>
+<li><a href="https://twitter.com/nxdevtools">follow Nx on Twitter</a></li>
+<li>learn more about Nx on <a href="https://nx.dev">https://nx.dev</a></li>
+<li>subscribe on the <a href="https://youtube.com/c/Nrwl_io">Nx Youtube channel</a></li>
+<li>join more than 200+ developers and <a href="https://egghead.io/courses/scale-react-development-with-nx-4038">take the free Egghead course</a> on how to scale React development with Nx.</li>
+</ul>
+
+				<hr />
+
+				Questions? Thoughts? Hit me up <a href="https://twitter.com/juristr" target="_blank">on Twitter</a>
+            </div>
+
+            
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    <li>
+                        <a href="/tags/React">React</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tags/Nx">Nx</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <a href="https://egghead.io/instructors/juri-strumpflohner" class="external-link" data-client="eggheadio"
+                data-uid="egghead-instructor-page">
+                <img src="/blog/assets/imgs/egghead-banner-learn-with-me.png" style="width:100%" />
+            </a>
+
+            
+            
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hideshare"></div>
+
+
+
+<div class="related-container">
+    <div class="container">
+        <div class="row listrecent listrelated">
+            
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2020/11/get-started-with-nx">I&#39;m new to Nx. Where do I get started?</a>
+        </h2>
+        <h4 class="card-text">
+            Best resources to get up to speed with Nx
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Nov 11, 2020</span><span class="dot"></span><span
+                                    class="post-read">2 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/nx.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2021/09/nextjs-deploy-vercel-with-nx">Publishing a Next.js app to Vercel with Nx</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to use Next.js, Nx and Tailwind together
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Sep 14, 2021</span><span class="dot"></span><span
+                                    class="post-read">16 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/next.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+
+            <div class="col-md-4">
+<div class="card">
+    
+    <div class="card-block">
+        <h2 class="card-title">
+            <a href="/blog/2021/08/nextjs-storybook-cypress-nx">Use Cypress with Next.js and Nx to battle test your React Components</a>
+        </h2>
+        <h4 class="card-text">
+            Learn how to use Next.js, Nx and Tailwind together
+            
+        </h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                <div class="row">
+                    <div class="col-10">
+                        
+                            <span class="meta-footer-thumb">
+                                <a href="/about/">
+                                    <img class="author-thumb" src="https://www.gravatar.com/avatar/64537dfe80f44978663e378d375c7138?s=150&amp;d=identicon&amp;r=PG" alt="Juri Strumpflohner">
+                                </a>
+                            </span>
+                            <span class="author-meta">
+                                <span class="post-name"><a href="/about/">Juri Strumpflohner</a></span><br />
+                                <span class="post-date">Aug 18, 2021</span><span class="dot"></span><span
+                                    class="post-read">7 min read</span>
+                            </span>
+                        
+                    </div>
+                    <div class="col-2">
+                        
+                        
+                        
+                        <span class="post-category-icon">
+                            
+                            
+                                <img src="/assets/images/categories/next.svg" />
+                            
+                        </span>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+            </div>
+
+            
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="comments" class="row justify-content-center mb-5">
+        <div class="col-md-8">              
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "juristr" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>               
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"04e83acc0ba14b18f30435204","lid":"1d83b68321","uniqueMethods":true}) })</script>
+<div class="container">
+    
+<div class="footer">
+    <p class="pull-left">
+        &copy; Copyright Juri Strumpflohner - All rights reserved
+    </p>
+    <p class="pull-right">
+        Customized Mediumish Theme, originally by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>
+    </p>
+    <div class="clearfix">
+    </div>
+</div>
+
+
+</div>
+
+    </div>
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/bundle.js" integrity=""></script>
+
+
+<script src="/js/jquery.fluidbox.min.js"></script>
+<script>
+    $('a.image--zoom,.gallery>a').fluidbox();
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-416229-12', 'juristr.com');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+
+
+    
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "dark-bottom"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js" defer></script>
+    
+
+    
+    
+    
+    <script>
+!function(t,e,a,c,x){var s='q';t[s]={publication_id:c,tags:x};
+var s=e.createElement(a),r=e.getElementsByTagName(a)[0];s.async=1,s.src=
+'https://insights.quiet.ly/app/analytics.min.js',r.parentNode.insertBefore(s,r)}
+(window,document,'script','87bcee90-0c51-4a68-a60b-e95df730d1ca','[]');
+</script>
+    
+ <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
