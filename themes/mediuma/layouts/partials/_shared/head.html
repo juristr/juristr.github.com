@@ -49,6 +49,10 @@
 	<meta property="og:url" content="https://juristr.com{{ .URL | urlize }}" />
 	<meta property="og:site_name" content="juristr.com" />
 
+	{{ if isset .Page.Params "canonical_url" }}
+		<link rel="canonical" href="{{ .Page.Params.canonical_url }}" />
+	{{ end }}
+
 	<!-- RSS -->
 	<link rel="alternate" type="application/rss+xml" title="Juri Strumpflohner" href="//feeds.feedburner.com/juristrumpflohner">
 	{{ with .OutputFormats.Get "rss" -}}
