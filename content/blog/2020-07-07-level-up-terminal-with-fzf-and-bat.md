@@ -1,22 +1,20 @@
 ---
 type: post
-title: "Level Up your Terminal with fzf and bat"
-lead: Instant file search with syntax highlighted preview
+title: Level Up your Terminal with fzf and bat
 date: 2020-07-03T21:29:00+02:00
-comments: true
+lead: Instant file search with syntax highlighted preview in your terminal
 url: /blog/2020/7/level-up-your-terminal-with-fzf-and-bat
-# image: /blog/assets/imgs/rx-to-promise-journey/rxjourney-bg.jpg
-# categories:
-#   - Angular
-# tags:
-#   - rxjs
-#   - angular
-draft: true
+draft: false
+categories:
+  - tooling
+tags:
+  - tooling
+comments: true
 ---
-
 {{<intro>}}
-  Automate the h*** out of it :smiley:. We developers are supposed to do that, right? It's our job to automate things, and still I see many not doing the same for their own tooling. I'm pretty sure you have certain operations you do on a regular basis during your workday. Why not automate them? In this article we're in particular looking into automating search & file previewing.
+  Automate the h\*\** out of it :smiley:. We developers are supposed to do that, right? It's our job to automate things, and still I see many not doing the same for their own tooling. I'm pretty sure you have certain operations you do on a regular basis during your workday. Why not automate them? In this article we're in particular looking into automating search & file previewing.
 {{</intro>}}
+
 <!--more-->
 
 {{< postad >}}
@@ -80,5 +78,3 @@ isearch() {
     fzf --preview 'bat --style numbers,changes --color=always {} | head -500'
 }
 ```
-
-
